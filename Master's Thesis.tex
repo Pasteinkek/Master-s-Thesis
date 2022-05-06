@@ -1,0 +1,134 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage[colorlinks=true,linkcolor=blue,unicode]{hyperref}
+\usepackage{cleveref}
+\usepackage{nameref}
+\usepackage{comment}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{cite}
+\usepackage{tipa}
+\usepackage{esint}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+%\usepackage[left = 2.3cm, right = 2.3cm, top = 2.5cm, bottom = 2.5cm]{geometry}
+
+%derivative commands:
+\newcommand{\differential}{\mathrm{D}}
+\newcommand{\divergence}{\mathrm{div}}
+
+%manifold commands:
+\newcommand{\tangent}{\mathrm{T}}
+\newcommand{\normal}{\mathrm{N}}
+
+%space operation commands:
+\newcommand{\scp}[2]{\langle {#1}, {#2}\rangle}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\newcommand{\inftynorm}[1]{\norm{#1}_{\infty}}
+\newcommand{\hddist}{d_{H}}
+\newcommand{\strictdistance}[2]{ d_{ s }  \left( #1, #2 \right) } 
+
+%integral commands:
+\newcommand{\imv}[1]{(#1)_{x,r}}
+\newcommand{\dx}{dx}
+
+%function spaces
+\newcommand{\lspace}{\mathrm{L}}
+\newcommand{\bv}{\mathrm{BV}}
+\newcommand{\testfunctions}{ \mathscr{D} }
+\newcommand{\sobolevspace}{W}
+\newcommand{\distributions}{ \mathscr{D}' }
+
+
+%linear algebra
+\newcommand{\lin}{\mathrm{Lin}}
+\newcommand{\standardbasis}{e}
+
+%measures
+\newcommand{\lebesguemeasure}{\mathcal{L}}
+\newcommand{\hausdorffmeasure}{\mathcal{H}}
+
+%set commands
+\newcommand{\boundary}{\partial}
+\newcommand{\nsphere}{S}
+\newcommand{\compactlycontained}{\Subset}
+\newcommand{\setwithcondition}[2]{\left\{{#1}\ \colon \ {#2}\right\}}
+\newcommand{\ball}{B}
+\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\restr}[1]{ \vert_{ #1 } }
+\newcommand{\cube}{ Q }
+\newcommand{\length}[1]{ \ell \left( #1 \right) }
+\newcommand{\halfspace}{ \mathbb{ H } }
+\newcommand{\cubechain}[3]{	\Omega_{ #1 , #2 , #3 } }			
+
+
+%function operations
+\newcommand{\support}{\mathrm{supp}}
+\newcommand{\loc}{loc}
+\newcommand{\projection}{\Pi}
+\newcommand{\fourier}[1]{ \mathcal{ F } \left( #1 \right) }
+\newcommand{\taylorpolynomial}[3]{ \mathcal{P}_{ #1 }^{ #2 } #3 } 
+\newcommand{\trace}[1]{ tr \left( #1 \right) }
+\newcommand{\primtrace}[1]{ \tilde{ tr } \left( #1 \right) }
+
+%mathbb commands
+
+\newcommand{\mr}{\mathbb{R}}
+\newcommand{\mn}{\mathbb{N}}
+\newcommand{\mc}{\mathbb{C}}
+\newcommand{\mz}{\mathbb{ Z }}
+
+%sequence and convergence
+\newcommand{\sequence}[2]{ \left( #1_{#2}\right)_{ #2\in\mn } }
+\newcommand{\chiconvergence}{\stackrel{ch}{\rightarrow}}
+\newcommand{\hdconv}{\stackrel{H}{\rightarrow}}
+\newcommand{\hdcomplementconv}{\stackrel{H^{\complement}}{\rightarrow}}
+\newcommand{\converge}{\rightarrow}
+
+
+%bva stuff
+
+\newcommand{\strictconvergence}{\stackrel{ s }{ \rightarrow } }
+\newcommand{\ma}{\mathbb{A}}
+\newcommand{\Avariationmeasure}[1]{ \abs*{ \ma #1 } }
+\newcommand{\Asymbolmap}[1]{ \ma \left[ #1 \right] }
+\newcommand{\bva}{ \bv^{ \ma } }
+\newcommand{\wai}{ \sobolevspace^{ \ma , 1 } }
+\newcommand{\Anullspace}{ N( \ma ) }
+\newcommand{\Atensor}[2]{ #1 \otimes_{ \ma } #2 }
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{remark}{Remark}
+
+\numberwithin{theorem}{section}
+\numberwithin{definition}{section}
+\numberwithin{corollary}{section}
+\numberwithin{lemma}{section}
+\numberwithin{example}{section}
+
+\binoppenalty= \maxdimen
+\relpenalty= \maxdimen
+
+\title{testdocument}
+
+\begin{document}
+	\hypersetup{pageanchor=false}
+	\maketitle
+	\tableofcontents
+	testest
+	
+	
+	
+\end{document}
