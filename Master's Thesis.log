@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  6 MAY 2022 15:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  6 MAY 2022 16:24
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -322,13 +322,15 @@ Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count266
 ))
 Class scrbook Info: amsthm's \deferred@thm@head patched.
-)
+
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stmaryrd\stmaryrd.s
 ty"
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+\c@sometheorems=\count267
 )
 
 LaTeX Warning: Unused global option(s):
@@ -395,16 +397,16 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
+\scratchcounter=\count268
 \scratchdimen=\dimen155
 \scratchbox=\box51
-\nofMPsegments=\count268
-\nofMParguments=\count269
+\nofMPsegments=\count269
+\nofMParguments=\count270
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count270
+\MPscratchCnt=\count271
 \MPscratchDim=\dimen156
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
 \everyMPtoPDFconversion=\toks29
 )))
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
@@ -466,29 +468,51 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 23
 ] [2
 
 
-] [1] [2
+] [1]
+\openout2 = `chapter1.aux'.
+
+ (chapter1.tex [2
 
 
-] ("Master's Thesis.aux") ) 
+
+]
+chapter 1.
+) [3] [4
+
+
+
+]
+chapter 2.
+[5] [6
+
+
+]
+chapter 3.
+[7] [8
+
+
+] ("Master's Thesis.aux" (chapter1.aux)) ) 
 Here is how much of TeX's memory you used:
- 8451 strings out of 480930
- 156232 string characters out of 2900231
- 546584 words of memory out of 3000000
- 24216 multiletter control sequences out of 15000+200000
- 538068 words of font info for 54 fonts, out of 3000000 for 9000
+ 8525 strings out of 480930
+ 157950 string characters out of 2900231
+ 546834 words of memory out of 3000000
+ 24279 multiletter control sequences out of 15000+200000
+ 539526 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,7n,72p,10614b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
-sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl
-10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmssbx10.pfb>
-Output written on "Master's Thesis.pdf" (6 pages, 76234 bytes).
+ 68i,7n,72p,10614b,272s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/user/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/use
+r/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsl10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/user/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Master's Thesis.pdf" (12 pages, 108818 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13825 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 17409 words of extra memory for PDF output out of 20736 (max. 10000000)
 

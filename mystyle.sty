@@ -9,3 +9,14 @@
 \usepackage{amssymb}
 \usepackage{amsthm}							
 \usepackage{stmaryrd}						%useful packages for mathematics
+
+%%%% THEOREM ENVIROMENTS
+
+\newcounter{sometheorems}[section]
+\renewcommand{\thesometheorems}{\thesection.\arabic{sometheorems}}									%changes how the theorem-like stuff is numbered
+	
+\newtheorem{theorem}[sometheorems]{Theorem}
+\newtheorem{lemma}[sometheorems]{Lemma}
+\newtheorem{corollary}[sometheorems]{Corollary}
+\newtheorem{definition}[sometheorems]{Definition}
+\newtheorem{example}[sometheorems]{Example}
