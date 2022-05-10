@@ -1,0 +1,58 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6a64258e1e649779293a50aff43794f9}{%
+           family={Laux},
+           familyi={L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6289299abbe213c09664d0f65e932003}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Thilo},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a599d9190c8bbfb72d0f298cb91ded0}
+      \strng{fullhash}{0a599d9190c8bbfb72d0f298cb91ded0}
+      \strng{bibnamehash}{0a599d9190c8bbfb72d0f298cb91ded0}
+      \strng{authorbibnamehash}{0a599d9190c8bbfb72d0f298cb91ded0}
+      \strng{authornamehash}{0a599d9190c8bbfb72d0f298cb91ded0}
+      \strng{authorfullhash}{0a599d9190c8bbfb72d0f298cb91ded0}
+      \field{labelalpha}{LS16}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications on Pure and Applied Mathematics}
+      \field{month}{06}
+      \field{title}{Convergence of the Allen‐Cahn Equation to Multiphase Mean Curvature Flow}
+      \field{volume}{71}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1002/cpa.21747
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

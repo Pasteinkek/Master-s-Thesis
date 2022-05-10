@@ -1,6 +1,9 @@
 \documentclass[a4paper, 10pt, bibliogrpahy = totocnumbered]{scrbook}
 
 \usepackage{mystyle}
+\bibliography{references.bib}
+
+
 
 \authornew{Pascal Maurice Steinke}
 \geburtsdatum{22.05.1999}
@@ -24,6 +27,13 @@
 	
 \mainmatter	
 	testest noch ein bissl was
+	
+	probieren zitieren aus:
+	\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}
+	
+	$ wir probieren \test aus $.
+	
+	
 	
 	\include{chapter1}
 	
@@ -52,6 +62,6 @@
 
 \backmatter
 
-	%\printbibliography
+	\printbibliography
 	
 \end{document}

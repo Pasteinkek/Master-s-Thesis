@@ -10,7 +10,21 @@
 \usepackage{amsthm}							
 \usepackage{stmaryrd}						%useful packages for mathematics
 
-%%%% THEOREM ENVIROMENTS
+\usepackage[babel=true]{csquotes}				%Automates quoting things
+
+\usepackage{enumitem}							%configuration of list enviroments, e.g. alphabetic enumeration
+
+\usepackage[backend=biber,style=alphabetic]{biblatex}			%used for citations. biber is the program which accesses the bib file and passes it to latex, biblatex provides commands for citing
+
+%-----> the following packages have to be loaded last
+
+\usepackage{hyperref}						%puts hyperlinks in the pdf file for more convenience
+
+\usepackage[capitalise,noabbrev]{cleveref}	%automated referencing, capitalise will give capitalised letters, noahbrev prevents abbrevations
+
+
+
+%%%% THEOREM ENVIROMENTS (should be after loading cleverref, hyperref)
 
 \newcounter{sometheorems}[section]
 \renewcommand{\thesometheorems}{\thesection.\arabic{sometheorems}}									%changes how the theorem-like stuff is numbered
@@ -20,3 +34,16 @@
 \newtheorem{corollary}[sometheorems]{Corollary}
 \newtheorem{definition}[sometheorems]{Definition}
 \newtheorem{example}[sometheorems]{Example}
+
+
+%%%% STYLE OPTIONS
+
+\frenchspacing									%no additional spacing after sentence
+
+\binoppenalty = \maxdimen
+\relpenalty = \maxdimen							%no linebreak for inline math
+
+
+%%% COMMANDS
+\DeclareMathOperator{\test}{Test}
+
