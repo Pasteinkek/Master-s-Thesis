@@ -1,2 +1,42 @@
-\chapter{das ist eig. chapter 1}
-hier schreiben wir etwas rein
+\chapter{The Allen--Cahn equation}
+
+Let $ \Lambda > 0 $ and define the flat torus 
+$ \mathbb{T} = [0, \Lambda )^{ d } \subset \mathbb{ R }^{ d } $, 
+where we as usual assume periodic boundary conditions. 
+Then for 
+$ u \colon [ 0 , \infty ) \times \mathbb{ T } \to \mathbb{ R }^{ N } $ 
+and some potential 
+$ W \colon \mathbb{ R }^{ N } \to [0, \infty ) $,
+the \emph{Allen--Cahn equation} with parameter $ \varepsilon > 0 $ is given by
+\begin{equation}
+	\label{allen_cahn_eq}
+	\partial_{ t } u 
+	=
+	\Delta u - \frac{1 }{ \varepsilon^{ 2 } } \partial_{ u } W ( u ).
+\end{equation}
+
+To understand this equation better, we consider the \emph{Cahn--Hilliard energy} assigns to $ u $ for a fixed time the real number
+\begin{equation}
+	\label{cahn_hilliard_energy}
+	\energy_{ \varepsilon } 
+		(u)
+	\coloneqq
+	\int_{ \mathbb{ T } }
+		\frac{ 1 }{ \varepsilon }
+		W ( u )
+		+
+		\frac{ \varepsilon }{ 2 }
+		\norm{ \nabla u }^{ 2 }
+	\dd{x}.
+\end{equation}
+
+If everything is nice and smooth, we can compute that under the assumption that $ u $ satisfies 
+equation \ref{allen_cahn_eq}, we have that
+\begin{align*}
+	\frac{ \dd }{ \dd{ t } } \energy_{ \varepsilon } ( u )
+	&=
+	\int
+	stuff
+\end{align*}
+
+
