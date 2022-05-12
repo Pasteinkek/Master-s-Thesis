@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[1] Config.pm:307> INFO - Logfile is 'chapter1.blg'
+[325] biber-MSWIN64:322> INFO - === 
+[467] Biber.pm:415> INFO - Reading 'chapter1.bcf'
+[773] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[790] Utils.pm:304> WARN - The file 'chapter1.bcf' does not contain any citations!
+[832] bbl.pm:652> INFO - Writing 'chapter1.bbl' with encoding 'UTF-8'
+[833] bbl.pm:755> INFO - Output to chapter1.bbl
+[834] Biber.pm:128> INFO - WARNINGS: 1

@@ -18,6 +18,8 @@
 
 \usepackage[backend=biber,style=alphabetic]{biblatex}			%used for citations. biber is the program which accesses the bib file and passes it to latex, biblatex provides commands for citing
 
+\usepackage{pgfplots}
+
 %-----> the following packages have to be loaded last
 
 \usepackage{hyperref}						%puts hyperlinks in the pdf file for more convenience
@@ -48,8 +50,14 @@
 
 %%% COMMANDS
 
-\DeclareMathOperator{\energy}{E}
-%\DeclareMathOperator{\dd}{\,\mathrm{d}}
+%general symbols
 
-%\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclareMathOperator{\energy}{E}
+
+%function spaces
+
+\DeclareMathOperator{\lp}{L}
+
+
+\DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{#1 \, , \, #2}
 

@@ -1,8 +1,10 @@
 \chapter{The Allen--Cahn equation}
 
+This chapter follows \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, but since the authors decided to only sketch some proofs. we want to go into more detail.
+
 Let $ \Lambda > 0 $ and define the flat torus 
 $ \mathbb{T} = [0, \Lambda )^{ d } \subset \mathbb{ R }^{ d } $, 
-where we as usual assume periodic boundary conditions. 
+where we work with periodic boundary conditions and write $ \int \dd{x} $ instead of $ \int_{ \mathbb{ T } } \dd{x} $.
 Then for 
 $ u \colon [ 0 , \infty ) \times \mathbb{ T } \to \mathbb{ R }^{ N } $ 
 and some potential 
@@ -12,31 +14,95 @@ the \emph{Allen--Cahn equation} with parameter $ \varepsilon > 0 $ is given by
 	\label{allen_cahn_eq}
 	\partial_{ t } u 
 	=
-	\Delta u - \frac{1 }{ \varepsilon^{ 2 } } \partial_{ u } W ( u ).
+	\Delta u - \frac{1 }{ \varepsilon^{ 2 } } \nabla W ( u ).
 \end{equation}
 
-To understand this equation better, we consider the \emph{Cahn--Hilliard energy} assigns to $ u $ for a fixed time the real number
+To understand this equation better, we consider the \emph{Cahn--Hilliard energy} which assigns to $ u $ for a fixed time the real number
 \begin{equation}
 	\label{cahn_hilliard_energy}
 	\energy_{ \varepsilon } 
 		(u)
 	\coloneqq
-	\int_{ \mathbb{ T } }
+	\int
 		\frac{ 1 }{ \varepsilon }
 		W ( u )
 		+
 		\frac{ \varepsilon }{ 2 }
-		\norm{ \nabla u }^{ 2 }
+		\abs{ \nabla u }^{ 2 }
 	\dd{x}.
 \end{equation}
 
 If everything is nice and smooth, we can compute that under the assumption that $ u $ satisfies 
-equation \ref{allen_cahn_eq}, we have that
+equation (\ref{allen_cahn_eq}), we have that
 \begin{align*}
-	\frac{ \dd }{ \dd{ t } } \energy_{ \varepsilon } ( u )
+	\dv{t} \energy_{ \varepsilon } ( u )
 	&=
 	\int
-	stuff
+		\frac{ 1 }{ \varepsilon }
+		\inner{\nabla W ( u )}{ \partial_{ t } u}
+		+
+		\varepsilon
+		\inner{\nabla u}{ \nabla \partial_{ t } u}
+	\dd{x}
+	\\
+	&=
+	\int
+		\inner*{ \frac{ 1 }{\varepsilon } \nabla W ( u ) - \varepsilon \Delta u  }{ \partial_{ t } u }
+	\dd{x}
+	\\
+	&=
+	\int - \varepsilon \abs{ \partial_{ t } u }^{ 2 } \dd{ x }
+	\tag{\ref{allen_cahn_eq}}.
 \end{align*}
+
+This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient-flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard energy. Thus we can try to construct a solution to the PDE (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme, which we will do in theorem \Cref{existence_of_ac_solution}.
+
+But first we need to clarify what our potential $ W $ should look like. Classic examples in the scalar case are given by $ W ( u ) = \left( u^{ 2 } - 1 \right)^{ 2 } $ or $ W( u ) = u^{ 2 } ( u - 1 )^{ 2 } $, and we call functions like these \emph{doublewell potentials}, see also \ref{graph_of_doublewell_potential}.
+
+\begin{figure}[h]
+\label{graph_of_doublewell_potential}
+\begin{tikzpicture}
+	\label{Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 } $}
+	\begin{axis}[
+		axis lines = left,
+		xlabel = \(u\),
+		ylabel = {\(W(u)= (u^2 - 1)^{ 2 }\)},
+		]
+		%Below the red parabola is defined
+		\addplot [
+		domain=-2:2, 
+		samples=100, 
+		color=black,
+		]
+		{x^4-2*x^2 + 1};
+	\end{axis}
+\end{tikzpicture}
+\caption{The graph of a doublewell potential}
+\end{figure}
+
+In higher dimensions, we want to accept the following potentials: $ W \colon \mathbb{ R }^{ N } \to [0, \infty ) $ has to be a a smooth multiwell potential with finitely many zeros at $ u = \alpha_{ 1 }, \dotsc , \alpha_{ P } \in \mathbb{ R }^{ N } $. Furthermore we aks for polynomial growth in the sense that there exists some $ p \geq 2 $ such that
+\begin{equation}
+	\label{polynomial_growth}
+	\abs{ u }^{ p } \lesssim W(u) \lesssim \abs{ u }^{ p }
+\end{equation}
+and
+\begin{equation}
+	\label{polynomial_growth_derivative}
+	\abs{ \nabla W ( u ) } \lesssim \abs{ u }^{ p -1 }
+\end{equation}
+for all $ u $ sufficiently large. Lastly we want $ W $ to be convex up to a small perturbation in the sense that there exist smooth functions 
+$ W_{ \mathrm{conv} }$, $ W_{ \mathrm{pert} } \colon \mathbb{ R }^{ N } \to [ 0 , \infty ) $ such that
+\begin{equation}
+	\label{decomposition_of_w}
+	W = W_{ \mathrm{conv}} + W_{ \mathrm{pert}},
+\end{equation}
+$ W_{ \mathrm{conv} } $ is convex and
+\begin{equation}
+	\sup_{ x \in \mathbb{ R }^{ N } }
+	\abs{ \nabla^{ 2 } W_{ \mathrm{pert} } } < \infty.
+\end{equation}
+These assumptions are in particular satisfied by our two examples for doublewell potentials and therefore seem to be plausible.
+
+
 
 

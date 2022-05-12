@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
-[1] Config.pm:307> INFO - Logfile is 'Master's Thesis.blg'
-[115] biber-MSWIN64:322> INFO - === 
-[152] Biber.pm:415> INFO - Reading 'Master's Thesis.bcf'
-[320] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
-[346] Biber.pm:4256> INFO - Processing section 0
-[347] Utils.pm:75> INFO - Globbing data source 'references.bib'
-[388] Utils.pm:91> INFO - Globbed data source 'references.bib' to references.bib
-[417] Biber.pm:4455> INFO - Looking for bibtex format file 'references.bib' for section 0
-[426] bibtex.pm:1653> INFO - LaTeX decoding ...
-[439] bibtex.pm:1471> INFO - Found BibTeX data source 'references.bib'
-[502] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[502] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[502] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[502] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[505] bbl.pm:652> INFO - Writing 'Master's Thesis.bbl' with encoding 'UTF-8'
-[507] bbl.pm:755> INFO - Output to Master's Thesis.bbl
+[0] Config.pm:307> INFO - Logfile is 'Master's Thesis.blg'
+[109] biber-MSWIN64:322> INFO - === 
+[182] Biber.pm:415> INFO - Reading 'Master's Thesis.bcf'
+[340] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[368] Biber.pm:4256> INFO - Processing section 0
+[368] Utils.pm:75> INFO - Globbing data source 'references.bib'
+[402] Utils.pm:91> INFO - Globbed data source 'references.bib' to references.bib
+[439] Biber.pm:4455> INFO - Looking for bibtex format file 'references.bib' for section 0
+[450] bibtex.pm:1653> INFO - LaTeX decoding ...
+[474] bibtex.pm:1471> INFO - Found BibTeX data source 'references.bib'
+[549] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[549] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[549] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[549] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[554] bbl.pm:652> INFO - Writing 'Master's Thesis.bbl' with encoding 'UTF-8'
+[556] bbl.pm:755> INFO - Output to Master's Thesis.bbl
