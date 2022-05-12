@@ -18,7 +18,9 @@
 
 \usepackage[backend=biber,style=alphabetic]{biblatex}			%used for citations. biber is the program which accesses the bib file and passes it to latex, biblatex provides commands for citing
 
-\usepackage{pgfplots}
+\usepackage{pgfplots}							%for plotting functions
+
+\usepackage{dsfont}								% package for indicator function of a set
 
 %-----> the following packages have to be loaded last
 
@@ -53,10 +55,13 @@
 %general symbols
 
 \DeclareMathOperator{\energy}{E}
+\DeclareMathOperator{\rb}{\partial_{ \ast }}
+\DeclareMathOperator{\hd}{\mathcal{H}}
 
 %function spaces
 
 \DeclareMathOperator{\lp}{L}
+\DeclareMathOperator{\wkp}{W}
 
 
 \DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{#1 \, , \, #2}

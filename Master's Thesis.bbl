@@ -19,6 +19,45 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{baldo_minimal_interface_criterion}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1d84a2f473644842b87d569184327772}{%
+           family={Baldo},
+           familyi={B\bibinitperiod},
+           given={Sisto},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Gauthier-Villars}%
+      }
+      \strng{namehash}{1d84a2f473644842b87d569184327772}
+      \strng{fullhash}{1d84a2f473644842b87d569184327772}
+      \strng{bibnamehash}{1d84a2f473644842b87d569184327772}
+      \strng{authorbibnamehash}{1d84a2f473644842b87d569184327772}
+      \strng{authornamehash}{1d84a2f473644842b87d569184327772}
+      \strng{authorfullhash}{1d84a2f473644842b87d569184327772}
+      \field{labelalpha}{Bal90}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annales de l'I.H.P. Analyse non linéaire}
+      \field{number}{2}
+      \field{title}{Minimal interface criterion for phase transitions in mixtures of {Cahn-Hilliard} fluids}
+      \field{volume}{7}
+      \field{year}{1990}
+      \field{pages}{67\bibrangedash 90}
+      \range{pages}{24}
+      \verb{urlraw}
+      \verb http://www.numdam.org/item/AIHPC_1990__7_2_67_0/
+      \endverb
+      \verb{url}
+      \verb http://www.numdam.org/item/AIHPC_1990__7_2_67_0/
+      \endverb
+    \endentry
     \entry{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}{article}{}
       \name{author}{2}{}{%
         {{hash=6a64258e1e649779293a50aff43794f9}{%

@@ -57,10 +57,10 @@ equation (\ref{allen_cahn_eq}), we have that
 
 This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient-flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard energy. Thus we can try to construct a solution to the PDE (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme, which we will do in theorem \Cref{existence_of_ac_solution}.
 
-But first we need to clarify what our potential $ W $ should look like. Classic examples in the scalar case are given by $ W ( u ) = \left( u^{ 2 } - 1 \right)^{ 2 } $ or $ W( u ) = u^{ 2 } ( u - 1 )^{ 2 } $, and we call functions like these \emph{doublewell potentials}, see also \ref{graph_of_doublewell_potential}.
+But first we need to clarify what our potential $ W $ should look like. Classic examples in the scalar case are given by $ W ( u ) = \left( u^{ 2 } - 1 \right)^{ 2 } $ or $ W( u ) = u^{ 2 } ( u - 1 )^{ 2 } $, and we call functions like these \emph{doublewell potentials}, see also \Cref{graph_of_doublewell_potential}.
 
-\begin{figure}[h]
-\label{graph_of_doublewell_potential}
+\begin{figure}[ht]
+\centering
 \begin{tikzpicture}
 	\label{Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 } $}
 	\begin{axis}[
@@ -78,6 +78,7 @@ But first we need to clarify what our potential $ W $ should look like. Classic 
 	\end{axis}
 \end{tikzpicture}
 \caption{The graph of a doublewell potential}
+\label{graph_of_doublewell_potential}
 \end{figure}
 
 In higher dimensions, we want to accept the following potentials: $ W \colon \mathbb{ R }^{ N } \to [0, \infty ) $ has to be a a smooth multiwell potential with finitely many zeros at $ u = \alpha_{ 1 }, \dotsc , \alpha_{ P } \in \mathbb{ R }^{ N } $. Furthermore we aks for polynomial growth in the sense that there exists some $ p \geq 2 $ such that
@@ -98,10 +99,41 @@ $ W_{ \mathrm{conv} }$, $ W_{ \mathrm{pert} } \colon \mathbb{ R }^{ N } \to [ 0 
 \end{equation}
 $ W_{ \mathrm{conv} } $ is convex and
 \begin{equation}
+	\label{perturbation bound}
 	\sup_{ x \in \mathbb{ R }^{ N } }
 	\abs{ \nabla^{ 2 } W_{ \mathrm{pert} } } < \infty.
 \end{equation}
 These assumptions are in particular satisfied by our two examples for doublewell potentials and therefore seem to be plausible.
+
+As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation (\ref{allen_cahn_eq})as maps from $ [0,T] $ into some suitable function space and thus use the following definition.
+
+\begin{definition}
+	We say that a function 
+	$ u_{ \varepsilon} \in 
+	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) \right) $
+	which is also in
+	$\lp^{ \infty } \left( [0, T ]; \wkp^{ 1, 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \right)
+	$
+	is a weak solution of the Allen--Cahn equation (\ref{allen_cahn_eq}) with parameter $ \varepsilon > 0 $ if
+	\begin{enumerate}
+		\item the energy stays bounded, which means that
+		\begin{equation}
+			\sup_{ 0 \leq t \leq T }
+				\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) ) 
+			< \infty,
+		\end{equation}
+		\item 
+		its weak time derivative satisfies
+		\begin{equation}
+			\partial_{ t } u_{ \varepsilon }
+			\in
+			\lp^{ 2 } ( [ 0 , T ] \times \mathbb{ T } ),
+		\end{equation}
+	\end{enumerate}
+\end{definition}
+
+
+
 
 
 
