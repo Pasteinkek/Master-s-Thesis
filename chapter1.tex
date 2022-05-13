@@ -206,7 +206,8 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 
 \begin{proof}
 	\begin{description}[wide=0pt]
-		\item[Step 1: A minimization problem] 
+		\item[Step 1:] A minimization problem
+		
 		Fix some $ h > 0 $, $ u_{ n - 1 } \in \wkp^{1 , 2 }\cap \lp^{ p } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $ and consider the functional
 		\begin{align*}
 			\mathcal{ F } \colon \wkp^{ 1, 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } )
@@ -214,7 +215,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\mathbb{ R }
 			\\
 			u & \mapsto 
-			\energy_{ \varepsilon } + 
+			\energy_{ \varepsilon } ( u ) + 
 			\frac{ 1 }{ 2h } \int \abs{ u - u_{ n - 1 } }^{ 2 } \dd{x }.
 		\end{align*}
 		Then $ \mathcal{ F } $ is coercive with respect to 
@@ -250,11 +251,71 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\liminf_{ k \to \infty } \int \frac{ 1 }{ \varepsilon } W ( v_{ k } ) \dd{x},
 	\end{equation*}
 	which proves that u is a minimizer of $ \mathcal{ F } $.
+	
+	\item[Step 2:] Minimizing movements scheme 
+	
+	By recursively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ 0 }, u_{ 1 }^{ h } , \dotsc $. Thus we may define a function $ u \in \mathrm{ C } $ as the piecewise linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these functions.
+	
+	\item[Step 3:] Estimates for $ u^{ h } $
+	
+	We claim that there exists some constant $ C > 0 $ such that for all $ h > 0 $ and $ n \in \mathbb{ N } $, we have
+	\begin{equation}
+		\label{discrete_optimal_energy_dissipation}
+		\energy_{ \varepsilon } ( u_{ n }^{ h } )
+		+
+		( \frac{ 1 }{ h } - \frac{ C }{ 2 \varepsilon } )
+		\int \abs{ u_{ n } - u_{ n - 1 } }^{ 2 } \dd{ x }
+		\leq
+		\energy_{ \varepsilon } ( u_{ n - 1 }^{ h } ).
+	\end{equation}
+	In order to prove this inequality, we notice that since $ \abs{ \nabla^{ 2 } W_{ \mathrm{pert} } } \leq C $, the function $ W_{ \mathrm{pert} } + C \abs{ u }^{ 2 }/2 $ is convex for $ C > 0 $ sufficiently large, thus the functional 
+	\begin{equation*}
+		\tilde{\energy}_{ \varepsilon }  ( u )
+		\coloneqq
+		\int 
+			\frac{ 1 }{ \varepsilon }
+			\left( W ( u ) + C \frac{ \abs{ u }^{ 2 } }{ 2 } \right)
+			+
+			\frac{ \varepsilon}{ 2 }
+			\abs{ \nabla u }^{ 2 }
+		\dd{ x }
+	\end{equation*}
+	is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } , \mathbb{ R }^{ N } ) $. For a given $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } , \mathbb{ R }^{ N } ) $, we thus have that the function
+	$ t \mapsto \ \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi ) $ is convex and differentiable, which yields that
+	\begin{equation}
+		\label{convexity_at_time_1}
+		\tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + \xi )
+		\geq
+		\tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } ) + 
+		\left.\dv{ t }\right|_{ t = 0 } \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi).
+	\end{equation} 
+	But since $ u_{ n }^{ h } $ is a minimizer of $\mathcal{ F }$, we have
+	\begin{align*}
+		\left. \dv{ t } \right|_{ t= 0 }
+			\tilde{\energy}_{ \varepsilon} ( u_{ n }^{ h } + t \xi )
+		={}&
+		\left. \dv{ t } \right|_{ t = 0 } 
+			\mathcal{ F } ( u_{ n }^{ h } + t \xi )
+		\\
+		{}&+ \frac{ C }{ 2 \varepsilon } \int \abs{ u_{ n }^{ h } + t \xi }^{ 2 } \dd{ x }
+		-\frac{ 1 }{ 2h } \int \abs{ u_{n }^{ h } + t \xi - u_{ n - 1 }^{ h } }^{ 2 } \dd{ x }
+		\\
+		={}& 
+		\int
+			\frac{ C }{ \varepsilon }
+			\inner{u_{ n }^{ h }}{\xi}
+			-
+			\frac{ 1 }{ h }
+			\inner{ u_{ n }^{ h } - u_{ n - 1 } ^{ h } }{ \xi }
+		\dd{x}.
+	\end{align*}
+	Plugging $ \xi = u_{ n - 1 }^{ h } $
 	\end{description}
-
-	\item[Step 2: Minimizing movements scheme] 
-	By recursively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ 0 }, u_{ 1 }^{ h } , \cdots $. Thus we may define a function $ u \in \mathrm{ C } $
 \end{proof}
+
+\begin{remark}
+	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor $ 1/2h $ instead of $ 1/h- C/2\varepsilon $ follows immediately from the definition of our optimization problem, but is not optimal and this so called sharp energy dissipation inequality is important for later.
+\end{remark}
 
 
 
