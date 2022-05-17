@@ -171,7 +171,7 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 	\begin{equation}
 		\wkp^{ 1 , 2} ( [ 0 , T ] ; \lp^{ 2 } ( \mathbb{ T };\mathbb{ R }^{ N } ) )
 		\hookrightarrow
-		\mathrm{ C }^{ 1/2 } ( [ 0 , T ] ; \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) ),
+		\cont^{ 1/2 } ( [ 0 , T ] ; \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) ),
 	\end{equation}
 	which follows from a generalized version of the fundamental theorem of calculus and Hölder's inequality.
 \end{remark}
@@ -209,21 +209,23 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\item[Step 1:] A minimization problem
 		
 		Fix some $ h > 0 $, $ u_{ n - 1 } \in \wkp^{1 , 2 }\cap \lp^{ p } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $ and consider the functional
-		\begin{align*}
+		\begin{align}
+			\label{de_giorgi_min_functional}
 			\mathcal{ F } \colon \wkp^{ 1, 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } )
 			& \to
 			\mathbb{ R }
 			\\
 			u & \mapsto 
 			\energy_{ \varepsilon } ( u ) + 
-			\frac{ 1 }{ 2h } \int \abs{ u - u_{ n - 1 } }^{ 2 } \dd{x }.
-		\end{align*}
+			\frac{ 1 }{ 2h } \int \abs{ u - u_{ n - 1 } }^{ 2 } \dd{x }
+			\notag .
+		\end{align}
 		Then $ \mathcal{ F } $ is coercive with respect to 
 		$ \norm{ \cdot }_{ \wkp^{ 1, 2 } } $ 
 		and bounded from below by zero, thus we may take a $ \wkp^{ 1 , 2 } $-bounded sequence  
 		$ (v_{ k } )_{ k \in \mathbb{ N } } $ in $ \wkp^{ 1 , 2} \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } $ such that 
 		$ \mathcal{ F } ( v_{ k } ) \to \inf \mathcal{ F } $ as $ k \to \infty $. 
-		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } $ and strongly in $ \lp^{ 2 } ( \mathbb{ T }, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $.
+		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ and strongly in $ \lp^{ 2 } ( \mathbb{ T }, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $.
 		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } $ by the lower growth assumption (\ref{polynomial_growth}) on $ W $
 		and thus obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $.
 		
@@ -256,14 +258,14 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	
 	By recursively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ 0 }, u_{ 1 }^{ h } , \dotsc $. Thus we may define a function $ u \in \mathrm{ C } $ as the piecewise linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these functions.
 	
-	\item[Step 3:] Estimates for $ u^{ h } $
+	\item[Step 3:] Sharp energy estimate for $ u_{ n }^{ h } $
 	
 	We claim that there exists some constant $ C > 0 $ such that for all $ h > 0 $ and $ n \in \mathbb{ N } $, we have
 	\begin{equation}
 		\label{discrete_optimal_energy_dissipation}
 		\energy_{ \varepsilon } ( u_{ n }^{ h } )
 		+
-		( \frac{ 1 }{ h } - \frac{ C }{ 2 \varepsilon } )
+		\left( \frac{ 1 }{ h } - \frac{ C }{ 2 \varepsilon } \right)
 		\int \abs{ u_{ n } - u_{ n - 1 } }^{ 2 } \dd{ x }
 		\leq
 		\energy_{ \varepsilon } ( u_{ n - 1 }^{ h } ).
@@ -274,13 +276,13 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\coloneqq
 		\int 
 			\frac{ 1 }{ \varepsilon }
-			\left( W ( u ) + C \frac{ \abs{ u }^{ 2 } }{ 2 } \right)
+			\left( W ( u ) + \frac{ C }{ 2 } \abs{ u }^{ 2 } \right)
 			+
 			\frac{ \varepsilon}{ 2 }
 			\abs{ \nabla u }^{ 2 }
 		\dd{ x }
 	\end{equation*}
-	is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } , \mathbb{ R }^{ N } ) $. For a given $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } , \mathbb{ R }^{ N } ) $, we thus have that the function
+	is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $. For a given $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $, we thus have that the function
 	$ t \mapsto \ \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi ) $ is convex and differentiable, which yields that
 	\begin{equation}
 		\label{convexity_at_time_1}
@@ -289,7 +291,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } ) + 
 		\left.\dv{ t }\right|_{ t = 0 } \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi).
 	\end{equation} 
-	But since $ u_{ n }^{ h } $ is a minimizer of $\mathcal{ F }$, we have
+	But since $ u_{ n }^{ h } $ is a minimizer of the functional $\mathcal{ F }$ defined by (\ref{de_giorgi_min_functional} ), we have
 	\begin{align*}
 		\left. \dv{ t } \right|_{ t= 0 }
 			\tilde{\energy}_{ \varepsilon} ( u_{ n }^{ h } + t \xi )
@@ -297,24 +299,188 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\left. \dv{ t } \right|_{ t = 0 } 
 			\mathcal{ F } ( u_{ n }^{ h } + t \xi )
 		\\
-		{}&+ \frac{ C }{ 2 \varepsilon } \int \abs{ u_{ n }^{ h } + t \xi }^{ 2 } \dd{ x }
-		-\frac{ 1 }{ 2h } \int \abs{ u_{n }^{ h } + t \xi - u_{ n - 1 }^{ h } }^{ 2 } \dd{ x }
+		{}&+ 
+		\frac{ C }{ 2 \varepsilon } 
+		\int 
+			\abs{ u_{ n }^{ h } + t \xi }^{ 2 } 
+		\dd{ x }
+		-
+		\frac{ 1 }{ 2h } 
+		\int 
+			\abs{ u_{n }^{ h } + t \xi - u_{ n - 1 }^{ h } }^{ 2 } 
+		\dd{ x }
 		\\
 		={}& 
 		\int
 			\frac{ C }{ \varepsilon }
-			\inner{u_{ n }^{ h }}{\xi}
+			\inner*{u_{ n }^{ h }}{\xi}
 			-
 			\frac{ 1 }{ h }
-			\inner{ u_{ n }^{ h } - u_{ n - 1 } ^{ h } }{ \xi }
+			\inner*{ u_{ n }^{ h } - u_{ n - 1 } ^{ h } }{ \xi }
 		\dd{x}.
 	\end{align*}
-	Plugging $ \xi = u_{ n - 1 }^{ h } $
+	Plugging $ \xi = u_{ n - 1 }^{ h } - u_{ n }^{ h } $ into this equation and using inequality (\ref{convexity_at_time_1})  thus yields
+	\begin{equation*}
+		\tilde{\energy}_{ \varepsilon } ( u_{ n - 1 }^{ h } ) 
+		\geq
+		\tilde{\energy}_{ \varepsilon} ( u_{ n }^{ h } )
+		+
+		\int
+			\frac{ C }{ \varepsilon } 
+			\left(
+				\inner*{ u_{ n - 1 }^{ h } }{ u_{n }^{ h }}
+				-
+				\abs{ u_{ n }^{ h }}^{ 2 }
+			\right)
+			+
+			\frac{ 1 }{ h }
+			\abs{ u_{n }^{ h } - u_{ n -1 }^{ h } }^{ 2 }
+		\dd{ x },
+	\end{equation*}
+	which is equivalent to
+	\begin{align*}
+		\energy_{ \varepsilon } (u_{ n - 1 }^{ h } )
+		\geq {} &
+		\energy_{ \varepsilon } (u_{ n }^{ h } )
+		\\
+		& +
+		\int
+			\left(
+				\frac{ C }{ 2 \varepsilon }
+				-
+				\frac{ C }{ \varepsilon }
+			\right)
+			\abs{ u_{ n }^{ h } }^{ 2 }
+			-
+			\frac{ C }{ 2 \varepsilon }
+			\abs{ u_{n - 1 }^{ h } }^{ 2 }
+			+ 
+			\frac{ C }{ \varepsilon }
+			\inner*{ u_{ n - 1 }^{ h } }{ u_{ n }^{ h } }
+			+ 
+			\frac{ 1 }{ h }
+			\abs{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
+		\dd{ x }
+		\\
+		= {} &
+		\energy_{ \varepsilon } ( u_{n }^{ h } )
+		+
+		\left( 
+			\frac{ 1 }{ h }
+			- 
+			\frac{ C }{ 2 \varepsilon }
+		\right)
+		\int 
+			\abs{ u_{n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
+		\dd{ x },
+	\end{align*}
+	which is the claimed estimate (\ref{discrete_optimal_energy_dissipation}).
+	
+	\item[Step 4:] Hölder bounds for $ u_{ h } $
+	
+	From the energy estimate (\ref{discrete_optimal_energy_dissipation}) we deduce via an induction that
+	\begin{align*}
+		& \energy_{ \varepsilon } ( u_{ n }^{ h } )
+		+
+		\left(
+			1
+			-
+			\frac{ C h  }{ 2 \varepsilon }
+		\right)
+		\int_{ 0 }^{ n h }
+			\int
+				\abs{ \partial_{ t } u^{ h } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		\\
+		={} &
+		\energy_{ \varepsilon } ( u_{ n }^{ h } )
+		+
+		\left(
+			h - \frac{ C h^{ 2 }}{ 2 \varepsilon }
+		\right)
+		\sum_{k = 1 }^{ n }
+			\int
+				 \abs{
+				 	\frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h }
+			 	}^{ 2 }
+		 	\dd{ x }
+		 \\
+		\leq {} &
+		\energy_{ \varepsilon } ( u_{ 0 } ).
+	\end{align*}
+	This gives use with the use of Jensen's inequality for $ 0\leq s \leq t \leq T $ and $ h > 0 $ sufficiently small that
+	\begin{align}
+		\norm{ u^{ h } ( t ) - u^{ h } ( s ) }_{ \lp^{ 2 } }
+		& =
+		\norm{ 
+			\int_{ s }^{ t }
+				\partial_{ t } u_{ h } ( \tau )
+			\dd{ \tau }
+		}_{ \lp^{ 2 } }
+		\notag
+		\\
+		& \leq
+		\sqrt{ t - s }
+		\left(	
+			\int_{ 0 }^{ T }
+					\int
+						\abs{ \partial_{ t } u^{ h } ( \tau, x ) }^{ 2 }
+					\dd{ x }
+				\dd{ t }
+		\right)^{ 1/2 }
+		\notag
+		\\
+		\label{hölder_continuity_of_uh}
+		& \leq
+		\sqrt{ t - s }
+		\left(
+			1 - \frac{ C h }{ 2 \varepsilon }
+		\right)^{ - 1/2 }
+		\left(  E_{ \varepsilon } ( u_{ 0 } ) \right)^{ 1/ 2 },
+	\end{align}
+	which gives us a uniform bound on the $ \lp^{ 2 }$-Hölder continuity of $ u^{ h } $ in time as $ h $ tends to zero.
+	
+	\item[Step 5:] Compactness
+	
+	In order to apply Arzelà-Ascoli for the sequence $ (u_{ h } ) $ as $ h $ tends to zero, we need to check pointwise precompactness of the image and equicontinuity of the sequence. 
+	The equicontinuity follows from the previous estimate (\ref{hölder_continuity_of_uh}).
+	In order to check the pointwise precompactness, we need to verify that for all $ t \in [ 0 , T ] $, the set
+	$ \{ u^{ h } ( t ) \}_{ \delta > h > 0 } $ is a precompact subset of $ \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ (for $ \delta > 0 $ sufficiently small). 
+	But this follows from the energy bound $ \energy_{ \varepsilon } ( u_{ n }^{ h } ) \leq \energy_{ \varepsilon } ( u_{ 0 } ) $ (given by inequality (\ref{discrete_optimal_energy_dissipation})), which gives us a time-uniform bound on $ \norm{ \nabla u^{ h }( t ) }_{\lp^{ 2 }( \mathbb{ T }; \mathbb{ R }^{ N } ) } $ and on $ \norm{ u^{ h } ( t )}_{ \lp^{ p } ( \mathbb{ T }; \mathbb{ R }^{ N } ) } $ and thus on $ \norm{ u^{ h } ( t )}_{ \wkp^{ 1 , 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) } $. The compact embedding
+	$ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \hookrightarrow \lp^{ 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $ thus yields the desired pointwise precompactness.
+	
+	Therefore we may apply Arzelà--Ascoli to obtain some $ u \in \cont^{ 1 , 2 } \left( [ 0, T ] ; \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } \right) $ and some  sequence $ h_{ n } \to 0 $ such that
+	$ u^{ h_{ n } } $ converges uniformly to $ u $ on $ [ 0 , T ] $ with respect to $ \norm{ \cdot }_{ \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) } $.
+	
+	\item[Step 6:] Additional regularity 1
+	
+	We first want to argue that from our construction, one already obtains that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1, 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \right) $
+	For this we first notice that for a fixed $ t \in [ 0 , T ] $, the sequence $ u^{ h_{ n } } ( t ) $ is by the energy bound (\ref{discrete_optimal_energy_dissipation}) a bounded sequence in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $, thus we find some non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ such that $ u^{ n_{h } } ( t ) $ converges weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $. By uniqueness of the limit, we already have $ u ( t ) = v $ almost everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \mathbb{ T }, \mathbb{ R }^{ N } ) $, and by lower semicontinuity, we may also deduce that
+	\begin{equation*}
+		\norm{ u ( t ) }_{ \wkp^{ 1 , 2 } }
+		\leq
+		\liminf_{ n \to \infty }
+			\norm{ u^{ h_{ n } } ( t ) }_{ \wkp^{ 1 , 2 } }
+		\leq
+		C \energy_{ \varepsilon },
+	\end{equation*}
+	from which we deduce that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \right) $.	
+	
+	Secondly the boundedness of the energies
+	\begin{equation*}
+		\sup_{ 0 \leq t \leq T }
+			\energy_{ \varepsilon } ( u ( t ) ) 
+		< \infty
+	\end{equation*}
+	follows from the lower semicontinuity of the energy and the pointwise $ \lp^{ 2 } $ convergence and pointwise weak convergence in $ \wkp^{ 1 , 2 } $ as described in step 1.
+	
+	Lastly we want to argue that $ \partial_{ t } u \in \lp^{2 } \left( [ 0 , T ] \times \mathbb{ T } ; \mathbb{ R }^{ N } \right) $.
 	\end{description}
 \end{proof}
 
 \begin{remark}
-	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor $ 1/2h $ instead of $ 1/h- C/2\varepsilon $ follows immediately from the definition of our optimization problem, but is not optimal and this so called sharp energy dissipation inequality is important for later.
+	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor $ 1/2h $ instead of $ 1/h- C/2\varepsilon $ follows immediately from the definition of our optimization problem, but is not optimal for fixed $ \varepsilon $ if we want to study the behaviour as $ h $ tends to zero. Moreover this so called \emph{sharp energy dissipation inequality} is important for later.
 \end{remark}
 
 

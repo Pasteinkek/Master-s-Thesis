@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  13 MAY 2022 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  17 MAY 2022 15:54
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1448,15 +1448,16 @@ l.95 \end{equation}
 <to be read again> 
                    \relax 
 l.152 		\end{equation}
-                       [2] [3] [4]) [5]
+                       [2] [3] [4] [5]
+Overfull \hbox (66.2094pt too wide) in paragraph at lines 458--460
+[]\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
+ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
+ []
+
+) [6]
 \openout2 = `chapter2.aux'.
 
- (chapter2.tex [6
-
-
-
-
-]
+ (chapter2.tex
 chapter 2.
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 1.
@@ -1464,7 +1465,12 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)) [7] [8
+)) [7
+
+
+
+
+] [8
 
 
 
@@ -1489,13 +1495,13 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43152 strings out of 480930
- 989304 string characters out of 2900231
- 1831010 words of memory out of 3000000
- 58270 multiletter control sequences out of 15000+200000
- 541210 words of font info for 84 fonts, out of 3000000 for 9000
+ 43167 strings out of 480930
+ 989507 string characters out of 2900231
+ 1833205 words of memory out of 3000000
+ 58277 multiletter control sequences out of 15000+200000
+ 541306 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,11n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 82i,12n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
@@ -1522,9 +1528,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (13 pages, 285341 bytes).
+Output written on "Master's Thesis.pdf" (13 pages, 296011 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
  19501 words of extra memory for PDF output out of 20736 (max. 10000000)
 
