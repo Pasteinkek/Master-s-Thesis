@@ -6,6 +6,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Existence of a solution}{3}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Convergence of the Allen--Cahn equations}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Convergence of the Allen--Cahn equations}{9}{chapter.2}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

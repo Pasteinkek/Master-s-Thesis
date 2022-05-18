@@ -5,10 +5,10 @@
 This chapter follows \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, but since the authors decided to only sketch some proofs. we want to go into more detail.
 
 Let $ \Lambda > 0 $ and define the flat torus 
-$ \mathbb{T} = [0, \Lambda )^{ d } \subset \mathbb{ R }^{ d } $, 
-where we work with periodic boundary conditions and write $ \int \dd{x} $ instead of $ \int_{ \mathbb{ T } } \dd{x} $.
+$ \flattorus = [0, \Lambda )^{ d } \subset \mathbb{ R }^{ d } $, 
+where we work with periodic boundary conditions and write $ \int \dd{x} $ instead of $ \int_{ \flattorus } \dd{x} $.
 Then for 
-$ u \colon [ 0 , \infty ) \times \mathbb{ T } \to \mathbb{ R }^{ N } $ 
+$ u \colon [ 0 , \infty ) \times \flattorus \to \mathbb{ R }^{ N } $ 
 and some potential 
 $ W \colon \mathbb{ R }^{ N } \to [0, \infty ) $,
 the \emph{Allen--Cahn equation} with parameter $ \varepsilon > 0 $ is given by
@@ -113,11 +113,11 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 	\label{solution_to_ac}
 	We say that a function 
 	$ u_{ \varepsilon} \in 
-	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) \right) $
+	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) \right) $
 	which is also in
-	$\lp^{ \infty } \left( [0, T ]; \wkp^{ 1, 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \right)
+	$\lp^{ \infty } \left( [0, T ]; \wkp^{ 1, 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right)
 	$
-	is a weak solution of the Allen--Cahn equation (\ref{allen_cahn_eq}) with parameter $ \varepsilon > 0 $ and initial condition $ u_{ \varepsilon}^{ 0 } \in \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ if
+	is a weak solution of the Allen--Cahn equation (\ref{allen_cahn_eq}) with parameter $ \varepsilon > 0 $ and initial condition $ u_{ \varepsilon}^{ 0 } \in \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ if
 	\begin{enumerate}
 		\item the energy stays bounded, which means that
 		\begin{equation}
@@ -130,13 +130,13 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 		\begin{equation}
 			\partial_{ t } u_{ \varepsilon }
 			\in
-			\lp^{ 2 } ( [ 0 , T ] \times \mathbb{ T } ; \mathbb{ R }^{ N } ),
+			\lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ),
 		\end{equation}
 		\item 
 		for almost every $ t \in [ 0 , T ] $ and every 
-		$ \xi \in \lp^{ p } ( [ 0 , T ] \times \mathbb{ T }; \mathbb{ R }^{ N } ) 
+		$ \xi \in \lp^{ p } ( [ 0 , T ] \times \flattorus; \mathbb{ R }^{ N } ) 
 		\cap
-		\wkp^{ 1, 2 } ( [ 0, T ] \times \mathbb{ T } ; \mathbb{ R }^{ N } ) $,
+		\wkp^{ 1, 2 } ( [ 0, T ] \times \flattorus ; \mathbb{ R }^{ N } ) $,
 		we have
 		\begin{equation}
 			\label{ac_weak_equation}
@@ -156,7 +156,7 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 \end{definition}
 
 \begin{remark}
-	Given our assumptions, we automatically have $ \nabla W ( u_{ \varepsilon } ) ( t ) \in \lp^{ p' } ( \mathbb{ T } ) $ since
+	Given our assumptions, we automatically have $ \nabla W ( u_{ \varepsilon } ) ( t ) \in \lp^{ p' } ( \flattorus ) $ since
 	\begin{equation}
 		\abs{ \nabla W ( u_{ \varepsilon} ) }^{ p/(p-1) }
 		\lesssim
@@ -169,9 +169,9 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 	
 	Moreover we already obtain $ 1/2 $ Hölder-continuity in time from the embedding
 	\begin{equation}
-		\wkp^{ 1 , 2} ( [ 0 , T ] ; \lp^{ 2 } ( \mathbb{ T };\mathbb{ R }^{ N } ) )
+		\wkp^{ 1 , 2} ( [ 0 , T ] ; \lp^{ 2 } ( \flattorus;\mathbb{ R }^{ N } ) )
 		\hookrightarrow
-		\cont^{ 1/2 } ( [ 0 , T ] ; \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) ),
+		\cont^{ 1/2 } ( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) ),
 	\end{equation}
 	which follows from a generalized version of the fundamental theorem of calculus and Hölder's inequality.
 \end{remark}
@@ -182,7 +182,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 
 \begin{theorem}
 	\label{existence_of_ac_solution}
-	Let $ u_{ \varepsilon}^{ 0 } \colon \mathbb{ T } \to \mathbb{ R }^{ N } $ be such that 
+	Let $ u_{ \varepsilon}^{ 0 } \colon \flattorus \to \mathbb{ R }^{ N } $ be such that 
 	$ \energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ) < \infty $.
 	Then there exists a weak solution $ u_{ \varepsilon} $ to the Allen--Cahn equation (\ref{allen_cahn_eq}) in the sense of \Cref{solution_to_ac} with initial data $ u_{ \varepsilon}^{ 0 } $.
 	Furthermore the solution satisfies the energy dissipation identity
@@ -199,7 +199,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\end{equation}
 	for almost every $ t \in [ 0 , T ] $ and we additionally have
 	$
-		\partial_{ i , j }^{ 2 } u_{ \varepsilon }, \nabla W ( u_{ \varepsilon } ) \in \lp^{ 2 } ( [0, T] \times \mathbb{ T } ; \mathbb{ R }^{ N } ) 
+		\partial_{ i , j }^{ 2 } u_{ \varepsilon }, \nabla W ( u_{ \varepsilon } ) \in \lp^{ 2 } ( [0, T] \times \flattorus ; \mathbb{ R }^{ N } ) 
 	$
 	for all $ 1 \leq i, j \leq d $. In particular we can test the weak form (\ref{ac_weak_equation}) with $ \partial_{ i , j }^{ 2 } u_{ \varepsilon } $.
 \end{theorem}
@@ -208,10 +208,10 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\begin{description}[wide=0pt]
 		\item[Step 1:] A minimization problem
 		
-		Fix some $ h > 0 $, $ u_{ n - 1 } \in \wkp^{1 , 2 }\cap \lp^{ p } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $ and consider the functional
+		Fix some $ h > 0 $, $ u_{ n - 1 } \in \wkp^{1 , 2 }\cap \lp^{ p } ( \flattorus; \mathbb{ R }^{ N } ) $ and consider the functional
 		\begin{align}
 			\label{de_giorgi_min_functional}
-			\mathcal{ F } \colon \wkp^{ 1, 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } )
+			\mathcal{ F } \colon \wkp^{ 1, 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } )
 			& \to
 			\mathbb{ R }
 			\\
@@ -223,11 +223,11 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		Then $ \mathcal{ F } $ is coercive with respect to 
 		$ \norm{ \cdot }_{ \wkp^{ 1, 2 } } $ 
 		and bounded from below by zero, thus we may take a $ \wkp^{ 1 , 2 } $-bounded sequence  
-		$ (v_{ k } )_{ k \in \mathbb{ N } } $ in $ \wkp^{ 1 , 2} \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } $ such that 
+		$ (v_{ k } )_{ k \in \mathbb{ N } } $ in $ \wkp^{ 1 , 2} \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $ such that 
 		$ \mathcal{ F } ( v_{ k } ) \to \inf \mathcal{ F } $ as $ k \to \infty $. 
-		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ and strongly in $ \lp^{ 2 } ( \mathbb{ T }, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $.
-		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } $ by the lower growth assumption (\ref{polynomial_growth}) on $ W $
-		and thus obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $.
+		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ and strongly in $ \lp^{ 2 } ( \flattorus, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \flattorus; \mathbb{ R }^{ N } ) $.
+		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } $ by the lower growth assumption (\ref{polynomial_growth}) on $ W $
+		and thus obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $.
 		
 		Lastly we have 
 		\begin{align}
@@ -243,7 +243,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\liminf_{ k \to \infty }
 				\int \frac{ \varepsilon }{ 2 } \abs{ \nabla v_{ k } }^{ 2 } \dd{ x }
 		\end{align}
-	by the weak convergence in $ \wkp^{ 1 , 2 } ( \mathbb{ T } , \mathbb{ R }^{ N } )$.
+	by the weak convergence in $ \wkp^{ 1 , 2 } ( \flattorus , \mathbb{ R }^{ N } )$.
 	By passing to another non-relabelled subsequence which converges pointwise almost everywhere, we moreover achieve by continuity of $ W $ that
 	\begin{equation*}
 		\int \frac{ 1 }{ \varepsilon } W ( u ) \dd{ x }
@@ -256,7 +256,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	
 	\item[Step 2:] Minimizing movements scheme 
 	
-	By recursively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ 0 }, u_{ 1 }^{ h } , \dotsc $. Thus we may define a function $ u \in \mathrm{ C } $ as the piecewise linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these functions.
+	By iteratively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ 0 }, u_{ 1 }^{ h } , \dotsc $. Thus we may define a function $ u \in \mathrm{ C } $ as the piecewise linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these functions.
 	
 	\item[Step 3:] Sharp energy estimate for $ u_{ n }^{ h } $
 	
@@ -282,7 +282,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\abs{ \nabla u }^{ 2 }
 		\dd{ x }
 	\end{equation*}
-	is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $. For a given $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $, we thus have that the function
+	is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $. For a given $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $, we thus have that the function
 	$ t \mapsto \ \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi ) $ is convex and differentiable, which yields that
 	\begin{equation}
 		\label{convexity_at_time_1}
@@ -379,7 +379,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\item[Step 4:] Hölder bounds for $ u_{ h } $
 	
 	From the energy estimate (\ref{discrete_optimal_energy_dissipation}) we deduce via an induction that
-	\begin{align*}
+	\begin{align}
 		& \energy_{ \varepsilon } ( u_{ n }^{ h } )
 		+
 		\left(
@@ -392,6 +392,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 				\abs{ \partial_{ t } u^{ h } }^{ 2 }
 			\dd{ x }
 		\dd{ t }
+		\notag
 		\\
 		={} &
 		\energy_{ \varepsilon } ( u_{ n }^{ h } )
@@ -405,10 +406,12 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 				 	\frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h }
 			 	}^{ 2 }
 		 	\dd{ x }
-		 \\
+		 \notag
+		\\
+		\label{energy_and_time_derivative_bound}
 		\leq {} &
 		\energy_{ \varepsilon } ( u_{ 0 } ).
-	\end{align*}
+	\end{align}
 	This gives use with the use of Jensen's inequality for $ 0\leq s \leq t \leq T $ and $ h > 0 $ sufficiently small that
 	\begin{align}
 		\norm{ u^{ h } ( t ) - u^{ h } ( s ) }_{ \lp^{ 2 } }
@@ -446,17 +449,17 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	In order to apply Arzelà-Ascoli for the sequence $ (u_{ h } ) $ as $ h $ tends to zero, we need to check pointwise precompactness of the image and equicontinuity of the sequence. 
 	The equicontinuity follows from the previous estimate (\ref{hölder_continuity_of_uh}).
 	In order to check the pointwise precompactness, we need to verify that for all $ t \in [ 0 , T ] $, the set
-	$ \{ u^{ h } ( t ) \}_{ \delta > h > 0 } $ is a precompact subset of $ \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ (for $ \delta > 0 $ sufficiently small). 
-	But this follows from the energy bound $ \energy_{ \varepsilon } ( u_{ n }^{ h } ) \leq \energy_{ \varepsilon } ( u_{ 0 } ) $ (given by inequality (\ref{discrete_optimal_energy_dissipation})), which gives us a time-uniform bound on $ \norm{ \nabla u^{ h }( t ) }_{\lp^{ 2 }( \mathbb{ T }; \mathbb{ R }^{ N } ) } $ and on $ \norm{ u^{ h } ( t )}_{ \lp^{ p } ( \mathbb{ T }; \mathbb{ R }^{ N } ) } $ and thus on $ \norm{ u^{ h } ( t )}_{ \wkp^{ 1 , 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) } $. The compact embedding
-	$ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \hookrightarrow \lp^{ 2 } ( \mathbb{ T }; \mathbb{ R }^{ N } ) $ thus yields the desired pointwise precompactness.
+	$ \{ u^{ h } ( t ) \}_{ \delta > h > 0 } $ is a precompact subset of $ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ (for $ \delta > 0 $ sufficiently small). 
+	But this follows from the energy bound $ \energy_{ \varepsilon } ( u_{ n }^{ h } ) \leq \energy_{ \varepsilon } ( u_{ 0 } ) $ (given by inequality (\ref{discrete_optimal_energy_dissipation})), which gives us a time-uniform bound on $ \norm{ \nabla u^{ h }( t ) }_{\lp^{ 2 }( \flattorus; \mathbb{ R }^{ N } ) } $ and on $ \norm{ u^{ h } ( t )}_{ \lp^{ p } ( \flattorus; \mathbb{ R }^{ N } ) } $ and thus on $ \norm{ u^{ h } ( t )}_{ \wkp^{ 1 , 2 } ( \flattorus; \mathbb{ R }^{ N } ) } $. The compact embedding
+	$ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \hookrightarrow \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) $ thus yields the desired pointwise precompactness.
 	
-	Therefore we may apply Arzelà--Ascoli to obtain some $ u \in \cont^{ 1 , 2 } \left( [ 0, T ] ; \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } \right) $ and some  sequence $ h_{ n } \to 0 $ such that
-	$ u^{ h_{ n } } $ converges uniformly to $ u $ on $ [ 0 , T ] $ with respect to $ \norm{ \cdot }_{ \lp^{ 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) } $.
+	Therefore we may apply Arzelà--Ascoli to obtain some $ u \in \cont^{ 1 , 2 } \left( [ 0, T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } \right) $ and some  sequence $ h_{ n } \to 0 $ such that
+	$ u^{ h_{ n } } $ converges uniformly to $ u $ on $ [ 0 , T ] $ with respect to $ \norm{ \cdot }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) } $.
 	
 	\item[Step 6:] Additional regularity 1
 	
-	We first want to argue that from our construction, one already obtains that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1, 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \right) $
-	For this we first notice that for a fixed $ t \in [ 0 , T ] $, the sequence $ u^{ h_{ n } } ( t ) $ is by the energy bound (\ref{discrete_optimal_energy_dissipation}) a bounded sequence in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $, thus we find some non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $ such that $ u^{ n_{h } } ( t ) $ converges weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $. By uniqueness of the limit, we already have $ u ( t ) = v $ almost everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \mathbb{ T }, \mathbb{ R }^{ N } ) $, and by lower semicontinuity, we may also deduce that
+	We first want to argue that from our construction, one already obtains that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1, 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $
+	For this we first notice that for a fixed $ t \in [ 0 , T ] $, the sequence $ u^{ h_{ n } } ( t ) $ is by the energy bound (\ref{discrete_optimal_energy_dissipation}) a bounded sequence in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $, thus we find some non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ such that $ u^{ n_{h } } ( t ) $ converges weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $. By uniqueness of the limit, we already have $ u ( t ) = v $ almost everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \flattorus, \mathbb{ R }^{ N } ) $, and by lower semicontinuity, we may also deduce that
 	\begin{equation*}
 		\norm{ u ( t ) }_{ \wkp^{ 1 , 2 } }
 		\leq
@@ -465,7 +468,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\leq
 		C \energy_{ \varepsilon },
 	\end{equation*}
-	from which we deduce that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1 , 2 } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) \right) $.	
+	from which we deduce that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $.	
 	
 	Secondly the boundedness of the energies
 	\begin{equation*}
@@ -475,7 +478,125 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\end{equation*}
 	follows from the lower semicontinuity of the energy and the pointwise $ \lp^{ 2 } $ convergence and pointwise weak convergence in $ \wkp^{ 1 , 2 } $ as described in step 1.
 	
-	Lastly we want to argue that $ \partial_{ t } u \in \lp^{2 } \left( [ 0 , T ] \times \mathbb{ T } ; \mathbb{ R }^{ N } \right) $.
+	Lastly we want to argue that $ \partial_{ t } u \in \lp^{2 } \left( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } \right) $. From inequality (\ref{energy_and_time_derivative_bound}) in step 4, we deduce that $ \partial_{ t } u^{ h } $ is a bounded sequence in $ \lp^{ 2 } [ 0 , T ] \times \flattorus; \mathbb{ R }^{ N } ) $. Thus we find a non-relabelled subsequence of $ h_{ n } $ and some $ w \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $ such that $ u^{ h_{n } } $ converges weakly to $ w $ in $ \lp^{ 2 } ( [0, T ] \times \flattorus ; \mathbb{ R }^{ N } ) $. But then $ w $ is already the weak time derivative of u since for any testfunction $ \xi $, we have
+	\begin{align*}
+		\int_{ [ 0 , T ] \times \flattorus }
+			 \inner*{ u }{ \partial_{ t } \xi }
+		\dd{ x } \dd{ t }
+		& =
+		\lim_{ n \to \infty }
+			\int_{ [ 0 , T ] \times \flattorus }
+				\inner*{ u^{ h_{ n } } }{ \partial_{ t } \xi }
+			\dd{ x } \dd{ t }
+		\\
+		& =
+		\lim_{n \to \infty }
+			- \int_{ [ 0 , T ] \times \flattorus }
+				\inner*{ \partial_{ t } u^{ h_{ n } } }{ \xi }
+			\dd{ x }\dd{ t }
+		\\
+		& =
+		- \int_{ [ 0 , T ] \times \flattorus }
+			\inner*{ w }{ \xi }
+		\dd{ x } \dd{ t }.
+	\end{align*}
+
+	\item[Step 7:] $ u $ is a weak solution
+	
+	Going back to step 1, we see that $ u_{ n }^{ h } $ solves the Euler--Lagrange equation
+	\begin{equation}
+		\label{el_eq_for_unh}
+		\int
+			\frac{ 1 }{ \varepsilon}
+			\inner*{ \nabla W ( u_{ n }^{ h } ) }  { \xi }
+			+
+			\varepsilon
+			\inner*{ \nabla u_{ n }^{ h } }{ \nabla \xi }
+			+
+			\inner*{ \frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h } }{ \xi }
+		\dd{ x }
+		=
+		0
+	\end{equation}
+	for any testfunction $ \xi \in \cont^{ \infty } ( \flattorus ; \mathbb{ R }^{ N } )  $.
+	Let $ t \in [ 0 , T ] $. Since $ u_{ h } $ is defined as the pointwise linear interpolation of the functions $ u_{ n}^{ h } $, we find for the sequence $ h_{ n } $ corresponding sequences $ \lambda_{ n } \in [ 0 , 1 ] $ and $ k_{ n } \in \mathbb{ N }$ such that 
+	\begin{equation*}
+		t = \lambda_{ n } ( k_{ n } - 1 ) h_{ n } + ( 1 - \lambda_{ n } ) k_{ n } h_{ n } 
+	\end{equation*}
+	and therefore we can write
+	\begin{equation*}
+		u_{ h } ( t ) 
+		=
+		\frac{ k_{ n } h_{ n } - t }{ h_{ n } } u_{ k_{ n } - 1 }^{ h }
+		+
+		\frac{ t - ( k_{ n } - 1 ) h_{ n } }{ h_{ n } }
+		u_{ k_{ n } }^{ h_{ n } }.
+	\end{equation*}
+	In order to pass to the limit in equation (\ref{el_eq_for_unh}), we first note that $ u_{ k_{ n } }^{ h_{ n } } $ converges to $ u ( t ) $ in $ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ since
+	\begin{align*}
+		\norm{ u ( t ) - u_{ k_{ n } }^{ h_{ n } } }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) }
+		& \leq
+		\norm{ u ( t ) - u^{ h_{ n } } ( t ) }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) }
+		+
+		\norm{ u^{ h_{ n } } ( t ) - u^{ h_{ n } } ( k_{n } h_{ n } ) }_{ \lp^{ 2 } ( \flattorus, \mathbb{ R }^{ N } ) }
+		\\
+		& \lesssim
+		\norm{ u ( t ) - u^{ h_{ n } } ( t ) }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) }
+		+ 
+		\sqrt{ h_{ n } }
+		\tag{\ref{hölder_continuity_of_uh}},
+	\end{align*}
+	which goes to zero as $ n $ tends to infinity.
+	This implies that 
+	\begin{align*}
+		\int
+			\varepsilon 
+			\inner*{ \nabla u ( t ) }{ \nabla \xi }
+		\dd{ x }
+		& = 
+		\int
+			\varepsilon
+			\inner*{ u ( t ) }{ \divg \nabla \xi  }
+		\dd{ x }
+		\\
+		& = 
+		\lim_{ n \to \infty }
+			\int
+				\varepsilon
+				\inner*{ u_{ k_{ n } }^{ h_{ n } } }{ \divg \nabla \xi  }
+			\dd{x }
+		\\
+		& = 
+		\lim_{ n \to \infty }
+			\int
+				\varepsilon
+				\inner*{ \nabla u_{ k_{ n } }^{ h_{ n } } }{ \nabla \xi }
+			\dd{ x }.
+	\end{align*}
+	In step 6, we moreover have shown that $ \partial_{ t } u^{ h } $ converges weakly to $ \partial_{t } u $ in $ \lp^{ 2 } ( [ 0, T ] \times \flattorus ; \mathbb{ R }^{ N } ) $. This yields, by choosing cylindrical testfunctions, that $ \partial_{ t } u^{ h } ( t ) $ converges weakly to $ \partial_{ t } u ( t ) $ in $ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ for almost every $ t \in [ 0 , T ] $.
+	Thus we obtain for almost every $ t\in [ 0 , T ] $ the convergence
+	\begin{equation*}
+		\int
+			\inner*{ \partial_{ t } u ( t ) }{ \xi }
+		\dd{ x }
+		=
+		\lim_{ n \to \infty }
+			\int
+				\inner*{ \partial_{ t } u ( t ) }{ \xi }
+			\dd{ x }
+		=
+		\lim_{ n \to \infty }
+			 \int
+			 	\inner*{ \frac{ u_{ k_{ n } }^{ h_{ n } } - u_{ k_{ n } - 1 }^{ h_{ n } } }{ h_{ n } } }{ \xi }
+			 \dd{ x }.
+	\end{equation*}
+	To obtain the weak equation, we still need to prove convergence of remaining term. For this we note that 
+	\begin{equation*}
+		\frac{ 1 }{ \varepsilon }
+		\abs{ \inner{ \nabla \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi } }
+		\lesssim
+		\left( 1 + \abs{ u_{  k_{ n } }^{ h_{ n } } } \right)
+	\end{equation*}
 	\end{description}
 \end{proof}
 
