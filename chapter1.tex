@@ -178,7 +178,7 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 
 \section{Existence of a solution}
 
-With \Cref{solution_to_ac}, we are able to state our existence results for solutions of the Allen--Cahn equation. The proof uses De Giorgis minimizing movements scheme and arguments from the theory of gradient flows.
+With \Cref{solution_to_ac}, we are able to state our existence results for solutions of the Allen--Cahn equation. The proof uses De Giorgis minimizing movements scheme and arguments from the theory of gradient flows and has been briefly sketched in \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}.
 
 \begin{theorem}
 	\label{existence_of_ac_solution}
@@ -187,6 +187,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	Then there exists a weak solution $ u_{ \varepsilon} $ to the Allen--Cahn equation (\ref{allen_cahn_eq}) in the sense of \Cref{solution_to_ac} with initial data $ u_{ \varepsilon}^{ 0 } $.
 	Furthermore the solution satisfies the energy dissipation identity
 	\begin{equation}
+		\label{energy_dissipation_sharp}
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
 		+
 		\int_{ 0 }^{ t }
@@ -712,12 +713,140 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 
 	\item[Step 8:] Additional regularity 2
 	
+	In order to complete the proof, we still have to show that $ \partial_{ i , j }^{ 2 } u$ and$ \nabla W ( u) $ are elements of $ \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $.
+	In order to show that the second partial derivatives of $ u $ are square-integrable, we test the weak formulation (\ref{ac_weak_equation}) with the finite differences. To this end, define the finite differences as
+	\begin{equation*}
+		\Delta_{ h }^{ + } v ( t , x ) \coloneqq \frac{ v ( t , x + h v ) - v ( t , x ) }{ h },
+		\quad
+		\Delta_{ h }^{ - } v ( t , x ) \coloneqq \frac{ v ( t , x - h v ) - v ( t , x ) }{ h }
+	\end{equation*}
+	for some $ h > 0 $ and $ v \in \mathbb{ R }^{ d } $. Thus plugging $ \Delta_{ h }^{ - } \Delta_{ h }^{ + } u $ into (\ref{ac_weak_equation}) yields by the transformation formula that
+	\begin{equation*}
+		0
+		=
+		\int_{ 0 }^{ T }
+			\int
+				\frac{ 1 }{ \varepsilon^{ 2 } }
+				\inner*{ \Delta_{ h }^{ + } \nabla W ( u ) }{ \Delta_{ h }^{ + } u }
+				+
+				\inner*{ \nabla \Delta_{ h }^{ + } u }{ \nabla \Delta_{ h }^{ + } u }
+				+
+				\inner*{ \partial_{ t } \Delta_{ h }^{ + } u }{ \Delta_{ h }^{ + } u }
+			\dd{ x }
+		\dd{ t },
+	\end{equation*}
+	which is equivalent to
+	\begin{align*}
+		& \int_{ 0 }^{ T }
+			\int
+				\abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		\\
+		={} &
+		-
+		\int_{ 0 }^{ T }
+			\int
+				\partial_{ t } \left( \frac{ \abs{ \Delta_{ h }^{ + } u }^{ 2 } }{ 2 } \right)
+				+
+				\frac{ 1 }{ \varepsilon^{ 2 } }
+				\inner*{ \Delta_{ h }^{ + } \nabla W ( u ) }{ \Delta_{ h }^{ + } u }
+			\dd{ x }
+		\dd{ t }
+		\\
+		={} &
+		\int  
+			\frac{ \abs{ \Delta_{ h }^{ + } u ( 0 ) }^{ 2 } - \abs{ \Delta_{ h }^{ + } u ( T ) }^{ 2 } }{ 2 }
+		\dd{ x }
+		\\
+		& -
+		\int_{ 0 }^{ 1 }
+			\int_{ 0 }^{ T }
+				\int
+					\inner{ 
+						\diff^{ 2 } W \left( ( 1 - s ) u ( t, x  ) + s u( t,  x + h v ) ) \right) 
+						\Delta_{ h }^{ + } u
+					}{
+					\Delta_{ h }^{ + } u 
+					}
+				\dd{ x }
+			\dd{ t }
+		\dd{ s }.
+	\end{align*}
+	The first summand can be estimated by $ \norm{ u }_{ \lp^{ \infty } ( [0 , T ] , \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) ) } $. For the second summand, we partition $ W $ into the sum of $ W_{ \mathrm{conv} } $ and $ W_{ \mathrm{pert} } $. The term involving the convex summand can then by estimated by
+	\begin{equation*}
+			\int_{ 0 }^{ 1 }
+		\int_{ 0 }^{ T }
+		\int
+		\inner{ 
+			\diff^{ 2 } W_{ \mathrm{conv} } \left( ( 1- s ) u ( t, x  ) + s u( t,  x + h v ) \right) 
+			\Delta_{ h }^{ + } u
+		}{
+			\Delta_{ h }^{ + } u 
+		}
+		\dd{ x }
+		\dd{ t }
+		\dd{ s }
+		\geq 0 
+	\end{equation*}
+	and the for the pertubation term, we get via the bound on its second derivative that
+	\begin{align*}
+		& \abs{
+		\int_{ 0 }^{ 1 }
+		\int_{ 0 }^{ T }
+		\int
+		\inner{ 
+			\diff^{ 2 } W_{ \mathrm{pert} } \left( (1 - s ) u ( t, x  ) + s  u( t,  x + h v )  \right) 
+			\Delta_{ h }^{ + } u
+		}{
+			\Delta_{ h }^{ + } u 
+		}
+		\dd{ x }
+		\dd{ t }
+		\dd{ s }
+		}
+		\\
+		\lesssim {} &
+		\int_{ 0 }^{ T }
+			\int
+				\abs{ \nabla u }^{ 2 }
+			\dd{ x }
+		\dd{ t },
+	\end{align*}
+	which is also finite. 
+	Combining these estimates, we obtain that $ \int_{ 0 }^{ T } \int \abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 } \dd{ x } \dd{ t } $ is uniformly bounded in $ h $. Applying our calculation to all directions $ v \in \mathbb{ R }^{ d } $, we get by the finite-differences theorem for all $ 1 \leq i, j \leq d $ that $ \partial_{ i , j }^{ 2 } u \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $.
 	
+	In order to obtain $ \nabla W ( u ) \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $, we again consider the weak formulation (\ref{ac_weak_equation}) and notice that since we have already shown that both the time derivative and second space derivatives of $ u $ are square-integrable, our claim follows from a duality argument. 
 	\end{description}
 \end{proof}
 
 \begin{remark}
 	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor $ 1/2h $ instead of $ 1/h- C/2\varepsilon $ follows immediately from the definition of our optimization problem, but is not optimal for fixed $ \varepsilon $ if we want to study the behaviour as $ h $ tends to zero. Moreover this so called \emph{sharp energy dissipation inequality} is important for later.
+\end{remark}
+
+\begin{remark}
+	The energy dissipation inequality (\ref{energy_dissipation_sharp}) can be deduced via the formal calculation 
+	\begin{align*}
+		\dv{ t } \energy_{ \varepsilon } ( u )
+		& =
+		\int
+			\frac{ 1 }{\varepsilon }
+			\inner{ \nabla W ( u ) }{ \partial_{ t } u }
+			+
+			\varepsilon
+			\inner{ \nabla u  }{ \nabla \partial_{ t } u }
+		\dd{ x }
+		\\
+		& = 
+		\int
+			\inner{ \frac{ 1 }{ \varepsilon } \nabla W ( u ) - \varepsilon \Delta u }{ \partial_{ t } u }
+		\dd{ x }
+		\\
+		& =
+		- \varepsilon \int \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 } \dd{ x }.
+	\end{align*}
+	In order to make this calculation rigorous, we however need to show that $ t \mapsto \energy_{ \varepsilon } ( u ( t ) ) $ is absolutely continuous, which is non-trivial, but it would give us equality in energy dissipation inequality (\ref{energy_dissipation_sharp})
+	Since we will only need the inequality, our proof will however suffice.
 \end{remark}
 
 
