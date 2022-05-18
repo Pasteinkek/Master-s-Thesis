@@ -141,11 +141,11 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 		\begin{equation}
 			\label{ac_weak_equation}
 			\int
-				\inner{\partial_{ t } u_{ \varepsilon} ( t ) }{ \xi }
+				\inner*{ \frac{ 1 }{ \varepsilon^{ 2 } } \nabla W ( u_{ \varepsilon} ( t ) ) }{ \xi }
 				+
 				\inner{ \nabla u_{ \varepsilon } ( t ) }{ \nabla \xi } 
 				+
-				\inner*{ \frac{ 1 }{ \varepsilon^{ 2 } } \nabla W ( u_{ \varepsilon} ( t ) ) }{ \xi }
+				\inner{\partial_{ t } u_{ \varepsilon} ( t ) }{ \xi }
 			\dd{x}
 			=
 			0,
@@ -194,10 +194,10 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 				\varepsilon \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
 			\dd{ x }
 		\dd{ s }
-		=
+		\leq
 		\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } )
 	\end{equation}
-	for almost every $ t \in [ 0 , T ] $ and we additionally have
+	for every $ t \in [ 0 , T ] $ and we additionally have
 	$
 		\partial_{ i , j }^{ 2 } u_{ \varepsilon }, \nabla W ( u_{ \varepsilon } ) \in \lp^{ 2 } ( [0, T] \times \flattorus ; \mathbb{ R }^{ N } ) 
 	$
@@ -256,9 +256,9 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	
 	\item[Step 2:] Minimizing movements scheme 
 	
-	By iteratively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ 0 }, u_{ 1 }^{ h } , \dotsc $. Thus we may define a function $ u \in \mathrm{ C } $ as the piecewise linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these functions.
+	By iteratively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we obtain a sequence of functions $ u_{ \varepsilon }^{ 0 }, u_{ 1 }^{ h } , \dotsc $. Thus we may define a function $ u \in \mathrm{ C } $ as the piecewise linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these functions.
 	
-	\item[Step 3:] Sharp energy estimate for $ u_{ n }^{ h } $
+	\item[Step 3:] Sharp energy dissipation inequality for $ u_{ n }^{ h } $
 	
 	We claim that there exists some constant $ C > 0 $ such that for all $ h > 0 $ and $ n \in \mathbb{ N } $, we have
 	\begin{equation}
@@ -266,7 +266,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\energy_{ \varepsilon } ( u_{ n }^{ h } )
 		+
 		\left( \frac{ 1 }{ h } - \frac{ C }{ 2 \varepsilon } \right)
-		\int \abs{ u_{ n } - u_{ n - 1 } }^{ 2 } \dd{ x }
+		\int \abs{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 } \dd{ x }
 		\leq
 		\energy_{ \varepsilon } ( u_{ n - 1 }^{ h } ).
 	\end{equation}
@@ -410,7 +410,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\\
 		\label{energy_and_time_derivative_bound}
 		\leq {} &
-		\energy_{ \varepsilon } ( u_{ 0 } ).
+		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ).
 	\end{align}
 	This gives use with the use of Jensen's inequality for $ 0\leq s \leq t \leq T $ and $ h > 0 $ sufficiently small that
 	\begin{align}
@@ -440,7 +440,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\left(
 			1 - \frac{ C h }{ 2 \varepsilon }
 		\right)^{ - 1/2 }
-		\left(  E_{ \varepsilon } ( u_{ 0 } ) \right)^{ 1/ 2 },
+		\left(  E_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) \right)^{ 1/ 2 },
 	\end{align}
 	which gives us a uniform bound on the $ \lp^{ 2 }$-Hölder continuity of $ u^{ h } $ in time as $ h $ tends to zero.
 	
@@ -593,10 +593,126 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	To obtain the weak equation, we still need to prove convergence of remaining term. For this we note that 
 	\begin{equation*}
 		\frac{ 1 }{ \varepsilon }
-		\abs{ \inner{ \nabla \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi } }
+		\abs{ \inner*{ \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi } }
 		\lesssim
-		\left( 1 + \abs{ u_{  k_{ n } }^{ h_{ n } } } \right)
+		\left( 1 + \abs{ u_{  k_{ n } }^{ h_{ n } } }^{ p - 1 } \right) \abs{ \xi },
 	\end{equation*}
+	which is a bounded sequence in $ \lp^{ p'} ( \flattorus ; \mathbb{ R }^{ N } ) $. Since we also may pass to a non-relabelled subsequence which converges almost everywhere, we thus obtain that
+	\begin{equation*}
+		\int
+			\inner*{ \nabla W ( u ( t ) ) }{ \xi } 
+		\dd{ x }
+		=
+		\lim_{ n \to \infty }
+			\int
+				\inner*{ \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi }
+			\dd{ x }.
+	\end{equation*}
+	Thus it follows from the Euler--Lagrange equation (\ref{el_eq_for_unh}) that
+	\begin{equation*}
+		\int
+			\frac{ 1 }{ \varepsilon }
+			\inner*{ \nabla W ( u ( t )) }{ \xi }
+			+
+			\varepsilon
+			\inner*{ \nabla u }{ \nabla \xi }
+			+
+			\inner*{ \partial_{ t } u }{ \xi }
+		\dd{ x }
+		=
+		0
+	\end{equation*}
+	for all $ \xi \in \cont^{ \infty } ( \flattorus ; \mathbb{ R }^{ N } ) $. By continuity this extends to all $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $.
+	
+	Thus the last thing to check is that
+	\begin{equation*}
+		\sup_{ 0 \leq t \leq T }
+			\energy_{ \varepsilon } ( u( t ) )
+		<
+		\infty,
+	\end{equation*}
+	which follows from the next step.
+	
+	\item[Step 8:] Sharp energy dissipation inequality for $ u $
+	
+	Let $ 0 \leq t \leq T $ and define $ k_{ n } $ as in step 7, where we also established that $ u_{ k_{ n } }^{ h_{ n } } $ converges to $ u ( t ) $ in $ \lp^{ 2 } \left( \flattorus ; \mathbb{ R }^{ N } \right) $, and thus we may pass to another non-relabelled subsequence to obtain pointwise convergence almost everywhere. By Fatou's Lemma, we thus obtain
+	\begin{equation*}
+		\int
+			\frac{ 1 }{ \varepsilon }
+			W ( u ( t ) ) 
+		\dd{ x }
+		\leq
+		\liminf_{ n \to \infty }
+			\int
+				\frac{ 1 }{ \varepsilon }
+				W ( u_{ k_{ n } }^{ h_{ n } } )
+			\dd{ x }.
+	\end{equation*}
+	Moreover we can deduce from the $ \lp^{ 2 } $-convergence that $ \nabla u_{ k_{ n } }^{ h_{ n } } $ converges to $ u( t ) $ in the distributional sense. But $ \nabla u_{ k_{ n } }^{ h_{ n } } $ is uniformly bounded in $ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ by the energy dissipation inequality (\ref{discrete_optimal_energy_dissipation}), thus we already obtain that $ \nabla u_{ k_{ n } }^{ h_{ n } } $ converges weakly to $ \nabla u ( t ) $ in $ \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) $ which yields
+	\begin{equation*}
+		\int 
+			\frac{ \varepsilon }{ 2 }
+			\abs{ \nabla u ( t ) }^{ 2 }
+		\dd{ x }
+		\leq
+		\liminf_{ n \to \infty }
+			\int
+				\frac{ \varepsilon }{ 2 }
+				\abs{ \nabla u_{ k_{ n } }^{ h_{ n } } }^{ 2 }
+			\dd{ x }.
+	\end{equation*}
+	Lastly we have by the weak convergence of $ \partial_{ t } u^{ h_{n } } $ to $ \partial{ t} u $ in $\lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ proven in step 6 that
+	\begin{align*}
+		\int_{ 0 }^{ t }
+			\int
+				\abs{ \partial_{ t } u }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		& \leq
+		\liminf_{ n \to \infty }
+			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon } \right)
+			\int_{ 0 }^{ t }
+				\int
+					\abs{ \partial_{ t } u^{ h_{ n } } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\\
+		& \leq
+		\liminf_{ n \to \infty }
+			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon } \right)
+				\int_{ 0 }^{ k_{ n } h_{ n } }
+					\int
+						\abs{ \partial_{ t } u^{ h_{ n } } }^{ 2 }
+					\dd{ x }
+				\dd{ t }.		
+	\end{align*}
+	Summarizing these estimates, we obtain by the energy dissipation inequality for $ u^{ h } $ (\ref{energy_and_time_derivative_bound}) that for all $ 0 \leq t \leq T $ we have
+	\begin{align*}
+		\energy_{ \varepsilon } ( u ( t ) )
+		+
+		\int_{ 0 }^{ t }
+			\int
+				\abs{ \partial_{ t } u }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		& \leq
+		\liminf_{ n \to \infty }
+			\energy_{ \varepsilon } ( u_{ k_{ n } } )
+			+
+			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon } \right)
+			\int_{ 0 }^{ k_{ n } h_{ n } }
+				\int
+					\abs{ \partial_{ t } u^{ h } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\\
+		& \leq
+		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ).
+	\end{align*}
+
+	\item[Step 8:] Additional regularity 2
+	
+	
 	\end{description}
 \end{proof}
 
