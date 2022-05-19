@@ -1,52 +1,49 @@
 \chapter{Convergence of the Allen--Cahn equations}
 
-Baldo proved in his paper \cite{baldo_minimal_interface_criterion} that the Cahn-Hilliard energies $ \Gamma $-converge with respect to $ \norm{ \cdot }_{\lp^{ 1 }} $ to an \emph{optimal partition energy} given by
-\begin{equation}
-	\label{partition_energy}
-	\energy ( \chi ) 
+The main content of this chapter is to look at the behaviour of solutions of the Allen--Cahn equation (\ref{allen_cahn_eq}) as the parameter $ \varepsilon $ tends to zero. As it turns out the scalar case is significantly easier to handle than the vectorial case, thus we shall first focus on the case $ N = 1 $,
+also called the \emph{twophase case}.
+
+\section{The twophase case}
+
+When want to consider the behaviour of solutions $ u_{ \varepsilon} \colon [0, T] \times \flattorus \to \mathbb{ R } $ to (\ref{allen_cahn_eq}) for $ \varepsilon \to 0 $. Let us for now assume that the energies of the initial functions $ \energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) $ stay uniformly bounded as $ \varepsilon $ tends to zero. 
+Then due to the energy dissipation inequality (\ref{energy_dissipation_sharp}), we already obtain that for all
+$ 0 \leq t \leq T $, we have that $ \energy_{ \varepsilon } \left( u_{\varepsilon } ( t ) \right) $ stays uniformly  bounded.
+
+Another important observation for the convergence is the classic Modica Mortula trick (hier Referenz einfügen): let $ \alpha < \beta $ be the two distinct zeros of the doublewell potential $ W $.
+Then we define a primitive of $ \sqrt{ 2 W ( u ) } $ via
+\begin{equation*}
+	\phi ( u ) 
 	\coloneqq
-	\frac{ 1 }{ 2 }
-	\sum_{ 1 \leq i, j \leq P }
-	\sigma_{ i , j }
+	\int_{ \alpha }^{ u }
+		\sqrt{ 2 W ( s ) }
+	\dd{ s }.
+\end{equation*}
+Thus Young's inequality tells us that
+\begin{align*}
+	\energy_{ \varepsilon } ( u_{ \varepsilon } )
+	& =
 	\int
-	\frac{ 1 }{ 2 }
-	\left(
-	\abs{ \nabla \chi_{ i } }
-	+
-	\abs{ \nabla \chi_{ j } }
-	-
-	\abs{ \nabla ( \chi_{ i } + \chi_{ j } ) }
-	\right)
-\end{equation}
-for a partition $ \chi_{ 1 }, \dotsc, \chi_{ P } \colon \mathbb{ T } \to \{ 0, 1 \} $ satisfying $ \chi_{ 1 \leq i \leq P } \chi_{ i } = 1 $ almost everywhere. We may also define measurable sets $ \Omega_{ i } $ through the relation $ \chi_{ i } = \mathds{1}_{ \Omega_{ i } }  $. The link between a sequence $ u_{ \varepsilon} $ and $ \chi $ is given by $ u_{ \varepsilon} \to u \coloneqq \sum_{ 1 \leq i \leq P } \alpha_{ i } \chi_{ i } $ in $ \lp^{ 1 } $. 
+		\frac{ 1 }{ \varepsilon }
+		W ( u_{ \varepsilon } ) 
+		+
+		\frac{ \varepsilon }{ 2 }
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+	\dd{ x }
+	\\
+	& \geq
+	\int
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\abs{ \nabla u_{ \varepsilon } }
+	\dd{ x }
+	\\
+	& =
+	\int
+		\abs{ \nabla \left( \phi \circ u_{ \varepsilon } \right) }
+	\dd{ x },
+\end{align*}
+which suggests that we might hope for good compactness properties of $ \phi \circ u_{ \varepsilon } $.
+We combine these two observations into the following Proposition.
 
-Moreover if we denote by $ \rb \Omega_{ i } $ the reduced boundary of $ \Omega_{ i } $ and by $ \Sigma_{ i , j } \coloneqq \rb \Omega_{ i } \cap \Omega_{ j } $ the interface between $ \Omega_{ i } $ and $ \Omega_{ j } $, then we may rewrite equation (\ref{partition_energy}) as 
-\begin{equation*}
-	\energy ( \chi ) 
-	=
-	\frac{ 1 }{ 2 }
-	\sum_{1 \leq i, j \leq P }
-	\sigma_{ i , j } \hd^{ d - 1 } ( \Sigma_{ i , j } ).
-\end{equation*}
-
-Here, the surface tensions $ \sigma_{ i , j } $ are the geodesic distances between the wells $ \alpha_{ i } $ of $ W $ with respect to the metric $ 2W(u) \inner{\cdot}{\cdot} $, which can be written out as
-\begin{equation*}
-	\sigma_{ i , j } = \mathrm{ d }_{ W } ( \alpha_{ i } , \alpha_{ j } )
-\end{equation*}
-for the geodesic distance defined as
-\begin{equation}
-	\mathrm{ d }_{ W } ( u, v )
-	\coloneqq
-	\inf
-	\left\{
-	\int_{ 0 }^{ 1 }
-	\sqrt{ 2 W ( \gamma ) }
-	\abs{ \dot{ \gamma }  }
-	\dd{t}
-	\,
-	\colon
-	\, \gamma \in \mathrm{ C }^{ 1 }( [0, 1 ], \mathbb{ R }^{ N } ) \text{ with } \gamma( 0 ) = u,\, \gamma( 1 )= v 
-	\right\}.
-\end{equation}
-
-Geometrically speaking, the partition energy $ \energy $ measures the surface tensions between the sets and penalizes larges interfaces. Also observe that the factor $ 1/2 $ can be left out if we only count each interface once.
+\begin{proposition}
+	Given initial data $ u_{ \varepsilon }^{ 0 } $ 
+\end{proposition}

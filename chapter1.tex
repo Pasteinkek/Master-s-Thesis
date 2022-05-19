@@ -2,7 +2,7 @@
 
 \section{Structure of the equation}
 
-This chapter follows \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, but since the authors decided to only sketch some proofs. we want to go into more detail.
+This chapter follows \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, but since the authors decided to only sketch some of the proofs, we want to go into more detail.
 
 Let $ \Lambda > 0 $ and define the flat torus 
 $ \flattorus = [0, \Lambda )^{ d } \subset \mathbb{ R }^{ d } $, 
@@ -41,10 +41,10 @@ equation (\ref{allen_cahn_eq}), we have that
 	&=
 	\int
 		\frac{ 1 }{ \varepsilon }
-		\inner{\nabla W ( u )}{ \partial_{ t } u}
+		\inner*{\nabla W ( u )}{ \partial_{ t } u}
 		+
 		\varepsilon
-		\inner{\nabla u}{ \nabla \partial_{ t } u}
+		\inner*{\nabla u}{ \nabla \partial_{ t } u}
 	\dd{x}
 	\\
 	&=
@@ -57,7 +57,7 @@ equation (\ref{allen_cahn_eq}), we have that
 	\tag{\ref{allen_cahn_eq}}.
 \end{align*}
 
-This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient-flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard energy. Thus we can try to construct a solution to the PDE (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme, which we will do in theorem \Cref{existence_of_ac_solution}.
+This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard energy. Thus we can try to construct a solution to the PDE (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme, which we will do in \Cref{existence_of_ac_solution}.
 
 But first we need to clarify what our potential $ W $ should look like. Classic examples in the scalar case are given by $ W ( u ) = \left( u^{ 2 } - 1 \right)^{ 2 } $ or $ W( u ) = u^{ 2 } ( u - 1 )^{ 2 } $, and we call functions like these \emph{doublewell potentials}, see also \Cref{graph_of_doublewell_potential}.
 
@@ -107,13 +107,13 @@ $ W_{ \mathrm{conv} } $ is convex and
 \end{equation}
 These assumptions are in particular satisfied by our two examples for doublewell potentials and therefore seem to be plausible.
 
-As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation (\ref{allen_cahn_eq})as maps from $ [0,T] $ into some suitable function space and thus use the following definition.
+As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation (\ref{allen_cahn_eq}) as maps from $ [0,T] $ into some suitable function space and thus use the following definition.
 
 \begin{definition}
 	\label{solution_to_ac}
 	We say that a function 
 	$ u_{ \varepsilon} \in 
-	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) \right) $
+	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } \left( \flattorus; \mathbb{ R }^{ N } \right) \right) $
 	which is also in
 	$\lp^{ \infty } \left( [0, T ]; \wkp^{ 1, 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right)
 	$
@@ -143,9 +143,9 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 			\int
 				\inner*{ \frac{ 1 }{ \varepsilon^{ 2 } } \nabla W ( u_{ \varepsilon} ( t ) ) }{ \xi }
 				+
-				\inner{ \nabla u_{ \varepsilon } ( t ) }{ \nabla \xi } 
+				\inner*{ \nabla u_{ \varepsilon } ( t ) }{ \nabla \xi } 
 				+
-				\inner{\partial_{ t } u_{ \varepsilon} ( t ) }{ \xi }
+				\inner*{\partial_{ t } u_{ \varepsilon} ( t ) }{ \xi }
 			\dd{x}
 			=
 			0,
@@ -185,7 +185,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	Let $ u_{ \varepsilon}^{ 0 } \colon \flattorus \to \mathbb{ R }^{ N } $ be such that 
 	$ \energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ) < \infty $.
 	Then there exists a weak solution $ u_{ \varepsilon} $ to the Allen--Cahn equation (\ref{allen_cahn_eq}) in the sense of \Cref{solution_to_ac} with initial data $ u_{ \varepsilon}^{ 0 } $.
-	Furthermore the solution satisfies the energy dissipation identity
+	Furthermore the solution satisfies the energy dissipation inequality
 	\begin{equation}
 		\label{energy_dissipation_sharp}
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
@@ -609,7 +609,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 				\inner*{ \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi }
 			\dd{ x }.
 	\end{equation*}
-	Thus it follows from the Euler--Lagrange equation (\ref{el_eq_for_unh}) that
+	Therefore it follows from the Euler--Lagrange equation (\ref{el_eq_for_unh}) that
 	\begin{equation*}
 		\int
 			\frac{ 1 }{ \varepsilon }
@@ -763,7 +763,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\int_{ 0 }^{ 1 }
 			\int_{ 0 }^{ T }
 				\int
-					\inner{ 
+					\inner*{ 
 						\diff^{ 2 } W \left( ( 1 - s ) u ( t, x  ) + s u( t,  x + h v ) ) \right) 
 						\Delta_{ h }^{ + } u
 					}{
@@ -778,7 +778,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\int_{ 0 }^{ 1 }
 		\int_{ 0 }^{ T }
 		\int
-		\inner{ 
+		\inner*{ 
 			\diff^{ 2 } W_{ \mathrm{conv} } \left( ( 1- s ) u ( t, x  ) + s u( t,  x + h v ) \right) 
 			\Delta_{ h }^{ + } u
 		}{
@@ -795,7 +795,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\int_{ 0 }^{ 1 }
 		\int_{ 0 }^{ T }
 		\int
-		\inner{ 
+		\inner*{ 
 			\diff^{ 2 } W_{ \mathrm{pert} } \left( (1 - s ) u ( t, x  ) + s  u( t,  x + h v )  \right) 
 			\Delta_{ h }^{ + } u
 		}{
@@ -831,15 +831,15 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		& =
 		\int
 			\frac{ 1 }{\varepsilon }
-			\inner{ \nabla W ( u ) }{ \partial_{ t } u }
+			\inner*{ \nabla W ( u ) }{ \partial_{ t } u }
 			+
 			\varepsilon
-			\inner{ \nabla u  }{ \nabla \partial_{ t } u }
+			\inner*{ \nabla u  }{ \nabla \partial_{ t } u }
 		\dd{ x }
 		\\
 		& = 
 		\int
-			\inner{ \frac{ 1 }{ \varepsilon } \nabla W ( u ) - \varepsilon \Delta u }{ \partial_{ t } u }
+			\inner*{ \frac{ 1 }{ \varepsilon } \nabla W ( u ) - \varepsilon \Delta u }{ \partial_{ t } u }
 		\dd{ x }
 		\\
 		& =
