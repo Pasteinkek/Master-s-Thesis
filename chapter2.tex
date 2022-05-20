@@ -18,8 +18,8 @@ Then we define a primitive of $ \sqrt{ 2 W ( u ) } $ via
 		\sqrt{ 2 W ( s ) }
 	\dd{ s }.
 \end{equation*}
-Thus Young's inequality tells us that
-\begin{align*}
+Thus Young's inequality tells us that for $ \psi_{ \varepsilon } \coloneqq \phi \circ u_{ \varepsilon } $, we have
+\begin{align}
 	\energy_{ \varepsilon } ( u_{ \varepsilon } )
 	& =
 	\int
@@ -29,21 +29,87 @@ Thus Young's inequality tells us that
 		\frac{ \varepsilon }{ 2 }
 		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 	\dd{ x }
+	\notag
 	\\
 	& \geq
 	\int
 		\sqrt{ 2 W ( u_{ \varepsilon } ) }
 		\abs{ \nabla u_{ \varepsilon } }
 	\dd{ x }
+	\notag
 	\\
 	& =
 	\int
 		\abs{ \nabla \left( \phi \circ u_{ \varepsilon } \right) }
-	\dd{ x },
-\end{align*}
+	\dd{ x }
+	\label{modica_mortula_trick},
+\end{align}
 which suggests that we might hope for good compactness properties of $ \phi \circ u_{ \varepsilon } $.
 We combine these two observations into the following Proposition.
 
 \begin{proposition}
-	Given initial data $ u_{ \varepsilon }^{ 0 } $ 
+	Given initial data $ u_{ \varepsilon }^{ 0 } $ whose energies stay uniformly bounded in the sense that
+	\begin{equation}
+		\limsup_{ \ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) 
+		< 
+		\infty,
+	\end{equation}
+	there exists for any sequence $ \varepsilon \to 0 $ some non-relabelled subsequence such that the solutions of the Allen--Cahn equation (\ref{allen_cahn_eq}) with initial condition $ u_{ \varepsilon }^{ 0 } $ converge in $ \lp^{ 1 } ( ( 0, T ) \times \flattorus ) $ to some $ u = \alpha ( 1 - \chi ) + \beta \chi $ with $ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \} \right) $. Moreover the compositions $ \psi_{ \varepsilon } $ are uniformly bounded in $ \bv \left( ( 0, T ) \times \flattorus \right) $ and converge to $ \phi \circ u $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus ) $.
 \end{proposition}
+
+\begin{proof}
+	From the energy dissipation inequality (\ref{energy_dissipation_sharp}) in \Cref{existence_of_ac_solution} we infer that for all $ \varepsilon > 0 $, it holds that
+	\begin{equation*}
+		\sup_{ 0 \leq t \leq T }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) ) 
+		\leq
+		\energy_{ \varepsilon } ( u_{ \varepsilon} ),
+	\end{equation*}
+	which is by assumption uniformly bounded as $ \varepsilon $ tends to zero.
+	We want to use a similar calculation as (\ref{modica_mortula_trick}) we thus infer that $ \nabla \psi_{ \varepsilon } $ is uniformly bounded in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus \right) $.
+	Moreover we may estimate
+	\begin{align*}
+		\int_{ 0 }^{ T }
+			\int
+				\abs{ \psi_{ \varepsilon } }
+			\dd{ x }
+		\dd{ t }
+		& =
+		\int_{ 0 }^{ T }
+			\int
+				\abs{
+					\int_{ \alpha }^{ u_{ \varepsilon } }
+						\sqrt{ 2 W ( s ) }
+				}
+					\dd{ s }
+			\dd{ x }
+		\dd{ t }
+		\\
+		& \leq
+		\int_{ 0 }^{ T }
+			\int
+				\abs{ u_{ \varepsilon } - \alpha }
+				\sup_{ s \in [ \alpha, u_{ \varepsilon } }
+					\sqrt{ 2 W ( s ) }
+			\dd{ x }
+		\dd{ t }
+		\\
+		& \lesssim
+		1 + 
+		\int_{ 0 }^{ T }
+			\int
+				\abs{ u_{ \varepsilon } }^{ 1 + p/ 2 }
+		\tag{\ref{polynomial_growth}}
+		\\
+		& \lesssim
+		1 + 
+		\int_{ 0 }^{ T }
+			\int
+				W ( u_{ \varepsilon } )
+			\dd{ x }
+		\dd{ t },
+		\tag{\ref{polynomial_growth}}
+	\end{align*}
+	which is uniformly bounded via the energy bound.
+\end{proof}

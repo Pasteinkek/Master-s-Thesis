@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  19 MAY 2022 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  20 MAY 2022 11:06
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1457,8 +1457,8 @@ l.98 \begin{equation}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 		\end{equation}
-                       [2] [3] [4] [5]
+l.141 		\begin{equation}
+                         [2] [3] [4] [5]
 Overfull \hbox (66.2094pt too wide) in paragraph at lines 462--464
 []\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
 ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
@@ -1478,21 +1478,20 @@ cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20)
 
  (chapter2.tex
 chapter 2.
-) [11
+[11
 
 
 
 
-] [12
-
-
-
-]
+]) [12]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [13
+
+
+
 
 
 ]
@@ -1508,11 +1507,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46387 strings out of 480930
- 1030398 string characters out of 2900231
- 1858008 words of memory out of 3000000
- 61493 multiletter control sequences out of 15000+200000
- 541018 words of font info for 84 fonts, out of 3000000 for 9000
+ 46401 strings out of 480930
+ 1030543 string characters out of 2900231
+ 1857105 words of memory out of 3000000
+ 61497 multiletter control sequences out of 15000+200000
+ 541285 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,14n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1540,9 +1539,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users
 /user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (17 pages, 315425 bytes).
+Output written on "Master's Thesis.pdf" (17 pages, 321500 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  19509 words of extra memory for PDF output out of 20736 (max. 10000000)
 
