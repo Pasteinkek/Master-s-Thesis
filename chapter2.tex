@@ -18,7 +18,9 @@ Then we define a primitive of $ \sqrt{ 2 W ( u ) } $ via
 		\sqrt{ 2 W ( s ) }
 	\dd{ s }.
 \end{equation*}
-Thus Young's inequality tells us that for $ \psi_{ \varepsilon } \coloneqq \phi \circ u_{ \varepsilon } $, we have
+For $ \psi_{ \varepsilon } \coloneqq \phi \circ u_{ \varepsilon } $, we can show that $ \psi_{ \varepsilon } \in \wkp^{ 1, 1 } ( ( 0 , T ) \times \flattorus ) $ with weak derivatives $ \nabla \psi_{ \varepsilon } = \sqrt{ 2 W ( u_{ \varepsilon } ) } \nabla u_{ \varepsilon } $ and $ \partial_{ t } \psi_{ \varepsilon } = \sqrt{ 2 W ( u_{ \varepsilon } ) } \partial_{ t } u_{ \varepsilon } $. (we will later show this in more generality (Referenz einfügen)).
+
+Thus via Young's inequality, we can compute
 \begin{align}
 	\energy_{ \varepsilon } ( u_{ \varepsilon } )
 	& =
@@ -40,7 +42,7 @@ Thus Young's inequality tells us that for $ \psi_{ \varepsilon } \coloneqq \phi 
 	\\
 	& =
 	\int
-		\abs{ \nabla \left( \phi \circ u_{ \varepsilon } \right) }
+		\abs{ \nabla \psi_{ \varepsilon} }
 	\dd{ x }
 	\label{modica_mortula_trick},
 \end{align}
@@ -48,9 +50,10 @@ which suggests that we might hope for good compactness properties of $ \phi \cir
 We combine these two observations into the following Proposition.
 
 \begin{proposition}
+	\label{initial_convergence_result}
 	Given initial data $ u_{ \varepsilon }^{ 0 } $ whose energies stay uniformly bounded in the sense that
 	\begin{equation}
-		\limsup_{ \ \varepsilon \to 0 }
+		\sup_{ \ \varepsilon > 0 }
 			\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) 
 		< 
 		\infty,
@@ -60,16 +63,17 @@ We combine these two observations into the following Proposition.
 
 \begin{proof}
 	From the energy dissipation inequality (\ref{energy_dissipation_sharp}) in \Cref{existence_of_ac_solution} we infer that for all $ \varepsilon > 0 $, it holds that
-	\begin{equation*}
+	\begin{equation}
+		\label{unif_bound_on_energies}
 		\sup_{ 0 \leq t \leq T }
 			\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) ) 
 		\leq
-		\energy_{ \varepsilon } ( u_{ \varepsilon} ),
-	\end{equation*}
-	which is by assumption uniformly bounded as $ \varepsilon $ tends to zero.
+		\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ),
+	\end{equation}
+	whose right hand side is by assumption uniformly bounded in $ \varepsilon $.
 	We want to use a similar calculation as (\ref{modica_mortula_trick}) we thus infer that $ \nabla \psi_{ \varepsilon } $ is uniformly bounded in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus \right) $.
 	Moreover we may estimate
-	\begin{align*}
+	\begin{align}
 		\int_{ 0 }^{ T }
 			\int
 				\abs{ \psi_{ \varepsilon } }
@@ -85,22 +89,26 @@ We combine these two observations into the following Proposition.
 					\dd{ s }
 			\dd{ x }
 		\dd{ t }
+		\notag
 		\\
 		& \leq
 		\int_{ 0 }^{ T }
 			\int
 				\abs{ u_{ \varepsilon } - \alpha }
-				\sup_{ s \in [ \alpha, u_{ \varepsilon } }
+				\sup_{ s \in [ \alpha, u_{ \varepsilon } ] }
 					\sqrt{ 2 W ( s ) }
 			\dd{ x }
 		\dd{ t }
+		\notag
 		\\
 		& \lesssim
 		1 + 
 		\int_{ 0 }^{ T }
 			\int
 				\abs{ u_{ \varepsilon } }^{ 1 + p/ 2 }
-		\tag{\ref{polynomial_growth}}
+			\dd{ x }
+		\dd{ t }
+		\notag
 		\\
 		& \lesssim
 		1 + 
@@ -109,7 +117,152 @@ We combine these two observations into the following Proposition.
 				W ( u_{ \varepsilon } )
 			\dd{ x }
 		\dd{ t },
-		\tag{\ref{polynomial_growth}}
-	\end{align*}
-	which is uniformly bounded via the energy bound.
+		\label{l1_estimate_for_psi_epsilon}
+	\end{align}
+	which is uniformly bounded via the energy bound. Here the last two inequalities follow from the upper respectively lower growth assumptions (\ref{polynomial_growth}) on $ W $. Thus we have indeed that $ \psi_{ \varepsilon } $ is a bounded sequence in $ \bv( ( 0 , T ) \times \flattorus ) $ and therefore there exists some non-relabelled subsequence and some $ v \in \bv ( ( 0 , T ) \times \flattorus ) $ such that $ \psi_{ \varepsilon } $ converges to $ v $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus ) $.
+	
+	We notice that since $ W $ is non-negative and only has two zeros, the function $ \phi $ is strictly increasing and continuous on $ \mathbb{ R } $, and is thus invertible. Moreover we may pass to a further non-relabelled subsequence of $ \psi_{ \varepsilon } $ which converges almost everywhere to $ v $. 
+	Thus defining $ u \coloneqq \phi^{ - 1 } ( v ) $, we obtain that
+	\begin{equation*}
+		u_{ \varepsilon } = \phi^{ - 1 } ( \psi_{ \varepsilon } ) \to \phi^{ - 1 } ( v ) = u
+	\end{equation*}
+	converges pointwise almost everywhere.
+	
+	Moreover we notice that by Fatou's Lemma and the boundedness of the energies that
+	\begin{equation*}
+		\int
+			W ( u ) 
+		\dd{ x }
+		\leq
+		\liminf_{ \varepsilon \to 0 }
+			\int
+				W ( u_{ \varepsilon } )
+			\dd{ x }
+		\leq
+		\liminf_{ \varepsilon \to 0 }
+			\varepsilon \energy_{ \varepsilon } ( u_{ \varepsilon } )
+		=
+		0.
+	\end{equation*}
+	Again using the non-negativity of $ W $, this yields that $ W ( u ) = 0 $ almost everywhere. 
+	Thus $ u \in \{ \alpha , \beta \} $ almost everywhere and we may write $ u = \alpha ( 1 - \chi ) + \beta \chi $ for some $ \chi \colon ( 0 , T ) \times \flattorus \to \{ 0 , 1 \} $.
+	Looking again at the definition of $ u $, we moreover obtain that 
+	\begin{equation*}
+		v = \phi ( u ) = 
+		( 1 - \chi ) \phi ( \alpha ) 
+		+ 
+		\chi \phi ( \beta )
+		= 
+		\chi \int_{ \alpha }^{ \beta } \sqrt{ 2 W ( s ) } \dd{ s }
+	\end{equation*}
+	and since $ v $ is a function of bounded variation, this implies that $ \chi $ is of bounded variation as well.
+	
+	Finally from the energy bound and the estimate $ \abs{ u_{ \varepsilon } } \lesssim 1 + W ( u ) $, we infer that $ u_{ \varepsilon } $ is $ \lp^{ p }$-bounded, and since $ u_{ \varepsilon } $ converges pointwise almost everywhere to $ u $, we obtain the desired $ \lp^{ 1 } $-convergence.
+\end{proof}
+
+Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initial data and on the way obtain a useful bound on the time derivative.
+
+\begin{lemma}
+	With the assumptions of \Cref{initial_convergence_result}, we have $ \psi_{ \varepsilon } \in \wkp^{ 1 , 2 } ( [ 0 , T ] ; \lp^{ 1 } ( \mathbb{ T } ) ) $ with the estimate
+	\begin{equation}
+		\label{bound_on_time_dv_of_psi_epsilon}
+		\left(
+			\int_{ 0 }^{ T }
+				\left(
+					\int
+						\abs{ \partial_{ t } \psi_{ \varepsilon } }
+					\dd{ x }
+				\right)^{ 2 }
+			\dd{ t }
+		\right)^{ 1/2 }
+		\lesssim
+		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ).
+	\end{equation}
+	Furthermore the sequence $ u_{ \varepsilon } $ is precompact in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ) \right) $. In particular $ \chi $ achieves the initial condition (??check what we need).
+\end{lemma}
+
+\begin{proof}
+	\begin{description}
+		\item[Step 1] $ \psi_{ \varepsilon } \in \wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $ and satisfies the inequality (\ref{bound_on_time_dv_of_psi_epsilon})
+		
+		From estimate (\ref{l1_estimate_for_psi_epsilon}) we can infer that
+		\begin{equation*}
+			\int_{ 0 }^{ T }
+				\left(
+					\int
+						\abs{ \psi_{ \varepsilon } }
+					\dd{ x }
+				\right)^{ 2 }
+			\lesssim
+			\int_{ 0 }^{ T }
+				\left(
+					1 + \int W ( u_{ \varepsilon } ) \dd{ x }
+				\right)^{ 2 }
+			\dd{ t } 
+			<
+			\infty
+		\end{equation*}
+		via the uniform boundedness of the energies (\ref{unif_bound_on_energies}). For the desired bound (\ref{bound_on_time_dv_of_psi_epsilon}), we estimate via Hölder's inequality and the uniform boundedness of the energies that
+		\begin{align*}
+			\int_{ 0 }^{ T }
+				\left(
+					\int
+						\abs{ 
+							\partial_{ t } \psi_{ \varepsilon }
+						}
+					\dd{ x }
+				\right)^{ 2 }
+			\dd{ t }
+			& \leq
+			\int_{ 0 }^{ T }
+				\left(
+					\int
+						\sqrt{ 2 W ( u_{ \varepsilon } ) }
+						\abs{ \partial_{ t } u_{ \varepsilon } }
+					\dd{ x }
+				\right)^{ 2 }
+			\dd{ t }
+			\\
+			& =
+			\int_{ 0 }^{ T }
+				\left(
+					\int
+						\frac{ 1 }{ \sqrt{\varepsilon } } \sqrt{ 2 W ( u_{ \varepsilon } ) }
+						\sqrt{ \varepsilon } \abs{ \partial_{ t } u_{ \varepsilon } }
+					\dd{ x }
+				\right)^{ 2 }
+			\dd{ t }
+			\\
+			& \leq
+			\int_{ 0 }^{ T }
+				\int
+					\frac{ 1 }{ \varepsilon }
+					2 W ( u_{ \varepsilon } )
+				\dd{ x }
+				\int
+					\varepsilon
+					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+			\\
+			& \leq
+			2 \energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } )
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon
+					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+			\tag{\ref{unif_bound_on_energies}}
+			\\
+			& \leq
+			2 \left(\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } )\right)^{ 2 }
+			\tag{\ref{energy_dissipation_sharp}},
+		\end{align*}
+		which completes step 1.
+		
+		\item[Step 2 :] The sequence $ \psi_{ \varepsilon } $ is precompact in $ \lp^{ \infty } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
+		
+		As noted in embedding (\ref{w12_embeds_into_c1half})
+	\end{description}
 \end{proof}
