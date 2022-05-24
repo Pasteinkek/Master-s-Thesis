@@ -119,12 +119,12 @@ We combine these two observations into the following Proposition.
 		\dd{ t },
 		\label{l1_estimate_for_psi_epsilon}
 	\end{align}
-	which is uniformly bounded via the energy bound. Here the last two inequalities follow from the upper respectively lower growth assumptions (\ref{polynomial_growth}) on $ W $. Thus we have indeed that $ \psi_{ \varepsilon } $ is a bounded sequence in $ \bv( ( 0 , T ) \times \flattorus ) $ and therefore there exists some non-relabelled subsequence and some $ v \in \bv ( ( 0 , T ) \times \flattorus ) $ such that $ \psi_{ \varepsilon } $ converges to $ v $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus ) $.
+	which is uniformly bounded via the energy bound. Here the last two inequalities follow from the upper respectively lower growth assumptions (\ref{polynomial_growth}) on $ W $. Thus we have indeed that $ \psi_{ \varepsilon } $ is a bounded sequence in $ \bv( ( 0 , T ) \times \flattorus ) $ and therefore there exists some non-relabelled subsequence and some $ \psi \in \bv ( ( 0 , T ) \times \flattorus ) $ such that $ \psi_{ \varepsilon } $ converges to $ \psi $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus ) $.
 	
-	We notice that since $ W $ is non-negative and only has two zeros, the function $ \phi $ is strictly increasing and continuous on $ \mathbb{ R } $, and is thus invertible. Moreover we may pass to a further non-relabelled subsequence of $ \psi_{ \varepsilon } $ which converges almost everywhere to $ v $. 
-	Thus defining $ u \coloneqq \phi^{ - 1 } ( v ) $, we obtain that
+	We notice that since $ W $ is non-negative and only has a discrete set of zeros, the function $ \phi $ is strictly increasing and continuous on $ \mathbb{ R } $, and is thus invertible. Moreover we may pass to a further non-relabelled subsequence of $ \psi_{ \varepsilon } $ which converges almost everywhere to $ \psi $. 
+	Thus defining $ u \coloneqq \phi^{ - 1 } ( \psi ) $, we obtain that
 	\begin{equation*}
-		u_{ \varepsilon } = \phi^{ - 1 } ( \psi_{ \varepsilon } ) \to \phi^{ - 1 } ( v ) = u
+		u_{ \varepsilon } = \phi^{ - 1 } ( \psi_{ \varepsilon } ) \to \phi^{ - 1 } ( \psi ) = u
 	\end{equation*}
 	converges pointwise almost everywhere.
 	
@@ -147,15 +147,18 @@ We combine these two observations into the following Proposition.
 	Again using the non-negativity of $ W $, this yields that $ W ( u ) = 0 $ almost everywhere. 
 	Thus $ u \in \{ \alpha , \beta \} $ almost everywhere and we may write $ u = \alpha ( 1 - \chi ) + \beta \chi $ for some $ \chi \colon ( 0 , T ) \times \flattorus \to \{ 0 , 1 \} $.
 	Looking again at the definition of $ u $, we moreover obtain that 
-	\begin{equation*}
-		v = \phi ( u ) = 
-		( 1 - \chi ) \phi ( \alpha ) 
+	\begin{equation}
+		\label{represenation_of_psi}
+		\psi = \phi ( u ) = 
+		\phi ( \alpha ) ( 1 - \chi )
 		+ 
-		\chi \phi ( \beta )
+	 \phi ( \beta )	\chi
 		= 
-		\chi \int_{ \alpha }^{ \beta } \sqrt{ 2 W ( s ) } \dd{ s }
-	\end{equation*}
-	and since $ v $ is a function of bounded variation, this implies that $ \chi $ is of bounded variation as well.
+		\int_{ \alpha }^{ \beta } \sqrt{ 2 W ( s ) } \dd{ s } \chi 
+		\eqqcolon
+		\sigma \chi 
+	\end{equation}
+	and since $ \psi $ is a function of bounded variation, this implies that $ \chi $ is of bounded variation as well.
 	
 	Finally from the energy bound and the estimate $ \abs{ u_{ \varepsilon } } \lesssim 1 + W ( u ) $, we infer that $ u_{ \varepsilon } $ is $ \lp^{ p }$-bounded, and since $ u_{ \varepsilon } $ converges pointwise almost everywhere to $ u $, we obtain the desired $ \lp^{ 1 } $-convergence.
 \end{proof}
@@ -182,8 +185,8 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 \end{lemma}
 
 \begin{proof}
-	\begin{description}
-		\item[Step 1] $ \psi_{ \varepsilon } \in \wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $ and satisfies the inequality (\ref{bound_on_time_dv_of_psi_epsilon})
+	\begin{description}[wide=0pt]
+		\item[Step 1:] $ \psi_{ \varepsilon } \in \wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $ and satisfies the inequality (\ref{bound_on_time_dv_of_psi_epsilon})
 		
 		From estimate (\ref{l1_estimate_for_psi_epsilon}) we can infer that
 		\begin{equation*}
@@ -261,8 +264,77 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 		\end{align*}
 		which completes step 1.
 		
-		\item[Step 2 :] The sequence $ \psi_{ \varepsilon } $ is precompact in $ \lp^{ \infty } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
+		\item[Step 2:] The sequence $ \psi_{ \varepsilon } $ is precompact in $ \cont \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
 		
-		As noted in embedding (\ref{w12_embeds_into_c1half})
+		As noted in embedding (\ref{w12_embeds_into_c1half}), we have
+		\begin{equation*}
+			\wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right)
+			\hookrightarrow
+			\cont^{ 1 / 2 } \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right)
+		\end{equation*}
+		from which the equicontinuity of the sequence follows with step 1.
+		Moreover for fixed time $ t $, estimate (\ref{modica_mortula_trick}) yields that $ \nabla \psi_{ \varepsilon } ( t ) $ is bounded in $ \lp^{ 1 } ( \flattorus ) $, and combined estimate (\ref{l1_estimate_for_psi_epsilon}) without integrating in time yields that $ \psi_{ \varepsilon } ( t ) $ is a bounded sequence in $ \wkp^{ 1 , 1 } ( \flattorus ) $ and thus precompact in $ \lp^{ 1 } ( \flattorus ) $.
+		Thus the Arzelà--Ascoli Theorem yields the desired precompactness.
+		
+		\item[Step 3:] The sequence $ u_{ \varepsilon } $ converges to $ u $ in measure uniformly in time.
+		
+		From step 2, we infer that we already have 
+		\begin{equation*}
+			\lim_{ \varepsilon \to 0 }
+				\esssup_{ 0 \leq t \leq T }
+					\int	
+						\abs{ \psi_{ \varepsilon } ( t , x ) - \phi \circ u ( t , x ) }
+					\dd{ x }
+			= 0.
+		\end{equation*}
+		It especially follows in combination with equation (\ref{represenation_of_psi}) that
+		\begin{align*}
+			& \lim_{ \varepsilon \to 0 }
+				\esssup_{ 0 \leq t \leq T }
+					\int
+						(1 - \chi)
+						\abs{ \psi_{ \varepsilon } ( t , x ) }
+					\dd{ x }
+			=
+			\lim_{ \varepsilon \to 0 }
+				\esssup_{ 0 \leq t \leq T }
+					\int
+						(1 - \chi)
+						\abs{ \psi_{ \varepsilon } ( t , x ) - \phi \circ u ( t , x ) }
+					\dd{ x }
+			=
+			0	
+			\shortintertext{and}
+			& \lim_{ \varepsilon \to 0 }
+				\esssup_{ 0 \leq t \leq T }
+					\int
+						\chi
+							\abs{ \psi_{ \varepsilon } ( t , x ) - \sigma }
+					\dd{ x }
+			= 
+			\lim_{ \varepsilon \to 0 }	
+				\esssup_{ 0 \leq t \leq T }
+					\int
+						\chi
+						\abs{ \psi_{ \varepsilon } ( t , x ) - \phi \circ u ( t , x ) }
+					\dd{ x }
+			= 0		
+		\end{align*}
+		Moreover we have by continuity and the $p$-growth of $ W $ (\ref{polynomial_growth}) that for a given $ \delta < \beta - \alpha $,
+		\begin{equation*}
+			\min \{ \abs{ \phi ( t ) } \, \colon \, \abs{ t - \alpha } > \delta / 2 \text{ or } \abs{ t - \beta } > \delta / 2 \}
+			=
+			\rho
+			> 
+			0.
+		\end{equation*}
+		Therefore we may estimate
+		\begin{align*}
+			\esssup_{ 0 \leq t \leq T }
+				\lm^{ d } \left( \abs{ u_{ \varepsilon } - u } > \delta \right)
+			& \leq
+			\esssup_{ 0 \leq t \leq T }
+				\lm^{ d }
+		\end{align*}
 	\end{description}
 \end{proof}
