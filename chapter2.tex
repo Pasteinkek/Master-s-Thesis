@@ -181,7 +181,7 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 		\lesssim
 		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ).
 	\end{equation}
-	Furthermore the sequence $ u_{ \varepsilon } $ is precompact in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ) \right) $. In particular $ \chi $ achieves the initial condition (??check what we need).
+	Furthermore the sequence $ u_{ \varepsilon } $ is precompact in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ) \right) $. 
 \end{lemma}
 
 \begin{proof}
@@ -330,11 +330,115 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 		\end{equation*}
 		Therefore we may estimate
 		\begin{align*}
+			& \esssup_{ 0 \leq t \leq T }
+				\lm^{ d } \left( \left\{ x \in \flattorus \, \colon \, \abs{ u_{ \varepsilon } ( t, x ) - u ( t, x ) } > \delta \right\} \right)
+			\\
+			\leq {} &
 			\esssup_{ 0 \leq t \leq T }
-				\lm^{ d } \left( \abs{ u_{ \varepsilon } - u } > \delta \right)
-			& \leq
+				\lm^{ d } \left(
+					\left\{  ( 1- \chi ( t, x ) ) \abs{ u_{ \varepsilon } ( t , x ) - \alpha } > \delta / 2 \right\}
+				\right)
+				+
+				\lm^{ d } \left( \left\{ \chi ( t , x ) \abs{ u_{ \varepsilon } ( t , x ) - \beta } > \delta / 2 \right\} \right)
+			\\
+			\leq {} &
 			\esssup_{ 0 \leq t \leq T }
-				\lm^{ d }
+				\lm^{ d } \left(
+					\left\{ ( 1 - \chi ( t, x ) ) \abs{ \psi_{ \varepsilon } ( t , x ) } > \rho \right\} 
+				\right)
+				+
+				\lm^{ d } \left(
+					\left\{ \chi ( t , x )  \abs{ \psi_{ \varepsilon } ( t , x ) - \sigma } > \rho \right\} 
+				\right)
+			\\
+			\leq {} &
+			\esssup_{ 0 \leq t \leq T }
+				\frac{ 1 }{ \rho }
+				\int
+					( 1 - \chi ( t , x ) ) \abs{ \psi_{ \varepsilon } ( t , x ) } 
+				\dd{ x }
+				+
+				\frac{ 1 }{ \rho }
+				\int
+					\chi ( t , x ) \abs{ \psi_{ \varepsilon } ( t , x ) - \sigma }
+				\dd{ x },
 		\end{align*}
+		which goes to zero as $ \varepsilon $ goes to zero, proving our claim.
+		
+		\item[Step 4:] $ u_{ \varepsilon }^{ 2 } $ is equiintegrable uniformly in time
+		
+		We have 
+		\begin{equation*}
+			0 \leq u_{ \varepsilon }^{ 2 } \lesssim 1 + W ( u_{ \varepsilon } )
+		\end{equation*}
+		by the growth bounds (\ref{polynomial_growth}) on $ W $. Since $ W ( u_{ \varepsilon } ) $ converges to 0 in $ \lp^{ 1 } ( \flattorus ) $ uniformly in time by the energy bound (\ref{unif_bound_on_energies}), it is equiintegrable uniformly in time. Thus $ u_{ \varepsilon }^{ 2 } $ is equiintegrable uniformly in time as well.
+		
+		\item[Step 5:] $ u_{ \varepsilon } $ converges in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ) \right) $.
+		
+		We somewhat repeat the proof the convergence in measure and integrability imply $ \lp^{ 1 } $-convergence, while keeping the uniformity in time.
+		
+		Fix some $ M > 0 $. Then we decompose the integral
+		\begin{equation*}
+			\int \abs{ u_{ \varepsilon } - u }^{ 2 } \dd{ x }
+			=
+			\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq M \} }
+				\abs{ u_{\varepsilon } - u }^{ 2 }
+			\dd{ x }
+			+
+			\int_{ \{ \abs{ u_{ \varepsilon } - u } < M \} }
+				\abs{ u_{ \varepsilon } - u }^{ 2 }
+			\dd{ x }.
+		\end{equation*}
+		For the first summand, we notice that
+		\begin{equation*}
+			\sup_{ 0 \leq t \leq T }
+				\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq M \} }
+					\abs{ u_{\varepsilon } - u }^{ 2 }
+				\dd{ x }
+			\lesssim
+			\sup_{ 0 \leq t \leq T }
+				\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq M \} }
+					1 + u_{\varepsilon }^{ 2 }
+				\dd{ x }
+			\to 0
+		\end{equation*}
+		as $ \varepsilon \to 0 $ since $ \lm^{ d }\left( \abs{ u_{\varepsilon } - u } \geq M \right) \to 0 $ uniformly in time by step 3 and $ u_{\varepsilon }^{ 2 } + 1 $ is equiintegrable uniformly in time by step 4.
+		
+		For the second summand, take any $ M > \delta > 0 $. then we further decompose
+		\begin{align*}
+			\sup_{ 0 \leq t \leq T }
+				\int_{ \{ \abs{ u_{ \varepsilon } - u } < M \} }
+					\abs{ u_{ \varepsilon } - u }^{ 2 }
+				\dd{ x }
+			& =
+			\sup_{ 0 \leq t \leq T }
+				\int_{ \abs{ u_{ \varepsilon } - u } < \delta }
+					\abs{ u_{ \varepsilon } - u }^{ 2 }
+				\dd{ x }
+				+
+				\int_{ M > \abs{ u_{ \varepsilon } - u } }
+					\abs{ u_{ \varepsilon } - u }^{ 2 }
+				\dd{ x }
+			\\
+			& \leq
+			\sup_{ 0 \leq t \leq T }
+			\delta^{ 2 } \Lambda^{ d }
+			+
+			M^{ 2 } \lm^{ d } \left( \abs{ u_{ \varepsilon } - u } > \delta \right).
+		\end{align*}
+		Taking the limes superior as $ \varepsilon $ tends to zero of this inequality yields that the right hand side can be made arbitrarily small, which finally yields
+		\begin{equation*}
+			\sup_{ 0 \leq t \leq T }
+				\int
+					\abs{ u_{ \varepsilon } - u }^{ 2 }
+				\dd{ x }
+			\to 
+			0
+		\end{equation*}
+		as $ \varepsilon $ tends to zero.
 	\end{description}
 \end{proof}
+
+\begin{remark}
+	From the previous Lemma, it follows that if the initial conditions $ u_{ \varepsilon }^{ 0 } $ converge in $ \lp^{ 1 } $ or pointwise almost everywhere to the function $ \alpha ( 1 - \chi^{ 0 } ) + \beta \chi^{ 0 } $ (and we know that the limit is of this form since the energies of the initial values stay bounded), then $ u $ also assumes this initial condition in $ \lp^{ 2 } ( \flattorus ) $.
+\end{remark}
