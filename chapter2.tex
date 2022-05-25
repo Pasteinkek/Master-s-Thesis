@@ -3,7 +3,7 @@
 The main content of this chapter is to look at the behaviour of solutions of the Allen--Cahn equation (\ref{allen_cahn_eq}) as the parameter $ \varepsilon $ tends to zero. As it turns out the scalar case is significantly easier to handle than the vectorial case, thus we shall first focus on the case $ N = 1 $,
 also called the \emph{twophase case}.
 
-\section{The twophase case}
+\section{Convergence in the twophase case}
 
 When want to consider the behaviour of solutions $ u_{ \varepsilon} \colon [0, T] \times \flattorus \to \mathbb{ R } $ to (\ref{allen_cahn_eq}) for $ \varepsilon \to 0 $. Let us for now assume that the energies of the initial functions $ \energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) $ stay uniformly bounded as $ \varepsilon $ tends to zero. 
 Then due to the energy dissipation inequality (\ref{energy_dissipation_sharp}), we already obtain that for all
@@ -377,56 +377,43 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 		
 		We somewhat repeat the proof the convergence in measure and integrability imply $ \lp^{ 1 } $-convergence, while keeping the uniformity in time.
 		
-		Fix some $ M > 0 $. Then we decompose the integral
+		Take some $ \delta > 0 $. Then we decompose the integral
 		\begin{equation*}
 			\int \abs{ u_{ \varepsilon } - u }^{ 2 } \dd{ x }
 			=
-			\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq M \} }
+			\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq \delta \} }
 				\abs{ u_{\varepsilon } - u }^{ 2 }
 			\dd{ x }
 			+
-			\int_{ \{ \abs{ u_{ \varepsilon } - u } < M \} }
+			\int_{ \{ \abs{ u_{ \varepsilon } - u } < \delta \} }
 				\abs{ u_{ \varepsilon } - u }^{ 2 }
 			\dd{ x }.
 		\end{equation*}
 		For the first summand, we notice that
 		\begin{equation*}
 			\sup_{ 0 \leq t \leq T }
-				\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq M \} }
+				\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq \delta \} }
 					\abs{ u_{\varepsilon } - u }^{ 2 }
 				\dd{ x }
 			\lesssim
 			\sup_{ 0 \leq t \leq T }
-				\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq M \} }
+				\int_{ \{ \abs{ u_{ \varepsilon } - u } \geq \delta \} }
 					1 + u_{\varepsilon }^{ 2 }
 				\dd{ x }
 			\to 0
 		\end{equation*}
-		as $ \varepsilon \to 0 $ since $ \lm^{ d }\left( \abs{ u_{\varepsilon } - u } \geq M \right) \to 0 $ uniformly in time by step 3 and $ u_{\varepsilon }^{ 2 } + 1 $ is equiintegrable uniformly in time by step 4.
+		as $ \varepsilon \to 0 $ since $ \lm^{ d }\left( \abs{ u_{\varepsilon } - u } \geq \delta \right) \to 0 $ uniformly in time by step 3 and $ u_{\varepsilon }^{ 2 } + 1 $ is equiintegrable uniformly in time by step 4.
 		
-		For the second summand, take any $ M > \delta > 0 $. then we further decompose
-		\begin{align*}
+		For the second summand, we simply estimate
+		\begin{equation*}
 			\sup_{ 0 \leq t \leq T }
-				\int_{ \{ \abs{ u_{ \varepsilon } - u } < M \} }
+				\int_{ \{ \abs{ u_{ \varepsilon } - u } < \delta \} }
 					\abs{ u_{ \varepsilon } - u }^{ 2 }
 				\dd{ x }
-			& =
-			\sup_{ 0 \leq t \leq T }
-				\int_{ \abs{ u_{ \varepsilon } - u } < \delta }
-					\abs{ u_{ \varepsilon } - u }^{ 2 }
-				\dd{ x }
-				+
-				\int_{ M > \abs{ u_{ \varepsilon } - u } }
-					\abs{ u_{ \varepsilon } - u }^{ 2 }
-				\dd{ x }
-			\\
-			& \leq
-			\sup_{ 0 \leq t \leq T }
+			=
 			\delta^{ 2 } \Lambda^{ d }
-			+
-			M^{ 2 } \lm^{ d } \left( \abs{ u_{ \varepsilon } - u } > \delta \right).
-		\end{align*}
-		Taking the limes superior as $ \varepsilon $ tends to zero of this inequality yields that the right hand side can be made arbitrarily small, which finally yields
+		\end{equation*}
+		Taking the limes superior as $ \varepsilon $ tends to zero of this inequality yields that the right hand side can be made arbitrarily small, which yields
 		\begin{equation*}
 			\sup_{ 0 \leq t \leq T }
 				\int
@@ -442,3 +429,152 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 \begin{remark}
 	From the previous Lemma, it follows that if the initial conditions $ u_{ \varepsilon }^{ 0 } $ converge in $ \lp^{ 1 } $ or pointwise almost everywhere to the function $ \alpha ( 1 - \chi^{ 0 } ) + \beta \chi^{ 0 } $ (and we know that the limit is of this form since the energies of the initial values stay bounded), then $ u $ also assumes this initial condition in $ \lp^{ 2 } ( \flattorus ) $.
 \end{remark}
+
+\section{Convergence of the energies}
+
+As often in the Calculus of Variations, convergence of energies boost our modulus of convergence and gives our limit therefore additional regularity. 
+Thus let us assume 
+\begin{equation}
+	\label{energy_convergence}
+	\int_{ 0 }^{ T }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ) 
+	\dd{ t }
+	\to 
+	\int_{ 0 }^{ T }
+		\energy ( u )
+	\dd{ t }
+	\text{ as }
+	\varepsilon \to 0,
+\end{equation}
+where the surface tension energy is defined for $ u = \alpha ( 1 - \chi ) + \beta \chi $ by 
+\begin{equation}
+	\energy ( u ) 
+	\coloneqq
+	\sigma \int \abs{ \nabla \chi }.
+\end{equation}
+Moreover we notice that the energy of $ u $ is exactly the total variation of $ \psi = \sigma \chi $.
+Since for almost every time $ t $, we have that $ \psi_{ \varepsilon } ( t ) $ converges to $ \psi ( t ) $ in $ \lp^{ 1 }  ( \flattorus ) $ by \Cref{initial_convergence_result}, it follows from the lower semicontinuity of the variation measure and Young's inequality that
+\begin{equation*}
+	\energy ( u ) 
+	\leq
+	\liminf_{ \varepsilon \to 0 }
+	\int
+		\abs{ \nabla \psi_{ \varepsilon } }
+	\dd{ x }
+	\leq
+	\liminf_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ).
+\end{equation*}
+Moreover by the energy dissipation inequality (\ref{energy_dissipation_sharp}), the energies stay uniformly bounded in time. Thus using the dominated convergence theorem, we see that our time integrated energy convergence assumption is equivalent to saying that for almost every time $ t \in ( 0, T ) $, we have convergence of the energies $ \energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) ) \to \energy ( u ( t ) ) $.
+
+Since the energies themselves can be interpreted as measures on the flat torus, we define for a continuous function $ \varphi \in \cont ( \flattorus ) $ the corresponding energy measures by
+\begin{align*}
+	& \energy_{ \varepsilon } ( u_{ \varepsilon} ; \varphi )
+	\coloneqq
+	\int
+		\varphi
+		\left(
+			\frac{ 1 }{ \varepsilon }
+			+
+			\frac{ \varepsilon }{ 2 }
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\right)
+	\dd{x } 
+	\text{ and }
+	\\
+	& \energy ( u ; \varphi )
+	\coloneqq
+	\sigma
+	\int
+		\varphi
+		\abs{ \nabla \chi }.
+\end{align*}
+Then from the energy convergence and lower semicontinuity just discussed, it follows that 
+\begin{equation}
+	\label{convergence_of_energy_measures}
+	\lim_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+	=
+	\energy ( u ; \varphi ).
+\end{equation}
+
+A first additional regularity result under the energy convergence assumption is the following Proposition, which ensures that we have square-integrable normal velocities.
+
+\begin{proposition}
+	In the setting of \Cref{initial_convergence_result} and given the energy convergence assumption (\ref{energy_convergence}), the measure $ \partial_{ t } \chi $ is absolutely continuous with respect to the measure $ \abs{ \nabla \chi } \dd{ t } $ and the corresponding density $ V $ is square integrable with the estimate
+	\begin{equation*}
+		\int_{ 0 }^{ T }
+			\int
+				V^{ 2 }
+			\abs{ \nabla \chi }
+		\dd{ t }
+		\lesssim
+		\energy^{ 0 },
+	\end{equation*}
+	where $ \energy^{ 0 } \coloneqq \liminf_{ \varepsilon \to 0 } \energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) $.
+\end{proposition}
+
+\begin{proof}
+	Take a smooth test function $ \varphi \in \cont_{ \mathrm{ C } }^{ \infty } ( ( 0 , T ) \times \flattorus )$. 
+	Then via the $ \lp^{ 1 } $-convergence of $ \psi_{ \varepsilon } \to \psi $, we have
+	\begin{align*}
+		\partial_{ t } \psi ( \varphi )
+		& =
+		\liminf_{ \varepsilon \to 0 }
+			\partial_{ t } \psi_{ \varepsilon } ( \varphi )
+		\\
+		& =
+		\liminf_{ \varepsilon \to 0 }
+			\int_{ 0 }^{ T }
+				\int
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\partial_{ t } u_{ \varepsilon }
+					\varphi
+				\dd{ x }
+			\dd{ t }
+		\\
+		& \leq
+		\liminf_{ \varepsilon \to 0 }
+		\left( 
+			\int_{ 0 }^{ T }
+				\int
+					\frac{ 1 }{ \varepsilon } 2 W ( u_{ \varepsilon } )
+					\varphi^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\right)^{ 1/ 2 }
+		\left(
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon
+					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\right)^{ 1/2 }
+		\\
+		& \leq
+		\liminf_{ \varepsilon \to 0 }
+			\left(
+				2 
+				\int_{ 0 }^{ T }
+					\energy_{ \varepsilon} \left( u_{ \varepsilon } ; \varphi^{ 2 } \right)
+				\dd{ t }
+			\right)^{ 1/ 2 }
+			\left(
+				\energy_{ \varepsilon } ( u_{ \varepsilon } )
+			\right)^{ 1/2 }
+		\tag{\ref{energy_dissipation_sharp}}
+		\\
+		& =
+		\sqrt{ 2 \sigma }
+		\norm{ \varphi }_{ \lp^{ 2 } ( \flattorus , \abs{ \nabla \chi } \dd{ t } ) }
+		\sqrt{ \energy^{ 0 } }.
+		\tag{\ref{convergence_of_energy_measures}}
+	\end{align*}
+	This proves both the absolute continuity and via a duality argument the desired bound since $ \partial_{ t } \psi = \sigma \partial_{ t } \chi $ and $ \sigma > 0 $.
+\end{proof}
+
+We finish this section with a proof for the equipartition of the energy, which tells us that both the summand involving the potential $ W ( u_{ \varepsilon } $ and the norm of the gradient contribute to the energy in similar parts.
+
+
+
