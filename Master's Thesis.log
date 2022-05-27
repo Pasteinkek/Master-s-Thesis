@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  25 MAY 2022 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  27 MAY 2022 16:29
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1491,10 +1491,35 @@ Overfull \hbox (16.11162pt too wide) in paragraph at lines 169--170
 [](\U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
  []
 
-[13] [14] [15]) [16]
+[13] [14] [15] [16]
+Overfull \hbox (14.53656pt too wide) in paragraph at lines 689--690
+[]\OT1/cmr/bx/n/10 Definition 2.3.1. []\OT1/cmr/m/it/10 (-20) Fix some fi-nite 
+time hori-zon $\OML/cmm/m/it/10 T < \OMS/cmsy/m/n/10 1$ \OT1/cmr/m/it/10 (-20) 
+and ini-tial data $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/
+10 (-20) ,
+ []
+
+
+Overfull \hbox (21.20439pt too wide) in paragraph at lines 695--699
+\OT1/cmr/m/it/10 (-20) with $[][] []\OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 \O
+T1/cmr/m/n/10 (-20) )$ moves by mean cur-va-ture \OT1/cmr/m/it/10 (-20) if ther
+e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
+ []
+
+[17]
+Overfull \hbox (5.06604pt too wide) detected at line 824
+[]
+ []
+
+[18]) [19]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex
+ (chapter3.tex [20
+
+
+
+
+]
 chapter 3.
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 1.
@@ -1502,12 +1527,7 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)) [17
-
-
-
-
-] [18
+)) [21] [22
 
 
 
@@ -1516,7 +1536,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [19
+ [23
 
 
 ]
@@ -1533,11 +1553,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46485 strings out of 480930
- 1032059 string characters out of 2900231
- 1861416 words of memory out of 3000000
- 61537 multiletter control sequences out of 15000+200000
- 541828 words of font info for 95 fonts, out of 3000000 for 9000
+ 46537 strings out of 480930
+ 1033157 string characters out of 2900231
+ 1860743 words of memory out of 3000000
+ 61563 multiletter control sequences out of 15000+200000
+ 542629 words of font info for 102 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,14n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1566,9 +1586,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (23 pages, 360254 bytes).
+Output written on "Master's Thesis.pdf" (27 pages, 379382 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 19525 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 20053 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -576,5 +576,272 @@ A first additional regularity result under the energy convergence assumption is 
 
 We finish this section with a proof for the equipartition of the energy, which tells us that both the summand involving the potential $ W ( u_{ \varepsilon } $ and the norm of the gradient contribute to the energy in similar parts.
 
+\begin{lemma}
+	\label{equipartition_of_energies}
+	Under the energy convergence assumption (\ref{energy_convergence}), we have for any continuous function $ \varphi \in \cont^{ \infty } ( \flattorus ) $ that
+	\begin{align*}
+		\energy ( u ; \varphi )
+		=
+		\lim_{ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+		& = 
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\abs{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\\
+		& =
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\varepsilon
+				\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			\dd{ x}
+		\\
+		& =
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\frac{ 1 }{ \varepsilon }
+				2 W ( u_{ \varepsilon } )
+			\dd{ x }
+	\end{align*}
+	for almost every time $ 0 \leq t \leq T $.
+\end{lemma}
 
+\begin{proof}
+	We have already established the first equality before. For the second equality, we first assume that $ \varphi \in \cont \left( \flattorus ; [ 0 , \infty ) \right)$.
+	By the lower semicontinuity of the variation measure, we immediately obtain
+	\begin{equation*}
+		\liminf_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\sqrt{ 2 W ( u_{ \varepsilon } }
+				\abs{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\geq
+		\energy ( u ; \varphi ).
+	\end{equation*}
+	But by Young's inequality, we also have 
+	\begin{equation*}
+		\limsup_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\abs{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\leq
+		\limsup_{ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+		= \energy ( u ; \varphi ).
+	\end{equation*}
+	For general $ \varphi \in \cont \left( \flattorus \right) $, we decompose $ \varphi $ into its positive and negative part and apply the previous argument to both in order to get the claim.
+	
+	The third and fourth inequality follow for a given non-negative $ \varphi \in \cont \left( \flattorus ; [ 0 , \infty ) \right) $ by the $ \lp^{ 2 } $ estimate
+	\begin{align*}
+		& \lim_{ \varepsilon \to 0 }
+			\int
+				\abs{ \sqrt{ \varphi } \sqrt{ \varepsilon } \abs{ \nabla u_{ \varepsilon } } - \sqrt{ \varphi } \frac{ 1 }{ \sqrt{ \varepsilon } } \sqrt{ 2 W ( u_{ \varepsilon } ) } }^{ 2 }
+			\dd{ x }
+		\\
+		={} &
+		\lim_{ \varepsilon \to 0 }
+			2 \energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+			-
+			2 \int	
+				\varphi
+				\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\abs{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+		=
+		0
+	\end{align*}
+	which implies
+	\begin{equation*}
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\varepsilon
+				\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		=
+		\lim_{ \varepsilon \to 0}
+			\int
+				\varphi
+				\frac{ 1 }{ \varepsilon }
+				2 W ( u_{ \varepsilon } )
+			\dd{ x }
+		=
+		\lim_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi ),
+	\end{equation*}
+	finishing our proof.
+\end{proof}
 
+\section{Convergence to twophase mean curvature flow}
+
+We start by definining a BV-formulation for motion by mean curvature.
+
+\begin{definition}
+	\label{motion_by_mcv}
+	Fix some finite time horizon $ T < \infty $ and initial data $ \chi^{ 0 }\in \bv \left( \flattorus ; \{ 0 , 1 \} \right) $, we say that 
+	\begin{equation*}
+		\chi \in 
+		\cont \left(
+			[ 0 , T ] ; \lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}  \right)
+		\right)
+	\end{equation*}
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ \emph{moves by mean curvature} if there is a normal velocity
+	$ V \in \lp^{ 2 } \left( \abs{ \nabla \chi } \dd{ t } \right) $ such that 
+	\begin{enumerate}
+		\item 
+		For all 
+		$ \xi \in \cont_{ \mathrm{ C } }^{ \infty } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d } \right) $,
+		we have
+		\begin{equation}
+			\label{integral_formulation_of_mcf}
+			\int_{ 0 }^{ T }
+				\int
+					V \inner*{ \xi }{ \nu }
+					- 
+					\inner*{ \diff \xi }{ \mathrm{ Id } - \nu \otimes \nu }
+				\abs{ \nabla \chi }
+			\dd{ t }
+			=
+			0.
+		\end{equation}
+	\item 
+	The function $ V $ is the normal velocity of $ \chi $ in the sense that 
+	\begin{equation*}
+		\partial \chi
+		=
+		V
+		\abs{ \nabla \chi }
+		\dd{ t }
+	\end{equation*}
+	holds distributionally in $ ( 0 , T ) \times \flattorus $.
+	\item 
+	The initial data $ \chi^{ 0 } $ is achieved in $ \cont \left( [ 0 , T ] ; \lp^{  2 } ( \flattorus ) \right) $, which simply means that $ \chi ( 0 ) = \chi^{ 0 } $ as functions in $ \lp^{ 2 } ( \flattorus ) $.
+	\end{enumerate}
+\end{definition}
+
+Our main goal in this section is now to show that the function $ \chi $ we have found in \Cref{initial_convergence_result} moves my mean curvature. Looking at equation (\ref{ac_weak_equation}) which reads
+\begin{equation*}
+	\int
+	\frac{ 1 }{ \varepsilon^{ 2 } } W' ( u_{ \varepsilon} ( t ) ) \varphi
+	+
+	\nabla u_{ \varepsilon } ( t ) \nabla \varphi
+	+
+	\partial_{ t } u_{ \varepsilon} ( t ) \varphi 
+	\dd{x}
+	=
+	0,
+	\tag{\ref{ac_weak_equation}}
+\end{equation*}
+we expect that for a suitable choice of testfunctions $ \varphi_{ \varepsilon } $, the following two terms converge:
+\begin{align*}
+	& \lim_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+			\int 
+			\partial_{ t } u_{ \varepsilon } \varphi_{ \varepsilon }
+	=
+	\sigma
+	\int_{ 0 }^{ T }
+		\int
+			V \inner*{ \xi }{ \nu }
+		\abs{ \nabla \chi }
+	\dd{ t },
+	\\
+	& \lim_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+		\int
+			\frac{1 }{ \varepsilon^{ 2 } }
+			W'( u_{ \varepsilon } )
+			\varphi_{ \varepsilon}
+			+ 
+			\inner*{ \nabla u_{ \varepsilon } }{ \nabla \varphi_{ \varepsilon } }
+		\dd{ x }
+		\dd{ t }
+	=
+	\sigma
+	- \int_{ 0 }^{ T }
+		\int
+			\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
+		\abs{ \nabla \chi }
+	\dd{ t }.
+\end{align*}
+But how do we find these testfunctions? For this, we first note that the curvature term
+$ \int \inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu } \abs{ \nabla \chi } \dd{ t } $ is by \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter} the first inner variation with respect to $ \xi $ of the perimeter, which is just our energy $ \energy $ up to the surface tension constant $ \sigma > 0 $. Thus it is plausible to compute the first inner variation 
+$ \left.\dv{ s } \right|_{ s = 0 } E ( \rho_{ s } ) $ and then we can hopefully choose the testfunction $ \varphi_{ \varepsilon } $ in such a way that it equals
+$ 
+\int
+\frac{ 1 }{ \varepsilon^{ 2 } } W' ( u_{ \varepsilon} ( t ) ) \varphi
++
+\nabla u_{ \varepsilon } ( t ) \nabla \varphi
+\dd{x}
+$.
+
+Thus let $ ( \rho_{ s } )_{ s } $ be functions which solve the ODE
+\[
+	\begin{cases}
+	\partial_{ t } \rho_{ s } 
+	+
+	\inner*{ \xi }{ \nabla \rho_{ s } }
+	& = 0
+	\\
+	\rho_{ 0 } & = u_{ \varepsilon }.
+	\end{cases}
+\]
+Then we formally compute 
+\begin{align*}
+	\left.\dv{ s }\right|_{ s = 0 }
+		\int
+			\frac{ \varepsilon }{ 2 }
+			\abs{ \rho_{ s } }^{ 2 }
+			+
+			\frac{ 1 }{ \varepsilon }
+			W ( \rho_{ s } )
+		\dd{ x }
+	& =
+	\int
+		\varepsilon 
+		\inner*{ \nabla u_{ \varepsilon } }
+		{ \nabla \left( - \inner*{ \xi }{ \nabla u_{ \varepsilon } } \right) }
+		+
+		\frac{ 1 }{ \varepsilon }
+		W'( u_{ \varepsilon } ) ( -\inner*{ \xi }{ \nabla u_{ \varepsilon } } )
+	\dd{ x }
+	\\
+	& =
+	\int
+		\left(
+			\varepsilon \Delta u - \frac{ 1 }{ \varepsilon } W'( u_{ \varepsilon } )
+		\right)
+		\inner*{ \xi }{ \nabla u_{ \varepsilon } } 
+	\dd{ x }.
+\end{align*}
+We therefore test equation (\ref{ac_weak_equation}) against $ \varphi_{ \varepsilon } \coloneqq \inner{ \xi }{ \nabla u_{ \varepsilon } } $.
+
+\subsection{Convergence of the curvature term}
+
+The goal of this section is to prove the convergence
+\begin{equation*}
+	\lim_{ \varepsilon \to 0 }
+		\int
+			\left(
+				\varepsilon \Delta u_{ \varepsilon }
+				- 
+				\frac{ 1 }{ \varepsilon }
+				W'( u_{ \varepsilon } )
+			\right)
+			\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+		\dd{ x }
+	=
+	\sigma
+	\int
+		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
+	\abs{ \nabla \chi }
+\end{equation*} 
+for almost every time $ t $.

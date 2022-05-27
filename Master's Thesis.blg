@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'Master's Thesis.blg'
-[99] biber-MSWIN64:322> INFO - === 
-[125] Biber.pm:415> INFO - Reading 'Master's Thesis.bcf'
-[266] Biber.pm:943> INFO - Found 2 citekeys in bib section 0
-[290] Biber.pm:4256> INFO - Processing section 0
-[290] Utils.pm:75> INFO - Globbing data source 'references.bib'
-[303] Utils.pm:91> INFO - Globbed data source 'references.bib' to references.bib
-[324] Biber.pm:4455> INFO - Looking for bibtex format file 'references.bib' for section 0
-[329] bibtex.pm:1653> INFO - LaTeX decoding ...
-[341] bibtex.pm:1471> INFO - Found BibTeX data source 'references.bib'
-[396] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[396] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[396] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[396] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[407] bbl.pm:652> INFO - Writing 'Master's Thesis.bbl' with encoding 'UTF-8'
-[409] bbl.pm:755> INFO - Output to Master's Thesis.bbl
+[101] biber-MSWIN64:322> INFO - === 
+[126] Biber.pm:415> INFO - Reading 'Master's Thesis.bcf'
+[273] Biber.pm:943> INFO - Found 3 citekeys in bib section 0
+[303] Biber.pm:4256> INFO - Processing section 0
+[304] Utils.pm:75> INFO - Globbing data source 'references.bib'
+[316] Utils.pm:91> INFO - Globbed data source 'references.bib' to references.bib
+[337] Biber.pm:4455> INFO - Looking for bibtex format file 'references.bib' for section 0
+[342] bibtex.pm:1653> INFO - LaTeX decoding ...
+[358] bibtex.pm:1471> INFO - Found BibTeX data source 'references.bib'
+[420] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[420] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[421] Biber.pm:4084> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[421] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[433] bbl.pm:652> INFO - Writing 'Master's Thesis.bbl' with encoding 'UTF-8'
+[436] bbl.pm:755> INFO - Output to Master's Thesis.bbl

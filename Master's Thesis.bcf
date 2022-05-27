@@ -2184,7 +2184,8 @@
   <bcf:section number="0">
     <bcf:citekey order="1">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
     <bcf:citekey order="2">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
-    <bcf:citekey order="3">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="3">maggi_sets_of_finite_perimeter</bcf:citekey>
+    <bcf:citekey order="4">baldo_minimal_interface_criterion</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

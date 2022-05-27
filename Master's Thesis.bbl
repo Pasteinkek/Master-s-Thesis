@@ -91,6 +91,35 @@
       \verb 10.1002/cpa.21747
       \endverb
     \endentry
+    \entry{maggi_sets_of_finite_perimeter}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b4a988553979989d58797434d0518947}{%
+           family={Maggi},
+           familyi={M\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b4a988553979989d58797434d0518947}
+      \strng{fullhash}{b4a988553979989d58797434d0518947}
+      \strng{bibnamehash}{b4a988553979989d58797434d0518947}
+      \strng{authorbibnamehash}{b4a988553979989d58797434d0518947}
+      \strng{authornamehash}{b4a988553979989d58797434d0518947}
+      \strng{authorfullhash}{b4a988553979989d58797434d0518947}
+      \field{labelalpha}{Mag12}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Cambridge Studies in Advanced Mathematics}
+      \field{title}{Sets of Finite Perimeter and Geometric Variational Problems: An Introduction to Geometric Measure Theory}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1017/CBO9781139108133
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
