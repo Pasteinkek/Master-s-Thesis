@@ -219,7 +219,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\\
 			u & \mapsto 
 			\energy_{ \varepsilon } ( u ) + 
-			\frac{ 1 }{ 2h } \int \abs{ u - u_{ n - 1 } }^{ 2 } \dd{x }
+			\frac{ 1 }{ 2h } \int \varepsilon \abs{ u - u_{ n - 1 } }^{ 2 } \dd{x }
 			\notag .
 		\end{align}
 		Then $ \mathcal{ F } $ is coercive with respect to 
@@ -228,17 +228,17 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		$ (v_{ k } )_{ k \in \mathbb{ N } } $ in $ \wkp^{ 1 , 2} \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $ such that 
 		$ \mathcal{ F } ( v_{ k } ) \to \inf \mathcal{ F } $ as $ k \to \infty $. 
 		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ and strongly in $ \lp^{ 2 } ( \flattorus, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \flattorus; \mathbb{ R }^{ N } ) $.
-		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } $ by the lower growth assumption (\ref{polynomial_growth}) on $ W $
+		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } \left( \flattorus ; \mathbb{ R }^{ N } \right)$ by the lower growth assumption (\ref{polynomial_growth}) on $ W $
 		and thus obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $.
 		
 		Lastly we have 
 		\begin{align}
 			\frac{ 1 }{ 2 h }
-			\int \abs{ u - u_{ n - 1 } }^{ 2 } \dd{ x}
+			\int \varepsilon \abs{ u - u_{ n - 1 } }^{ 2 } \dd{ x}
 			& \leq
 			\liminf_{ k \to \infty }
 			\frac{ 1 }{ 2h }
-			\int \abs{ v_{ k } - u_{ n -1 } }^{ 2 } \dd{ x },
+			\int \varepsilon \abs{ v_{ k } - u_{ n -1 } }^{ 2 } \dd{ x },
 			\\
 			\int \frac{ \varepsilon }{ 2 } \abs{ \nabla u }^{ 2 } \dd{ x }
 			& \leq
@@ -267,8 +267,8 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\label{discrete_optimal_energy_dissipation}
 		\energy_{ \varepsilon } ( u_{ n }^{ h } )
 		+
-		\left( \frac{ 1 }{ h } - \frac{ C }{ 2 \varepsilon } \right)
-		\int \abs{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 } \dd{ x }
+		\left( \frac{ 1 }{ h } - \frac{ C }{ 2 \varepsilon^{ 2 } } \right)
+		\int \varepsilon \abs{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 } \dd{ x }
 		\leq
 		\energy_{ \varepsilon } ( u_{ n - 1 }^{ h } ).
 	\end{equation}
@@ -309,6 +309,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		-
 		\frac{ 1 }{ 2h } 
 		\int 
+			\varepsilon
 			\abs{ u_{n }^{ h } + t \xi - u_{ n - 1 }^{ h } }^{ 2 } 
 		\dd{ x }
 		\\
@@ -318,6 +319,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\inner*{u_{ n }^{ h }}{\xi}
 			-
 			\frac{ 1 }{ h }
+			\varepsilon
 			\inner*{ u_{ n }^{ h } - u_{ n - 1 } ^{ h } }{ \xi }
 		\dd{x}.
 	\end{align*}
@@ -336,6 +338,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\right)
 			+
 			\frac{ 1 }{ h }
+			\varepsilon
 			\abs{ u_{n }^{ h } - u_{ n -1 }^{ h } }^{ 2 }
 		\dd{ x },
 	\end{equation*}
@@ -361,6 +364,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\inner*{ u_{ n - 1 }^{ h } }{ u_{ n }^{ h } }
 			+ 
 			\frac{ 1 }{ h }
+			\varepsilon
 			\abs{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
 		\dd{ x }
 		\\
@@ -370,10 +374,10 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\left( 
 			\frac{ 1 }{ h }
 			- 
-			\frac{ C }{ 2 \varepsilon }
+			\frac{ C }{ 2 \varepsilon^{ 2 } }
 		\right)
 		\int 
-			\abs{ u_{n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
+			\varepsilon \abs{ u_{n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
 		\dd{ x },
 	\end{align*}
 	which is the claimed estimate (\ref{discrete_optimal_energy_dissipation}).
@@ -387,10 +391,11 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\left(
 			1
 			-
-			\frac{ C h  }{ 2 \varepsilon }
+			\frac{ C h  }{ 2 \varepsilon^{ 2 } }
 		\right)
 		\int_{ 0 }^{ n h }
 			\int
+				\varepsilon
 				\abs{ \partial_{ t } u^{ h } }^{ 2 }
 			\dd{ x }
 		\dd{ t }
@@ -400,11 +405,12 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\energy_{ \varepsilon } ( u_{ n }^{ h } )
 		+
 		\left(
-			h - \frac{ C h^{ 2 }}{ 2 \varepsilon }
+			h - \frac{ C h^{ 2 }}{ 2 \varepsilon^{ 2 } }
 		\right)
 		\sum_{k = 1 }^{ n }
 			\int
-				 \abs{
+				\varepsilon
+				\abs{
 				 	\frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h }
 			 	}^{ 2 }
 		 	\dd{ x }
@@ -432,7 +438,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 					\int
 						\abs{ \partial_{ t } u^{ h } ( \tau, x ) }^{ 2 }
 					\dd{ x }
-				\dd{ t }
+				\dd{ \tau }
 		\right)^{ 1/2 }
 		\notag
 		\\
@@ -440,7 +446,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		& \leq
 		\sqrt{ t - s }
 		\left(
-			1 - \frac{ C h }{ 2 \varepsilon }
+			\varepsilon - \frac{ C h }{ 2 \varepsilon }
 		\right)^{ - 1/2 }
 		\left(  E_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) \right)^{ 1/ 2 },
 	\end{align}
@@ -509,10 +515,9 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\begin{equation}
 		\label{el_eq_for_unh}
 		\int
-			\frac{ 1 }{ \varepsilon}
+			\frac{ 1 }{ \varepsilon^{ 2 } }
 			\inner*{ \nabla W ( u_{ n }^{ h } ) }  { \xi }
 			+
-			\varepsilon
 			\inner*{ \nabla u_{ n }^{ h } }{ \nabla \xi }
 			+
 			\inner*{ \frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h } }{ \xi }
@@ -552,26 +557,22 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	This implies that 
 	\begin{align*}
 		\int
-			\varepsilon 
 			\inner*{ \nabla u ( t ) }{ \nabla \xi }
 		\dd{ x }
 		& = 
 		\int
-			\varepsilon
 			\inner*{ u ( t ) }{ \divg \nabla \xi  }
 		\dd{ x }
 		\\
 		& = 
 		\lim_{ n \to \infty }
 			\int
-				\varepsilon
 				\inner*{ u_{ k_{ n } }^{ h_{ n } } }{ \divg \nabla \xi  }
 			\dd{x }
 		\\
 		& = 
 		\lim_{ n \to \infty }
 			\int
-				\varepsilon
 				\inner*{ \nabla u_{ k_{ n } }^{ h_{ n } } }{ \nabla \xi }
 			\dd{ x }.
 	\end{align*}
@@ -594,7 +595,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\end{equation*}
 	To obtain the weak equation, we still need to prove convergence of remaining term. For this we note that 
 	\begin{equation*}
-		\frac{ 1 }{ \varepsilon }
+		\frac{ 1 }{ \varepsilon^{ 2 } }
 		\abs{ \inner*{ \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi } }
 		\lesssim
 		\left( 1 + \abs{ u_{  k_{ n } }^{ h_{ n } } }^{ p - 1 } \right) \abs{ \xi },
@@ -613,10 +614,9 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	Therefore it follows from the Euler--Lagrange equation (\ref{el_eq_for_unh}) that
 	\begin{equation*}
 		\int
-			\frac{ 1 }{ \varepsilon }
+			\frac{ 1 }{ \varepsilon^{ 2 } }
 			\inner*{ \nabla W ( u ( t )) }{ \xi }
 			+
-			\varepsilon
 			\inner*{ \nabla u }{ \nabla \xi }
 			+
 			\inner*{ \partial_{ t } u }{ \xi }
@@ -667,23 +667,26 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 	\begin{align*}
 		\int_{ 0 }^{ t }
 			\int
+				\varepsilon
 				\abs{ \partial_{ t } u }^{ 2 }
 			\dd{ x }
 		\dd{ t }
 		& \leq
 		\liminf_{ n \to \infty }
-			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon } \right)
+			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon^{ 2 } } \right)
 			\int_{ 0 }^{ t }
 				\int
+					\varepsilon
 					\abs{ \partial_{ t } u^{ h_{ n } } }^{ 2 }
 				\dd{ x }
 			\dd{ t }
 		\\
 		& \leq
 		\liminf_{ n \to \infty }
-			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon } \right)
+			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon^{ 2 } } \right)
 				\int_{ 0 }^{ k_{ n } h_{ n } }
 					\int
+						\varepsilon
 						\abs{ \partial_{ t } u^{ h_{ n } } }^{ 2 }
 					\dd{ x }
 				\dd{ t }.		
@@ -694,6 +697,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		+
 		\int_{ 0 }^{ t }
 			\int
+				\varepsilon
 				\abs{ \partial_{ t } u }^{ 2 }
 			\dd{ x }
 		\dd{ t }
@@ -701,9 +705,10 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\liminf_{ n \to \infty }
 			\energy_{ \varepsilon } ( u_{ k_{ n } } )
 			+
-			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon } \right)
+			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon^{ 2 } } \right)
 			\int_{ 0 }^{ k_{ n } h_{ n } }
 				\int
+					\varepsilon
 					\abs{ \partial_{ t } u^{ h } }^{ 2 }
 				\dd{ x }
 			\dd{ t }
@@ -822,7 +827,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 \end{proof}
 
 \begin{remark}
-	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor $ 1/2h $ instead of $ 1/h- C/2\varepsilon $ follows immediately from the definition of our optimization problem, but is not optimal for fixed $ \varepsilon $ if we want to study the behaviour as $ h $ tends to zero. Moreover this so called \emph{sharp energy dissipation inequality} is important for later.
+	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor $ 1/2h $ instead of $ 1/h- C/2\varepsilon^{ 2 } $ follows immediately from the definition of our optimization problem, but is not optimal for fixed $ \varepsilon $ if we want to study the behaviour as $ h $ tends to zero. Moreover this so called \emph{sharp energy dissipation inequality} is important for later.
 \end{remark}
 
 \begin{remark}
@@ -846,7 +851,7 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		& =
 		- \varepsilon \int \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 } \dd{ x }.
 	\end{align*}
-	In order to make this calculation rigorous, we however need to show that $ t \mapsto \energy_{ \varepsilon } ( u ( t ) ) $ is absolutely continuous, which is non-trivial, but it would give us equality in energy dissipation inequality (\ref{energy_dissipation_sharp})
+	In order to make this calculation rigorous, we however need to show that $ t \mapsto \energy_{ \varepsilon } ( u ( t ) ) $ is absolutely continuous, which is non-trivial, but it would give us equality in energy dissipation inequality (\ref{energy_dissipation_sharp}).
 	Since we will only need the inequality, our proof will however suffice.
 \end{remark}
 

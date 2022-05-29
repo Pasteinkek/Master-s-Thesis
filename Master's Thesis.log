@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  27 MAY 2022 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  29 MAY 2022 12:38
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1458,14 +1458,19 @@ l.98 \begin{equation}
 <to be read again> 
                    \relax 
 l.141 		\begin{equation}
-                         [2] [3] [4] [5]
-Overfull \hbox (66.2094pt too wide) in paragraph at lines 463--465
+                         [2] [3] [4]
+Overfull \hbox (0.35463pt too wide) detected at line 382
+[]
+ []
+
+[5]
+Overfull \hbox (66.2094pt too wide) in paragraph at lines 469--471
 []\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
 ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
  []
 
 [6]
-Overfull \hbox (1.3415pt too wide) in paragraph at lines 577--580
+Overfull \hbox (1.3415pt too wide) in paragraph at lines 578--581
 \OT1/cmr/m/n/10 (-20) In step 6, we more-over have shown that $\OML/cmm/m/it/10
  @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
 1/cmr/m/n/10 (-20) in $[][]([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/
@@ -1473,7 +1478,12 @@ cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20)
 )$.
  []
 
-[7] [8] [9]) [10]
+[7]
+Overfull \hbox (0.80008pt too wide) detected at line 718
+[]
+ []
+
+[8] [9]) [10]
 \openout2 = `chapter2.aux'.
 
  (chapter2.tex
@@ -1553,11 +1563,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46537 strings out of 480930
- 1033157 string characters out of 2900231
- 1860743 words of memory out of 3000000
+ 46541 strings out of 480930
+ 1033187 string characters out of 2900231
+ 1861755 words of memory out of 3000000
  61563 multiletter control sequences out of 15000+200000
- 542629 words of font info for 102 fonts, out of 3000000 for 9000
+ 542731 words of font info for 104 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,14n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1586,7 +1596,7 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (27 pages, 379382 bytes).
+Output written on "Master's Thesis.pdf" (27 pages, 379452 bytes).
 PDF statistics:
  415 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
