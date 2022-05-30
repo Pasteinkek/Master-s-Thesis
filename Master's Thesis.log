@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  30 MAY 2022 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  30 MAY 2022 16:40
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1517,18 +1517,16 @@ e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
  []
 
 [17]
-Overfull \hbox (5.06604pt too wide) detected at line 824
+Overfull \hbox (5.06604pt too wide) detected at line 825
 []
  []
 
-[18]
-Overfull \hbox (48.77977pt too wide) detected at line 876
-[][] [] [] [][] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 " [] @[
-]u[] [] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
- u[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10  [] :
- []
+[18] [19]
 
-[19]) [20]
+LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
+ line 1109.
+
+) [20]
 \openout2 = `chapter3.aux'.
 
  (chapter3.tex
@@ -1565,18 +1563,22 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 \openout1 = `"Master's Thesis.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46549 strings out of 480930
- 1033532 string characters out of 2900231
- 1862074 words of memory out of 3000000
- 61569 multiletter control sequences out of 15000+200000
- 542731 words of font info for 104 fonts, out of 3000000 for 9000
+ 46557 strings out of 480930
+ 1033748 string characters out of 2900231
+ 1862158 words of memory out of 3000000
+ 61572 multiletter control sequences out of 15000+200000
+ 542890 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,14n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 82i,15n,112p,10614b,2025s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
@@ -1603,9 +1605,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (27 pages, 385050 bytes).
+Output written on "Master's Thesis.pdf" (27 pages, 390513 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 96 named destinations out of 1000 (max. 500000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
  20053 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -156,6 +156,32 @@
       \verb 10.1017/CBO9781139108133
       \endverb
     \endentry
+    \entry{Reshetnyak_weak_convergence}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9c5f5fc3c05085bd507f32e1d5eb5d50}{%
+           family={Reshetnyak},
+           familyi={R\bibinitperiod},
+           given={Yu.\bibnamedelimi G.},
+           giveni={Y\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{fullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{bibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{authorbibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{authornamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{authorfullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \field{labelalpha}{Res68}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Siberian Mathematical Journal}
+      \field{title}{Weak convergence of completely additive vector functions on a set}
+      \field{volume}{9}
+      \field{year}{1968}
+      \field{pages}{1039\bibrangedash 1045}
+      \range{pages}{7}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

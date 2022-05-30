@@ -710,8 +710,9 @@ We start by definining a BV-formulation for motion by mean curvature.
 				\abs{ \nabla \chi }
 			\dd{ t }
 			=
-			0.
+			0,
 		\end{equation}
+		where $ \nu \coloneqq \nabla \chi / \abs{ \nabla \chi } $ is the outer unit normal.
 	\item 
 	The function $ V $ is the normal velocity of $ \chi $ in the sense that 
 	\begin{equation*}
@@ -847,7 +848,7 @@ The goal of this section is to prove the convergence
 for almost every time $ t $. We directly follow the proof from Luckhaus and Modica in \cite{luckhaus_modica_gibbs_thompson_relation}.
 
 Via an integration by parts, we obtain
-\begin{equation}
+\begin{align}
 	\label{conv_of_curv_first_ibp_scalar}
 	\int
 		\left(
@@ -856,9 +857,9 @@ Via an integration by parts, we obtain
 			\frac{ 1 }{ \varepsilon } W'(u_{ \varepsilon } ) 
 		\right)
 		\inner*{ \xi }{ \nabla u_{ \varepsilon } }
-	=
+	= 
 	\int
-		- \varepsilon 
+		& - \varepsilon 
 		\sum_{ i, j = 1 }^{ d }
 			\partial_{ x_{ i } } u_{ \varepsilon }
 			\left(
@@ -868,12 +869,14 @@ Via an integration by parts, we obtain
 				\xi^{ j }
 				\partial_{ x_{ i } x_{ j } }^{ 2 } u_{ \varepsilon }
 			\right)
-		+
+	\notag
+	\\
+	& +
 		\frac{ 1 }{ \varepsilon }
 		W ( u_{ \varepsilon } )
 		\divg \xi 
 	\dd{ x }.
-\end{equation}
+\end{align}
 
 Moreover by another integration by parts, we have
 \begin{align*}
@@ -988,10 +991,11 @@ where
 	=
 	\begin{cases}
 		\sum_{ i, j = 1}^{ d }
+			-
 			\frac{ p_{ i } }{ \abs{ p } }
 			\partial_{ x_{ i } } \xi^{ j }
 			\frac{ p_{ j } }{ \abs{ p } }
-		-
+		+
 		\divg \xi 
 		\quad
 		&\text{if } p \neq 0,
@@ -1024,6 +1028,114 @@ and the set $ \flattorus_{ \varepsilon } $ is defined as
 \end{equation*}
 For the representation (\ref{conv_of_curv_scalar_written_as_g}), we also have to use that 
 \begin{equation*}
-	\lm^{ d }
+	\lm^{ d } \left(
+		\left\{
+			x \in \flattorus
+			\, \colon \,
+			\nabla u_{ \varepsilon } ( x ) \neq 0 \text{ and } u_{ \varepsilon } ( x ) \in \{ \alpha , \beta \}
+		\right\}
+	\right)
+	=
+	0.
 \end{equation*}
-Again by the equipartition of energies, we can replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $.
+
+Again by the equipartition of energies (\Cref{equipartition_of_energies}) and the boundedness of $ g $, we can replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $ in the integral (\ref{conv_of_curv_scalar_written_as_g}) via the estimate
+\begin{align*}
+	& \int_{ \flattorus_{ \varepsilon } }
+		\abs{ 
+			\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			-
+			\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{\varepsilon } }
+		}
+	\dd{ x }
+	\\
+	\leq {} &
+	\left(
+		\int_{ \flattorus_{ \varepsilon } }
+			\abs{ 
+				\sqrt{ \varepsilon } \abs{ \nabla u_{ \varepsilon } } 
+				- 
+				\frac{ 1 }{ \sqrt{ \varepsilon } } \sqrt{ 2 W ( u_{ \varepsilon } ) } 
+			}^{ 2 }
+		\dd{ x }
+	\right)^{ 1/2 }
+	\left(
+		\int_{ \flattorus_{ \varepsilon } }
+			\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\dd{ x }
+	\right)^{ 1/ 2 }
+	\\
+	\leq {} &
+	\left(
+		\int
+			\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			-
+			2 \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } }
+			+
+			\frac{ 1 }{ \varepsilon }
+			2 W ( u_{ \varepsilon } )
+		\dd{ x }
+	\right)
+	\sqrt{ 2 \energy_{ \varepsilon } ( u_{ \varepsilon } ) }
+\end{align*}
+which vanishes as $ \varepsilon $ tends to zero by \Cref{equipartition_of_energies}.
+Thus
+\begin{align*}
+	\lim_{ \varepsilon \to 0 }
+	\int_{ \flattorus_{ \varepsilon } }
+		g ( x , \nabla \psi_{ \varepsilon  } )
+		\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+	\dd{ x }
+	& =
+	\lim_{ \varepsilon \to 0 }
+		\int_{ \flattorus_{ \varepsilon } }
+			g ( x , \nabla \psi_{ \varepsilon  } )
+		\sqrt{ 2 W ( u_{ \varepsilon } ) } 
+		\abs{ u_{ \varepsilon } }
+	\dd{ x }
+	 \\
+	 & =
+	 \lim_{ \varepsilon \to 0 }
+	 	\int_{ \flattorus_{ \varepsilon } }
+	 		g ( x , \nabla \psi_{ \varepsilon  } ) \abs{ \nabla \psi_{ \varepsilon  } }
+	 	\dd{ x }
+	 \\
+	 & = 
+	 \lim_{ \varepsilon \to 0 }
+	 	\int
+	 		F ( x, \nabla \psi_{ \varepsilon } )
+	 	\dd{ x },
+\end{align*}
+where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ where $ p $ is not equal to 0, and defined as 0 elsewhere. Since $ F (x , \lambda p ) = \lambda F ( x, p ) $ for positive $ \lambda $ and since $ F $ satisfies the periodic boundary conditions in $ x $, we are in the position the apply a Theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by Luckhaus and Modica in \cite[]{luckhaus_modica_gibbs_thompson_relation}. We will later see a quantitative version of this Theorem as \Cref{quantitative_reshetnyak}. Here it yields that since $ \abs{ \nabla \psi_{ \varepsilon  } } ( \flattorus ) \to \abs{ \nabla \psi } $ by \Cref{equipartition_of_energies}, we obtain
+\begin{align*}
+	\lim_{ \varepsilon \to 0 }
+		\int
+			F ( x, \nabla \psi_{ \varepsilon } )
+		\dd{ x }
+	& =
+	\sigma
+	\int
+		F ( x , \nu )
+	\abs{ \nabla \chi }
+	\\
+	& = 
+	\sigma
+	\int
+		\left(
+			\sum_{ i, j = 1}^{ d }
+				-
+				\frac{ \nu_{ i } }{ \abs{ \nu } }
+				\partial_{ x_{ i } } \xi^{ j }
+				\frac{ \nu_{ j } }{ \abs{ \nu } }
+			+
+			\divg \xi 
+		\right)
+		\abs{ \nu }
+	\abs{ \nabla \chi }
+	\\
+	& =
+	\sigma
+	\int
+		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu },
+\end{align*}
+which finishes the proof.
