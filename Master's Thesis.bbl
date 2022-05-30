@@ -58,6 +58,42 @@
       \verb http://www.numdam.org/item/AIHPC_1990__7_2_67_0/
       \endverb
     \endentry
+    \entry{luckhaus_modica_gibbs_thompson_relation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0b17157ebcbc743cb4fc3392c47a0099}{%
+           family={{Luckhaus}},
+           familyi={L\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=86098284dee21f95c73de899e9bc2ead}{%
+           family={{Modica}},
+           familyi={M\bibinitperiod},
+           given={Luciano},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{03dde8c9a4c93879bd8a9bfb59b1cd0e}
+      \strng{fullhash}{03dde8c9a4c93879bd8a9bfb59b1cd0e}
+      \strng{bibnamehash}{03dde8c9a4c93879bd8a9bfb59b1cd0e}
+      \strng{authorbibnamehash}{03dde8c9a4c93879bd8a9bfb59b1cd0e}
+      \strng{authornamehash}{03dde8c9a4c93879bd8a9bfb59b1cd0e}
+      \strng{authorfullhash}{03dde8c9a4c93879bd8a9bfb59b1cd0e}
+      \field{labelalpha}{LM89}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archive for Rational Mechanics and Analysis}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{{The Gibbs-Thompson relation within the gradient theory of phase transitions}}
+      \field{volume}{107}
+      \field{year}{1989}
+      \field{pages}{71\bibrangedash 83}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/BF00251427
+      \endverb
+    \endentry
     \entry{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}{article}{}
       \name{author}{2}{}{%
         {{hash=6a64258e1e649779293a50aff43794f9}{%

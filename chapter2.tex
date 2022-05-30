@@ -844,4 +844,186 @@ The goal of this section is to prove the convergence
 		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
 	\abs{ \nabla \chi }
 \end{equation*} 
-for almost every time $ t $.
+for almost every time $ t $. We directly follow the proof from Luckhaus and Modica in \cite{luckhaus_modica_gibbs_thompson_relation}.
+
+Via an integration by parts, we obtain
+\begin{equation}
+	\label{conv_of_curv_first_ibp_scalar}
+	\int
+		\left(
+			\varepsilon \Delta u^{ \varepsilon }
+			-
+			\frac{ 1 }{ \varepsilon } W'(u_{ \varepsilon } ) 
+		\right)
+		\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+	=
+	\int
+		- \varepsilon 
+		\sum_{ i, j = 1 }^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\left(
+				\partial_{ x_{ i } } \xi^{ j }
+				\partial_{ x_{ j } } u_{ \varepsilon }
+				+
+				\xi^{ j }
+				\partial_{ x_{ i } x_{ j } }^{ 2 } u_{ \varepsilon }
+			\right)
+		+
+		\frac{ 1 }{ \varepsilon }
+		W ( u_{ \varepsilon } )
+		\divg \xi 
+	\dd{ x }.
+\end{equation}
+
+Moreover by another integration by parts, we have
+\begin{align*}
+	\int
+		\sum_{ i, j = 1 }^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\xi^{ j }
+			\partial_{ x_{ i } x_{ j } }^{ 2 } u_{ \varepsilon }
+	\dd{ x }
+	& =
+	\int
+		- \sum_{ i, j = 1 }^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\left(
+				\partial_{ x_{ i } x_{ j } }^{ 2 } u_{ \varepsilon }
+				\xi^{ j }
+				+
+				\partial_{ x_{ j } } \xi^{ j }
+				\partial_{ x_{ i } } u_{ \varepsilon }
+			\right)
+	\dd{ x }
+	\\
+	& = 
+	\int
+		- \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\divg{ \xi }
+		-
+		\sum_{ i, j = 1 }^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\partial_{ x_{ i } x_{ j } }^{ 2 } u_{ \varepsilon }
+			\xi^{ j }
+		\dd{ x }
+	\shortintertext{which is equivalent to}
+	\int
+		\sum_{ i, j = 1 }^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\xi^{ j }
+			\partial_{ x_{ i } x_{ j } }^{ 2 }
+			u_{ \varepsilon }
+	\dd{ x }
+	& =
+	- \frac{ 1 }{ 2 }
+	\int
+		\abs{ \nabla u_{\varepsilon } }^{ 2 }
+		\divg \xi 
+	\dd{ x }.
+\end{align*}
+
+Plugging this equation into the first equation (\ref{conv_of_curv_first_ibp_scalar}), we obtain
+\begin{align*}
+	& \int
+		\left(
+			\varepsilon \Delta u_{ \varepsilon }
+			-
+			\frac{ 1 }{ \varepsilon }
+			W'( u_{ \varepsilon } ) 
+		\right)
+		\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+	\dd{ x }
+	\\
+	={} &
+	\int
+		-\varepsilon \sum_{ i, j = 1}^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\partial_{ x_{ j } } u_{ \varepsilon }
+			\partial_{ x_{ i } } \xi^{ j } 
+		+
+		\frac{ \varepsilon }{ 2 }
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\divg \xi 
+		+
+		\frac{ 1 }{ \varepsilon }
+		W ( u_{ \varepsilon } ) 
+		\divg \xi 
+	\dd{ x }
+	\\
+	= {} &
+	\varepsilon
+	\int
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\divg \xi 
+		-
+		\sum_{ i, j = 1 }^{ d }
+			\partial_{ x_{ i } } u_{ \varepsilon }
+			\partial_{ x_{ j } } u_{ \varepsilon }
+			\partial_{ x_{ i } } \xi^{ j }
+	\dd{ x }
+	\\
+	& + 
+	\int
+		\frac{ 1 }{ \varepsilon }
+		W ( u_{ \varepsilon } )
+		\divg \xi 
+		-
+		\frac{ \varepsilon }{ 2 }
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\divg \xi
+	\dd{ x }.
+\end{align*}
+The last integral goes to zero by the equipartition of the energies (\Cref{equipartition_of_energies}).
+Since $ \partial_{ x_{ i } } u_{ \varepsilon } / \abs{ \nabla u_{ \varepsilon } } = \partial_{ x_{ i } } \psi_{ \varepsilon } / \abs{ \nabla \psi_{ \varepsilon  } } $ by the chain rule, the former integral can be written as
+\begin{equation*}
+	\label{conv_of_curv_scalar_written_as_g}
+	\int_{ \flattorus_{ \varepsilon } }
+		g ( x , \nabla \psi_{ \varepsilon } )
+		\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+	\dd{ x },
+\end{equation*}
+where 
+\begin{equation*}
+	g ( x, p )
+	=
+	\begin{cases}
+		\sum_{ i, j = 1}^{ d }
+			\frac{ p_{ i } }{ \abs{ p } }
+			\partial_{ x_{ i } } \xi^{ j }
+			\frac{ p_{ j } }{ \abs{ p } }
+		-
+		\divg \xi 
+		\quad
+		&\text{if } p \neq 0,
+		\\
+		0
+		&\text{else},
+	\end{cases}
+\end{equation*}
+and the set $ \flattorus_{ \varepsilon } $ is defined as
+\begin{equation*}
+	\flattorus_{ \varepsilon }
+	\coloneqq
+	\left\{
+		x \in \flattorus
+		\, \colon \,
+		\nabla \psi_{ \varepsilon } ( x ) \neq 0
+	\right\}
+	=
+	\left\{
+		x \in \flattorus
+		\, \colon \,
+		\nabla u_{ \varepsilon } ( x ) \neq 0 
+	\right\}
+	\cap
+	\left\{
+		x \in \flattorus
+		\, \colon \,
+		u_{ \varepsilon } ( x ) \notin \{ \alpha , \beta \}
+	\right\}.
+\end{equation*}
+For the representation (\ref{conv_of_curv_scalar_written_as_g}), we also have to use that 
+\begin{equation*}
+	\lm^{ d }
+\end{equation*}
+Again by the equipartition of energies, we can replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $.
