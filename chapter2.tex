@@ -501,6 +501,7 @@ Then from the energy convergence and lower semicontinuity just discussed, it fol
 A first additional regularity result under the energy convergence assumption is the following Proposition, which ensures that we have square-integrable normal velocities.
 
 \begin{proposition}
+	\label{existence_of_velocity_twophase}
 	In the setting of \Cref{initial_convergence_result} and given the energy convergence assumption (\ref{energy_convergence}), the measure $ \partial_{ t } \chi $ is absolutely continuous with respect to the measure $ \abs{ \nabla \chi } \dd{ t } $ and the corresponding density $ V $ is square integrable with the estimate
 	\begin{equation*}
 		\int_{ 0 }^{ T }
@@ -787,7 +788,7 @@ $.
 Thus let $ ( \rho_{ s } )_{ s } $ be functions which solve the ODE
 \[
 	\begin{cases}
-	\partial_{ t } \rho_{ s } 
+	\partial_{ s } \rho_{ s } 
 	+
 	\inner*{ \xi }{ \nabla \rho_{ s } }
 	& = 0
@@ -852,7 +853,7 @@ Via an integration by parts, we obtain
 	\label{conv_of_curv_first_ibp_scalar}
 	\int
 		\left(
-			\varepsilon \Delta u^{ \varepsilon }
+			\varepsilon \Delta u_{ \varepsilon }
 			-
 			\frac{ 1 }{ \varepsilon } W'(u_{ \varepsilon } ) 
 		\right)
@@ -926,7 +927,7 @@ Moreover by another integration by parts, we have
 \end{align*}
 
 Plugging this equation into the first equation (\ref{conv_of_curv_first_ibp_scalar}), we obtain
-\begin{align*}
+\begin{align}
 	& \int
 		\left(
 			\varepsilon \Delta u_{ \varepsilon }
@@ -936,7 +937,9 @@ Plugging this equation into the first equation (\ref{conv_of_curv_first_ibp_scal
 		\right)
 		\inner*{ \xi }{ \nabla u_{ \varepsilon } }
 	\dd{ x }
+	\notag
 	\\
+	\label{curvature_term_equality_which_bounds}
 	={} &
 	\int
 		-\varepsilon \sum_{ i, j = 1}^{ d }
@@ -964,6 +967,7 @@ Plugging this equation into the first equation (\ref{conv_of_curv_first_ibp_scal
 			\partial_{ x_{ j } } u_{ \varepsilon }
 			\partial_{ x_{ i } } \xi^{ j }
 	\dd{ x }
+	\notag
 	\\
 	& + 
 	\int
@@ -974,8 +978,9 @@ Plugging this equation into the first equation (\ref{conv_of_curv_first_ibp_scal
 		\frac{ \varepsilon }{ 2 }
 		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 		\divg \xi
-	\dd{ x }.
-\end{align*}
+	\dd{ x }
+	\notag.
+\end{align}
 The last integral goes to zero by the equipartition of the energies (\Cref{equipartition_of_energies}).
 Since $ \partial_{ x_{ i } } u_{ \varepsilon } / \abs{ \nabla u_{ \varepsilon } } = \partial_{ x_{ i } } \psi_{ \varepsilon } / \abs{ \nabla \psi_{ \varepsilon  } } $ by the chain rule, the former integral can be written as
 \begin{equation*}
@@ -1106,7 +1111,7 @@ Thus
 	 		F ( x, \nabla \psi_{ \varepsilon } )
 	 	\dd{ x },
 \end{align*}
-where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ where $ p $ is not equal to 0, and defined as 0 elsewhere. Since $ F (x , \lambda p ) = \lambda F ( x, p ) $ for positive $ \lambda $ and since $ F $ satisfies the periodic boundary conditions in $ x $, we are in the position the apply a Theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by Luckhaus and Modica in \cite[]{luckhaus_modica_gibbs_thompson_relation}. We will later see a quantitative version of this Theorem as \Cref{quantitative_reshetnyak}. Here it yields that since $ \abs{ \nabla \psi_{ \varepsilon  } } ( \flattorus ) \to \abs{ \nabla \psi } $ by \Cref{equipartition_of_energies}, we obtain
+where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ at points $ p $ not equal to 0, and defined as 0 elsewhere. Since $ F (x , \lambda p ) = \lambda F ( x, p ) $ for positive $ \lambda $ and since $ F $ satisfies the periodic boundary conditions in $ x $, we are in the position the apply a Theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by Luckhaus and Modica in \cite[]{luckhaus_modica_gibbs_thompson_relation}. We will later see a quantitative version of this in \Cref{quantitative_reshetnyak}. Here it yields that since $ \abs{ \nabla \psi_{ \varepsilon  } } ( \flattorus ) \to \abs{ \nabla \psi } ( \flattorus ) $ by the equipartition of energies \Cref{equipartition_of_energies}, we obtain
 \begin{align*}
 	\lim_{ \varepsilon \to 0 }
 		\int
@@ -1136,6 +1141,487 @@ where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ where $ p $ is not 
 	& =
 	\sigma
 	\int
-		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu },
+		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
+	\abs{ \nabla \chi },
 \end{align*}
 which finishes the proof.
+The time integrated version given by
+\begin{equation*}
+	\lim_{ \varepsilon \to 0 }
+	\int_{ 0 }^{ T }
+	\int
+	\left(
+	\varepsilon \Delta u_{ \varepsilon }
+	- 
+	\frac{ 1 }{ \varepsilon }
+	W'( u_{ \varepsilon } )
+	\right)
+	\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+	\dd{ x }
+	\dd{ t }
+	=
+	\sigma
+	\int_{ 0 }^{ T }
+	\int
+	\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
+	\abs{ \nabla \chi }
+	\dd{ t }
+\end{equation*} 
+follows from the generalized dominated convergence theorem via the equality (\ref{curvature_term_equality_which_bounds}) which yields
+\begin{equation*}
+	\abs{
+		\int
+			\left(
+				\varepsilon \Delta u_{ \varepsilon } 
+				-
+				\frac{ 1 }{ \varepsilon }
+				W'( u_{ \varepsilon } )
+			\right)
+			\inner*{ \xi } { \nabla u_{ \varepsilon } }
+		\dd{ x }
+	}
+	\lesssim
+	\energy_{ \varepsilon } ( u_{ \varepsilon } ).
+\end{equation*}
+
+
+\subsection{Convergence of the velocity term}
+
+We now want to prove the convergence of the velocity term given by
+\begin{equation*}
+	\lim_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+			\int
+				\partial_{ t } u_{ \varepsilon }
+				\inner*{ \xi }{ \varepsilon \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\dd{ t }
+	=
+	\sigma
+	\int_{ 0 }^{ T }
+		\int
+			V \inner*{ \xi }{ \nu }
+		\abs{ \nabla \chi }
+	\dd{ t }.
+\end{equation*}
+The difficulty here is that products of weakly converging sequences will in general not weakly converge. To be more precise, we only have $ \partial_{ t } u_{ \varepsilon } \rightharpoonup V \abs{ \nabla \chi } \dd{ t } $ and $ \nu_{ \varepsilon } \coloneqq \varepsilon \nabla u_{ \varepsilon } \approx \nu $ in a weak sense. 
+
+Therefore we try to freeze the normal in a fixed direction, apply the weak convergence of $ \partial_{ t } u_{ \varepsilon } $ and then unfreeze the normal. Freezing the approximate normal $ \varepsilon \nabla u_{ \varepsilon } $ amounts to replacing $ \varepsilon \nabla u_{ \varepsilon } $ by $ \varepsilon \abs{ \nabla u_{ \varepsilon } } \nu^{ \ast } $ for a suitably chosen $ \nu^{ \ast } \in \mathbb{ S }^{ d-1 } $. Let $ \eta $ be a cutoff on the support of $ \xi $. Then the error we make can be estimated for all $ \alpha > 0 $ via Young's inequality by
+\begin{align*}
+	&\abs{
+		\int_{ 0 }^{ T }
+			\int
+				\partial_{ t } u_{ \varepsilon }
+				\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\dd{ t }
+		-
+		\int_{ 0 }^{ T }
+			\int
+				\partial_{ t } u_{ \varepsilon }
+				\inner*{ \xi }{ \varepsilon \abs{ \nabla u_{ \varepsilon } } \nu^{ \ast } }
+			\dd{ x }
+		\dd{ t }
+	}
+	\\
+	\leq {} &
+	\norm{ \xi }_{ \lp^{ \infty } }
+	\int_{ 0 }^{ T }
+		\int
+			\eta
+			\sqrt{ \varepsilon }
+			\abs{ \partial_{  t } u_{ \varepsilon } }
+			\sqrt{  \varepsilon } 
+			\abs{
+				\nabla u_{ \varepsilon }
+				-
+				\abs{ \nabla u_{ \varepsilon } }
+				\nu^{ \ast }
+			}
+		\dd{ x } 
+	\dd{ t }
+	\\
+	\leq {} &
+	\norm{ \xi }_{ \lp^{ \infty } }
+	\left(
+		\alpha 
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\varepsilon \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		+
+		\frac{ 1 }{ \alpha }
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\varepsilon
+				\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+				\abs{
+					\nu_{ \varepsilon } - \nu^{ \ast } 
+				} 
+			\dd{ x }
+		\dd{ t }
+	\right)
+	\\
+	\leq{}
+	&
+	\norm{ \xi }_{ \lp^{ \infty } }
+	\left( 
+		\alpha 	
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\varepsilon \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		+ 
+		\frac{ 1 }{ \alpha }
+		\tilt_excess_{ \varepsilon } ( \nu^{ \ast } ; \eta ) 
+	\right).
+\end{align*}
+Here the approximate tilt excess in direction $ \nu^{ \ast } $ is given by
+\begin{equation*}
+	\tilt_excess_{ \varepsilon } ( \nu^{ \ast } ; \eta )
+	\coloneqq
+	\int_{ 0 }^{ T }
+		\int
+			\varepsilon 
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			\abs{ \nu_{ \varepsilon } - \nu^{ \ast } }^{ 2 }
+		\dd{ x }
+	\dd{ t }.
+\end{equation*}
+With our frozen normal, we now notice that via the equipartition of energies, we may replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } $ via the estimate
+\begin{align*}
+	& 
+	\int_{ 0 }^{ T }
+		\int
+			\abs{ \partial_{ t } u_{ \varepsilon } } \eta
+			\abs{ \varepsilon \abs{ \nabla u_{ \varepsilon } } - \sqrt{ 2 W ( u_{ \varepsilon } ) } }
+		\dd{ x }
+	\dd{ t }
+	\\
+	\leq{} &
+	\left(
+		\int_{ 0 }^{ T }
+			\int
+				\varepsilon 
+				\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+	\right)^{ 1/2 }
+	\left(
+		\int_{ 0 }^{ T }
+			\int
+				\eta^{ 2 }
+				\left(
+					\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+					-
+					2 \abs{ \nabla u_{ \varepsilon } } \sqrt{ 2 W ( u_{ \varepsilon } ) }
+					+
+					\frac{ 1 }{ \varepsilon }
+					2 W ( u_{ \varepsilon } ) 
+				\right)
+			\dd{ x }
+		\dd{ t }
+	\right)^{ 1 / 2 }
+\end{align*}
+The first factor is uniformly bounded by the energy dissipation inequality (\ref{energy_dissipation_sharp}) and the second term vanishes as $ \varepsilon $ tends to zero by the equipartition of energies \Cref{equipartition_of_energies}.
+But now we recognise the identity
+\begin{equation*}
+	\int_{ 0 }^{ T }
+		\int
+			\partial_{ t } u_{ \varepsilon }
+			\sqrt{ 2 W ( u_{ \varepsilon } ) }
+			\inner*{ \xi }{ \nu^{ \ast } }
+		\dd{ x }
+	\dd{ t }
+	=
+	\int_{ 0 }^{ T }
+		\int
+			\partial_{ t } \psi_{ \varepsilon }
+			\inner*{ \xi }{ \nu^{ \ast } }
+		\dd{ x }
+	\dd{ t },
+\end{equation*}
+which converges as $ \varepsilon $ approaches zero to 
+\begin{equation}
+	\label{rewriting_limit_of_frozen_velocity_term}
+	\int_{ 0 }^{ T }
+		\int
+			\inner*{ \xi }{ \nu^{ \ast } }
+			\partial_{ t } \psi
+	=
+	\sigma
+	\int_{ 0 }^{ T }
+		\int
+			V \inner*{ \xi }{ \nu^{ \ast } }
+		\abs{ \nabla \chi }
+	\dd{ t }.
+\end{equation}
+Finally we want to unfreeze the normal, which means that we want to replace $ \nu^{ \ast } $ by $ \nu $ on the right hand side of equation (\ref{rewriting_limit_of_frozen_velocity_term}). This can be estimated again by Young's inequality via the error
+\begin{equation*}
+	\norm{ \xi }_{ \lp^{ \infty } }
+	\left(
+		\alpha
+	\int_{ 0 }^{ T }
+	\int
+	\eta
+	V^{ 2 }
+	\abs{ \nabla \chi }
+	\dd{ t }
+	+
+		\frac{ 1 }{ \alpha }
+		\tilt_excess ( \nu^{ \ast }; \eta )
+	\right),
+\end{equation*}
+where the tilt excess is given by 
+\begin{equation*}
+	\tilt_excess ( \nu^{ \ast } ; \eta )
+	\coloneqq
+	\sigma
+	\int_{ 0 }^{ T }
+		\int
+			\eta
+			\abs{ \nu - \nu^{ \ast } }^{ 2 }
+		\abs{ \nabla \chi }
+	\dd{ t }.
+\end{equation*}
+This finishes the proof for the convergence of the velocity term up to arguing that the errors can be made arbitrarily small.
+
+First we study the behaviour of the approximate tilt excess $ \tilt_excess_{ \varepsilon } $ by connecting it to $ \tilt_excess $. We notice that by expansion, we have
+\begin{align*}
+	\tilt_excess_{ \varepsilon } ( \nu^{ \ast } ; \eta )
+	& =
+	2
+	\int_{ 0 }^{ T }
+		\int
+			\eta
+			\varepsilon 
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\dd{ x }
+	\dd{ t }
+	-
+	2 
+	\inner*{\int_{ 0 }^{ T }
+		\int
+			\eta
+			\varepsilon
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			\nabla u_{ \varepsilon }
+		\dd{ x }
+	\dd{ t } }
+	{ \nu^{ \ast } }
+	\\
+	\tilt_excess ( \nu^{ \ast } ; \eta )
+	& =
+	2 \energy ( u ; \eta )
+	-
+	2 \sigma
+	\inner*{
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\nu 
+			\abs{ \nabla \chi }
+		\dd{ t }
+	}{ \nu^{ \ast } }.
+\end{align*}
+But by the equipartition of energies \Cref{equipartition_of_energies}, we have that
+\begin{equation*}
+	2 \int_{ 0 }^{ T }
+		\int
+			\eta \varepsilon 
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\dd{ x }
+	\dd{ t }
+	\to 
+	2 \energy ( u ; \eta )
+\end{equation*} 
+and recognizing that $ \sigma \int_{0 }^{ T } \int \eta \nu \abs{ \nabla \chi } \dd{ t } = \int_{ 0 }^{ T } \int \eta \nabla \psi $, we also obtain
+\begin{align*}
+	& 
+	\abs{ 
+	\int_{ 0 }^{ T }
+		\int
+			\eta
+			\varepsilon
+			\abs{ \nabla u_{ \varepsilon } }
+			\nabla u_{ \varepsilon }
+		\dd{ x }
+	\dd{ t }
+	-
+	\sigma
+	\int_{ 0 }^{ T }
+		\int
+			\eta
+			\nu 
+		\abs{ \nabla \chi }
+	\dd{ t }
+	}
+	\\
+	\leq {} &
+	\abs{
+		\int_{ 0 }^{ T }
+			\int	
+				\eta
+				\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\nabla u_{ \varepsilon }
+			\dd{ x }
+		\dd{ t }
+		-
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\nabla \psi
+	}
+	+
+	\int_{ 0 }^{ T }
+		\int
+			\varepsilon
+			\abs{ \nabla u_{ \varepsilon } }
+			\abs{ \nabla u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } \sqrt{ 2 W ( u_{ \varepsilon } ) } }
+		\dd{ x }
+	\dd{ t }
+	\\
+	\leq {} &
+	\abs{
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\nabla \psi_{ \varepsilon } 
+			\dd{ x }
+		\dd{ t }
+		-
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\nabla \psi 
+	}
+	\\
+	& +
+	\left(
+		\int_{ 0 }^{ T }
+			\int
+				\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+	\right)^{ 1/2 }
+	\left(
+		\int_{ 0 }^{ T }
+			\int
+				\left(
+					\sqrt{ \varepsilon }
+					\abs{ \nabla u_{ \varepsilon } }
+					-
+					\frac{ 1 }{ \sqrt{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\right)^{ 2 }
+			\dd{ x }
+		\dd{ t }
+	\right)^{ 1/2 },
+\end{align*}
+which vanishes as $ \varepsilon $ tends to zero by the weak convergence of $ \nabla \psi_{ \varepsilon } \rightharpoonup^{ \ast } \nabla \psi $ and the equipartition of the energies.
+Since we are taking $ \varepsilon \to $, we thus only have to make sure that the tilt excess if sufficiently small.
+
+We are now in the position to argue why the error can be made arbitrarily small. 
+Let $ \delta > 0 $. Then we first choose our $ \alpha > 0 $ so small that 
+\begin{equation*}
+	\limsup_{ \varepsilon \to 0 }
+	\alpha \norm{ \xi }_{ \lp^{ \infty } }
+	\left(
+		\int_{ 0 }^{ T }
+			\int
+				\varepsilon 
+				\abs{ \partial_{  t } u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		+
+		\int_{ 0 }^{ T }
+			\int
+				V^{ 2 }
+			\abs{ \nabla \chi }
+		\dd{ t }
+	\right)
+	<
+	\frac{ \delta }{ 2 },
+\end{equation*}
+which is possible by the energy dissipation inequality (\ref{energy_dissipation_sharp}) and \Cref{existence_of_velocity_twophase}.
+Then we choose a partition of unity $ \left( \eta_{ i } \right)_{ i = 1 , \dotsc , n } $ and approximate unit normals $ \left( \nu^{ \ast }_{ i }\right)_{i = 1 , \dotsc, n } $ such that
+\begin{equation*}
+	\frac{ 1 }{ \alpha }
+	\norm{ \xi }_{ \lp^{ \infty } }
+	\sigma
+	\sum_{ i = 1 }^{ n }
+		\int_{ 0 }^{ T }
+			\int
+			 	\eta_{ i }
+			 	\abs{ \nu - \nu_{ i }^{ \ast } }^{ 2 }
+			 \abs{ \nabla \chi }
+		\dd{ t }
+	<
+	\frac{ \delta }{2 }.
+\end{equation*}
+The existence of these can be seen by taking a smooth approximation of $ \nu $ with respect to the measure $ \abs{ \nabla \chi } \dd{ t } $.
+Collecting all of our errors, we obtain
+\begin{align*}
+	& \limsup_{ \varepsilon \to 0 }
+		\abs{
+		\int_{ 0 }^{ T }
+			\int
+				\partial_{  t } u_{ \varepsilon }
+				\inner*{ \xi }{ \varepsilon \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\dd{ t }
+		-
+		\sigma
+		\int_{ 0 }^{ T }
+			\int
+				V \inner*{ \xi }{ \nu }
+			\abs{ \nabla \chi }
+		\dd{ t }
+		}
+	\\
+	= {} &
+	\limsup_{ \varepsilon \to 0 }
+	\abs{
+		\sum_{ i = 1 }^{ n }
+		\int_{ 0 }^{ T }
+			\int
+			\eta_{ i }
+			\partial_{  t } u_{ \varepsilon }
+			\inner*{ \xi }{ \varepsilon \nabla u_{ \varepsilon } }
+			\dd{ x }
+		\dd{ t }
+		-
+		\sigma
+		\int_{ 0 }^{ T }
+			\int
+			\eta_{ i }
+			V \inner*{ \xi }{ \nu }
+			\abs{ \nabla \chi }
+		\dd{ t }
+	}
+	\\
+	\leq {} & 
+	\norm{ \xi }_{ \lp^{ \infty } }
+	\sum_{ i = 1 }^{ n } 
+		\alpha \int_{ 0 }^{ T }
+			\limsup_{ \varepsilon \to 0 }
+			\int
+				\eta_{ i }
+				\varepsilon
+				\abs{ \partial_{  t } u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+			-
+			\int
+			 	\eta_{ i }
+			 	V^{ 2 }
+			 \abs{ \nabla \chi }
+		\dd{ t }
+		+
+		\frac{ 1 }{ \alpha }
+\end{align*}
+something wrong here with order of summation and taking limit, be caureful
