@@ -1,5 +1,5 @@
 \section{Gradient flows}
-
+	\label{section_gradient_flows}
 In the simplest case, a gradient flow of a given energy $ \energy \colon \mathbb{ R }^{ N } \to \mathbb{ R } $ (with respect to the euclidean inner product) is a solution to the ordinary differential equation
 \begin{equation}
 	\label{gf_basic_equation}
@@ -87,14 +87,17 @@ Then we can estimate again by the fundamental theorem that
 \end{align*}
 Since we started with an integral over a non-negative function, this implies that for almost every time $ t $, we have that $ x' ( t ) = - \nabla \energy ( x ( t ) ) $, which proves that $ x $ (again under sufficient regularity assumptions) is a gradient flow of the energy $ \energy $.
 
-The real strength of formulating the differential equation (\ref{gf_basic_equation}) via inequality (\ref{basic_optimal_energy_dissipation_inequality}) becomes clear if we want to consider gradient flows in a more complicated setting by replacing the space $ \mathbb{ R }^{ N } $. In order to formulate equation (\ref{gf_basic_equation}), we need to have a notion of differentiation and a gradient in the target of $ x $. Therefore we may use Hilbert spaces or smooth Riemannian manifolds as a suitable substitute for $ \mathbb{ R }^{ N } $. 
+The real strength of formulating the differential equation (\ref{gf_basic_equation}) via inequality (\ref{basic_optimal_energy_dissipation_inequality}) becomes clear if we want to consider gradient flows in a more complicated setting by replacing the space $ \mathbb{ R }^{ N } $. In order to formulate equation (\ref{gf_basic_equation}), we need to have a notion of differentiation and a gradient in the target of $ x $. Therefore we may use pre-Hilbert spaces or smooth Riemannian manifolds as a suitable substitutes for $ \mathbb{ R }^{ N } $. 
 
+Examples for such more complicated gradient include the heat equation, which can be written as the $ \lp^{ 2 } $-gradient flow of the Dirichlet energy (REFERENZ EINFÜGEN), 
+the Fokker-Planck equation (REFERENZ EINFÜGEN) or the Allen--Cahn equation and mean curvature flow, which of course both play an important role for us.
+\begin{comment}
 A first example for a generalization is therefore the heat equation $ \partial_{ t } u - \Delta u = 0 $ for some open and bounded set $ \Omega $. As our space, we shall take $ \mathrm{ H }_{ 0 }^{ 1 } ( \Omega ) $ equipped with the inner product
 \begin{equation*}
 	\inner*{ u }{ v }
 	\coloneqq
 	\int
-		\inner*{ \nabla u }{ \nabla v }
+		\inner*{ u }{ v }
 	\dd{ x }.
 \end{equation*}
 Our energy is given by the Dirichlet functional
@@ -106,3 +109,4 @@ Our energy is given by the Dirichlet functional
 	\dd{ x }
 \end{equation*}
 Then we can compute that at least on $ \mathrm{ H }_{ 0 }^{ 1 } \cap \mathrm{ H }^{ 2 } ( \Omega ) $, the Fréchet derivative of $ \energy $ is given by $ \diff ( E ) ( u ) [ v ] = - \int \Delta u v \dd{ x } $.
+\end{comment}

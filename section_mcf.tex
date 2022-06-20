@@ -1,11 +1,128 @@
 \section{Mean curvature flow}
+	\label{section_mcf}
 
 Mean curvature flow describes the geometric evolution of a set $ ( \Omega ( t ) )_{ t \geq 0 } $ respectively the evolution of its boundary $ \Sigma ( t ) \coloneqq \partial \Omega ( t ) $. It is described by the equation
-\begin{equation*}
+\begin{equation}
+	\label{mcf_twophase_basic_equation}
 	\frac{ 1 }{ \mu } V = - \sigma H 
 	\quad
 	\text{on }
 	\Sigma.
-\end{equation*}
+\end{equation}
 There are a lot of different notions of solutions to this equation(HIER EINFÜGEN).
-For us the central structure of this equation is its gradient flow structure. 
+For us the central structure of this equation is its gradient flow structure. Formally we want to consider the space
+\begin{equation*}
+	\mathcal{ M }
+	\coloneqq
+	\left\{
+		(d-1) \text{-dimensional surfaces on} \flattorus
+	\right\},
+\end{equation*}
+where the tangent space at a given $ \Sigma \in \mathcal{ M } $ consists of the normal velocities on $ \Sigma $.
+The metric tensor of two normal velocities is then given by
+\begin{equation*}
+	\inner*{ V }{ W }_{ \Sigma }
+	\coloneqq
+	\frac{ 1 }{ \mu }
+	\int_{ \Sigma }
+		V W
+	\dd{ \hm^{ d - 1 } }
+\end{equation*}
+and our energy will simply be the rescaled perimeter functional
+\begin{equation*}
+	\energy ( \Sigma )
+	\coloneqq
+	\sigma \hm^{ d -1 } ( \Sigma ).
+\end{equation*}
+Since the first inner variation of the perimeter functional is given by the mean curvature vector (see \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter}), the gradient of the energy should simply be the mean curvature vector multiplied by $ \sigma \mu $.
+Thus the mean curvature flow equation (\ref{mcf_twophase_basic_equation}) corresponds exactly to the gradient flow equation (\ref{gf_basic_equation}).
+
+In \Cref{section_gradient_flows} we highlighted the importance of
+De Giorgi's optimal energy dissipation inequality (\ref{basic_optimal_energy_dissipation_inequality}). In our setting  this translates to the inequality
+\begin{align*}
+	& \energy ( \Sigma ( T ) )
+	+
+	\frac{ 1 }{ 2 }
+	\int_{ 0 }^{ T }
+		\inner*{ V}{ V }
+		+
+		\inner*{ \nabla E ( \Sigma ) }{ \nabla E ( \Sigma ) }
+	\\
+	={}
+	&\energy ( \Sigma ( T ) )
+	+
+	\frac{ 1 }{ 2 }
+	\int_{ 0 }^{ T }
+		\int
+			\frac{ 1 }{ \mu }
+			V^{ 2 } 
+			+
+			\sigma^{ 2 } \mu 
+			H^{ 2 }
+		\dd{ \hm^{ d - 1 } }
+	\dd{ t }
+	\leq
+	\energy ( \Sigma ( 0 ) )
+\end{align*}
+and it will be one our first main results to deduce this inequality when passing to the limit in the Allen--Cahn equations.
+
+Far more important for us shall however be multiphase mean curvature, which has been motivated in material science by grain growths in polycristals (HIER NOCH MEHR SCHREIBEN). 
+Essentially instead of just considering the evolution of one single set, we look at the evolution of a partition of the flat torus and require that at each interface of the sets, the mean curvature flow equation (\ref{mcf_twophase_basic_equation}) is satisfied.
+
+We say that a partition $ ( \Omega_{ i } ( t ) )_{ i = 1 , \dotsc , P } $ with $ \Sigma_{ i , j } \coloneqq \partial \Omega_{ i } \cap \partial \Omega_{ j } $ satisfies multiphase mean curvature with mobilities $ \mu_{ i , j } $ and surface tension $ \sigma_{ i , j } $ if 
+\begin{equation*}
+	\begin{cases}
+		\frac{ 1 }{ \mu_{ i , j } }
+		V_{ i, j }
+		=
+		-
+		\sigma_{ i , j }
+		H_{ i , j }
+		\quad
+		& \text{for all }i,j
+		\\
+		\sum
+			\sigma_{ i , j }
+			\nu_{ i , j }
+		=
+		0
+		& \text{at triple junctions}.
+	\end{cases}
+\end{equation*}
+The second equation is a stability condition when more than two sets meet and called Herring's angle condition. Here $ \nu_{ i , j } $ is the outer unit normal on $ \Sigma_{ i , j } $ pointing from $ \Omega_{ i } $ to $ \Omega_{ j } $. One can argue that we would also want stability conditions at for example quadruple junctions. In two dimensions though, such quadruple junctions are expected to immediatly dissipate. In higher dimensions, quadruple junctions might become stable, but only on lower dimensional sets, and shall thus not be relevant for us.
+
+As our space, we shall thus now consider tuples of $ (d-1) $-dimensional surfaces on $ \flattorus $. The energy and metric tensor are given by
+\begin{align*}
+	\energy ( \Sigma )
+	&\coloneqq
+	\sum_{ i < j }
+		\sigma_{ i , j }
+		\hm^{ d- 1 } ( \Sigma_{ i , j } )
+	\shortintertext{and}
+	\inner*{ V }{ W }_{ \Sigma }
+	& \coloneqq
+	\sum_{ i < j }
+		\frac{ 1 }{ \mu_{ i , j } }
+		\int_{ \Sigma_{ i , j } }
+			V_{ i , j }
+			W_{ i , j }
+		\dd{ \hm^{ d - 1 } }.
+\end{align*}
+Using a variant of the divergence theorem on surfaces (\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter}) and again the computation for the first variation of the perimeter (\cite[Thm.~17.5]{maggi_sets_of_finite_perimeter}), we see that multiphase mean curvature has the desired gradient flow structure and that De Giorgi's inequality (\ref{basic_optimal_energy_dissipation_inequality}) translates to
+\begin{equation*}
+	\energy ( \Sigma ( T ) )
+	+
+	\frac{ 1 }{ 2 }
+	\sum_{ i < j }
+		\int_{ 0 }^{ T }
+			\int_{ \Sigma_{ i , j } }
+				\frac{ 1 }{ \mu_{ i , j } }
+				V_{ i , j }^{ 2 }
+				+
+				\sigma_{ i , j }^{ 2 } \mu_{ i , j }
+				H_{ i , j }^{ 2 }
+			\dd{ \hm^{ d - 1 } }
+		\dd{ t }
+	\leq
+	\energy ( \Sigma ( 0 ) ).
+\end{equation*}

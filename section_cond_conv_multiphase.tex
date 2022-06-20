@@ -32,3 +32,153 @@ and as a consequence of $ \geodesic_distance $ being a metric satisfy
 	\sigma_{ i , k } \leq \sigma_{ i , j } + \sigma_{ j , k },
 \end{equation*}
 $ \sigma_{ i , j } = 0 $ if and only if $ i $ is equal to $ j $ and $ \sigma_{ i , j } = \sigma_{ j, i } $.
+
+Our replacement for the primitive $ \phi $ is now given for $ 1 \leq i \leq P $ by the function
+\begin{equation*}
+	\phi_{ i } ( u ) 
+	\coloneqq
+	\geodesic_distance ( \alpha_{ i } , u ).
+\end{equation*}
+Our first obstacle is the regularity of the function $ \psi_{ \varepsilon }^{ i } \coloneqq \phi_{ i } \circ u_{ \varepsilon } $. A priori we only know that $ \phi_{ i } $ is locally Lipschitz continuous on $ \mathbb{ R }^{ N } $ and thus differentiable almost everywhere. If $ N = 1 $, then this would already suffice to deduce that $ \psi_{ \varepsilon  }^{ i } $ is weakly differentiable, but in higher dimensions, $ u $ could for example move along a hyperplane where $ \phi_{ i } $ could in theory be nowhere differentiable since it is a Lebesgue nullset. This can however be salvaged through the following chain rule for distributional derivatives by Ambrosio and Maso \cite[Cor.~3.2]{ambrosio_maso_chain_rule}.
+
+\begin{theorem}
+	\label{chain_rule_for_distributional_derivatives}
+	Let $ \Omega \subseteq \mathbb{ R }^{ d } $ be an open set, $ p \in [0, \infty ] $, $ u \in \wkp^{ 1, p } ( \Omega ; \mathbb{ R }^{ N } ) $ and let $ f \colon \mathbb{ R }^{ N } \to \mathbb{ R }^{ k } $ be a Lipschitz continuous function such that $ f ( 0 ) = 0 $. Then $ v \coloneqq f \circ u \in \wkp^{ 1, p } \left( \Omega , \mathbb{ R }^{ k } \right) $. Furthermore for almost every $ x \in \Omega $ the restriction of $ f $ to the affine space 
+	\begin{equation*}
+		T_{ x }^{ u }
+		\coloneqq
+		\left\{
+			y \in \mathbb{ R }^{ N }
+			\, \colon \,
+			y = u ( x ) + \diff u ( x ) z 
+			\text{ for }
+			z \in \mathbb{ R }^{ d }
+		\right\}
+		=
+		u( x ) 
+		+
+		\dot{ T }_{ x }^{ u }
+	\end{equation*}
+	is differentiable at $ u( x ) $ and
+	\begin{equation*}
+		\diff v 
+		=
+		\diff \left(
+			f |_{ T_{ x }^{ u } }
+		\right) ( u ) 
+		\diff u 
+	\end{equation*}
+	holds almost everywhere in $ \Omega $.
+\end{theorem}
+\begin{remark}
+	The matrix 	
+	$\diff \left(
+	f |_{ T_{ x }^{ u } }
+	\right) ( u ) 
+	$
+	can be interpreted as some matrix in $ \mathbb{ R }^{ k \times n } $ which acts on $ v \in \dot{ T }_{ x }^{ u } $ by
+	\begin{equation*}
+		\diff \left(
+		f |_{ T_{ x }^{ u } }
+		\right) ( u ( x ) ) 
+		[ v ]
+		=
+		\lim_{ h \to 0 }
+			\frac{ f ( u ( x ) + h v ) - f ( u ( x ) ) }{ h }.
+	\end{equation*}
+	Thus we may choose a suitable representative since the product $ \diff \left(
+	f |_{ T_{ x }^{ u } }
+	\right) ( u )  
+	\diff u $
+	will not change by definition of $ \dot{ T }_{ x }^{ u } $.
+\end{remark}
+
+We are not in the position to prove the following regularity result.
+
+\begin{lemma}
+	Let $ u \in \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $ with
+	\begin{equation*}
+		\esssup_{ 0 \leq t \leq T }
+			\energy_{ \varepsilon } ( u ) 
+		+
+		\int_{ 0 }^{ T }
+			\int
+				\varepsilon 
+				\abs{ \partial_{ t } u }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		< 
+		\infty 
+	\end{equation*}
+	for some $ \varepsilon > 0 $. Then for all $ 1 \leq i \leq P $ there exists a map
+	\begin{equation*}
+		\partial_{ u } \phi_{ i } ( u )
+		\colon
+		[ 0 , T ] \times \flattorus
+		\to 
+		\mathrm{Lin} \left( \mathbb{ R }^{ N } , \mathbb{ R } \right)
+	\end{equation*}
+	such that the chain rule is valid with the pair $ \partial_{ u } \phi_{ i } ( u ) $ and 
+	$ ( \partial_{ t }, \nabla u ) u $:
+	
+	For almost every $ ( t , x ) \in [ 0 , T ] \times \flattorus $ we have
+	\begin{equation*}
+		\nabla ( \phi_{ i } \circ u )
+		=
+		\partial_{ u } \phi_{ i } ( u ) \nabla u 
+		\quad
+		\text{and}
+		\quad
+		\partial_{ t } ( \phi_{ i } \circ u )
+		=
+		\partial_{ u } \phi_{ i } ( u ) 
+		\partial_{ t } u.
+	\end{equation*}
+	Furthermore we can control the modulus of $ \partial_{ u } \phi_{ i } ( u ) $ almost everywhere in time and space via the estimate
+	\begin{equation}
+		\label{estimate_on_partial_u_phi}
+		\abs{ \partial_{ u } \phi_{ i } ( u ) }
+		\leq
+		\sqrt{ 2 W ( u ) }.
+	\end{equation}
+	Additionally we have $ \phi_{ i } \circ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1, 1 } ( \flattorus ) \right) \cap \wkp^{ 1, 1 } ( [ 0 , T ] \times \flattorus ) $ with the estimates
+	\begin{align}
+		\esssup_{ 0 \leq t \leq T }
+			\int
+				\abs{ \phi_{ i } \circ u }
+			\dd{ x }
+		& \lesssim
+		1 + \esssup_{ 0 \leq t \leq T } \varepsilon \energy_{ \varepsilon } ( u ) 
+		\\
+		\esssup_{ 0 \leq t \leq T }
+			\int
+				\abs{ \nabla ( \phi \circ u ) }
+			\dd{ x }
+		& \leq
+		\esssup_{ 0 \leq t \leq T }
+			\energy_{ \varepsilon } ( u )
+		\shortintertext{and}
+		\int_{ 0 }^{ T }
+			\int
+				\abs{ \partial_{ t } ( \phi_{ i } \circ u ) }
+			\dd{ x }
+		\dd{ t }
+		& \lesssim
+		T
+		\esssup_{ 0 \leq t \leq T }
+			\energy_{ \varepsilon } ( u )
+		+
+		\int_{ 0 }^{ T }
+			\int
+				\varepsilon
+				\abs{ \partial_{ t } u }^{ 2 }
+			\dd{ x }
+		\dd{ t }.
+	\end{align}
+\end{lemma}
+
+\begin{proof}
+	Since \Cref{chain_rule_for_distributional_derivatives} requires Lipschitz continuity of $ \phi $, but we only have local Lipschitz continuity, let us first assume that $ u $ is bounded in space and time. Then we may modify $ \phi_{ i } $ outside of a compact set such that it is (globally) Lipschitz continuous and does not change on the image of $ u $.
+	
+	Since we have via the energy estimate that $ u \in \wkp^{ 1 , 2 } ( [ 0 , T ] ) $, we obtain by then distributional chain rule \Cref{chain_rule_for_distributional_derivatives}
+\end{proof}

@@ -19,6 +19,53 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{ambrosio_maso_chain_rule}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d1fb85e6b388ff3ca0e66ab5e4721170}{%
+           family={Ambrosio},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cafc8b7f2901fb40a5792460f5defafd}{%
+           family={Maso},
+           familyi={M\bibinitperiod},
+           given={G.\bibnamedelimi Dal},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{748123067b41f5514e8b04a7c47dd0cb}
+      \strng{fullhash}{748123067b41f5514e8b04a7c47dd0cb}
+      \strng{bibnamehash}{748123067b41f5514e8b04a7c47dd0cb}
+      \strng{authorbibnamehash}{748123067b41f5514e8b04a7c47dd0cb}
+      \strng{authornamehash}{748123067b41f5514e8b04a7c47dd0cb}
+      \strng{authorfullhash}{748123067b41f5514e8b04a7c47dd0cb}
+      \field{labelalpha}{AM90}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove a general chain rule for the distribution derivatives of the composite function v(x) = f(u(x)), where u: Rn → Rm has bounded variation and f: Rm → Rk is Lipschitz continuous.}
+      \field{issn}{00029939, 10886826}
+      \field{journaltitle}{Proceedings of the American Mathematical Society}
+      \field{number}{3}
+      \field{title}{A General Chain Rule for Distributional Derivatives}
+      \field{urlday}{20}
+      \field{urlmonth}{6}
+      \field{urlyear}{2022}
+      \field{volume}{108}
+      \field{year}{1990}
+      \field{urldateera}{ce}
+      \field{pages}{691\bibrangedash 702}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2047789
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2047789
+      \endverb
+    \endentry
     \entry{baldo_minimal_interface_criterion}{article}{}
       \name{author}{1}{}{%
         {{hash=1d84a2f473644842b87d569184327772}{%

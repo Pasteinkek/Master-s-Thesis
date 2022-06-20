@@ -2182,13 +2182,17 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
-    <bcf:citekey order="2">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
+    <bcf:citekey order="1">maggi_sets_of_finite_perimeter</bcf:citekey>
+    <bcf:citekey order="2">maggi_sets_of_finite_perimeter</bcf:citekey>
     <bcf:citekey order="3">maggi_sets_of_finite_perimeter</bcf:citekey>
-    <bcf:citekey order="4">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
-    <bcf:citekey order="5">Reshetnyak_weak_convergence</bcf:citekey>
-    <bcf:citekey order="6">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
-    <bcf:citekey order="7">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="4">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
+    <bcf:citekey order="5">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
+    <bcf:citekey order="6">maggi_sets_of_finite_perimeter</bcf:citekey>
+    <bcf:citekey order="7">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
+    <bcf:citekey order="8">Reshetnyak_weak_convergence</bcf:citekey>
+    <bcf:citekey order="9">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
+    <bcf:citekey order="10">ambrosio_maso_chain_rule</bcf:citekey>
+    <bcf:citekey order="11">baldo_minimal_interface_criterion</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

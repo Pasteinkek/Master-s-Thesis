@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  18 JUN 2022 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  20 JUN 2022 19:38
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1106,6 +1106,10 @@ File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 .sty"
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/comment\comment.sty
+"
+\CommentStream=\write5
+ Excluding comment 'comment')
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
 ty"
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
@@ -1246,8 +1250,8 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 \c@sometheorems=\count437
-LaTeX Info: Redefining \tilt_excess on input line 69.
-LaTeX Info: Redefining \geodesic_distance on input line 70.
+LaTeX Info: Redefining \tilt_excess on input line 72.
+LaTeX Info: Redefining \geodesic_distance on input line 73.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -1368,8 +1372,8 @@ LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
 LaTeX Info: Redefining \nameref on input line 21.
  ("Master's Thesis.out") ("Master's Thesis.out")
-\@outlinefile=\write5
-\openout5 = `"Master's Thesis.out"'.
+\@outlinefile=\write6
+\openout6 = `"Master's Thesis.out"'.
 
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
@@ -1432,8 +1436,8 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 26
 .
 
 ("Master's Thesis.toc")
-\tf@toc=\write6
-\openout6 = `"Master's Thesis.toc"'.
+\tf@toc=\write7
+\openout7 = `"Master's Thesis.toc"'.
 
  [1
 
@@ -1456,34 +1460,36 @@ l.87 \end{align*}
 
 
 
-]) (section_mcf.tex))pdfTeX warning (ext4): destination with the same identifie
-r (name{page.2}) has been already used, duplicate ignored
+] Excluding 'comment' comment.) (section_mcf.texpdfTeX warning (ext4): destinat
+ion with the same identifier (name{page.2}) has been already used, duplicate ig
+nored
 <to be read again> 
                    \relax 
-l.30 	\include{chapter_mcf}
-                            [2]
+l.40 I
+      n \Cref{section_gradient_flows} we highlighted the importance of [2]))
+[3]
 \openout2 = `chapter_ac_equation.aux'.
 
- (chapter_ac_equation.tex
+ (chapter_ac_equation.tex [4
+
+
+
+
+]
 chapter 2.
-(section_structure_of_ac.tex [3
-
-
-
-
-] [4]) (section_existence_of_solution.tex
-[5] [6]
+(section_structure_of_ac.tex [5] [6]) (section_existence_of_solution.tex
+[7] [8]
 Overfull \hbox (0.35463pt too wide) detected at line 203
 []
  []
 
-[7]
+[9]
 Overfull \hbox (66.2094pt too wide) in paragraph at lines 290--292
 []\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
 ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
  []
 
-[8]
+[10]
 Overfull \hbox (1.3415pt too wide) in paragraph at lines 399--402
 \OT1/cmr/m/n/10 (-20) In step 6, we more-over have shown that $\OML/cmm/m/it/10
  @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
@@ -1492,22 +1498,22 @@ cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20)
 )$.
  []
 
-[9]
+[11]
 Overfull \hbox (0.80008pt too wide) detected at line 539
 []
  []
 
-[10] [11])) [12]
+[12] [13])) [14]
 \openout2 = `chapter_cond_conv_of_ac.aux'.
 
  (chapter_cond_conv_of_ac.tex
 chapter 3.
-(section_cond_conv_twophase.tex [13
+(section_cond_conv_twophase.tex [15
 
 
 
 
-] [14]
+] [16]
 Overfull \hbox (16.11162pt too wide) in paragraph at lines 166--167
 []\OT1/cmr/bx/n/10 Lemma 3.1.2. []\OT1/cmr/m/it/10 (-20) With the as-sump-tions
  of Propo-si-tion [][]3.1.1[][], we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10
@@ -1515,16 +1521,11 @@ Overfull \hbox (16.11162pt too wide) in paragraph at lines 166--167
 [](\U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
  []
 
-[15] [16]
-
-LaTeX Warning: Reference `De giorgis inequality' on page 1 undefined on input l
-ine 452.
-
-[17]
+[17] [18] [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19]
+ [20]
+[21]
 Overfull \hbox (14.53656pt too wide) in paragraph at lines 688--689
 []\OT1/cmr/bx/n/10 Definition 3.1.5. []\OT1/cmr/m/it/10 (-20) Fix some fi-nite 
 time hori-zon $\OML/cmm/m/it/10 T < \OMS/cmsy/m/n/10 1$ \OT1/cmr/m/it/10 (-20) 
@@ -1539,35 +1540,30 @@ T1/cmr/m/n/10 (-20) )$ moves by mean cur-va-ture \OT1/cmr/m/it/10 (-20) if ther
 e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
  []
 
-[20]
+[22]
 Overfull \hbox (5.06604pt too wide) detected at line 830
 []
  []
 
-[21] [22]
+[23] [24]
 
 LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
  line 1118.
 
-[23]
+[25]
 Overfull \hbox (34.80074pt too wide) detected at line 1334
 []
  []
 
-[24]
+[26]
 Overfull \hbox (9.26213pt too wide) detected at line 1529
 []
  []
 
-[25]) (section_cond_conv_multiphase.tex [26])) [27]
+[27]) (section_cond_conv_multiphase.tex [28] [29])) [30]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [28
-
-
-
-
-]
+ (chapter3.tex
 chapter 4.
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 1.
@@ -1575,7 +1571,12 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)) [29] [30
+)) [31
+
+
+
+
+] [32
 
 
 
@@ -1584,7 +1585,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [31
+ [33
 
 
 ]
@@ -1605,11 +1606,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46651 strings out of 480930
- 1036226 string characters out of 2900231
- 1865251 words of memory out of 3000000
- 61615 multiletter control sequences out of 15000+200000
- 543253 words of font info for 112 fonts, out of 3000000 for 9000
+ 46726 strings out of 480930
+ 1037646 string characters out of 2900231
+ 1866648 words of memory out of 3000000
+ 61670 multiletter control sequences out of 15000+200000
+ 544104 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1638,9 +1639,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (35 pages, 428206 bytes).
+Output written on "Master's Thesis.pdf" (37 pages, 448150 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 20101 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 561 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 21125 words of extra memory for PDF output out of 24883 (max. 10000000)
 
