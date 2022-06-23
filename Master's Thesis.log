@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  20 JUN 2022 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  23 JUN 2022 19:18
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1560,10 +1560,20 @@ Overfull \hbox (9.26213pt too wide) detected at line 1529
 []
  []
 
-[27]) (section_cond_conv_multiphase.tex [28] [29])) [30]
+[27]) (section_cond_conv_multiphase.tex [28] [29]
+Overfull \hbox (27.35571pt too wide) detected at line 233
+[]
+ []
+
+[30])) [31]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex
+ (chapter3.tex [32
+
+
+
+
+]
 chapter 4.
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 1.
@@ -1571,12 +1581,7 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)) [31
-
-
-
-
-] [32
+)) [33] [34
 
 
 
@@ -1585,7 +1590,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [33
+ [35
 
 
 ]
@@ -1606,8 +1611,8 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46726 strings out of 480930
- 1037646 string characters out of 2900231
+ 46728 strings out of 480930
+ 1037660 string characters out of 2900231
  1866648 words of memory out of 3000000
  61670 multiletter control sequences out of 15000+200000
  544104 words of font info for 117 fonts, out of 3000000 for 9000
@@ -1639,9 +1644,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (37 pages, 448150 bytes).
+Output written on "Master's Thesis.pdf" (39 pages, 456456 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 129 named destinations out of 1000 (max. 500000)
  21125 words of extra memory for PDF output out of 24883 (max. 10000000)
 
