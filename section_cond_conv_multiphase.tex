@@ -457,19 +457,246 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 	\end{equation*}
 	there exists for any sequence $ \varepsilon $ some non-relabelled subsequence such that the solutions of the Allen--Cahn equation (\ref{allen_cahn_eq}) with initial condition $ u_{ \varepsilon }^{ 0 } $ converge in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ N } \right) $ to some $ u = \sum_{ i = 1 }^{ P } \chi_{ i } \alpha_{ i } $ with a partition $ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } \right) $.
 	Furthermore we have
-	\begin{equation*}
-		\sup_{ 0 \leq t \leq T }
+	\begin{equation}
+		\label{energy_estimate_for_limit_u}
+		\esssup_{ 0 \leq t \leq T }
 			\energy ( u ) 
 		\leq
 		\energy_{ 0 }
-	\end{equation*}
+	\end{equation}
 	and for all $ 1 \leq i \leq P $ the compositions $ \phi_{ i } \circ u_{ \varepsilon } $ are uniformly bounded in $ \bv ( ( 0 , T ) \times \flattorus ) $ and converge to $ \phi_{ i } \circ u $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus $. 
 \end{proposition}
 
 \begin{remark}
 	The proof is quite similar to the proof of \Cref{initial_convergence_result}, but we have to work more in order to obtain the desired convergence to $ u $.
+\end{remark}
 
 \begin{proof}
 	By \Cref{existence_of_ac_solution} the solution $ u_{ \varepsilon } $ of (\ref{allen_cahn_eq}) satisfies the assumptions of \Cref{chain_rule_lemma}.
-	Thus $ \psi_{ i }^{ \varepsilon } \coloneqq \varphi_{ i } \circ u_{ \varepsilon } $ is uniformly bounded in $ \bv \left( ( 0 , T ) \times \flattorus \right) $ as $ \varepsilon $ tends to zero for all $ 1 \leq i \leq P $ and thus we find a non-relabelled subsequence and $ v_{ i } \in \bv \left( ( 0 , T ) \times \flattorus \right) $ such that $ \psi_{ i }^{ \varepsilon } $ converges to $ v_{ i } $ in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus \right) $ and pointwise almost everywhere. We now want to show that we can write $ v_{ i } = \phi_{ i } \circ u $ for $ u = \sum \chi_{ j } \alpha_{ j } $.
+	Thus $ \psi_{ i }^{ \varepsilon } \coloneqq \varphi_{ i } \circ u_{ \varepsilon } $ is uniformly bounded in $ \bv \left( ( 0 , T ) \times \flattorus \right) $ as $ \varepsilon $ tends to zero for all $ 1 \leq i \leq P $ and thus we find a non-relabelled subsequence and $ v_{ i } \in \bv \left( ( 0 , T ) \times \flattorus \right) $ such that $ \psi_{ i }^{ \varepsilon } $ converges to $ v_{ i } $ in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus \right) $ and pointwise almost everywhere. 
+	
+	We now want to show that we can write $ v_{ i } = \phi_{ i } \circ u $ for $ u = \sum \chi_{ j } \alpha_{ j } $. An elegant proof of this presented in \cite[Thm.~4.1]{fonseca_tartar_1989} can be done through the fundamental theorem of Young measures (\cite[Thm.~3.1]{Müller1999}). By passing to another non-relabelled subsequence of $ u_{ \varepsilon } $, we obtain that $ u_{ \varepsilon } $ generates a Young measure $ \nu $. Since $ u $ is $ \lp^{ p } $-bounded, we have that for almost every $ (t, x ) $, the measure $ \nu_{ ( t, x ) } $ is a probability measure. Moreover the sequence $ W ( u_{ \varepsilon } ) $ is uniformly integrable since 
+	\begin{equation*}
+	 	0 \leq W ( u_{ \varepsilon } ) \leq \frac{ 1 }{ \varepsilon } W ( u_{ \varepsilon } ) \to 0 
+	 \end{equation*}
+ 	in $ \lp^{ 1 } $. Thus we obtain that for all $ \varphi \in \lp^{ \infty } ( [ 0 , T ] \times \flattorus ) $
+ 	\begin{equation*}
+ 		0
+ 		=
+ 		\lim_{ \varepsilon \to 0 }
+ 			\int_{ 0 }^{ T }
+ 				\int
+ 					\varphi (t, x )
+ 					W ( u_{ \varepsilon } (t, x ) )
+ 				\dd{ x }
+ 			\dd{ t }
+ 		=
+ 		\int_{ 0 }^{ T }
+ 			\int
+ 				\varphi ( t, x ) 
+				\int_{ \mathbb{ R }^{ N } }
+					W ( y )
+				\dd{ \nu_{ ( t, x ) } ( y ) }
+ 			\dd{ x }
+ 		\dd{ t },
+ 	\end{equation*}
+ 	which implies that for almost every $ ( t, x ) $, the probability measure $ \nu_{ ( t, x ) } $ is supported on the set $ \{ \alpha_{ 1 } , \dotsc, \alpha_{ P } \} $. Therefore we can write
+ 	$ \nu_{ ( t , x ) } = \sum_{ j = 1 }^{ P } \lambda_{ j } \delta_{ \alpha_{ j } } $ for non-negative numbers $ \lambda_{ j } \in [0 ,1 ] $ with $ \sum \lambda_{ j } = 1 $.
+ 	
+ 	Now let $ 1 \leq i \leq P $. For every $ f \in \cont_{ 0 } ( \mathbb{ R } ) $, we have that $ f \circ \phi_{ i } \in \cont_{ 0 } ( \mathbb{ R }^{ N } ) $, and thus we can compute that $ \phi_{ i } \circ u_{ \varepsilon } $ generates the Young measure given at almost every point $ ( t, x ) $ by $ \nu_{ ( t , x ) } = \sum \lambda_{ j } \delta_{ \phi_{ i } ( \alpha_{ j } ) } $.
+ 	But $ \phi_{ i } \circ u_{ \varepsilon } $ converges to $ v_{ i } $ in $ \lp^{ 1 } $, thus especially in measure, which implies by \cite[Cor.~3.2]{Müller1999} that our convex combination already has to be trivial, or in other words, we can write 
+ 	\begin{equation*}
+ 		\nu_{ ( t , x ) }
+ 		=
+ 		\sum_{ j= 1 }^{ P }
+ 			\mathds{ 1 }_{ \Omega_{ j } ( t ) } ( x )
+ 			\delta_{ \alpha_{ j } }
+ 	\end{equation*}
+ 	for a time-dependent partition $ ( \Omega_{ j } ( t ) )_{ j = 1 , \dotsc , P } $ of $ \flattorus $. Thus we can write 
+ 	\begin{equation*}
+ 		\delta_{ v_{ i } ( t , x ) }
+ 		=
+ 		\sum_{ j = 1 }^{ P }
+ 			\mathds{ 1 }_{ \Omega_{ j } ( t ) } ( x )
+ 			\delta_{ \phi_{ i } ( \alpha_{ j } ) },
+ 	\end{equation*}
+ 	and by defining 
+ 	$ u \coloneqq \sum_{ j = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ j } ( t ) } ( x ) \alpha_{ j } $, 
+ 	we obtain that 
+ 	\begin{equation*} 
+ 		v_{ i } = 
+ 		\phi_{ i } \circ u  = \sum_{ j = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ j } ( t ) } ( x ) \sigma_{ i , j } .
+ 	\end{equation*}
+ 
+ 	What is left to show is the energy estimate (\ref{energy_estimate_for_limit_u}) and that partition function $ \chi ( t , x ) \coloneqq \left( \mathds{ 1 }_{ \Omega_{ 1 } ( t )  } ( x ) , \dotsc, \mathds{ 1 }_{ \Omega_{ P } ( t ) } ( x ) \right) $ is of bounded variation.
+ 	The latter follows from the Fleming--Rishel co-area formula \cite{Fleming_Rishel_coarea_formula} which yields since $ \phi_{ i } \circ u \in \bv \left( ( 0 , T ) \times \flattorus \right) $ that
+ 	\begin{align*}
+ 		\infty
+ 		& >
+ 		\abs{ 
+ 			( \partial_{ t } , \nabla )
+ 			\phi_{ i } \circ u
+ 		}
+ 		\left( ( 0 , T ) \times \flattorus \right)
+ 		\\
+ 		&
+ 		=
+ 		\int_{ 0 }^{ \infty }
+ 			\hm^{ d } \left(
+ 				\partial_{ \ast } \left(
+ 					\left\{
+ 						( t, x ) 
+ 						\, \colon \,
+ 						\phi_{ i } ( u ( t , x ) ) \leq s 
+ 					\right\}
+ 				 \right)
+ 			\right)
+ 		\dd{ s }
+ 		\\
+ 		&
+ 		\geq
+ 		\int_{ 0 }^{ \min_{ i \neq j } \sigma_{ i , j } }
+ 			\hm^{ d } \left(
+ 				\partial_{ \ast }
+ 				\left\{
+ 					( t , x ) \in ( 0 , T ) \times \flattorus 
+ 					\, \colon \,
+ 					\chi_{ i } ( t , x ) = 1
+ 				\right\}
+ 			\right)
+ 		\dd{ s }
+ 		\\
+ 		&=
+ 		\min_{ i \neq j }
+ 			\sigma_{ i , j }
+ 		\abs{
+ 			( \partial_{ t } , \nabla ) \chi_{ i }
+ 		}
+ 		\left(
+ 			( 0 , T ) \times \flattorus
+ 		\right).
+ 	\end{align*}
+ 	Here we denote by $ \partial_{ \ast } A $ the measure theoretic boundary of a given measurable set $ A $, as defined for example in \cite[Def.~5.7]{evans_gariepy_measure_theory_and_fine_props}.
+ 	Since we have $ \sigma_{ i , j } > 0 $ for $ i \neq j $, this proves that $ \chi_{ i } \in \bv \left( ( 0, T ) \times \flattorus \right) $.
+ 	
+ 	The energy estimate is a non-trivial consequence of the lower semicontinuity of the variation measure and has been proven by Baldo in \cite{baldo_minimal_interface_criterion} and we will recap the proof.
+\end{proof}
+
+\begin{definition}
+	Given a partition $ \left( \Omega_{ i } \right)_{ i = 1 , \dotsc , P } $ of the flat torus $ \flattorus $, where all sets $ \Omega_{ i } $ are of finite perimeter, we define the $ (i,j)$-th interface as $ \Sigma_{ i , j } \coloneqq \partial_{ \ast } \Omega_{ i } \cap \partial_{ \ast } \Omega_{ j } $.
+\end{definition}
+
+For our arguments, we will need some measure theoretic results, captured in the following Lemma.
+
+\begin{lemma}
+	[MOVE THIS INTO APPENDIX]
+	The following equalities hold up to set of $d-1$-dimensional Hausdorff-measure zero.
+	\begin{enumerate}
+		\item 
+		\label{item_disjoint_sets}
+		If $ A, B, C \subset \flattorus $ are mutually disjoint, then
+		\begin{equation*}	
+		\partial_{ \ast } ( A \cup B ) = \partial_{ \ast } A \triangle \partial_{ \ast } B
+		\quad 
+		\text{ and }
+		\quad
+		\partial_{ \ast } A
+		\cap
+		\partial_{ \ast } B
+		\cap
+		\partial_{ \ast } C
+		=
+		\emptyset.
+		\end{equation*}
+		
+		\item 
+		If $ ( \Omega_{ i } )_{ i = 1 , \dotsc , P } $ is a partition of $ \flattorus $, then
+		\begin{equation*}
+			\partial_{ \ast } \Omega_{ i }
+			=
+			\bigcup_{ j \neq i }
+				\partial_{ \ast } \Omega_{ i }
+				\cap
+				\partial_{ \ast } \Omega_{ j }.
+		\end{equation*}
+	\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+	Let us first prove \cref{item_disjoint_sets}. Initially assume that $ x \in \partial_{ \ast } ( A \cup B ) $. By definition this implies that
+	\begin{equation*}
+		\limsup_{ r \to 0 }
+			\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
+		>0.
+	\end{equation*}
+	Then we must either have
+	\begin{equation*}
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ r^{ d } }
+		>0
+		\quad 
+		\text{ or }
+		\quad
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap  B ) }{ r^{ d } }
+		>0,
+	\end{equation*}
+	so let us without loss of generality assume the first inequality. Since
+	\begin{equation*}
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) }{ r^{ d } }
+		\geq
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
+		>0,
+	\end{equation*}
+	thus we have $ x \in \partial_{ \ast } A $.
+	Combining Thm.~5.14 and Lemma~5.5 in \cite{evans_gariepy_measure_theory_and_fine_props}, we can rewrite for some measurable set $ N $ with $ \hm^{ d- 1 } ( N ) = 0 $
+	\begin{equation*}
+		\partial_{ \ast } A 
+		=
+		\partial^{ 1/2 } A \cup N 
+		\coloneqq
+		\left\{
+			x 
+			\, \colon \,
+			\lim_{ r \to 0 }
+				\frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ \alpha( d ) r^{ d } }
+			=
+			\frac{ 1 }{ 2 }
+			=
+			\lim_{ r \to 0 }
+				\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) }{ \alpha( d ) r^{ d } }
+		\right\}
+		\cup N,
+	\end{equation*}
+	where $ \alpha ( d ) \coloneqq \lm^{ d } ( B_{ 1 } ( 0 ) ) $ is the volume of the unit ball in $ d $ dimensions.
+	Thus assume $ x \in \partial^{ 1/2 } A \cap \partial^{ 1/2 } B $. Then since $ A $ and $ B $ are disjoint, we would have
+	\begin{equation*}
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus  ( A \cup B ) ) }{ \alpha( d ) r^{ d } }
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) - \lm^{ d } ( B_{ r } ( x ) \cap B ) }{ \alpha( d ) r^{ d } }
+		=
+		0,
+	\end{equation*}
+	which contradicts $ x \in \partial_{ \ast } ( A \cup B ) $. Thus up to a set of $(d-1)$-dimensional Hausdorff-measure zero, we have 
+	$ \partial_{ \ast } ( A \cup B ) \subseteq \partial_{ \ast } A \triangle \partial_{ \ast } B $.
+	
+	For the other inclusion, suppose that $ x \in \partial_{\ast } A \triangle \partial_{ \ast } B $ and without loss of generality that $ x \in \partial_{ \ast } A \setminus \partial_{ \ast } B $. Then
+	\begin{align*}
+		\limsup_{ r \to 0 }
+			\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
+		& \geq
+		\limsup_{ r \to 0 }
+			\frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ r^{ d } }
+		> 0
+		\shortintertext{and}
+		\limsup_{ r \to 0 }
+			\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus ( A \cup B ) ) }{ r^{ d } }
+		& =
+		\limsup
+			\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) - \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ r^{ d } }
+		unklar
+	\end{align*}
 \end{proof}

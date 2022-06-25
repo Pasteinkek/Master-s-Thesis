@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  24 JUN 2022 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  25 JUN 2022 18:08
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1561,27 +1561,29 @@ Overfull \hbox (9.26213pt too wide) detected at line 1529
  []
 
 [27]) (section_cond_conv_multiphase.tex [28] [29] [30] [31] [32]
+Overfull \hbox (2.04562pt too wide) in paragraph at lines 475--477
+[]\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
+t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
+of Lemma [][]3.2.2[][].
+ []
 
-LaTeX Warning: Reference `chain_rule_lemma' on page 1 undefined on input line 4
-73.
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
+12.
 
-)) [33]
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
+.fd"
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [33] [34])) [35]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [34
+ (chapter3.tex [36
 
 
 
 
 ]
 chapter 4.
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 2
-1.
-
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
-.fd"
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)) [35] [36
+) [37] [38
 
 
 
@@ -1590,27 +1592,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [37
+ [39
 
 
 ]
-
-! LaTeX Error: \begin{remark} on input line 469 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
-("Master's Thesis.aux" (chapter_mcf.aux) (chapter_ac_equation.aux)
-(chapter_cond_conv_of_ac.aux) (chapter3.aux))
+ ("Master's Thesis.aux" (chapter_mcf.aux)
+(chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux) (chapter3.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
@@ -1619,54 +1608,47 @@ Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 \openout1 = `"Master's Thesis.run.xml"'.
 
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 469 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 46744 strings out of 480930
- 1038040 string characters out of 2900231
- 1866978 words of memory out of 3000000
- 61680 multiletter control sequences out of 15000+200000
- 544212 words of font info for 118 fonts, out of 3000000 for 9000
+ 46777 strings out of 480930
+ 1038981 string characters out of 2900231
+ 1867521 words of memory out of 3000000
+ 61698 multiletter control sequences out of 15000+200000
+ 544428 words of font info for 120 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/U
-sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss
-bx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsy5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/us
-er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pf
-b><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-symbols/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (41 pages, 465574 bytes).
+<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/U
+sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/user/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/U
+sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/us
+er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
+.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "Master's Thesis.pdf" (43 pages, 487970 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
- 133 named destinations out of 1000 (max. 500000)
+ 628 PDF objects out of 1000 (max. 8388607)
+ 144 named destinations out of 1000 (max. 500000)
  21125 words of extra memory for PDF output out of 24883 (max. 10000000)
 

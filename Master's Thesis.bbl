@@ -105,6 +105,113 @@
       \verb http://www.numdam.org/item/AIHPC_1990__7_2_67_0/
       \endverb
     \endentry
+    \entry{evans_gariepy_measure_theory_and_fine_props}{book}{}
+      \name{author}{2}{}{%
+        {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={L.C.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=bee86f66841c40f695b65a0be8afa1b4}{%
+           family={Gariepy},
+           familyi={G\bibinitperiod},
+           given={R.F.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{bd3ded5271a763b9186dec73c7ab808f}
+      \strng{fullhash}{bd3ded5271a763b9186dec73c7ab808f}
+      \strng{bibnamehash}{bd3ded5271a763b9186dec73c7ab808f}
+      \strng{authorbibnamehash}{bd3ded5271a763b9186dec73c7ab808f}
+      \strng{authornamehash}{bd3ded5271a763b9186dec73c7ab808f}
+      \strng{authorfullhash}{bd3ded5271a763b9186dec73c7ab808f}
+      \field{labelalpha}{EG15}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781482242393}
+      \field{series}{Textbooks in Mathematics}
+      \field{title}{Measure Theory and Fine Properties of Functions, Revised Edition}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=e3R3CAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=e3R3CAAAQBAJ
+      \endverb
+    \endentry
+    \entry{Fleming_Rishel_coarea_formula}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ecd71289e7c4593c2375d4f3c19ab84b}{%
+           family={Fleming},
+           familyi={F\bibinitperiod},
+           given={Wendell\bibnamedelima H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=2093abd8be86d9bf7ad24310486d0e40}{%
+           family={Rishel},
+           familyi={R\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b300398356b31588d880cd58301113b}
+      \strng{fullhash}{3b300398356b31588d880cd58301113b}
+      \strng{bibnamehash}{3b300398356b31588d880cd58301113b}
+      \strng{authorbibnamehash}{3b300398356b31588d880cd58301113b}
+      \strng{authornamehash}{3b300398356b31588d880cd58301113b}
+      \strng{authorfullhash}{3b300398356b31588d880cd58301113b}
+      \field{labelalpha}{FR60}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archiv der Mathematik}
+      \field{title}{An integral formula for total gradient variation}
+      \field{volume}{11}
+      \field{year}{1960}
+      \field{pages}{218\bibrangedash 222}
+      \range{pages}{5}
+    \endentry
+    \entry{fonseca_tartar_1989}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ef33e532f77a699dd4b45781b3f90b74}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod}}}%
+        {{hash=a9c5171dbe4001354c7ae67e00180cd7}{%
+           family={Tartar},
+           familyi={T\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Royal Society of Edinburgh Scotland Foundation}%
+      }
+      \strng{namehash}{2cb361551243c46c90a255210ed4bda8}
+      \strng{fullhash}{2cb361551243c46c90a255210ed4bda8}
+      \strng{bibnamehash}{2cb361551243c46c90a255210ed4bda8}
+      \strng{authorbibnamehash}{2cb361551243c46c90a255210ed4bda8}
+      \strng{authornamehash}{2cb361551243c46c90a255210ed4bda8}
+      \strng{authorfullhash}{2cb361551243c46c90a255210ed4bda8}
+      \field{labelalpha}{FT89}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Royal Society of Edinburgh: Section A Mathematics}
+      \field{number}{1-2}
+      \field{title}{The gradient theory of phase transitions for systems with two potential wells}
+      \field{volume}{111}
+      \field{year}{1989}
+      \field{pages}{89\bibrangedash 102}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1017/S030821050002504X
+      \endverb
+    \endentry
     \entry{luckhaus_modica_gibbs_thompson_relation}{article}{}
       \name{author}{2}{}{%
         {{hash=0b17157ebcbc743cb4fc3392c47a0099}{%
@@ -201,6 +308,62 @@
       \field{year}{2012}
       \verb{doi}
       \verb 10.1017/CBO9781139108133
+      \endverb
+    \endentry
+    \entry{Müller1999}{book}{}
+      \name{author}{1}{}{%
+        {{hash=004dd3343d91520cbe3865b7e62fad82}{%
+           family={M{ü}ller},
+           familyi={M\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=bb0f9a79379203bcb5540d026faf3e57}{%
+           family={Hildebrandt},
+           familyi={H\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c8502c0ee43e96753d5bd087800519c6}{%
+           family={Struwe},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{004dd3343d91520cbe3865b7e62fad82}
+      \strng{fullhash}{004dd3343d91520cbe3865b7e62fad82}
+      \strng{bibnamehash}{004dd3343d91520cbe3865b7e62fad82}
+      \strng{authorbibnamehash}{004dd3343d91520cbe3865b7e62fad82}
+      \strng{authornamehash}{004dd3343d91520cbe3865b7e62fad82}
+      \strng{authorfullhash}{004dd3343d91520cbe3865b7e62fad82}
+      \strng{editorbibnamehash}{745c8f087bc4820770b4053c80b77490}
+      \strng{editornamehash}{745c8f087bc4820770b4053c80b77490}
+      \strng{editorfullhash}{745c8f087bc4820770b4053c80b77490}
+      \field{labelalpha}{Mül99}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Calculus of Variations and Geometric Evolution Problems: Lectures given at the 2nd Session of the Centro Internazionale Matematico Estivo (C.I.M.E.) held in Cetraro, Italy, June 15--22, 1996}
+      \field{isbn}{978-3-540-48813-2}
+      \field{title}{Variational models for microstructure and phase transitions}
+      \field{year}{1999}
+      \field{pages}{85\bibrangedash 210}
+      \range{pages}{126}
+      \verb{doi}
+      \verb 10.1007/BFb0092670
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BFb0092670
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BFb0092670
       \endverb
     \endentry
     \entry{Reshetnyak_weak_convergence}{article}{}
