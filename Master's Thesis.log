@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  25 JUN 2022 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  26 JUN 2022 15:09
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1561,29 +1561,52 @@ Overfull \hbox (9.26213pt too wide) detected at line 1529
  []
 
 [27]) (section_cond_conv_multiphase.tex [28] [29] [30] [31] [32]
-Overfull \hbox (2.04562pt too wide) in paragraph at lines 475--477
+Overfull \hbox (2.04562pt too wide) in paragraph at lines 476--478
 []\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
 t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
 of Lemma [][]3.2.2[][].
  []
 
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
-12.
+13.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [33] [34])) [35]
+) [33] [34] [35]
+Overfull \hbox (17.00601pt too wide) detected at line 771
+\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
+ []
+
+
+Overfull \hbox (6.95596pt too wide) in paragraph at lines 775--776
+[]\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
+o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
+t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
+rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
+ []
+
+[36]
+Overfull \hbox (29.86714pt too wide) detected at line 895
+[]
+ []
+
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [37]
+[38])) [39]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [36
+ (chapter3.tex [40
 
 
 
 
 ]
 chapter 4.
-) [37] [38
+) [41] [42
 
 
 
@@ -1592,7 +1615,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [39
+ [43
 
 
 ]
@@ -1613,11 +1636,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46777 strings out of 480930
- 1038981 string characters out of 2900231
- 1867521 words of memory out of 3000000
- 61698 multiletter control sequences out of 15000+200000
- 544428 words of font info for 120 fonts, out of 3000000 for 9000
+ 46802 strings out of 480930
+ 1039656 string characters out of 2900231
+ 1868054 words of memory out of 3000000
+ 61710 multiletter control sequences out of 15000+200000
+ 544536 words of font info for 121 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1646,9 +1669,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (43 pages, 487970 bytes).
+Output written on "Master's Thesis.pdf" (47 pages, 509011 bytes).
 PDF statistics:
- 628 PDF objects out of 1000 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
+ 671 PDF objects out of 1000 (max. 8388607)
+ 155 named destinations out of 1000 (max. 500000)
  21125 words of extra memory for PDF output out of 24883 (max. 10000000)
 

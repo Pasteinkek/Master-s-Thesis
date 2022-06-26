@@ -445,6 +445,7 @@ We are not in the position to prove the following regularity result.
 With this powerful tool on our hands, we are in the position to prove a similar result to \Cref{initial_convergence_result} for the multiphase case.
 
 \begin{proposition}
+	\label{initial_convergence_result_multiphase}
 	Given initial data $ u_{ \varepsilon }^{ 0 } = \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } \alpha_{ i } $ whose energies satisfy
 	\begin{equation*}
 		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) 
@@ -579,7 +580,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  	Here we denote by $ \partial_{ \ast } A $ the measure theoretic boundary of a given measurable set $ A $, as defined for example in \cite[Def.~5.7]{evans_gariepy_measure_theory_and_fine_props}.
  	Since we have $ \sigma_{ i , j } > 0 $ for $ i \neq j $, this proves that $ \chi_{ i } \in \bv \left( ( 0, T ) \times \flattorus \right) $.
  	
- 	The energy estimate is a non-trivial consequence of the lower semicontinuity of the variation measure and has been proven by Baldo in \cite{baldo_minimal_interface_criterion} and we will recap the proof.
+ 	The energy estimate is a non-trivial consequence of the lower semicontinuity of the variation measure and has been proven by Baldo in \cite{baldo_minimal_interface_criterion} and we will recap the proof since it provides some insight into the geometry of the phases.
 \end{proof}
 
 \begin{definition}
@@ -589,6 +590,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 For our arguments, we will need some measure theoretic results, captured in the following Lemma.
 
 \begin{lemma}
+	\label{identities_for_measure_theoretic_boundaries}
 	[MOVE THIS INTO APPENDIX]
 	The following equalities hold up to set of $d-1$-dimensional Hausdorff-measure zero.
 	\begin{enumerate}
@@ -610,6 +612,7 @@ For our arguments, we will need some measure theoretic results, captured in the 
 		\end{equation*}
 		
 		\item 
+		\label{rewriting_boundary_via_interfaces}
 		If $ ( \Omega_{ i } )_{ i = 1 , \dotsc , P } $ is a partition of $ \flattorus $, then
 		\begin{equation*}
 			\partial_{ \ast } \Omega_{ i }
@@ -650,9 +653,10 @@ For our arguments, we will need some measure theoretic results, captured in the 
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
 		>0,
 	\end{equation*}
-	thus we have $ x \in \partial_{ \ast } A $.
-	Combining Thm.~5.14 and Lemma~5.5 in \cite{evans_gariepy_measure_theory_and_fine_props}, we can rewrite for some measurable set $ N $ with $ \hm^{ d- 1 } ( N ) = 0 $
-	\begin{equation*}
+	we thus have $ x \in \partial_{ \ast } A $.
+	Combining Thm.~5.14 and Lemma~5.5 in \cite{evans_gariepy_measure_theory_and_fine_props}, we can rewrite for some measurable set $ N $ with $ \hm^{ d- 1 } ( N ) = 0 $ the measure theoretic boundary of $ A $ as
+	\begin{equation}
+		\label{measure_theoretic_boundary_almost_half_boundary}
 		\partial_{ \ast } A 
 		=
 		\partial^{ 1/2 } A \cup N 
@@ -669,7 +673,7 @@ For our arguments, we will need some measure theoretic results, captured in the 
 				\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) }{ \alpha( d ) r^{ d } }
 		\right\}
 		\cup N,
-	\end{equation*}
+	\end{equation}
 	where $ \alpha ( d ) \coloneqq \lm^{ d } ( B_{ 1 } ( 0 ) ) $ is the volume of the unit ball in $ d $ dimensions.
 	Thus assume $ x \in \partial^{ 1/2 } A \cap \partial^{ 1/2 } B $. Then since $ A $ and $ B $ are disjoint, we would have
 	\begin{equation*}
@@ -683,7 +687,21 @@ For our arguments, we will need some measure theoretic results, captured in the 
 	which contradicts $ x \in \partial_{ \ast } ( A \cup B ) $. Thus up to a set of $(d-1)$-dimensional Hausdorff-measure zero, we have 
 	$ \partial_{ \ast } ( A \cup B ) \subseteq \partial_{ \ast } A \triangle \partial_{ \ast } B $.
 	
-	For the other inclusion, suppose that $ x \in \partial_{\ast } A \triangle \partial_{ \ast } B $ and without loss of generality that $ x \in \partial_{ \ast } A \setminus \partial_{ \ast } B $. Then
+	For the other inclusion, suppose that $ x \in \partial_{\ast } A \triangle \partial_{ \ast } B $ and without loss of generality that $ x \in \partial_{ \ast } A \setminus \partial_{ \ast } B $. Then it must either hold that 
+	\begin{equation*}
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap B ) }{ r^{ d } } = 0
+		\quad \text{or} \quad
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ r^{ d } } = 0.
+	\end{equation*}
+	But since $ x \in \partial_{ \ast } A $, the latter can not be true since $ A $ and $ B $ are disjoint and therefore
+	\begin{equation*}
+		0
+		<
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ r^{ d } } 
+		=
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ r^{ d } }. 
+	\end{equation*}
+	We now estimate
 	\begin{align*}
 		\limsup_{ r \to 0 }
 			\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
@@ -695,8 +713,349 @@ For our arguments, we will need some measure theoretic results, captured in the 
 		\limsup_{ r \to 0 }
 			\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus ( A \cup B ) ) }{ r^{ d } }
 		& =
-		\limsup
-			\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) - \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ r^{ d } }
-		unklar
+		\limsup_{ r \to 0 }
+			\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) - \lm^{ d } ( B_{ r } ( x ) \cap B ) }{ r^{ d } }
+		\\
+		& =
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) }{ r^{ d } }
+		> 0,
 	\end{align*}
+	which proves $ x \in \partial_{ \ast } ( A \cup B ) $.
+	
+	The second equality is an immediate consequence of observation (\ref{measure_theoretic_boundary_almost_half_boundary}).
+	
+	Now let us prove \Cref{rewriting_boundary_via_interfaces}. It follows immediately that  
+	\begin{equation*}
+		\partial_{ \ast } \Omega_{ i }
+		\supseteq
+		\bigcup_{ j \neq i }
+		\partial_{ \ast } \Omega_{ i }
+		\cap
+		\partial_{ \ast } \Omega_{ j }.
+	\end{equation*}
+	For the other inclusion, suppose $ x \in \partial_{ \ast } \Omega_{ i } $. Since
+	\begin{equation*}
+		0 <
+		\limsup_{ r \to 0 }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus \Omega_{ i }) }{r^{ d } }
+		=
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } \left( B_{ r } ( x ) \cap \bigcup_{ j \neq i } \Omega_{ j } \right) }{ r^{ d } },
+	\end{equation*}
+	we find some $ j \neq i $ such that
+	\begin{equation*}
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap \Omega_{ j } ) }{ r^{ d } } > 0.
+	\end{equation*}
+	Since
+	\begin{equation*}
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus \Omega_{ j } ) }{ r^{ d } } 
+		\geq
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap \Omega_{ i } ) }{ r^{ d } } > 0,
+	\end{equation*}
+	we therefore have $ x \in \partial_{ \ast } \Omega_{ j } $, which finishes the proof.
 \end{proof}
+
+We already mentioned that we want to apply the lower semicontinuity of the variation measure. Since we can think of $ \phi_{ i } $ as being locally the correct choice for suitable $ i $, we introduce the following notion.
+
+\begin{definition}
+	Let $ \mu , \nu $ be regular positive Borel measures on $ \flattorus $. Define the supremum $ \mu \vee \nu $ of $ \mu $ and $ \nu $ as the smallest regular positive measure which is greater or equal to $ \mu $ and $ \nu $ on a Borel subset of $ \flattorus $. By the regularity, we have
+	\begin{equation*}
+		\mu \vee \nu ( U ) 
+		=
+		\sup \left\{
+			\mu ( V ) + \mu ( W )
+			\, \colon \,
+			V \cap W = \emptyset,
+			V \cup W \subseteq U, 
+			V \text{ and } W \text{ are open subsets of } \flattorus
+		\right\}
+	\end{equation*}
+	for any open subset $ U \subseteq \flattorus $.
+\end{definition}
+
+It is natural to ask how we can characterize the total variation of $ \psi_{ i } = \phi_{ i } \circ u = \sum \mathds{ 1 }_{ \Omega_{ j } } \sigma_{ i , j } $. For this we note that when going from set $ \Omega_{ j } $ to $ \Omega_{ k } $, our function jumps from $ \sigma_{ i , j } $ to $ \sigma_{ i , k } $. Thus we obtain the following intuitive result.
+
+\begin{lemma}
+	[MOVE PROOF TO APPENDIX, NOT INSIGHTFUL]
+	In the setting of \Cref{initial_convergence_result_multiphase} we can write
+	\begin{equation*}
+		\abs{ \nabla \psi_{ i } }
+		=
+		\sum_{ 1 \leq j < k \leq P }
+			\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
+			\dd{ \hm^{ d - 1 } |_{ \Sigma_{ j , k } } }.
+	\end{equation*}
+\end{lemma}
+
+\begin{proof}
+	Without loss of generality we can assume that $ i = 1 $ and $ \sigma_{ 1, j } \leq \sigma_{ 1, j + 1 } $ for all $ 1 \leq j \leq P - 1 $. 
+	All equalities in this proof hold up to a set of $ (d-1)$-dimensional Hausdorff measure zero. First let us apply the Fleming--Rishel co-area formula to find that for a given open set $ U \subseteq \flattorus $, we have
+	\begin{align*}
+		\abs{ \nabla \psi_{ i } } ( U ) 
+		& =
+		\int_{ 0 }^{ \infty }
+			\hm^{ d - 1 } \left(
+				\partial_{ \ast } \left(
+					\left\{
+						x \in U 
+						\, \colon \,
+						\psi_{ i } \leq s 
+					\right\}
+				\right)
+			\right)
+		\dd{ s }
+		\\
+		& =
+		\sum_{ j = 1 }^{ P }
+		\int_{ \sigma_{ 1, j } }^{ \sigma_{ 1, j + 1 } }
+			\hm^{ d - 1 } \left(
+				\partial_{ \ast } \left(
+					\bigcup_{ j = 1 }^{ i }
+						U \cap \Omega_{ j }
+				\right)
+			\right)
+		\dd{ s }
+		\\
+		& =
+		\sum_{ j = 1 }^{ P - 1 }
+			\left(\sigma_{ 1, j +1} - \sigma_{ 1 , j } \right)
+			\hm^{ d - 1 } \left(
+				\partial_{ \ast } \left(
+					\bigcup_{ j = 1 }^{ i }
+						U \cap \Omega_{ j }
+				\right)
+			\right)
+		\eqqcolon I. 
+	\end{align*}
+	We claim that we have
+	\begin{equation}
+		\label{rewriting_measure_theoretic_boundary_of_union}
+		\partial_{ \ast } \left(
+			\bigcup_{ j = 1 }^{ i }
+				U \cap \Omega_{ j }
+		\right)
+		=
+		\bigcup_{ j = 1 }^{ i }
+			\bigcup_{ l = i + 1 }^{ P }
+				U
+				\cap
+				\partial_{ \ast } \Omega_{ j }
+				\cap
+				\partial_{ \ast } \Omega_{ l }.
+	\end{equation}
+	Since $ ( \Omega_{ j } \cap U )_{ j } $ is again a partition of $ U $, we omit taking the intersection with $ U $ for a briefer notation. The proof will be done via an induction over $ i $. For $ i = 1 $, this is exactly \Cref{rewriting_boundary_via_interfaces} from \Cref{identities_for_measure_theoretic_boundaries}. For the induction step, assume that the claim (\ref{rewriting_measure_theoretic_boundary_of_union}) holds for all $ i' \leq i $. Again by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets}, we can compute that
+	\begin{align*}
+		& \partial_{ \ast } \left(
+			\bigcup_{ j = 1 }^{ i + 1 }
+				\Omega_{ j }
+		\right)
+		=
+		\left(
+			\partial_{ \ast } \left(
+				\bigcup_{ j = 1 }^{ i }
+					\Omega_{ j }
+			\right)
+			\cup
+			\partial_{ \ast } \Omega_{ j + 1 }
+		\right)
+		\setminus
+		\left(
+			\partial_{ \ast } \left(
+				\bigcup_{ j = 1 }^{ i }
+					\Omega_{ j }
+			\right)
+			\cap
+			\partial_{ \ast } \Omega_{ i + 1 }
+		\right)
+		\\
+		={} &
+		\left(
+			\left(
+			\bigcup_{ j = 1 }^{ i }
+				\bigcup_{ l = i + 1 }^{ P }
+					\partial_{ \ast } \Omega_{ j }
+					\cap
+					\partial_{ \ast } \Omega_{ l }
+			\right)
+			\cup
+			\bigcup_{ k \neq i + 1 }
+				\partial_{ \ast } \Omega_{ i + 1 }
+				\cap
+				\partial_{ \ast } \Omega_{ k }
+		\right)
+		\setminus
+		\left(
+			\bigcup_{ j = 1 }^{ i }
+				\bigcup_{ l = i + 1 }^{ P }
+				\partial_{ \ast } \Omega_{ j }
+				\cap
+				\partial_{ \ast } \Omega_{ l }
+				\cap
+				\partial_{ \ast }\Omega_{ i + 1 }
+		\right).
+	\end{align*}
+	By \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets}, we can write the second term as 
+	\begin{equation*}
+		\bigcup_{ j = 1 }^{ i }
+		\bigcup_{ l = i + 1 }^{ P }
+		\partial_{ \ast } \Omega_{ j }
+		\cap
+		\partial_{ \ast } \Omega_{ l }
+		\cap
+		\Omega_{ i + 1 }
+		=
+		\bigcup_{ j = 1 }^{ i } 
+			\partial_{ \ast } \Omega_{ j }
+			\cap
+			\partial_{ \ast } \Omega_{ i + 1 }.
+	\end{equation*}
+	By carefully considering both equations, we get
+	\begin{align}
+		& 
+		\notag
+		\partial_{ \ast }
+		\left(
+			\bigcup_{ j = 1 }^{ i + 1 }
+				\Omega_{ j }
+		\right)
+		\\
+		\notag
+		={} &
+		\left(
+			\left(
+				\bigcup_{ j = 1 }^{ i }
+					\bigcup_{ l = i + 2 }^{ P }
+						\partial_{ \ast } \Omega_{ j }
+						\cap
+						\partial_{ \ast } \Omega_{ l }
+			\right)
+			\cup
+			\bigcup_{ k = i + 2 }^{ P }
+				\partial_{ \ast } \Omega_{ i + 1 }
+				\cap
+				\partial_{ \ast } \Omega_{ k }
+		\right)
+		\setminus
+		\bigcup_{ j = 1 }^{ i }
+			\partial_{ \ast } \Omega_{ i + 1 }
+			\cap
+			\partial_{ \ast } \Omega_{ j }
+		\\
+		\label{here_complement_obscolete}
+		={} &
+		\left(
+			\bigcup_{ j = 1 }^{ i + 1 }
+				\bigcup_{ l = i + 2 }^{ P }
+					\partial_{ \ast } \Omega_{ j }
+					\cap
+					\partial_{ \ast } \Omega_{ l }
+		\right)
+		\setminus
+		\bigcup_{ j = i }^{ i }
+			\partial_{ \ast } \Omega_{ i + 1 }
+			\cap
+			\partial_{ \ast } \Omega_{ j }.
+	\end{align}
+	Since by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets}, we have for $ 1 \leq j \leq i +2 $, $ i+ 2 \leq l \leq P $ and $ 1 \leq k \leq i $ that
+	\begin{equation*}
+		\partial_{ \ast } \Omega_{ l } 
+		\cap
+		\partial_{ \ast } \Omega_{ i + 1 }
+		\cap
+		\partial_{ \ast } \Omega_{ k }
+	\end{equation*}
+	is a set of $ (d- 1 )$-dimensional Hausdorff measure zero, taking the complement in the term (\ref{here_complement_obscolete}) becomes obsolete and thus we obtain the desired result (\ref{rewriting_measure_theoretic_boundary_of_union}).
+	Therefore we have again by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets} that
+	\begin{align*}
+		I &=
+		\sum_{ i = 1 }^{ P - 1 }
+			\left(
+				\sigma_{ 1 , i + 1 } - \sigma_{ 1 , i }
+			\right)
+			\left(
+				\sum_{ j = 1 }^{ i }
+					\sum_{ l = i + 1 }^{ P }
+						\hm^{ d - 1 } \left( 
+							U 
+							\cap 
+							\partial_{ \ast } \Omega_{ j } 
+							\cap 
+							\partial_{ \ast } \Omega_{ l }
+						\right)
+			\right)
+		\\
+		& =
+		\sum_{ 1 \leq j < l \leq P }
+			\hm^{ d - 1 } \left(
+				U \cap \partial_{ \ast } \Omega_{ j }
+				\cap
+				\partial_{ \ast } \Omega_{ l }
+			\right)
+			\left(
+				\sum_{ i = j }^{ l - 1 }
+					\sigma_{ 1 , i + 1 } - \sigma_{ 1 , i }
+			\right)
+		\\
+		& =
+		\sum_{ 1 \leq j < l \leq P }
+			\hm^{ d - 1 } \left(
+				U \cap 
+				\partial_{ \ast } \Omega_{ j }
+				\cap
+				\partial_{ \ast } \Omega_{ l }
+			\right)
+			\left(
+				\sigma_{ 1, l } - \sigma_{ 1 , j }
+			\right).
+	\end{align*}
+	Since we assumed without loss of generality that $ \sigma_{ 1 , i } \leq \sigma_{ 1, j + 1 } $, we know that
+	\begin{equation*}
+		\abs{ \sigma_{ 1 , l } - \sigma_{ 1 , j } }
+		=
+		\sigma_{ 1 , l } - \sigma_{ 1 , j },
+	\end{equation*}
+	which finishes the proof.
+\end{proof}
+
+\begin{lemma}
+	Let $ \mu $ be a regular positive Borel measure on some open set $ \Omega $ and let $ B_{ 1 }, \dotsc, B_{ m } $ be $ \mu $-finite disjoint Borel subsets of $ \Omega $. Moreover let $ c_{ i }^{ h } $ for $ 1 \leq i \leq m $ and $ 1 \leq h \leq k $ be non-negative coefficients. Define the measures
+	\begin{equation*}
+		\mu_{ h } 
+		\coloneqq
+		\sum_{ i = 1 }^{ m }
+			c_{ i }^{ h }
+			\mu |_{ B_{ i } }
+		\quad
+		\text{ and }
+		\quad 
+		\nu 
+		\coloneqq
+		\max_{ h } c_{ i }^{ h }
+		\mu |_{ B_{ i } }.
+	\end{equation*}
+	Then we have
+	\begin{equation*}
+		\nu 
+		=
+		\bigvee_{ h = 1 }^{ k }
+			\mu_{ h }
+	\end{equation*}
+\end{lemma}
+
+With this representation in mind, we can prove the following.
+
+\begin{proposition}
+	In the situation of \Cref{initial_convergence_result_multiphase} , we have
+	\begin{equation*}
+		\left(
+			\bigvee_{ i = 1 }^{ P }
+			\abs{ \psi_{ i } }
+		\right)
+		=
+		\sum_{ 1 \leq i < j \leq P }
+		 \sigma_{ i , j }
+		 \dd{ \hm^{ d - 1 } |_{ \Sigma_{ i , j } } }.
+	\end{equation*}
+\end{proposition}
+
+
+ 
