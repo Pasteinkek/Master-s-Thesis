@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  26 JUN 2022 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  2 JUL 2022 16:15
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1265,7 +1265,7 @@ LaTeX Warning: Unused global option(s):
     [bibliogrpahy=totocnumbered].
 
 ("Master's Thesis.aux" (chapter_mcf.aux) (chapter_ac_equation.aux)
-(chapter_cond_conv_of_ac.aux) (chapter3.aux))
+(chapter_cond_conv_of_ac.aux) (chapter3.aux) (chapter_appendix.aux))
 \openout1 = `"Master's Thesis.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -1514,7 +1514,7 @@ chapter 3.
 
 
 ] [16]
-Overfull \hbox (16.11162pt too wide) in paragraph at lines 166--167
+Overfull \hbox (16.11162pt too wide) in paragraph at lines 167--168
 []\OT1/cmr/bx/n/10 Lemma 3.1.2. []\OT1/cmr/m/it/10 (-20) With the as-sump-tions
  of Propo-si-tion [][]3.1.1[][], we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10
  2 [][]\OT1/cmr/m/n/10 (-20) ([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ]; []
@@ -1526,7 +1526,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
 [21]
-Overfull \hbox (14.53656pt too wide) in paragraph at lines 688--689
+Overfull \hbox (14.53656pt too wide) in paragraph at lines 689--690
 []\OT1/cmr/bx/n/10 Definition 3.1.5. []\OT1/cmr/m/it/10 (-20) Fix some fi-nite 
 time hori-zon $\OML/cmm/m/it/10 T < \OMS/cmsy/m/n/10 1$ \OT1/cmr/m/it/10 (-20) 
 and ini-tial data $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/
@@ -1534,97 +1534,104 @@ and ini-tial data $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/
  []
 
 
-Overfull \hbox (21.20439pt too wide) in paragraph at lines 694--698
+Overfull \hbox (21.20439pt too wide) in paragraph at lines 695--699
 \OT1/cmr/m/it/10 (-20) with $[][] []\OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 \O
 T1/cmr/m/n/10 (-20) )$ moves by mean cur-va-ture \OT1/cmr/m/it/10 (-20) if ther
 e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
  []
 
 [22]
-Overfull \hbox (5.06604pt too wide) detected at line 830
+Overfull \hbox (5.06604pt too wide) detected at line 831
 []
  []
 
 [23] [24]
 
 LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
- line 1118.
+ line 1119.
 
 [25]
-Overfull \hbox (34.80074pt too wide) detected at line 1334
+Overfull \hbox (34.80074pt too wide) detected at line 1335
 []
  []
 
 [26]
-Overfull \hbox (9.26213pt too wide) detected at line 1529
+Overfull \hbox (9.26213pt too wide) detected at line 1530
 []
  []
 
 [27]) (section_cond_conv_multiphase.tex [28] [29] [30] [31] [32]
-Overfull \hbox (2.04562pt too wide) in paragraph at lines 476--478
+Overfull \hbox (2.04562pt too wide) in paragraph at lines 478--480
 []\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
 t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
 of Lemma [][]3.2.2[][].
  []
 
+[33]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
-13.
+15.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [33] [34] [35]
-Overfull \hbox (17.00601pt too wide) detected at line 771
+) [34]
+Overfull \hbox (17.00601pt too wide) detected at line 606
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
  []
 
 
-Overfull \hbox (6.95596pt too wide) in paragraph at lines 775--776
+Overfull \hbox (6.95596pt too wide) in paragraph at lines 610--611
 []\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
 o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
 t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
 rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
  []
 
-[36]
-Overfull \hbox (29.86714pt too wide) detected at line 895
-[]
- []
-
-
-Underfull \vbox (badness 1024) has occurred while \output is active []
-
- [37]
-[38])) [39]
+[35] [36])) [37]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [40
+ (chapter3.tex [38
 
 
 
 
 ]
 chapter 4.
-) [41] [42
+) [39]
+\openout2 = `chapter_appendix.aux'.
+
+ (chapter_appendix.tex [40
+
 
 
 
 ]
+chapter A.
+[41] [42]
+Overfull \hbox (29.86714pt too wide) detected at line 273
+[]
+ []
+
+[43]) [44]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [43
+ [45
+
+
+
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  ("Master's Thesis.aux" (chapter_mcf.aux)
-(chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux) (chapter3.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
+(chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux) (chapter3.aux)
+(chapter_appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1636,11 +1643,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46802 strings out of 480930
- 1039656 string characters out of 2900231
- 1868054 words of memory out of 3000000
- 61710 multiletter control sequences out of 15000+200000
- 544536 words of font info for 121 fonts, out of 3000000 for 9000
+ 46834 strings out of 480930
+ 1040480 string characters out of 2900231
+ 1870807 words of memory out of 3000000
+ 61726 multiletter control sequences out of 15000+200000
+ 544644 words of font info for 122 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1669,9 +1676,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (47 pages, 509011 bytes).
+Output written on "Master's Thesis.pdf" (49 pages, 520651 bytes).
 PDF statistics:
- 671 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 21125 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 707 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 21141 words of extra memory for PDF output out of 24883 (max. 10000000)
 

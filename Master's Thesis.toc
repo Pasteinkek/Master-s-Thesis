@@ -16,7 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Conditional convergence in the twophase case}{15}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Convergence to a moving partition}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.1}Convergence to an evolving set}{15}{subsection.3.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1.2}The energy convergence assumption}{19}{subsection.3.1.2}%
 \defcounter {refsection}{0}\relax 
@@ -28,6 +28,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Conditional convergence in the multiphase case}{28}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}i dont know yet}{41}{chapter.4}%
+\contentsline {subsection}{\numberline {3.2.1}Convergence to a moving partition}{28}{subsection.3.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}i dont know yet}{39}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}appendix}{41}{appendix.A}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

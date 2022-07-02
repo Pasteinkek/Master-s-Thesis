@@ -2198,8 +2198,8 @@
     <bcf:citekey order="14">Fleming_Rishel_coarea_formula</bcf:citekey>
     <bcf:citekey order="15">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
     <bcf:citekey order="16">baldo_minimal_interface_criterion</bcf:citekey>
-    <bcf:citekey order="17">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
-    <bcf:citekey order="18">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="17">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="18">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
