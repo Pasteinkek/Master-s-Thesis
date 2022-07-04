@@ -2187,19 +2187,21 @@
     <bcf:citekey order="3">maggi_sets_of_finite_perimeter</bcf:citekey>
     <bcf:citekey order="4">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
     <bcf:citekey order="5">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
-    <bcf:citekey order="6">maggi_sets_of_finite_perimeter</bcf:citekey>
-    <bcf:citekey order="7">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
-    <bcf:citekey order="8">Reshetnyak_weak_convergence</bcf:citekey>
-    <bcf:citekey order="9">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
-    <bcf:citekey order="10">ambrosio_maso_chain_rule</bcf:citekey>
-    <bcf:citekey order="11">fonseca_tartar_1989</bcf:citekey>
-    <bcf:citekey order="12">Müller1999</bcf:citekey>
+    <bcf:citekey order="6">ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems</bcf:citekey>
+    <bcf:citekey order="7">maggi_sets_of_finite_perimeter</bcf:citekey>
+    <bcf:citekey order="8">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
+    <bcf:citekey order="9">Reshetnyak_weak_convergence</bcf:citekey>
+    <bcf:citekey order="10">luckhaus_modica_gibbs_thompson_relation</bcf:citekey>
+    <bcf:citekey order="11">ambrosio_maso_chain_rule</bcf:citekey>
+    <bcf:citekey order="12">fonseca_tartar_1989</bcf:citekey>
     <bcf:citekey order="13">Müller1999</bcf:citekey>
-    <bcf:citekey order="14">Fleming_Rishel_coarea_formula</bcf:citekey>
-    <bcf:citekey order="15">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
-    <bcf:citekey order="16">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="14">Müller1999</bcf:citekey>
+    <bcf:citekey order="15">Fleming_Rishel_coarea_formula</bcf:citekey>
+    <bcf:citekey order="16">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
     <bcf:citekey order="17">baldo_minimal_interface_criterion</bcf:citekey>
-    <bcf:citekey order="18">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
+    <bcf:citekey order="18">ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems</bcf:citekey>
+    <bcf:citekey order="19">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="20">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

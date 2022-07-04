@@ -19,6 +19,45 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems}{book}{}
+      \name{author}{3}{}{%
+        {{hash=75c4bcbdd44f3d81980ee1e743ebfd0f}{%
+           family={Ambrosio},
+           familyi={A\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=985041475e7f75059455ae7a1c107287}{%
+           family={Fusco},
+           familyi={F\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c3880f945f365de42a9cd36a9f06972a}{%
+           family={Pallara},
+           familyi={P\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Clarendon Press, Oxford University Press, New York}%
+      }
+      \strng{namehash}{9bf2d6031e15df15838bb08e7cc2504b}
+      \strng{fullhash}{9bf2d6031e15df15838bb08e7cc2504b}
+      \strng{bibnamehash}{9bf2d6031e15df15838bb08e7cc2504b}
+      \strng{authorbibnamehash}{9bf2d6031e15df15838bb08e7cc2504b}
+      \strng{authornamehash}{9bf2d6031e15df15838bb08e7cc2504b}
+      \strng{authorfullhash}{9bf2d6031e15df15838bb08e7cc2504b}
+      \field{labelalpha}{AFP00}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-19-850245-1}
+      \field{series}{Oxford Mathematical Monographs}
+      \field{title}{Functions of bounded variation and free discontinuity problems}
+      \field{year}{2000}
+      \field{pages}{xviii+434}
+      \range{pages}{-1}
+    \endentry
     \entry{ambrosio_maso_chain_rule}{article}{}
       \name{author}{2}{}{%
         {{hash=d1fb85e6b388ff3ca0e66ab5e4721170}{%

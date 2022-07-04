@@ -2,6 +2,31 @@
 
 Let us now turn to the much more interesting and more challenging case where we consider systems of the Allen--Cahn equation (\ref{allen_cahn_eq}), or in other words, we want to consider the case where $ u_{\varepsilon } $ maps to $ \mathbb{ R }^{ N } $ and therefore our potential $ W $ is a map from $ \mathbb{ R }^{ N } $ to $ [ 0 , \infty ) $. The for us most relevant case is when $ W $ has exactly $ P = N + 1 $ zeros given by $ \alpha_{ 1 } , \dotsc, \alpha_{ P } $, but it is no limitation for us to allow more general amount of zeros.
 
+Let us also fix some notation for this section. For a function $ u = \sum_{ i = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ i } } \alpha_{ i } $ and the corresponding interfaces $ \Sigma_{ i , j } \coloneqq \partial_{ \ast } \Omega_{ i } \cap \partial_{ \ast } \Omega_{ j } $, we define for a given testfunction $ \varphi \in \cont^{ \infty } ( \flattorus ) $ the localized energies by
+\begin{align}
+	\label{localized__epsilon_energy_multiphase}
+	\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+	& \coloneqq
+	\int
+		\varphi \left(
+			\frac{ 1 }{ \varepsilon }
+			W ( u_{ \varepsilon } ) 
+			+
+			\frac{ \varepsilon }{ 2 }
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\right)
+	\dd{ x }
+	\shortintertext{and}
+	\label{localized_energy_multiphase}
+	\energy ( u ; \varphi )
+	& \coloneqq
+	\sum_{ i < j }
+		\sigma_{ i , j }
+		\int_{ \Sigma_{ i , j } }
+			\varphi
+		\dd{\hm^{ d - 1 }}.
+\end{align}
+
 \subsection{Convergence to a moving partition}
 
 One of the many difficulties in the vectorial case is that that there is no easy choice of a primitive for $ \sqrt{ 2 W ( u ) } $ compared to the scalar case. We there saw for example through the Modica-Mortula trick (\ref{modica_mortula_trick}) that this provided a very powerful tool for us, and comparing the composition $ \phi \circ u_{ \varepsilon } $ to $ u_{ \varepsilon } $ was quite simple since the map $ \phi $ was invertible as a consequence of the non-negativity of $ W $.
@@ -864,5 +889,192 @@ Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u 
 	\end{description}
 \end{proof}
 
+With these estimate, we can now prove the existence of normal velocities $ V_{ i } $ for the evolving sets $ \Omega_{ i } $ if we assume that the time-integrated energies converges, written out as in (\ref{energy_convergence}), but now for the multiphase energy given by (\ref{definition_of_multiphase_energy}).
+
+\begin{proposition}
+	In the situation of \Cref{initial_convergence_result_multiphase} and under the energy convergence assumption (\ref{energy_convergence}), we have that for every $ 1 \leq i \leq P $, the signed measure $ \partial_{ t } \chi_{ i } $ is absolutely continuous with respect to the measure $ \abs{ \nabla \chi_{i } } \dd{ t } $ and the corresponding density $ V_{ i } $ is square integrable with the corresponding estimate
+	\begin{equation*}
+		\int_{ 0 }^{ T }
+			\int
+				V_{ i }^{ 2 }
+			\abs{ \nabla \chi_{ i } }
+		\dd{ t }
+		\lesssim
+		\energy_{ 0 }.
+	\end{equation*}
+\end{proposition}
+
+\begin{proof}
+	The proof proceeds in four steps (hier gleich Zusammenfassung reinschreiben, habe gerade noch nicht den Überblick). 
+	\begin{description}[wide=0pt]
+		\item[Step 1:] The signed measure $ \partial_{  t } \psi_{ i } $ is absolutely continuous with respect to the energy measure $ \energy ( \cdot, u ) \dd{t } $ with square-integrable density.
+		
+		For this let $ \varphi $ be a testfunction. Then we can estimate by Hölder's inequality
+		\begin{align*}
+			\int_{ 0 }^{ T }
+				\int
+					\varphi
+					\partial_{ t } \psi_{ i }
+			& =
+			\liminf_{ \varepsilon \to 0 }
+				\int_{ 0 }^{ T }
+					\int
+						\varphi
+						\partial_{ t } \psi_{ i }^{ \varepsilon }
+					\dd{ x }
+				\dd{ t }
+			\\
+			& \leq
+			\liminf_{ \varepsilon \to 0 }
+				\left(
+					\int_{ 0 }^{ T }
+						\int
+							\varepsilon 
+							\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+						\dd{ x }
+					\dd{ t }
+				\right)^{ 1/2 }
+				\left(
+					\int_{ 0 }^{ T }
+						\int
+							\varphi^{ 2 }
+							\frac{ 1 }{ \varepsilon }
+							2 W ( u_{ \varepsilon } )
+						\dd{ x }
+					\dd{ t }
+				\right)^{ 1/2 }
+			\\
+			& \leq
+			\sqrt{ 2 \energy_{ 0 } }
+			\left(
+				\int_{ 0 }^{ T }
+					\energy ( u ; \varphi )
+				\dd{ t }
+			\right)^{ 1/2 }.
+		\end{align*}
+		Here the last inequality is due to the energy dissipation (\ref{energy_dissipation_sharp})
+		and the proof of our claim is therefore complete.
+		
+		\item[Step 2:] For $ d_{ i } \coloneqq \min_{ j \neq i } $, we have that $ d_{ i } \abs{ \partial_{ t } \chi_{ i } } \leq \abs{ \partial_{ t } \psi_{ i } } $.
+		
+		Using the disintegration Theorem \cite[Thm.~3.103]{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems} and the Fleming--Rishel co-area formula, we have that for any open set $ U \subseteq [ 0 , T ] \times \flattorus $ that
+		\begin{align*}
+			\abs{
+				\partial_{ t } \psi_{ i }
+			} ( U ) 
+			& =
+			\int
+				\abs{ 
+					\partial_{ t } \psi_{ i } ( \cdot , x )
+				} ( \pi_{ x } ( U ) ) 
+			\dd{ x }
+			\\
+			& =
+			\int
+				\int_{ 0 }^{ \infty }
+					\hm^{ 0 } \left(
+						\left\{
+							t 
+							\, \colon \,
+							\phi_{ i } 
+							\left( \sum_{ j } \chi_{ j } \alpha_{ j } \right) > s,
+							( t, x ) \in U
+						\right\}
+					\right)
+				\dd{ s }
+			\dd{ x }
+			\\
+			& \geq
+			\int
+				\int_{ 0 }^{ d_{ i } }
+					\hm^{ 0 }
+						\left(
+							\left\{
+								t 
+								\, \colon \,
+								\chi_{ i } ( t , x ) = 1,
+								( t, x ) \in U
+							\right\}
+						\right)
+				\dd{ s }
+			\dd{ x }
+			\\
+			& =
+			d_{ i }
+			\int
+				\int_{ 0 }^{ \infty }
+					\hm^{ 0 } \left(
+						\left\{
+							t 
+							\, \colon \,
+							\chi_{ i } ( t , x ) > s , ( t , x ) \in U
+						\right\}
+					\right)
+				\dd{ s }
+			\dd{ x }
+			\\
+			& =
+			d_{ i }
+			\abs{ \partial_{ t } \chi_{ i } } ( U )
+		\end{align*}
+		By an approximation argument, this inequality holds for every testfunction as well, proving the claim.
+		
+		\item[Step 3:] The signed measure $ \partial_{ t } \chi_{ i } $ is singular to the wrong parts of $ \energy ( u ; \cdot ) $. More precisely we claim that if $ 1 \leq j < k \leq P $ and $ i \notin \{ j , k \} $, then the measures 
+		$ \hm^{ d - 1 } |_{ \Sigma_{ j , k } } \dd{ t } $ and $ \partial_{ t } \chi_{ i } $ are mutually singular.
+		
+		We again write $ \abs{ \nabla \chi }_{ d + 1 } $ for the space derivative in time and space and $ \abs{ \nabla \chi }_{ d } $ for the space derivative for some fixed time $ t $, which is defined for almost every time. Moreover, we denote by $ \tilde{ \Omega }_{ i } $ the set in time and space such that
+		$ \chi_{ i } ( t , x ) = \mathds{ 1 }_{ \tilde{ \Omega }_{ i } } ( t , x ) $
+		and by $ \tilde{ \Sigma }_{ i , j } $ the corresponding interfaces.
+		
+		By \Cref{identities_for_measure_theoretic_boundaries} we can then write
+		\begin{equation*}
+			\abs{ \nabla \chi_{ i } }
+			\leq
+			\abs{ ( \partial_{ t } , \nabla ) \chi_{ i } }
+			=
+			\sum_{ l \neq i }
+				\hm^{ d } |_{ \partial_{ \ast } \tilde{ \Omega }_{ i } \cap \partial_{ \ast } \tilde{ \Omega }_{ l } }.
+		\end{equation*}
+		But for all $ l \neq i $, we have again by \Cref{identities_for_measure_theoretic_boundaries} that either 
+		\begin{equation*}
+			\abs{ ( \partial_{ t } , \nabla ) \chi_{ j } } ( \tilde{ \Sigma }_{ i , l } ) = 0 
+			\quad \text{or} \quad
+			\abs{ ( \partial_{ t } , \nabla ) \chi_{ k } } ( \tilde{ \Sigma }_{ i , l } ) = 0.
+		\end{equation*}
+		Without loss of generality we assume the former. 
+		Then it follows that $ \abs{ \nabla \chi_{ j } }_{ d + 1 } \left( \tilde{ \Sigma }_{ i , l } \right) = 0 $ and therefore we have
+		\begin{align*}
+			\hm^{ d - 1 } |_{ \Sigma_{ j , k } } \dd{ t } ( \tilde{ \Sigma }_{ i , l } )
+			& =
+			\frac{ 1 }{ 2 } \left(
+				\abs{ \nabla \chi_{ j } }_{ d }
+				+
+				\abs{ \nabla \chi_{ k } }_{ d }
+				-
+				\abs{ \nabla ( \chi_{ j } + \chi_{ k } ) }_{ d }
+			\right)
+			\dd{ t }
+			\left( \tilde{ \Sigma }_{ i , l }\right)
+			\\
+			& = 
+			\frac{ 1 }{ 2 } \left(
+				\abs{ \nabla \chi_{ j } }_{ d+1 }
+				+
+				\abs{ \nabla \chi_{ k } }_{ d +1 }
+				-
+				\abs{ \nabla ( \chi_{ j } + \chi_{ k } ) }_{ d+ 1 }
+			\right) \left( \tilde{ \Sigma }_{ i , l } \right)
+			\\
+			& = 
+			\frac{ 1 }{ 2 } \left( 
+				\abs{ \nabla \chi_{ k } }_{ d + 1 } \left( \tilde{ \Sigma } _{ i , l } \right)
+				-
+				\abs{ \nabla \chi_{ k } }_{ d + 1 } \left( \tilde{ \Sigma } _{ i , l } \right)
+			\right)
+			= 0.		
+		\end{align*}
+		This proves the desired singularity.
+	\end{description} 
+\end{proof}
 
  

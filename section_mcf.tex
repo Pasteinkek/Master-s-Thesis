@@ -92,13 +92,15 @@ We say that a partition $ ( \Omega_{ i } ( t ) )_{ i = 1 , \dotsc , P } $ with $
 The second equation is a stability condition when more than two sets meet and called Herring's angle condition. Here $ \nu_{ i , j } $ is the outer unit normal on $ \Sigma_{ i , j } $ pointing from $ \Omega_{ i } $ to $ \Omega_{ j } $. One can argue that we would also want stability conditions at for example quadruple junctions. In two dimensions though, such quadruple junctions are expected to immediatly dissipate. In higher dimensions, quadruple junctions might become stable, but only on lower dimensional sets, and shall thus not be relevant for us.
 
 As our space, we shall thus now consider tuples of $ (d-1) $-dimensional surfaces on $ \flattorus $. The energy and metric tensor are given by
-\begin{align*}
+\begin{align}
+	\label{definition_of_multiphase_energy}
 	\energy ( \Sigma )
 	&\coloneqq
 	\sum_{ i < j }
 		\sigma_{ i , j }
 		\hm^{ d- 1 } ( \Sigma_{ i , j } )
 	\shortintertext{and}
+	\notag
 	\inner*{ V }{ W }_{ \Sigma }
 	& \coloneqq
 	\sum_{ i < j }
@@ -107,7 +109,7 @@ As our space, we shall thus now consider tuples of $ (d-1) $-dimensional surface
 			V_{ i , j }
 			W_{ i , j }
 		\dd{ \hm^{ d - 1 } }.
-\end{align*}
+\end{align}
 Using a variant of the divergence theorem on surfaces (\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter}) and again the computation for the first variation of the perimeter (\cite[Thm.~17.5]{maggi_sets_of_finite_perimeter}), we see that multiphase mean curvature has the desired gradient flow structure and that De Giorgi's inequality (\ref{basic_optimal_energy_dissipation_inequality}) translates to
 \begin{equation*}
 	\energy ( \Sigma ( T ) )

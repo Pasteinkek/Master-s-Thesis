@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  2 JUL 2022 16:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  4 JUL 2022 19:04
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1521,12 +1521,8 @@ Overfull \hbox (16.11162pt too wide) in paragraph at lines 167--168
 [](\U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
  []
 
-[17] [18] [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-[21]
-Overfull \hbox (14.53656pt too wide) in paragraph at lines 689--690
+[17] [18] [19] [20] [21]
+Overfull \hbox (14.53656pt too wide) in paragraph at lines 694--695
 []\OT1/cmr/bx/n/10 Definition 3.1.5. []\OT1/cmr/m/it/10 (-20) Fix some fi-nite 
 time hori-zon $\OML/cmm/m/it/10 T < \OMS/cmsy/m/n/10 1$ \OT1/cmr/m/it/10 (-20) 
 and ini-tial data $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/
@@ -1534,97 +1530,103 @@ and ini-tial data $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/
  []
 
 
-Overfull \hbox (21.20439pt too wide) in paragraph at lines 695--699
+Overfull \hbox (21.20439pt too wide) in paragraph at lines 700--704
 \OT1/cmr/m/it/10 (-20) with $[][] []\OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 \O
 T1/cmr/m/n/10 (-20) )$ moves by mean cur-va-ture \OT1/cmr/m/it/10 (-20) if ther
 e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
  []
 
 [22]
-Overfull \hbox (5.06604pt too wide) detected at line 831
+Overfull \hbox (5.06604pt too wide) detected at line 836
 []
  []
 
 [23] [24]
 
 LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
- line 1119.
+ line 1124.
 
 [25]
-Overfull \hbox (34.80074pt too wide) detected at line 1335
+Overfull \hbox (34.80074pt too wide) detected at line 1340
 []
  []
 
 [26]
-Overfull \hbox (9.26213pt too wide) detected at line 1530
+Overfull \hbox (9.26213pt too wide) detected at line 1535
 []
  []
 
-[27]) (section_cond_conv_multiphase.tex [28] [29] [30] [31] [32]
-Overfull \hbox (2.04562pt too wide) in paragraph at lines 478--480
+[27]) (section_cond_conv_multiphase.tex
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
+.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
+.fd"
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [28] [29] [30] [31] [32]
+Overfull \hbox (2.04562pt too wide) in paragraph at lines 503--505
 []\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
 t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
 of Lemma [][]3.2.2[][].
  []
 
-[33]
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
-15.
-
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
-.fd"
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [34]
-Overfull \hbox (17.00601pt too wide) detected at line 606
+[33] [34]
+Overfull \hbox (17.00601pt too wide) detected at line 631
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
  []
 
 
-Overfull \hbox (6.95596pt too wide) in paragraph at lines 610--611
+Overfull \hbox (6.95596pt too wide) in paragraph at lines 635--636
 []\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
 o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
 t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
 rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
  []
 
-[35] [36])) [37]
+[35] [36] [37] [38]
+Overfull \hbox (2.10722pt too wide) in paragraph at lines 1043--1046
+\OT1/cmr/m/n/10 (-20) Without loss of gen-er-al-ity we as-sume the for-mer. The
+n it fol-lows that $[][] [] = 0$
+ []
+
+)) [39]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [38
+ (chapter3.tex [40
 
 
 
 
 ]
 chapter 4.
-) [39]
+) [41]
 \openout2 = `chapter_appendix.aux'.
 
- (chapter_appendix.tex [40
+ (chapter_appendix.tex [42
 
 
 
 
 ]
 chapter A.
-[41] [42]
+[43] [44]
 Overfull \hbox (29.86714pt too wide) detected at line 273
 []
  []
 
-[43]) [44]
+[45]) [46]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [45
+ [47
 
 
 
 
 
-]
+] [48]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  ("Master's Thesis.aux" (chapter_mcf.aux)
@@ -1643,11 +1645,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46834 strings out of 480930
- 1040480 string characters out of 2900231
- 1870807 words of memory out of 3000000
- 61726 multiletter control sequences out of 15000+200000
- 544644 words of font info for 122 fonts, out of 3000000 for 9000
+ 46856 strings out of 480930
+ 1041109 string characters out of 2900231
+ 1871294 words of memory out of 3000000
+ 61734 multiletter control sequences out of 15000+200000
+ 544911 words of font info for 125 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1676,9 +1678,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (49 pages, 520651 bytes).
+Output written on "Master's Thesis.pdf" (52 pages, 535849 bytes).
 PDF statistics:
- 707 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
+ 735 PDF objects out of 1000 (max. 8388607)
+ 170 named destinations out of 1000 (max. 500000)
  21141 words of extra memory for PDF output out of 24883 (max. 10000000)
 
