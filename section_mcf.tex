@@ -69,26 +69,26 @@ and it will be one our first main results to deduce this inequality when passing
 Far more important for us shall however be multiphase mean curvature, which has been motivated in material science by grain growths in polycristals (HIER NOCH MEHR SCHREIBEN). 
 Essentially instead of just considering the evolution of one single set, we look at the evolution of a partition of the flat torus and require that at each interface of the sets, the mean curvature flow equation (\ref{mcf_twophase_basic_equation}) is satisfied.
 
-We say that a partition $ ( \Omega_{ i } ( t ) )_{ i = 1 , \dotsc , P } $ with $ \Sigma_{ i , j } \coloneqq \partial \Omega_{ i } \cap \partial \Omega_{ j } $ satisfies multiphase mean curvature with mobilities $ \mu_{ i , j } $ and surface tension $ \sigma_{ i , j } $ if 
-\begin{equation*}
-	\begin{cases}
+We say that a partition $ ( \Omega_{ i } ( t ) )_{ i = 1 , \dotsc , P } $ with $ \Sigma_{ i , j } \coloneqq \partial \Omega_{ i } \cap \partial \Omega_{ j } $ satisfies multiphase mean curvature with mobilities $ \mu_{ i , j } $ and surface tensions $ \sigma_{ i , j } $ if 
+\begin{align}
+		\label{v_is_equal_to_h}
 		\frac{ 1 }{ \mu_{ i , j } }
 		V_{ i, j }
-		=
+		& =
 		-
 		\sigma_{ i , j }
 		H_{ i , j }
 		\quad
-		& \text{for all }i,j
+		&\text{for all }i,j \text{ and}
 		\\
+		\label{herrings_angle_condition}
 		\sum
 			\sigma_{ i , j }
 			\nu_{ i , j }
-		=
+		& =
 		0
 		& \text{at triple junctions}.
-	\end{cases}
-\end{equation*}
+\end{align}
 The second equation is a stability condition when more than two sets meet and called Herring's angle condition. Here $ \nu_{ i , j } $ is the outer unit normal on $ \Sigma_{ i , j } $ pointing from $ \Omega_{ i } $ to $ \Omega_{ j } $. One can argue that we would also want stability conditions at for example quadruple junctions. In two dimensions though, such quadruple junctions are expected to immediatly dissipate. In higher dimensions, quadruple junctions might become stable, but only on lower dimensional sets, and shall thus not be relevant for us.
 
 As our space, we shall thus now consider tuples of $ (d-1) $-dimensional surfaces on $ \flattorus $. The energy and metric tensor are given by

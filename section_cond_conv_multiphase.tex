@@ -1203,4 +1203,325 @@ VLT HIER PAPER VON ILMANEN ZITIEREN
 	for almost every time $ 0 \leq t \leq T $.
 \end{lemma}
 
+\subsection{Convergence to multiphase mean curvature flow}
+
+We start by defining a $ \bv $-formulation for motion by multiphase mean curvature flow under the simplifying assumption that the mobilities are already fixed by the surface tensions through the equation
+\begin{equation}
+	\label{mobilites_inverse_of_surface_tensions}
+	\mu_{ i , j } =\frac{ 1 }{ \sigma_{ i , j } }. 
+\end{equation}
+
+\begin{definition}
+	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus \to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq ( \chi^{ 0 } ) $ and $ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $. We say that
+	\begin{equation*}
+		\chi \in \cont \left(
+			[ 0 , T ]
+			;
+			\lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}^{ P } \right)
+		\right)
+	\end{equation*}
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ and $ \sum_{ i = 1 }^{ P } \chi_{ i } $ \emph{moves by mean curvature} if there exists normal velocities $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } ) $ with
+	\begin{equation*}
+		\int_{ 0 }^{ T }
+			\int
+				V_{ i }^{ 2 }
+			\abs{ \nabla \chi_{ i } }
+		\dd{ t }
+		< \infty 
+	\end{equation*} 
+	such that
+	\begin{enumerate}
+		\item For all 
+		$ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left(
+			( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d }
+		\right)
+		$, we have 
+		\begin{align}
+			\label{distributional_equation_mmcf}
+			\sum_{ 1 \leq i < j \leq P }
+				\sigma_{ i , j }
+				\int_{ 0 }^{ T }
+					\int
+						&
+						\left(
+							V_{ i } \inner*{ \xi }{ \nu_{ i } }
+							+
+							\inner*{ \diff \xi }{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
+						\right)
+						\times
+					\\
+				\notag
+					& \frac{1}{ 2 }
+					\left(
+						\abs{ \nabla \chi_{ i } }
+						+
+						\abs{ \nabla \chi_{ j } }
+						-
+						\abs{ \nabla ( \chi_{ i } + \chi_{ j } ) }
+					\right)
+				\dd{ t }
+			=0,			
+		\end{align}
+		where $ \nu_{ i } $ is the outer unit normal of $ \chi_{ i } $.
+		
+		\item 
+		The functions $ V_{ i } $ are the normal velocities of the interfaces in the sense that
+		\begin{equation*}
+			\partial_{ t } \chi_{ i }
+			=
+			V_{ i } \abs{ \nabla \chi_{ i } } \dd{ t }
+		\end{equation*}
+		holds in the distributional sense on $ ( 0 , T ) \times \flattorus $.
+		
+		\item
+		The initial data is achieved in the space $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ) \right) $.
+	\end{enumerate}
+\end{definition}
+
+	Since (\ref{distributional_equation_mmcf}) is quite the long equation, we want to motivate it. Assuming that everything is nice and smooth, we have by the Gauss-Green theorem on surfaces \cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} that
+	\begin{equation*}
+		\int_{ \Sigma_{ i , j } }
+			\int 
+				\inner{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
+			\dd^{\hm^{ d- 1 }}
+		=
+		\int_{ \Sigma_{ i , j } }
+			\int
+				H_{ i , j } \inner*{ \xi }{ \nu_{ i } }
+			\dd{\hm^{ d- 1 }}
+		+
+		\int_{ \Gamma_{ i , j } }
+			\int
+				\inner*{ \xi }{ \nu_{ \Gamma_{ i , j } } }
+			\dd{ \hm^{ d - 2 } }.
+	\end{equation*}
+	Here $ \Gamma_{ i , j } $ denotes the boundary of the surface $ \Sigma_{ i , j } $, which we expect to only have significant contribution at triple junctions. But then Herring's angle condition (\ref{herrings_angle_condition}) tells us that the boundary terms cancel out (HIER NOCHMAL TIM WEGEN DEN NORMALEN FRAGEN). But now we integrate at each interface over the quantity
+	\begin{equation*}
+		(V_{ i } - H_{ i , j } ) \inner*{ \xi }{ \nu_{ i } },
+	\end{equation*}
+	which is zero by equation (\ref{v_is_equal_to_h}) combined with the assumption (\ref{mobilites_inverse_of_surface_tensions}).
+	
+\subsection{Convergence of the curvature term}
+
+\begin{proposition}
+	In the situation of \Cref{initial_convergence_result_multiphase} and under the energy convergence assumption (\ref{energy_convergence}), we have that the first variations converge in the sense that for almost every time $ 0 \leq t \leq T $, we have
+	\begin{equation*}
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\inner*{ 
+					\Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } \partial_{ u } W ( u_{ \varepsilon } ) 
+				}
+				{ \inner*{ \xi }{ \nabla u_{ \varepsilon } } }
+			\dd{ x }
+		=
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i , j }
+			\int_{ \Sigma_{ i , j } }
+				\inner*{ \diff \xi }{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
+			\dd{ \hm^{ d - 1} }
+	\end{equation*}
+	and additionally we have the estimate
+	\begin{equation*}
+		\int
+		\inner*{ 
+			\varepsilon \nabla u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } 	\partial_{ u } W ( u_{ \varepsilon } ) 
+		}
+		{ \inner*{ \xi }{ \nabla u_{ \varepsilon } } }
+		\dd{ x }
+		\lesssim
+		\norm{ \nabla \xi }_{ \sup }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ).
+	\end{equation*}
+\end{proposition}
+
+\begin{remark}
+	We can not proceed exactly as in the twophase case since we do not have one primitive $ \phi $ and more importantly, we can not expect the functions $ \psi_{ i }^{ \varepsilon } $ to satisfy 
+	\begin{equation}
+		\label{energy_convergence_of_psi_i}
+		\abs{ \psi_{ i }^{ \varepsilon } } ( \flattorus ) \to \abs{ \psi_{ i } } ( \flattorus ),
+	\end{equation}
+	so the original theorem from Reshetnyak will not work here. However we have by the lower semicontinuity of the variation measure under the assumption of energy convergence (\ref{energy_convergence}) that
+	\begin{align*}
+		\abs{ \nabla \psi_{ i } } ( \flattorus )
+		&
+		\leq
+		\liminf_{ \varepsilon \to 0 }
+			\abs{ \nabla \psi_{ i }^{ \varepsilon } } ( \flattorus )
+		\\
+		& \leq
+		\liminf_{ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } )
+		\\
+		& =
+		\energy ( u )
+		\\
+		& =
+		\sum_{ 1 \leq j < k \leq P }
+			\sigma_{ j , k }
+			\hm^{ d -1 } ( \Sigma_{ j , k } ).
+	\end{align*}
+	But by \Cref{rewriting_variation_of_psi_i}, we know that
+	\begin{equation*}
+		\abs{ \nabla \psi_{ i } }
+		=
+		\sum_{ 1 \leq j < k \leq P }
+			\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
+			\hm^{ d - 1 } |_{ \Sigma_{ j , k } },
+	\end{equation*}
+	which yields that localized on $ \partial_{ \ast } \Omega_{ i } $, we have the necessary convergence $ \abs{ \nabla \psi_{i }^{ \varepsilon } } \to \abs{ \nabla \psi_{ i } } $. Thus we will develop a quantitative version of Reshetnyaks theorem and aply it to our setting.
+\end{remark}
+
+\begin{proof}
+	Using the same calculations as in the twophase case, we obtain that
+	\begin{align*}
+		& \lim_{ \varepsilon \to 0 }
+			\int
+				\inner*{
+					\varepsilon \Delta u_{ \varepsilon }
+					-
+					\frac{ 1 }{ \varepsilon } \partial_{ u } W ( u_{ \varepsilon } )
+				}
+				{
+					\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+				}
+			\dd{ x }
+		\\
+		={} &
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\varepsilon
+				\left(
+					\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+					\divg \xi 
+					-
+					\sum_{ i = 1 }^{ N }
+						\sum_{ j, k = 1 }^{ d }
+							\partial_{ x_{ j } } u_{ \varepsilon }^{ i }
+							\partial_{ x_{ j } } \xi^{ k }
+							\partial_{ x_{ k } } u_{ \varepsilon }^{ i }
+				\right)
+			\dd{ x } 
+			\eqqcolon I
+	\end{align*}
+	Now however, we can not proceed as in the twophase case as explained above. 
+	Instead we rewrite
+	\begin{equation*}
+		I
+		=
+		\int
+			\varepsilon
+			\inner*{
+				\diff \xi 
+			}
+			{
+				\mathrm{Id} - N_{ \varepsilon }^{ \top } N_{ \varepsilon }
+			}
+			\abs{ \nabla u_{ \varepsilon } }
+		\dd{ x },
+	\end{equation*}
+	where we define $ N_{ \varepsilon } \coloneqq \nabla u_{ \varepsilon } / \abs{ \nabla u_{ \varepsilon } } $. By the equipartition of energies \Cref{equipartition_of_energies_multiphase} and using that $ \abs{N_{ \varepsilon } } \leq 1 $, we can replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon  } } $. 
+	
+	Summarizing our results, it suffices by \Cref{equipartition_of_energies_multiphase} and rescaling to show for all $ A \in \cont^{ \infty } ( \flattorus ; \mathbb{ R }^{ d \times d } ) $ with $ \abs{ A } \leq 1 $ that
+	\begin{equation}
+		\label{desired_convergence_for_convergence_of_curvature}
+		\lim_{ \varepsilon \to 0 }
+			\int
+				\inner*{ A }{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
+				\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\abs{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+		=
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i , j }
+			\int_{ \Sigma_{ i , j } }
+				\inner*{ A }{ \nu_{ i } \otimes \nu_{ i } }
+			\dd{ \hm^{ d - 1 } }.
+	\end{equation}
+	To this end, we will show the following three claims for a cutoff $ \eta $.
+	\begin{itemize}[wide=0pt]
+		\item[Claim 1]
+		We choose a majority phase by introducing the function $ \phi_{ i } $ on the right hand side of equation (\ref{desired_convergence_for_convergence_of_curvature}). The corresponding error is given by
+		\begin{equation*}
+			\limsup_{ \varepsilon \to 0 }
+				\abs{ 
+					\int
+						\eta 
+						\inner*{ A }{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
+						\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } 
+					\dd{ x }
+					-
+					\int
+						\eta
+						\inner*{ A }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
+						\abs{ \nabla \psi_{ i } }
+					\dd{ x }
+				}
+			\lesssim
+				\energy ( u ; \eta ) 
+				-
+				\int
+					\eta
+				\abs{ \nabla \psi_{ i } },
+		\end{equation*}
+		where the approximate normal of the $ i$-th phase is defined by $ \nu_{ i }^{ \varepsilon } \coloneqq \nabla \psi_{ i }^{ \varepsilon } / \abs{ \nabla \psi_{ i }^{ \varepsilon } } $.
+		
+		\item[Claim 2]
+		By a quantitative Reshetnyak type argument, we have
+		\begin{equation*}
+			\limsup_{ \varepsilon \to 0 }
+				\abs{
+					\int
+						\eta \inner*{ A }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
+						\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+					\dd{ x }
+					-
+					\int
+						\eta \inner*{ A }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{i }^{ \varepsilon } }
+					\abs{ \nabla \psi_{ i } }
+				}
+			\lesssim
+				\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
+		\end{equation*}
+	
+		\item[Claim 3] 
+		We can undo the localization onto the majority phase. The corresponding error is given by
+		\begin{equation*}
+			\abs{ 
+				\int
+					\eta
+					\inner*{ A }{ \mu_{ i } \otimes \mu_{ i } }
+				\abs{ \nabla \psi_{ i } }
+				-
+				\sum_{ 1 \leq j < k \leq P }
+					\sigma_{ j , k }
+					\int_{ \Sigma_{ j , k } }
+						\eta 
+						\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
+					\dd{ \hm^{ d - 1 } }
+			}
+		\leq
+		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
+		\end{equation*}
+	\end{itemize}
+	Let us first assume that we have proven those three claims and show how the desired convergence (\ref{desired_convergence_for_convergence_of_curvature}) follows from them. 
+	As in LOCALIZATION CHAPTER EINFÜGEN , we take a partition of unity $ \eta $ of the flat torus. Then
+	\begin{align*}
+		& \limsup_{ \varepsilon \to 0 }
+			\abs{
+				\int
+					\inner*{ A }{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\abs{ \nabla u_{ \varepsilon } }
+				\dd{ x }
+				-
+				\sum_{ 1 \leq j < k \leq P }
+					\sigma_{ j , k }
+				 	\int_{ \Sigma_{ j , k } }
+				 		\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
+				 	\dd{ \hm^{ d - 1 } }
+			} 
+		\\
+		=
+	\end{align*}
+\end{proof}
  

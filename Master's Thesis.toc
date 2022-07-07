@@ -30,8 +30,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Convergence to a moving partition}{29}{subsection.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}i dont know yet}{41}{chapter.4}%
+\contentsline {subsection}{\numberline {3.2.2}Convergence to multiphase mean curvature flow}{40}{subsection.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{43}{appendix.A}%
+\contentsline {subsection}{\numberline {3.2.3}Convergence of the curvature term}{42}{subsection.3.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}i dont know yet}{45}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Appendix}{47}{appendix.A}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

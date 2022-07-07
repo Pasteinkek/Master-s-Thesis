@@ -2200,8 +2200,9 @@
     <bcf:citekey order="16">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
     <bcf:citekey order="17">baldo_minimal_interface_criterion</bcf:citekey>
     <bcf:citekey order="18">ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems</bcf:citekey>
-    <bcf:citekey order="19">baldo_minimal_interface_criterion</bcf:citekey>
-    <bcf:citekey order="20">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
+    <bcf:citekey order="19">maggi_sets_of_finite_perimeter</bcf:citekey>
+    <bcf:citekey order="20">baldo_minimal_interface_criterion</bcf:citekey>
+    <bcf:citekey order="21">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
