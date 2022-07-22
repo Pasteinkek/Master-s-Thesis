@@ -657,6 +657,7 @@ The proof can be found in the Appendix. If we now consider the supremum of the m
 Thus, we obtain the following.
 
 \begin{proposition}
+	\label{supremum_of_abs_nabla_psi_i_is_energy}
 	In the situation of \Cref{initial_convergence_result_multiphase} , we have
 	\begin{equation*}
 		\left(
@@ -1301,6 +1302,164 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 	\end{equation*}
 	which is zero by equation (\ref{v_is_equal_to_h}) combined with the assumption (\ref{mobilites_inverse_of_surface_tensions}).
 	
+\subsection{Localization estimates}
+\label{section_localization_estimates}
+In order to prove convergence of the curvature and velocity term, we want to reduce the multiphase case to the twophase case. The central idea here is to cover the flat torus with a suitable covering of balls and argue that, up to an arbitrarily small error as long as the balls are small enough, we can choose for each ball majority phases $ i, j $ such that the multiphase mean curvature looks like a twophase mean curvature on the ball, see \Cref{figure_localization_of_mmcf}.
+
+\begin{figure}[h]
+	\centering
+\begin{tikzpicture}
+	
+	\draw[very thick]  (1,-1) -- (2, -2 );
+	\draw[very thick]  (4,-2) --(5,-1);
+	\draw[very thick]  (1,-5) --(2,-4);
+	\draw[very thick] (4,-4)--(5, -5);
+	
+	\draw[very thick](2,-2)--(4,-2);
+	\draw[very thick] (4,-2)--(4,-4);
+	\draw[very thick] (4, -4)--(2, -4);
+	\draw[very thick] (2, -4) -- (2, -2);
+	
+	\begin{comment}
+	
+	\draw[red] (1,-1) circle (0.5cm);
+	\draw[red] (1.5,-1) circle (0.5cm);
+	\draw[red] (2,-1) circle (0.5cm);
+	\draw[red] (2.5,-1) circle (0.5cm);
+	\draw[red] (3,-1) circle (0.5cm);
+	\draw[red] (3.5,-1) circle (0.5cm);
+	\draw[red] (4,-1) circle (0.5cm);
+	\draw[red] (4.5,-1) circle (0.5cm);
+	\draw[red] (5,-1) circle (0.5cm);
+	\draw[red] (1,-1.5) circle (0.5cm);
+	\draw[red] (1.5,-1.5) circle (0.5cm);
+	\draw[red] (2,-1.5) circle (0.5cm);
+	\draw[red] (2.5,-1.5) circle (0.5cm);
+	\draw[red] (3,-1.5) circle (0.5cm);
+	\draw[red] (3.5,-1.5) circle (0.5cm);
+	\draw[red] (4,-1.5) circle (0.5cm);
+	\draw[red] (4.5,-1.5) circle (0.5cm);
+	\draw[red] (5,-1.5) circle (0.5cm);
+	\end{comment}
+	\draw[green,thick] (1,-1.5) circle (0.5cm);	
+	\draw[green,thick] (1.5,-2) circle (0.5cm);	
+	\draw[red,thick] (2,-2) circle (0.5cm);	
+	\draw[blue,thick] (2.5,-2) circle (0.5cm);	
+	\draw[blue,thick] (3,-2) circle (0.5cm);	
+	\draw[blue,thick] (3.5,-2) circle (0.5cm);	
+	\draw[red,thick] (4,-2) circle (0.5cm);	
+	\draw[yellow,thick] (4.5,-2) circle (0.5cm);	
+	\draw[yellow,thick] (5,-1.5) circle (0.5cm);	
+	
+	\node at (3,-3) {$\Omega_{ 1 }$};
+	\node at (1,-3) {$\Omega_{2}$};
+	\node at (3,-1) {$\Omega_{3}$};
+	\node at (5,-3) {$\Omega_{4}$};
+\end{tikzpicture}
+\caption{Localization of multiphase mean curvature flow. For the green balls, we choose the majority phase (2,3), for the blue ones (1,3) and for the yellow balls (3,4). The red balls however give us an error.}
+
+\label{figure_localization_of_mmcf}
+\end{figure}
+
+To formulate this rigorously let $ r > 0 $ and define the covering $ \beta_{ r } $ of $ \flattorus $ by
+\begin{equation*}
+	\mathcal{B}_{ r } \coloneqq
+	\left\{
+		B_{ r } ( c ) 
+		\, \colon \,
+		c \in \mathcal{ L }_{ r }
+	\right\},
+\end{equation*}
+where the set $ \mathcal{ L }_{ r } $ is given by $ \mathcal{ L }_{ r } \coloneqq \flattorus \cap (r/\sqrt{ d }) \mathbb{ Z }^{ d } $. Moreover let $ \rho_{ B } $ be a smooth cutoff for the ball $ B $ with support in the ball with the same center, but double the radius.
+
+Additionally to choosing a majority phase, we can also argue that along the chosen majority phase, we have a local flatness. Thus we may freeze approximate the outer unit normal up to an arbitrarily small error. This is captured by the following Lemma.
+
+\begin{lemma}
+	\label{localization_lemma_with_normals}
+	For every $ \delta > 0 $ and every partition $ \chi \colon \flattorus \to \{ 0 , 1 \}^{ P } $ such that $ \chi_{ i } \in \bv ( \flattorus ) $ holds for all $ 1 \leq i \leq P $, there exist some $ r_{ 0 } > 0 $ such that for all $ 0 < r < r_{ 0 } $, we find for every ball $ B \in \mathcal{B}_{ r } $ some unit vector $ \nu_{ B } $ such that
+	\begin{equation*}
+		\sum_{ B \in \mathcal{B}_{ r } }
+			\min_{ i \neq j }
+				\int
+					\rho_{ B }
+					\abs{ \nu_{ i } - \nu_{ B } }^{ 2 }
+				\abs{ \nabla \chi_{ i } }
+				+
+				\int
+					\rho_{ B }
+					\abs{ \nu_{ j } + \nu_{ B } }^{ 2 }
+				\abs{ \nabla \chi_{ j } }
+				+
+				\sum_{ k \notin \{ i , j \} }
+					\int 
+						\rho_{ B }
+					\abs{ \nabla \chi_{ k } }
+		\lesssim
+		\delta \energy ( \chi )
+	\end{equation*}
+\end{lemma}
+	
+Note that by \Cref{identities_for_measure_theoretic_boundaries}, integrating  $ \abs{ \nabla \chi_{ k } } $ over the sum of all $ k \notin \{ i , j \} $ equates to summing over all interfaces which are not the $ (i,j)$-th interface. Moreover the second summand is in some sense unnecessary, since the last summand provides us with a localization on the $ (i,j)$-th interface, on which we have $ \nu_{ i } = - \nu_{ j } $.
+However it is convenient to keep it so that we do now have to repeat this argument.
+
+Furthermore this estimates implies also the smallness of
+\begin{equation*}
+	\sum_{ B \in \mathcal{ B }_{ r } }
+		\min_{ i }
+			\abs{
+			\energy ( \chi; \rho_{ B } )
+			-
+			\int
+				\rho_{ B }
+			\abs{ \nabla \psi_{ i } }
+		}
+	=
+	\sum_{ B \in \mathcal{ B }_{ r } }
+		\energy ( \chi ; \rho_{ B } )
+		-
+		\max_{ i }
+			\int
+				\rho_{ B }
+			\abs{ \nabla \psi_{ i } }
+\end{equation*}
+in the same sense as in the above \Cref{localization_lemma_with_normals}. Notice that the equality follows for example from \Cref{supremum_of_abs_nabla_psi_i_is_energy}. The smallness follows since by \Cref{rewriting_variation_of_psi_i}, we have for every $ i \neq j $ that
+\begin{align*}
+	&
+	\energy ( \chi ; \rho_{ B } ) 
+	-
+	\int
+		\rho_{ B }
+	\abs{ \nabla \psi_{ i } }
+	\\
+	={} &
+	\sum_{ 1 \leq k < l \leq P }
+		\sigma_{ k , l }
+		\int_{ \Sigma_{ k , l } }
+			\rho_{ B }
+		\dd{ \hm^{ d -1 } }
+	-
+	\sum_{ 1 \leq k < l \leq P }
+		\abs{ \sigma_{ i , k } - \sigma_{ i , l } }
+		\int_{ \Sigma_{ k, l } }
+			\rho_{ B }
+		\dd{ \hm^{ d - 1 } }
+	\\
+	={} &
+	\sum_{ \substack{1 \leq k < l \leq P \\ \{ k, l \} \neq \{ i, j \} } }
+		\left(
+			\sigma_{ k , l } - \abs{ \sigma_{ i , k } - \sigma_{ i , l } }
+		\right)
+		\int_{ \Sigma_{ k , l } }
+			\rho_{ B }
+		\dd{ \hm^{ d - 1 } }
+	\\
+	\lesssim{} &
+	\sum_{ k \notin \{ i, j \} }
+		\int
+			\rho_{ B }
+		\abs{ \nabla \chi_{ k } }.
+\end{align*}
+Thus we can estimate the error by the last summand of the error in \Cref{localization_lemma_with_normals}.
 \subsection{Convergence of the curvature term}
 
 \begin{proposition}
@@ -1416,7 +1575,7 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 			{
 				\mathrm{Id} - N_{ \varepsilon }^{ \top } N_{ \varepsilon }
 			}
-			\abs{ \nabla u_{ \varepsilon } }
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 		\dd{ x },
 	\end{equation*}
 	where we define $ N_{ \varepsilon } \coloneqq \nabla u_{ \varepsilon } / \abs{ \nabla u_{ \varepsilon } } $. By the equipartition of energies \Cref{equipartition_of_energies_multiphase} and using that $ \abs{N_{ \varepsilon } } \leq 1 $, we can replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon  } } $. 
@@ -1439,7 +1598,7 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 	\end{equation}
 	To this end, we will show the following three claims for a cutoff $ \eta $.
 	\begin{itemize}[wide=0pt]
-		\item[Claim 1]
+		\item[Claim 1:]
 		We choose a majority phase by introducing the function $ \phi_{ i } $ on the right hand side of equation (\ref{desired_convergence_for_convergence_of_curvature}). The corresponding error is given by
 		\begin{equation*}
 			\limsup_{ \varepsilon \to 0 }
@@ -1465,7 +1624,7 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 		\end{equation*}
 		where the approximate normal of the $ i$-th phase is defined by $ \nu_{ i }^{ \varepsilon } \coloneqq \nabla \psi_{ i }^{ \varepsilon } / \abs{ \nabla \psi_{ i }^{ \varepsilon } } $.
 		
-		\item[Claim 2]
+		\item[Claim 2:]
 		By a quantitative Reshetnyak type argument, we have
 		\begin{equation*}
 			\limsup_{ \varepsilon \to 0 }
@@ -1483,7 +1642,7 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 				\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
 		\end{equation*}
 	
-		\item[Claim 3] 
+		\item[Claim 3:] 
 		We can undo the localization onto the majority phase. The corresponding error is given by
 		\begin{equation*}
 			\abs{ 
@@ -1500,11 +1659,12 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 					\dd{ \hm^{ d - 1 } }
 			}
 		\leq
-		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
+		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } },
 		\end{equation*}
+		where $ \mu_{ i } \coloneqq \nabla \psi_{ i } / \abs{ \nabla \psi_{ i } } $.
 	\end{itemize}
 	Let us first assume that we have proven those three claims and show how the desired convergence (\ref{desired_convergence_for_convergence_of_curvature}) follows from them. 
-	As in LOCALIZATION CHAPTER EINFÜGEN , we take a partition of unity $ \eta $ of the flat torus. Then
+	We take a partition of unity $ \eta_{ B } $ of the flat torus with respect to the covering $ \mathcal{ B } $ introduced in \Cref{section_localization_estimates}. Then
 	\begin{align*}
 		& \limsup_{ \varepsilon \to 0 }
 			\abs{
@@ -1521,7 +1681,77 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 				 	\dd{ \hm^{ d - 1 } }
 			} 
 		\\
-		=
+		={} &
+		\abs{ 
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\int
+					\inner*{ A \eta_{ B } }
+					{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } }
+				\dd{ x }
+			-
+			\sum_{ 1 \leq j < k \leq P }
+				\sigma_{ j , k }
+				\int_{ \Sigma_{ j , k } }
+					\inner*{ A \eta_{ B } }
+					{ \nu_{ i } \otimes \nu_{i } }
+				\dd{ \hm^{ d - 1 } }
+		}
+		\\
+		\leq{} &
+		\sum_{ B \in \mathcal{ B }_{ r } }
+			\min_{ 1 \leq i \leq P }
+				\abs{ 
+					\int
+						\inner{ A \eta_{ B } }{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
+						\sqrt{ 2 W ( u_{ \varepsilon } ) }
+						\abs{ \nabla u_{ \varepsilon } }
+					\dd{ x }
+					-
+					\int
+						\inner*{ A \eta_{ B } }
+						{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
+					\dd{ x }
+				}
+			\\
+			& \quad \quad \quad \;\;\;\!\:+
+			\abs{ 
+				\int
+					\inner*{ A \eta_{ B } }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
+					\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+				\dd{ x }
+				-
+				\int
+					\inner*{ A \eta_{ B } }
+					{ \nu_{ i } \otimes \nu_{ i } }
+				\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+			}
+			\\
+			& \quad \quad \quad \;\;\;\!\: +
+			\abs{ 
+				\int
+					\inner*{ A \eta_{ B } }
+					{ \nu_{ i } \otimes \nu_{ i } }
+				\abs{ \nabla \psi_{ i } }
+				-
+				\sum_{ 1 \leq j < k \leq P }
+					\sigma_{ j , k }
+					\int_{ \Sigma_{ j , k } }
+						\inner*{ A \eta_{ B } }
+						{ \nu_{ j } \otimes \nu_{ j } }
+					\dd{ \hm^{ d - 1 } }
+			}
+		\\
+		\lesssim {} &
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\min_{ 1 \leq i \leq P }
+					\energy ( u ; \eta_{ B } )
+					-
+					\int
+						\eta_{ B }
+					\abs{ \nabla \psi_{ i } },
 	\end{align*}
+	which vanishes as $ r $ tends to zero.
+	Thus let us now prove the three claims.
 \end{proof}
  
