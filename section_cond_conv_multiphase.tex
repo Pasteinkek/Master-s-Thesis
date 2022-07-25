@@ -1724,7 +1724,7 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 				\int
 					\inner*{ A \eta_{ B } }
 					{ \nu_{ i } \otimes \nu_{ i } }
-				\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+				\abs{ \nabla \psi_{ i } }
 			}
 			\\
 			& \quad \quad \quad \;\;\;\!\: +
@@ -1751,7 +1751,217 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 						\eta_{ B }
 					\abs{ \nabla \psi_{ i } },
 	\end{align*}
-	which vanishes as $ r $ tends to zero.
+	which vanishes as $ r $ tends to zero by \Cref{localization_lemma_with_normals}.
 	Thus let us now prove the three claims.
+	
+	\begin{proof}[Proof of Claim 1.]
+		For simplicity, we drop the index $ i $ and for now also $ \varepsilon 
+		$.
+		First, we replace the matrix $ N $ by the matrix $ \pi N $, where we 
+		define the rank-one matrix $ \pi $ by
+		\begin{equation*}
+			\pi 
+			\coloneqq
+			\frac{ \partial_{ u } \phi }{ \abs{ \partial_{ u } \phi } }
+			\otimes
+			\frac{ \partial_{ u } \phi }{ \abs{ \partial_{ u } \phi } }
+			\in 
+			\mathbb{ R }^{ N }.
+		\end{equation*}
+		The multiplication with $ \pi $ is an orthogonal projection $ \pi 
+		\colon \mathbb{ R }^{ N \times d } \to \mathbb{ R }^{ N \times d } $. 
+		Moreover, we can compute that
+		\begin{align*}
+			( \pi N^{ \top } \pi N )_{ i j }
+			& =
+			\sum_{ k = 1 }^{ N }
+				( \pi N )_{ k i }
+				( \pi N )_{ k j }
+			=
+			\sum_{ k = 1 }^{ N }
+				\left(
+					\sum_{ l = 1 }^{ N }
+						\pi_{ k l } N_{ l i }
+				\right)
+				\left(
+					\sum_{ r = 1 }^{ N }
+						\pi_{ k r } N_{ r j }
+				\right)
+			\\
+			& =
+			\sum_{ l, r = 1 }^{ N }
+				N_{ l i } N_{ r , j }
+				\sum_{ k = 1 }^{ N }
+					\pi_{ k l }
+					\pi_{ k r }
+			=
+			\sum_{ l, r = 1 }^{ N }
+				N_{ l i }N_{ r j }
+				\sum_{ k = 1 }^{ N }
+					\frac{ \partial_{ k } \phi  \partial_{ l } \phi \partial_{ 
+					k } \phi \partial_{ r } \phi }{ \abs{ \partial_{ u } \phi 
+					}^{ 4 } }
+			\\
+			& =
+			\sum_{ l, r = 1 }^{ N }
+				N_{ l i } \frac{ \partial_{ l } \phi }{ \abs{ \partial_{ u } 
+				\phi } }
+				N_{ r j } \frac{ \partial_{ r } \phi }{ \abs{ \partial_{ u } 
+				\phi } }
+			=
+			\frac{ \partial_{ i } \psi }{ \abs{ \nabla u } \abs{ \partial_{ u } 
+			\phi } }
+			\frac{ \partial_{ j } \psi }{ \abs{ \nabla u } \abs{ \partial_{ u } 
+			\phi } }
+		\end{align*}
+		Thus we infer that
+		\begin{align*}
+			\inner*{ A }{ \pi N_{ \varepsilon }^{ \top } \pi N_{ \varepsilon } }
+			& =
+			\sum_{ i, j = 1 }^{ d }
+				A_{ i , j } 
+				\frac{ \partial_{ i } \psi_{ \varepsilon } }{ \abs{ \nabla \phi 
+				} \abs{ \nabla u_{ \varepsilon } } }
+				\frac{ \partial_{ j } \psi_{ \varepsilon } }{ \abs{ \nabla \phi 
+				} \abs{ \nabla u_{ \varepsilon } } }
+			\\
+			& =
+			\frac{ \abs{ \nabla \psi_{ \varepsilon } }^{ 2 } }{ \abs{ \nabla 
+			\phi }^{ 2 } \abs{ \nabla u_{ \varepsilon } }^{ 2 } }
+			\inner*{ A }
+			{ \frac{ \nabla \psi^{ \varepsilon } }{ \abs{ \nabla \psi^{ 
+			\varepsilon } } } \otimes \frac{ \nabla \psi^{ \varepsilon } }{ 
+			\abs{ \nabla \psi^{ \varepsilon } } } }
+			= 
+			\abs{ \pi N_{ \varepsilon } }^{ 2 }
+			\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon } },
+		\end{align*}
+		where we used that 
+		\begin{equation*}
+			\abs{ \pi N_{ \varepsilon } }^{ 2 }
+			=
+			\frac{ \abs{ \nabla \psi_{ \varepsilon } }^{ 2 } }{ \abs{ \nabla 
+			\phi }^{ 2 } \abs{ \nabla u_{ \varepsilon } }^{ 2 } }.
+		\end{equation*}
+		Moreover we recognize that since multiplication with $ \pi $ is 
+		an orthogonal projection, we have the Pythagorean Theorem
+		\begin{align*}
+			N^{ \top } N 
+			& =
+			( \pi N + N - \pi N )^{ \top } ( \pi N + N - \pi N )
+			\\
+			& =
+			( \pi N )^{ \top } \pi N 
+			+
+			( N - \pi N )^{ \top } ( N - \pi N )
+			+
+			( \pi N )^{ \top } ( N - \pi N )
+			+
+			( N - \pi N )^{ \top } \pi N 
+			\\
+			& =
+			( \pi N )^{ \top } \pi N
+			+
+			( N - \pi N )^{ \top } ( N - \pi N ).
+		\end{align*}
+		In order to prove the claim, we first get an error when replacing $ N_{ 
+		\varepsilon }^{ \top } N_{ \varepsilon } $ with $ \nu^{ \varepsilon } 
+		\otimes \nu^{ \varepsilon } $ and the second error when replacing $ 
+		\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $ 
+		by $ \abs{ \nabla \psi_{ \varepsilon } } $.
+		Thus we can estimate
+		\begin{align*}
+			& \abs{ 
+				\int
+					\eta 
+					\inner*{ A }{ N_{ \varepsilon } N_{ \varepsilon }^{ \top } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
+					\varepsilon } }
+				\dd{ x }
+				-
+				\int
+					\eta
+					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					} }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
+					\varepsilon } }
+				dd{ x }
+			}
+			\\
+			\leq{} &
+			\abs{ 
+				\int
+					\eta 
+					\inner*{ A }{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
+					\varepsilon } } 
+				\dd{ x }
+				-
+				\int 
+					\eta
+					\inner*{ A }
+					{ \pi N_{ \varepsilon }^{ \top } \pi N_{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\abs{ \nabla u_{ \varepsilon } }
+				\dd{ x }
+			}
+			\\
+			& + 
+			\abs{ 
+				\int
+					\eta
+					\inner*{ A }
+					{ \pi N_{ \varepsilon }^{ \top } \pi N_{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
+					\varepsilon } }
+				\dd{ x }
+				-
+				\int
+					\eta
+					\inner*{ A }
+					{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon } }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\abs{ \nabla u_{ \varepsilon } }
+				\dd{ x }
+			}
+			\\
+			\leq{} & 
+			\int
+				\eta
+				\abs{ N_{ \varepsilon } - \pi N_{ \varepsilon } }^{ 2 }
+				\sqrt{ 2 W ( u_{ \varepsilon} ) } \abs{ \nabla u_{ \varepsilon 
+				} }
+			\dd{ x }
+			+
+			\int
+				\eta
+				\left( 
+					1 - \abs{ \pi N_{ \varepsilon } }
+				\right)^{ 2 }
+				\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon 
+				} }
+			\dd{ x }.
+		\end{align*}
+		Using again that multiplication with $ \pi $ is an orthogonal 
+		projection, we have
+		\begin{align*}
+			\abs{
+				( \mathrm{Id} - \pi ) N_{ \varepsilon }
+			}^{ 2 }
+			& =
+			\abs{ N_{ \varepsilon } }^{ 2 } 
+			-
+			\abs{ \pi N_{ \varepsilon } }^{ 2 }
+			=
+			1 - \abs{ \pi N_{ \varepsilon } }
+			\lesssim
+			1 - \abs{ \pi N_{ \varepsilon } }
+			=
+			\abs{ \frac{ \diff \phi }{ \abs{ \nabla \phi } } N_{ \varepsilon } 
+			},
+		\end{align*}
+		where for the last identity, we used that $ \abs{ v^{ \top } B } = 
+		\abs{ v \otimes v B } $ for all unit vectors $ v $ and matrices $ B $.
+	\end{proof}
 \end{proof}
  
