@@ -1402,7 +1402,9 @@ Additionally to choosing a majority phase, we can also argue that along the chos
 Note that by \Cref{identities_for_measure_theoretic_boundaries}, integrating  $ \abs{ \nabla \chi_{ k } } $ over the sum of all $ k \notin \{ i , j \} $ equates to summing over all interfaces which are not the $ (i,j)$-th interface. Moreover the second summand is in some sense unnecessary, since the last summand provides us with a localization on the $ (i,j)$-th interface, on which we have $ \nu_{ i } = - \nu_{ j } $.
 However it is convenient to keep it so that we do now have to repeat this argument.
 
-Furthermore this estimates implies also the smallness of
+\begin{remark}
+	\label{localization_estimate_weaker}
+This estimates implies also the smallness of
 \begin{equation*}
 	\sum_{ B \in \mathcal{ B }_{ r } }
 		\min_{ i }
@@ -1459,7 +1461,9 @@ in the same sense as in the above \Cref{localization_lemma_with_normals}. Notice
 			\rho_{ B }
 		\abs{ \nabla \chi_{ k } }.
 \end{align*}
-Thus we can estimate the error by the last summand of the error in \Cref{localization_lemma_with_normals}.
+Thus we can estimate the error by the last summand of the error in 
+\Cref{localization_lemma_with_normals}.
+\end{remark}
 \subsection{Convergence of the curvature term}
 
 \begin{proposition}
@@ -1635,20 +1639,22 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 					\dd{ x }
 					-
 					\int
-						\eta \inner*{ A }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{i }^{ \varepsilon } }
+						\eta \inner*{ A }{ \theta_{ i }  \otimes 
+						\theta_{ i } }
 					\abs{ \nabla \psi_{ i } }
 				}
 			\lesssim
-				\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
+				\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } },
 		\end{equation*}
-	
+		where $ \theta_{ i } \coloneqq \nabla \psi_{ i } / \abs{ \nabla \psi_{ 
+		i } } $.
 		\item[Claim 3:] 
 		We can undo the localization onto the majority phase. The corresponding error is given by
 		\begin{equation*}
 			\abs{ 
 				\int
 					\eta
-					\inner*{ A }{ \mu_{ i } \otimes \mu_{ i } }
+					\inner*{ A }{ \theta_{ i } \otimes \theta_{ i } }
 				\abs{ \nabla \psi_{ i } }
 				-
 				\sum_{ 1 \leq j < k \leq P }
@@ -1659,12 +1665,13 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 					\dd{ \hm^{ d - 1 } }
 			}
 		\leq
-		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } },
+		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
 		\end{equation*}
-		where $ \mu_{ i } \coloneqq \nabla \psi_{ i } / \abs{ \nabla \psi_{ i } } $.
 	\end{itemize}
 	Let us first assume that we have proven those three claims and show how the desired convergence (\ref{desired_convergence_for_convergence_of_curvature}) follows from them. 
-	We take a partition of unity $ \eta_{ B } $ of the flat torus with respect to the covering $ \mathcal{ B } $ introduced in \Cref{section_localization_estimates}. Then
+	We take a partition of unity $ \eta_{ B } $ of the flat torus with respect 
+	to the covering $ \mathcal{ B }_{ r } $ introduced in 
+	\Cref{section_localization_estimates}. Then
 	\begin{align*}
 		& \limsup_{ \varepsilon \to 0 }
 			\abs{
@@ -1710,7 +1717,9 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 					-
 					\int
 						\inner*{ A \eta_{ B } }
-						{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
+						{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ 
+						\varepsilon } }
+						\abs{ \nabla \psi_{ i }^{ \varepsilon } }
 					\dd{ x }
 				}
 			\\
@@ -1723,7 +1732,7 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 				-
 				\int
 					\inner*{ A \eta_{ B } }
-					{ \nu_{ i } \otimes \nu_{ i } }
+					{ \theta_{ i } \otimes \theta_{ i } }
 				\abs{ \nabla \psi_{ i } }
 			}
 			\\
@@ -1731,7 +1740,7 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 			\abs{ 
 				\int
 					\inner*{ A \eta_{ B } }
-					{ \nu_{ i } \otimes \nu_{ i } }
+					{ \theta_{ i } \otimes \theta_{ i } }
 				\abs{ \nabla \psi_{ i } }
 				-
 				\sum_{ 1 \leq j < k \leq P }
@@ -1751,7 +1760,8 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 						\eta_{ B }
 					\abs{ \nabla \psi_{ i } },
 	\end{align*}
-	which vanishes as $ r $ tends to zero by \Cref{localization_lemma_with_normals}.
+	which vanishes as $ r $ tends to zero by 
+	\Cref{localization_estimate_weaker}.
 	Thus let us now prove the three claims.
 	
 	\begin{proof}[Proof of Claim 1.]
@@ -1869,7 +1879,7 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 		\otimes \nu^{ \varepsilon } $ and the second error when replacing $ 
 		\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $ 
 		by $ \abs{ \nabla \psi_{ \varepsilon } } $.
-		Thus we can estimate
+		For the first error we can estimate
 		\begin{align*}
 			& \abs{ 
 				\int
@@ -1940,7 +1950,7 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 				\right)^{ 2 }
 				\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon 
 				} }
-			\dd{ x }.
+			\dd{ x }= I_{ \varepsilon }.
 		\end{align*}
 		Using again that multiplication with $ \pi $ is an orthogonal 
 		projection, we have
@@ -1953,15 +1963,296 @@ Thus we can estimate the error by the last summand of the error in \Cref{localiz
 			-
 			\abs{ \pi N_{ \varepsilon } }^{ 2 }
 			=
-			1 - \abs{ \pi N_{ \varepsilon } }
+			1 - \abs{ \pi N_{ \varepsilon } }^{ 2 }
 			\lesssim
 			1 - \abs{ \pi N_{ \varepsilon } }
 			=
+			1 -
 			\abs{ \frac{ \diff \phi }{ \abs{ \nabla \phi } } N_{ \varepsilon } 
 			},
 		\end{align*}
 		where for the last identity, we used that $ \abs{ v^{ \top } B } = 
 		\abs{ v \otimes v B } $ for all unit vectors $ v $ and matrices $ B $.
+		Therefore we can estimate
+		\begin{align*}
+			I_{ \varepsilon }
+			& \lesssim
+			\int
+				\eta
+				\left(
+					1 - \abs{ \frac{ \diff \phi }{ \abs{ \nabla \phi } } N_{ 
+					\varepsilon } }
+				\right)
+				\sqrt{ 2 W ( u_{ \varepsilon } ) }
+				\abs{ \nabla u_{ \varepsilon } }
+			\dd{ x }
+			\\
+			& =
+			\int
+				\eta 
+				\left(
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\abs{ \nabla u_{ \varepsilon } }
+					-
+					\abs{ \nabla \psi^{ \varepsilon } }
+					\frac{ \sqrt{ 2 W ( u_{ \varepsilon } ) } }{ \abs{ \nabla 
+					\phi ( u_{ \varepsilon } ) } }
+				\right)
+			\dd{ x }
+			\\
+			& \leq
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ; \eta )
+			-
+			\int
+				\eta
+				\abs{ \nabla \psi^{ \varepsilon } }
+			\dd{ x }.
+		\end{align*}
+		The last inequality is due to Young's inequality and $ \abs{ \nabla 
+		\phi } \leq \sqrt{ 2 W ( u_{ \varepsilon } ) } $.
+		By the convergence of energies for almost every time and the lower 
+		semicontinuity of the variation measure, we thus have
+		\begin{equation*}
+			\limsup_{ \varepsilon \to 0 }
+				I_{ \varepsilon }
+			\lesssim
+			\energy ( u ; \eta )
+			-
+			\int
+				\eta
+			\abs{ \nabla \psi }.
+		\end{equation*}
+		The second error is given by
+		\begin{align*}
+			& \abs{
+				\int
+					\eta
+					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					} }
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\abs{ \nabla u_{ \varepsilon } }
+				\dd{ x }
+				-
+				\int
+					\eta
+					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					} }
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\dd{ x }
+			}
+			\\
+			={} &
+			\abs{
+				\int
+					\eta
+					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					} }
+					\left(
+						\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
+						\varepsilon } } 
+						-
+						\abs{ \nabla \psi^{ \varepsilon } }
+					\right)
+				\dd{ x }
+			}
+			\\
+			\leq {} &
+			\int
+				\eta
+				\left(
+					\sqrt{ 2 W ( u_{ \varepsilon } ) }
+					\abs{ \nabla u_{ \varepsilon } }
+					-
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\right)
+			\dd{ x }
+			\\
+			\leq{} &
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ; \eta )
+			-
+			\int
+				\eta 
+				\abs{ \nabla \psi^{ \varepsilon } }
+			\dd{ x },
+		\end{align*}
+		which in the limes superior can be controlled by the desired term as 
+		above, finishing the proof for the first claim.
+	\end{proof}
+	
+	\begin{proof}[Proof of Claim 2.]
+		Consider the sequence $ ( \mu_{ \varepsilon } )_{ \varepsilon } $ of 
+		Radon measures defined by 
+		\begin{equation*}
+			\mu_{ \varepsilon }
+			\coloneqq
+			\delta_{ u_{ \varepsilon } ( x ) }
+			\abs{ \nabla \psi^{ \varepsilon } } \dd{ x }
+		\end{equation*}
+		which acts on continuous functions $ \varphi $ through
+		\begin{equation*}
+			\int_{ \flattorus }
+				\int_{ \mathbb{ S }^{ d - 1 } }
+					\varphi ( x , \nu )
+			\dd{ \mu_{ \varepsilon } ( x , \nu ) }
+			=
+			\int_{ \flattorus }
+				\varphi \left( x , \nu_{ \varepsilon } ( x ) \right) 
+				\abs{ \nabla \psi^{ \varepsilon } }
+			\dd{ x }.
+		\end{equation*}
+		By Young's inequality and the boundedness of energies, $ \mu_{ 
+		\varepsilon } $ is a bounded sequence of Radon measures, thus we find a 
+		Radon measure $ \tilde{ \mu } $ on $ \flattorus \times \mathbb{ S }^{ d 
+		- 1 } $ and some non-relabelled subsequence such that $ \mu_{ 
+		\varepsilon } \rightharpoonup^{ \ast } \tilde{ \mu } $ as Radon 
+		measures on $ \flattorus \times \mathbb{ S }^{ d - 1 } $.
+		By 
+		\cite[Thm.~2.28]{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems}
+		we can disintegrate the measure $ \tilde{ \mu } $, which means that we 
+		find probability measures $ ( p_{ x } )_{ x \in \flattorus } $ and a 
+		Radon measure $ \mu $ on $ \flattorus $ such that $ x \mapsto p_{ x } $ 
+		is $ \mu $-measurable and we have the identity 
+		\begin{equation*}
+			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+				f ( x , \tilde{ \nu } )
+			\dd{ \tilde{ \mu } ( x, \tilde{ \nu } ) }
+			=
+			\int_{ \flattorus }
+				\int_{ \mathbb{ S }^{ d - 1 } }
+					f ( x , \tilde{ \nu } )
+				\dd{ p_{ x } ( \tilde{ \nu } ) }
+			\dd{ \mu ( x ) }
+		\end{equation*}
+		for all $ f \in \lp^{ 1 } ( \flattorus \times \mathbb{ S }^{ d -1 } , 
+		\tilde{ \mu } ) $.
+		Thus we have
+		\begin{equation*}
+			\lim_{ \varepsilon \to 0 }
+				\int
+					\varphi ( x , \nu_{ \varepsilon } ) 
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\dd{ x }
+			=
+			\int_{ \flattorus }
+				\int_{ \mathbb{ S }^{ d - 1 } }
+					\varphi ( x, \tilde{ \nu } )
+				\dd{ p_{ x } ( \tilde{ \nu } ) }
+			\dd{ \mu ( x ) }
+		\end{equation*} 
+		for all continuous $ \varphi $ and plugging in $ \varphi ( x , \tilde{ 
+		\nu } ) \coloneqq \inner*{ A ( x ) }{ \tilde{ \nu } \otimes \tilde{ \nu 
+		} } $ thus yields
+		\begin{equation*}
+			\lim_{ \varepsilon \to 0}
+				\int
+					\eta
+					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					} }
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\dd{ x }
+			=
+			\int
+				\eta
+				\inner*{ A ( x ) }
+				{
+					\int
+						\tilde{ \nu } \otimes \tilde{ \nu }
+					\dd{ p_{ x } ( \tilde{ \nu } ) }
+				}
+			\dd{ \mu ( x ) }.
+		\end{equation*}
+		We now would like to prove that up to an error bounded by $ \energy ( u 
+		; \eta ) - \int \eta \abs{ \nabla \psi } $, the right-hand side is 
+		equal to $ \int \inner*{ A }{ \theta \otimes \theta } \abs{ \nabla \psi 
+		} $.
+		
+		On the one hand, we have by the lower semicontinuity of the variation 
+		measure that
+		\begin{equation}
+			\label{mu_doominates_variation_of_psi}
+			\int
+				\eta
+			\abs{ \nabla \psi }
+			\leq
+			\liminf_{ \varepsilon \to 0 }
+				\int
+					\eta
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\dd{ x }
+			=
+			\int
+				\eta ( x )
+				\int
+					1
+				\dd{ p_{ x } ( \tilde{ \nu } ) }
+			\dd{ \mu ( x ) }
+			=
+			\int
+				\eta ( x ) 
+			\dd{ \mu ( x ) },
+		\end{equation}
+		or in other words, we have $ \abs{ \nabla \psi } \leq \mu $.
+		
+		On the other hand we have by the convergence of the energies and 
+		Young's inequality that we 
+		may estimate $ \mu $ via 
+		\begin{equation*}
+			\int
+				\eta
+			\dd{ \mu }
+			=
+			\lim_{ \varepsilon \to 0 }
+				\int
+					\eta
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\dd{ x }
+			=
+			\liminf_{ \varepsilon \to 0 }
+				\energy_{ \varepsilon } ( u_{ \varepsilon } ; \eta )
+			=
+			\energy ( u ; \eta ).
+		\end{equation*}
+		Using that
+		\begin{equation*} 
+			\abs{ \tilde{ \nu } \otimes \tilde{ \nu } - \theta \otimes \theta } 
+			= 
+			\abs{ 
+				\tilde{ \nu } \otimes ( \tilde{ \nu } - \theta ) 
+				+
+				\theta \otimes ( \tilde{ \nu } - \theta ) 
+			}
+			\leq
+			2 \abs{ \tilde{ \nu } - \theta }
+		\end{equation*}
+		and inequality (\ref{mu_doominates_variation_of_psi}), we can therefore 
+		estimate
+		\begin{align*}
+			&
+			\abs{ 
+				\int
+					\int_{ \mathbb{ S }^{ d - 1 } }
+						\eta
+						\inner*{ A }{ \tilde{ \nu } \otimes \tilde{ \nu } }
+					\dd{ p_{ x } ( \tilde{ \nu } ) }
+				\dd{ \mu }
+				-
+				\int
+					\eta
+					\inner*{ A }{ \theta \otimes \theta }
+				\abs{ \nabla \psi }
+			}
+			\\
+			\leq{} &
+			\abs{ 
+				\int
+					\eta 
+					\inner*{ A }
+					{ 
+						\int
+							\tilde{ \nu } \otimes \tilde{ \nu }
+					}
+			}
+		\end{align*}
 	\end{proof}
 \end{proof}
  

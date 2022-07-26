@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  25 JUL 2022 19:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  26 JUL 2022 17:06
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1523,7 +1523,7 @@ Overfull \hbox (16.11162pt too wide) in paragraph at lines 167--168
 
 [17] [18] [19] [20] [21]
 Overfull \hbox (14.53656pt too wide) in paragraph at lines 694--695
-[]\OT1/cmr/bx/n/10 Definition 3.1.5. []\OT1/cmr/m/it/10 (-20) Fix some fi-nite 
+[]\OT1/cmr/bx/n/10 Definition 3.1.7. []\OT1/cmr/m/it/10 (-20) Fix some fi-nite 
 time hori-zon $\OML/cmm/m/it/10 T < \OMS/cmsy/m/n/10 1$ \OT1/cmr/m/it/10 (-20) 
 and ini-tial data $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/
 10 (-20) ,
@@ -1567,7 +1567,7 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 Overfull \hbox (2.04562pt too wide) in paragraph at lines 503--505
 []\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
 t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
-of Lemma [][]3.2.2[][].
+of Lemma [][]3.2.3[][].
  []
 
 [33] [34]
@@ -1591,38 +1591,38 @@ n it fol-lows that $[][] [] = 0$
  []
 
 [39] [40] Excluding 'comment' comment. [41] [42]
-Overfull \hbox (5.39095pt too wide) detected at line 1481
+Overfull \hbox (5.39095pt too wide) detected at line 1485
 [] [][][] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 [] [][][][] []
  []
 
 [43]
-Overfull \hbox (31.40291pt too wide) detected at line 1624
+Overfull \hbox (31.40291pt too wide) detected at line 1628
 [] [] \U/msa/m/n/10 . []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
 ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
  []
 
 [44]
-Overfull \hbox (5.72806pt too wide) detected at line 1663
+Overfull \hbox (3.06598pt too wide) detected at line 1669
 [] \OMS/cmsy/m/n/10  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
-ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
+ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 []:
  []
 
 
-Overfull \hbox (7.9185pt too wide) detected at line 1753
+Overfull \hbox (7.9185pt too wide) detected at line 1762
 []
  []
 
-[45] [46])) [47]
+[45] [46] [47])) [48]
 \openout2 = `chapter3.aux'.
 
- (chapter3.tex [48
+ (chapter3.tex
+chapter 4.
+) [49
 
 
 
 
 ]
-chapter 4.
-) [49]
 \openout2 = `chapter_appendix.aux'.
 
  (chapter_appendix.tex [50
@@ -1667,11 +1667,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46921 strings out of 480930
- 1042453 string characters out of 2900231
- 1872494 words of memory out of 3000000
- 61769 multiletter control sequences out of 15000+200000
- 545127 words of font info for 127 fonts, out of 3000000 for 9000
+ 46935 strings out of 480930
+ 1042780 string characters out of 2900231
+ 1872733 words of memory out of 3000000
+ 61774 multiletter control sequences out of 15000+200000
+ 545019 words of font info for 126 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1700,9 +1700,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (60 pages, 580467 bytes).
+Output written on "Master's Thesis.pdf" (60 pages, 588822 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 196 named destinations out of 1000 (max. 500000)
+ 845 PDF objects out of 1000 (max. 8388607)
+ 207 named destinations out of 1000 (max. 500000)
  21165 words of extra memory for PDF output out of 24883 (max. 10000000)
 
