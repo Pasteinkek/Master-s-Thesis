@@ -2196,7 +2196,8 @@ Thus we can estimate the error by the last summand of the error in
 		On the other hand we have by the convergence of the energies and 
 		Young's inequality that we 
 		may estimate $ \mu $ via 
-		\begin{equation*}
+		\begin{equation}
+			\label{mu_is_dominated_by_energy}
 			\int
 				\eta
 			\dd{ \mu }
@@ -2211,7 +2212,7 @@ Thus we can estimate the error by the last summand of the error in
 				\energy_{ \varepsilon } ( u_{ \varepsilon } ; \eta )
 			=
 			\energy ( u ; \eta ).
-		\end{equation*}
+		\end{equation}
 		Using that
 		\begin{equation*} 
 			\abs{ \tilde{ \nu } \otimes \tilde{ \nu } - \theta \otimes \theta } 
@@ -2248,11 +2249,99 @@ Thus we can estimate the error by the last summand of the error in
 					\eta 
 					\inner*{ A }
 					{ 
-						\int
+						\int_{ \mathbb{ S }^{ d - 1 } }
 							\tilde{ \nu } \otimes \tilde{ \nu }
+						\dd{ p_{ x } ( \tilde{ \nu } ) }
 					}
+				( \dd{ \mu } - \abs{ \nabla \psi } )
 			}
+			+
+			\abs{
+				\int
+					\eta
+					\inner*{ A }{
+						\int_{ \mathbb{ S }^{ d - 1 } }
+							\tilde{ \nu } \otimes \tilde{ \nu }
+							-
+							\theta \otimes \theta
+						\dd{ p_{ x } ( \tilde{ \nu } ) }
+					}
+				\abs{ \nabla \psi }
+			}
+			\\
+			\leq {} &
+			\int
+				\eta
+			\left( \dd{ \mu } - \abs{ \nabla \psi } \right)
+			+
+			2
+			\int
+				\eta
+				\int_{ \mathbb{ S }^{ d - 1 } }
+					\abs{ \tilde{ \nu } - \theta } 
+				\dd{ p_{ x } ( \tilde{ \nu } ) }
+			\abs{ \nabla \psi }.
 		\end{align*}
+		The first summand can by inequality (\ref{mu_is_dominated_by_energy}) 
+		be estimated by 
+		$ \energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi } $.
+		For the second summand, we use a duality argument:
+		Given a smooth vectorfield $ \xi $, we have by the weak convergence $ 
+		\nabla \psi_{ \varepsilon } \to \nabla \psi $ that
+		\begin{equation*}
+			\int
+				\inner*{ \xi }{ \theta }
+			\abs{ \nabla \psi }
+			=
+			\lim_{ \varepsilon \to 0 }
+				\int
+					\inner*{ \xi }{ \nu^{ \varepsilon } }
+					\abs{ \nabla \psi^{ \varepsilon } }
+				\dd{ x }
+			=
+			\int
+				\inner*{ \xi }{
+					\int 
+						\tilde{ \nu } 
+					\dd{ p_{ x } ( \tilde{ \nu } ) } 
+				}
+			\dd{ \mu },
+		\end{equation*}
+		from which we deduce that
+		\begin{align*}
+			\int
+				\inner*{ \xi }{
+					\int
+						\theta - \tilde{ \nu }
+					\dd{ p_{ x } ( \tilde{ \nu } ) }
+				}
+			\abs{ \nabla \psi }
+			& =
+			\int
+				\inner*{ \xi }{
+					\int
+						\tilde{ \nu }
+					\dd{ p_{ x } ( \tilde{ \nu } ) }
+				}
+			\left(
+				\dd{ \mu } - \abs{ \nabla \psi }
+			\right)
+			\\
+			& \leq
+			\int
+				\abs{ \xi }
+			\left(
+				\dd{ \mu } - \abs{ \nabla \psi }
+			\right)
+			\\
+			& \leq
+			\energy ( u ; \abs{ \xi } )
+			-
+			\int
+				\abs{ \xi }
+			\abs{ \nabla \psi },
+		\end{align*}
+		which finishes the proof.
 	\end{proof}
 \end{proof}
  
