@@ -2428,5 +2428,486 @@ supposed limit $ \nu_{ i } $ only describes the change in physical space, we
 should only freeze the normal in this direction. Using the equipartition of 
 energies \Cref{equipartition_of_energies_multiphase} which tells us that $ 
 \varepsilon / 2 \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ roughly equals $ 1 / 
-\varepsilon W ( u_{ \varepsilon } ) $, we come up with the following definition.
+\varepsilon W ( u_{ \varepsilon } ) $, we come up with the following definition 
+which is similar to the tilt-excess defined in the twophase case.
+
+\begin{definition}
+	Let $ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } $ and $ \eta \in \cont^{ 
+	\infty } \left( [ 0 , T ] \times \flattorus ; [ 0 , 1 ] \right) $. For $ 
+	\varepsilon > 0 $ and a function $ u_{ \varepsilon } \in \wkp^{ 1 , 2 } 
+	\left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ N } \right) $, the 
+	approximative localized tilt-excess of the $ i$-th phase is given by by
+	\begin{equation*}
+		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
+		\varepsilon } )
+		\coloneqq
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\frac{ 1 }{ \varepsilon }
+				\abs{ 
+					\varepsilon \nabla u_{ \varepsilon } 
+					+
+					\nabla \phi_{ i } ( u_{ \varepsilon } ) 
+					\otimes
+					\nu^{ \ast }
+				}^{ 2 }
+			\dd{ x }
+		\dd{ t }.
+	\end{equation*}
+	In the limit $ \varepsilon = 0 $ and for a partition 
+	$ \chi_{ i } = \mathds{ 1 }_{ \Omega_{ i } } \in \bv \left(
+		( 0 , T ) \times \flattorus ; \{ 0 , 1 \} 
+	\right) $
+	with $ \sum_{ i } \chi_{ i } = 1 $,
+	we define the tilt-excess for $ 1 \leq i, j \leq P $ , $ i \neq j $ to be
+	\begin{equation*}
+		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta , u ) 
+		\coloneqq
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\abs{ \nu_{ i } - \nu^{ \ast } }^{ 2 }
+			\abs{ \nabla \chi_{ i } }
+		\dd{ t }
+		+
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
+			\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		+
+		\sum_{ k \in \{ i , j \} }
+			\int_{ 0 }^{ T }
+				\int
+					\eta 
+				\abs{ \nabla \chi_{ k } }
+			\dd{ t },
+	\end{equation*}
+	where $ u = \sum_{ 1 \leq i \leq P } \chi_{ i } \alpha_{ i } $.
+\end{definition}
+
+Notice that we use $ + \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
+\ast } $ in the definition of the approximative tilt excess instead of its 
+negative since the normal of $ \chi_{ i } $ points inwards with respect to $ 
+\Omega_{ i } $, but $ \nabla \phi_{ i } / \abs{ \nabla \phi_{ i } } $ points 
+away from $ \Omega_{ i } $.
+
+Moreover we want to point out that the first two summands of the tilt-excess $ 
+\tilt_excess_{ i , j } $ measure the local flatness of the boundary, and the 
+last summand measure if mostly the $(i,j)$-th phase is present, see also the 
+discussion in \Cref{section_localization_estimates}.
+
+As in the twophase case, we first want to argue that when $ \varepsilon $ 
+approaches zero, the approximate tilt-excess can be bounded by the tilt-excess 
+of the limit.
+
+\begin{lemma}
+	\label{approximate_tilt_excess_estimated_in_limit_by_tilt_excess}
+	Assume that we are in the situation of 
+	\Cref{initial_convergence_result_multiphase} and that the time-integrated 
+	energies converge (\ref{energy_convergence}). Then for every $ 1 \leq i , j 
+	\leq P $ with $ i \neq j $, every unit vector $ \nu^{ \ast } \in \mathbb{ S 
+	}^{ d - 1 } $ and 
+	$ \eta \in \cont^{ \infty } \left( [ 0 , T ] \times \flattorus ; [ 0 ,1 ] 
+	\right) $, we have
+	\begin{equation*}
+		\limsup_{ \varepsilon \to 0 }
+			\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
+			\varepsilon } ) 
+			\lesssim
+			\tilt_excess^{ i , j } ( \nu^{ \ast } ; \eta , \chi ).
+	\end{equation*}
+\end{lemma}
+
+\begin{proof}
+	By expanding the square, we see that we can rewrite the approximate 
+	tilt-excess as
+	\begin{align*}
+		& \tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
+		\varepsilon } ) 
+		\\
+		={} &
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\frac{ 1 }{ \varepsilon }
+				\left(
+					\varepsilon^{ 2 }
+					\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+					+
+					2 \varepsilon 
+					\inner*{ \nabla u_{ \varepsilon } }
+					{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
+					\ast } }
+					+
+					\abs{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
+					\ast } }^{ 2 }
+				\right)
+			\dd{ x }
+		\dd{ t }
+		\\
+		\eqqcolon {} &
+		A_{ \varepsilon } + B_{ \varepsilon } + C_{ \varepsilon}.
+	\end{align*}
+	Using the equipartition of energies 
+	\Cref{equipartition_of_energies_multiphase}, we immediately get that 
+	\begin{align*}
+		\limsup_{ \varepsilon \to 0 }
+			A_{ \varepsilon }
+		& =
+		\int_{ 0 }^{ T }
+			\energy ( u ; \eta )
+		\dd{ t }
+		\shortintertext{and}
+		\limsup_{ \varepsilon \to 0 }
+			C_{ \varepsilon }
+		& \leq
+		\limsup_{ \varepsilon \to 0 }
+			\int_{ 0 }^{ T }
+				\int
+					\eta
+					\frac{ 1 }{ \varepsilon }
+					\abs{ \nabla \phi_{ i } ( u_{ \varepsilon } ) }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\\
+		& \leq
+		\limsup_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+			\int
+				\eta
+				\frac{ 1 }{ \varepsilon }
+				2 W ( u_{ \varepsilon } ) 
+			\dd{ x }
+		\dd{ t }
+		\\
+		& =
+		\int_{ 0 }^{ T }
+			\energy ( u ; \eta )
+		\dd{ t }.
+	\end{align*}
+	For the remaining summand, we note that
+	\begin{equation*}
+		\limsup_{ \varepsilon \to 0 }
+			B_{ \varepsilon }
+		=
+		\limsup_{ \varepsilon \to 0 }
+			\int_{ 0 }^{ T }
+				\int
+					2 \eta
+					\inner*{ \nabla \psi_{ i }^{ \varepsilon } }{ \nu^{ \ast } }
+				\dd{ x }
+			\dd{ t }
+		=
+		2 \int_{ 0 }^{ T }
+			\int
+				\eta
+				\inner*{ \nu^{ \ast } }{ \nabla \psi_{ i } }
+		\dd{ t }.
+	\end{equation*}
+	Summarizing these estimates, we have
+	\begin{equation*}
+		\limsup_{ \varepsilon \to 0 }
+			\tilt_excess_{ i }^{ \varepsilon }
+			( \nu^{ \ast } ; \eta , u_{ \varepsilon } )
+		\leq
+		2 \int_{ 0 }^{ T }
+			\energy ( u ; \eta )
+		\dd{ t }
+		+
+		2 \int_{ 0 }^{ T }
+			\int
+				\eta
+				\inner*{ \nu^{ \ast } }{ \nabla \psi_{ i } }
+		\dd{ t }.
+	\end{equation*}
+	By focusing on the $ ( i, j )$-th interface, we estimate the energy term by
+	\begin{equation*}
+		\int_{ 0 }^{ T }
+			\energy ( u ; \eta )
+		\dd{ t }
+		\leq
+		\int_{ 0 }^{ T }
+			\sigma_{ i , j }
+			\int
+				\eta
+			\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		+
+		C \sum_{ k \notin \{ i , j \} }
+			\int_{ 0 }^{ T }
+				\int
+					\eta
+				\abs{ \nabla \chi_{ k } }
+			\dd{ t }
+	\end{equation*}
+	and the other term via
+	\begin{align*}
+		\int_{ 0 }^{ T }
+			\inner*{ \nu^{ \ast } }
+			{
+				\int
+					\eta
+				\nabla \psi_{ i }
+			}
+		\dd{ t }
+		& =
+		\sum_{ 1 \leq k \leq P }
+			\sigma_{ i , k }
+			\int_{ 0 }^{ T }
+				\inner*{ \nu^{ \ast } }
+				{
+					\int
+						\eta 
+					\nabla \chi_{ k }
+				}
+			\dd{ t }
+		\\
+		& \leq
+		\int_{ 0 }^{ T }
+			\sigma_{ i , j }
+			\int
+				\eta
+				\inner*{ \nu^{ \ast } }{ \nu }
+			\abs{ \nabla \chi_{ j } }
+		+
+		C \sum_{ k \notin \{ i , j \} }
+			\int_{ 0 }^{ T }
+				\int
+					\eta
+				\abs{ \nabla \chi_{ k } }
+			\dd{ t },
+	\end{align*}
+	which yields that
+	\begin{equation*}
+		\limsup_{ \varepsilon \to 0 }
+			\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
+			\varepsilon } )
+		\leq
+		2 \sigma_{ i , j } \int_{ 0 }^{ T }
+			\int
+				\eta
+				\left( 1 + \inner*{ \nu^{ \ast } }{ \nu_{ j } } \right)
+			\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		+
+		C \sum_{ k \notin \{ i , j \} }
+			\int_{ 0 }^{ T }
+				\int
+					\eta 
+				\abs{ \nabla \chi_{ k } }
+			\dd{ t }.
+	\end{equation*}
+	Since $ 1 + \inner*{ \nu^{ \ast } }{ \nu_{ j } } = \frac{ 1 }{ 2 } \abs{ 
+	\nu^{ \ast } + \nu_{ j } }^{ 2 } $, this finishes the proof.
+\end{proof}
+
+Note that we have actually proven a seemingly stronger estimate, since the 
+summand $ \abs{ \nu_{ i } - \nu^{ \ast } } $ is not included on the right-hand 
+side of the last estimate. However it serves to symmetrize the multiphase 
+excess.
+
+Using \Cref{approximate_tilt_excess_estimated_in_limit_by_tilt_excess}, we can 
+now prove the convergence of the velocity term.
+
+\begin{proposition}
+	In the situation of \Cref{initial_convergence_result_multiphase} and under 
+	the assumption that the time-integrated energies converge 
+	(\ref{energy_convergence}), there exists a finite Radon measure $ \mu $ on 
+	$ [ 0 , T ] \times \flattorus $ such that for any $ 1 \leq i , j \leq P $ 
+	with $ i \neq j $ and any parameter $ \alpha \in ( 0 , 1 ) $,  any unit 
+	vector $ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } $ and any test vector 
+	field $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( ( 0 , T ) \times 
+	\flattorus ; \mathbb{ R }^{ d } \right) $, we have
+	\begin{align*}
+		& \limsup_{ \varepsilon \to 0 }
+			\abs{
+				\int_{ 0 }^{ T }
+					\int
+						\varepsilon
+						\inner*{ \diff u_{ \varepsilon } \xi }
+						{ \partial_{ t } u_{ \varepsilon } }
+					\dd{ x }
+				\dd{ t }
+				-
+				\sigma_{ i , j }
+				\int_{ 0 }^{ T }
+					\int_{ \Sigma_{ i , j } }
+						\inner*{ \xi }{ \nu_{ i } } V_{ i }
+					\dd{ \hm^{ d - 1 } }
+				\dd{ t }
+			}
+		\\
+		\lesssim{} &
+		\norm{ \xi }_{ \mathrm{sup} }
+		\left(
+			\frac{ 1 }{ \alpha } \tilt_excess_{ i , j } \left( \nu^{ \ast } ; 
+			\eta , u \right) 
+			+ \alpha \mu ( \eta ) 
+		\right).
+	\end{align*}
+	Here $ \eta \in \cont^{ \infty } \left( [ 0 , T ] \times \flattorus ;  
+	\mathbb{ R }^{ d } 
+	\right) $ is any 
+	smooth cutoff for the support of $ \xi $.
+\end{proposition}
+
+\begin{proof}
+	As in the twophase case, we first choose a majority phase and then freeze 
+	the approximate normal $ \varepsilon \nabla u_{ \varepsilon } $ by 
+	replacing it with $ - \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
+	\ast } $. The error we can be estimated by Young's inequality through
+	\begin{align*}
+		& \abs{
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon
+					\inner*{ \diff u_{ \varepsilon } \xi }{ \partial_{  t } u_{ 
+					\varepsilon } }
+				\dd{ x }
+			\dd{ t }
+			+
+			\int_{ 0 }^{ T }
+				\int
+					\inner*{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes 
+					\nu^{ \ast } \xi }{ \partial_{ t } u_{ \varepsilon } }
+				\dd{ x }
+			\dd{ t }
+		}
+		\\
+		={} &
+		\abs{
+			\int_{ 0 }^{ T }
+				\int
+					\sqrt{ \varepsilon }
+					\inner*{ 
+						\left(
+							\sqrt{ \varepsilon } \nabla u_{ \varepsilon }
+							+
+							\frac{ 1 }{ \sqrt{ \varepsilon } }
+							\nabla \phi_{ i } \otimes \nu^{ \ast } 
+						\right)
+						\xi 
+					}
+					{ \partial_{ t } u_{ \varepsilon } }
+				\dd{ x }
+			\dd{ t }
+		}
+		\\
+		\leq{} &
+		\frac{ 1 }{ 2 }
+		\norm{ \xi }_{ \mathrm{sup} }
+		\left(
+			\alpha 
+			\int_{ 0 }^{ T }
+				\int
+					\eta \varepsilon 
+					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+			+
+			\frac{ 1 }{ \alpha }
+			\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \eta , u_{ 
+			\varepsilon }  \right)
+		\right).
+	\end{align*}
+	We thus have arrived at the term
+	\begin{equation*}
+		- \int_{ 0 }^{ T }
+			\int
+				\inner*{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
+				\ast } \xi }{ \partial_{ t } u_{ \varepsilon } }
+			\dd{ x }
+		\dd{ t }
+		= 
+		- \int_{ 0 }^{ T }
+			\int
+				\partial_{ t } \psi_{ i }^{ \varepsilon }
+				\inner*{ \xi }{ \nu^{ \ast } }
+			\dd{ x }
+		\dd{ t },
+	\end{equation*} 
+	which by the weak convergence $ \partial_{ t } \psi_{ i }^{ \varepsilon } 
+	\rightharpoonup \partial_{ t } \psi_{ i } $ converges to
+	\begin{equation*}
+		- \sum_{ 1 \leq j \leq P }
+			\sigma_{ i , j }
+			\int_{ 0 }^{ T }
+				\int
+					\inner*{ \xi }{ \nu^{ \ast } }
+					V_{ j }
+				\abs{ \nabla \chi_{ j } }
+			\dd{ t }.
+	\end{equation*}
+	Thus
+	\begin{align*}
+		& \limsup_{ \varepsilon \to 0 }
+			\abs{
+				- \int_{ 0 }^{ T }
+					\int
+						\inner*{ \nabla \phi_{ i } ( u_{ \varepsilon } ) 
+						\otimes \nu^{ \ast } \xi }{ \partial_{ t } u_{ 
+						\varepsilon } }
+					\dd{ x }
+				\dd{ t }
+				-
+				\sigma_{ i j }
+				\int_{ 0 }^{ T }
+					\int_{ \Sigma_{ i , j } }
+						\inner*{ \xi }{ \nu_{ i } }
+						V_{ i } 	
+					\dd{ \hm^{ d - 1 } }
+				\dd{ t }
+			}
+		\\
+		={} &
+		\abs{
+			\sum_{ 1 \leq k \leq P }
+				\sigma_{ i k }
+				\int_{ 0 }^{ T }
+					\int
+						\inner*{ \xi }{ \nu^{ \ast } }
+						V_{ k }
+					\abs{ \nabla \chi_{ k } }
+				\dd{ t }
+			+
+			\sigma_{ i j }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i , j } }
+					\inner*{ \xi }{ \nu_{ i } }
+					V_{ i }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }
+		}
+		\\
+		\lesssim{} &
+		\norm{ \xi }_{ \mathrm{sup} }
+		\sum_{ k \notin \{ i , j \} }
+			\int_{ 0 }^{ T }
+				\int
+					\eta
+					\abs{ V_{ k } }
+				\abs{ \nabla \chi_{ k } }
+			\dd{ t }
+		+
+		\sigma_{ i j }
+		\abs{
+			\int_{ 0 }^{ T }
+				\int
+					\inner*{ \xi }{ \nu^{ \ast } }
+					V_{ j }
+				\abs{ \nabla \chi_{ j } }
+			\dd{ t }
+			+
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i j } }
+					\inner*{ \xi }{ \nu_{ i } }
+					V_{ i }
+				\dd{ \hm^{ d -1 } }
+			\dd{ t }
+		}.
+	\end{align*}
+\end{proof}
  
