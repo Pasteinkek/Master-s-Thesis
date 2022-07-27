@@ -1467,6 +1467,7 @@ Thus we can estimate the error by the last summand of the error in
 \subsection{Convergence of the curvature term}
 
 \begin{proposition}
+	\label{convergence_of_curvature_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} and under the energy convergence assumption (\ref{energy_convergence}), we have that the first variations converge in the sense that for almost every time $ 0 \leq t \leq T $, we have
 	\begin{equation*}
 		\lim_{ \varepsilon \to 0 }
@@ -1484,7 +1485,8 @@ Thus we can estimate the error by the last summand of the error in
 			\dd{ \hm^{ d - 1} }
 	\end{equation*}
 	and additionally we have the estimate
-	\begin{equation*}
+	\begin{equation}
+		\label{pointwise_estimate_for_curvature}
 		\int
 		\inner*{ 
 			\varepsilon \nabla u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } 	\partial_{ u } W ( u_{ \varepsilon } ) 
@@ -1494,7 +1496,7 @@ Thus we can estimate the error by the last summand of the error in
 		\lesssim
 		\norm{ \nabla \xi }_{ \sup }
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ).
-	\end{equation*}
+	\end{equation}
 \end{proposition}
 
 \begin{remark}
@@ -1531,10 +1533,13 @@ Thus we can estimate the error by the last summand of the error in
 			\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
 			\hm^{ d - 1 } |_{ \Sigma_{ j , k } },
 	\end{equation*}
-	which yields that localized on $ \partial_{ \ast } \Omega_{ i } $, we have the necessary convergence $ \abs{ \nabla \psi_{i }^{ \varepsilon } } \to \abs{ \nabla \psi_{ i } } $. Thus we will develop a quantitative version of Reshetnyaks theorem and aply it to our setting.
+	which yields that localized on $ \partial_{ \ast } \Omega_{ i } $, we have 
+	the necessary convergence $ \abs{ \nabla \psi_{i }^{ \varepsilon } } \to 
+	\abs{ \nabla \psi_{ i } } $. Thus we will develop a quantitative version of 
+	Reshetnyaks theorem and apply it to our setting.
 \end{remark}
 
-\begin{proof}
+\begin{proof}[Proof of \Cref{convergence_of_curvature_multiphase}.]
 	Using the same calculations as in the twophase case, we obtain that
 	\begin{align*}
 		& \lim_{ \varepsilon \to 0 }
@@ -1568,7 +1573,8 @@ Thus we can estimate the error by the last summand of the error in
 	\end{align*}
 	Now however, we can not proceed as in the twophase case as explained above. 
 	Instead we rewrite
-	\begin{equation*}
+	\begin{equation}
+		\label{key_equality_for_ptw_estimate}
 		I
 		=
 		\int
@@ -1581,7 +1587,7 @@ Thus we can estimate the error by the last summand of the error in
 			}
 			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 		\dd{ x },
-	\end{equation*}
+	\end{equation}
 	where we define $ N_{ \varepsilon } \coloneqq \nabla u_{ \varepsilon } / \abs{ \nabla u_{ \varepsilon } } $. By the equipartition of energies \Cref{equipartition_of_energies_multiphase} and using that $ \abs{N_{ \varepsilon } } \leq 1 $, we can replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon  } } $. 
 	
 	Summarizing our results, it suffices by \Cref{equipartition_of_energies_multiphase} and rescaling to show for all $ A \in \cont^{ \infty } ( \flattorus ; \mathbb{ R }^{ d \times d } ) $ with $ \abs{ A } \leq 1 $ that
@@ -1665,8 +1671,10 @@ Thus we can estimate the error by the last summand of the error in
 					\dd{ \hm^{ d - 1 } }
 			}
 		\leq
-		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } }.
+		\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } },
 		\end{equation*}
+		where we remind that $ \nu_{ j } $ is the inner unit normal of $ 
+		\Omega_{ i } $.
 	\end{itemize}
 	Let us first assume that we have proven those three claims and show how the desired convergence (\ref{desired_convergence_for_convergence_of_curvature}) follows from them. 
 	We take a partition of unity $ \eta_{ B } $ of the flat torus with respect 
@@ -2081,7 +2089,8 @@ Thus we can estimate the error by the last summand of the error in
 	
 	\begin{proof}[Proof of Claim 2.]
 		Consider the sequence $ ( \mu_{ \varepsilon } )_{ \varepsilon } $ of 
-		Radon measures defined by 
+		Radon measures on $ \flattorus \times \mathbb{ S }^{ d - 1 } $ defined 
+		by 
 		\begin{equation*}
 			\mu_{ \varepsilon }
 			\coloneqq
@@ -2090,9 +2099,8 @@ Thus we can estimate the error by the last summand of the error in
 		\end{equation*}
 		which acts on continuous functions $ \varphi $ through
 		\begin{equation*}
-			\int_{ \flattorus }
-				\int_{ \mathbb{ S }^{ d - 1 } }
-					\varphi ( x , \nu )
+			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+				\varphi ( x , \nu )
 			\dd{ \mu_{ \varepsilon } ( x , \nu ) }
 			=
 			\int_{ \flattorus }
@@ -2343,5 +2351,82 @@ Thus we can estimate the error by the last summand of the error in
 		\end{align*}
 		which finishes the proof.
 	\end{proof}
+
+	\begin{proof}[Proof of Claim 3.]
+		First we notice that since $ \psi_{ i } = \sum_{ j } \sigma_{ i , j } 
+		\mathds{ 1 }_{ \Omega_{ j } } $, we have $ \theta_{ i } = \pm \nu_{ j } 
+		$ on $ \Sigma_{ j , k } $ $ \abs{ \nabla \psi_{ i } }$ almost 
+		everywhere.
+		Additionally using the representation of $ \abs{ \nabla \psi_{ i } } $ 
+		given in 
+		\Cref{rewriting_variation_of_psi_i}, we thus have
+		\begin{align*}
+			&
+			\abs{
+				\int
+					\eta 
+					\inner*{ A }
+					{ \theta_{ i } \otimes \theta_{ i } }
+				\abs{ \nabla \psi_{ i } }
+				-
+				\sum_{ 1 \leq j < k \leq P }
+					\sigma_{ j , k }
+					\int_{ \Sigma_{ j , k } }
+						\eta
+						\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
+					\dd{ \hm^{ d - 1 } }
+			}
+			\\
+			={} &
+			\abs{ 
+				\sum_{ 1 \leq j < k \leq P }
+					\left( 
+						\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
+						-
+						\sigma_{ j , k }
+					\right)
+					\int_{ \Sigma_{ j k  } }
+						\eta
+						\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
+					\dd{ \hm^{ d - 1 } }
+			}
+			\\
+			\leq{} &
+			\sum_{ 1 \leq j < k \leq P }
+				\int_{ \Sigma_{ j , k } }
+					\eta
+					\left(
+						\sigma_{ j , k } - \abs{ \sigma_{ i , j } - \sigma_{ i 
+						, k } }
+					\right)
+				\dd{ \hm^{ d - 1 } }
+			\\
+			={} &
+			\energy ( u ; \eta )
+			-
+			\int
+				\eta
+			\abs{ \nabla \psi_{ i } },
+		\end{align*}
+		where for the inequality, we used that by the triangle inequality for 
+		the surface tensions, we have
+		$ \abs{ \sigma_{ i , j } - \sigma_{ i , k } } \leq \sigma_{ j , k } $.
+	\end{proof}
+	This finishes the proofs for the three claims. Lastly we notice that we 
+	obtain the pointwise in time bound (\ref{pointwise_estimate_for_curvature}) 
+	from the rewritten term (\ref{key_equality_for_ptw_estimate}).
 \end{proof}
+
+\subsection{Convergence of the velocity term}
+
+As in the previous proof for the convergence of the curvature term we want to 
+localize and argue as in the twophase case. Moreover we remember from the 
+twophase case that we had to freeze the unit normal. However we now have the 
+important difference that $ \nabla u_{ \varepsilon } $ describes both the 
+change in physical space (domain) and the state space (codomain). Since the 
+supposed limit $ \nu_{ i } $ only describes the change in physical space, we 
+should only freeze the normal in this direction. Using the equipartition of 
+energies \Cref{equipartition_of_energies_multiphase} which tells us that $ 
+\varepsilon / 2 \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ roughly equals $ 1 / 
+\varepsilon W ( u_{ \varepsilon } ) $, we come up with the following definition.
  
