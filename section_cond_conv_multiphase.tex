@@ -3051,7 +3051,7 @@ We are now in the position to prove the main result
 			\dd{ t }
 		=
 		\sum_{ 1 \leq i < j \leq P }
-			\sigma_{ i , j }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 				\int_{ \Sigma_{ i , j } }
 					\inner*{ \xi }{ \nu_{ i } }
@@ -3074,7 +3074,7 @@ We are now in the position to prove the main result
 	covering $ \mathcal{ B }_{ r } $. Then for any parameter $ \alpha \in ( 0 , 
 	1 ) $, we compute that by \Cref{convergence_of_velocity_multiphase}, we have
 	\begin{align*}
-		&
+		A \coloneqq&
 		\limsup_{ \varepsilon \to 0 }
 			\abs{
 				\int_{ 0 }^{ T }
@@ -3130,7 +3130,187 @@ We are now in the position to prove the main result
 						\tilt_excess_{ i , j } ( \nu^{ \ast } ; g_{ k } \rho_{ 
 						B } , u )
 						+
-						\alpha \mu ( g_{ k } \rho_{ B } ).
+						\alpha \mu ( g_{ k } \rho_{ B } )
 	\end{align*}
+	Since no derivative falls on $ g_{ k } $, this term converges as $ \delta $ 
+	tends to zero to
+	\begin{align}
+		\label{error_for _convergence_of_velocity}
+		\norm{ \xi }_{ \mathrm{sup} }
+		\alpha \mu \left( [ 0 , T ] \times \flattorus \right)
+		+
+		\norm{ \xi }_{ \mathrm{sup} }
+		\frac{ 1 }{ \alpha }
+		\sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				& \min_{ i \neq j }
+					\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
+						\int_{ T_{ k - 1 } }^{ T_{ k } }
+							\int
+								\rho_{ B } 
+								\abs{ \nu_{ i } - \nu^{ \ast } }^{ 2 }
+							\abs{ \nabla \chi_{ i } }
+							\\
+							\notag
+							+ &
+							\int
+								\rho_{ B }
+								\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
+							\abs{ \nabla \chi_{ j } }
+							+ 
+							\sum_{ k \notin \{ i , j \} }
+								\int
+									\rho_{ B }
+								\abs{ \nabla \chi_{ k } }
+						\dd{ t }.
+	\end{align}
+	Our problem is now that we would like to take the majority phase 
+	approximative inner normal dependent on time, which equates to pulling both 
+	minima inside the time integral. If our partition $ \chi $ is smooth, then 
+	by choosing partitions $ ( T_{ k } )_{ k = 1 , \dotsc, K } $ whose width 
+	goes to zero, this would be possible. Since our partition will in general 
+	not be smooth, we instead choose a smooth approximation $ \chi^{ n } $ 
+	which converges to $ \chi $ with respect to the strict metric as $ n $ 
+	tends to infinity. We estimate 
+	that for every $ 1 \leq i \leq P $, every unit vector $ \nu^{ \ast } \in 
+	\mathbb{ S }^{ d - 1 } $, fixed index $ k $ and ball $ B $, we have that 
+	when replacing $ \chi $ with $ \chi^{ n } $ in  a summand of equation 
+	(\ref{error_for 
+	_convergence_of_velocity}), we get an error of size at most
+	\begin{align*}
+		 & \int_{ T_{ k - 1 } }^{ T_{ k } }
+		 	\abs{ 
+		 		\int
+		 			\rho_{ B }
+		 			\abs{
+		 				\nu_{ i } - \nu^{ \ast }
+		 			}^{ 2 }
+	 			\abs{ \nabla \chi_{ i } }
+	 			-
+	 			\int
+	 				\rho_{ B }
+	 				\abs{ \nu_{ i }^{ n } - \nu^{ \ast } }^{ 2 }
+	 			\abs{ \nabla \chi_{ i }^{ n } }
+	 		}
+ 			\\
+ 			& +
+ 			\abs{
+ 				\int
+ 					\rho_{ B } 
+ 					\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
+ 				\abs{ \nabla \chi_{ j } }
+ 				-
+ 				\int
+ 					\rho_{ B }
+ 					\abs{ \nu_{ j }^{ n } + \nu^{ \ast } }^{ 2 }
+ 				\abs{ \nabla \chi_{ j }^{ n } }
+ 			}
+ 			+
+ 			\sum_{ l \notin \{ i , j \} }
+ 				\abs{
+ 					\int
+ 						\rho_{ B }
+ 					\abs{ \nabla \chi_{ l } }
+ 					-
+ 					\int
+ 						\rho_{ B }
+ 					\abs{ \nabla \chi_{ l }^{ n } }
+ 				}
+ 		\dd{ t }
+ 		\\
+ 		\lesssim{} &
+ 		\sum_{ l = 1 }^{ P }
+ 			\int_{ T_{ k - 1 } }^{ T_{ k } }
+ 				\abs{ 
+ 					\int
+ 						\rho_{ B }
+ 					\abs{ \nabla \chi_{ l } }
+ 					-
+ 					\int
+ 						\rho_{ B }
+ 					\abs{ \nabla \chi_{ l }^{ n } }
+ 				}
+ 				+
+ 				\abs{ 
+ 					\int
+ 						\rho_{ B }
+ 						\nu_{ l }
+ 					\abs{ \nabla \chi_{ l } }
+ 					- 
+ 					\int
+ 						\rho_{ B }
+ 						\nu_{ l }^{ n }
+ 					\abs{ \nabla \chi_{ l }^{ n } }
+ 				}
+ 			\dd{ t }.
+	\end{align*}
+	Here $ nu_{ i }^{ n }$ is defined by $ \nabla \chi_{ i }^{ n } / \abs{ 
+	\nabla \chi_{ i }^{ n } } $, and for the inequality we used that $ \abs{ 
+	\theta - \gamma }^{ 2 } = 2 - \inner*{ \theta }{ \gamma } $ for unit 
+	vectors $ \theta $ and $ \gamma $. Thus when replacing $ \chi $ by $ \chi^{ 
+	n } $ in (\ref{error_for _convergence_of_velocity}), we get an error of size
+	\begin{equation*}
+		\frac{ 1 }{ \alpha }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+			\int_{ 0 }^{ T }
+				\sum_{ 1 \leq l \leq P }
+					\abs{ 
+						\int
+							\eta_{ B }
+						\abs{ \nabla \chi_{ l } }
+						-
+						\int
+							\eta_{ B }
+						\abs{ \nabla \chi_{ l }^{ n } }
+					}
+					+
+					\abs{
+						\int
+							\eta_{ B }
+							\nu_{ l } 
+						\abs{ \nabla \chi_{ l } }
+						-
+						\int
+							\eta_{ B }
+							\nu_{ l }^{ n }
+						\abs{ \nabla \chi_{ l }^{ n } }
+					}
+			\dd{ t },
+	\end{equation*}
+	which can be made arbitrarily small independent of the partition of $ [ 0 , 
+	T ] $ we have chosen when we let $ n $ tend to infinity.
+	Since $ \chi^{ n } $ is smooth, we can now make the width of our partition 
+	arbitrarily small and therefore obtain that
+	\begin{align*}
+		A 
+		\lesssim{} &
+		\norm{ \xi }_{\mathrm{sup}}
+		\alpha \mu \left( [ 0 , T ] \times \flattorus \right)
+		\\
+		& +
+		\norm{ \xi }_{ \mathrm{sup}}
+		\frac{ 1 }{ \alpha }
+		\int_{ 0 }^{ T }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\min_{ i \neq j }
+					\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
+						\int
+							\eta_{ B }
+							\abs{ \nu_{ i }^{ n } - \nu^{ \ast } }^{ 2 }
+						\abs{ \nabla \chi_{ i }^{ n } }
+						+
+						\int
+							\eta_{ B }
+							\abs{ \nu_{ j }^{ n } + \nu^{ \ast } }^{ 2 }
+						\abs{ \nabla \chi_{ j }^{ n } }
+						+
+						\sum_{ k \notin \{ i , j \} }
+							\int
+								\eta_{ B }
+							\abs{ \nabla \chi_{ k }^{ n } }
+		\dd{ t }.	
+	\end{align*}
+	Now letting $ n $ tend to infinity yields by the dominated convergence 
+	theorem 
 \end{proof}
  
