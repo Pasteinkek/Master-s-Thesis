@@ -893,6 +893,7 @@ Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u 
 With these estimate, we can now prove the existence of normal velocities $ V_{ i } $ for the evolving sets $ \Omega_{ i } $ if we assume that the time-integrated energies converges, written out as in (\ref{energy_convergence}), but now for the multiphase energy given by (\ref{definition_of_multiphase_energy}).
 
 \begin{proposition}
+	\label{existence_and_square_integrability_of_velocities_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} and under the energy convergence assumption (\ref{energy_convergence}), we have that for every $ 1 \leq i \leq P $, the signed measure $ \partial_{ t } \chi_{ i } $ is absolutely continuous with respect to the measure $ \abs{ \nabla \chi_{i } } \dd{ t } $ and the corresponding density $ V_{ i } $ is square integrable with the corresponding estimate
 	\begin{equation}
 		\label{velocity_l2_estimate}
@@ -1300,7 +1301,53 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 	\begin{equation*}
 		(V_{ i } - H_{ i , j } ) \inner*{ \xi }{ \nu_{ i } },
 	\end{equation*}
-	which is zero by equation (\ref{v_is_equal_to_h}) combined with the assumption (\ref{mobilites_inverse_of_surface_tensions}).
+	which is zero by equation (\ref{v_is_equal_to_h}) combined with the 
+	assumption (\ref{mobilites_inverse_of_surface_tensions}).
+	
+	Our main goal will be to arrive at a similar conditional convergence result 
+	to multiphase mean curvature flow in the sense of the above definition. 
+	This is captured by the following.
+	
+	\begin{theorem}
+		\label{convergence_to_multiphase_mcf}
+		Let a smooth multiwell potential $ W \colon \mathbb{ R }^{ N } \to [ 0, 
+		\infty ) $ satisfy the assumptions 
+		(\ref{polynomial_growth})-(\ref{perturbation bound}). Let $ T < \infty 
+		$ be an arbitrary finite time horizon. Given a sequence of initial data 
+		$ u_{ \varepsilon }^{ 0 } \colon \flattorus \to \mathbb{ R }^{ N } $ 
+		approximating a partition 
+		$ \chi^{ 0 } \in \bv \left( \flattorus ; \{ 0 , 1 \}^{ P } \right) $ 
+		in the sense that 
+		$ u_{ \varepsilon }^{ 0 } \to u^{ 0 } =  \sum_{ 1 \leq i \leq P } 
+		\chi_{ i }^{ 0 } \alpha_{ i } $ 
+		holds pointwise almost everywhere and 
+		\begin{equation*} 
+		\energy_{ 0 } 
+		\coloneqq 
+		\energy ( \chi^{ 0 } ) 
+		= 
+		\lim_{ \varepsilon \to 0 } 
+			\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) 
+		< 
+		\infty,
+		\end{equation*}
+		we have that for 
+		some subsequence of solutions to the Allen--Cahn equation
+		(\ref{allen_cahn_eq}) $ u_{\varepsilon } $ with initial datum $ u_{ 
+		\varepsilon }^{ 0 } $, there exists a time-dependent partition $ \chi $ 
+		with 
+		$ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
+		\right) $ and
+		$ \chi 
+		\in \cont \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus ;  \{ 0 , 1 
+		\}^{ P } \right) \right) $ such that $ u_{ \varepsilon } $ converges to 
+		$ u \coloneqq \sum_{ 1 \leq i \leq P } \chi_{ i } \alpha_{ i } $ almost 
+		everyhwere. Moreover $ u $ assumes the initial data $ u^{ 0 } $ in $ 
+		\cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we 
+		additionally assume that the 
+		time-integrated energies converge (\ref{energy_convergence}), then $ 
+		\chi $ moves by mean curvature in the sense of \Cref{motion_by_mcv}.
+	\end{theorem} 
 	
 \subsection{Localization estimates}
 \label{section_localization_estimates}
@@ -1370,9 +1417,15 @@ To formulate this rigorously let $ r > 0 $ and define the covering $ \beta_{ r }
 		c \in \mathcal{ L }_{ r }
 	\right\},
 \end{equation*}
-where the set $ \mathcal{ L }_{ r } $ is given by $ \mathcal{ L }_{ r } \coloneqq \flattorus \cap (r/\sqrt{ d }) \mathbb{ Z }^{ d } $. Moreover let $ \rho_{ B } $ be a smooth cutoff for the ball $ B $ with support in the ball with the same center, but double the radius.
+where the set of centers $ \mathcal{ L }_{ r } $ is given by $ \mathcal{ L }_{ 
+r } \coloneqq \flattorus \cap (r/\sqrt{ d }) \mathbb{ Z }^{ d } $. Moreover let 
+$ \rho_{ B } $ be a smooth cutoff for the ball $ B $ with support in the ball 
+with the same center, but double the radius.
 
-Additionally to choosing a majority phase, we can also argue that along the chosen majority phase, we have a local flatness. Thus we may freeze approximate the outer unit normal up to an arbitrarily small error. This is captured by the following Lemma.
+Additionally to choosing a majority phase, we can also argue that along the 
+chosen majority phase, we have a local flatness. Thus we may approximate the 
+outer unit normal up to an arbitrarily small error by a constant unit vector. 
+This is captured by the following Lemma.
 
 \begin{lemma}
 	\label{localization_lemma_with_normals}
@@ -1424,7 +1477,11 @@ This estimates implies also the smallness of
 				\rho_{ B }
 			\abs{ \nabla \psi_{ i } }
 \end{equation*}
-in the same sense as in the above \Cref{localization_lemma_with_normals}. Notice that the equality follows for example from \Cref{supremum_of_abs_nabla_psi_i_is_energy}. The smallness follows since by \Cref{rewriting_variation_of_psi_i}, we have for every $ i \neq j $ that
+in the same sense as in the above \Cref{localization_lemma_with_normals}. 
+Notice that the equality follows for example from 
+\Cref{supremum_of_abs_nabla_psi_i_is_energy}, which yields that $ \abs{ \nabla 
+\psi_{ i } } \leq \energy ( \chi ; \cdot )$. The smallness follows since by 
+\Cref{rewriting_variation_of_psi_i}, we have for every $ i \neq j $ that
 \begin{align*}
 	&
 	\energy ( \chi ; \rho_{ B } ) 
@@ -2517,7 +2574,7 @@ of the limit.
 			\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
 			\varepsilon } ) 
 			\lesssim
-			\tilt_excess^{ i , j } ( \nu^{ \ast } ; \eta , \chi ).
+			\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta , \chi ).
 	\end{equation*}
 \end{lemma}
 
@@ -2713,6 +2770,7 @@ Using \Cref{approximate_tilt_excess_estimated_in_limit_by_tilt_excess}, we can
 now prove the convergence of the velocity term.
 
 \begin{proposition}
+	\label{convergence_of_velocity_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} and under 
 	the assumption that the time-integrated energies converge 
 	(\ref{energy_convergence}), there exists a finite Radon measure $ \mu $ on 
@@ -2744,17 +2802,19 @@ now prove the convergence of the velocity term.
 		\norm{ \xi }_{ \mathrm{sup} }
 		\left(
 			\frac{ 1 }{ \alpha } \tilt_excess_{ i , j } \left( \nu^{ \ast } ; 
-			\eta , u \right) 
-			+ \alpha \mu ( \eta ) 
+			\rho , u \right) 
+			+ \alpha \mu ( \rho ) 
 		\right).
 	\end{align*}
-	Here $ \eta \in \cont^{ \infty } \left( [ 0 , T ] \times \flattorus ;  
+	Here $ \rho \in \cont^{ \infty } \left( [ 0 , T ] \times \flattorus ;  
 	\mathbb{ R }^{ d } 
 	\right) $ is any 
 	smooth cutoff for the support of $ \xi $.
 \end{proposition}
 
 \begin{proof}
+	On a technical note, we first pass to a non-relabelled subsequence such 
+	that the limes superior becomes the regular limit.
 	As in the twophase case, we first choose a majority phase and then freeze 
 	the approximate normal $ \varepsilon \nabla u_{ \varepsilon } $ by 
 	replacing it with $ - \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
@@ -2803,13 +2863,14 @@ now prove the convergence of the velocity term.
 			\alpha 
 			\int_{ 0 }^{ T }
 				\int
-					\eta \varepsilon 
+					\rho \varepsilon 
 					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
 				\dd{ x }
 			\dd{ t }
 			+
 			\frac{ 1 }{ \alpha }
-			\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \eta , u_{ 
+			\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \rho , 
+			u_{ 
 			\varepsilon }  \right)
 		\right).
 	\end{align*}
@@ -2887,27 +2948,189 @@ now prove the convergence of the velocity term.
 		\sum_{ k \notin \{ i , j \} }
 			\int_{ 0 }^{ T }
 				\int
-					\eta
+					\rho
 					\abs{ V_{ k } }
 				\abs{ \nabla \chi_{ k } }
 			\dd{ t }
 		+
-		\sigma_{ i j }
 		\abs{
 			\int_{ 0 }^{ T }
-				\int
-					\inner*{ \xi }{ \nu^{ \ast } }
-					V_{ j }
-				\abs{ \nabla \chi_{ j } }
-			\dd{ t }
-			+
-			\int_{ 0 }^{ T }
 				\int_{ \Sigma_{ i j } }
-					\inner*{ \xi }{ \nu_{ i } }
+					\left(
+						\inner*{ \xi }{ \nu^{ \ast } }
+						+
+						\inner*{ \xi }{ \nu_{ i } }
+					\right)
 					V_{ i }
 				\dd{ \hm^{ d -1 } }
 			\dd{ t }
 		}.
+	\end{align*}
+	By applying Young's inequality twice and using that on $ \Sigma_{ i , j } 
+	$, we have $ V_{ 
+	i } = - V_{ j } $, we furthermore estimate via
+	\begin{align*}
+		& \norm{ \xi }_{ \mathrm{sup} }
+		\left(
+			\sum_{ k \notin \{ i , j \} }
+				\alpha 
+				\int_{ 0 }^{ T }
+					\int
+						\rho
+						\abs{ V_{ k } }^{ 2 }
+					\abs{ \nabla \chi_{ k } }
+				\dd{ t }
+				+
+				\frac{ 1 }{ \alpha }
+				\int_{ 0 }^{ T }
+					\int
+						\rho
+					\abs{ \nabla \chi_{ k } }
+				\dd{ t }
+			+
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i , j } }
+					\abs{ V_{ i } }
+					\abs{ \nu^{ \ast } - \nu_{ i } }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }
+		\right)
+		\\
+		\leq{} &
+		\norm{ \xi }_{\mathrm{sup} }
+		\left(
+			\alpha
+			\sum_{ 1 \leq k \leq P }
+				\int_{ 0 }^{ T }
+					\int
+						\rho
+						\abs{ V_{ k } }^{ 2 }
+					\abs{ \nabla \chi_{ k } }
+				\dd{ t}
+			+
+			\frac{ 1 }{ \alpha }
+			\tilt_excess_{ i j } ( \nu^{ \ast } ; \rho , u )
+		\right).
+	\end{align*}
+	We therefore define the measure $ \mu $ through
+	\begin{equation*}
+		\mu
+		\coloneqq
+		\sum_{ 1 \leq k \leq P }
+			\abs{ V_{ k } }^{ 2 }
+			\abs{ \nabla \chi_{ k } }
+			\dd{ t }
+		+
+		\mu_{ 2 },
+	\end{equation*}
+	where $ \mu_{ 2 } $ is the weak $ \ast $ limit of some non-relabeled 
+	subsequence of the Radon measures $ \varepsilon \abs{ \partial_{ t } u_{ 
+	\varepsilon } }^{ 2 } \dd{ x } \dd{ t } $, which stay bounded due to the 
+	energy dissipation inequality (\ref{energy_dissipation_sharp}).
+	This defines a finite Radon measure on $ [ 0 , T ] \times \flattorus $ by 
+	the square-integrability of the velocities observed in 
+	\Cref{existence_and_square_integrability_of_velocities_multiphase} and 
+	thus, the proof is complete.
+\end{proof}
+
+We are now in the position to prove the main result 
+\Cref{convergence_to_multiphase_mcf}.
+
+\begin{proof}[Proof of \Cref{convergence_to_multiphase_mcf}.]
+	Collecting all previous results (HIER AUSFÜHREN VERMUTLICH; EIN BISSCHEN 
+	FAUL SO), we see that the only thing left to show is the full convergence 
+	of the velocity term, which states that
+	\begin{equation*}
+		\lim_{ \varepsilon \to 0 }
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon
+					\inner*{ \diff u_{ \varepsilon } \xi }{ \partial_{ t } u_{ 
+					\varepsilon } }
+				\dd{ x }
+			\dd{ t }
+		=
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i , j }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i , j } }
+					\inner*{ \xi }{ \nu_{ i } }
+					V_{ i }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }.
+	\end{equation*} 
+	The key problem we are facing is that the localization estimate 
+	\Cref{localization_lemma_with_normals} states that if we can choose the 
+	majority phase for a fixed time, then we expect smallness. However we see 
+	that the definition of the tilt-excess yields only a time-integrated error. 
+	Thus we want to take a partition of unity also in time and control the 
+	error.
+	
+	To this end, let $ 0 = T_{ 0 } < \dotsc < T_{ k } = T $ be a partition of $ 
+	[ 0 , T ] $ and for a given $ \delta > 0 $, let $ ( g_{ k } )_{ k = 1 , 
+	\dotsc, K } $ be a partition of unity with respect to the intervals 
+	$ \left( ( T_{ k - 1 } - \delta , T_{ k } + \delta ) \right) $. As before 
+	let $ \eta_{ B } $ be a partition of unity in space with respect to the 
+	covering $ \mathcal{ B }_{ r } $. Then for any parameter $ \alpha \in ( 0 , 
+	1 ) $, we compute that by \Cref{convergence_of_velocity_multiphase}, we have
+	\begin{align*}
+		&
+		\limsup_{ \varepsilon \to 0 }
+			\abs{
+				\int_{ 0 }^{ T }
+					\int
+						\varepsilon
+						\inner*{ \diff u_{ \varepsilon } \xi }{ \partial_{ t } 
+						u_{ \varepsilon } }
+					\dd{ x }
+				\dd{ t }
+				-
+				\sum_{ 1 \leq i < j \leq P }
+					\sigma_{ i j }
+					\int_{ 0 }^{ T }
+						\int_{ \Sigma_{ i j } }
+							\inner*{ \xi }{ \nu_{ i } }
+							V_{ i }
+						\dd{ \hm^{ d -1 } }
+					\dd{ t }
+			}
+		\\
+		\leq{} &
+		\sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\limsup_{ \varepsilon \to 0 }
+					\abs{
+						\int_{ 0 }^{ T }
+							\int
+								\varepsilon
+								g_{ k } \eta_{ B }
+								\inner*{ \diff u_{ \varepsilon } \xi }{ 
+								\partial_{ t } u_{ \varepsilon } }
+							\dd{ x }
+						\dd{ t }
+						-
+						\sum_{ 1 \leq i < j \leq P }
+							\sigma_{ i j }
+							\int_{ 0 }^{ T }
+								\int_{ \Sigma_{ i j } }
+									g_{ k } \eta_{ B }
+									\inner*{\xi }{ \nu_{ i } }
+									V_{ i }
+								\dd{ \hm^{ d - 1 } }
+							\dd{ t }					
+					}
+		\\
+		\lesssim{} &
+		\norm{ \xi }_{ \mathrm{sup} }
+		\sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\min_{ i \neq j }
+					\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
+						\frac{ 1 }{ \alpha }
+						\tilt_excess_{ i , j } ( \nu^{ \ast } ; g_{ k } \rho_{ 
+						B } , u )
+						+
+						\alpha \mu ( g_{ k } \rho_{ B } ).
 	\end{align*}
 \end{proof}
  

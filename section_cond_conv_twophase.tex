@@ -736,7 +736,33 @@ We start by definining a BV-formulation for motion by mean curvature.
 Our main goal in this section is now to show that the function $ \chi $ we have found in \Cref{initial_convergence_result} moves my mean curvature. Thus our goal is to prove the following Theorem.
 \begin{theorem}
 	\label{convergence_to_twophase_mcf}
-	Let a smooth doublewell potential $ W \colon \mathbb{ R } \to [ 0, \infty ) $ satisfy the assumptions (\ref{polynomial_growth})-(\ref{perturbation bound}). Let $ T < \infty $ be an arbitrary finite time horizon. Given a sequence of initial data $ u_{ \varepsilon }^{ 0 } \colon \flattorus \to \mathbb{ R } $ such that $ u_{ \varepsilon }^{ 0 } \to u^{ 0 } = ( 1- \chi^{ 0} ) \alpha + \chi^{ 0 } \beta $ and $ \limsup_{ \varepsilon \to 0 } \energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) < \infty $, we have that that  for some subsequence of solutions to (\ref{allen_cahn_eq}) $ u_{\varepsilon } $, there exists a pointwise almost everywhere limit $ u = ( 1 - \chi ) \alpha + \chi \beta $ with $ \chi \in \bv \left( ( 0, T ) \times \flattorus ; \{ 0 , 1 \} \right) $ which assumes the initial data in $ \cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we additionally assume that the time-integrated energies converge (\ref{energy_convergence}), then $ \chi $ moves by mean curvature in the sense of \Cref{motion_by_mcv}.
+	Let a smooth doublewell potential $ W \colon \mathbb{ R } \to [ 0, \infty ) 
+	$ satisfy the assumptions (\ref{polynomial_growth})-(\ref{perturbation 
+	bound}). Let $ T < \infty $ be an arbitrary finite time horizon. Given a 
+	sequence of initial data $ u_{ \varepsilon }^{ 0 } \colon \flattorus \to 
+	\mathbb{ R } $ with $ \chi^{ 0 } \in \bv \left( \flattorus ; \{ 0 , 1 \} 
+	\right) 
+	$ such that $ u_{ \varepsilon }^{ 0 } \to u^{ 0 } = ( 1- \chi^{ 0} ) \alpha 
+	+ \chi^{ 0 } \beta $ pointwise almost everyhwere and
+	\begin{equation*}
+		\energy_{ 0 }
+		\coloneqq
+		\energy ( \chi^{ 0 } )
+		=
+		\lim_{ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } )
+		< 
+		\infty,
+	\end{equation*}
+	 we have that that for some subsequence of solutions to 
+	 (\ref{allen_cahn_eq}) $ u_{\varepsilon } $, there exists a pointwise 
+	 almost everywhere limit $ u = ( 1 - \chi ) \alpha + \chi \beta $ with $ 
+	 \chi \in \bv \left( ( 0, T ) \times \flattorus ; \{ 0 , 1 \} \right) $ and
+	 $ \chi \in \cont \left( [ 0 , T ] ; \lp^{ 2 } (\flattorus ; \{ 0 , 1 \} ) 
+	 \right) $ which assumes the initial data in $ \cont \left( [ 0, T ] ; 
+	 \lp^{ 2 }( \flattorus ) \right) $. If we additionally assume that the 
+	 time-integrated energies converge (\ref{energy_convergence}), then $ \chi 
+	 $ moves by mean curvature in the sense of \Cref{motion_by_mcv}.
 \end{theorem} 
 
 Looking at equation (\ref{ac_weak_equation}) which reads
