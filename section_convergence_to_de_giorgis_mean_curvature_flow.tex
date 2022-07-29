@@ -1,0 +1,151 @@
+\section{Conditional convergence to De Giorgi's mean curvature flow}
+
+In this section, we shall state our solution concept and prove convergence to 
+the aforementioned.
+
+\subsection{Definition of $ \bv $-solutions to De Giorgi's mean curvature flow}
+
+\begin{definition}[$\bv$-solution to  De Giorgi's multiphase mean curvature 
+flow]
+	\label{de_giorgi_solution_to_mmcf}
+	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
+	surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus 
+	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq ( \chi^{ 0 } ) $ and 
+	$ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $. We say that
+	\begin{equation*}
+		\chi \in \cont \left(
+		[ 0 , T ]
+		;
+		\lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}^{ P } \right)
+		\right)
+	\end{equation*}
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ and $ \sum_{ i = 1 
+	}^{ P } \chi_{ i } = \sum_{ i = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ i } } = 
+	1  $ \emph{is a } $\bv$-\emph{solution to De Giorgi's mean 
+	curvature flow with initial data} $ \chi^{ 0 } $ \emph{and surface 
+	tensions} $ \sigma $ if the following holds. 
+	\begin{enumerate}
+		\item 
+		For all $ 1 \leq i \leq P $, there exist normal 
+		velocities $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } 
+		) $ 
+		of the interfaces 
+		in the sense that
+		\begin{equation*}
+			\partial_{ t } \chi_{ i }
+			=
+			V_{ i } \abs{ \nabla \chi_{ i } } \dd{ t }
+		\end{equation*}
+		holds in the distributional sense on $ ( 0 , T ) \times \flattorus $.
+		
+		\item 
+		There exist a mean curvature $ H \in 
+		\lp^{ 2 } ( \sum_{ 1\leq i < j \leq P } \dd{ \hm^{ d -1 }|_{ \Sigma_{ i 
+		, j } } } \dd{ t } ) $ which satisfies
+		\begin{equation*}
+			\sum_{ 1 \leq i < j \leq P }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i , j } }
+					H
+					\inner*{ \xi }{ \nu_{ i } }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }
+			=
+			-
+			\sum_{ 1 \leq i < j \leq P }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i , j } }
+					\inner*{
+						\diff \xi }
+					{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }
+		\end{equation*}
+		for all test vector fields 
+		$ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left(
+			( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d }
+		\right) $,
+		where $ \nu_{ i } \coloneqq \nabla \chi_{ i } / \abs{ \nabla \chi_{ i } 
+		} $ are the inner unit normals and $ \Sigma_{ i , j } \coloneqq 
+		\partial_{ \ast } \Omega_{ i } \cap \partial_{ \ast } \Omega_{ j } $
+		is the $ (i, j )$-th interface.
+		
+		\item 
+		The partition $ \chi $ satisfies a De Giorgi type optimal energy 
+		dissipation inequality in the sense that for almost every time $ 0 < T' 
+		< T $, we have
+		\begin{equation*}
+			\energy ( \chi ( T' ) )
+			+
+			\frac{ 1 }{ 2 }
+			\sum_{ 1 \leq i < j \leq P }
+				\sigma_{ i , j }
+				\int_{ 0 }^{ T' }
+					\int_{ \Sigma_{ i , j } }
+						V_{ i }^{ 2 }
+						+
+						H^{ 2 }
+					\dd{ \hm^{ d - 1 } }
+				\dd{ t }
+			\leq
+			\energy ( \chi^{ 0 } ).
+		\end{equation*}
+		
+		\item
+		The initial data is achieved in the space $ \cont \left( [ 0 , T ] ; 
+		\lp^{ 2 } ( \flattorus ) \right) $.
+	\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+	\label{convergence_to_de_giorgis_multiphase_mcf}
+	Let a smooth multiwell potential $ W \colon \mathbb{ R }^{ N } \to [ 0, 
+	\infty ) $ satisfy the assumptions 
+	(\ref{polynomial_growth})-(\ref{perturbation bound}). Let $ T < \infty 
+	$ be an arbitrary finite time horizon. Given a sequence of initial data 
+	$ u_{ \varepsilon }^{ 0 } \colon \flattorus \to \mathbb{ R }^{ N } $ 
+	approximating a partition 
+	$ \chi^{ 0 } \in \bv \left( \flattorus ; \{ 0 , 1 \}^{ P } \right) $ 
+	in the sense that 
+	$ u_{ \varepsilon }^{ 0 } \to u^{ 0 } =  \sum_{ 1 \leq i \leq P } 
+	\chi_{ i }^{ 0 } \alpha_{ i } $ 
+	holds pointwise almost everywhere and 
+	\begin{equation*} 
+		\energy_{ 0 } 
+		\coloneqq 
+		\energy ( \chi^{ 0 } ) 
+		= 
+		\lim_{ \varepsilon \to 0 } 
+		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) 
+		< 
+		\infty,
+	\end{equation*}
+	we have that for 
+	some subsequence of solutions to the Allen--Cahn equation
+	(\ref{allen_cahn_eq}) $ u_{\varepsilon } $ with initial datum $ u_{ 
+		\varepsilon }^{ 0 } $, there exists a time-dependent partition $ \chi $ 
+	with 
+	$ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
+	\right) $ and
+	$ \chi 
+	\in \cont \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus ;  \{ 0 , 1 
+	\}^{ P } \right) \right) $ such that $ u_{ \varepsilon } $ converges to 
+	$ u \coloneqq \sum_{ 1 \leq i \leq P } \chi_{ i } \alpha_{ i } $ almost 
+	everyhwere. Moreover $ u $ assumes the initial data $ u^{ 0 } $ in $ 
+	\cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we 
+	additionally assume that the 
+	time-integrated energies converge (\ref{energy_convergence}), then $ 
+	\chi $ is a $ \bv $-solution to De Giorgis mean curvature flow in the sense 
+	of 
+	\Cref{de_giorgi_solution_to_mmcf}.
+\end{theorem} 
+
+This result is similar to \Cref{convergence_to_multiphase_mcf} and we only need 
+to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
+
+\begin{proof}
+	Let us for simplicity first consider the twophase case. The idea of the 
+	proof is that we already have an optimal energy dissipation inequality 
+\end{proof}
+
+

@@ -251,6 +251,86 @@
       \verb 10.1017/S030821050002504X
       \endverb
     \endentry
+    \entry{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}{article}{}
+      \name{author}{2}{}{%
+        {{hash=584e07f04a7eb746c5dbf39a82649fd6}{%
+           family={Hensel},
+           familyi={H\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6a64258e1e649779293a50aff43794f9}{%
+           family={Laux},
+           familyi={L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{6c73efb7b71b42309a445dcf312ab853}
+      \strng{fullhash}{6c73efb7b71b42309a445dcf312ab853}
+      \strng{bibnamehash}{6c73efb7b71b42309a445dcf312ab853}
+      \strng{authorbibnamehash}{6c73efb7b71b42309a445dcf312ab853}
+      \strng{authornamehash}{6c73efb7b71b42309a445dcf312ab853}
+      \strng{authorfullhash}{6c73efb7b71b42309a445dcf312ab853}
+      \field{labelalpha}{HL21}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A new varifold solution concept for mean curvature flow: Convergence of the Allen-Cahn equation and weak-strong uniqueness}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2109.04233
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2109.04233
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2109.04233
+      \endverb
+      \keyw{Analysis of PDEs (math.AP),Differential Geometry (math.DG),FOS: Mathematics,FOS: Mathematics,53E10 (primary),49Q20,35K57,35Q49,28A75}
+    \endentry
+    \entry{laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6a64258e1e649779293a50aff43794f9}{%
+           family={Laux},
+           familyi={L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=73f809e0604056d74ccfe418e0a216d7}{%
+           family={Lelmi},
+           familyi={L\bibinitperiod},
+           given={Jona},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{bfff68487d1faf232414a8fd861fb42d}
+      \strng{fullhash}{bfff68487d1faf232414a8fd861fb42d}
+      \strng{bibnamehash}{bfff68487d1faf232414a8fd861fb42d}
+      \strng{authorbibnamehash}{bfff68487d1faf232414a8fd861fb42d}
+      \strng{authornamehash}{bfff68487d1faf232414a8fd861fb42d}
+      \strng{authorfullhash}{bfff68487d1faf232414a8fd861fb42d}
+      \field{labelalpha}{LL21}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{De Giorgi's inequality for the thresholding scheme with arbitrary mobilities and surface tensions}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2101.11663
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2101.11663
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2101.11663
+      \endverb
+      \keyw{Analysis of PDEs (math.AP),FOS: Mathematics,FOS: Mathematics,35A15}
+    \endentry
     \entry{luckhaus_modica_gibbs_thompson_relation}{article}{}
       \name{author}{2}{}{%
         {{hash=0b17157ebcbc743cb4fc3392c47a0099}{%

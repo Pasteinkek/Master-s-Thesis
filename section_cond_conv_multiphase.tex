@@ -492,7 +492,10 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 		\leq
 		\energy_{ 0 }
 	\end{equation}
-	and for all $ 1 \leq i \leq P $ the compositions $ \phi_{ i } \circ u_{ \varepsilon } $ are uniformly bounded in $ \bv ( ( 0 , T ) \times \flattorus ) $ and converge to $ \phi_{ i } \circ u $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus $. 
+	and for all $ 1 \leq i \leq P $ the compositions $ \phi_{ i } \circ u_{ 
+	\varepsilon } $ are uniformly bounded in $ \bv ( ( 0 , T ) \times 
+	\flattorus ) $ and converge to $ \phi_{ i } \circ u $ in $ \lp^{ 1 } \left( 
+	( 0 , T ) \times \flattorus \right) $. 
 \end{proposition}
 
 \begin{remark}
@@ -733,9 +736,12 @@ Collecting our observations, we can finish our arguments.
 	The last inequality is due the energy dissipation inequality (\ref{energy_dissipation_sharp}).
 \end{proof}
 
-Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u $. This will let us prove that $ u $ achieves to initial data (and the existence of normal velocities?).
+Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u 
+$. This will let us prove that $ u $ achieves its initial data continuously in 
+$ \lp^{ 2 } $.
 
 \begin{lemma}
+	\label{continuity_in_l2_and_initial_data_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} we have 
 	$ \psi_{ i }^{ \varepsilon } \in \wkp^{ 1 , 2 } \left(
 		[ 0 , T ] ; \lp^{ 1 } ( \flattorus )
@@ -1205,7 +1211,7 @@ VLT HIER PAPER VON ILMANEN ZITIEREN
 	for almost every time $ 0 \leq t \leq T $.
 \end{lemma}
 
-\subsection{Convergence to multiphase mean curvature flow}
+\subsection{Convergence to a $\bv$-solution to multiphase mean curvature flow}
 
 We start by defining a $ \bv $-formulation for motion by multiphase mean curvature flow under the simplifying assumption that the mobilities are already fixed by the surface tensions through the equation
 \begin{equation}
@@ -1213,7 +1219,8 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 	\mu_{ i , j } =\frac{ 1 }{ \sigma_{ i , j } }. 
 \end{equation}
 
-\begin{definition}
+\begin{definition}[$\bv$-solution to multiphase mean curvature flow]
+	\label{motion_by_mmcf}
 	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus \to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq ( \chi^{ 0 } ) $ and $ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $. We say that
 	\begin{equation*}
 		\chi \in \cont \left(
@@ -1222,7 +1229,11 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 			\lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}^{ P } \right)
 		\right)
 	\end{equation*}
-	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ and $ \sum_{ i = 1 }^{ P } \chi_{ i } $ \emph{moves by mean curvature} if there exists normal velocities $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } ) $ with
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ and $ \sum_{ i = 1 
+	}^{ P } \chi_{ i } = 1 $ \emph{moves by mean curvature with initial data} $ 
+	\chi^{ 0 } $ \emph{and surface tensions} $ \sigma $ if there exist normal 
+	velocities $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } ) $ 
+	with
 	\begin{equation*}
 		\int_{ 0 }^{ T }
 			\int
@@ -1346,7 +1357,7 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 		\cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we 
 		additionally assume that the 
 		time-integrated energies converge (\ref{energy_convergence}), then $ 
-		\chi $ moves by mean curvature in the sense of \Cref{motion_by_mcv}.
+		\chi $ moves by mean curvature in the sense of \Cref{motion_by_mmcf}.
 	\end{theorem} 
 	
 \subsection{Localization estimates}
@@ -1788,7 +1799,7 @@ Thus we can estimate the error by the last summand of the error in
 					\dd{ x }
 				}
 			\\
-			& \quad \quad \quad \;\;\;\!\:+
+			& \quad \quad \quad \;\;\;\!\: +
 			\abs{ 
 				\int
 					\inner*{ A \eta_{ B } }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
@@ -3037,8 +3048,19 @@ We are now in the position to prove the main result
 \Cref{convergence_to_multiphase_mcf}.
 
 \begin{proof}[Proof of \Cref{convergence_to_multiphase_mcf}.]
-	Collecting all previous results (HIER AUSFÜHREN VERMUTLICH; EIN BISSCHEN 
-	FAUL SO), we see that the only thing left to show is the full convergence 
+	Let us first collect all previous results.
+	\Cref{initial_convergence_result_multiphase} guarantees that a limit $ \chi 
+	$  as described in \Cref{convergence_to_multiphase_mcf} exists.
+	After that \Cref{continuity_in_l2_and_initial_data_multiphase} ensures that 
+	$ \chi $ is continuous in time with respect to the $ \lp^{ 2 } $-norm and 
+	therefore assumes the initial data. The existence of square-integrable 
+	normal velocities is proven in 
+	\Cref{existence_and_square_integrability_of_velocities_multiphase}, and the 
+	distributional equation for motion uses convergence of the convergence term 
+	\Cref{convergence_of_curvature_multiphase}. Moreover we still need the full 
+	convergence of the velocity term, and the bulk of the work has already been 
+	done in \Cref{convergence_of_velocity_multiphase}.
+	We see that the only thing left to show is the full convergence 
 	of the velocity term, which states that
 	\begin{equation*}
 		\lim_{ \varepsilon \to 0 }
@@ -3099,7 +3121,7 @@ We are now in the position to prove the main result
 		\sum_{ k = 1 }^{ K }
 			\sum_{ B \in \mathcal{ B }_{ r } }
 				\limsup_{ \varepsilon \to 0 }
-					\abs{
+					\Bigg{|}
 						\int_{ 0 }^{ T }
 							\int
 								\varepsilon
@@ -3108,7 +3130,8 @@ We are now in the position to prove the main result
 								\partial_{ t } u_{ \varepsilon } }
 							\dd{ x }
 						\dd{ t }
-						-
+		\\
+						& \qquad \qquad \qquad \qquad-
 						\sum_{ 1 \leq i < j \leq P }
 							\sigma_{ i j }
 							\int_{ 0 }^{ T }
@@ -3118,7 +3141,7 @@ We are now in the position to prove the main result
 									V_{ i }
 								\dd{ \hm^{ d - 1 } }
 							\dd{ t }					
-					}
+					\Bigg{|}
 		\\
 		\lesssim{} &
 		\norm{ \xi }_{ \mathrm{sup} }
@@ -3244,11 +3267,12 @@ We are now in the position to prove the main result
  				}
  			\dd{ t }.
 	\end{align*}
-	Here $ nu_{ i }^{ n }$ is defined by $ \nabla \chi_{ i }^{ n } / \abs{ 
+	Here $ \nu_{ i }^{ n }$ is defined by $ \nabla \chi_{ i }^{ n } / \abs{ 
 	\nabla \chi_{ i }^{ n } } $, and for the inequality we used that $ \abs{ 
-	\theta - \gamma }^{ 2 } = 2 - \inner*{ \theta }{ \gamma } $ for unit 
+	\theta - \gamma }^{ 2 } = 2( 1 - \inner*{ \theta }{ \gamma } ) $ for unit 
 	vectors $ \theta $ and $ \gamma $. Thus when replacing $ \chi $ by $ \chi^{ 
 	n } $ in (\ref{error_for _convergence_of_velocity}), we get an error of size
+	at most
 	\begin{equation*}
 		\frac{ 1 }{ \alpha }
 		\sum_{ B \in \mathcal{ B }_{ r } }
@@ -3256,22 +3280,22 @@ We are now in the position to prove the main result
 				\sum_{ 1 \leq l \leq P }
 					\abs{ 
 						\int
-							\eta_{ B }
+							\rho_{ B }
 						\abs{ \nabla \chi_{ l } }
 						-
 						\int
-							\eta_{ B }
+							\rho_{ B }
 						\abs{ \nabla \chi_{ l }^{ n } }
 					}
 					+
 					\abs{
 						\int
-							\eta_{ B }
+							\rho_{ B }
 							\nu_{ l } 
 						\abs{ \nabla \chi_{ l } }
 						-
 						\int
-							\eta_{ B }
+							\rho_{ B }
 							\nu_{ l }^{ n }
 						\abs{ \nabla \chi_{ l }^{ n } }
 					}
@@ -3281,7 +3305,7 @@ We are now in the position to prove the main result
 	T ] $ we have chosen when we let $ n $ tend to infinity.
 	Since $ \chi^{ n } $ is smooth, we can now make the width of our partition 
 	arbitrarily small and therefore obtain that
-	\begin{align*}
+	\begin{alignat*}{2}
 		A 
 		\lesssim{} &
 		\norm{ \xi }_{\mathrm{sup}}
@@ -3295,22 +3319,65 @@ We are now in the position to prove the main result
 				\min_{ i \neq j }
 					\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
 						\int
-							\eta_{ B }
+							\rho_{ B }
 							\abs{ \nu_{ i }^{ n } - \nu^{ \ast } }^{ 2 }
 						\abs{ \nabla \chi_{ i }^{ n } }
-						+
+						& +
 						\int
-							\eta_{ B }
+							\rho_{ B }
 							\abs{ \nu_{ j }^{ n } + \nu^{ \ast } }^{ 2 }
 						\abs{ \nabla \chi_{ j }^{ n } }
+						\\
+						& &
 						+
 						\sum_{ k \notin \{ i , j \} }
 							\int
-								\eta_{ B }
+								\rho_{ B }
 							\abs{ \nabla \chi_{ k }^{ n } }
-		\dd{ t }.	
-	\end{align*}
-	Now letting $ n $ tend to infinity yields by the dominated convergence 
-	theorem 
+		\dd{ t }.
+	\end{alignat*}
+	Now letting $ n $ tend to infinity yields by the generalized dominated 
+	convergence theorem with majorant 
+	$ C \sum_{ i } \int \eta_{ B } \abs{ \nabla \chi_{ i }^{ n } } $ 
+	(whose time integral converges due to the strict convergence)
+	that
+	\begin{alignat*}{2}
+		A 
+		\lesssim &
+		\norm{ \xi }_{ \mathrm{sup} }
+		\alpha
+		\mu \left(
+			[ 0 , T ] \times \flattorus
+		\right)
+		\\
+		& +
+		\norm{ \xi }_{ \mathrm{sup} }
+		\frac{ 1 }{ \alpha }
+		\int_{ 0 }^{ T }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\min_{ i \neq j }
+					\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
+						\int
+							\rho_{ B }
+							\abs{ \nu_{ i } - \nu^{ \ast } }^{ 2 }
+						\abs{ \nabla \chi_{ i } }
+						& +
+						\int
+							\rho_{ B }
+							\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
+						\abs{ \nabla \chi_{ j } }
+		\\
+						& &+
+						\sum_{ k \notin \{ i , j \} }
+							\int
+								\rho_{ B }
+								\abs{ \nabla \chi_{ k } }
+		\dd{ t }.
+	\end{alignat*}
+	Using the localization result \Cref{localization_lemma_with_normals} and 
+	the 
+	energy dissipation inequality (\ref{energy_dissipation_sharp}) together 
+	with the dominated convergence theorem, the second summand vanishes as $ r 
+	$ tends to zero. Then sending $ \alpha $ to zero completes the proof.
 \end{proof}
- 
+

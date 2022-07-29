@@ -2,38 +2,68 @@
 
 \begin{lemma}
 	\label{identities_for_measure_theoretic_boundaries}
-	The following equalities hold up to set of $d-1$-dimensional Hausdorff-measure zero.
+	The following statments hold for Borel-measurable sets.
 	\begin{enumerate}
 		\item 
 		\label{item_disjoint_sets}
 		If $ A, B, C \subset \flattorus $ are mutually disjoint, then
 		\begin{equation*}	
-			\partial_{ \ast } ( A \cup B ) = \partial_{ \ast } A \triangle \partial_{ \ast } B
+			\hm^{ d - 1 } \left(
+				\partial_{ \ast } ( A \cup B ) 
+				\triangle  
+				\left( \partial_{ \ast } A \triangle \partial_{ \ast } B \right)
+			\right)
+			=
+			0
 			\quad 
 			\text{ and }
 			\quad
-			\partial_{ \ast } A
-			\cap
-			\partial_{ \ast } B
-			\cap
-			\partial_{ \ast } C
+			\hm^{ d - 1 } \left(
+				\partial_{ \ast } A
+				\cap
+				\partial_{ \ast } B
+				\cap
+				\partial_{ \ast } C
+			\right)
 			=
-			\emptyset.
+			0.
 		\end{equation*}
 		
 		\item 
 		\label{rewriting_boundary_via_interfaces}
 		If $ ( \Omega_{ i } )_{ i = 1 , \dotsc , P } $ is a partition of $ \flattorus $, then
 		\begin{equation*}
-			\partial_{ \ast } \Omega_{ i }
-			=
-			\bigcup_{ j \neq i }
-			\partial_{ \ast } \Omega_{ i }
-			\cap
-			\partial_{ \ast } \Omega_{ j }.
+			\hm^{ d - 1 } \left(
+				\partial_{ \ast } \Omega_{ i }
+				\triangle
+				\bigcup_{ j \neq i }
+				\partial_{ \ast } \Omega_{ i }
+				\cap
+				\partial_{ \ast } \Omega_{ j }
+			\right) = 0.
 		\end{equation*}
 	\end{enumerate}
 \end{lemma}
+
+\begin{remark}
+	In a maybe less confusing way, the first and third result yield that up to 
+	sets 
+	of $ \hm^{ d - 1 } $-measure zero, we have
+	$  \partial_{ \ast } ( A \cup B ) 
+	=  
+	 \partial_{ \ast } A \triangle \partial_{ \ast } B
+	$
+	and
+	$
+	\partial_{ \ast } \Omega_{ i }
+	=
+	\bigcup_{ j \neq i }
+	\partial_{ \ast } \Omega_{ i }
+	\cap
+	\partial_{ \ast } \Omega_{ j }
+	$
+	under the given assumptions.
+\end{remark}
 
 \begin{proof}
 	Let us first prove \cref{item_disjoint_sets}. Initially assume that $ x \in \partial_{ \ast } ( A \cup B ) $. By definition this implies that
