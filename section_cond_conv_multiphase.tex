@@ -1541,7 +1541,8 @@ Thus we can estimate the error by the last summand of the error in
 		\lim_{ \varepsilon \to 0 }
 			\int
 				\inner*{ 
-					\Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } \partial_{ u } W ( u_{ \varepsilon } ) 
+					\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ 
+					\varepsilon } \partial_{ u } W ( u_{ \varepsilon } ) 
 				}
 				{ \inner*{ \xi }{ \nabla u_{ \varepsilon } } }
 			\dd{ x }
@@ -1557,7 +1558,8 @@ Thus we can estimate the error by the last summand of the error in
 		\label{pointwise_estimate_for_curvature}
 		\int
 		\inner*{ 
-			\varepsilon \nabla u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } 	\partial_{ u } W ( u_{ \varepsilon } ) 
+			\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } 	
+			\partial_{ u } W ( u_{ \varepsilon } ) 
 		}
 		{ \inner*{ \xi }{ \nabla u_{ \varepsilon } } }
 		\dd{ x }

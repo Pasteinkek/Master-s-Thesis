@@ -39,20 +39,20 @@ flow]
 		holds in the distributional sense on $ ( 0 , T ) \times \flattorus $.
 		
 		\item 
-		There exist a mean curvature $ H \in 
-		\lp^{ 2 } ( \sum_{ 1\leq i < j \leq P } \dd{ \hm^{ d -1 }|_{ \Sigma_{ i 
-		, j } } } \dd{ t } ) $ which satisfies
+		There exist a mean curvature vector $ H \in 
+		\lp^{ 2 } ( \energy ( u ; \cdot) \dd{ t } ) $ which satisfies
 		\begin{equation*}
 			\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
-				\int_{ \Sigma_{ i , j } }
-					H
-					\inner*{ \xi }{ \nu_{ i } }
+				\int_{ \Sigma_{ i j } }
+					\inner*{ \xi }{ H }
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }
 			=
 			-
 			\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 				\int_{ \Sigma_{ i , j } }
 					\inner*{
@@ -145,7 +145,88 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 
 \begin{proof}
 	Let us for simplicity first consider the twophase case. The idea of the 
-	proof is that we already have an optimal energy dissipation inequality 
+	proof is that we already have an optimal energy dissipation inequality for 
+	the Allen--Cahn equation given by (\ref{energy_dissipation_sharp}).
+	If we use that additionally use the Allen--Cahn equation once, we arrive at 
+	the reformulated version of the optimal energy dissipation inequality given 
+	by
+	\begin{equation*}
+	\label{energy_dissipation_sharp_with_curvature}
+	\energy_{ \varepsilon } ( u_{ \varepsilon } ( T' ) )
+	+
+	\frac{ 1 }{ 2 }
+	\int_{ 0 }^{ T' }
+		\int
+			\varepsilon \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+			+
+			\frac{ 1 }{ \varepsilon }
+			\abs{
+				\varepsilon \Delta u_{ \varepsilon } 
+				-
+				\frac{ 1 }{ \varepsilon } \nabla W ( u_{ \varepsilon } )
+			}^{ 2 }
+		\dd{ x }
+	\dd{ t }
+	\leq
+	\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ).
+	\end{equation*}
+	Our hope is that as $ \varepsilon $ tends to zero, we can pass to the 
+	optimal energy dissipation inequality for $ \chi $ through lower 
+	semicontinuity. 
+	Since we assume the convergence of the inital energies and energy 
+	convergence for almost every time, the only terms we have to care about are 
+	the lower semicontinuity of the velocity term, which reads
+	\begin{equation}
+		\label{lsc_of_velocity}
+		\liminf_{ \varepsilon \to 0 }
+			\frac{ 1 }{ 2 }
+			\int_{ 0 }^{ T' }
+				\int
+					\varepsilon 
+					\abs{ \partial_{ t } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\geq
+		\frac{ 1 }{ 2 }
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i , j }
+			\int_{ 0 }^{ T' }
+				\int_{ \Sigma_{ i , j } }
+					V_{ i }^{ 2 }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t },
+	\end{equation}
+	and the lower semicontinuity of the curvature term, which reads
+	\begin{equation}
+		\label{lsc_of_curvature}
+		\liminf_{ \varepsilon \to 0 }
+			\frac{ 1 }{ 2 }
+			\int_{ 0 }^{ T' }
+				\int
+					\frac{ 1 }{ \varepsilon }
+					\abs{
+						\varepsilon
+						\Delta u_{ \varepsilon }
+						-
+						\frac{ 1 }{ \varepsilon }
+						\nabla W ( u_{ \varepsilon } ) 
+					}^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\geq
+		\frac{ 1 }{ 2 }
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i , j }
+			\int_{ 0 }^{ T' }
+				\int_{ \Sigma_{ i , j } }
+					H^{ 2 }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }.
+	\end{equation}
+	Moreover we have to show existence of the mean curvature function $ H $.
+	This is done by applying Riesz representation theorem: We first consider 
+	the linear map
+	
 \end{proof}
 
 
