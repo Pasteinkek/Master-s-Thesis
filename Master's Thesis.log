@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  30 JUL 2022 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  30 JUL 2022 17:34
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1881,57 +1881,58 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 6.
 
-
-Overfull \hbox (47.65515pt too wide) detected at line 63
-[] \OML/cmm/m/it/10 [] [][] [][][][] [] [] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 
-  [] \OML/cmm/m/it/10 [] [][] [][][][] [] []
- []
-
 [57
 
 
 
 
 ]
-Overfull \hbox (14.02452pt too wide) in paragraph at lines 122--141
+Overfull \hbox (14.02452pt too wide) in paragraph at lines 120--139
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
 
-Overfull \hbox (1.23701pt too wide) detected at line 225
+Overfull \hbox (1.23701pt too wide) detected at line 223
 [][] [] [] [][] [] [][][] [] [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 [] [
 ][] [][] H[] [] [] :
  []
 
-[58])) [59]
+[58]
+Overfull \hbox (10.54408pt too wide) in paragraph at lines 243--248
+\OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
+mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
+th re-spect to $[][] []$
+ []
+
+[59] [60])) [61]
 \openout2 = `chapter_appendix.aux'.
 
- (chapter_appendix.tex [60
+ (chapter_appendix.tex [62
 
 
 
 
 ]
 chapter A.
-[61] [62]
+[63] [64]
 Overfull \hbox (29.86714pt too wide) detected at line 303
 []
  []
 
-[63]) [64]
+[65]) [66]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [65
+ [67
 
 
 
 
 
-] [66]
+] [68]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  ("Master's Thesis.aux" (chapter_mcf.aux)
@@ -1950,8 +1951,8 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47096 strings out of 480930
- 1046716 string characters out of 2900231
+ 47098 strings out of 480930
+ 1046730 string characters out of 2900231
  1875721 words of memory out of 3000000
  61872 multiletter control sequences out of 15000+200000
  551188 words of font info for 159 fonts, out of 3000000 for 9000
@@ -1983,9 +1984,9 @@ er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (70 pages, 646293 bytes).
+Output written on "Master's Thesis.pdf" (72 pages, 658821 bytes).
 PDF statistics:
- 974 PDF objects out of 1000 (max. 8388607)
- 237 named destinations out of 1000 (max. 500000)
+ 991 PDF objects out of 1000 (max. 8388607)
+ 239 named destinations out of 1000 (max. 500000)
  23749 words of extra memory for PDF output out of 24883 (max. 10000000)
 

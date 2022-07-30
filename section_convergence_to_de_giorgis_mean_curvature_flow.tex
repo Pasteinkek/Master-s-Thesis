@@ -40,14 +40,12 @@ flow]
 		
 		\item 
 		There exist a mean curvature vector $ H \in 
-		\lp^{ 2 } ( \energy ( u ; \cdot) \dd{ t } ) $ which satisfies
+		\lp^{ 2 } ( \energy ( u ; \cdot) \dd{ t } ; \mathbb{ R }^{ d } ) $ 
+		which satisfies
 		\begin{equation*}
-			\sum_{ 1 \leq i < j \leq P }
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
-				\int_{ \Sigma_{ i j } }
-					\inner*{ \xi }{ H }
-				\dd{ \hm^{ d - 1 } }
+				\energy \left( \chi ; \inner*{ H }{ \xi } \right)
 			\dd{ t }
 			=
 			-
@@ -224,9 +222,349 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\dd{ t }.
 	\end{equation}
 	Moreover we have to show existence of the mean curvature function $ H $.
-	This is done by applying Riesz representation theorem: We first consider 
-	the linear map
+	We could cheat in this step and simply use that by 
+	\Cref{convergence_to_multiphase_mcf}, we already know that the tangential 
+	convergence applied to $ \xi $ is given by the velocity, or in other words, 
+	that we already have $ V_{ i } = H $ on $ \Sigma_{ i , j } $. But we want 
+	to present a more direct approach.
 	
+	Consider the linear functional 
+	\begin{equation*}
+		L ( \xi )
+		\coloneqq
+		- \sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i j } }
+					\inner*{ \diff \xi }{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ 
+					i } }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }
+	\end{equation*}
+	defined on test vector fields $ \xi $. Then $ L $ is bounded with respect 
+	to $ \lp^{ 2 } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d } ; 
+	\energy ( \xi ; \cdot ) \right) $ since by the convergence of the curvature 
+	term observed in $ \Cref{convergence_of_curvature_multiphase} $, we have
+	\begin{align*}
+		\abs{ L ( \xi ) }
+		& =
+		\liminf_{ \varepsilon \to 0 }
+			\abs{ 
+				-
+				\int_{ 0 }^{ T }
+					\int
+						\inner*{
+							\varepsilon \Delta u_{ \varepsilon } 
+							-
+							\frac{ 1 }{ \varepsilon }
+							\nabla W ( u_{ \varepsilon } )
+						}
+						{ \diff u_{ \varepsilon } \xi }
+					\dd{ x }
+				\dd{ t }
+			}
+		\\
+		& \leq
+		\left(
+			\int_{ 0 }^{ T }
+				\int
+					\frac{ 1 }{ \varepsilon }
+					\abs{ 
+						\varepsilon \Delta u_{ \varepsilon }
+						-
+						\frac{ 1 }{ \varepsilon }
+						\nabla W ( u_{ \varepsilon } )
+					}^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\right)^{ 1/2 }
+		\left(
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon
+					\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+					\abs{ \xi }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\right)^{ 1/2 }
+		\\
+		& \leq
+				\left(
+		\int_{ 0 }^{ T }
+		\int
+		 \varepsilon
+		\abs{ 
+		\partial_{ t } u_{ \varepsilon }
+		}^{ 2 }
+		\dd{ x }
+		\dd{ t }
+		\right)^{ 1/2 }
+		\left(
+		\int_{ 0 }^{ T }
+		\int
+		\varepsilon
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\abs{ \xi }^{ 2 }
+		\dd{ x }
+		\dd{ t }
+		\right)^{ 1/2 }.
+	\end{align*}
+	The first factor stays uniformly bounded due to the energy dissipation 
+	inequality (\ref{energy_dissipation_sharp}), and by the equipartition of 
+	energies (\Cref{equipartition_of_energies_multiphase}), the second factor 
+	converges to the $ \lp^{ 2 } $-norm if $ \xi $ with respect to the energy 
+	measure, proving our claim. But therefore we can extend the functional to 
+	the square integrable functions with respect to the energy measure, and by 
+	Riesz representation theorem obtain the existence of the desired mean 
+	curvature vector $ H $.
+	
+	Let us moreover firstly consider the lower semicontinuity of the curvature 
+	term. Let again $ \xi $ be some test vector field. Then for all $ 
+	\varepsilon > 0 $ and some fixed time, we have by Young's inequality and 
+	Cauchy--Schwarz that
+	\begin{align*}
+		& 
+		\liminf_{ \varepsilon \to 0 }
+		\frac{ 1 }{ 2 }
+		\int
+			\frac{ 1 }{ \varepsilon }
+			\abs{ 
+				\varepsilon
+				\Delta u_{ \varepsilon }
+				-
+				\frac{ 1 }{ \varepsilon }
+				\nabla W ( u_{ \varepsilon } )
+			}^{ 2 }
+		\dd{ x }
+		\\
+		\geq{} &
+		\liminf_{ \varepsilon \to 0 }
+		\int
+			\inner*{ 
+				\varepsilon
+				\Delta u_{ \varepsilon }
+				-
+				\frac{ 1 }{ \varepsilon }
+				\nabla W ( u_{ \varepsilon } )
+			}{
+				\diff u_{ \varepsilon } \xi
+			}
+		\dd{ x }
+		-
+		\frac{ 1 }{ 2 }
+		\int 
+			\varepsilon
+			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+			\abs{ \xi }^{ 2 }
+		\dd{ x }
+		\\
+		={} &
+		-\energy \left( \chi ; \inner*{ H }{ \xi } \right)
+		-
+		\frac{ 1 }{ 2 }
+		\energy \left( \chi ; \abs{ \xi }^{ 2 } \right).
+	\end{align*}
+	Since this inequality holds for any test vector field, we may take a 
+	sequence of test vector fields satisfying
+	\begin{equation*}
+		\lim_{ n \to \infty }
+			\norm{ \xi_{ n } + H }_{ \lp^{ 2 } \left( \flattorus ; \energy 
+			( 
+			\chi ; \cdot ) \right) } 
+		=
+		0.
+	\end{equation*}
+	This then yields the desired inequality (\ref{lsc_of_curvature}) by 
+	applying Fatou's Lemma to pull the limes inferior into the time integral.
+	
+	In principle the proof is now already done, since 
+	\Cref{convergence_to_multiphase_mcf} already gives us that for almost every 
+	time $ t $, we already have $ V_{ i } \nu_{ i } = - H $ on $ \Sigma_{ i , j 
+	} $ $ \hm^{ d-  1 } $-almost everyhwere. But since this makes heavy use of 
+	the previous arguments, we instead want to present another proof which 
+	directly proves the lower semicontinuity of the velocity term.
+	
+	Let us first consider the 
+	scalar case $ N = 1 , P = 2 $. By a similar duality argument as for the 
+	lower semicontinuity of the curvature term, we compute 
+	that for 
+	every test function $ \varphi $, we have
+	\begin{align*}
+		& \liminf_{ \varepsilon \to 0 }
+			\frac{ 1 }{ 2 }
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\\
+		\geq{} &
+		\liminf_{ \varepsilon \to 0 }
+			\int_{ 0 }^{ T }
+				\int
+					\partial_{ t } u_{ \varepsilon } 
+					\phi ' ( u_{ \varepsilon } )
+					\varphi
+				\dd{ x }
+			\dd{ t }
+		-
+		\frac{ 1 }{ 2 }
+		\int_{ 0 }^{ T }
+			\int
+				\frac{ 1 }{ \varepsilon }
+				\left( \phi ' ( u_{ \varepsilon } ) \varphi \right)^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		\\
+		\geq{} &
+		\liminf_{ \varepsilon \to 0 }
+			\int_{ 0 }^{ T }
+				\int
+					\partial_{ t } \psi
+					\varphi
+				\dd{ x }
+			\dd{ t }
+			-
+			\frac{ 1 }{ 2 }
+			\int_{ 0 }^{ T }
+				\int
+					\frac{ 1 }{ \varepsilon }
+					2 W ( u_{ \varepsilon } )
+					\varphi^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\\
+		={} &
+		\sigma
+		\int_{ 0 }^{ T }
+			\int_{ \Sigma }
+				\varphi V
+			\dd{ \hm^{ d - 1 } }
+		\dd{ t }
+		-
+		\frac{ 1 }{ 2 }
+		\sigma
+		\int_{ 0 }^{ T }
+			\int_{ \Sigma }
+				\varphi^{ 2 }
+			\dd{ \hm^{ d - 1 } }
+		\dd{ t }.
+	\end{align*}	
+	Since again the inequality holds for any testfunction $ \varphi $, we may 
+	plug in a sequence of testfunctions $ \varphi_{ n } $ satisfying
+	\begin{equation*}
+		\lim_{ n \to \infty }
+			\norm{ \varphi_{ n } - V }_{ \lp^{ 2 } \left( ( 0 , T ) \times 
+			\flattorus ; \dd{ \hm^{ d - 1 } } |_{ \Sigma } \dd{ t } \right) }
+		= 0
+	\end{equation*}
+	and thereby obtain the desired inequality (\ref{lsc_of_velocity}).
+	
+	For the multiphase case, we do not find an immediate generalization of this 
+	proof, but rather have to work with the usual localization argument to 
+	obtain a reduction to the scalar case.
+	
+	As in the proof of \Cref{convergence_to_multiphase_mcf}, let $ \delta > 0 $ 
+	and $ 0 = T_{ 0 } < T_{ 1 } < \dotsc < T_{ K } = T' $ be a partition of $ [ 
+	0 , T' ] $. Let $ ( g_{ k } )_{ k = 1 , \dotsc , K } $ be a partition of 
+	unity with respect to the intervals $ ( T_{ 0 } - \delta , T_{ 1 } + \delta 
+	), \dotsc , ( T_{ K - 1 } - \delta , T_{ K } + \delta ) $ and let $ r > 0 
+	$, where $ \eta_{ B } $ and $ \rho_{ B } $ are as in 
+	\Cref{localization_lemma_with_normals}. Then we estimate
+	\begin{align*}
+		 & \liminf_{ \varepsilon \to 0 }
+			\frac{ 1 }{ 2 }
+			\int_{ 0 }^{ T }
+				\int
+					\varepsilon
+					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+				\dd{ x }
+			\dd{ t }
+		\\
+		={} &
+		\liminf_{ \varepsilon \to 0 }
+			\sum_{ k = 1 }^{ K }
+				\sum_{ B \in \mathcal{ B }_{ r } } 
+					\frac{ 1 }{ 2 }
+					\int_{ 0 }^{ T }
+						\int
+							g_{ k } \eta_{ B }
+							\varepsilon
+							\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+						\dd{ x }
+					\dd{ t }
+		\\
+		\geq{} &
+		\liminf_{ \varepsilon \to 0 }
+			\sum_{ k = 1 }^{ K }
+				\sum_{ B \in \mathcal{ B }_{ r } }
+					\max_{ 1 \leq i \leq P }
+						\sup_{ 
+							\substack{ 
+								\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+								\left( ( 0 , T ) \times \flattorus \right)
+								\\
+								\abs{ \varphi } \leq R  
+							}
+						}
+							\int_{ 0 }^{ T }
+								\int
+									g_{ k } \eta_{ B }
+									\inner*{ \nabla \phi_{ i } ( u_{ 
+									\varepsilon 
+									} ) }{ \partial_{ t } u_{ \varepsilon } }
+									\varphi
+								\dd{ x }
+							\dd{ t } 
+		\\
+							& \qquad \qquad \qquad \qquad \qquad \qquad \quad 
+							\:\, -
+							\frac{ 1 }{ 2 }
+							\int_{ 0 }^{ T }
+								\int
+									g_{ k } \eta_{ B }
+									\frac{ 1 }{ \varepsilon }
+									\abs{ \nabla \phi_{ i } ( u_{ \varepsilon } 
+									) }^{ 2 }
+									\varphi^{ 2 }
+								\dd{ x }
+							\dd{ t }
+		\\
+		\geq{} &
+		\liminf_{ \varepsilon \to 0 }
+		\sum_{ k = 1 }^{ K }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+		\max_{ 1 \leq i \leq P }
+		\sup_{ 
+			\substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+			}
+		}
+		\int_{ 0 }^{ T }
+		\int
+		g_{ k } \eta_{ B }
+		\partial_{ t } \psi_{ i }
+		\varphi
+		\dd{ x }
+		\dd{ t } 
+		\\
+		& \qquad \qquad \qquad \qquad \qquad \qquad \quad 
+		\:\, -
+		\frac{ 1 }{ 2 }
+		\int_{ 0 }^{ T }
+		\int
+		g_{ k } \eta_{ B }
+		\frac{ 1 }{ \varepsilon }
+		2 W ( u_{ \varepsilon } )
+		\varphi^{ 2 }
+		\dd{ x }
+		\dd{ t }
+	\end{align*}
+	Pulling the limes inferior inside the double sum and the suprema, we obtain 
+	that this term can be estimated from below via
 \end{proof}
 
 
