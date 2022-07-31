@@ -472,7 +472,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	$, where $ \eta_{ B } $ and $ \rho_{ B } $ are as in 
 	\Cref{localization_lemma_with_normals}. Then we estimate
 	\begin{align*}
-		 & \liminf_{ \varepsilon \to 0 }
+		 A \coloneqq{}& \liminf_{ \varepsilon \to 0 }
 			\frac{ 1 }{ 2 }
 			\int_{ 0 }^{ T }
 				\int
@@ -546,7 +546,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\int_{ 0 }^{ T }
 		\int
 		g_{ k } \eta_{ B }
-		\partial_{ t } \psi_{ i }
+		\partial_{ t } \psi_{ i }^{ \varepsilon }
 		\varphi
 		\dd{ x }
 		\dd{ t } 
@@ -565,6 +565,271 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	\end{align*}
 	Pulling the limes inferior inside the double sum and the suprema, we obtain 
 	that this term can be estimated from below via
+	\begin{align*}& \sum_{ k = 1 }^{ K }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+		\max_{ 1 \leq i \leq P }
+		\sup_{ 
+			\substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+			}
+		}
+		\int_{ 0 }^{ T }
+		\int
+		g_{ k } \eta_{ B }
+		\partial_{ t } \psi_{ i }
+		\varphi
+		\dd{ x }
+		\dd{ t } 
+		-
+		\frac{ 1 }{ 2 }
+		\int_{ 0 }^{ T }
+		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
+		\dd{ t }
+		\\
+		={} &
+		\sum_{ k = 1 }^{ K }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+		\max_{ 1 \leq i \leq P }
+		\sup_{ 
+			\substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+			}
+		}
+		\sum_{ j = 1 }^{ P }
+		\left(
+		\sigma_{ i j }
+		\int_{ 0 }^{ T }
+		\int
+		g_{ k } \eta_{ B }
+		\varphi
+		V_{ j }
+		\abs{ \nabla \chi_{ j } }
+		\dd{ t } 
+		-
+		\frac{ 1 }{ 2 }
+		\sigma_{ i j }
+		\int_{ 0 }^{ T }
+			\int
+				g_{ k } \eta_{ B }
+				\varphi^{ 2 }
+			\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		\right)\\
+		& -
+		\frac{ 1 }{ 2 }
+		\left(
+		\int_{ 0 }^{ T }
+		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
+		-
+		\int
+			g_{ k } \eta_{ B }
+			\varphi^{ 2 }
+			\abs{ \nabla \psi_{ i } }
+		\dd{ t }
+		\right).
+	\end{align*}
+	Since no derivative has fallen on $ g_{ k } $, we may send $ \delta $ to 
+	zero and obtain via the dominated convergence theorem that
+	\begin{align*}
+		A & \geq
+		\sum_{ k = 1 }^{ K }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+		\max_{ 1 \leq i \leq P }
+		\sup_{ 
+			\substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+			}
+		}
+		\sum_{ j = 1 }^{ P }
+		\left(
+		\sigma_{ i j }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\int\eta_{ B }
+		\varphi
+		V_{ j }
+		\abs{ \nabla \chi_{ j } }
+		\dd{ t } 
+		-
+		\frac{ 1 }{ 2 }
+		\sigma_{ i j }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\int
+		\eta_{ B }
+		\varphi^{ 2 }
+		\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		\right)\\
+		& -
+		\frac{ 1 }{ 2 }
+		\left(
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\energy \left( \chi ; \eta_{ B } \varphi^{ 2 } \right)
+		-
+		\int
+		\eta_{ B }
+		\varphi^{ 2 }
+		\abs{ \nabla \psi_{ i } }
+		\dd{ t }
+		\right)
+		\\
+		& \geq
+		\sum_{ k = 1 }^{ K }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+		\max_{ i \neq j }
+		\sup_{ 
+			\substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+			}
+		}
+		\sigma_{ i j }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\int \eta_{ B }
+		\varphi \left(
+		V_{ j }
+		- \frac{1 }{2 } \varphi 
+		\right)
+		\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		-
+		C \sum_{ l \notin \{ i , j \} }
+			\int_{ T_{ k - 1 } }^{ T_{ k } }
+				\int
+					\eta_{ B }
+					\left(
+						R \abs{ V_{ l } }
+						+
+						R^{ 2 }
+					\right)
+				\abs{ \nabla \chi_{ l } }
+			\dd{ t }
+		\\
+		& -
+		\frac{ R^{ 2 } }{ 2 }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\energy \left( \chi ; \eta_{ B } \right)
+		-
+		\int
+		\eta_{ B }
+		\abs{ \nabla \psi_{ i } }
+		\dd{ t }
+	\end{align*}
+	By \Cref{localization_estimate_weaker}, we have
+	\begin{equation*}
+				\frac{ R^{ 2 } }{ 2 }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\energy \left( \chi ; \eta_{ B } \right)
+		-
+		\int
+		\eta_{ B }
+		\abs{ \nabla \psi_{ i } }
+		\dd{ t }
+		\lesssim
+		R^{ 2 }
+		\sum_{ l \notin \{ i , j \} }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\int
+		\eta_{ B }
+		\abs{ \nabla \chi_{ l } }
+		\dd{ t },
+	\end{equation*}
+	and by applying Young's inequality, we get that for every parameter $ 
+	\alpha \in ( 0 , 1 ) $, we have
+	\begin{align*}
+		& \sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\min_{ i \neq j }
+				\sum_{ l \notin \{ i , j \} }
+					\int_{ T_{ k - 1 } }^{ T_{ k } }
+						\int
+							\eta_{ B } R V_{ l }
+						\abs{ \nabla \chi_{ l } }
+					\dd{ t }
+		\\
+		\lesssim{} &
+		\alpha
+		\sum_{ 1 \leq l \leq P }
+			\int_{ T_{ k - 1 } }^{ T_{ k } }
+				\int
+					V_{ l }^{ 2 }
+				\abs{ \nabla \chi_{ l } }
+			\dd{ t }
+		+
+		\frac{ R^{ 2 } }{ \alpha }
+		\sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\min_{ l \notin \{ i , j \} }
+					\int_{ T_{ k - 1 } }^{ T_{k } }
+						\int
+							\eta_{ B }
+						\abs{ \nabla \chi_{ l } }.
+	\end{align*}
+	Moreover, we can choose for fixed $k , B $ and tuple $ (i, j ) $ a sequence 
+	of testfunctions $ \varphi_{ n } $ with $ \abs{ \varphi_{ n } } \leq R $ 
+	which approach $ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } \leq R } } $
+	in the sense that
+	\begin{equation*}
+		\lim_{ n \to \infty }
+		\norm{ \varphi_{ n } - V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } } \leq R } 
+		}_{ \lp^{ 2 } \left(
+			( T_{ k - 1 }, T_{ k } ) \times \flattorus ;
+			\abs{ \nabla \chi_{ j } } \dd{ t }
+			\right)
+		}
+		=
+		0.
+	\end{equation*}
+	Combining these three arguments, we arrive at the estimate that for every 
+	parameter $ \alpha \in ( 0 , 1 ) $, it holds that
+	\begin{align*}
+		A & \geq
+		- \alpha C
+		\sum_{ 1 \leq l \leq P }
+			\int_{ 0 }^{ T }
+				\int
+					V_{ l }^{ 2 }
+				\abs{ \nabla \chi_{ l } }
+			\dd{ t }
+		\\
+		& +
+		\sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\max_{ i \neq j }
+					\frac{ \sigma_{ i j } }{ 2 }
+					\int_{ T_{ k - 1 } }^{ T_{ k } } 
+						\int
+							\eta_{ B }
+							\abs{ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } } \leq R 
+							} }^{ 2 }
+						\abs{ \nabla \chi_{ j } }
+					\dd{ t }
+					- 
+					C \frac{ R^{ 2 } }{ \alpha }
+					\sum_{ l \notin \{ i , j \} }
+						\int_{ T_{ k - 1 } }^{ T_{ k } }
+							\int
+								\eta_{ B }
+							\abs{ \nabla \chi_{ l } }
+						\dd{ t }.
+	\end{align*}
+	With similar arguments as in the proof of 
+	\Cref{convergence_to_multiphase_mcf}, we can argue that by choosing 
+	partitions whose width tends to zero, we can pull the maximum inside the 
+	time integral to obtain 
+	\begin{align*}
+		A & \geq
+	\end{align*}
 \end{proof}
 
 
