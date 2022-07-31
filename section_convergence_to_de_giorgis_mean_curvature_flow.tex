@@ -829,6 +829,60 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	time integral to obtain 
 	\begin{align*}
 		A & \geq
+		- \alpha C
+		\sum_{ 1 \leq l \leq P }
+		\int_{ 0 }^{ T }
+		\int
+		V_{ l }^{ 2 }
+		\abs{ \nabla \chi_{ l } }
+		\dd{ t }
+		\\
+		& +
+		\int_{ 0 }^{ T }
+		\sum_{ B \in \mathcal{ B }_{ r } }
+		\max_{ i \neq j }
+		\frac{ \sigma_{ i j } }{ 2 }
+		\int
+		\eta_{ B }
+		\abs{ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } } \leq R 
+		} }^{ 2 }
+		\abs{ \nabla \chi_{ j } }
+		- 
+		C \frac{ R^{ 2 } }{ \alpha }
+		\sum_{ l \notin \{ i , j \} }
+		\int
+		\eta_{ B }
+		\abs{ \nabla \chi_{ l } }
+		\dd{ t }
+		\\
+		& \geq
+		\frac{ 1 }{ 2 }
+		\sum_{ 1 \leq i < j \leq P }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i j } }
+					V_{ i }^{ 2 } \mathds{ 1 }_{ \abs{ V_{ i } } \leq R }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t }
+		\\
+		& -
+		C \left(
+			\alpha \sum_{ 1 \leq l \leq P }
+				\int_{ 0 }^{ T }
+					\int
+						V_{ l }^{ 2 }
+					\abs{ \nabla \chi_{ l } }
+				\dd{ t }
+			+
+			\frac{ R^{ 2 } }{ \alpha }
+			\int_{ 0 }^{ T }
+				\sum_{ B \in \mathcal{ B }_{ r } }
+					\min_{ i \neq j }
+						\sum_{ k \notin \{ i , j \} }
+							\int
+								\eta_{ B }
+							\abs{ \nabla \chi_{ k } }
+			\dd{ t }
+		\right)
 	\end{align*}
 \end{proof}
 
