@@ -2204,7 +2204,8 @@
     <bcf:citekey order="20">ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems</bcf:citekey>
     <bcf:citekey order="21">laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme</bcf:citekey>
     <bcf:citekey order="22">hensel_laux_varifold_solution_concept_for_mean_curvature_flow</bcf:citekey>
-    <bcf:citekey order="23">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
+    <bcf:citekey order="23">hensel_laux_varifold_solution_concept_for_mean_curvature_flow</bcf:citekey>
+    <bcf:citekey order="24">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

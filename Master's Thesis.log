@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  31 JUL 2022 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  2 AUG 2022 18:07
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1110,6 +1110,34 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 "
 \CommentStream=\write5
  Excluding comment 'comment')
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.
+sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty
+"
+Package: caption 2020/05/10 v3.4j Customizing captions (AR)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.st
+y"
+Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen278
+\captionmargin@=\dimen279
+\captionwidth=\dimen280
+\caption@tempdima=\dimen281
+\caption@indent=\dimen282
+\caption@parindent=\dimen283
+\caption@hangindent=\dimen284
+Package caption Info: KOMA-Script document class detected.
+)
+Package caption Info: KOMA-Script document class.
+\c@caption@flags=\count427
+\c@continuedfloat=\count428
+)
+\c@subfigure=\count429
+\c@subtable=\count430
+)
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
 ty"
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
@@ -1134,9 +1162,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 "
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen278
-\Hy@linkcounter=\count427
-\Hy@pagecounter=\count428
+\@linkdim=\dimen285
+\Hy@linkcounter=\count431
+\Hy@pagecounter=\count432
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 "
@@ -1152,7 +1180,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 .sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count429
+\Hy@SavedSpaceFactor=\count433
 Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
 Package hyperref Info: Option `unicode' set `true' on input line 4421.
 
@@ -1168,9 +1196,9 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count430
+\c@Hy@tempcnt=\count434
 LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen279
+\XeTeXLinkMargin=\dimen286
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bitset\bitset.sty
 "
@@ -1181,9 +1209,9 @@ calc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count431
-\Field@Width=\dimen280
-\Fld@charsize=\dimen281
+\Fld@menulength=\count435
+\Field@Width=\dimen287
+\Fld@charsize=\dimen288
 Package hyperref Info: Hyper figures OFF on input line 6430.
 Package hyperref Info: Link nesting OFF on input line 6435.
 Package hyperref Info: Hyper index ON on input line 6438.
@@ -1198,9 +1226,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 .sty"
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count432
-\c@Item=\count433
-\c@Hfootnote=\count434
+\Hy@abspage=\count436
+\c@Item=\count437
+\c@Hfootnote=\count438
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1212,8 +1240,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 .sty"
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 )
-\Fld@listcount=\count435
-\c@bookmark@seq@number=\count436
+\Fld@listcount=\count439
+\c@bookmark@seq@number=\count440
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\reru
 nfilecheck.sty"
@@ -1249,9 +1277,9 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 52.
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
-\c@sometheorems=\count437
-LaTeX Info: Redefining \tilt_excess on input line 74.
-LaTeX Info: Redefining \geodesic_distance on input line 75.
+\c@sometheorems=\count441
+LaTeX Info: Redefining \tilt_excess on input line 77.
+LaTeX Info: Redefining \geodesic_distance on input line 78.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -1328,16 +1356,16 @@ Package biblatex Info: Reference segment=0 on input line 21.
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count438
-\scratchdimen=\dimen282
+\scratchcounter=\count442
+\scratchdimen=\dimen289
 \scratchbox=\box64
-\nofMPsegments=\count439
-\nofMParguments=\count440
+\nofMPsegments=\count443
+\nofMParguments=\count444
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count441
-\MPscratchDim=\dimen283
-\MPnumerator=\count442
-\makeMPintoPDFobject=\count443
+\MPscratchCnt=\count445
+\MPscratchDim=\dimen290
+\MPnumerator=\count446
+\makeMPintoPDFobject=\count447
 \everyMPtoPDFconversion=\toks47
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
@@ -1352,6 +1380,9 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into
 your preamble.
  on input line 21.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box65
 Package hyperref Info: Link coloring ON on input line 21.
 
@@ -1367,7 +1398,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count444
+\c@section@level=\count448
 )
 LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
@@ -1395,7 +1426,7 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input lin
 e 169.
-\BKM@id=\count445
+\BKM@id=\count449
 ))
 LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
 
@@ -1921,33 +1952,51 @@ Overfull \hbox (10.69827pt too wide) detected at line 825
 []
  []
 
-[61])) [62]
+[61]
+Overfull \hbox (4.88054pt too wide) in paragraph at lines 938--939
+[][] 
+ []
+
+
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 956--957
+[][] 
+ []
+
+
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 970--971
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[62])) [63]
 \openout2 = `chapter_appendix.aux'.
 
- (chapter_appendix.tex
+ (chapter_appendix.tex [64
+
+
+
+
+]
 chapter A.
-[63
-
-
-
-
-] [64]
+[65] [66]
 Overfull \hbox (29.86714pt too wide) detected at line 303
 []
  []
 
-[65]) [66]
+[67]) [68]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [67
+ [69
 
 
 
 
 
-] [68]
+] [70]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  ("Master's Thesis.aux" (chapter_mcf.aux)
@@ -1966,42 +2015,51 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47098 strings out of 480930
- 1046730 string characters out of 2900231
- 1875721 words of memory out of 3000000
- 61872 multiletter control sequences out of 15000+200000
- 551188 words of font info for 159 fonts, out of 3000000 for 9000
+ 48338 strings out of 480930
+ 1070326 string characters out of 2900231
+ 1899477 words of memory out of 3000000
+ 63090 multiletter control sequences out of 15000+200000
+ 556528 words of font info for 184 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,16n,112p,10614b,2027s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/U
-sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/user/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/user/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/user/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/U
-sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/us
-er/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
-.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (72 pages, 665071 bytes).
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Use
+rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/user/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
+s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
+fb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/U
+sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
+/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "Master's Thesis.pdf" (74 pages, 738446 bytes).
 PDF statistics:
- 993 PDF objects out of 1000 (max. 8388607)
- 239 named destinations out of 1000 (max. 500000)
- 23749 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 1050 PDF objects out of 1200 (max. 8388607)
+ 244 named destinations out of 1000 (max. 500000)
+ 26329 words of extra memory for PDF output out of 29859 (max. 10000000)
 

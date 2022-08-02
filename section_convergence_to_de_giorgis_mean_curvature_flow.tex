@@ -828,7 +828,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	partitions whose width tends to zero, we can pull the maximum inside the 
 	time integral to obtain 
 	\begin{align*}
-		A & \geq
+		A\geq{}  & 
 		- \alpha C
 		\sum_{ 1 \leq l \leq P }
 		\int_{ 0 }^{ T }
@@ -855,7 +855,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\abs{ \nabla \chi_{ l } }
 		\dd{ t }
 		\\
-		& \geq
+		\geq{} &
 		\frac{ 1 }{ 2 }
 		\sum_{ 1 \leq i < j \leq P }
 			\int_{ 0 }^{ T }
@@ -882,8 +882,126 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 								\eta_{ B }
 							\abs{ \nabla \chi_{ k } }
 			\dd{ t }
-		\right)
+		\right).
 	\end{align*}
+	With the same argumentation as in the proof of 
+	\Cref{convergence_to_multiphase_mcf}, by first sending $ r \to 0 $ and then 
+	$ \alpha \to 0$ , we thus obtain that for all $R > 0 $, we have
+	\begin{equation*}
+		A = \liminf_{ \varepsilon \to 0 } \frac{ 1 }{ 2 }
+		\int_{ 0 }^{ T }
+			\int
+				\varepsilon \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+			\dd{ x }
+		\dd{ t }
+		\geq
+		\frac{ 1 }{ 2 }
+		\sum_{ 1 \leq i < j \leq P }
+			\int_{ 0 }^{ T }
+				\int_{ \Sigma_{ i , j } }
+					V_{ i }^{ 2 }
+					\mathds{ 1 }_{ \abs{ V_{ i } } \leq R }
+				\dd{ \hm^{ d - 1 } }
+			\dd{ t },
+	\end{equation*}
+	and thus the lower semicontinuity of the velocity term now follows form the 
+	monotone convergence theorem.
 \end{proof}
 
+\subsection{De Giorgi type varifold solutions for mean curvature flow}
+
+Up until this point, we have always made the crucial assumption of energy 
+convergence for our proofs (HIER VLT. EINEN TEIL DER THESIS VERLINKEN, WO ICH 
+MehrR AUF DIESE ANNAHME EINGEHE; AM BESTEN BEVOR ICH SIE DAS ERSTE MAL BENUTZE).
+However this is usually a very strong assumption and we should not be able to 
+expect it. One thing which could go wrong is for example illustrated in 
+\Cref{figure_interfaces_collapse}. There we see that two rough interfaces of 
+the first and second phase collapse as $ \varepsilon $ tend to zero, which 
+results in a loss of energy, since the measure theoretic boundary of a set of 
+bounded variation does not see such lines.
+
+\begin{figure}[h]
+	\centering
+	
+	\begin{subfigure}[b]{0.3\linewidth}
+	\begin{tikzpicture}
+		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1,3);
+		\shade[left color=blue,right color=red] (1,0) rectangle (1.5,3);
+		\filldraw[fill=red, draw=red] (1.5,0) rectangle (2.5,3);
+		\shade[left color=red,right color=blue] (2.5,0) rectangle (3,3);
+		\filldraw[fill=blue, draw=blue] (3,0) rectangle (4,3);
+		
+		\node at (0.5,1.5) {\large $\approx \alpha_{ 1 } $};
+		\node at (2,1.5) {\large $\approx \alpha_{ 2 } $};
+		\node at (3.5,1.5) {\large $\approx \alpha_{ 1 } $};
+		
+	\end{tikzpicture}
+	
+	\caption{$ \varepsilon > 0 $}
+	\label{subfigure_epsilon}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\linewidth}
+		\begin{tikzpicture}
+		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1.5,3);
+		\shade[left color=blue,right color=red] (1.5,0) rectangle (1.75,3);
+		\filldraw[fill=red, draw=red] (1.75,0) rectangle (2.25,3);
+		\shade[left color=red,right color=blue] (2.25,0) rectangle (2.5,3);
+		\filldraw[fill=blue, draw=blue] (2.5,0) rectangle (4,3);
+		
+		\node at (0.75,1.5) {\Large $\approx \alpha_{ 1 } $};
+		\node at (2,1.5) {\small $\approx \alpha_{ 2 } $};
+		\node at (3.25,1.5) {\Large $\approx \alpha_{ 1 } $};
+			
+		\end{tikzpicture}
+	
+		\caption{$ \varepsilon > \varepsilon' >0 $}
+		\label{subfigure_varepsilon_prime}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\linewidth}
+		\begin{tikzpicture}
+			\filldraw[fill=blue, draw=blue] (0,0) rectangle (4,3);
+			\draw[red,thick](2,0)--(2,3);
+			
+			\node at (1,1.5) {\LARGE $= \alpha_{ 1 } $};
+			\node at (3,1.5) {\LARGE $= \alpha_{ 1 } $};
+			
+		\end{tikzpicture}
+		
+		\caption{$ \varepsilon = 0 $}
+		\label{subfigure_varepsilon_zero}
+	\end{subfigure}
+
+	\caption{Profile of the solution $u_{ \varepsilon } $ as $ \varepsilon $ 
+	tends to zero.}
+	\label{figure_interfaces_collapse}
+\end{figure}
+
+This leads us to the solution concept introduced by Hensel and Laux in 
+\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}.
+For the twophase case, the definition is as follows.
+
+\begin{definition}[De Giorgi type varifold solutions for twophase mean 
+curvature flow]
+	Let $ \mu = \lm^{ 1 } \otimes ( \mu_{ t } )_{ t \in ( 0 , \infty ) } $ be a 
+	family of oriented varifolds $ \mu_{ t } \in \mathcal{ M } \left( 
+	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $, $ t \in ( 0 , \infty ) 
+	$, such that the map $ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d 
+	-1 } } \eta ( x , p , t ) \dd \mu_{ t } ( x , p ) $ is measurable for all 
+	$ \eta \in \lp^{ 1 } ( ( 0 , \infty ) ; \cont \left( \flattorus, \mathbb{ S 
+	}^{ d - 1 } \right) $. 
+	Consider also a family $ A = ( A_{ t } )_{ t \in ( 0 , \infty ) } $ of 
+	subsets $ \flattorus $ with finite perimeter such that the associated 
+	indicator function $ \chi ( x , t ) = \chi_{ A _{ t } } ( x ) $ satisfies 
+	$ \chi \in \lp^{ \infty } \left( ( 0 , \infty ) ; \bv ( \flattorus ; \{ 0 , 
+	1 \} ) \right) $.
+	Let $ \sigma > 0 $ be a surface tension constant.
+	Given an initial oriented varifold 
+	$ \mu^{ 0 } \in \mathcal{ M } \left( \flattorus \times \mathbb{ S }^{ d - 1 
+	} \right) $ and an initial phase indicator function $ \chi^{ 0 } \in \bv 
+	\left( \flattorus ; \{ 0 , 1 \} \right)$, we call the pair $ ( \mu , \chi ) 
+	$ a \emph{De Giorgi type varifold solution for twophase mean curvature flow 
+	with initial data} $ ( \mu^{ 0 } , \chi^{ 0 } ) $ if the following holds.
+\end{definition}
 

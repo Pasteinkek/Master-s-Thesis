@@ -44,6 +44,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.1}Definition of $ \bv $-solutions to De Giorgi's mean curvature flow}{57}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{63}{appendix.A}%
+\contentsline {subsection}{\numberline {4.1.2}De Giorgi type varifold solutions for mean curvature flow}{62}{subsection.4.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Appendix}{65}{appendix.A}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
