@@ -1204,4 +1204,889 @@ LaTeX Info: Redefining \url on input line 5159.
 "
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bi
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigint
+calc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count435
+\Field@Width=\dimen287
+\Fld@charsize=\dimen288
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring ON on input line 6448.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegshi\atbegshi
+.sty"
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count436
+\c@Item=\count437
+\c@Hfootnote=\count438
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.de
+f"
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/atveryend\atveryend
+.sty"
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count439
+\c@bookmark@seq@number=\count440
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\reru
+nfilecheck.sty"
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\uni
+quecounter.sty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip98
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cleveref\cleveref.s
+ty"
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+25.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
+Package cleveref Info: no abbreviation of names on input line 7852.
+)
+\c@sometheorems=\count441
+LaTeX Info: Redefining \tilt_excess on input line 77.
+LaTeX Info: Redefining \geodesic_distance on input line 78.
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... none found.
+
+
+Package csquotes Warning: No multilingual support.
+(csquotes)                Cannot enable multilingual quotes on input line 21.
+
+
+LaTeX Warning: Unused global option(s):
+    [bibliogrpahy=totocnumbered].
+
+("Master's Thesis.aux" (chapter_mcf.aux) (chapter_ac_equation.aux)
+(chapter_cond_conv_of_ac.aux) (chapter_de_giorgis_mean_curvature_flow.aux)
+(chapter_appendix.aux))
+\openout1 = `"Master's Thesis.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+Package scrbase Info: activating english \contentsname on input line 21.
+Package scrbase Info: activating english \listfigurename on input line 21.
+Package scrbase Info: activating english \listtablename on input line 21.
+LaTeX Info: Redefining \microtypecontext on input line 21.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 21.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-cmr.cf
+g"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\englis
+h.lbx"
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `"Master's Thesis.bcf"'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file '"Master's Thesis".bbl' found.
+ ("Master's Thesis.bbl")
+Package biblatex Info: Reference section=0 on input line 21.
+Package biblatex Info: Reference segment=0 on input line 21.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
+f.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count442
+\scratchdimen=\dimen289
+\scratchbox=\box64
+\nofMPsegments=\count443
+\nofMParguments=\count444
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count445
+\MPscratchDim=\dimen290
+\MPnumerator=\count446
+\makeMPintoPDFobject=\count447
+\everyMPtoPDFconversion=\toks47
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
+df-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+) ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
+your preamble.
+ on input line 21.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box65
+Package hyperref Info: Link coloring ON on input line 21.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.st
+y"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.s
+ty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\ge
+ttitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count448
+)
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
+ ("Master's Thesis.out") ("Master's Thesis.out")
+\@outlinefile=\write6
+\openout6 = `"Master's Thesis.out"'.
+
+Class scrbook Info: loading recommended package `bookmark'.
+(scrbook)           Using `bookmark' together with `hyperref' is recommended,
+(scrbook)           because of handling of possible bookmark level gaps.
+(scrbook)           You can avoid loading `bookmark' with KOMA-Script option
+(scrbook)           `bookmarkpackage=false' before \begin{document} and
+(scrbook)           you can avoid this message adding:
+(scrbook)             \usepackage{bookmark}
+(scrbook)           before \begin{document} on input line 21.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bookmark.s
+ty"
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bkm-pdftex
+-2019-12-03.def"
+File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+Package auxhook Info: \AddLineBeginMainAux comes a little late,
+(auxhook)             because the main .aux file is already opened on input lin
+e 169.
+\BKM@id=\count449
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msa.cf
+g"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+
+ ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt-msb.cf
+g"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
+6.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stmaryrd\ustmry.fd"
+) [1
+
+
+
+
+
+{C:/Users/user/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+
+]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package tocbasic Info: character protrusion at toc deactivated on input line 26
+.
+
+("Master's Thesis.toc")
+\tf@toc=\write7
+\openout7 = `"Master's Thesis.toc"'.
+
+ [1
+
+
+
+] [2
+
+
+]
+\openout2 = `chapter_mcf.aux'.
+
+ (chapter_mcf.tex
+chapter 1.
+(section_gradient_flows.texpdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 \end{align*}
+                  [1
+
+
+
+] Excluding 'comment' comment.) (section_mcf.texpdfTeX warning (ext4): destinat
+ion with the same identifier (name{page.2}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.40 I
+      n \Cref{section_gradient_flows} we highlighted the importance of [2]
+[3])) [4]
+\openout2 = `chapter_ac_equation.aux'.
+
+ (chapter_ac_equation.tex
+chapter 2.
+(section_structure_of_ac.tex [5
+
+
+
+
+] [6]) (section_existence_of_solution.tex
+[7] [8]
+Overfull \hbox (0.35463pt too wide) detected at line 203
+[]
+ []
+
+[9]
+Overfull \hbox (66.2094pt too wide) in paragraph at lines 290--292
+[]\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
+ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
+ []
+
+[10]
+Overfull \hbox (1.3415pt too wide) in paragraph at lines 399--402
+\OT1/cmr/m/n/10 (-20) In step 6, we more-over have shown that $\OML/cmm/m/it/10
+ @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
+1/cmr/m/n/10 (-20) in $[][]([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/
+cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) 
+)$.
+ []
+
+[11]
+Overfull \hbox (0.80008pt too wide) detected at line 539
+[]
+ []
+
+[12] [13])) [14]
+\openout2 = `chapter_cond_conv_of_ac.aux'.
+
+ (chapter_cond_conv_of_ac.tex
+chapter 3.
+(section_cond_conv_twophase.tex [15
+
+
+
+
+] [16]
+Overfull \hbox (16.11162pt too wide) in paragraph at lines 167--168
+[]\OT1/cmr/bx/n/10 Lemma 3.1.2. []\OT1/cmr/m/it/10 (-20) With the as-sump-tions
+ of Propo-si-tion [][]3.1.1[][], we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10
+ 2 [][]\OT1/cmr/m/n/10 (-20) ([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ]; []
+[](\U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
+ []
+
+[17] [18] [19] [20] [21]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathop' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchardef' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\std@minus' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.22198pt
+(hyperref)                removed on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathgroup' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\symoperators' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 688.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 688.
+
+
+Overfull \hbox (21.20439pt too wide) in paragraph at lines 701--705
+\OT1/cmr/m/it/10 (-20) with $[][] []\OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 \O
+T1/cmr/m/n/10 (-20) )$ moves by mean cur-va-ture \OT1/cmr/m/it/10 (-20) if ther
+e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
+ []
+
+[22]
+Overfull \hbox (5.06604pt too wide) detected at line 863
+[]
+ []
+
+[23] [24]
+
+LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
+ line 1151.
+
+[25]
+Overfull \hbox (34.80074pt too wide) detected at line 1367
+[]
+ []
+
+[26]
+Overfull \hbox (9.26213pt too wide) detected at line 1562
+[]
+ []
+
+[27]) (section_cond_conv_multiphase.tex [28]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
+.
+
+("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
+.fd"
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [29] [30] [31] [32] [33]
+Overfull \hbox (2.04562pt too wide) in paragraph at lines 506--508
+[]\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
+t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
+of Lemma [][]3.2.3[][].
+ []
+
+[34]
+Overfull \hbox (17.00601pt too wide) detected at line 634
+\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
+mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
+ []
+
+
+Overfull \hbox (6.95596pt too wide) in paragraph at lines 638--639
+[]\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
+o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
+t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
+rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
+ []
+
+[35] [36] [37] [38]
+Overfull \hbox (2.10722pt too wide) in paragraph at lines 1054--1057
+\OT1/cmr/m/n/10 (-20) Without loss of gen-er-al-ity we as-sume the for-mer. The
+n it fol-lows that $[][] [] = 0$
+ []
+
+[39] [40]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathop' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchardef' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\std@minus' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.22198pt
+(hyperref)                removed on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathgroup' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\symoperators' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1214.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1214.
+
+[41]
+Overfull \hbox (14.02452pt too wide) in paragraph at lines 1344--1361
+\OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
+-20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
+/m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
+ []
+
+Excluding 'comment' comment.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42] [43]
+Overfull \hbox (10.05412pt too wide) detected at line 1555
+[] [][][] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 [] [][][][] []
+ []
+
+[44]
+Overfull \hbox (31.40291pt too wide) detected at line 1704
+[] [] \U/msa/m/n/10 . []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
+ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
+ []
+
+
+Overfull \hbox (3.06598pt too wide) detected at line 1745
+[] \OMS/cmsy/m/n/10  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
+ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
+ []
+
+[45]
+Overfull \hbox (7.9185pt too wide) detected at line 1840
+[]
+ []
+
+
+Underfull \vbox (badness 2142) has occurred while \output is active []
+
+ [46]
+[47] [48]
+Overfull \hbox (21.99113pt too wide) detected at line 2362
+[]
+ []
+
+[49]
+Overfull \hbox (34.2628pt too wide) detected at line 2557
+[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 ; 
+u\OT1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + 
+[][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/
+10 [] [] ;
+ []
+
+[50] [51]
+Overfull \hbox (1.1456pt too wide) detected at line 2772
+[] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 
+; u[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 [
+] [][] []  [] [] [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 C [] [][] [] [] [] :
+ []
+
+[52]
+Overfull \hbox (51.64359pt too wide) detected at line 3027
+[]
+ []
+
+[53]
+Overfull \hbox (0.47713pt too wide) detected at line 3191
+[]
+ []
+
+
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
+ [54]
+Overfull \hbox (17.80789pt too wide) detected at line 3271
+[]
+ []
+
+
+Overfull \hbox (15.11865pt too wide) in paragraph at lines 3271--3278
+\OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
+ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
+for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
+/n/10 (-20) )$
+ []
+
+[55])) [56]
+\openout2 = `chapter_de_giorgis_mean_curvature_flow.aux'.
+
+ (chapter_de_giorgis_mean_curvature_flow.tex
+chapter 4.
+(section_convergence_to_de_giorgis_mean_curvature_flow.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathop' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchardef' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\std@minus' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathcode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.22198pt
+(hyperref)                removed on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathgroup' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\symoperators' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 6.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6.
+
+[57
+
+
+
+
+]
+Overfull \hbox (14.02452pt too wide) in paragraph at lines 120--139
+\OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
+-20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
+/m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
+ []
+
+
+Overfull \hbox (1.23701pt too wide) detected at line 223
+[][] [] [] [][] [] [][][] [] [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 [] [
+][] [][] H[] [] [] :
+ []
+
+[58]
+Overfull \hbox (10.54408pt too wide) in paragraph at lines 243--248
+\OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
+mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
+th re-spect to $[][] []$
+ []
+
+[59] [60]
+Overfull \hbox (46.54857pt too wide) detected at line 636
+[]
+ []
+
+
+Overfull \hbox (117.80127pt too wide) detected at line 727
+[]
+ []
+
+
+Overfull \hbox (10.69827pt too wide) detected at line 825
+[]
+ []
+
+[61]
+Overfull \hbox (4.88054pt too wide) in paragraph at lines 938--939
+[][] 
+ []
+
+
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 956--957
+[][] 
+ []
+
+
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 970--971
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[62] [63]
+Overfull \hbox (8.22441pt too wide) detected at line 1171
+[]
+ []
+
+[64]
+Overfull \hbox (15.36797pt too wide) in paragraph at lines 1222--1242
+\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][] []$\OT1/cmr/m/it/10 (-20) . De-fine 
+evolv-ing ori-ented var-i-folds $\OML/cmm/m/it/10 [] \OT1/cmr/m/n/10 (-20) = [
+][] \OMS/cmsy/m/n/10 j[] 
+ \OT1/cmr/m/n/10 (-20) (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (-20) )[]$\OT1/cmr/
+m/it/10 (-20) ,
+ []
+
+
+LaTeX Warning: Command \j invalid in math mode on input line 1315.
+
+
+Overfull \hbox (29.54324pt too wide) detected at line 1323
+[][] [] \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T; x\OT1/cmr/m/n/
+10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T; x\OT1/cmr/m/n/10 ) \
+OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; x\OT1/cmr/m/n
+/10 ) [] = [][] [] \OML/cmm/m/it/10 []@[]' [] [] \OT1/cmr/m/n/10 + [] [] [][] 
+[] \OML/cmm/m/it/10 V[]' [] []
+ []
+
+[65])) [66]
+\openout2 = `chapter_appendix.aux'.
+
+ (chapter_appendix.tex
+chapter A.
+[67
+
+
+
+
+] [68]
+Overfull \hbox (29.86714pt too wide) detected at line 303
+[]
+ []
+
+[69]) [70]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [71
+
+
+
+
+
+] [72]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
+ ("Master's Thesis.aux" (chapter_mcf.aux)
+(chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux)
+(chapter_de_giorgis_mean_curvature_flow.aux) (chapter_appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
+Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were undefined references.
+
+Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
+\openout1 = `"Master's Thesis.run.xml"'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 48406 strings out of 480930
+ 1072101 string characters out of 2900231
+ 1900908 words of memory out of 3000000
+ 63127 multiletter control sequences out of 15000+200000
+ 556852 words of font info for 187 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/user/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i5.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Use
+rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/user/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/user/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
+s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
+fb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/U
+sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
+/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "Master's Thesis.pdf" (76 pages, 759354 bytes).
+PDF statistics:
+ 1097 PDF objects out of 1200 (max. 8388607)
+ 269 named destinations out of 1000 (max. 500000)
+ 26329 words of extra memory for PDF output out of 29859 (max. 10000000)
+
