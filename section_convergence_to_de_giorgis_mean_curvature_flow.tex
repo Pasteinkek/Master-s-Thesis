@@ -989,19 +989,223 @@ curvature flow]
 	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $, $ t \in ( 0 , \infty ) 
 	$, such that the map $ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d 
 	-1 } } \eta ( x , p , t ) \dd \mu_{ t } ( x , p ) $ is measurable for all 
-	$ \eta \in \lp^{ 1 } ( ( 0 , \infty ) ; \cont \left( \flattorus, \mathbb{ S 
-	}^{ d - 1 } \right) $. 
+	$ \eta \in \lp^{ 1 } \left( ( 0 , \infty ) ; \cont \left( \flattorus, 
+	\mathbb{ S 
+	}^{ d - 1 } \right) \right) $. 
 	Consider also a family $ A = ( A_{ t } )_{ t \in ( 0 , \infty ) } $ of 
 	subsets $ \flattorus $ with finite perimeter such that the associated 
 	indicator function $ \chi ( x , t ) = \chi_{ A _{ t } } ( x ) $ satisfies 
 	$ \chi \in \lp^{ \infty } \left( ( 0 , \infty ) ; \bv ( \flattorus ; \{ 0 , 
 	1 \} ) \right) $.
 	Let $ \sigma > 0 $ be a surface tension constant.
+	
 	Given an initial oriented varifold 
 	$ \mu^{ 0 } \in \mathcal{ M } \left( \flattorus \times \mathbb{ S }^{ d - 1 
 	} \right) $ and an initial phase indicator function $ \chi^{ 0 } \in \bv 
 	\left( \flattorus ; \{ 0 , 1 \} \right)$, we call the pair $ ( \mu , \chi ) 
 	$ a \emph{De Giorgi type varifold solution for twophase mean curvature flow 
 	with initial data} $ ( \mu^{ 0 } , \chi^{ 0 } ) $ if the following holds.
+	\begin{enumerate}
+		\item (Existence of a normal speed)
+		Writing $ \mu_{ t } = \omega_{ t } \otimes ( \lambda_{ x , t } )_{ x 
+		\in \flattorus} $ for the disintegration of $ \mu_{ t } $, we require 
+		the existence of some 
+		$ V \in \lp^{ 2 } \left( ( 0 , \infty ) ; \lp^{ 2 } \left( \flattorus ; 
+		\omega_{ t } \right) \right) $ encoding a normal speed in the sense of
+		\begin{equation}
+			\label{equation_varifold_velocity}
+			\sigma
+			\int
+				\chi ( T , x ) \varphi ( T , x ) 
+				-
+				\chi^{ 0 } ( x ) \varphi (0,x)
+			\dd{ x }
+			=
+			\sigma
+			\int_{ 0 }^{ T }
+				\int
+					\chi
+					\partial_{ t } \varphi 
+				\dd{ x }
+			\dd{ t }
+			+
+			\int_{ 0 }^{ T }
+				\int
+					V \varphi 
+				\dd{ \omega_{ t } }
+			\dd{ t }
+		\end{equation}
+		for almost every $ T \in ( 0 , \infty ) $ and all $ \varphi \in \cont_{ 
+		\mathrm{c} }^{ \infty } \left( [ 0 , \infty ) \times \flattorus \right) 
+		$.
+		
+		\item (Existence of a generalized mean curvature vector)
+		We require the existence of some 
+		$ H \in \lp^{ 2 } \left( 
+			( 0 , \infty ) ; 
+			\lp^{ 2 } \left(
+				\flattorus , \omega_{ t } ; \mathbb{ R }^{ d }
+			\right)
+			\right) $
+		encoding a generalized mean curvature vector by
+		\begin{equation}
+			\label{equation_varifold_mean_curvature}
+			\int_{ 0 }^{ \infty }
+				\int
+					\inner*{ H }{ \xi }
+				\dd{ \omega_{ t } }
+			\dd{ t }
+			=
+			-
+			\int_{ 0 }^{ \infty }
+				\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+					\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
+				\dd{ \mu_{ t } }
+			\dd{ t }
+		\end{equation}
+		for all $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( [ 0, \infty ) 
+		\times \flattorus ; \mathbb{ R }^{ d } \right) $.
+		
+		\item (De Giorgi type optimal energy dissipation inequality)
+		A sharp energy dissipation inequality holds in form of
+		\begin{equation}
+			\label{equation_varifold_de_giorgi_inequality}
+			\omega_{ t } ( \flattorus )
+			+
+			\frac{ 1 }{ 2 }
+			\int_{ 0 }^{ T }
+				\int
+					V^{ 2 }
+					+
+					\abs{ H }^{ 2 }
+				\dd{ \omega_{ t } }
+			\dd{ t }
+			\leq
+			\omega_{ 0 } ( \flattorus )
+		\end{equation}
+		for almost every $ T \in ( 0 , \infty ) $.
+		
+		\item (Compatibility)
+		For almost every $ t \in ( 0 , \infty ) $ and all $ \xi \in \cont^{ 
+		\infty } \left( \flattorus ; \mathbb{ R }^{ d } \right) $, it holds that
+		\begin{equation}
+			\label{equation_varifold_compatibility}
+			\sigma
+			\int
+				\inner*{ \xi }
+				{ \nabla \chi ( t , \cdot ) }
+			=
+			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+				\inner*{ \xi }{ p }
+			\dd{ \mu_{ t } }.
+		\end{equation}
+	\end{enumerate}
 \end{definition}
 
+We firstly want to discuss this definition. In the setting of 
+\Cref{de_giorgi_solution_to_mmcf} and in the twophase case, we can think of the 
+oriented varifold $ \mu $ as the measure 
+\begin{equation} 
+	\label{equation_simple_varifold}
+\mu =
+\sigma \lm^{ 1 } |_{ 
+( 0 , \infty ) } \otimes \abs{ \nabla \chi  ( t ) } 
+\otimes \delta_{ \nu ( t , x ) }, 
+\end{equation}
+and therefore the measure $ \omega_{ t } $ 
+becomes the energy measure $ \energy ( \chi ( t ) , \cdot ) $.
+The advantage of this formulation is that our new energy measure $ \omega_{ t } 
+$ is not restricted to only seeing the measure theoretic boundary of $ \chi $, 
+but can actually capture phenomenons as described in 
+\Cref{figure_interfaces_collapse}.
+For example in such a scenario we would expect the measure $ \mu_{ t } $ to be 
+defined by
+like  
+\begin{equation}
+	\label{equation_mu_in_figure}
+	\hm^{ 1 } |_{ l } \otimes \frac{ 1 }{ 2 } \left( \delta_{ ( 1 , 0 ) } + 
+\delta_{ ( - 1 , 0 ) }\right) ,
+\end{equation}
+where $ l $ is the red line to which the phase 
+of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero.
+
+The equation (\ref{equation_varifold_velocity}) for the  normal speed is simply 
+motivated through 
+the fundamental theorem of calculus. Assuming that everything is nice and 
+smooth, we can compute that 
+\begin{align*}
+	\sigma \int
+		\chi ( T , x ) \varphi ( T , x ) - \chi^{ 0 } ( x ) \varphi ( 0 , x )
+	\dd{ x }
+	& =
+	\sigma \int_{ 0 }^{ T }
+		\int
+			\partial_{ t } \left(
+				\chi ( t , x ) \varphi ( t , x )
+			\right)
+		\dd{ x }
+	\dd{ t }
+	\\
+	&=
+	\sigma \int_{ 0 }^{ T }
+		\int
+			\partial_{ t } \chi ( t , x ) \varphi ( t , x )
+			\chi ( t , x ) \partial_{ t } \varphi ( t , x )
+		\dd{ x }
+	\dd{ t }
+	\\
+	& =
+	\sigma \int_{ 0 }^{ T }
+		\int
+			\chi ( t , x )
+			\partial_{ t } ( t , x )
+		\dd{ x }
+	\dd{ t }
+	+
+	\int_{ 0 }^{ T }
+		\int
+			V \varphi 
+		\dd{ \omega_{ t} }
+	\dd{ t },
+\end{align*}
+where for the last equality, we used $ \partial_{ t } \chi = V \abs{ \nabla 
+\chi } \dd{ t } $ and $ \omega_{ t } = \sigma \abs{ \nabla \chi ( t ) } $.
+
+The equation (\ref{equation_varifold_mean_curvature}) for the generalized mean 
+curvature is also quite intuitive since 
+assuming that the simple case of the varifold (\ref{equation_simple_varifold}) 
+holds, we have that the right hand side of equation 
+(\ref{equation_varifold_mean_curvature}) reads
+\begin{equation*}
+	\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+		\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
+	\dd{ \omega_{ t } }
+	=
+	\sigma
+	\int
+		\inner*{ \xi }{\mathrm{Id} - \nu \otimes \nu }
+	\abs{ \nabla \chi },
+\end{equation*}
+which is the standard distributional formulation for the mean curvature vector.
+
+De Giorgis inequality (\ref{equation_varifold_de_giorgi_inequality}) is 
+self-explanatory since $ \omega_{ t } $ is the energy measure. The 
+compatibility condition is necessary to couple the evolving set $ A_{ t } $ to 
+the varifold. Notice that in our above example (\ref{equation_mu_in_figure}), 
+we have that even though the energy measure $ \omega_{ t } $ sees the red strip 
+and the measure theoretic boundary of the corresponding indicator function does 
+not, the term on the right hand side of (\ref{equation_varifold_compatibility}) 
+is zero since
+\begin{equation*}
+	\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+		\inner*{ \xi }{ p }
+	\dd{ \mu_{ t } }
+	=
+	\int_{ l }
+		\frac{ 1 }{ 2 }
+		\inner*{ \xi }{ ( 1 , 0 ) + ( - 1 , 0 ) }
+	\dd{ \hm^{ 1 } }
+	= 
+	0,
+\end{equation*} 
+and thus we have no problem.
