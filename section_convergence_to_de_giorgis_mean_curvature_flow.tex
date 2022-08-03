@@ -1070,7 +1070,7 @@ curvature flow]
 		A sharp energy dissipation inequality holds in form of
 		\begin{equation}
 			\label{equation_varifold_de_giorgi_inequality}
-			\omega_{ t } ( \flattorus )
+			\omega_{ T } ( \flattorus )
 			+
 			\frac{ 1 }{ 2 }
 			\int_{ 0 }^{ T }
@@ -1120,14 +1120,15 @@ but can actually capture phenomenons as described in
 \Cref{figure_interfaces_collapse}.
 For example in such a scenario we would expect the measure $ \mu_{ t } $ to be 
 defined by
-like  
 \begin{equation}
 	\label{equation_mu_in_figure}
-	\hm^{ 1 } |_{ l } \otimes \frac{ 1 }{ 2 } \left( \delta_{ ( 1 , 0 ) } + 
+	\mu_{ t } \coloneqq
+	2 \hm^{ 1 } |_{ l } \otimes \frac{ 1 }{ 2 } \left( \delta_{ ( 1 , 0 ) } + 
 \delta_{ ( - 1 , 0 ) }\right) ,
 \end{equation}
 where $ l $ is the red line to which the phase 
-of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero.
+of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero. The factor 
+2 comes from the fact that we obtain energy from both the collapsing interfaces.
 
 The equation (\ref{equation_varifold_velocity}) for the  normal speed is simply 
 motivated through 
@@ -1209,3 +1210,248 @@ is zero since
 	0,
 \end{equation*} 
 and thus we have no problem.
+
+For the multiphase case, we propose the following solution concept, which 
+generalized 
+\cite[Def.~2]{hensel_laux_varifold_solution_concept_for_mean_curvature_flow} to 
+the case of arbitrary surface tensions.
+
+\begin{definition}[De Giorgi type varifold solutions for multiphase mean 
+curvature flow]
+	\label{de_giorgi_varifold_solutions_for_mmcf}
+	Let $ P \in \mathbb{ N }_{ \geq 2 } $ be the number of phases. For each 
+	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \} $, let 
+	$ \mu^{ i j } = \lm^{ 1 }|_{ ( 0 , \infty ) } $ be a family of oriented 
+	varifolds 
+	$ \mu_{ t }^{ i j } \in \mathcal{ M } \left(
+		\flattorus \times \mathbb{ S }^{ d - 1 }
+	\right) $,
+	$ t \in ( 0 , \infty ) $, such that the map 
+	$ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+		\eta ( t , x , p )
+	\dd{ \mu_{ t }^{ i j } ( x, p ) }$
+	is measurable for all test functions 
+	$ \eta \in \lp^{ 1 } \left(	
+		( 0 , \infty ) ; \cont \left( \flattorus \times \mathbb{ S }^{ d- 1 } 
+		\right) 
+	\right) $.
+	Define evolving oriented varifolds $ \mu^{ i } = \lm^{ 1 }|_{ ( 0 , \infty 
+	) } \otimes ( \mu_{ t }^{ i } )_{ t \in ( 0 , \infty ) } $, $ i \in \{ 1, 
+	\dotsc, P \} $ and $ \mu = \lm^{ 1 }|_{ ( 0 , \infty ) } \otimes ( \mu_{ t 
+	} )_{ t \in ( 0 , \infty ) } $ by means of
+	\begin{align*}
+		\mu_{ t }^{ i }
+		& \coloneqq
+		2 \mu_{ t }^{ i , i }
+		+
+		\sum_{ j = 1 , j \neq i }^{ P }
+			\mu_{ t }^{ i j },
+		\\
+		\mu_{ t }
+		& \coloneqq
+		\frac{ 1 }{ 2 }
+		\sum_{ i = 1 }^{ P }
+			\mu_{ t }^{ i }.
+	\end{align*}
+	The disintegration of $ \mu_{ t }^{ i j } $ is expressed in form of 
+	$ \mu_{ t }^{ i j } = \omega_{ t }^{ i j } \otimes \left( \lambda _{ t , x 
+	}^{ i j } \right)_{ x \in \flattorus } $ with expected value
+	$ \langle \lambda_{ t , x }^{ i j } \rangle 
+	\coloneqq
+	\int_{ \mathbb{ S }^{ d - 1 } }
+		p 
+	\dd{ \lambda_{ t , x }^{ i j } ( p ) } $.
+	Analagous expressions are introduced for the disintegrations of $ \mu_{ t 
+	}^{ i } $ and $ \mu_{ t } $.
+	
+	Furthermore consider a family 
+	$ A = \left( A^{ 1 } , \dotsc , A^{ P } \right) $ 
+	such that for each phase $ 1 \leq i \leq P $, we have a family
+	$ A^{ i } = ( A^{ i } ( t ) )_{ t \in ( 0 , \infty ) } $ of subsets of $ 
+	\flattorus $ with finite perimeter. We also require 
+	$ \left( A^{ 1 } ( t ) , \dotsc, A^{ P } ( t ) \right) $
+	to be a partition of $ \flattorus $ for all $ t \in ( 0 , \infty ) $ and 
+	that for each $ 1 \leq i \leq P $, the associated indicator function 
+	satisfies 
+	$ \chi^{ i } \in \lp^{ \infty } \left(
+		( 0 , \infty ) ;
+		\bv \left( \flattorus ; \{ 0 , 1 \} \right)
+	\right) $.
+	We shortly write $ \chi = \left( \chi^{ 1 } , \dotsc, \chi^{ P } \right) $.
+	
+	Given initial data 
+	$ (
+		( \mu_{ 0 }^{ i j } )_{ 1 \leq i , j \leq P },
+		( \chi^{ i}_{ 0 } )_{ 1 \leq i \leq P}
+	) $
+	of the above form and a $ P \times P $ matrix of surface tensions $ \sigma 
+	$ such that $ \sigma_{ i i }=0 $ and $ \sigma_{ i j } > 0 $ for $ i \neq j 
+	$, we call the pair $ \left( \mu , \chi \right) $ a
+	\emph{De Giorgi type varifold solution for multiphase mean curvature flow 
+	with initial data} $ ( \mu_{ 0 } , \chi_{ 0 } ) $ \emph{and surface 
+	tensions} $ \sigma $ if the following requirements hold true.
+	\begin{enumerate}
+		\item (Existence of normal speeds)
+		For each phase $ 1 \leq i \leq P $, there exists a normal speed
+		$ V^{ i } \in \lp^{ 2 } \left(
+			( 0 , \infty ) ;
+			\lp^{ 2 } \left( \flattorus , \omega_{ t }^{ i } \right)
+		\right) $ in the sense that
+		\begin{equation}
+			\label{equation_varifold_velocity_multiphase}
+			\int
+				\chi^{ i } ( T, x ) \varphi ( T, x ) 
+				-
+				\chi^{ i }_{ 0 } ( x ) \varphi ( 0 , x )
+			\dd{ x }
+			=
+			\int_{ 0 }^{ T }
+				\int
+					\chi^{ i }
+					\partial_{ t } \varphi
+				\dd{ x }
+			\dd{ t }
+			+
+			\sum_{ j =1, \j \neq i  }^{ P }
+				\frac{ 1 }{ \sigma_{ i j } }
+				\int_{ 0 }^{ T }
+					\int
+						V^{ i }
+						\varphi
+					\dd{ \omega_{ t }^{ i j } }
+				\dd{ t }
+		\end{equation}
+		for almost every $ T \in ( 0 , \infty ) $ and all $ \varphi \in \cont_{ 
+		\mathrm{c} }^{ \infty } \left( [ 0 , \infty ) \times \flattorus\right) 
+		$.
+	\end{enumerate}
+
+	\item (Existence of a generalized mean curvature vector)
+	There exists a generalized mean curvature vector 
+	$ H \in \lp^{ 2 } \left(
+		( 0 , \infty ) ;
+		\lp^{ 2 } \left( \flattorus , \omega_{ t } ; \mathbb{ R }^{ d } \right)
+	\right) $
+	in the sense that
+	\begin{equation}
+		\label{equation_varifold_mean_curvature_multiphase}
+		\int_{ 0 }^{ T }
+			\int
+				\inner*{ H }{ \xi }
+			\dd{ \omega_{ t } }
+		\dd{ t }
+		=
+		-
+		\int_{ 0 }^{ T }
+			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+				\inner*{ \diff \xi }
+				{ \mathrm{Id} - p \otimes p }
+			\dd{ \mu_{ t } }
+		\dd{ t }
+	\end{equation}
+	holds for almost every $ T \in ( 0 , \infty ) $ and all $ \xi \in \cont_{ 
+	\mathrm{c} }^{ \infty } \left( [ 0 , \infty ) \times \flattorus ; \mathbb{ 
+	R }^{ d } \right) $.
+	
+	\item (De Giorgi type optimal energy dissipation inequality)
+	A sharp energy dissipation inequality holds in form of
+	\begin{equation}
+		\label{equation_varifold_energy_dissipation_inequality}
+		\omega_{ T } ( \flattorus )
+		+
+		\frac{ 1 }{ 2 }
+		\sum_{ i = 1 }^{ P }
+			\int_{ 0 }^{ T }
+				\int
+					( V^{ i } )^{ 2 }
+					\frac{ 1 }{ 2 }
+				\dd{ \omega_{ t }^{ i } }
+			\dd{ t }
+		+
+		\frac{ 1 }{ 2 }
+		\int_{ 0 }^{ T }
+			\int
+				\abs{ H }^{ 2 }
+			\dd{ \omega_{ t } }
+		\dd{ t }
+		\leq
+		\omega_{ 0 } ( \flattorus )
+	\end{equation}
+	for almost every $ T \in ( 0 , \infty ) $.
+	
+	\item (Compatibility conditions)
+	For all $ 1 \leq i , j \leq P $ with $ i \neq j $, we require 
+	\begin{equation}
+		\label{varifold_symmetry_of_energy_measures}
+		\omega_{ t }^{ i j }
+		=
+		\omega_{ t }^{ j i } 
+	\end{equation}
+	for almost every $ t \in ( 0 , \infty ) $ and
+	\begin{align}
+		\label{varifold_symmetry_expectations}
+		\langle \lambda_{ t, x  }^{ i j } \rangle
+		&= 
+		- \langle \lambda_{ t, x  }^{ j i } \rangle,
+		\\
+		\label{varifold_expecation_of_ii_zero}
+		\langle \lambda_{ t , x }^{ i i } \rangle
+		&= 
+		0,
+		\\
+		\label{varifold_symmetry_velocities}
+		V^{ i } ( t, x ) 
+		&= 
+		- V^{ j } ( t, x ),
+		\\
+		\label{varifold_mean_curvature_points_in_normal_direction}
+		\abs{ \langle \lambda_{ t , x }^{ i j } \rangle }^{ 2 }
+		H ( t, x )
+		& =
+		\inner*{ H( t , x ) }{ \langle \lambda_{ t , x }^{ i j } \rangle }
+		\langle \lambda_{ t , x }^{ i j } \rangle
+	\end{align}
+	for almost every $ t \in ( 0 , \infty ) $ and $ \omega_{ t }^{ i j } $ 
+	almost every $ x \in \flattorus $. Finally for all $ 1 \leq i \leq P $, we 
+	have
+	\begin{equation}
+		\label{varifold_compatibility_condition_multiphase}
+		\int
+			\inner*{ \xi }{ \dd{ \nabla \chi^{ i } ( t , \cdot ) } }
+		=
+		\sum_{ j = 1 , j \neq i }^{ P }
+			\frac{ 1 }{ \sigma_{ i j } }
+			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+				\inner*{ \xi }{ p }
+			\dd{ \mu_{ t }^{ i j } }
+	\end{equation}
+	for almost every $ t \in ( 0 , \infty ) $ and every $ \xi \in \cont^{ 
+	\infty } \left( \flattorus ; \mathbb{ R }^{ d } \right) $.
+\end{definition}
+
+As before, we first want to motivate this definition. In the simplest case, we 
+can think of the varifold $ \mu_{ t }^{ i j } $ for $ i \neq j $ as
+\begin{equation}
+	\label{varifold_simplest_case_mutliphase}
+	\mu_{ t }^{ i j }
+	=
+	\sigma_{ i j }
+	\dd{ \hm^{ d - 1 }|_{ \Sigma_{ i j } } } 
+	\otimes
+	( \delta_{ nu_{ i } } )_{ x \in \flattorus }.
+\end{equation}
+Under the assumption of energy convergence, we expect that $ \mu_{ t }^{ i i } 
+= 0 $. But if approximate interfaces collapse as in 
+\Cref{figure_interfaces_collapse}, then this is exactly captured by the 
+varifold $ \mu_{ t }^{ i i }$, which, as in the twophase case, will be 
+described by
+\begin{equation}
+	\label{varifold_when_interfaces_collapse}
+	\mu_{ t }^{ i i}
+	\coloneqq
+	2 \hm^{ 1 } |_{ l }
+	\otimes
+	\frac{ 1 }{ 2 } 
+	\left( \delta_{ ( 1 , 0 ) } + \delta_{ ( - 1 , 0 ) } \right).
+\end{equation}
+BIN MIR TATSÄCHLICH NICHT SICHER, OB DAS STIMMT; MIT TIM BESPRECHEN.
