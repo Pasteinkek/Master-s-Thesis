@@ -5,7 +5,7 @@ the aforementioned.
 
 \subsection{Definition of $ \bv $-solutions to De Giorgi's mean curvature flow}
 
-\begin{definition}[$\bv$-solution to  De Giorgi's multiphase mean curvature 
+\begin{definition}[$\bv$-solution to De Giorgi's multiphase mean curvature 
 flow]
 	\label{de_giorgi_solution_to_mmcf}
 	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
@@ -42,7 +42,8 @@ flow]
 		There exist a mean curvature vector $ H \in 
 		\lp^{ 2 } ( \energy ( u ; \cdot) \dd{ t } ; \mathbb{ R }^{ d } ) $ 
 		which satisfies
-		\begin{equation*}
+		\begin{equation}
+			\label{mean_curvature_vector_bv_de_giorgi}
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 				\energy \left( \chi ; \inner*{ H }{ \xi } \right)
@@ -58,7 +59,7 @@ flow]
 					{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }
-		\end{equation*}
+		\end{equation}
 		for all test vector fields 
 		$ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left(
 			( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d }
@@ -142,9 +143,9 @@ This result is similar to \Cref{convergence_to_multiphase_mcf} and we only need
 to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 
 \begin{proof}
-	Let us for simplicity first consider the twophase case. The idea of the 
-	proof is that we already have an optimal energy dissipation inequality for 
-	the Allen--Cahn equation given by (\ref{energy_dissipation_sharp}).
+	The idea of the proof is that we already have an optimal energy dissipation 
+	inequality for the Allen--Cahn equation given by 
+	(\ref{energy_dissipation_sharp}).
 	If we use that additionally use the Allen--Cahn equation once, we arrive at 
 	the reformulated version of the optimal energy dissipation inequality given 
 	by
@@ -181,7 +182,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\int_{ 0 }^{ T' }
 				\int
 					\varepsilon 
-					\abs{ \partial_{ t } }^{ 2 }
+					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
 				\dd{ x }
 			\dd{ t }
 		\geq
@@ -984,18 +985,19 @@ For the twophase case, the definition is as follows.
 
 \begin{definition}[De Giorgi type varifold solutions for twophase mean 
 curvature flow]
-	Let $ \mu = \lm^{ 1 } \otimes ( \mu_{ t } )_{ t \in ( 0 , \infty ) } $ be a 
+	Let $ T < \infty $ be an arbitrary finite time horizon and let $ \mu = 
+	\lm^{ 1 } \otimes ( \mu_{ t } )_{ t \in ( 0 , T ) } $ be a 
 	family of oriented varifolds $ \mu_{ t } \in \mathcal{ M } \left( 
-	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $, $ t \in ( 0 , \infty ) 
+	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $, $ t \in ( 0 , T ) 
 	$, such that the map $ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d 
 	-1 } } \eta ( x , p , t ) \dd \mu_{ t } ( x , p ) $ is measurable for all 
-	$ \eta \in \lp^{ 1 } \left( ( 0 , \infty ) ; \cont \left( \flattorus, 
+	$ \eta \in \lp^{ 1 } \left( ( 0 , T ) ; \cont \left( \flattorus, 
 	\mathbb{ S 
 	}^{ d - 1 } \right) \right) $. 
-	Consider also a family $ A = ( A_{ t } )_{ t \in ( 0 , \infty ) } $ of 
-	subsets $ \flattorus $ with finite perimeter such that the associated 
+	Consider also a family $ A = ( A_{ t } )_{ t \in ( 0 , T ) } $ of 
+	subsets of $ \flattorus $ with finite perimeter such that the associated 
 	indicator function $ \chi ( x , t ) = \chi_{ A _{ t } } ( x ) $ satisfies 
-	$ \chi \in \lp^{ \infty } \left( ( 0 , \infty ) ; \bv ( \flattorus ; \{ 0 , 
+	$ \chi \in \lp^{ \infty } \left( ( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 
 	1 \} ) \right) $.
 	Let $ \sigma > 0 $ be a surface tension constant.
 	
@@ -1010,39 +1012,39 @@ curvature flow]
 		Writing $ \mu_{ t } = \omega_{ t } \otimes ( \lambda_{ x , t } )_{ x 
 		\in \flattorus} $ for the disintegration of $ \mu_{ t } $, we require 
 		the existence of some 
-		$ V \in \lp^{ 2 } \left( ( 0 , \infty ) ; \lp^{ 2 } \left( \flattorus ; 
+		$ V \in \lp^{ 2 } \left( ( 0 , T ) ; \lp^{ 2 } \left( \flattorus ; 
 		\omega_{ t } \right) \right) $ encoding a normal speed in the sense of
 		\begin{equation}
 			\label{equation_varifold_velocity}
 			\sigma
 			\int
-				\chi ( T , x ) \varphi ( T , x ) 
+				\chi ( T' , x ) \varphi ( T' , x ) 
 				-
 				\chi^{ 0 } ( x ) \varphi (0,x)
 			\dd{ x }
 			=
 			\sigma
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\int
 					\chi
 					\partial_{ t } \varphi 
 				\dd{ x }
 			\dd{ t }
 			+
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\int
 					V \varphi 
 				\dd{ \omega_{ t } }
 			\dd{ t }
 		\end{equation}
-		for almost every $ T \in ( 0 , \infty ) $ and all $ \varphi \in \cont_{ 
-		\mathrm{c} }^{ \infty } \left( [ 0 , \infty ) \times \flattorus \right) 
+		for almost every $ T' \in ( 0 , T ) $ and all $ \varphi \in \cont_{ 
+		\mathrm{c} }^{ \infty } \left( [ 0 , T ) \times \flattorus \right) 
 		$.
 		
 		\item (Existence of a generalized mean curvature vector)
 		We require the existence of some 
 		$ H \in \lp^{ 2 } \left( 
-			( 0 , \infty ) ; 
+			( 0 , T ) ; 
 			\lp^{ 2 } \left(
 				\flattorus , \omega_{ t } ; \mathbb{ R }^{ d }
 			\right)
@@ -1050,30 +1052,30 @@ curvature flow]
 		encoding a generalized mean curvature vector by
 		\begin{equation}
 			\label{equation_varifold_mean_curvature}
-			\int_{ 0 }^{ \infty }
+			\int_{ 0 }^{ T }
 				\int
 					\inner*{ H }{ \xi }
 				\dd{ \omega_{ t } }
 			\dd{ t }
 			=
 			-
-			\int_{ 0 }^{ \infty }
+			\int_{ 0 }^{ T }
 				\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 					\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
 				\dd{ \mu_{ t } }
 			\dd{ t }
 		\end{equation}
-		for all $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( [ 0, \infty ) 
+		for all $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( [ 0, T ) 
 		\times \flattorus ; \mathbb{ R }^{ d } \right) $.
 		
 		\item (De Giorgi type optimal energy dissipation inequality)
 		A sharp energy dissipation inequality holds in form of
 		\begin{equation}
 			\label{equation_varifold_de_giorgi_inequality}
-			\omega_{ T } ( \flattorus )
+			\omega_{ T' } ( \flattorus )
 			+
 			\frac{ 1 }{ 2 }
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\int
 					V^{ 2 }
 					+
@@ -1083,10 +1085,10 @@ curvature flow]
 			\leq
 			\omega_{ 0 } ( \flattorus )
 		\end{equation}
-		for almost every $ T \in ( 0 , \infty ) $.
+		for almost every $ T' \in ( 0 , T ) $.
 		
 		\item (Compatibility)
-		For almost every $ t \in ( 0 , \infty ) $ and all $ \xi \in \cont^{ 
+		For almost every $ t \in ( 0 , T ) $ and all $ \xi \in \cont^{ 
 		\infty } \left( \flattorus ; \mathbb{ R }^{ d } \right) $, it holds that
 		\begin{equation}
 			\label{equation_varifold_compatibility}
@@ -1109,7 +1111,7 @@ oriented varifold $ \mu $ as the measure
 	\label{equation_simple_varifold}
 \mu =
 \sigma \lm^{ 1 } |_{ 
-( 0 , \infty ) } \otimes \abs{ \nabla \chi  ( t ) } 
+( 0 , T ) } \otimes \abs{ \nabla \chi  ( t ) } 
 \otimes \delta_{ \nu ( t , x ) }, 
 \end{equation}
 and therefore the measure $ \omega_{ t } $ 
@@ -1219,26 +1221,27 @@ the case of arbitrary surface tensions.
 \begin{definition}[De Giorgi type varifold solutions for multiphase mean 
 curvature flow]
 	\label{de_giorgi_varifold_solutions_for_mmcf}
-	Let $ P \in \mathbb{ N }_{ \geq 2 } $ be the number of phases. For each 
+	Let $T < \infty $ be an arbitrary finite time horizon and let $ P \in 
+	\mathbb{ N }_{ \geq 2 } $ be the number of phases. For each 
 	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \} $, let 
-	$ \mu^{ i j } = \lm^{ 1 }|_{ ( 0 , \infty ) } $ be a family of oriented 
+	$ \mu^{ i j } = \lm^{ 1 }|_{ ( 0 , T ) } $ be a family of oriented 
 	varifolds 
 	$ \mu_{ t }^{ i j } \in \mathcal{ M } \left(
 		\flattorus \times \mathbb{ S }^{ d - 1 }
 	\right) $,
-	$ t \in ( 0 , \infty ) $, such that the map 
+	$ t \in ( 0 , T ) $, such that the map 
 	$ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 		\eta ( t , x , p )
 	\dd{ \mu_{ t }^{ i j } ( x, p ) }$
 	is measurable for all test functions 
 	$ \eta \in \lp^{ 1 } \left(	
-		( 0 , \infty ) ; \cont \left( \flattorus \times \mathbb{ S }^{ d- 1 } 
+		( 0 , T ) ; \cont \left( \flattorus \times \mathbb{ S }^{ d- 1 } 
 		\right) 
 	\right) $.
-	Define evolving oriented varifolds $ \mu^{ i } = \lm^{ 1 }|_{ ( 0 , \infty 
-	) } \otimes ( \mu_{ t }^{ i } )_{ t \in ( 0 , \infty ) } $, $ i \in \{ 1, 
-	\dotsc, P \} $ and $ \mu = \lm^{ 1 }|_{ ( 0 , \infty ) } \otimes ( \mu_{ t 
-	} )_{ t \in ( 0 , \infty ) } $ by means of
+	Define evolving oriented varifolds $ \mu^{ i } = \lm^{ 1 }|_{ ( 0 , T 
+	) } \otimes ( \mu_{ t }^{ i } )_{ t \in ( 0 , T ) } $, $ i \in \{ 1, 
+	\dotsc, P \} $ and $ \mu = \lm^{ 1 }|_{ ( 0 , T ) } \otimes ( \mu_{ t 
+	} )_{ t \in ( 0 , T ) } $ by means of
 	\begin{align*}
 		\mu_{ t }^{ i }
 		& \coloneqq
@@ -1267,14 +1270,14 @@ curvature flow]
 	Furthermore consider a family 
 	$ A = \left( A^{ 1 } , \dotsc , A^{ P } \right) $ 
 	such that for each phase $ 1 \leq i \leq P $, we have a family
-	$ A^{ i } = ( A^{ i } ( t ) )_{ t \in ( 0 , \infty ) } $ of subsets of $ 
+	$ A^{ i } = ( A^{ i } ( t ) )_{ t \in ( 0 , T ) } $ of subsets of $ 
 	\flattorus $ with finite perimeter. We also require 
 	$ \left( A^{ 1 } ( t ) , \dotsc, A^{ P } ( t ) \right) $
-	to be a partition of $ \flattorus $ for all $ t \in ( 0 , \infty ) $ and 
+	to be a partition of $ \flattorus $ for all $ t \in ( 0 , T ) $ and 
 	that for each $ 1 \leq i \leq P $, the associated indicator function 
 	satisfies 
 	$ \chi^{ i } \in \lp^{ \infty } \left(
-		( 0 , \infty ) ;
+		( 0 , T ) ;
 		\bv \left( \flattorus ; \{ 0 , 1 \} \right)
 	\right) $.
 	We shortly write $ \chi = \left( \chi^{ 1 } , \dotsc, \chi^{ P } \right) $.
@@ -1294,18 +1297,18 @@ curvature flow]
 		\item (Existence of normal speeds)
 		For each phase $ 1 \leq i \leq P $, there exists a normal speed
 		$ V^{ i } \in \lp^{ 2 } \left(
-			( 0 , \infty ) ;
+			( 0 , T ) ;
 			\lp^{ 2 } \left( \flattorus , \omega_{ t }^{ i } \right)
 		\right) $ in the sense that
 		\begin{equation}
 			\label{equation_varifold_velocity_multiphase}
 			\int
-				\chi^{ i } ( T, x ) \varphi ( T, x ) 
+				\chi^{ i } ( T', x ) \varphi ( T', x ) 
 				-
 				\chi^{ i }_{ 0 } ( x ) \varphi ( 0 , x )
 			\dd{ x }
 			=
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\int
 					\chi^{ i }
 					\partial_{ t } \varphi
@@ -1314,54 +1317,53 @@ curvature flow]
 			+
 			\sum_{ j =1, \j \neq i  }^{ P }
 				\frac{ 1 }{ \sigma_{ i j } }
-				\int_{ 0 }^{ T }
+				\int_{ 0 }^{ T' }
 					\int
 						V^{ i }
 						\varphi
 					\dd{ \omega_{ t }^{ i j } }
 				\dd{ t }
 		\end{equation}
-		for almost every $ T \in ( 0 , \infty ) $ and all $ \varphi \in \cont_{ 
-		\mathrm{c} }^{ \infty } \left( [ 0 , \infty ) \times \flattorus\right) 
+		for almost every $ T' \in ( 0 , T ) $ and all $ \varphi \in \cont_{ 
+		\mathrm{c} }^{ \infty } \left( [ 0 , T ) \times \flattorus\right) 
 		$.
-	\end{enumerate}
-
+		
 	\item (Existence of a generalized mean curvature vector)
 	There exists a generalized mean curvature vector 
 	$ H \in \lp^{ 2 } \left(
-		( 0 , \infty ) ;
+		( 0 , T ) ;
 		\lp^{ 2 } \left( \flattorus , \omega_{ t } ; \mathbb{ R }^{ d } \right)
 	\right) $
 	in the sense that
 	\begin{equation}
 		\label{equation_varifold_mean_curvature_multiphase}
-		\int_{ 0 }^{ T }
+		\int_{ 0 }^{ T' }
 			\int
 				\inner*{ H }{ \xi }
 			\dd{ \omega_{ t } }
 		\dd{ t }
 		=
 		-
-		\int_{ 0 }^{ T }
+		\int_{ 0 }^{ T' }
 			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 				\inner*{ \diff \xi }
 				{ \mathrm{Id} - p \otimes p }
 			\dd{ \mu_{ t } }
 		\dd{ t }
 	\end{equation}
-	holds for almost every $ T \in ( 0 , \infty ) $ and all $ \xi \in \cont_{ 
-	\mathrm{c} }^{ \infty } \left( [ 0 , \infty ) \times \flattorus ; \mathbb{ 
+	holds for almost every $ T' \in ( 0 , T ) $ and all $ \xi \in \cont_{ 
+	\mathrm{c} }^{ \infty } \left( [ 0 , T ) \times \flattorus ; \mathbb{ 
 	R }^{ d } \right) $.
 	
 	\item (De Giorgi type optimal energy dissipation inequality)
 	A sharp energy dissipation inequality holds in form of
 	\begin{equation}
 		\label{equation_varifold_energy_dissipation_inequality}
-		\omega_{ T } ( \flattorus )
+		\omega_{ T' } ( \flattorus )
 		+
 		\frac{ 1 }{ 2 }
 		\sum_{ i = 1 }^{ P }
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\int
 					( V^{ i } )^{ 2 }
 					\frac{ 1 }{ 2 }
@@ -1369,7 +1371,7 @@ curvature flow]
 			\dd{ t }
 		+
 		\frac{ 1 }{ 2 }
-		\int_{ 0 }^{ T }
+		\int_{ 0 }^{ T' }
 			\int
 				\abs{ H }^{ 2 }
 			\dd{ \omega_{ t } }
@@ -1377,7 +1379,7 @@ curvature flow]
 		\leq
 		\omega_{ 0 } ( \flattorus )
 	\end{equation}
-	for almost every $ T \in ( 0 , \infty ) $.
+	for almost every $ T' \in ( 0 , T ) $.
 	
 	\item (Compatibility conditions)
 	For all $ 1 \leq i , j \leq P $ with $ i \neq j $, we require 
@@ -1387,7 +1389,7 @@ curvature flow]
 		=
 		\omega_{ t }^{ j i } 
 	\end{equation}
-	for almost every $ t \in ( 0 , \infty ) $ and
+	for almost every $ t \in ( 0 , T ) $ and
 	\begin{align}
 		\label{varifold_symmetry_expectations}
 		\langle \lambda_{ t, x  }^{ i j } \rangle
@@ -1411,7 +1413,7 @@ curvature flow]
 		\inner*{ H( t , x ) }{ \langle \lambda_{ t , x }^{ i j } \rangle }
 		\langle \lambda_{ t , x }^{ i j } \rangle
 	\end{align}
-	for almost every $ t \in ( 0 , \infty ) $ and $ \omega_{ t }^{ i j } $ 
+	for almost every $ t \in ( 0 , T ) $ and $ \omega_{ t }^{ i j } $ 
 	almost every $ x \in \flattorus $. Finally for all $ 1 \leq i \leq P $, we 
 	have
 	\begin{equation}
@@ -1425,8 +1427,9 @@ curvature flow]
 				\inner*{ \xi }{ p }
 			\dd{ \mu_{ t }^{ i j } }
 	\end{equation}
-	for almost every $ t \in ( 0 , \infty ) $ and every $ \xi \in \cont^{ 
+	for almost every $ t \in ( 0 , T ) $ and every $ \xi \in \cont^{ 
 	\infty } \left( \flattorus ; \mathbb{ R }^{ d } \right) $.
+	\end{enumerate}
 \end{definition}
 
 As before, we first want to motivate this definition. In the simplest case, we 
@@ -1454,4 +1457,140 @@ described by
 	\frac{ 1 }{ 2 } 
 	\left( \delta_{ ( 1 , 0 ) } + \delta_{ ( - 1 , 0 ) } \right).
 \end{equation}
-BIN MIR TATSÄCHLICH NICHT SICHER, OB DAS STIMMT; MIT TIM BESPRECHEN.
+BIN MIR TATSÄCHLICH NICHT SICHER, OB DAS STIMMT; MIT TIM BESPRECHEN. DANN 
+DIESEN ABSATZ BEENDEN.
+
+\begin{theorem}
+	Every $\bv$-solution $ \chi $ to De Giorgi's multiphase mean curvature 
+	flow in the sense of \Cref{de_giorgi_solution_to_mmcf} is also a De Giorgi 
+	type varifold solutions for twophase mean curvature flow in the sense of
+	\Cref{de_giorgi_varifold_solutions_for_mmcf} with varifold $ \mu $ given by
+	\begin{equation*}
+		\mu^{ i j }_{ t }
+		\coloneqq
+		\sigma_{ i j }
+		\hm^{ d- 1 }|_{ \Sigma_{ i j } ( t ) }
+		\otimes
+		( \delta_{ \nu_{ i } ( t, x ) } )_{ x \in \flattorus }
+	\end{equation*} 
+	for $ i \neq j $ and zero else.
+\end{theorem}
+
+\begin{proof}
+	ETWAS ZU INITIALER ENERGIE FRAGEN?
+	We first note that
+	\begin{align*}
+		\mu_{ t }^{ i }
+		& =
+		\sum_{ j \neq i }
+			\sigma_{ i j }
+			\hm^{ d- 1 }_{ \Sigma_{ i j } }
+		\otimes
+		( \delta_{ \nu_{ i } } )_{ x \in \flattorus }
+		\shortintertext{and}
+		\mu_{ t }
+		& =
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
+			\hm^{ d - 1 } |_{ \Sigma_{i j } }
+			\otimes
+			( \delta_{ \nu_{ i } } )_{ x \in \flattorus }.
+	\end{align*}
+	The requirement 
+	$ \chi^{ i } \in \lp^{ \infty } \left(
+		( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 1 \} ) \right) $
+	is an immediate consequence of the energy dissipation inequality.
+	The existence of normal velocities is given, but we need to check that
+	equation (\ref{equation_varifold_velocity_multiphase}.
+	If we assume that $ \varphi $ is compactly supported, then the equation 
+	follows by approximating $ \chi^{ i } $ with $ \rho_{ n } \ast \chi^{ i } 
+	$, where $ \rho_{ n } $ is a sequence of radial symmetric standard 
+	mollifiers. 
+	In general, take a sequence $ \eta_{ n } $ of smooth functions with compact 
+	support in $ ( 0 , T ] $ which convergece pointwise to the constant 1 
+	function satisfying $ \eta ( T ) = 1 $ and $ \eta_{ n } $ is 
+	non-decreasing. Then we have
+	\begin{align*}
+		\int
+			\chi^{ i } ( T' , x ) \varphi ( T', x )
+		\dd{ x }
+		& =
+		\lim_{ n \to \infty }
+			\int
+				\chi^{ i } ( T', x ) \eta_{ n } ( T' ) \varphi ( T' , x )
+			\dd{ x }
+		\\
+		& =
+		\int_{ 0 }^{ T' }
+			\int
+				\eta_{ n } \varphi V^{ i }
+			\abs{ \nabla \chi^{ i } }
+		\dd{ t }
+		+
+		\int_{ 0 }^{ T }
+			\int
+				\chi^{ i }
+				\eta_{ n }
+				\partial_{ t } \varphi 
+			\dd{ x }
+		\dd{ t }
+		+
+		\int_{ 0 }^{ T }
+			\int
+				\chi^{ i }
+				\partial_{ t } \eta_{ n }
+				\varphi
+			\dd{ x }
+		\dd{ t }.
+	\end{align*}
+	Using the dominated convergence theorem, we see that the first two summands 
+	converge to the left hand side of the velocity equation 
+	(\ref{equation_varifold_velocity_multiphase}). For the third summand, we 
+	compute that since $ \int_{ 0 }^{ T } \eta' \dd{ t } = 1 $, we have
+	\begin{align*}
+		\abs{
+			\int_{ 0 }^{ T }
+				\partial_{ t } \eta_{ n }
+				\int
+					\chi^{ i }
+					\varphi
+				\dd{ x }
+			-
+			\int
+				\chi_{ 0 }^{ i } ( x )
+				\varphi ( 0 , x )
+			\dd{ x }
+		}
+		={} &
+		\abs{ 
+			\int_{ 0 }^{ T }
+				\partial_{ t } \eta_{ n }
+				\int
+					\chi^{ i }
+					\varphi
+					-
+					\chi_{ 0 }^{ i }
+					\varphi ( 0 , x )
+				\dd{ x }
+			\dd{ t }
+		}
+		\\
+		\lesssim{} &
+		\int_{ 0 }^{ T } 
+			\partial_{ t } \eta_{ n }
+			\left(
+				\int
+					\abs{ \chi^{ i } \varphi - \chi_{ 0 }^{ i } \varphi ( 0 , x 
+					) 
+					}^{ 2 }
+				\dd{ x }
+			\right)
+		\dd{ t },
+	\end{align*}
+	which converges to zero since $ \chi^{ i } $ assumes the initial data 
+	continuously with respect to the $ \lp^{ 2 } $-norm. Therefore equation 
+	(\ref{equation_varifold_velocity_multiphase}) follows.
+	
+	Equation (\ref{equation_varifold_mean_curvature_multiphase}) follows 
+	immediately from equation (\ref{mean_curvature_vector_bv_de_giorgi}).
+\end{proof}
