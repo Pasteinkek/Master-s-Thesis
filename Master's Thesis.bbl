@@ -144,6 +144,36 @@
       \verb http://www.numdam.org/item/AIHPC_1990__7_2_67_0/
       \endverb
     \endentry
+    \entry{brakke_kenneth_motion_of_surface_by_mean_curvature}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1f2cbef8f94627c4c46cd96f7ae5e578}{%
+           family={Brakke},
+           familyi={B\bibinitperiod},
+           given={Kenneth\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press, Princeton, N.J.}%
+      }
+      \strng{namehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \strng{fullhash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \strng{bibnamehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \strng{authorbibnamehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \strng{authornamehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \strng{authorfullhash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \field{labelalpha}{Bra78}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-691-08204-9}
+      \field{series}{Mathematical Notes}
+      \field{title}{The motion of a surface by its mean curvature}
+      \field{volume}{20}
+      \field{year}{1978}
+      \field{pages}{i+252}
+      \range{pages}{-1}
+    \endentry
     \entry{evans_gariepy_measure_theory_and_fine_props}{book}{}
       \name{author}{2}{}{%
         {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
@@ -398,6 +428,48 @@
       \field{year}{2016}
       \verb{doi}
       \verb 10.1002/cpa.21747
+      \endverb
+    \endentry
+    \entry{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0b17157ebcbc743cb4fc3392c47a0099}{%
+           family={Luckhaus},
+           familyi={L\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=fa00dc7281af6e9ddc583be68d31ae25}{%
+           family={Sturzenhecker},
+           familyi={S\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{459a8034b29cd8bc66780a3075261c21}
+      \strng{fullhash}{459a8034b29cd8bc66780a3075261c21}
+      \strng{bibnamehash}{459a8034b29cd8bc66780a3075261c21}
+      \strng{authorbibnamehash}{459a8034b29cd8bc66780a3075261c21}
+      \strng{authornamehash}{459a8034b29cd8bc66780a3075261c21}
+      \strng{authorfullhash}{459a8034b29cd8bc66780a3075261c21}
+      \field{labelalpha}{LS95}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0944-2669}
+      \field{journaltitle}{Calc. Var. Partial Differential Equations}
+      \field{number}{2}
+      \field{title}{Implicit time discretization for the mean curvature flow equation}
+      \field{volume}{3}
+      \field{year}{1995}
+      \field{pages}{253\bibrangedash 271}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/BF01205007
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01205007
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01205007
       \endverb
     \endentry
     \entry{maggi_sets_of_finite_perimeter}{book}{}

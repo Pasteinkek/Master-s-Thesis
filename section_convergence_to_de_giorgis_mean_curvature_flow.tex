@@ -1297,9 +1297,8 @@ curvature flow]
 		\item (Existence of normal speeds)
 		For each phase $ 1 \leq i \leq P $, there exists a normal speed
 		$ V^{ i } \in \lp^{ 2 } \left(
-			( 0 , T ) ;
-			\lp^{ 2 } \left( \flattorus , \omega_{ t }^{ i } \right)
-		\right) $ in the sense that
+			( 0 , T ) \times \flattorus, \omega^{ i } \right) $ in the sense 
+			that
 		\begin{equation}
 			\label{equation_varifold_velocity_multiphase}
 			\int
@@ -1331,9 +1330,8 @@ curvature flow]
 	\item (Existence of a generalized mean curvature vector)
 	There exists a generalized mean curvature vector 
 	$ H \in \lp^{ 2 } \left(
-		( 0 , T ) ;
-		\lp^{ 2 } \left( \flattorus , \omega_{ t } ; \mathbb{ R }^{ d } \right)
-	\right) $
+		( 0 , T )\times \flattorus , \omega; \mathbb{ R }^{ d } \right)
+	 $
 	in the sense that
 	\begin{equation}
 		\label{equation_varifold_mean_curvature_multiphase}
@@ -1496,6 +1494,8 @@ DIESEN ABSATZ BEENDEN.
 			\otimes
 			( \delta_{ \nu_{ i } } )_{ x \in \flattorus }.
 	\end{align*}
+	Therefore the measure $ \omega_{ t } $ is exactly the energy measure $ 
+	\energy ( \chi ( t ) , \cdot ) $.
 	The requirement 
 	$ \chi^{ i } \in \lp^{ \infty } \left(
 		( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 1 \} ) \right) $
@@ -1527,7 +1527,7 @@ DIESEN ABSATZ BEENDEN.
 			\abs{ \nabla \chi^{ i } }
 		\dd{ t }
 		+
-		\int_{ 0 }^{ T }
+		\int_{ 0 }^{ T' }
 			\int
 				\chi^{ i }
 				\eta_{ n }
@@ -1535,21 +1535,22 @@ DIESEN ABSATZ BEENDEN.
 			\dd{ x }
 		\dd{ t }
 		+
-		\int_{ 0 }^{ T }
+		\int_{ 0 }^{ T' }
 			\int
 				\chi^{ i }
 				\partial_{ t } \eta_{ n }
 				\varphi
 			\dd{ x }
-		\dd{ t }.
+		\dd{ t }
 	\end{align*}
+	for almost every $ 0 < T' < T $.
 	Using the dominated convergence theorem, we see that the first two summands 
 	converge to the left hand side of the velocity equation 
 	(\ref{equation_varifold_velocity_multiphase}). For the third summand, we 
 	compute that since $ \int_{ 0 }^{ T } \eta' \dd{ t } = 1 $, we have
 	\begin{align*}
 		\abs{
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\partial_{ t } \eta_{ n }
 				\int
 					\chi^{ i }
@@ -1563,7 +1564,7 @@ DIESEN ABSATZ BEENDEN.
 		}
 		={} &
 		\abs{ 
-			\int_{ 0 }^{ T }
+			\int_{ 0 }^{ T' }
 				\partial_{ t } \eta_{ n }
 				\int
 					\chi^{ i }
@@ -1576,7 +1577,7 @@ DIESEN ABSATZ BEENDEN.
 		}
 		\\
 		\lesssim{} &
-		\int_{ 0 }^{ T } 
+		\int_{ 0 }^{ T' } 
 			\partial_{ t } \eta_{ n }
 			\left(
 				\int
@@ -1584,7 +1585,7 @@ DIESEN ABSATZ BEENDEN.
 					) 
 					}^{ 2 }
 				\dd{ x }
-			\right)
+			\right)^{ 1/2 }
 		\dd{ t },
 	\end{align*}
 	which converges to zero since $ \chi^{ i } $ assumes the initial data 
@@ -1592,5 +1593,45 @@ DIESEN ABSATZ BEENDEN.
 	(\ref{equation_varifold_velocity_multiphase}) follows.
 	
 	Equation (\ref{equation_varifold_mean_curvature_multiphase}) follows 
-	immediately from equation (\ref{mean_curvature_vector_bv_de_giorgi}).
+	immediately from equation (\ref{mean_curvature_vector_bv_de_giorgi})
+	since
+	\begin{equation*}
+		\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
+			\inner*{ \diff \xi }{ \mathrm{Id} - p \otimes p }
+		\dd{ \mu_{ t } }
+		=
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
+			\int_{ \Sigma_{ i j } }
+				\inner*{ \diff \xi }{\mathrm{Id} - \nu_{i } \otimes \nu_{ i } }
+			\dd{ \hm^{ d - 1 } },
+	\end{equation*}
+	and De Giorgi's optimal energy dissipation inequality is also identical.
+	
+	The compatibility conditions 
+	(\ref{varifold_symmetry_of_energy_measures})-(\ref{varifold_symmetry_velocities})
+	all hold restricted to $ \Sigma_{ i j } $ $ \hm^{ d - 1 } $ almost 
+	everywhere and are therefore satisfied.
+	For the compatibility condition 
+	(\ref{varifold_mean_curvature_points_in_normal_direction}), we have to 
+	prove, since $ \langle \lambda_{ t , x }^{ i j } \rangle = \nu_{ i } ( t , 
+	x ) $ on $ \Sigma_{ i j } $ $ \hm^{ d- 1 } $-almost everywhere, that the 
+	mean curvature vector $ H $ points in the direction of $ \nu_{ i } $ $ 
+	\hm^{ d - 1 } $-almost everywhere. This has been proven by Brakke in 
+	\cite[Thm.~5.8]{brakke_kenneth_motion_of_surface_by_mean_curvature}. Note 
+	that we apply it (for a fixed time t) to the varifold $ V = \mu_{ t } $, 
+	which is strictly speaking no integer varifold, but all results still hold 
+	since 
+	\begin{equation*}
+		V = 
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
+			v ( \Sigma_{ i j } )
+	\end{equation*}
+	is a finite sum. Here $ v ( \Sigma_{ i j } ) $ is the naturally associated 
+	varifold to $ \Sigma_{ i j } $ as defined by Brakke.
+	The last compatibility condition 
+	(\ref{varifold_compatibility_condition_multiphase}) is a consequence of 
+	\Cref{rewriting_boundary_via_interfaces}. 
+	This completes the proof.
 \end{proof}
