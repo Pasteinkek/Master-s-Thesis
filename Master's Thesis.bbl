@@ -144,6 +144,31 @@
       \verb http://www.numdam.org/item/AIHPC_1990__7_2_67_0/
       \endverb
     \endentry
+    \entry{beck_metal_interfaces}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dedcff938f53900d5ecf5852693d0f56}{%
+           family={Beck},
+           familyi={B\bibinitperiod},
+           given={PA},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{dedcff938f53900d5ecf5852693d0f56}
+      \strng{fullhash}{dedcff938f53900d5ecf5852693d0f56}
+      \strng{bibnamehash}{dedcff938f53900d5ecf5852693d0f56}
+      \strng{authorbibnamehash}{dedcff938f53900d5ecf5852693d0f56}
+      \strng{authornamehash}{dedcff938f53900d5ecf5852693d0f56}
+      \strng{authorfullhash}{dedcff938f53900d5ecf5852693d0f56}
+      \field{labelalpha}{Bec52}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cleveland, Ohio: American Society for Testing Materials}
+      \field{title}{Metal Interfaces}
+      \field{year}{1952}
+      \field{pages}{208}
+      \range{pages}{1}
+    \endentry
     \entry{brakke_kenneth_motion_of_surface_by_mean_curvature}{book}{}
       \name{author}{1}{}{%
         {{hash=1f2cbef8f94627c4c46cd96f7ae5e578}{%
@@ -281,6 +306,45 @@
       \verb 10.1017/S030821050002504X
       \endverb
     \endentry
+    \entry{gage_hamilton_the_heat_equation_shrinking_convex_plane_curves}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1638097b146617e10067b937f9e808ca}{%
+           family={Gage},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=677915b4aedf802b84c8052a22e2b09a}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6529c45d352cf89b92174273c40c444d}
+      \strng{fullhash}{6529c45d352cf89b92174273c40c444d}
+      \strng{bibnamehash}{6529c45d352cf89b92174273c40c444d}
+      \strng{authorbibnamehash}{6529c45d352cf89b92174273c40c444d}
+      \strng{authornamehash}{6529c45d352cf89b92174273c40c444d}
+      \strng{authorfullhash}{6529c45d352cf89b92174273c40c444d}
+      \field{labelalpha}{GH86}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{1}
+      \field{title}{The heat equation shrinking convex plane curves}
+      \field{volume}{23}
+      \field{year}{1986}
+      \field{pages}{69\bibrangedash 96}
+      \range{pages}{28}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214439902
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214439902
+      \endverb
+    \endentry
     \entry{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}{article}{}
       \name{author}{2}{}{%
         {{hash=584e07f04a7eb746c5dbf39a82649fd6}{%
@@ -320,6 +384,40 @@
       \verb https://arxiv.org/abs/2109.04233
       \endverb
       \keyw{Analysis of PDEs (math.AP),Differential Geometry (math.DG),FOS: Mathematics,FOS: Mathematics,53E10 (primary),49Q20,35K57,35Q49,28A75}
+    \endentry
+    \entry{huisken_asymptotic_behavior_for_singuliarities_of_mcf}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5cd6fb77098a0c0c8907326c79706dde}{%
+           family={Huisken},
+           familyi={H\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cd6fb77098a0c0c8907326c79706dde}
+      \strng{fullhash}{5cd6fb77098a0c0c8907326c79706dde}
+      \strng{bibnamehash}{5cd6fb77098a0c0c8907326c79706dde}
+      \strng{authorbibnamehash}{5cd6fb77098a0c0c8907326c79706dde}
+      \strng{authornamehash}{5cd6fb77098a0c0c8907326c79706dde}
+      \strng{authorfullhash}{5cd6fb77098a0c0c8907326c79706dde}
+      \field{labelalpha}{Hui90}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{1}
+      \field{title}{Asymptotic behavior for singularities of the mean curvature flow}
+      \field{volume}{31}
+      \field{year}{1990}
+      \field{pages}{285\bibrangedash 299}
+      \range{pages}{15}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214444099
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214444099
+      \endverb
     \endentry
     \entry{laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme}{article}{}
       \name{author}{2}{}{%
@@ -500,6 +598,33 @@
       \verb{doi}
       \verb 10.1017/CBO9781139108133
       \endverb
+    \endentry
+    \entry{mullins_two_dimensional_motion_of_idealized_grain_boundaries}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8d01cc0273d62aa344b686bfe5e2b2fa}{%
+           family={Mullins},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi W.},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \strng{fullhash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \strng{bibnamehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \strng{authorbibnamehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \strng{authornamehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \strng{authorfullhash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \field{labelalpha}{Mul56}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0021-8979}
+      \field{journaltitle}{J. Appl. Phys.}
+      \field{title}{Two-dimensional motion of idealized grain boundaries}
+      \field{volume}{27}
+      \field{year}{1956}
+      \field{pages}{900\bibrangedash 904}
+      \range{pages}{5}
     \endentry
     \entry{Müller1999}{book}{}
       \name{author}{1}{}{%

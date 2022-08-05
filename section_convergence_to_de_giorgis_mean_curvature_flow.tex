@@ -3,9 +3,11 @@
 In this section, we shall state our solution concept and prove convergence to 
 the aforementioned.
 
-\subsection{Definition of $ \bv $-solutions to De Giorgi's mean curvature flow}
+\subsection{Definition of De Giorgi type $ \bv $-solutions to mean curvature 
+flow}
 
-\begin{definition}[$\bv$-solution to De Giorgi's multiphase mean curvature 
+\begin{definition}[ De Giorgi type $ \bv $-solution to multiphase mean 
+curvature 
 flow]
 	\label{de_giorgi_solution_to_mmcf}
 	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
@@ -21,7 +23,7 @@ flow]
 	\end{equation*}
 	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ and $ \sum_{ i = 1 
 	}^{ P } \chi_{ i } = \sum_{ i = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ i } } = 
-	1  $ \emph{is a } $\bv$-\emph{solution to De Giorgi's mean 
+	1  $ is a \emph{ De Giorgi type }$\bv$\emph{-solution to multiphase mean 
 	curvature flow with initial data} $ \chi^{ 0 } $ \emph{and surface 
 	tensions} $ \sigma $ if the following holds. 
 	\begin{enumerate}
@@ -926,15 +928,15 @@ bounded variation does not see such lines.
 	
 	\begin{subfigure}[b]{0.3\linewidth}
 	\begin{tikzpicture}
-		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1,3);
-		\shade[left color=blue,right color=red] (1,0) rectangle (1.5,3);
-		\filldraw[fill=red, draw=red] (1.5,0) rectangle (2.5,3);
-		\shade[left color=red,right color=blue] (2.5,0) rectangle (3,3);
-		\filldraw[fill=blue, draw=blue] (3,0) rectangle (4,3);
+		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1,4);
+		\shade[left color=blue,right color=red] (1,0) rectangle (1.5,4);
+		\filldraw[fill=red, draw=red] (1.5,0) rectangle (2.5,4);
+		\shade[left color=red,right color=blue] (2.5,0) rectangle (3,4);
+		\filldraw[fill=blue, draw=blue] (3,0) rectangle (4,4);
 		
-		\node at (0.5,1.5) {\large $\approx \alpha_{ 1 } $};
-		\node at (2,1.5) {\large $\approx \alpha_{ 2 } $};
-		\node at (3.5,1.5) {\large $\approx \alpha_{ 1 } $};
+		\node at (0.5,2) {\large $\approx \alpha_{ 1 } $};
+		\node at (2,2) {\large $\approx \alpha_{ 2 } $};
+		\node at (3.5,2) {\large $\approx \alpha_{ 1 } $};
 		
 	\end{tikzpicture}
 	
@@ -944,15 +946,15 @@ bounded variation does not see such lines.
 	\hfill
 	\begin{subfigure}[b]{0.3\linewidth}
 		\begin{tikzpicture}
-		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1.5,3);
-		\shade[left color=blue,right color=red] (1.5,0) rectangle (1.75,3);
-		\filldraw[fill=red, draw=red] (1.75,0) rectangle (2.25,3);
-		\shade[left color=red,right color=blue] (2.25,0) rectangle (2.5,3);
-		\filldraw[fill=blue, draw=blue] (2.5,0) rectangle (4,3);
+		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1.5,4);
+		\shade[left color=blue,right color=red] (1.5,0) rectangle (1.75,4);
+		\filldraw[fill=red, draw=red] (1.75,0) rectangle (2.25,4);
+		\shade[left color=red,right color=blue] (2.25,0) rectangle (2.5,4);
+		\filldraw[fill=blue, draw=blue] (2.5,0) rectangle (4,4);
 		
-		\node at (0.75,1.5) {\Large $\approx \alpha_{ 1 } $};
-		\node at (2,1.5) {\small $\approx \alpha_{ 2 } $};
-		\node at (3.25,1.5) {\Large $\approx \alpha_{ 1 } $};
+		\node at (0.75,2) {\Large $\approx \alpha_{ 1 } $};
+		\node at (2,2) {\small $\approx \alpha_{ 2 } $};
+		\node at (3.25,2) {\Large $\approx \alpha_{ 1 } $};
 			
 		\end{tikzpicture}
 	
@@ -962,11 +964,11 @@ bounded variation does not see such lines.
 	\hfill
 	\begin{subfigure}[b]{0.3\linewidth}
 		\begin{tikzpicture}
-			\filldraw[fill=blue, draw=blue] (0,0) rectangle (4,3);
-			\draw[red,thick](2,0)--(2,3);
+			\filldraw[fill=blue, draw=blue] (0,0) rectangle (4,4);
+			\draw[red,thick](2,0)--(2,4);
 			
-			\node at (1,1.5) {\LARGE $= \alpha_{ 1 } $};
-			\node at (3,1.5) {\LARGE $= \alpha_{ 1 } $};
+			\node at (1,2) {\LARGE $= \alpha_{ 1 } $};
+			\node at (3,2) {\LARGE $= \alpha_{ 1 } $};
 			
 		\end{tikzpicture}
 		
@@ -983,7 +985,7 @@ This leads us to the solution concept introduced by Hensel and Laux in
 \cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}.
 For the twophase case, the definition is as follows.
 
-\begin{definition}[De Giorgi type varifold solutions for twophase mean 
+\begin{definition}[De Giorgi type varifold solution for twophase mean 
 curvature flow]
 	Let $ T < \infty $ be an arbitrary finite time horizon and let $ \mu = 
 	\lm^{ 1 } \otimes ( \mu_{ t } )_{ t \in ( 0 , T ) } $ be a 
@@ -1216,14 +1218,14 @@ and thus we have no problem.
 For the multiphase case, we propose the following solution concept, which 
 generalized 
 \cite[Def.~2]{hensel_laux_varifold_solution_concept_for_mean_curvature_flow} to 
-the case of arbitrary surface tensions.
+the case of arbitrary surface tensions and removes the varifold $ \mu^{ i i } $.
 
-\begin{definition}[De Giorgi type varifold solutions for multiphase mean 
+\begin{definition}[De Giorgi type varifold solution for multiphase mean 
 curvature flow]
 	\label{de_giorgi_varifold_solutions_for_mmcf}
 	Let $T < \infty $ be an arbitrary finite time horizon and let $ P \in 
 	\mathbb{ N }_{ \geq 2 } $ be the number of phases. For each 
-	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \} $, let 
+	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \} $, $ \i \neq j $, let 
 	$ \mu^{ i j } = \lm^{ 1 }|_{ ( 0 , T ) } $ be a family of oriented 
 	varifolds 
 	$ \mu_{ t }^{ i j } \in \mathcal{ M } \left(
@@ -1242,20 +1244,18 @@ curvature flow]
 	) } \otimes ( \mu_{ t }^{ i } )_{ t \in ( 0 , T ) } $, $ i \in \{ 1, 
 	\dotsc, P \} $ and $ \mu = \lm^{ 1 }|_{ ( 0 , T ) } \otimes ( \mu_{ t 
 	} )_{ t \in ( 0 , T ) } $ by means of
-	\begin{align*}
+	\begin{equation*}
 		\mu_{ t }^{ i }
-		& \coloneqq
-		2 \mu_{ t }^{ i , i }
-		+
+		\coloneqq
 		\sum_{ j = 1 , j \neq i }^{ P }
-			\mu_{ t }^{ i j },
-		\\
+			\mu_{ t }^{ i j }
+		\quad \text{and} \quad
 		\mu_{ t }
-		& \coloneqq
+		\coloneqq
 		\frac{ 1 }{ 2 }
 		\sum_{ i = 1 }^{ P }
 			\mu_{ t }^{ i }.
-	\end{align*}
+	\end{equation*}
 	The disintegration of $ \mu_{ t }^{ i j } $ is expressed in form of 
 	$ \mu_{ t }^{ i j } = \omega_{ t }^{ i j } \otimes \left( \lambda _{ t , x 
 	}^{ i j } \right)_{ x \in \flattorus } $ with expected value
@@ -1284,14 +1284,14 @@ curvature flow]
 	
 	Given initial data 
 	$ (
-		( \mu_{ 0 }^{ i j } )_{ 1 \leq i , j \leq P },
+		( \omega_{ 0 }^{ i j } )_{ 1 \leq i , j \leq P, i \neq j },
 		( \chi^{ i}_{ 0 } )_{ 1 \leq i \leq P}
 	) $
 	of the above form and a $ P \times P $ matrix of surface tensions $ \sigma 
-	$ such that $ \sigma_{ i i }=0 $ and $ \sigma_{ i j } > 0 $ for $ i \neq j 
+	$ such that $ \sigma_{ i j } > 0 $ for $ i \neq j 
 	$, we call the pair $ \left( \mu , \chi \right) $ a
 	\emph{De Giorgi type varifold solution for multiphase mean curvature flow 
-	with initial data} $ ( \mu_{ 0 } , \chi_{ 0 } ) $ \emph{and surface 
+	with initial data} $ ( \omega_{ 0 } , \chi_{ 0 } ) $ \emph{and surface 
 	tensions} $ \sigma $ if the following requirements hold true.
 	\begin{enumerate}
 		\item (Existence of normal speeds)
@@ -1394,11 +1394,6 @@ curvature flow]
 		&= 
 		- \langle \lambda_{ t, x  }^{ j i } \rangle,
 		\\
-		\label{varifold_expecation_of_ii_zero}
-		\langle \lambda_{ t , x }^{ i i } \rangle
-		&= 
-		0,
-		\\
 		\label{varifold_symmetry_velocities}
 		V^{ i } ( t, x ) 
 		&= 
@@ -1439,43 +1434,71 @@ can think of the varifold $ \mu_{ t }^{ i j } $ for $ i \neq j $ as
 	\sigma_{ i j }
 	\dd{ \hm^{ d - 1 }|_{ \Sigma_{ i j } } } 
 	\otimes
-	( \delta_{ nu_{ i } } )_{ x \in \flattorus }.
+	( \delta_{ \nu_{ i } } )_{ x \in \flattorus }.
 \end{equation}
-Under the assumption of energy convergence, we expect that $ \mu_{ t }^{ i i } 
-= 0 $. But if approximate interfaces collapse as in 
+But if approximate interfaces collapse as in 
 \Cref{figure_interfaces_collapse}, then this is exactly captured by the 
-varifold $ \mu_{ t }^{ i i }$, which, as in the twophase case, will be 
+varifolds $ \mu{ t, i j }$ and $ \mu_{ t , j i } $, which, as in the 
+twophase case, will be 
 described by
 \begin{equation}
 	\label{varifold_when_interfaces_collapse}
-	\mu_{ t }^{ i i}
-	\coloneqq
-	2 \hm^{ 1 } |_{ l }
+	\mu_{ t, i j }
+	=
+	\hm^{ 1 } |_{ l }
 	\otimes
-	\frac{ 1 }{ 2 } 
-	\left( \delta_{ ( 1 , 0 ) } + \delta_{ ( - 1 , 0 ) } \right).
+	\left( \delta_{ ( -1 , 0 ) } \right)_{ x \in \flattorus }
+	\quad \text{and} \quad
+	\mu_{ t , j i }
+	=
+	\hm^{ 1 } |_{ l }
+	\otimes
+	\left( \delta_{ ( 1 , 0 ) } \right)_{ x \in \flattorus },
 \end{equation}
-BIN MIR TATSÄCHLICH NICHT SICHER, OB DAS STIMMT; MIT TIM BESPRECHEN. DANN 
-DIESEN ABSATZ BEENDEN.
+where we assume that $ ( i , j ) = ( 1 , 2 ) $.
+
+Equations (\ref{equation_varifold_velocity_multiphase}) and 
+(\ref{equation_varifold_mean_curvature_multiphase}) are as in the twophase 
+case. For the energy dissipation inequality, we note that we need the factor $ 
+1/2 $ in front of $ \omega_{ t , i } $ since each interface will be counted 
+twice. 
+
+The first compatibility condition (\ref{varifold_symmetry_of_energy_measures}) 
+follows simply from $ \Sigma_{ i j } = \Sigma_{ j i } $ if we are in the 
+setting of energy convergence, but should even hold true in situations like 
+\Cref{figure_interfaces_collapse}, which follows from equation 
+(\ref{varifold_when_interfaces_collapse}). The second compatibility condition 
+(\ref{varifold_symmetry_expectations}) states that in the setting of energy 
+convergence, we have $ \nu_{ i } = - \nu_{ j } $ on $ \Sigma_{ i j } $ $ \hm^{ 
+d -1 } $-almost everywhere. Nonetheless, we see again that by equation 
+(\ref{varifold_when_interfaces_collapse}), it should still hold true if 
+interfaces collapse. Similarly we explain the anti-symmetry of the velocities 
+(\ref{varifold_symmetry_velocities}). The compatibility condition 
+(\ref{varifold_mean_curvature_points_in_normal_direction}) encodes that the 
+mean curvature vector should always point in direction of the inner unit 
+normal, which is not necessarily the case for varifolds, as demonstrated in 
+\Cref{mean_curvature_vector_does_not_have_to_point_in_normal_direction}.
+For the last compatibility condition 
+(\ref{varifold_compatibility_condition_multiphase}), we again notice that it 
+behaves similarly to its twophase equivalent.
 
 \begin{theorem}
-	Every $\bv$-solution $ \chi $ to De Giorgi's multiphase mean curvature 
+	Every  De Giorgi type $ \bv $-solution to multiphase mean curvature 
 	flow in the sense of \Cref{de_giorgi_solution_to_mmcf} is also a De Giorgi 
-	type varifold solutions for twophase mean curvature flow in the sense of
+	type varifold solutions for multiphase mean curvature flow in the sense of
 	\Cref{de_giorgi_varifold_solutions_for_mmcf} with varifold $ \mu $ given by
 	\begin{equation*}
-		\mu^{ i j }_{ t }
+		\mu^{ t, ij  }
 		\coloneqq
 		\sigma_{ i j }
 		\hm^{ d- 1 }|_{ \Sigma_{ i j } ( t ) }
 		\otimes
 		( \delta_{ \nu_{ i } ( t, x ) } )_{ x \in \flattorus }
 	\end{equation*} 
-	for $ i \neq j $ and zero else.
+	for $ i \neq j $, and zero else.
 \end{theorem}
 
 \begin{proof}
-	ETWAS ZU INITIALER ENERGIE FRAGEN?
 	We first note that
 	\begin{align*}
 		\mu_{ t }^{ i }
@@ -1635,3 +1658,42 @@ DIESEN ABSATZ BEENDEN.
 	\Cref{rewriting_boundary_via_interfaces}. 
 	This completes the proof.
 \end{proof}
+
+\begin{example}
+	\label{mean_curvature_vector_does_not_have_to_point_in_normal_direction}
+	We want to present an example of a varifold where the mean curvature does 
+	not point in normal direction.
+	Let $ \flattorus = [ 0 , \Lambda )^{ 2 } $ be the flat torus in two 
+	dimensions and let $ \rho \colon \mathbb{ R } \to (-\infty, \infty ) $ be 
+	some positive smooth $\Lambda$-periodic function which is not constant. 
+	Then we consider the varifold given by $ \mu = \rho ( x_{ 1 } ) \hm^{ 1 } 
+	|_{ [ 0 , \Lambda ) \times \{ 0 \} } \otimes \delta_{ ( 0 , 1 ) } $. We 
+	compute that for a given test vector field $ \xi $, we have
+	\begin{align*}
+		\int
+			\inner*{ \diff \xi }{ \mathrm{Id} - p \otimes p }
+		\dd{ \mu }
+		& =
+		\int_{ 0 }^{ \Lambda }
+			\inner*{ \diff \xi ( x_{ 1 } , 0 ) }{ ( 1, 0 ) \otimes ( 1, 0 ) }
+			\rho ( x_{ 1 } )
+		\dd{ x_{ 1 } }
+		\\
+		& = 
+		\int_{ 0 }^{ \Lambda }
+			\partial_{ x_{ 1 } } \xi^{ 1 } \rho ( x_{ 1 } )
+		\dd{ x_{ 1 } }
+		\\
+		& =
+		-
+		\int_{ 0 }^{ \Lambda }
+			\xi^{ 1 }
+			\rho' ( x_{ 1 } )
+		\dd{ x_{ 1 } },
+	\end{align*}
+	which implies that $ H $ is given (almost everywhere) by 
+	\begin{equation*}
+		H ( x ) = \frac{ \rho' ( x_{ 1 } ) }{ \rho ( x_{ 1 } ) } ( 1 , 0 ),
+	\end{equation*}
+	which does not lie in the normal space of the varifold.
+\end{example}
