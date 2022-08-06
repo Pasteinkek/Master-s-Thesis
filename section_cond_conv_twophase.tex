@@ -623,7 +623,7 @@ We finish this section with a proof for the equipartition of the energy, which t
 		\liminf_{ \varepsilon \to 0 }
 		\int
 		\varphi
-		\sqrt{ 2 W ( u_{ \varepsilon } }
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
 		\abs{ \nabla u_{ \varepsilon } }
 		\dd{ x }
 		\geq
@@ -718,7 +718,8 @@ We start by definining a BV-formulation for motion by mean curvature.
 			=
 			0,
 		\end{equation}
-		where $ \nu \coloneqq \nabla \chi / \abs{ \nabla \chi } $ is the outer unit normal.
+		where $ \nu \coloneqq \nabla \chi / \abs{ \nabla \chi } $ is the inner 
+		unit normal.
 		\item 
 		The function $ V $ is the normal velocity of $ \chi $ in the sense that 
 		\begin{equation*}
@@ -771,7 +772,7 @@ Looking at equation (\ref{ac_weak_equation}) which reads
 	\int
 	\frac{ 1 }{ \varepsilon^{ 2 } } W' ( u_{ \varepsilon} ( t ) ) \varphi
 	+
-	\nabla u_{ \varepsilon } ( t ) \nabla \varphi
+	\inner*{ \nabla u_{ \varepsilon } ( t ) }{\nabla \varphi }
 	+
 	\partial_{ t } u_{ \varepsilon} ( t ) \varphi 
 	\dd{x}
@@ -812,13 +813,21 @@ we expect that for a suitable choice of testfunctions $ \varphi_{ \varepsilon } 
 	\dd{ t }.
 \end{align*}
 But how do we find these testfunctions? For this, we first note that the curvature term
-$ \int \inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu } \abs{ \nabla \chi } \dd{ t } $ is by \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter} the first inner variation with respect to $ \xi $ of the perimeter functional, which is just our energy $ \energy $ up to the surface tension constant $ \sigma > 0 $. Thus it is plausible to compute the first inner variation 
-$ \left.\dv{ s } \right|_{ s = 0 } E ( \rho_{ s } ) $ and then we can hopefully choose the testfunction $ \varphi_{ \varepsilon } $ in such a way that it equals
+$ \int \inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu } \abs{ \nabla \chi 
+} \dd{ t } $ is by \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter} the first 
+inner variation with respect to $ \xi $ of the perimeter functional, which is 
+just our energy $ \energy $ up to the surface tension constant $ \sigma > 0 $. 
+Since the energy $ \energy_{ \varepsilon } $ converges to $ \energy $, we may 
+also hope that their first variations converge to each other. Thus it is 
+plausible to compute the first inner variation 
+$ \left.\dv{ s } \right|_{ s = 0 } \energy_{ \varepsilon } ( \rho_{ s } ) $ and 
+then we can hopefully choose the testfunction $ \varphi_{ \varepsilon } $ in 
+such a way that it equals
 $ 
 \int
 \frac{ 1 }{ \varepsilon^{ 2 } } W' ( u_{ \varepsilon} ( t ) ) \varphi
 +
-\nabla u_{ \varepsilon } ( t ) \nabla \varphi
+\inner*{ \nabla u_{ \varepsilon } ( t ) }{ \nabla \varphi }
 \dd{x}
 $.
 
@@ -1297,7 +1306,7 @@ Therefore we try to freeze the normal in a fixed direction, apply the weak conve
 	\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 	\abs{
 		\nu_{ \varepsilon } - \nu^{ \ast } 
-	} 
+	}^{ 2 } 
 	\dd{ x }
 	\dd{ t }
 	\right)

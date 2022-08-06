@@ -242,7 +242,8 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\leq {} &
 			\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ).
 		\end{align}
-		This gives use with the use of Jensen's inequality for $ 0\leq s \leq t \leq T $ and $ h > 0 $ sufficiently small that
+		This gives us with the use of Jensen's inequality for $ 0\leq s \leq t 
+		\leq T $ and $ h > 0 $ sufficiently small that
 		\begin{align}
 			\norm{ u^{ h } ( t ) - u^{ h } ( s ) }_{ \lp^{ 2 } }
 			& =
@@ -289,7 +290,17 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 		\item[Step 6:] Additional regularity 1
 		
 		We first want to argue that from our construction, one already obtains that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1, 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $
-		For this we first notice that for a fixed $ t \in [ 0 , T ] $, the sequence $ u^{ h_{ n } } ( t ) $ is by the energy bound (\ref{discrete_optimal_energy_dissipation}) a bounded sequence in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $, thus we find some non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ such that $ u^{ n_{h } } ( t ) $ converges weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $. By uniqueness of the limit, we already have $ u ( t ) = v $ almost everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \flattorus, \mathbb{ R }^{ N } ) $, and by lower semicontinuity, we may also deduce that
+		For this we first notice that for a fixed $ t \in [ 0 , T ] $, the 
+		sequence $ u^{ h_{ n } } ( t ) $ is by the energy bound 
+		(\ref{discrete_optimal_energy_dissipation}) a bounded sequence in $ 
+		\wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $, thus we find some 
+		non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \flattorus ; 
+		\mathbb{ R }^{ N } ) $ such that $ u^{ h_{ n } } ( t ) $ converges 
+		weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) 
+		$. By uniqueness of the limit, we already have $ u ( t ) = v $ almost 
+		everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \flattorus, 
+		\mathbb{ R }^{ N } ) $, and by lower semicontinuity, we may also deduce 
+		that
 		\begin{equation*}
 			\norm{ u ( t ) }_{ \wkp^{ 1 , 2 } }
 			\leq
@@ -382,11 +393,13 @@ With \Cref{solution_to_ac}, we are able to state our existence results for solut
 			\inner*{ \nabla u ( t ) }{ \nabla \xi }
 			\dd{ x }
 			& = 
+			-
 			\int
 			\inner*{ u ( t ) }{ \divg \nabla \xi  }
 			\dd{ x }
 			\\
 			& = 
+			-
 			\lim_{ n \to \infty }
 			\int
 			\inner*{ u_{ k_{ n } }^{ h_{ n } } }{ \divg \nabla \xi  }

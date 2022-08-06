@@ -67,7 +67,16 @@ Our replacement for the primitive $ \phi $ is now given for $ 1 \leq i \leq P $ 
 	\coloneqq
 	\geodesic_distance ( \alpha_{ i } , u ).
 \end{equation*}
-Our first obstacle is the regularity of the function $ \psi_{ \varepsilon }^{ i } \coloneqq \phi_{ i } \circ u_{ \varepsilon } $. A priori we only know that $ \phi_{ i } $ is locally Lipschitz continuous on $ \mathbb{ R }^{ N } $ and thus differentiable almost everywhere. If $ N = 1 $, then this would already suffice to deduce that $ \psi_{ \varepsilon  }^{ i } $ is weakly differentiable, but in higher dimensions, $ u $ could for example move along a hyperplane where $ \phi_{ i } $ could in theory be nowhere differentiable since it is a Lebesgue nullset. This can however be salvaged through the following chain rule for distributional derivatives by Ambrosio and Maso \cite[Cor.~3.2]{ambrosio_maso_chain_rule}.
+Our first obstacle is the regularity of the function $ \psi_{ \varepsilon, i } 
+\coloneqq \phi_{ i } \circ u_{ \varepsilon } $. A priori we only know that $ 
+\phi_{ i } $ is locally Lipschitz continuous on $ \mathbb{ R }^{ N } $ and thus 
+differentiable almost everywhere. If $ N = 1 $, then this would already suffice 
+to deduce that $ \psi_{ \varepsilon, i  }$ is weakly differentiable, but in 
+higher dimensions, $ u $ could for example move along a hyperplane where $ 
+\phi_{ i } $ could in theory be nowhere differentiable since it is a Lebesgue 
+nullset. This can however be salvaged through the following chain rule for 
+distributional derivatives by Ambrosio and Maso 
+\cite[Cor.~3.2]{ambrosio_maso_chain_rule}.
 
 \begin{theorem}
 	\label{chain_rule_for_distributional_derivatives}
@@ -123,7 +132,7 @@ Our first obstacle is the regularity of the function $ \psi_{ \varepsilon }^{ i 
 	Moreover the assumption $ f( 0 ) = 0 $ can be left out on bounded domains by simply subtracting the constant $ f( 0 ) $.
 \end{remark}
 
-We are not in the position to prove the following regularity result.
+We are now in the position to prove the following regularity result.
 
 \begin{lemma}
 	\label{chain_rule_lemma}
@@ -143,32 +152,33 @@ We are not in the position to prove the following regularity result.
 	\end{equation*}
 	for some $ \varepsilon > 0 $. Then for all $ 1 \leq i \leq P $ there exists a map
 	\begin{equation*}
-		\partial_{ u } \phi_{ i } ( u )
+		\diff \phi_{ i } ( u )
 		\colon
 		[ 0 , T ] \times \flattorus
 		\to 
 		\mathrm{Lin} \left( \mathbb{ R }^{ N } , \mathbb{ R } \right)
 	\end{equation*}
-	such that the chain rule is valid with the pair $ \partial_{ u } \phi_{ i } ( u ) $ and 
-	$ ( \partial_{ t }, \nabla ) u $:
+	such that the chain rule is valid with the pair $ \diff \phi_{ i } ( u ) $ 
+	and 
+	$ ( \partial_{ t }, \diff ) u $:
 	
 	For almost every $ ( t , x ) \in [ 0 , T ] \times \flattorus $ we have
 	\begin{equation*}
-		\nabla ( \phi_{ i } \circ u )
+		\diff ( \phi_{ i } \circ u )
 		=
-		\partial_{ u } \phi_{ i } ( u ) \nabla u 
+		\diff \phi_{ i } ( u ) \diff u 
 		\quad
 		\text{and}
 		\quad
 		\partial_{ t } ( \phi_{ i } \circ u )
 		=
-		\partial_{ u } \phi_{ i } ( u ) 
+		\diff \phi_{ i } ( u ) 
 		\partial_{ t } u.
 	\end{equation*}
 	Furthermore we can control the modulus of $ \partial_{ u } \phi_{ i } ( u ) $ almost everywhere in time and space via the estimate
 	\begin{equation}
 		\label{estimate_on_partial_u_phi}
-		\abs{ \partial_{ u } \phi_{ i } ( u ) }
+		\abs{ \diff \phi_{ i } ( u ) }
 		\leq
 		\sqrt{ 2 W ( u ) }.
 	\end{equation}
@@ -214,11 +224,15 @@ We are not in the position to prove the following regularity result.
 \begin{proof}
 	Since \Cref{chain_rule_for_distributional_derivatives} requires Lipschitz continuity of $ \phi_{ i } $, but we only have local Lipschitz continuity, let us first assume that $ u $ is bounded in space and time. Then we may modify $ \phi_{ i } $ outside of a compact set such that it is (globally) Lipschitz continuous and does not change on the image of $ u $.
 	
-	Since we have via the energy estimate that $ u \in \wkp^{ 1 , 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $, we obtain by the distributional chain rule \Cref{chain_rule_for_distributional_derivatives} that $ \psi = \phi_{ i } \circ u \in \wkp^{ 1 , 2 } ( [ 0, T ] \times \flattorus ) $.
+	Since we have via the energy estimate that $ u \in \wkp^{ 1 , 2 } ( [ 0 , T 
+	] \times \flattorus ; \mathbb{ R }^{ N } ) $, we obtain by the 
+	distributional chain rule \Cref{chain_rule_for_distributional_derivatives} 
+	that $ \psi_{ i } = \phi_{ i } \circ u \in \wkp^{ 1 , 2 } ( [ 0, T ] \times 
+	\flattorus ) $.
 	
 	Let $ \Pi ( t , x ) $ denote the orthogonal projection of $ \mathbb{ R }^{ N } $ onto $ \dot{ T }_{ x, t }^{ u } $ and define 
 	\begin{equation*}
-		\partial_{ u } \phi_{ i } ( u ) ( t, x ) [ v ]
+		\diff \phi_{ i } ( u ) ( t, x ) [ v ]
 		\coloneqq
 		\diff ( \phi_{ i } |_{ T_{ t , x }^{ u } } ) ( u ( t , x ) ) [ \Pi ( t , x ) v ].
 	\end{equation*}
@@ -315,7 +329,7 @@ We are not in the position to prove the following regularity result.
 		\begin{cases}
 			u &, \text{ if} \abs{ u^{ j } } \leq M 
 			\\
-			M \frac{ u^{ j } }{ \abs{ u_{ j } } }
+			M \frac{ u^{ j } }{ \abs{ u^{ j } } }
 			&, \text{ else}.
 		\end{cases}
 	\end{equation*}
@@ -343,41 +357,45 @@ We are not in the position to prove the following regularity result.
 	
 	Furthermore we recognize that on the set $ \{ u_{M } = u \} $, we already have
 	\begin{equation*}
-		( \partial_{ t } , \nabla ) u_{ M }
+		( \partial_{ t } , \diff ) u_{ M }
 		=
-		( \partial_{ t } , \nabla ) u
+		( \partial_{ t } , \diff ) u
 	\end{equation*}
 	and the sets $ \{ u_{ M } = u \} $ are non-decreasing, thus
 	\begin{equation*}
 		\lim_{ M \to \infty }
 		\abs{
 			\left\{
-				u_{ M } \neq u, ( \partial_{ t } , \nabla ) u_{ M } \neq ( \partial_{ t }, \nabla ) u 
+				u_{ M } \neq u, ( \partial_{ t } , \diff ) u_{ M } \neq ( 
+				\partial_{ t }, \diff ) u 
 			\right\}
 		}
 		=
 		0.
 	\end{equation*}
-	Moreover we have that for almost every $ ( t, x ) $, the derivative $ \partial_{ u } \phi_{ i } ( u_{ M } ( t , x ) ) $ eventually becomes stationary. We denote its almost everywhere pointwise limit by $ \partial_{ u } \phi_{ i } ( u ) $ and it satisfies almost everywhere
+	Moreover we have that for almost every $ ( t, x ) $, the derivative $ \diff 
+	\phi_{ i } ( u_{ M } ( t , x ) ) $ eventually becomes stationary. We denote 
+	its almost everywhere pointwise limit by $ \diff \phi_{ i } ( u ) $ and it 
+	satisfies almost everywhere
 	\begin{equation*}
 		\abs{
-			\partial_{ u } \phi_{ i } ( u ) 
+			\diff \phi_{ i } ( u ) 
 		}
 		\leq
 		\sqrt{ 2 W ( u ) }.
 	\end{equation*}
 	In order to show that $ \phi_{ i } \circ u $ is weakly differentiable with derivative 
 	\begin{equation*}
-		( \partial_{ t } , \nabla ) \phi_{ i } \circ u
+		( \partial_{ t } , \diff ) \phi_{ i } \circ u
 		=
-		\partial_{ u } \phi_{ i } ( u ) ( \partial_{ t } u, \nabla u ),
+		\diff \phi_{ i } ( u ) ( \partial_{ t } u, \diff u ),
 	\end{equation*}
 	we compute for a testfunction $ \varphi $ that by the $ \lp^{ 1 } $-convergence, we have
 	\begin{align*}
 		\int_{ 0 }^{ T }
 		\int
 			\phi_{ i } \circ u
-			( \partial_{ t } , \nabla ) \varphi
+			( \partial_{ t } , \diff ) \varphi
 		\dd{ x}
 		\dd{ t }
 		&
@@ -386,16 +404,15 @@ We are not in the position to prove the following regularity result.
 			\int_{0 }^{ T }
 				\int
 					\phi_{ i } \circ u_{ M }
-					( \partial_{ t } , \nabla ) u_{ M }
-					\varphi
+					( \partial_{ t } , \diff) \varphi
 				\dd{ x }
 			\dd{ t }
 		\\
 		& =
 		- \lim_{ M \to \infty }
 			\int
-				\partial_{ u } \phi_{ i } ( u_{ M } )
-				( \partial_{ t } , \nabla ) u_{ M }
+				\diff \phi_{ i } ( u_{ M } )
+				( \partial_{ t } , \diff ) u_{ M }
 				\varphi
 			\dd{ x }
 		\dd{ t }
@@ -403,30 +420,32 @@ We are not in the position to prove the following regularity result.
 		& =
 		- \lim_{ M \to \infty }
 			\int_{ \abs{ u } \leq M }
-				\partial_{ u } \phi_{ i } ( u ) 
-				( \partial_{ t } , \nabla ) u
+				\diff \phi_{ i } ( u ) 
+				( \partial_{ t } , \diff ) u
 				\varphi
 			\dd{ ( t, x ) }
 		\\
 		& =
 		\int_{ 0 }^{ T }
 			\int
-				\partial_{ u } \phi_{ i } ( u ) 
-				( \partial_{ t } , \nabla ) u
+				\diff \phi_{ i } ( u ) 
+				( \partial_{ t } , \diff ) u
 				\varphi
 			\dd{ x }
 		\dd{ t }.
 	\end{align*}
-	The last inequality is due to the dominated convergence theorem with majorant $ \abs{ \varphi } \sqrt{ 2 W ( u ) } \abs{ ( \partial_{ t } , \nabla ) u } $.
+	The last inequality is due to the dominated convergence theorem with 
+	majorant $ \abs{ \varphi } \sqrt{ 2 W ( u ) } \abs{ ( \partial_{ t } , 
+	\diff ) u } $.
 	It remains to prove the estimates (\ref{l1_estimate_on_nabla_phi_composed_u}) and (\ref{l1_estimate_on_partial_t_phi_composed_u}). These follow from applications of Young's inequality
 	\begin{align*}
 		\esssup_{ 0 \leq t \leq T }
 			\int
-				\abs{ \nabla ( \phi_{ i } \circ u ) }
+				\abs{ \diff ( \phi_{ i } \circ u ) }
 		& =
 		\esssup_{ 0 \leq t \leq T }
 			\int
-				\abs{ \partial_{ u } \phi_{ i } ( u ) \nabla u }
+				\abs{ \diff \phi_{ i } ( u ) \diff u  }
 			\dd{ x }
 		\\
 		& \leq
@@ -479,7 +498,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 		\to 
 		\energy ( u^{ 0 } ) 
 		\eqqcolon
-		E_{ 0 }
+		E^{ 0 }
 		< 
 		\infty,
 	\end{equation*}
@@ -490,7 +509,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 		\esssup_{ 0 \leq t \leq T }
 			\energy ( u ) 
 		\leq
-		\energy_{ 0 }
+		\energy^{ 0 }
 	\end{equation}
 	and for all $ 1 \leq i \leq P $ the compositions $ \phi_{ i } \circ u_{ 
 	\varepsilon } $ are uniformly bounded in $ \bv ( ( 0 , T ) \times 
@@ -504,7 +523,14 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 
 \begin{proof}
 	By \Cref{existence_of_ac_solution} the solution $ u_{ \varepsilon } $ of (\ref{allen_cahn_eq}) satisfies the assumptions of \Cref{chain_rule_lemma}.
-	Thus $ \psi_{ i }^{ \varepsilon } \coloneqq \varphi_{ i } \circ u_{ \varepsilon } $ is uniformly bounded in $ \bv \left( ( 0 , T ) \times \flattorus \right) $ as $ \varepsilon $ tends to zero for all $ 1 \leq i \leq P $ and thus we find a non-relabelled subsequence and $ v_{ i } \in \bv \left( ( 0 , T ) \times \flattorus \right) $ such that $ \psi_{ i }^{ \varepsilon } $ converges to $ v_{ i } $ in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus \right) $ and pointwise almost everywhere. 
+	Thus $ \psi_{ \varepsilon, i } \coloneqq \varphi_{ i } \circ u_{ 
+	\varepsilon } $ is uniformly bounded in $ \bv \left( ( 0 , T ) \times 
+	\flattorus \right) $ as $ \varepsilon $ tends to zero for all $ 1 \leq i 
+	\leq P $ and thus we find a non-relabelled subsequence and $ v_{ i } \in 
+	\bv \left( ( 0 , T ) \times \flattorus \right) $ such that $ \psi_{ 
+	\varepsilon,  i } $ converges to $ v_{ i } $ in $ \lp^{ 1 } \left( ( 0 , T 
+	) 
+	\times \flattorus \right) $ and pointwise almost everywhere. 
 	
 	We now want to show that we can write $ v_{ i } = \phi_{ i } \circ u $ for $ u = \sum \chi_{ j } \alpha_{ j } $. An elegant proof of this presented in \cite[Thm.~4.1]{fonseca_tartar_1989} can be done through the fundamental theorem of Young measures (\cite[Thm.~3.1]{Müller1999}). By passing to another non-relabelled subsequence of $ u_{ \varepsilon } $, we obtain that $ u_{ \varepsilon } $ generates a Young measure $ \nu $. Since $ u $ is $ \lp^{ p } $-bounded, we have that for almost every $ (t, x ) $, the measure $ \nu_{ ( t, x ) } $ is a probability measure. Moreover the sequence $ W ( u_{ \varepsilon } ) $ is uniformly integrable since 
 	\begin{equation*}
@@ -565,7 +591,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  		\infty
  		& >
  		\abs{ 
- 			( \partial_{ t } , \nabla )
+ 			( \partial_{ t } , \diff )
  			\phi_{ i } \circ u
  		}
  		\left( ( 0 , T ) \times \flattorus \right)
@@ -586,7 +612,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  		\\
  		&
  		\geq
- 		\int_{ 0 }^{ \min_{ i \neq j } \sigma_{ i , j } }
+ 		\int_{ 0 }^{ \min_{ i \neq j } \sigma_{ i j } }
  			\hm^{ d } \left(
  				\partial_{ \ast }
  				\left\{
@@ -599,22 +625,27 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  		\\
  		&=
  		\min_{ i \neq j }
- 			\sigma_{ i , j }
+ 			\sigma_{ i j }
  		\abs{
- 			( \partial_{ t } , \nabla ) \chi_{ i }
+ 			( \partial_{ t } , \diff ) \chi_{ i }
  		}
  		\left(
  			( 0 , T ) \times \flattorus
  		\right).
  	\end{align*}
  	Here we denote by $ \partial_{ \ast } A $ the measure theoretic boundary of a given measurable set $ A $, as defined for example in \cite[Def.~5.7]{evans_gariepy_measure_theory_and_fine_props}.
- 	Since we have $ \sigma_{ i , j } > 0 $ for $ i \neq j $, this proves that $ \chi_{ i } \in \bv \left( ( 0, T ) \times \flattorus \right) $.
+ 	Since we have $ \sigma_{ i j } > 0 $ for $ i \neq j $, this proves that $ 
+ 	\chi_{ i } \in \bv \left( ( 0, T ) \times \flattorus \right) $.
  	
  	The energy estimate is a non-trivial consequence of the lower semicontinuity of the variation measure and has been proven by Baldo in \cite{baldo_minimal_interface_criterion}. We will recap the proof since it provides some insight into the geometry of the phases.
 \end{proof}
 
 \begin{definition}
-	Given a partition $ \left( \Omega_{ i } \right)_{ i = 1 , \dotsc , P } $ of the flat torus $ \flattorus $, where all sets $ \Omega_{ i } $ are of finite perimeter, we define the $ (i,j)$-th interface as $ \Sigma_{ i , j } \coloneqq \partial_{ \ast } \Omega_{ i } \cap \partial_{ \ast } \Omega_{ j } $.
+	Given a partition $ \left( \Omega_{ i } \right)_{ i = 1 , \dotsc , P } $ of 
+	the flat torus $ \flattorus $, where all sets $ \Omega_{ i } $ are of 
+	finite perimeter, we define the $ (i,j)$-th interface as $ \Sigma_{ i j } 
+	\coloneqq \partial_{ \ast } \Omega_{ i } \cap \partial_{ \ast } \Omega_{ j 
+	} $.
 \end{definition}
 
 We already mentioned that we want to apply the lower semicontinuity of the variation measure. Since we can think of $ \phi_{ i } $ as being locally the correct choice for suitable $ i $, we introduce the following notion.
@@ -635,7 +666,11 @@ We already mentioned that we want to apply the lower semicontinuity of the varia
 	for any open subset $ U \subseteq \flattorus $.
 \end{definition}
 
-It is natural to ask how we can characterize the total variation of $ \psi_{ i } = \phi_{ i } \circ u = \sum \mathds{ 1 }_{ \Omega_{ j } } \sigma_{ i , j } $. For this we note that when going from set $ \Omega_{ j } $ to $ \Omega_{ k } $, our function jumps from $ \sigma_{ i , j } $ to $ \sigma_{ i , k } $. Thus we obtain the following intuitive result.
+It is natural to ask how we can characterize the total variation of $ \psi_{ i 
+} = \phi_{ i } \circ u = \sum \mathds{ 1 }_{ \Omega_{ j } } \sigma_{ i j } $. 
+For this we note that when going from set $ \Omega_{ j } $ to $ \Omega_{ k } $, 
+our function jumps from $ \sigma_{ i j } $ to $ \sigma_{ i k } $. Thus we 
+obtain the following intuitive result.
 
 \begin{lemma}
 	\label{rewriting_variation_of_psi_i}
@@ -644,18 +679,21 @@ It is natural to ask how we can characterize the total variation of $ \psi_{ i }
 		\abs{ \nabla \psi_{ i } }
 		=
 		\sum_{ 1 \leq j < k \leq P }
-			\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
-			\dd{ \hm^{ d - 1 } |_{ \Sigma_{ j , k } } }.
+			\abs{ \sigma_{ i j } - \sigma_{ i k } }
+			\dd{ \hm^{ d - 1 } |_{ \Sigma_{ j k } } }.
 	\end{equation*}
 \end{lemma}
 
-The proof can be found in the Appendix. If we now consider the supremum of the measures $ \left( \abs{ \nabla \psi_{ i } } \right)_{ i = 1 , \dotsc, P } $, we notice that all of them are supported on the interfaces $ \Sigma_{ j , k } $, and that by the triangle inequality for the surface tensions, we have 
+The proof can be found in the Appendix. If we now consider the supremum of the 
+measures $ \left( \abs{ \nabla \psi_{ i } } \right)_{ i = 1 , \dotsc, P } $, we 
+notice that all of them are supported on the interfaces $ \Sigma_{ j k } $, and 
+that by the triangle inequality for the surface tensions, we have 
 \begin{equation}
 	\label{maximum_of_differences_of_surface_tensions}
 	\max_{ 1 \leq i \leq P }
-		\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
+		\abs{ \sigma_{ i j } - \sigma_{ i k } }
 	=
-	\sigma_{ j , k }.
+	\sigma_{ j k }.
 \end{equation}
 Thus, we obtain the following.
 
@@ -669,8 +707,8 @@ Thus, we obtain the following.
 		\right)
 		=
 		\sum_{ 1 \leq i < j \leq P }
-		 \sigma_{ i , j }
-		 \dd{ \hm^{ d - 1 } |_{ \Sigma_{ i , j } } }.
+		 \sigma_{ i j }
+		 \dd{ \hm^{ d - 1 } |_{ \Sigma_{ i j } } }.
 	\end{equation*}
 \end{proposition}
 
@@ -716,8 +754,8 @@ Collecting our observations, we can finish our arguments.
 		& =
 		\esssup_{ 0 \leq t \leq T }
 			\sum_{ 1 \leq i < j \leq P }
-				\sigma_{ i , j }
-				\hm^{ d - 1 } ( \Sigma_{ i , j } ( t ) )
+				\sigma_{ i j }
+				\hm^{ d - 1 } ( \Sigma_{ i j } ( t ) )
 		\\
 		& = \esssup_{ 0 \leq t \leq T }
 		\left(
@@ -731,9 +769,10 @@ Collecting our observations, we can finish our arguments.
 				\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
 		\\
 		& \leq
-		\energy_{ 0 }.
+		\energy^{ 0 }.
 	\end{align*}
-	The last inequality is due the energy dissipation inequality (\ref{energy_dissipation_sharp}).
+	The last inequality is due to the energy dissipation inequality 
+	(\ref{energy_dissipation_sharp}).
 \end{proof}
 
 Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u 
@@ -743,7 +782,7 @@ $ \lp^{ 2 } $.
 \begin{lemma}
 	\label{continuity_in_l2_and_initial_data_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} we have 
-	$ \psi_{ i }^{ \varepsilon } \in \wkp^{ 1 , 2 } \left(
+	$ \psi_{ \varepsilon , i } \in \wkp^{ 1 , 2 } \left(
 		[ 0 , T ] ; \lp^{ 1 } ( \flattorus )
 	\right)
 	$
@@ -754,13 +793,13 @@ $ \lp^{ 2 } $.
 			\int_{ 0 }^{ T }
 				\left(
 					\int
-						\abs{ \partial_{ t } \psi_{ i }^{ \varepsilon } }
+						\abs{ \partial_{ t } \psi_{ \varepsilon , i } }
 					\dd{ x }
 				\right)^{ 2 }
 			\dd{ t }
 		\right)^{ 1/2 }
 		\lesssim
-		\energy_{ \varepsilon } ( u_{ \varepsilon } ( 0 ) ).
+		\energy_{ \varepsilon } ( u_{ \varepsilon }( 0 ) ).
 	\end{equation}
 	Furthermore the sequence $ u_{ \varepsilon } $ is precompact in 
 	$ \cont \left(
@@ -784,7 +823,7 @@ $ \lp^{ 2 } $.
 			\int_{ 0 }^{ T }
 				\left(
 					\int
-						\abs{ \partial_{ t } \psi_{ i }^{ \varepsilon } }
+						\abs{ \partial_{ t } \psi_{ \varepsilon , i } }
 					\dd{ x }
 				\right)^{ 2 }
 			\dd{ t }
@@ -822,9 +861,12 @@ $ \lp^{ 2 } $.
 			& \leq
 			2 \energy_{ \varepsilon } ( u_{ \varepsilon } ( 0 ) )^{ 2 }.
 		\end{align*}
-		By estimate (\ref{l1_estimate_on_nabla_phi_composed_u}), we especially obtain $ \psi_{ i }^{ \varepsilon } \in \lp^{ 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
+		By estimate (\ref{l1_estimate_on_nabla_phi_composed_u}), we especially 
+		obtain $ \psi_{ \varepsilon , i } \in \lp^{ 2 } \left( [ 0 , T ] ; 
+		\lp^{ 1 } ( \flattorus ) \right) $.
 		
-		\item[Step 2:] The sequence $ \psi_{ i }^{ \varepsilon } $ is precompact in $ \cont \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
+		\item[Step 2:] The sequence $ \psi_{ \varepsilon, i } $ is precompact 
+		in $ \cont \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
 		
 		This follows exactly as in the twophase case from the embedding of 
 		$ \wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $
@@ -873,7 +915,7 @@ $ \lp^{ 2 } $.
 				\frac{ 1 }{ \delta }
 				\sum_{ i = 1 }^{ P }
 					\int_{ \Omega_{ i } }
-						\abs{ \psi_{ i }^{ \varepsilon } }
+						\abs{ \psi_{ \varepsilon , i } }
 					\dd{ x }
 			\\
 			& \leq
@@ -881,7 +923,7 @@ $ \lp^{ 2 } $.
 				\frac{ 1 }{ \delta }
 				\sum_{ i = 1 }^{ P }
 					\int
-						\abs{ \psi_{ i }^{ \varepsilon } - \psi_{ i } }
+						\abs{ \psi_{ \varepsilon,  i } - \psi_{ i } }
 					\dd{ x },
 		\end{align*}
 		which converges to $ 0 $ by Step 2.
@@ -894,6 +936,7 @@ $ \lp^{ 2 } $.
 		
 		Here the proof does not change as well.
 	\end{description}
+	This completes our arguments.
 \end{proof}
 
 With these estimate, we can now prove the existence of normal velocities $ V_{ i } $ for the evolving sets $ \Omega_{ i } $ if we assume that the time-integrated energies converges, written out as in (\ref{energy_convergence}), but now for the multiphase energy given by (\ref{definition_of_multiphase_energy}).
@@ -930,7 +973,7 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 				\int_{ 0 }^{ T }
 					\int
 						\varphi
-						\partial_{ t } \psi_{ i }^{ \varepsilon }
+						\partial_{ t } \psi_{ \varepsilon ,i }
 					\dd{ x }
 				\dd{ t }
 			\\
@@ -1031,11 +1074,12 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 		By an approximation argument, this inequality holds for every testfunction as well, proving the claim.
 		
 		\item[Step 3:] The signed measure $ \partial_{ t } \chi_{ i } $ is singular to the wrong parts of $ \energy ( u ; \cdot ) $. More precisely we claim that if $ 1 \leq j < k \leq P $ and $ i \notin \{ j , k \} $, then the measures 
-		$ \hm^{ d - 1 } |_{ \Sigma_{ j , k } } \dd{ t } $ and $ \abs{ \partial_{ t } \chi_{ i } } $ are mutually singular.
+		$ \hm^{ d - 1 } |_{ \Sigma_{ j k } } \dd{ t } $ and $ \abs{ \partial_{ 
+		t } \chi_{ i } } $ are mutually singular.
 		
 		We again write $ \abs{ \nabla \chi }_{ d + 1 } $ for the space derivative in time and space and $ \abs{ \nabla \chi }_{ d } $ for the space derivative for some fixed time $ t $, which is defined for almost every time. Moreover, we denote by $ \tilde{ \Omega }_{ i } $ the set in time and space such that
 		$ \chi_{ i } ( t , x ) = \mathds{ 1 }_{ \tilde{ \Omega }_{ i } } ( t , x ) $
-		and by $ \tilde{ \Sigma }_{ i , j } $ the corresponding interfaces.
+		and by $ \tilde{ \Sigma }_{ i j } $ the corresponding interfaces.
 		
 		By \Cref{identities_for_measure_theoretic_boundaries} we can then write
 		\begin{equation*}
@@ -1048,14 +1092,18 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 		\end{equation*}
 		But for all $ l \neq i $, we have again by \Cref{identities_for_measure_theoretic_boundaries} that either 
 		\begin{equation*}
-			\abs{ ( \partial_{ t } , \nabla ) \chi_{ j } } ( \tilde{ \Sigma }_{ i , l } ) = 0 
+			\abs{ ( \partial_{ t } , \nabla ) \chi_{ j } } ( \tilde{ \Sigma }_{ 
+			i l } ) = 0 
 			\quad \text{or} \quad
-			\abs{ ( \partial_{ t } , \nabla ) \chi_{ k } } ( \tilde{ \Sigma }_{ i , l } ) = 0.
+			\abs{ ( \partial_{ t } , \nabla ) \chi_{ k } } ( \tilde{ \Sigma }_{ 
+			i l } ) = 0.
 		\end{equation*}
 		Without loss of generality we assume the former. 
-		Then it follows that $ \abs{ \nabla \chi_{ j } }_{ d + 1 } \left( \tilde{ \Sigma }_{ i , l } \right) = 0 $ and therefore we have
+		Then it follows that $ \abs{ \nabla \chi_{ j } }_{ d + 1 } \left( 
+		\tilde{ \Sigma }_{ i l } \right) = 0 $ and therefore we have
 		\begin{align*}
-			\hm^{ d - 1 } |_{ \Sigma_{ j , k } } \dd{ t } ( \tilde{ \Sigma }_{ i , l } )
+			\hm^{ d - 1 } |_{ \Sigma_{ j k } } \dd{ t } ( \tilde{ \Sigma }_{ i 
+			l } )
 			& =
 			\frac{ 1 }{ 2 } \left(
 				\abs{ \nabla \chi_{ j } }_{ d }
@@ -1065,7 +1113,7 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 				\abs{ \nabla ( \chi_{ j } + \chi_{ k } ) }_{ d }
 			\right)
 			\dd{ t }
-			\left( \tilde{ \Sigma }_{ i , l }\right)
+			\left( \tilde{ \Sigma }_{ i l }\right)
 			\\
 			& = 
 			\frac{ 1 }{ 2 } \left(
@@ -1074,7 +1122,7 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 				\abs{ \nabla \chi_{ k } }_{ d +1 }
 				-
 				\abs{ \nabla ( \chi_{ j } + \chi_{ k } ) }_{ d+ 1 }
-			\right) \left( \tilde{ \Sigma }_{ i , l } \right)
+			\right) \left( \tilde{ \Sigma }_{ i l } \right)
 			\\
 			& = 
 			\frac{ 1 }{ 2 } \left( 
@@ -1082,7 +1130,7 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 				-
 				\abs{ \nabla \chi_{ k } }_{ d + 1 } 
 			\right)
-			\left( \tilde{ \Sigma } _{ i , l } \right)
+			\left( \tilde{ \Sigma } _{ i l } \right)
 			= 0.		
 		\end{align*}
 		This proves the desired singularity.
@@ -1096,13 +1144,13 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 			\energy ( u ; \cdot ) \dd{ t }
 			=
 			\sum_{ j \neq i }
-				\sigma_{ i , j }
-				\hm^{ d - 1 } |_{ \Sigma_{ i , j } }
+				\sigma_{ i j }
+				\hm^{ d - 1 } |_{ \Sigma_{ i j } }
 				\dd{ t }
 			+
 			\sum_{ 1 \leq j < k \leq P , j, k \neq i }
-				\sigma_{ j , k }
-				\hm^{ d- 1 } |_{ \Sigma_{ j , k } }
+				\sigma_{ j k }
+				\hm^{ d- 1 } |_{ \Sigma_{ j k } }
 				\dd{ t }.
 		\end{equation*}
 		In the last term, the second summand is by Step 3 singular to $ \abs{ \partial_{ t } \chi_{ i } } $ and the first summand is bounded by $ \abs{ \nabla \chi_{ i } } \dd{ t } $, which proves that $ \partial_{ t } \chi_{ i } $ is absolutely continuous with respect to $ \abs{ \nabla \chi_{ i } } \dd{ t } $.
@@ -1163,6 +1211,7 @@ With these estimate, we can now prove the existence of normal velocities $ V_{ i
 		\end{align*}
 		This proves by the monotone convergence theorem the desired claim.
 	\end{description} 
+	Therefore our proof is complete.
 \end{proof}
 
 Nextup, we want to capture an important Lemma called the \enquote{equipartition of energy} which states that under the energy convergence assumption (\ref{energy_convergence}), it must already hold that
@@ -1216,7 +1265,7 @@ VLT HIER PAPER VON ILMANEN ZITIEREN
 We start by defining a $ \bv $-formulation for motion by multiphase mean curvature flow under the simplifying assumption that the mobilities are already fixed by the surface tensions through the equation
 \begin{equation}
 	\label{mobilites_inverse_of_surface_tensions}
-	\mu_{ i , j } =\frac{ 1 }{ \sigma_{ i , j } }. 
+	\mu_{ i j } =\frac{ 1 }{ \sigma_{ i j } }. 
 \end{equation}
 
 \begin{definition}[$\bv$-solution to multiphase mean curvature flow]
@@ -1252,7 +1301,7 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 		\begin{align}
 			\label{distributional_equation_mmcf}
 			\sum_{ 1 \leq i < j \leq P }
-				\sigma_{ i , j }
+				\sigma_{ i j }
 				\int_{ 0 }^{ T }
 					\int
 						&
@@ -1293,24 +1342,29 @@ We start by defining a $ \bv $-formulation for motion by multiphase mean curvatu
 
 	Since (\ref{distributional_equation_mmcf}) is quite the long equation, we want to motivate it. Assuming that everything is nice and smooth, we have by the Gauss-Green theorem on surfaces \cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} that
 	\begin{equation*}
-		\int_{ \Sigma_{ i , j } }
+		\int_{ \Sigma_{ i j } }
 			\int 
 				\inner{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
 			\dd^{\hm^{ d- 1 }}
 		=
-		\int_{ \Sigma_{ i , j } }
+		\int_{ \Sigma_{ i j } }
 			\int
-				H_{ i , j } \inner*{ \xi }{ \nu_{ i } }
+				H_{ i j } \inner*{ \xi }{ \nu_{ i } }
 			\dd{\hm^{ d- 1 }}
 		+
-		\int_{ \Gamma_{ i , j } }
+		\int_{ \Gamma_{ i j } }
 			\int
-				\inner*{ \xi }{ \nu_{ \Gamma_{ i , j } } }
+				\inner*{ \xi }{ \nu_{ \Gamma_{ i j } } }
 			\dd{ \hm^{ d - 2 } }.
 	\end{equation*}
-	Here $ \Gamma_{ i , j } $ denotes the boundary of the surface $ \Sigma_{ i , j } $, which we expect to only have significant contribution at triple junctions. But then Herring's angle condition (\ref{herrings_angle_condition}) tells us that the boundary terms cancel out (HIER NOCHMAL TIM WEGEN DEN NORMALEN FRAGEN). But now we integrate at each interface over the quantity
+	Here $ \Gamma_{ i j } $ denotes the boundary of the surface $ \Sigma_{ i j 
+	} $, which we expect to only have significant contribution at triple 
+	junctions. But then Herring's angle condition 
+	(\ref{herrings_angle_condition}) tells us that the boundary terms cancel 
+	out (HIER NOCHMAL TIM WEGEN DEN NORMALEN FRAGEN). But now we integrate at 
+	each interface over the quantity
 	\begin{equation*}
-		(V_{ i } - H_{ i , j } ) \inner*{ \xi }{ \nu_{ i } },
+		(V_{ i } - H_{ i j } ) \inner*{ \xi }{ \nu_{ i } },
 	\end{equation*}
 	which is zero by equation (\ref{v_is_equal_to_h}) combined with the 
 	assumption (\ref{mobilites_inverse_of_surface_tensions}).
@@ -1503,23 +1557,23 @@ Notice that the equality follows for example from
 	\\
 	={} &
 	\sum_{ 1 \leq k < l \leq P }
-		\sigma_{ k , l }
-		\int_{ \Sigma_{ k , l } }
+		\sigma_{ k l }
+		\int_{ \Sigma_{ k l } }
 			\rho_{ B }
 		\dd{ \hm^{ d -1 } }
 	-
 	\sum_{ 1 \leq k < l \leq P }
-		\abs{ \sigma_{ i , k } - \sigma_{ i , l } }
-		\int_{ \Sigma_{ k, l } }
+		\abs{ \sigma_{ i k } - \sigma_{ i l } }
+		\int_{ \Sigma_{ k l } }
 			\rho_{ B }
 		\dd{ \hm^{ d - 1 } }
 	\\
 	={} &
 	\sum_{ \substack{1 \leq k < l \leq P \\ \{ k, l \} \neq \{ i, j \} } }
 		\left(
-			\sigma_{ k , l } - \abs{ \sigma_{ i , k } - \sigma_{ i , l } }
+			\sigma_{ k l } - \abs{ \sigma_{ i k } - \sigma_{ i l } }
 		\right)
-		\int_{ \Sigma_{ k , l } }
+		\int_{ \Sigma_{ k l } }
 			\rho_{ B }
 		\dd{ \hm^{ d - 1 } }
 	\\
@@ -1542,14 +1596,14 @@ Thus we can estimate the error by the last summand of the error in
 			\int
 				\inner*{ 
 					\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ 
-					\varepsilon } \partial_{ u } W ( u_{ \varepsilon } ) 
+					\varepsilon } \nabla W ( u_{ \varepsilon } ) 
 				}
-				{ \inner*{ \xi }{ \nabla u_{ \varepsilon } } }
+				{ \diff u_{ \varepsilon } \xi } 
 			\dd{ x }
 		=
 		\sum_{ 1 \leq i < j \leq P }
-			\sigma_{ i , j }
-			\int_{ \Sigma_{ i , j } }
+			\sigma_{ i j }
+			\int_{ \Sigma_{ i j } }
 				\inner*{ \diff \xi }{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
 			\dd{ \hm^{ d - 1} }
 	\end{equation*}
@@ -1559,9 +1613,8 @@ Thus we can estimate the error by the last summand of the error in
 		\int
 		\inner*{ 
 			\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } 	
-			\partial_{ u } W ( u_{ \varepsilon } ) 
-		}
-		{ \inner*{ \xi }{ \nabla u_{ \varepsilon } } }
+			\nabla W ( u_{ \varepsilon } ) }
+		{ \diff u_{ \varepsilon } \xi }
 		\dd{ x }
 		\lesssim
 		\norm{ \nabla \xi }_{ \sup }
@@ -1573,7 +1626,8 @@ Thus we can estimate the error by the last summand of the error in
 	We can not proceed exactly as in the twophase case since we do not have one primitive $ \phi $ and more importantly, we can not expect the functions $ \psi_{ i }^{ \varepsilon } $ to satisfy 
 	\begin{equation}
 		\label{energy_convergence_of_psi_i}
-		\abs{ \psi_{ i }^{ \varepsilon } } ( \flattorus ) \to \abs{ \psi_{ i } } ( \flattorus ),
+		\abs{ \psi_{ \varepsilon ,i } } ( \flattorus ) \to \abs{ \psi_{ i } } ( 
+		\flattorus ),
 	\end{equation}
 	so the original theorem from Reshetnyak will not work here. However we have by the lower semicontinuity of the variation measure under the assumption of energy convergence (\ref{energy_convergence}) that
 	\begin{align*}
@@ -1581,7 +1635,7 @@ Thus we can estimate the error by the last summand of the error in
 		&
 		\leq
 		\liminf_{ \varepsilon \to 0 }
-			\abs{ \nabla \psi_{ i }^{ \varepsilon } } ( \flattorus )
+			\abs{ \nabla \psi_{ \varepsilon , i } } ( \flattorus )
 		\\
 		& \leq
 		\liminf_{ \varepsilon \to 0 }
@@ -1592,8 +1646,8 @@ Thus we can estimate the error by the last summand of the error in
 		\\
 		& =
 		\sum_{ 1 \leq j < k \leq P }
-			\sigma_{ j , k }
-			\hm^{ d -1 } ( \Sigma_{ j , k } ).
+			\sigma_{ j k }
+			\hm^{ d -1 } ( \Sigma_{ j k } ).
 	\end{align*}
 	But by \Cref{rewriting_variation_of_psi_i}, we know that
 	\begin{equation*}

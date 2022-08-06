@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  5 AUG 2022 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  6 AUG 2022 17:46
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1540,13 +1540,13 @@ Overfull \hbox (0.35463pt too wide) detected at line 204
  []
 
 [9]
-Overfull \hbox (66.2094pt too wide) in paragraph at lines 291--293
+Overfull \hbox (66.2094pt too wide) in paragraph at lines 292--304
 []\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
 ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
  []
 
 [10]
-Overfull \hbox (1.3415pt too wide) in paragraph at lines 400--403
+Overfull \hbox (1.3415pt too wide) in paragraph at lines 413--416
 \OT1/cmr/m/n/10 (-20) In step 6, we more-over have shown that $\OML/cmm/m/it/10
  @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
 1/cmr/m/n/10 (-20) in $[][]([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/
@@ -1555,7 +1555,7 @@ cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20)
  []
 
 [11]
-Overfull \hbox (0.80008pt too wide) detected at line 540
+Overfull \hbox (0.80008pt too wide) detected at line 553
 []
  []
 
@@ -1655,22 +1655,22 @@ e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
  []
 
 [22]
-Overfull \hbox (5.06604pt too wide) detected at line 863
+Overfull \hbox (5.06604pt too wide) detected at line 872
 []
  []
 
 [23] [24]
 
 LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
- line 1151.
+ line 1160.
 
 [25]
-Overfull \hbox (34.80074pt too wide) detected at line 1367
+Overfull \hbox (34.80074pt too wide) detected at line 1376
 []
  []
 
 [26]
-Overfull \hbox (9.26213pt too wide) detected at line 1562
+Overfull \hbox (9.26213pt too wide) detected at line 1571
 []
  []
 
@@ -1682,104 +1682,105 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [29] [30] [31] [32] [33]
-Overfull \hbox (2.04562pt too wide) in paragraph at lines 506--508
+Overfull \hbox (2.04562pt too wide) in paragraph at lines 525--534
 []\OT1/cmr/m/n/10 (-20) By The-o-rem [][]2.2.1[][] the so-lu-tion $\OML/cmm/m/i
 t/10 u[]$ \OT1/cmr/m/n/10 (-20) of ([][]2.1[][]) sat-is-fies the as-sump-tions 
 of Lemma [][]3.2.3[][].
  []
 
 [34]
-Overfull \hbox (17.00601pt too wide) detected at line 634
+Overfull \hbox (17.00601pt too wide) detected at line 665
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
  []
 
 
-Overfull \hbox (6.95596pt too wide) in paragraph at lines 638--639
+Overfull \hbox (4.58096pt too wide) in paragraph at lines 669--674
 []\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
 o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
 t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
 rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
  []
 
-[35] [36] [37] [38]
-Overfull \hbox (2.10722pt too wide) in paragraph at lines 1054--1057
-\OT1/cmr/m/n/10 (-20) Without loss of gen-er-al-ity we as-sume the for-mer. The
-n it fol-lows that $[][] [] = 0$
+[35]
+Overfull \hbox (2.31587pt too wide) in paragraph at lines 784--790
+[]\OT1/cmr/bx/n/10 Lemma 3.2.10. []\OT1/cmr/m/it/10 (-20) In the sit-u-a-tion o
+f Propo-si-tion [][]3.2.4[][] we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10 2 
+[][] []$
  []
 
-[39] [40]
+[36] [37] [38] [39] [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1214.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 1214.
+(hyperref)                removing `math shift' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\mathop' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 1214.
+(hyperref)                removing `\mathchardef' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\std@minus' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 1214.
+(hyperref)                removing `\mathcode' on input line 1263.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.22198pt
-(hyperref)                removed on input line 1214.
+(hyperref)                removed on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 1214.
+(hyperref)                removing `\mathgroup' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 1214.
+(hyperref)                removing `\symoperators' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 1214.
+(hyperref)                removing `\@ifnextchar' on input line 1263.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1214.
+(hyperref)                removing `math shift' on input line 1263.
 
 [41]
-Overfull \hbox (14.02452pt too wide) in paragraph at lines 1344--1361
+Overfull \hbox (14.02452pt too wide) in paragraph at lines 1398--1415
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
@@ -1789,25 +1790,20 @@ Excluding 'comment' comment.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42] [43]
-Overfull \hbox (10.05412pt too wide) detected at line 1555
-[] [][][] [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 [] [][][][] []
- []
-
-[44]
-Overfull \hbox (31.40291pt too wide) detected at line 1704
+[42] [43] [44]
+Overfull \hbox (31.40291pt too wide) detected at line 1758
 [] [] \U/msa/m/n/10 . []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
 ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
  []
 
 
-Overfull \hbox (3.06598pt too wide) detected at line 1745
+Overfull \hbox (3.06598pt too wide) detected at line 1799
 [] \OMS/cmsy/m/n/10  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
 ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
  []
 
 [45]
-Overfull \hbox (7.9185pt too wide) detected at line 1840
+Overfull \hbox (7.9185pt too wide) detected at line 1894
 []
  []
 
@@ -1816,12 +1812,12 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
 
  [46]
 [47] [48]
-Overfull \hbox (21.99113pt too wide) detected at line 2362
+Overfull \hbox (21.99113pt too wide) detected at line 2416
 []
  []
 
 [49]
-Overfull \hbox (34.2628pt too wide) detected at line 2557
+Overfull \hbox (34.2628pt too wide) detected at line 2611
 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 ; 
 u\OT1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + 
 [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/
@@ -1829,19 +1825,19 @@ u\OT1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 +
  []
 
 [50] [51]
-Overfull \hbox (1.1456pt too wide) detected at line 2772
+Overfull \hbox (1.1456pt too wide) detected at line 2826
 [] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 
 ; u[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 [
 ] [][] []  [] [] [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 C [] [][] [] [] [] :
  []
 
 [52]
-Overfull \hbox (51.64359pt too wide) detected at line 3027
+Overfull \hbox (51.64359pt too wide) detected at line 3081
 []
  []
 
 [53]
-Overfull \hbox (0.47713pt too wide) detected at line 3191
+Overfull \hbox (0.47713pt too wide) detected at line 3245
 []
  []
 
@@ -1849,12 +1845,12 @@ Overfull \hbox (0.47713pt too wide) detected at line 3191
 Underfull \vbox (badness 1199) has occurred while \output is active []
 
  [54]
-Overfull \hbox (17.80789pt too wide) detected at line 3271
+Overfull \hbox (17.80789pt too wide) detected at line 3325
 []
  []
 
 
-Overfull \hbox (15.11865pt too wide) in paragraph at lines 3271--3278
+Overfull \hbox (15.11865pt too wide) in paragraph at lines 3325--3332
 \OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
 ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
 for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
@@ -2127,7 +2123,7 @@ sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (82 pages, 786365 bytes).
+Output written on "Master's Thesis.pdf" (82 pages, 786269 bytes).
 PDF statistics:
  1174 PDF objects out of 1200 (max. 8388607)
  285 named destinations out of 1000 (max. 500000)
