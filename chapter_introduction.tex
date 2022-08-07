@@ -22,8 +22,26 @@ proved the \enquote{shrinking conjecture} for convex planar curves.
 Brakke describes in his book 
 \cite{brakke_kenneth_motion_of_surface_by_mean_curvature} the motion by mean 
 curvature using varifolds, which yields a quite abstract and general notion for 
-mean curvature flow. 
+mean curvature flow and is based on the gradient flow structure of mean 
+curvature flow. 
 Luckhaus and Sturzenhecker introduced a 
 distributional solution to mean curvature flow in their work 
 \cite{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}. Another 
-solution concept is the viscosity solution concept
+solution concept is the viscosity solution concept, for example presented in 
+(\cite{chen_giga_goto_uniqueness_and_existence_of_generalized_mcf_equations},
+\cite{evans_spruck_motion_of_level_sets_by_mean_curvature}).
+
+The Allen--Cahn equation
+\begin{equation*}
+	\partial_{ t } u_{ \varepsilon }
+	=
+	\Delta u_{ \varepsilon }
+	-
+	\frac{ 1 }{ \varepsilon }
+	\nabla W ( u_{ \varepsilon } )
+\end{equation*}
+is commonly used as a phase-field approximation for mean curvature flow and was 
+first discovered by Allen and Cahn in their paper 
+\cite{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}.
+Since then it has been a topic of long study, both from a numerical and 
+analytical standpoint.

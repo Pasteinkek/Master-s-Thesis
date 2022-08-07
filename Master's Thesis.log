@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  6 AUG 2022 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  7 AUG 2022 14:08
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1791,19 +1791,13 @@ Excluding 'comment' comment.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [42] [43] [44]
-Overfull \hbox (31.40291pt too wide) detected at line 1758
+Overfull \hbox (40.53835pt too wide) detected at line 1759
 [] [] \U/msa/m/n/10 . []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
 ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
  []
 
-
-Overfull \hbox (3.06598pt too wide) detected at line 1799
-[] \OMS/cmsy/m/n/10  []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
-ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
- []
-
 [45]
-Overfull \hbox (7.9185pt too wide) detected at line 1894
+Overfull \hbox (4.0296pt too wide) detected at line 1897
 []
  []
 
@@ -1812,32 +1806,25 @@ Underfull \vbox (badness 2142) has occurred while \output is active []
 
  [46]
 [47] [48]
-Overfull \hbox (21.99113pt too wide) detected at line 2416
+Overfull \hbox (21.99113pt too wide) detected at line 2419
 []
  []
 
 [49]
-Overfull \hbox (34.2628pt too wide) detected at line 2611
+Overfull \hbox (34.2628pt too wide) detected at line 2614
 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 ; 
 u\OT1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + 
 [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/
 10 [] [] ;
  []
 
-[50] [51]
-Overfull \hbox (1.1456pt too wide) detected at line 2826
-[] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 
-; u[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 [
-] [][] []  [] [] [] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 C [] [][] [] [] [] :
- []
-
-[52]
-Overfull \hbox (51.64359pt too wide) detected at line 3081
+[50] [51] [52]
+Overfull \hbox (49.3519pt too wide) detected at line 3087
 []
  []
 
 [53]
-Overfull \hbox (0.47713pt too wide) detected at line 3245
+Overfull \hbox (0.47713pt too wide) detected at line 3252
 []
  []
 
@@ -1845,12 +1832,12 @@ Overfull \hbox (0.47713pt too wide) detected at line 3245
 Underfull \vbox (badness 1199) has occurred while \output is active []
 
  [54]
-Overfull \hbox (17.80789pt too wide) detected at line 3325
+Overfull \hbox (17.80789pt too wide) detected at line 3332
 []
  []
 
 
-Overfull \hbox (15.11865pt too wide) in paragraph at lines 3325--3332
+Overfull \hbox (15.11865pt too wide) in paragraph at lines 3332--3339
 \OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
 ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
 for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
@@ -1944,12 +1931,6 @@ Overfull \hbox (14.02452pt too wide) in paragraph at lines 123--142
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
-
-Overfull \hbox (1.23701pt too wide) detected at line 226
-[][] [] [] [][] [] [][][] [] [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 [] [
-][] [][] H[] [] [] :
- []
-
 [58]
 Overfull \hbox (10.54408pt too wide) in paragraph at lines 246--251
 \OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
@@ -1996,6 +1977,14 @@ Overfull \hbox (2.1771pt too wide) in paragraph at lines 973--974
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Overfull \hbox (36.60812pt too wide) in paragraph at lines 1006--1013
+[]\OT1/cmr/m/it/10 (-20) Given an ini-tial en-ergy $\OML/cmm/m/it/10 ![] \OMS/c
+msy/m/n/10 2 M []$ \OT1/cmr/m/it/10 (-20) and an ini-tial phase in-di-ca-tor fu
+nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
+
+ []
+
 [63] [64]
 Overfull \hbox (8.22441pt too wide) detected at line 1175
 []
@@ -2005,7 +1994,7 @@ Overfull \hbox (8.22441pt too wide) detected at line 1175
 LaTeX Warning: Command \i invalid in math mode on input line 1228.
 
 
-Overfull \hbox (33.47137pt too wide) in paragraph at lines 1226--1247
+Overfull \hbox (38.86722pt too wide) in paragraph at lines 1226--1247
 \OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 7! [][] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (
 -20) (\OML/cmm/m/it/10 t; x; p\OT1/cmr/m/n/10 (-20) ) []$ \OT1/cmr/m/it/10 (-20
 ) is mea-sur-able for all test func-tions $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 
@@ -2017,7 +2006,7 @@ Overfull \hbox (33.47137pt too wide) in paragraph at lines 1226--1247
 LaTeX Warning: Command \j invalid in math mode on input line 1317.
 
 
-Overfull \hbox (41.67523pt too wide) detected at line 1325
+Overfull \hbox (44.49007pt too wide) detected at line 1325
 [][] [] \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]; x\OT1/cmr/m/
 n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]; x\OT1/cmr/m/n/10
  ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\O
@@ -2027,7 +2016,7 @@ T1/cmr/m/n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; x\OT1/cmr
  []
 
 [66] [67]
-Overfull \hbox (40.06084pt too wide) detected at line 1568
+Overfull \hbox (37.83861pt too wide) detected at line 1568
 []
  []
 
@@ -2081,11 +2070,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48447 strings out of 480930
- 1074101 string characters out of 2900231
- 1905269 words of memory out of 3000000
- 63147 multiletter control sequences out of 15000+200000
- 556702 words of font info for 186 fonts, out of 3000000 for 9000
+ 48454 strings out of 480930
+ 1074838 string characters out of 2900231
+ 1905688 words of memory out of 3000000
+ 63153 multiletter control sequences out of 15000+200000
+ 556636 words of font info for 185 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -2123,9 +2112,9 @@ sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (82 pages, 786269 bytes).
+Output written on "Master's Thesis.pdf" (82 pages, 789064 bytes).
 PDF statistics:
- 1174 PDF objects out of 1200 (max. 8388607)
- 285 named destinations out of 1000 (max. 500000)
+ 1182 PDF objects out of 1200 (max. 8388607)
+ 288 named destinations out of 1000 (max. 500000)
  26337 words of extra memory for PDF output out of 29859 (max. 10000000)
 

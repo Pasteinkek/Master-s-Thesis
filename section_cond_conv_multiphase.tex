@@ -1654,11 +1654,11 @@ Thus we can estimate the error by the last summand of the error in
 		\abs{ \nabla \psi_{ i } }
 		=
 		\sum_{ 1 \leq j < k \leq P }
-			\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
-			\hm^{ d - 1 } |_{ \Sigma_{ j , k } },
+			\abs{ \sigma_{ i j } - \sigma_{ i k } }
+			\hm^{ d - 1 } |_{ \Sigma_{ j k } },
 	\end{equation*}
 	which yields that localized on $ \partial_{ \ast } \Omega_{ i } $, we have 
-	the necessary convergence $ \abs{ \nabla \psi_{i }^{ \varepsilon } } \to 
+	the necessary convergence $ \abs{ \nabla \psi_{ \varepsilon ,i } } \to 
 	\abs{ \nabla \psi_{ i } } $. Thus we will develop a quantitative version of 
 	Reshetnyaks theorem and apply it to our setting.
 \end{remark}
@@ -1671,10 +1671,10 @@ Thus we can estimate the error by the last summand of the error in
 				\inner*{
 					\varepsilon \Delta u_{ \varepsilon }
 					-
-					\frac{ 1 }{ \varepsilon } \partial_{ u } W ( u_{ \varepsilon } )
+					\frac{ 1 }{ \varepsilon } \nabla W ( u_{ \varepsilon } )
 				}
 				{
-					\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+					\diff u_{ \varepsilon } \xi
 				}
 			\dd{ x }
 		\\
@@ -1745,7 +1745,8 @@ Thus we can estimate the error by the last summand of the error in
 					-
 					\int
 						\eta
-						\inner*{ A }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
+						\inner*{ A }{ \nu_{ \varepsilon, i } \otimes \nu_{ 
+						\varepsilon , i } }
 						\abs{ \nabla \psi_{ i } }
 					\dd{ x }
 				}
@@ -1764,8 +1765,9 @@ Thus we can estimate the error by the last summand of the error in
 			\limsup_{ \varepsilon \to 0 }
 				\abs{
 					\int
-						\eta \inner*{ A }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
-						\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+						\eta \inner*{ A }{ \nu_{ \varepsilon, i } \otimes \nu_{ 
+						\varepsilon,  i } }
+						\abs{ \nabla \psi_{ \varepsilon,  i } }
 					\dd{ x }
 					-
 					\int
@@ -1788,8 +1790,8 @@ Thus we can estimate the error by the last summand of the error in
 				\abs{ \nabla \psi_{ i } }
 				-
 				\sum_{ 1 \leq j < k \leq P }
-					\sigma_{ j , k }
-					\int_{ \Sigma_{ j , k } }
+					\sigma_{ j k }
+					\int_{ \Sigma_{ j k } }
 						\eta 
 						\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
 					\dd{ \hm^{ d - 1 } }
@@ -1814,8 +1816,8 @@ Thus we can estimate the error by the last summand of the error in
 				\dd{ x }
 				-
 				\sum_{ 1 \leq j < k \leq P }
-					\sigma_{ j , k }
-				 	\int_{ \Sigma_{ j , k } }
+					\sigma_{ j  k }
+				 	\int_{ \Sigma_{ j k } }
 				 		\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
 				 	\dd{ \hm^{ d - 1 } }
 			} 
@@ -1830,8 +1832,8 @@ Thus we can estimate the error by the last summand of the error in
 				\dd{ x }
 			-
 			\sum_{ 1 \leq j < k \leq P }
-				\sigma_{ j , k }
-				\int_{ \Sigma_{ j , k } }
+				\sigma_{ j k }
+				\int_{ \Sigma_{ j k } }
 					\inner*{ A \eta_{ B } }
 					{ \nu_{ i } \otimes \nu_{i } }
 				\dd{ \hm^{ d - 1 } }
@@ -1849,17 +1851,18 @@ Thus we can estimate the error by the last summand of the error in
 					-
 					\int
 						\inner*{ A \eta_{ B } }
-						{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ 
-						\varepsilon } }
-						\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+						{ \nu_{ \varepsilon , i }\otimes \nu_{ \varepsilon ,i } 
+						}
+						\abs{ \nabla \psi_{ \varepsilon,  i } }
 					\dd{ x }
 				}
 			\\
 			& \quad \quad \quad \;\;\;\!\: +
 			\abs{ 
 				\int
-					\inner*{ A \eta_{ B } }{ \nu_{ i }^{ \varepsilon } \otimes \nu_{ i }^{ \varepsilon } }
-					\abs{ \nabla \psi_{ i }^{ \varepsilon } }
+					\inner*{ A \eta_{ B } }{ \nu_{ \varepsilon ,i } \otimes 
+					\nu_{ \varepsilon , i } }
+					\abs{ \nabla \psi_{ \varepsilon, i } }
 				\dd{ x }
 				-
 				\int
@@ -1876,8 +1879,8 @@ Thus we can estimate the error by the last summand of the error in
 				\abs{ \nabla \psi_{ i } }
 				-
 				\sum_{ 1 \leq j < k \leq P }
-					\sigma_{ j , k }
-					\int_{ \Sigma_{ j , k } }
+					\sigma_{ j k }
+					\int_{ \Sigma_{ j k } }
 						\inner*{ A \eta_{ B } }
 						{ \nu_{ j } \otimes \nu_{ j } }
 					\dd{ \hm^{ d - 1 } }
@@ -1904,9 +1907,9 @@ Thus we can estimate the error by the last summand of the error in
 		\begin{equation*}
 			\pi 
 			\coloneqq
-			\frac{ \partial_{ u } \phi }{ \abs{ \partial_{ u } \phi } }
+			\frac{ \nabla \phi }{ \abs{ \nabla \phi } }
 			\otimes
-			\frac{ \partial_{ u } \phi }{ \abs{ \partial_{ u } \phi } }
+			\frac{ \nabla \phi }{ \abs{ \nabla \phi } }
 			\in 
 			\mathbb{ R }^{ N }.
 		\end{equation*}
@@ -1941,19 +1944,19 @@ Thus we can estimate the error by the last summand of the error in
 				N_{ l i }N_{ r j }
 				\sum_{ k = 1 }^{ N }
 					\frac{ \partial_{ k } \phi  \partial_{ l } \phi \partial_{ 
-					k } \phi \partial_{ r } \phi }{ \abs{ \partial_{ u } \phi 
+					k } \phi \partial_{ r } \phi }{ \abs{ \nabla \phi 
 					}^{ 4 } }
 			\\
 			& =
 			\sum_{ l, r = 1 }^{ N }
-				N_{ l i } \frac{ \partial_{ l } \phi }{ \abs{ \partial_{ u } 
+				N_{ l i } \frac{ \partial_{ l } \phi }{ \abs{ \nabla
 				\phi } }
-				N_{ r j } \frac{ \partial_{ r } \phi }{ \abs{ \partial_{ u } 
+				N_{ r j } \frac{ \partial_{ r } \phi }{ \abs{ \nabla 
 				\phi } }
 			=
-			\frac{ \partial_{ i } \psi }{ \abs{ \nabla u } \abs{ \partial_{ u } 
+			\frac{ \partial_{ i } \psi }{ \abs{ \nabla u } \abs{ \nabla
 			\phi } }
-			\frac{ \partial_{ j } \psi }{ \abs{ \nabla u } \abs{ \partial_{ u } 
+			\frac{ \partial_{ j } \psi }{ \abs{ \nabla u } \abs{ \nabla 
 			\phi } }
 		\end{align*}
 		Thus we infer that
@@ -1971,12 +1974,12 @@ Thus we can estimate the error by the last summand of the error in
 			\frac{ \abs{ \nabla \psi_{ \varepsilon } }^{ 2 } }{ \abs{ \nabla 
 			\phi }^{ 2 } \abs{ \nabla u_{ \varepsilon } }^{ 2 } }
 			\inner*{ A }
-			{ \frac{ \nabla \psi^{ \varepsilon } }{ \abs{ \nabla \psi^{ 
-			\varepsilon } } } \otimes \frac{ \nabla \psi^{ \varepsilon } }{ 
-			\abs{ \nabla \psi^{ \varepsilon } } } }
+			{ \frac{ \nabla \psi_{ \varepsilon } }{ \abs{ \nabla \psi_{ 
+			\varepsilon } } } \otimes \frac{ \nabla \psi_{ \varepsilon } }{ 
+			\abs{ \nabla \psi_{ \varepsilon } } } }
 			= 
 			\abs{ \pi N_{ \varepsilon } }^{ 2 }
-			\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon } },
+			\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon } },
 		\end{align*}
 		where we used that 
 		\begin{equation*}
@@ -2007,8 +2010,8 @@ Thus we can estimate the error by the last summand of the error in
 			( N - \pi N )^{ \top } ( N - \pi N ).
 		\end{align*}
 		In order to prove the claim, we first get an error when replacing $ N_{ 
-		\varepsilon }^{ \top } N_{ \varepsilon } $ with $ \nu^{ \varepsilon } 
-		\otimes \nu^{ \varepsilon } $ and the second error when replacing $ 
+		\varepsilon }^{ \top } N_{ \varepsilon } $ with $ \nu_{ \varepsilon } 
+		\otimes \nu_{ \varepsilon } $ and the second error when replacing $ 
 		\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $ 
 		by $ \abs{ \nabla \psi_{ \varepsilon } } $.
 		For the first error we can estimate
@@ -2023,7 +2026,7 @@ Thus we can estimate the error by the last summand of the error in
 				-
 				\int
 					\eta
-					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
 					} }
 					\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
 					\varepsilon } }
@@ -2061,7 +2064,7 @@ Thus we can estimate the error by the last summand of the error in
 				\int
 					\eta
 					\inner*{ A }
-					{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon } }
+					{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon } }
 					\sqrt{ 2 W ( u_{ \varepsilon } ) }
 					\abs{ \nabla u_{ \varepsilon } }
 				\dd{ x }
@@ -2137,7 +2140,7 @@ Thus we can estimate the error by the last summand of the error in
 			-
 			\int
 				\eta
-				\abs{ \nabla \psi^{ \varepsilon } }
+				\abs{ \nabla \psi_{ \varepsilon } }
 			\dd{ x }.
 		\end{align*}
 		The last inequality is due to Young's inequality and $ \abs{ \nabla 
@@ -2159,7 +2162,7 @@ Thus we can estimate the error by the last summand of the error in
 			& \abs{
 				\int
 					\eta
-					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
 					} }
 					\sqrt{ 2 W ( u_{ \varepsilon } ) }
 					\abs{ \nabla u_{ \varepsilon } }
@@ -2167,9 +2170,9 @@ Thus we can estimate the error by the last summand of the error in
 				-
 				\int
 					\eta
-					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
 					} }
-					\abs{ \nabla \psi^{ \varepsilon } }
+					\abs{ \nabla \psi_{ \varepsilon } }
 				\dd{ x }
 			}
 			\\
@@ -2177,13 +2180,13 @@ Thus we can estimate the error by the last summand of the error in
 			\abs{
 				\int
 					\eta
-					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
 					} }
 					\left(
 						\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
 						\varepsilon } } 
 						-
-						\abs{ \nabla \psi^{ \varepsilon } }
+						\abs{ \nabla \psi_{ \varepsilon } }
 					\right)
 				\dd{ x }
 			}
@@ -2195,7 +2198,7 @@ Thus we can estimate the error by the last summand of the error in
 					\sqrt{ 2 W ( u_{ \varepsilon } ) }
 					\abs{ \nabla u_{ \varepsilon } }
 					-
-					\abs{ \nabla \psi^{ \varepsilon } }
+					\abs{ \nabla \psi_{ \varepsilon } }
 				\right)
 			\dd{ x }
 			\\
@@ -2204,7 +2207,7 @@ Thus we can estimate the error by the last summand of the error in
 			-
 			\int
 				\eta 
-				\abs{ \nabla \psi^{ \varepsilon } }
+				\abs{ \nabla \psi_{ \varepsilon } }
 			\dd{ x },
 		\end{align*}
 		which in the limes superior can be controlled by the desired term as 
@@ -2219,7 +2222,7 @@ Thus we can estimate the error by the last summand of the error in
 			\mu_{ \varepsilon }
 			\coloneqq
 			\delta_{ u_{ \varepsilon } ( x ) }
-			\abs{ \nabla \psi^{ \varepsilon } } \dd{ x }
+			\abs{ \nabla \psi_{ \varepsilon } } \dd{ x }
 		\end{equation*}
 		which acts on continuous functions $ \varphi $ through
 		\begin{equation*}
@@ -2229,7 +2232,7 @@ Thus we can estimate the error by the last summand of the error in
 			=
 			\int_{ \flattorus }
 				\varphi \left( x , \nu_{ \varepsilon } ( x ) \right) 
-				\abs{ \nabla \psi^{ \varepsilon } }
+				\abs{ \nabla \psi_{ \varepsilon } }
 			\dd{ x }.
 		\end{equation*}
 		By Young's inequality and the boundedness of energies, $ \mu_{ 
@@ -2278,9 +2281,9 @@ Thus we can estimate the error by the last summand of the error in
 			\lim_{ \varepsilon \to 0}
 				\int
 					\eta
-					\inner*{ A }{ \nu^{ \varepsilon } \otimes \nu^{ \varepsilon 
+					\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
 					} }
-					\abs{ \nabla \psi^{ \varepsilon } }
+					\abs{ \nabla \psi_{ \varepsilon } }
 				\dd{ x }
 			=
 			\int
@@ -2309,7 +2312,7 @@ Thus we can estimate the error by the last summand of the error in
 			\liminf_{ \varepsilon \to 0 }
 				\int
 					\eta
-					\abs{ \nabla \psi^{ \varepsilon } }
+					\abs{ \nabla \psi_{ \varepsilon } }
 				\dd{ x }
 			=
 			\int
@@ -2337,7 +2340,7 @@ Thus we can estimate the error by the last summand of the error in
 			\lim_{ \varepsilon \to 0 }
 				\int
 					\eta
-					\abs{ \nabla \psi^{ \varepsilon } }
+					\abs{ \nabla \psi_{ \varepsilon } }
 				\dd{ x }
 			=
 			\liminf_{ \varepsilon \to 0 }
@@ -2427,8 +2430,8 @@ Thus we can estimate the error by the last summand of the error in
 			=
 			\lim_{ \varepsilon \to 0 }
 				\int
-					\inner*{ \xi }{ \nu^{ \varepsilon } }
-					\abs{ \nabla \psi^{ \varepsilon } }
+					\inner*{ \xi }{ \nu_{ \varepsilon } }
+					\abs{ \nabla \psi_{ \varepsilon } }
 				\dd{ x }
 			=
 			\int
@@ -2494,8 +2497,8 @@ Thus we can estimate the error by the last summand of the error in
 				\abs{ \nabla \psi_{ i } }
 				-
 				\sum_{ 1 \leq j < k \leq P }
-					\sigma_{ j , k }
-					\int_{ \Sigma_{ j , k } }
+					\sigma_{ j k }
+					\int_{ \Sigma_{ j k } }
 						\eta
 						\inner*{ A }{ \nu_{ j } \otimes \nu_{ j } }
 					\dd{ \hm^{ d - 1 } }
@@ -2505,9 +2508,9 @@ Thus we can estimate the error by the last summand of the error in
 			\abs{ 
 				\sum_{ 1 \leq j < k \leq P }
 					\left( 
-						\abs{ \sigma_{ i , j } - \sigma_{ i , k } }
+						\abs{ \sigma_{ i j } - \sigma_{ i k } }
 						-
-						\sigma_{ j , k }
+						\sigma_{ j k }
 					\right)
 					\int_{ \Sigma_{ j k  } }
 						\eta
@@ -2517,11 +2520,11 @@ Thus we can estimate the error by the last summand of the error in
 			\\
 			\leq{} &
 			\sum_{ 1 \leq j < k \leq P }
-				\int_{ \Sigma_{ j , k } }
+				\int_{ \Sigma_{ j k } }
 					\eta
 					\left(
-						\sigma_{ j , k } - \abs{ \sigma_{ i , j } - \sigma_{ i 
-						, k } }
+						\sigma_{ j  k } - \abs{ \sigma_{ i j } - \sigma_{ i 
+					 k } }
 					\right)
 				\dd{ \hm^{ d - 1 } }
 			\\
@@ -2534,7 +2537,7 @@ Thus we can estimate the error by the last summand of the error in
 		\end{align*}
 		where for the inequality, we used that by the triangle inequality for 
 		the surface tensions, we have
-		$ \abs{ \sigma_{ i , j } - \sigma_{ i , k } } \leq \sigma_{ j , k } $.
+		$ \abs{ \sigma_{ i j } - \sigma_{ i k } } \leq \sigma_{ j k } $.
 	\end{proof}
 	This finishes the proofs for the three claims. Lastly we notice that we 
 	obtain the pointwise in time bound (\ref{pointwise_estimate_for_curvature}) 
@@ -2619,7 +2622,7 @@ negative since the normal of $ \chi_{ i } $ points inwards with respect to $
 away from $ \Omega_{ i } $.
 
 Moreover we want to point out that the first two summands of the tilt-excess $ 
-\tilt_excess_{ i , j } $ measure the local flatness of the boundary, and the 
+\tilt_excess_{ i j } $ measure the local flatness of the boundary, and the 
 last summand measure if mostly the $(i,j)$-th phase is present, see also the 
 discussion in \Cref{section_localization_estimates}.
 
@@ -2721,7 +2724,7 @@ of the limit.
 			\int_{ 0 }^{ T }
 				\int
 					2 \eta
-					\inner*{ \nabla \psi_{ i }^{ \varepsilon } }{ \nu^{ \ast } }
+					\inner*{ \nabla \psi_{ \varepsilon , i } }{ \nu^{ \ast } }
 				\dd{ x }
 			\dd{ t }
 		=
@@ -2754,7 +2757,7 @@ of the limit.
 		\dd{ t }
 		\leq
 		\int_{ 0 }^{ T }
-			\sigma_{ i , j }
+			\sigma_{ i j }
 			\int
 				\eta
 			\abs{ \nabla \chi_{ j } }
@@ -2779,7 +2782,7 @@ of the limit.
 		\dd{ t }
 		& =
 		\sum_{ 1 \leq k \leq P }
-			\sigma_{ i , k }
+			\sigma_{ i k }
 			\int_{ 0 }^{ T }
 				\inner*{ \nu^{ \ast } }
 				{
@@ -2791,7 +2794,7 @@ of the limit.
 		\\
 		& \leq
 		\int_{ 0 }^{ T }
-			\sigma_{ i , j }
+			\sigma_{ i j }
 			\int
 				\eta
 				\inner*{ \nu^{ \ast } }{ \nu }
@@ -2810,7 +2813,7 @@ of the limit.
 			\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
 			\varepsilon } )
 		\leq
-		2 \sigma_{ i , j } \int_{ 0 }^{ T }
+		2 \sigma_{ i j } \int_{ 0 }^{ T }
 			\int
 				\eta
 				\left( 1 + \inner*{ \nu^{ \ast } }{ \nu_{ j } } \right)
@@ -2852,14 +2855,14 @@ now prove the convergence of the velocity term.
 				\int_{ 0 }^{ T }
 					\int
 						\varepsilon
-						\inner*{ \diff u_{ \varepsilon } \xi }
-						{ \partial_{ t } u_{ \varepsilon } }
+						\inner*{ \partial_{ t } u_{ \varepsilon } }{ \diff u_{ 
+						\varepsilon } \xi }
 					\dd{ x }
 				\dd{ t }
 				-
-				\sigma_{ i , j }
+				\sigma_{ i j }
 				\int_{ 0 }^{ T }
-					\int_{ \Sigma_{ i , j } }
+					\int_{ \Sigma_{ i j } }
 						\inner*{ \xi }{ \nu_{ i } } V_{ i }
 					\dd{ \hm^{ d - 1 } }
 				\dd{ t }
@@ -2868,7 +2871,7 @@ now prove the convergence of the velocity term.
 		\lesssim{} &
 		\norm{ \xi }_{ \mathrm{sup} }
 		\left(
-			\frac{ 1 }{ \alpha } \tilt_excess_{ i , j } \left( \nu^{ \ast } ; 
+			\frac{ 1 }{ \alpha } \tilt_excess_{ i j } \left( \nu^{ \ast } ; 
 			\rho , u \right) 
 			+ \alpha \mu ( \rho ) 
 		\right).
@@ -2891,15 +2894,16 @@ now prove the convergence of the velocity term.
 			\int_{ 0 }^{ T }
 				\int
 					\varepsilon
-					\inner*{ \diff u_{ \varepsilon } \xi }{ \partial_{  t } u_{ 
-					\varepsilon } }
+					\inner*{ \partial_{  t } u_{ 
+					\varepsilon } }{ \diff u_{ \varepsilon } \xi }
 				\dd{ x }
 			\dd{ t }
 			+
 			\int_{ 0 }^{ T }
 				\int
-					\inner*{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes 
-					\nu^{ \ast } \xi }{ \partial_{ t } u_{ \varepsilon } }
+					\inner*{ \partial_{ t } u_{ \varepsilon } }{ \nabla \phi_{ 
+					i } ( u_{ \varepsilon } ) \otimes 
+					\nu^{ \ast } \xi }
 				\dd{ x }
 			\dd{ t }
 		}
@@ -2909,7 +2913,8 @@ now prove the convergence of the velocity term.
 			\int_{ 0 }^{ T }
 				\int
 					\sqrt{ \varepsilon }
-					\inner*{ 
+					\inner*
+					{ \partial_{ t } u_{ \varepsilon } }{ 
 						\left(
 							\sqrt{ \varepsilon } \nabla u_{ \varepsilon }
 							+
@@ -2918,7 +2923,6 @@ now prove the convergence of the velocity term.
 						\right)
 						\xi 
 					}
-					{ \partial_{ t } u_{ \varepsilon } }
 				\dd{ x }
 			\dd{ t }
 		}
@@ -2945,23 +2949,24 @@ now prove the convergence of the velocity term.
 	\begin{equation*}
 		- \int_{ 0 }^{ T }
 			\int
-				\inner*{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
-				\ast } \xi }{ \partial_{ t } u_{ \varepsilon } }
+				\inner*{ \partial_{ t } u_{ \varepsilon } }{ \nabla \phi_{ i } 
+				( u_{ \varepsilon } ) \otimes \nu^{ 
+				\ast } \xi }
 			\dd{ x }
 		\dd{ t }
 		= 
 		- \int_{ 0 }^{ T }
 			\int
-				\partial_{ t } \psi_{ i }^{ \varepsilon }
+				\partial_{ t } \psi_{ \varepsilon , i }
 				\inner*{ \xi }{ \nu^{ \ast } }
 			\dd{ x }
 		\dd{ t },
 	\end{equation*} 
-	which by the weak convergence $ \partial_{ t } \psi_{ i }^{ \varepsilon } 
+	which by the weak convergence $ \partial_{ t } \psi_{ \varepsilon,  i } 
 	\rightharpoonup \partial_{ t } \psi_{ i } $ converges to
 	\begin{equation*}
 		- \sum_{ 1 \leq j \leq P }
-			\sigma_{ i , j }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 				\int
 					\inner*{ \xi }{ \nu^{ \ast } }
@@ -2975,15 +2980,16 @@ now prove the convergence of the velocity term.
 			\abs{
 				- \int_{ 0 }^{ T }
 					\int
-						\inner*{ \nabla \phi_{ i } ( u_{ \varepsilon } ) 
-						\otimes \nu^{ \ast } \xi }{ \partial_{ t } u_{ 
-						\varepsilon } }
+						\inner*{ \partial_{ t } u_{ 
+								\varepsilon } }{ \nabla \phi_{ i } ( u_{ 
+								\varepsilon } ) 
+						\otimes \nu^{ \ast } \xi }
 					\dd{ x }
 				\dd{ t }
 				-
 				\sigma_{ i j }
 				\int_{ 0 }^{ T }
-					\int_{ \Sigma_{ i , j } }
+					\int_{ \Sigma_{ i j } }
 						\inner*{ \xi }{ \nu_{ i } }
 						V_{ i } 	
 					\dd{ \hm^{ d - 1 } }
@@ -3003,7 +3009,7 @@ now prove the convergence of the velocity term.
 			+
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
-				\int_{ \Sigma_{ i , j } }
+				\int_{ \Sigma_{ i j } }
 					\inner*{ \xi }{ \nu_{ i } }
 					V_{ i }
 				\dd{ \hm^{ d - 1 } }
@@ -3033,9 +3039,9 @@ now prove the convergence of the velocity term.
 			\dd{ t }
 		}.
 	\end{align*}
-	By applying Young's inequality twice and using that on $ \Sigma_{ i , j } 
+	By applying Young's inequality twice and using that on $ \Sigma_{ i j } 
 	$, we have $ V_{ 
-	i } = - V_{ j } $, we furthermore estimate via
+	i } = - V_{ j } $, we furthermore estimate
 	\begin{align*}
 		& \norm{ \xi }_{ \mathrm{sup} }
 		\left(
@@ -3056,7 +3062,7 @@ now prove the convergence of the velocity term.
 				\dd{ t }
 			+
 			\int_{ 0 }^{ T }
-				\int_{ \Sigma_{ i , j } }
+				\int_{ \Sigma_{ i j } }
 					\abs{ V_{ i } }
 					\abs{ \nu^{ \ast } - \nu_{ i } }
 				\dd{ \hm^{ d - 1 } }
@@ -3123,15 +3129,15 @@ We are now in the position to prove the main result
 			\int_{ 0 }^{ T }
 				\int
 					\varepsilon
-					\inner*{ \diff u_{ \varepsilon } \xi }{ \partial_{ t } u_{ 
-					\varepsilon } }
+					\inner*{ \partial_{ t } u_{ 
+							\varepsilon } }{ \diff u_{ \varepsilon } \xi }
 				\dd{ x }
 			\dd{ t }
 		=
 		\sum_{ 1 \leq i < j \leq P }
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
-				\int_{ \Sigma_{ i , j } }
+				\int_{ \Sigma_{ i j } }
 					\inner*{ \xi }{ \nu_{ i } }
 					V_{ i }
 				\dd{ \hm^{ d - 1 } }
@@ -3158,8 +3164,8 @@ We are now in the position to prove the main result
 				\int_{ 0 }^{ T }
 					\int
 						\varepsilon
-						\inner*{ \diff u_{ \varepsilon } \xi }{ \partial_{ t } 
-						u_{ \varepsilon } }
+						\inner*{ \partial_{ t } 
+							u_{ \varepsilon } }{ \diff u_{ \varepsilon } \xi }
 					\dd{ x }
 				\dd{ t }
 				-
@@ -3182,8 +3188,9 @@ We are now in the position to prove the main result
 							\int
 								\varepsilon
 								g_{ k } \eta_{ B }
-								\inner*{ \diff u_{ \varepsilon } \xi }{ 
-								\partial_{ t } u_{ \varepsilon } }
+								\inner*{ 
+									\partial_{ t } u_{ \varepsilon } }{ \diff 
+									u_{ \varepsilon } \xi }
 							\dd{ x }
 						\dd{ t }
 		\\
@@ -3206,7 +3213,7 @@ We are now in the position to prove the main result
 				\min_{ i \neq j }
 					\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
 						\frac{ 1 }{ \alpha }
-						\tilt_excess_{ i , j } ( \nu^{ \ast } ; g_{ k } \rho_{ 
+						\tilt_excess_{ i j } ( \nu^{ \ast } ; g_{ k } \rho_{ 
 						B } , u )
 						+
 						\alpha \mu ( g_{ k } \rho_{ B } )

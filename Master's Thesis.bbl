@@ -19,6 +19,48 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0cd31a7528d8e790235de448e0d745ae}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Samuel\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=52dbce452736c579ce3afd0bc41401e2}{%
+           family={Cahn},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0b750cc348955e0ee07189b570adf2e}
+      \strng{fullhash}{b0b750cc348955e0ee07189b570adf2e}
+      \strng{bibnamehash}{b0b750cc348955e0ee07189b570adf2e}
+      \strng{authorbibnamehash}{b0b750cc348955e0ee07189b570adf2e}
+      \strng{authornamehash}{b0b750cc348955e0ee07189b570adf2e}
+      \strng{authorfullhash}{b0b750cc348955e0ee07189b570adf2e}
+      \field{labelalpha}{AC79}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-6160}
+      \field{journaltitle}{Acta Metallurgica}
+      \field{number}{6}
+      \field{title}{A microscopic theory for antiphase boundary motion and its application to antiphase domain coarsening}
+      \field{volume}{27}
+      \field{year}{1979}
+      \field{pages}{1085\bibrangedash 1095}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0001-6160(79)90196-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0001616079901962
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0001616079901962
+      \endverb
+    \endentry
     \entry{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems}{book}{}
       \name{author}{3}{}{%
         {{hash=75c4bcbdd44f3d81980ee1e743ebfd0f}{%
@@ -199,6 +241,50 @@
       \field{pages}{i+252}
       \range{pages}{-1}
     \endentry
+    \entry{chen_giga_goto_uniqueness_and_existence_of_generalized_mcf_equations}{article}{}
+      \name{author}{3}{}{%
+        {{hash=53112cd6acc92b33ceca34d87d028be2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yun\bibnamedelima Gang},
+           giveni={Y\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=0ba9bedbd063ce4cf4522fd24131b0ed}{%
+           family={Giga},
+           familyi={G\bibinitperiod},
+           given={Yoshikazu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=328239e79083be3044a764b3d7da0c9d}{%
+           family={Goto},
+           familyi={G\bibinitperiod},
+           given={Shun'ichi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa8201bf7c1df9b222b5e2d66a55e0bb}
+      \strng{fullhash}{fa8201bf7c1df9b222b5e2d66a55e0bb}
+      \strng{bibnamehash}{fa8201bf7c1df9b222b5e2d66a55e0bb}
+      \strng{authorbibnamehash}{fa8201bf7c1df9b222b5e2d66a55e0bb}
+      \strng{authornamehash}{fa8201bf7c1df9b222b5e2d66a55e0bb}
+      \strng{authorfullhash}{fa8201bf7c1df9b222b5e2d66a55e0bb}
+      \field{labelalpha}{CGG91}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{3}
+      \field{title}{Uniqueness and existence of viscosity solutions of generalized mean curvature flow equations}
+      \field{volume}{33}
+      \field{year}{1991}
+      \field{pages}{749\bibrangedash 786}
+      \range{pages}{38}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214446564
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214446564
+      \endverb
+    \endentry
     \entry{evans_gariepy_measure_theory_and_fine_props}{book}{}
       \name{author}{2}{}{%
         {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
@@ -235,6 +321,45 @@
       \endverb
       \verb{url}
       \verb https://books.google.de/books?id=e3R3CAAAQBAJ
+      \endverb
+    \endentry
+    \entry{evans_spruck_motion_of_level_sets_by_mean_curvature}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={L.\bibnamedelimi C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=0b81f2763a5beb48a6b7bb47bcd17350}{%
+           family={Spruck},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1045918777f7455120726c9357c95f42}
+      \strng{fullhash}{1045918777f7455120726c9357c95f42}
+      \strng{bibnamehash}{1045918777f7455120726c9357c95f42}
+      \strng{authorbibnamehash}{1045918777f7455120726c9357c95f42}
+      \strng{authornamehash}{1045918777f7455120726c9357c95f42}
+      \strng{authorfullhash}{1045918777f7455120726c9357c95f42}
+      \field{labelalpha}{ES91}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{3}
+      \field{title}{Motion of level sets by mean curvature. {I}}
+      \field{volume}{33}
+      \field{year}{1991}
+      \field{pages}{635\bibrangedash 681}
+      \range{pages}{47}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214446559
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214446559
       \endverb
     \endentry
     \entry{Fleming_Rishel_coarea_formula}{article}{}
