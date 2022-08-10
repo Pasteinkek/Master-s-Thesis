@@ -211,6 +211,90 @@
       \field{pages}{208}
       \range{pages}{1}
     \endentry
+    \entry{bronsard_kohn_motion_by_mean_curvature_as_singular_limit}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bd1163182fc36fcfacf15ed57075cd09}{%
+           family={Bronsard},
+           familyi={B\bibinitperiod},
+           given={Lia},
+           giveni={L\bibinitperiod}}}%
+        {{hash=efed0d9f0d90b38fea25e014b8a1740b}{%
+           family={Kohn},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima V.},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \strng{fullhash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \strng{bibnamehash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \strng{authorbibnamehash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \strng{authornamehash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \strng{authorfullhash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \field{labelalpha}{BK91}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-0396}
+      \field{journaltitle}{J. Differential Equations}
+      \field{number}{2}
+      \field{title}{Motion by mean curvature as the singular limit of {G}inzburg-{L}andau dynamics}
+      \field{volume}{90}
+      \field{year}{1991}
+      \field{pages}{211\bibrangedash 237}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/0022-0396(91)90147-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0022-0396(91)90147-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0022-0396(91)90147-2
+      \endverb
+    \endentry
+    \entry{bronsard_reitich_on_three_phase_boundary_motion_and_singular_limit}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bd1163182fc36fcfacf15ed57075cd09}{%
+           family={Bronsard},
+           familyi={B\bibinitperiod},
+           given={Lia},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b8663ccc2c3d39157beb487504529b70}{%
+           family={Reitich},
+           familyi={R\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{22c05c0bcbb0cddc59a6b576b4f14736}
+      \strng{fullhash}{22c05c0bcbb0cddc59a6b576b4f14736}
+      \strng{bibnamehash}{22c05c0bcbb0cddc59a6b576b4f14736}
+      \strng{authorbibnamehash}{22c05c0bcbb0cddc59a6b576b4f14736}
+      \strng{authornamehash}{22c05c0bcbb0cddc59a6b576b4f14736}
+      \strng{authorfullhash}{22c05c0bcbb0cddc59a6b576b4f14736}
+      \field{labelalpha}{BR93}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-9527}
+      \field{journaltitle}{Arch. Rational Mech. Anal.}
+      \field{number}{4}
+      \field{title}{On three-phase boundary motion and the singular limit of a vector-valued {G}inzburg-{L}andau equation}
+      \field{volume}{124}
+      \field{year}{1993}
+      \field{pages}{355\bibrangedash 379}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1007/BF00375607
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF00375607
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF00375607
+      \endverb
+    \endentry
     \entry{brakke_kenneth_motion_of_surface_by_mean_curvature}{book}{}
       \name{author}{1}{}{%
         {{hash=1f2cbef8f94627c4c46cd96f7ae5e578}{%
@@ -283,6 +367,43 @@
       \endverb
       \verb{url}
       \verb http://projecteuclid.org/euclid.jdg/1214446564
+      \endverb
+    \endentry
+    \entry{chen_generation_and_propagation_of_interfaces_for_reaction_diffusion_equations}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5e0fe0ca17fe8c6f25cae5f05d979338}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xinfu},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e0fe0ca17fe8c6f25cae5f05d979338}
+      \strng{fullhash}{5e0fe0ca17fe8c6f25cae5f05d979338}
+      \strng{bibnamehash}{5e0fe0ca17fe8c6f25cae5f05d979338}
+      \strng{authorbibnamehash}{5e0fe0ca17fe8c6f25cae5f05d979338}
+      \strng{authornamehash}{5e0fe0ca17fe8c6f25cae5f05d979338}
+      \strng{authorfullhash}{5e0fe0ca17fe8c6f25cae5f05d979338}
+      \field{labelalpha}{Che92}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-0396}
+      \field{journaltitle}{J. Differential Equations}
+      \field{number}{1}
+      \field{title}{Generation and propagation of interfaces for reaction-diffusion equations}
+      \field{volume}{96}
+      \field{year}{1992}
+      \field{pages}{116\bibrangedash 141}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1016/0022-0396(92)90146-E
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0022-0396(92)90146-E
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0022-0396(92)90146-E
       \endverb
     \endentry
     \entry{evans_gariepy_measure_theory_and_fine_props}{book}{}
@@ -544,6 +665,40 @@
       \verb http://projecteuclid.org/euclid.jdg/1214444099
       \endverb
     \endentry
+    \entry{ilmanen_convergence_of_ac_to_brakkes_mcf}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1065c19225ca31cab89766d2e59af926}{%
+           family={Ilmanen},
+           familyi={I\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1065c19225ca31cab89766d2e59af926}
+      \strng{fullhash}{1065c19225ca31cab89766d2e59af926}
+      \strng{bibnamehash}{1065c19225ca31cab89766d2e59af926}
+      \strng{authorbibnamehash}{1065c19225ca31cab89766d2e59af926}
+      \strng{authornamehash}{1065c19225ca31cab89766d2e59af926}
+      \strng{authorfullhash}{1065c19225ca31cab89766d2e59af926}
+      \field{labelalpha}{Ilm93}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{2}
+      \field{title}{Convergence of the Allen--Cahn equation to Brakke's motion by mean curvature}
+      \field{volume}{38}
+      \field{year}{1993}
+      \field{pages}{417\bibrangedash 461}
+      \range{pages}{45}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214454300
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214454300
+      \endverb
+    \endentry
     \entry{laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme}{article}{}
       \name{author}{2}{}{%
         {{hash=6a64258e1e649779293a50aff43794f9}{%
@@ -724,6 +879,94 @@
       \verb 10.1017/CBO9781139108133
       \endverb
     \endentry
+    \entry{mantegazza_novaga_pluda_schule_evolution_of_networks_with_multiple_junctions}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a526d45c75bf426eacca937264f9bd2c}{%
+           family={Mantegazza},
+           familyi={M\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2cd871cf7e5f58cbcd03861ebd5c0b26}{%
+           family={Novaga},
+           familyi={N\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9ca1fd80623a3a345956bd5c084eceb5}{%
+           family={Pluda},
+           familyi={P\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b9a3e60cbdea42c6b0f2f41c36da20f3}{%
+           family={Schulze},
+           familyi={S\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{c3da369c5bdfc1360ab199b13d6190e7}
+      \strng{fullhash}{f0baf52f67df361a3e710063ac46507d}
+      \strng{bibnamehash}{c3da369c5bdfc1360ab199b13d6190e7}
+      \strng{authorbibnamehash}{c3da369c5bdfc1360ab199b13d6190e7}
+      \strng{authornamehash}{c3da369c5bdfc1360ab199b13d6190e7}
+      \strng{authorfullhash}{f0baf52f67df361a3e710063ac46507d}
+      \field{labelalpha}{Man+16}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Evolution of networks with multiple junctions}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.48550/ARXIV.1611.08254
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1611.08254
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1611.08254
+      \endverb
+      \keyw{Differential Geometry (math.DG),FOS: Mathematics,FOS: Mathematics}
+    \endentry
+    \entry{mantegazza_novaga_tortorelli_motion_by_curvature_of_planar_networks}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a526d45c75bf426eacca937264f9bd2c}{%
+           family={Mantegazza},
+           familyi={M\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2cd871cf7e5f58cbcd03861ebd5c0b26}{%
+           family={Novaga},
+           familyi={N\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=aa2f6205a0ce6c6e226a7b3c5b5fa258}{%
+           family={Tortorelli},
+           familyi={T\bibinitperiod},
+           given={Vincenzo\bibnamedelima Maria},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a66e37939b2d28379acb51deaa318755}
+      \strng{fullhash}{a66e37939b2d28379acb51deaa318755}
+      \strng{bibnamehash}{a66e37939b2d28379acb51deaa318755}
+      \strng{authorbibnamehash}{a66e37939b2d28379acb51deaa318755}
+      \strng{authornamehash}{a66e37939b2d28379acb51deaa318755}
+      \strng{authorfullhash}{a66e37939b2d28379acb51deaa318755}
+      \field{labelalpha}{MNT04}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0391-173X}
+      \field{journaltitle}{Ann. Sc. Norm. Super. Pisa Cl. Sci. (5)}
+      \field{number}{2}
+      \field{title}{Motion by curvature of planar networks}
+      \field{volume}{3}
+      \field{year}{2004}
+      \field{pages}{235\bibrangedash 324}
+      \range{pages}{90}
+    \endentry
     \entry{mullins_two_dimensional_motion_of_idealized_grain_boundaries}{article}{}
       \name{author}{1}{}{%
         {{hash=8d01cc0273d62aa344b686bfe5e2b2fa}{%
@@ -832,6 +1075,53 @@
       \field{year}{1968}
       \field{pages}{1039\bibrangedash 1045}
       \range{pages}{7}
+    \endentry
+    \entry{keller_rubinstein_sternberg_fast_reaction_slow_diffusion}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e5a45648505dbf9799ab248789d740c9}{%
+           family={Rubinstein},
+           familyi={R\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e695ca30c28b64e6db69957dde4eaa94}{%
+           family={Sternberg},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=10e153cc539afa16ec9d8da7b202b0d4}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Joseph\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \strng{fullhash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \strng{bibnamehash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \strng{authorbibnamehash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \strng{authornamehash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \strng{authorfullhash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \field{labelalpha}{RSK89}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0036-1399}
+      \field{journaltitle}{SIAM J. Appl. Math.}
+      \field{number}{1}
+      \field{title}{Fast reaction, slow diffusion, and curve shortening}
+      \field{volume}{49}
+      \field{year}{1989}
+      \field{pages}{116\bibrangedash 133}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1137/0149007
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/0149007
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/0149007
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

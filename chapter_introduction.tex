@@ -1,7 +1,9 @@
 \chapter{Introduction}
 
 Allgemeine Notizen: Energiekonvergenz kann bei positiver Krümmung gezeigt 
-werden, siehe introduciton sebastian tim.
+werden, siehe introduciton sebastian tim. 
+Etwas zu Eindeutigkeit sagen; wir gehen sehr oft zu Teilfolgen über. Hilft uns 
+hierbei die Weak strong uniqueness?
 
 Multiphase mean curvature is an important geometric evolution equation which 
 has been studied for a long time, bearing not only mathematical importance, but 
@@ -29,19 +31,64 @@ distributional solution to mean curvature flow in their work
 \cite{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}. Another 
 solution concept is the viscosity solution concept, for example presented in 
 (\cite{chen_giga_goto_uniqueness_and_existence_of_generalized_mcf_equations},
-\cite{evans_spruck_motion_of_level_sets_by_mean_curvature}).
+\cite{evans_spruck_motion_of_level_sets_by_mean_curvature}), where it is shown 
+that solutions of a certain parabolic equation have the property that if they 
+are smooth, the corresponding level sets move by mean curvature.
 
 The Allen--Cahn equation
-\begin{equation*}
+\begin{equation}
+	\label{ac_intro}
 	\partial_{ t } u_{ \varepsilon }
 	=
 	\Delta u_{ \varepsilon }
 	-
-	\frac{ 1 }{ \varepsilon }
+	\frac{ 1 }{ \varepsilon^{ 2 } }
 	\nabla W ( u_{ \varepsilon } )
-\end{equation*}
+\end{equation}
 is commonly used as a phase-field approximation for mean curvature flow and was 
 first discovered by Allen and Cahn in their paper 
-\cite{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}.
+\cite{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}. Here $ W 
+\colon \mathbb{ R }^{ N } \to [ 0 , \infty ) $ is some smooth potential with 
+finitely many zeros $ \alpha_{ 1 } , \dotsc, \alpha_{ P } $.
 Since then it has been a topic of long study, both from a numerical and 
-analytical standpoint.
+analytical standpoint. 
+
+If we consider the two-phase case, which corresponds to setting $ N = 1 $ and $ 
+P = 2 $, then 
+the behaviour of the solutions to (\ref{ac_intro}) are thoroughly researched.
+Chen has proven in 
+\cite{chen_generation_and_propagation_of_interfaces_for_reaction_diffusion_equations}
+that as long as the interface of the limit evolves smoothly, we have 
+convergence to mean curvature flow.
+The authors Bronsard and Kohn showed by utilization of the gradient flow 
+structure of (\ref{ac_intro}), more precisely by mainly utilizing the 
+corresponding energy dissipation inequality, in 
+\cite{bronsard_kohn_motion_by_mean_curvature_as_singular_limit} the compactness 
+of solutions and regularity for the limit. Moreover they studied the behaviour 
+for radially symmetric initial data and showed motion by mean curvature in this 
+case. 
+Ilmanen made fundamental contributions in 
+\cite{ilmanen_convergence_of_ac_to_brakkes_mcf} by proving the convergence to 
+Brakke's mean curvature flow as long as the initial conditions are 
+well-prepared by exploiting the equipartition of energies. However his methods 
+seem to only work in the two-phase case since he uses a comparison principle 
+whose generalization to the vectorial case is not clear.
+
+The multiphase case for both the behaviour of the Allen--Cahn equation and mean 
+curvature is much more involved and a topic of current research. For the 
+convergence of the Allen--Cahn equation, it has by shown by Bronsard and 
+Reitich in 
+\cite{bronsard_reitich_on_three_phase_boundary_motion_and_singular_limit} that 
+for the three-phase case, we have short-time existence of a solution (in what 
+sense????). 
+
+The analysis of multiphase mean curvature flow has been studied for example by 
+Mantegazza, Novaga and Tortorelli in 
+\cite{mantegazza_novaga_tortorelli_motion_by_curvature_of_planar_networks}, 
+where they considered the planar case when only a single triple junction 
+appears, and their work has been extended to several triple junctions in 
+\cite{mantegazza_novaga_pluda_schule_evolution_of_networks_with_multiple_junctions}.
+
+Asymptotic expansions  with Neumann boundary conditions 
+have been studied by Keller, Rubinstein and Sternberg in 
+\cite{keller_rubinstein_sternberg_fast_reaction_slow_diffusion}.
