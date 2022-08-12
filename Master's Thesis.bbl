@@ -100,6 +100,53 @@
       \field{pages}{xviii+434}
       \range{pages}{-1}
     \endentry
+    \entry{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4728cefeafa186121e2e5148523c4f1d}{%
+           family={Angenent},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=950bcf790551ab565d29eb4329219887}{%
+           family={Ilmanen},
+           familyi={I\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=303275681c599422050b5da4b63f2ea3}{%
+           family={Chopp},
+           familyi={C\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{85bd73282da961e177e24dbd29e05a2c}
+      \strng{fullhash}{85bd73282da961e177e24dbd29e05a2c}
+      \strng{bibnamehash}{85bd73282da961e177e24dbd29e05a2c}
+      \strng{authorbibnamehash}{85bd73282da961e177e24dbd29e05a2c}
+      \strng{authornamehash}{85bd73282da961e177e24dbd29e05a2c}
+      \strng{authorfullhash}{85bd73282da961e177e24dbd29e05a2c}
+      \field{labelalpha}{AIC95}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0360-5302}
+      \field{journaltitle}{Comm. Partial Differential Equations}
+      \field{number}{11-12}
+      \field{title}{A computed example of nonuniqueness of mean curvature flow in {$\bold R^3$}}
+      \field{volume}{20}
+      \field{year}{1995}
+      \field{pages}{1937\bibrangedash 1958}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1080/03605309508821158
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/03605309508821158
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/03605309508821158
+      \endverb
+    \endentry
     \entry{ambrosio_maso_chain_rule}{article}{}
       \name{author}{2}{}{%
         {{hash=d1fb85e6b388ff3ca0e66ab5e4721170}{%
@@ -324,6 +371,57 @@
       \field{year}{1978}
       \field{pages}{i+252}
       \range{pages}{-1}
+    \endentry
+    \entry{bretin_dansecu_penuelas_masnou_a_metric_based_approach_to_mmcf_with_mobilities}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fb3c2cc24f46fd4764d299e7016e6cd2}{%
+           family={Bretin},
+           familyi={B\bibinitperiod},
+           given={Elie},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c0b53fb6c236a14f0ec2fb1b62c11700}{%
+           family={Danescu},
+           familyi={D\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=314bf8db5f87a48a830dc181cede0791}{%
+           family={Penuelas},
+           familyi={P\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7f582469fab81143234a173b61c12171}{%
+           family={Masnou},
+           familyi={M\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{968a50f931f86d7e91caf09ac9abebce}
+      \strng{fullhash}{2d7793e53b77782ccf8040a6db870226}
+      \strng{bibnamehash}{968a50f931f86d7e91caf09ac9abebce}
+      \strng{authorbibnamehash}{968a50f931f86d7e91caf09ac9abebce}
+      \strng{authornamehash}{968a50f931f86d7e91caf09ac9abebce}
+      \strng{authorfullhash}{2d7793e53b77782ccf8040a6db870226}
+      \field{labelalpha}{Bre+18}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geom. Flows}
+      \field{number}{1}
+      \field{title}{A metric-based approach to multiphase mean curvature flows with mobilities}
+      \field{volume}{3}
+      \field{year}{2018}
+      \field{pages}{97\bibrangedash 113}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1515/geofl-2018-0008
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/geofl-2018-0008
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/geofl-2018-0008
+      \endverb
     \endentry
     \entry{chen_giga_goto_uniqueness_and_existence_of_generalized_mcf_equations}{article}{}
       \name{author}{3}{}{%
@@ -697,6 +795,92 @@
       \endverb
       \verb{url}
       \verb http://projecteuclid.org/euclid.jdg/1214454300
+      \endverb
+    \endentry
+    \entry{ilmanen_neves_schulze_on_short_time_existence_for_the_planar_network_flow}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1065c19225ca31cab89766d2e59af926}{%
+           family={Ilmanen},
+           familyi={I\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e8d1ffebd0f870fb08da00f8120be319}{%
+           family={Neves},
+           familyi={N\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b9a3e60cbdea42c6b0f2f41c36da20f3}{%
+           family={Schulze},
+           familyi={S\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{90db2640b1aca195ba32638d117fc2bb}
+      \strng{fullhash}{90db2640b1aca195ba32638d117fc2bb}
+      \strng{bibnamehash}{90db2640b1aca195ba32638d117fc2bb}
+      \strng{authorbibnamehash}{90db2640b1aca195ba32638d117fc2bb}
+      \strng{authornamehash}{90db2640b1aca195ba32638d117fc2bb}
+      \strng{authorfullhash}{90db2640b1aca195ba32638d117fc2bb}
+      \field{labelalpha}{INS19}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{1}
+      \field{title}{On short time existence for the planar network flow}
+      \field{volume}{111}
+      \field{year}{2019}
+      \field{pages}{39\bibrangedash 89}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.4310/jdg/1547607687
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/jdg/1547607687
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/jdg/1547607687
+      \endverb
+    \endentry
+    \entry{kim_tonegawa_on_the_mean_curvature_flow_of_grain_boundaries}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c1feeed11af2f35872835717efb2671f}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Lami},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c4bf7a847f27b05ffb89af9aae0b52b8}{%
+           family={Tonegawa},
+           familyi={T\bibinitperiod},
+           given={Yoshihiro},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c0ea126ec13188fae8ab54370205af7}
+      \strng{fullhash}{3c0ea126ec13188fae8ab54370205af7}
+      \strng{bibnamehash}{3c0ea126ec13188fae8ab54370205af7}
+      \strng{authorbibnamehash}{3c0ea126ec13188fae8ab54370205af7}
+      \strng{authornamehash}{3c0ea126ec13188fae8ab54370205af7}
+      \strng{authorfullhash}{3c0ea126ec13188fae8ab54370205af7}
+      \field{labelalpha}{KT17}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0373-0956}
+      \field{journaltitle}{Ann. Inst. Fourier (Grenoble)}
+      \field{number}{1}
+      \field{title}{On the mean curvature flow of grain boundaries}
+      \field{volume}{67}
+      \field{year}{2017}
+      \field{pages}{43\bibrangedash 142}
+      \range{pages}{100}
+      \verb{urlraw}
+      \verb http://aif.cedram.org/item?id=AIF_2017__67_1_43_0
+      \endverb
+      \verb{url}
+      \verb http://aif.cedram.org/item?id=AIF_2017__67_1_43_0
       \endverb
     \endentry
     \entry{laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme}{article}{}

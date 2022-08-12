@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  10 AUG 2022 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  12 AUG 2022 23:08
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1482,9 +1482,16 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 26
 
 
 
+] [3] [4
+
+
 ]
 chapter without number
-[3]) [4]
+[5] [6]) [7] [8
+
+
+
+]
 \openout2 = `chapter_mcf.aux'.
 
  (chapter_mcf.tex
@@ -1495,9 +1502,6 @@ ntifier (name{page.1}) has been already used, duplicate ignored
                    \relax 
 l.87 \end{align*}
                   [1
-
-
-
 
 
 
@@ -1527,13 +1531,33 @@ l.32 	\include{chapter_mcf}
 
  (chapter_ac_equation.tex
 chapter 2.
-(section_structure_of_ac.tex [5
+(section_structure_of_ac.texpdfTeX warning (ext4): destination with the same id
+entifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.98 \end{equation}
+                    [5
 
 
 
 
-] [6]) (section_existence_of_solution.tex
-[7] [8]
+]pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 		\end{equation}
+                       [6]) (section_existence_of_solution.texpdfTeX warning (e
+xt4): destination with the same identifier (name{page.7}) has been already used
+, duplicate ignored
+<to be read again> 
+                   \relax 
+l.68 		\end{align}
+                   [7]pdfTeX warning (ext4): destination with the same identifi
+er (name{page.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.147 		\end{align*}
+                     [8]
 Overfull \hbox (0.35463pt too wide) detected at line 204
 []
  []
@@ -1959,17 +1983,17 @@ Overfull \hbox (10.69827pt too wide) detected at line 828
  []
 
 [62]
-Overfull \hbox (4.88054pt too wide) in paragraph at lines 941--942
+Overfull \hbox (4.88054pt too wide) in paragraph at lines 942--943
 [][] 
  []
 
 
-Overfull \hbox (2.1771pt too wide) in paragraph at lines 959--960
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 960--961
 [][] 
  []
 
 
-Overfull \hbox (2.1771pt too wide) in paragraph at lines 973--974
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 974--975
 [][] 
  []
 
@@ -1977,7 +2001,7 @@ Overfull \hbox (2.1771pt too wide) in paragraph at lines 973--974
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (36.60812pt too wide) in paragraph at lines 1006--1013
+Overfull \hbox (36.60812pt too wide) in paragraph at lines 1007--1014
 []\OT1/cmr/m/it/10 (-20) Given an ini-tial en-ergy $\OML/cmm/m/it/10 ![] \OMS/c
 msy/m/n/10 2 M []$ \OT1/cmr/m/it/10 (-20) and an ini-tial phase in-di-ca-tor fu
 nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
@@ -1985,15 +2009,15 @@ nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
  []
 
 [63] [64]
-Overfull \hbox (8.22441pt too wide) detected at line 1175
+Overfull \hbox (8.22441pt too wide) detected at line 1176
 []
  []
 
 
-LaTeX Warning: Command \i invalid in math mode on input line 1228.
+LaTeX Warning: Command \i invalid in math mode on input line 1229.
 
 
-Overfull \hbox (38.86722pt too wide) in paragraph at lines 1226--1247
+Overfull \hbox (38.86722pt too wide) in paragraph at lines 1227--1248
 \OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 7! [][] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (
 -20) (\OML/cmm/m/it/10 t; x; p\OT1/cmr/m/n/10 (-20) ) []$ \OT1/cmr/m/it/10 (-20
 ) is mea-sur-able for all test func-tions $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 
@@ -2002,10 +2026,10 @@ Overfull \hbox (38.86722pt too wide) in paragraph at lines 1226--1247
 
 [65]
 
-LaTeX Warning: Command \j invalid in math mode on input line 1317.
+LaTeX Warning: Command \j invalid in math mode on input line 1318.
 
 
-Overfull \hbox (44.49007pt too wide) detected at line 1325
+Overfull \hbox (44.49007pt too wide) detected at line 1326
 [][] [] \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]; x\OT1/cmr/m/
 n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]; x\OT1/cmr/m/n/10
  ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\O
@@ -2015,12 +2039,12 @@ T1/cmr/m/n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; x\OT1/cmr
  []
 
 [66] [67]
-Overfull \hbox (37.83861pt too wide) detected at line 1568
+Overfull \hbox (37.83861pt too wide) detected at line 1569
 []
  []
 
 
-Overfull \hbox (9.5488pt too wide) detected at line 1613
+Overfull \hbox (9.5488pt too wide) detected at line 1614
 []
  []
 
@@ -2044,7 +2068,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [75
+
+
+Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
+d on input line 43.
+
+[75
 
 
 
@@ -2069,11 +2098,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48487 strings out of 480930
- 1076788 string characters out of 2900231
- 1905849 words of memory out of 3000000
- 63169 multiletter control sequences out of 15000+200000
- 556900 words of font info for 189 fonts, out of 3000000 for 9000
+ 48508 strings out of 480930
+ 1078112 string characters out of 2900231
+ 1907681 words of memory out of 3000000
+ 63183 multiletter control sequences out of 15000+200000
+ 557519 words of font info for 191 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -2111,9 +2140,9 @@ sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (83 pages, 802233 bytes).
+Output written on "Master's Thesis.pdf" (87 pages, 819134 bytes).
 PDF statistics:
- 1221 PDF objects out of 1440 (max. 8388607)
- 297 named destinations out of 1000 (max. 500000)
- 26337 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1272 PDF objects out of 1440 (max. 8388607)
+ 302 named destinations out of 1000 (max. 500000)
+ 27361 words of extra memory for PDF output out of 29859 (max. 10000000)
 
