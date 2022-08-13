@@ -5,7 +5,13 @@ In the simplest case, a gradient flow of a given energy $ \energy \colon \mathbb
 	\label{gf_basic_equation}
 	\dv{ t } x ( t ) = - \nabla \energy ( x ( t ) ) ,
 \end{equation}
-where we usually prescribe some initial value $ x ( 0 ) = x_{ 0 } \in \mathbb{ R }^{ N } $. The central structure here is that on the right hand side of the equation, we do not have any function, but the gradient of some function. What a solution $ x $ does is that it moves in the direction of the steepest descent of the energy $ \energy $. Moreover this allows for the following computation given a solution $ x $ of (\ref{gf_basic_equation}):
+where we usually prescribe some initial value $ x ( 0 ) = x_{ 0 } \in \mathbb{ 
+R }^{ N } $. The central structure here is that on the right hand side of the 
+equation, we do not have any function, but the gradient of some continuously 
+differentiable function. What a solution $ x $ does is that it moves in the 
+direction of the steepest descent of the energy $ \energy $. Moreover this 
+allows for the following computation given a continuously differentiable 
+solution $ x $ of (\ref{gf_basic_equation}):
 \begin{align*}
 	\dv{ t } \energy ( x ( t ) ) 
 	& =
@@ -23,7 +29,10 @@ where we usually prescribe some initial value $ x ( 0 ) = x_{ 0 } \in \mathbb{ R
 		\abs{ \nabla \energy ( x ( t ) ) }^{ 2 }
 	\right).
 \end{align*}
-We especially obtain that the the function $ \energy ( x ( t ) ) $ is non-increasing, which coincides with our intuition that $ x $ moves along the steepest descent of the energy. But more precisely, we obtain from the fundamental theorem of calculus the \emph{energy dissipation identity}
+We especially obtain that the function $ \energy ( x ( t ) ) $ is 
+non-increasing, which coincides with our intuition that $ x $ moves along the 
+steepest descent of the energy. But more precisely, we obtain from the 
+fundamental theorem of calculus the \emph{energy dissipation identity}
 \begin{equation}
 	\label{basic_energy_dissipation_identity}
 	\energy ( x ( T ) )
@@ -37,7 +46,11 @@ We especially obtain that the the function $ \energy ( x ( t ) ) $ is non-increa
 	= 
 	\energy ( x ( 0 ) ).
 \end{equation}
-One could now raise the question if this is identity already characterizes the equation, which means that if some $ x $ satisfies equation (\ref{basic_energy_dissipation_identity}), it should already be a solution to the ordinary differential equation (\ref{gf_basic_equation}). But as it turns out, we can go even one step further, namely we only ask for the \emph{optimal energy dissipation inequality} given by
+One could now raise the question if this is identity already characterizes 
+equation (\ref{gf_basic_equation}). 
+But as it turns out, we can go even one step further, namely we only ask for 
+the 
+\emph{optimal energy dissipation inequality} given by
 \begin{equation}
 	\label{basic_optimal_energy_dissipation_inequality}
 	\energy ( x ( T ) )
@@ -81,16 +94,32 @@ Then we can estimate again by the fundamental theorem that
 	+
 	\frac{ 1 }{ 2 }
 	\int_{ 0 }^{ T }
-		\inner*{ \nabla \energy ( x ( t ) ) }{ x' ( t ) }
+		\abs{ x' ( t ) }^{ 2 }
+		+
+		\abs{ \nabla \energy ( x ( t ) ) }^{ 2 }
 	\dd{ t }
 	\leq 0.
 \end{align*}
-Since we started with an integral over a non-negative function, this implies that for almost every time $ t $, we have that $ x' ( t ) = - \nabla \energy ( x ( t ) ) $, which proves that $ x $ (again under sufficient regularity assumptions) is a gradient flow of the energy $ \energy $.
+Since we started with an integral over a non-negative function, this implies 
+that for almost every time $ t $, we have that $ x' ( t ) = - \nabla \energy ( 
+x ( t ) ) $, which proves that $ x $ (again under sufficient regularity 
+assumptions this then must already hold for every time) is a gradient flow of 
+the energy $ \energy $.
 
-The real strength of formulating the differential equation (\ref{gf_basic_equation}) via inequality (\ref{basic_optimal_energy_dissipation_inequality}) becomes clear if we want to consider gradient flows in a more complicated setting by replacing the space $ \mathbb{ R }^{ N } $. In order to formulate equation (\ref{gf_basic_equation}), we need to have a notion of differentiation and a gradient in the target of $ x $. Therefore we may use pre-Hilbert spaces or smooth Riemannian manifolds as a suitable substitutes for $ \mathbb{ R }^{ N } $. 
+The real strength of formulating the differential equation 
+(\ref{gf_basic_equation}) via inequality 
+(\ref{basic_optimal_energy_dissipation_inequality}) becomes clear if we want to 
+consider gradient flows in a more complicated setting. In order to formulate 
+equation (\ref{gf_basic_equation}), we need to have a notion of differentiation 
+and a gradient in the target of $ x $. Therefore we may use pre-Hilbert spaces 
+or smooth Riemannian manifolds as a suitable substitutes for $ \mathbb{ R }^{ N 
+} $. 
 
-Examples for such more complicated gradient include the heat equation, which can be written as the $ \lp^{ 2 } $-gradient flow of the Dirichlet energy (REFERENZ EINFÜGEN), 
-the Fokker-Planck equation (REFERENZ EINFÜGEN) or the Allen--Cahn equation and mean curvature flow, which of course both play an important role for us.
+Examples for such more complicated gradient flows include the heat equation, 
+which can be written as the $ \lp^{ 2 } $-gradient flow of the Dirichlet 
+energy, 
+the Fokker-Planck equation, the Allen--Cahn equation and mean curvature flow. 
+The two latter of course play a key role for us.
 \begin{comment}
 A first example for a generalization is therefore the heat equation $ \partial_{ t } u - \Delta u = 0 $ for some open and bounded set $ \Omega $. As our space, we shall take $ \mathrm{ H }_{ 0 }^{ 1 } ( \Omega ) $ equipped with the inner product
 \begin{equation*}
@@ -111,5 +140,11 @@ Our energy is given by the Dirichlet functional
 Then we can compute that at least on $ \mathrm{ H }_{ 0 }^{ 1 } \cap \mathrm{ H }^{ 2 } ( \Omega ) $, the Fréchet derivative of $ \energy $ is given by $ \diff ( E ) ( u ) [ v ] = - \int \Delta u v \dd{ x } $.
 \end{comment}
 
-IN EINLEITUNG VON SEBASTIAN und TIM STEHT NOCH WAS ZUR GESCHICHTE VON DER 
-UNGLEICHUNG; SEITE 2 , ERSTER ABSATZ.
+These observations have been around for a long time, and are credited 
+to De Giorgi and his paper 
+\cite{de_giorgi_new_problems_on_minimizing_movements}. Sandier and Serfaty have 
+also written an excellent paper on this topic, as well as Ambrosio, Gigli and 
+Savaré 
+\cite{ambrosio_gigli_savare_gradient_flows_in_metric_spaces_and_in_the_space_of_prob_measures},
+to which we refer the 
+interested reader.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  13 AUG 2022 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  13 AUG 2022 19:15
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1498,29 +1498,24 @@ chapter 1.
 ntifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.87 \end{align*}
-                  [1
+l.102 \end{align*}
+                   [1
 
 
 
-] Excluding 'comment' comment.)
-Overfull \hbox (19.43729pt too wide) in paragraph at lines 114--4
-[]\OT1/cmr/m/n/10 (-20) IN EIN-LEITUNG VON SE-BAS-TIAN und TIM STEHT NOCH WAS Z
-UR GESCHICHTE
- []
-
-(section_mcf.texpdfTeX warning (ext4): destination with the same identifier (na
-me{page.2}) has been already used, duplicate ignored
+] Excluding 'comment' comment.) (section_mcf.texpdfTeX warning (ext4): destinat
+ion with the same identifier (name{page.2}) has been already used, duplicate ig
+nored
 <to be read again> 
                    \relax 
-l.39 
-      [2]pdfTeX warning (ext4): destination with the same identifier (name{page
-.3}) has been already used, duplicate ignored
+l.39 \end{equation*}
+                     [2]pdfTeX warning (ext4): destination with the same identi
+fier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 \end{equation*}
-                      [3]))pdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.4}) has been already used, duplicate ignored
+l.154 \end{align}
+                  [3]))pdfTeX warning (ext4): destination with the same identif
+ier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 	\include{chapter_mcf}
@@ -1622,18 +1617,17 @@ f Propo-si-tion [][]3.2.4[][] we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10 2
 [][] []$
  []
 
-[27] [28] [29] [30])) [31]
+[27])) [28]
 \openout2 = `chapter_conditional_convergence_of_allen_cahn.aux'.
 
  (chapter_conditional_convergence_of_allen_cahn.tex
-[32
-
-
-
-
-]
 chapter 4.
-(section_conditional_convergence_twophase.tex [33] [34]
+(section_conditional_convergence_twophase.tex [29
+
+
+
+
+] [30]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 305.
@@ -1710,33 +1704,33 @@ T1/cmr/m/n/10 (-20) )$ moves by mean cur-va-ture \OT1/cmr/m/it/10 (-20) if ther
 e is a nor-mal ve-loc-ity $\OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 2 [][] []$
  []
 
-[35]
+[31]
 Overfull \hbox (5.06604pt too wide) detected at line 498
 []
  []
 
-[36]
+[32]
 Underfull \vbox (badness 4001) has occurred while \output is active []
 
- [37]
+ [33]
 
 LaTeX Warning: Reference `quantitative_reshetnyak' on page 1 undefined on input
  line 806.
 
-[38]
+[34]
 Underfull \vbox (badness 4608) has occurred while \output is active []
 
- [39]
+ [35]
 Overfull \hbox (34.80074pt too wide) detected at line 1040
 []
  []
 
-[40]
+[36]
 Overfull \hbox (9.26213pt too wide) detected at line 1247
 []
  []
 
-[41]) (section_conditional_convergence_multiphase.tex
+[37]) (section_conditional_convergence_multiphase.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
@@ -1806,80 +1800,75 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[42]
+[38]
 Overfull \hbox (14.02452pt too wide) in paragraph at lines 148--165
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
-Excluding 'comment' comment.
+[39] [40] [41] Excluding 'comment' comment.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43] [44] [45]
-Overfull \hbox (40.53835pt too wide) detected at line 550
+[42] [43] [44]
+Overfull \hbox (40.53835pt too wide) detected at line 926
 [] [] \U/msa/m/n/10 . []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ; \O
 ML/cmm/m/it/10 \OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/10 [];
  []
 
-[46]
-Overfull \hbox (4.0296pt too wide) detected at line 694
+[45]
+Overfull \hbox (4.0296pt too wide) detected at line 1070
 []
  []
 
 
 Underfull \vbox (badness 2142) has occurred while \output is active []
 
- [47]
-[48] [49]
-Overfull \hbox (21.99113pt too wide) detected at line 1220
+ [46]
+[47] [48]
+Overfull \hbox (21.99113pt too wide) detected at line 1596
 []
  []
 
-[50]
-Overfull \hbox (34.2628pt too wide) detected at line 1416
+[49]
+Overfull \hbox (34.2628pt too wide) detected at line 1792
 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 ; 
 u\OT1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + 
 [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/
 10 [] [] ;
  []
 
-[51] [52] [53]
-Overfull \hbox (49.3519pt too wide) detected at line 1889
+[50] [51] [52]
+Overfull \hbox (49.3519pt too wide) detected at line 2265
 []
  []
 
-[54]
-Overfull \hbox (0.47713pt too wide) detected at line 2055
+[53]
+Overfull \hbox (0.47713pt too wide) detected at line 2431
 []
  []
 
 
 Underfull \vbox (badness 1199) has occurred while \output is active []
 
- [55]
-Overfull \hbox (17.80789pt too wide) detected at line 2135
+ [54]
+Overfull \hbox (17.80789pt too wide) detected at line 2511
 []
  []
 
 
-Overfull \hbox (15.11865pt too wide) in paragraph at lines 2135--2145
+Overfull \hbox (15.11865pt too wide) in paragraph at lines 2511--2521
 \OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
 ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
 for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
 /n/10 (-20) )$
  []
 
-[56])) [57]
+[55])) [56]
 \openout2 = `chapter_de_giorgis_mean_curvature_flow.aux'.
 
- (chapter_de_giorgis_mean_curvature_flow.tex [58
-
-
-
-
-]
+ (chapter_de_giorgis_mean_curvature_flow.tex
 chapter 5.
 (section_convergence_to_de_giorgis_mean_curvature_flow.tex
 
@@ -1951,24 +1940,29 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 7.
 
-[59]
+[57
+
+
+
+
+]
 Overfull \hbox (14.02452pt too wide) in paragraph at lines 123--142
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
-[60]
+[58]
 Overfull \hbox (10.54408pt too wide) in paragraph at lines 246--251
 \OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
 mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
 th re-spect to $[][] []$
  []
 
-[61]
+[59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
+ [60]
 Overfull \hbox (46.54857pt too wide) detected at line 639
 []
  []
@@ -1981,12 +1975,12 @@ Overfull \hbox (117.80127pt too wide) detected at line 730
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [61]
 Overfull \hbox (10.69827pt too wide) detected at line 828
 []
  []
 
-[64]
+[62]
 Overfull \hbox (4.88054pt too wide) in paragraph at lines 942--943
 [][] 
  []
@@ -2012,7 +2006,7 @@ nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
 
  []
 
-[65] [66]
+[63] [64]
 Overfull \hbox (8.22441pt too wide) detected at line 1176
 []
  []
@@ -2028,7 +2022,7 @@ Overfull \hbox (38.86722pt too wide) in paragraph at lines 1227--1248
 2 [][] []$\OT1/cmr/m/it/10 (-20) .
  []
 
-[67]
+[65]
 
 LaTeX Warning: Command \j invalid in math mode on input line 1318.
 
@@ -2042,7 +2036,7 @@ T1/cmr/m/n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; x\OT1/cmr
 ][] [] \OML/cmm/m/it/10 V[]' [] []
  []
 
-[68] [69]
+[66] [67]
 Overfull \hbox (37.83861pt too wide) detected at line 1569
 []
  []
@@ -2052,22 +2046,22 @@ Overfull \hbox (9.5488pt too wide) detected at line 1614
 []
  []
 
-[70])) [71]
+[68])) [69]
 \openout2 = `chapter_appendix.aux'.
 
- (chapter_appendix.tex [72
+ (chapter_appendix.tex [70
 
 
 
 
 ]
 chapter A.
-[73] [74]
+[71] [72]
 Overfull \hbox (29.86714pt too wide) detected at line 304
 []
  []
 
-[75]) [76]
+[73]) [74]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -2077,13 +2071,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 44.
 
-[77
+[75
 
 
 
 
 
-] [78] [79]
+] [76] [77] [78]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
  ("Master's Thesis.aux" (chapter_introduction.aux)
@@ -2103,10 +2097,10 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48539 strings out of 480930
- 1079335 string characters out of 2900231
- 1910165 words of memory out of 3000000
- 63196 multiletter control sequences out of 15000+200000
+ 48547 strings out of 480930
+ 1080134 string characters out of 2900231
+ 1910598 words of memory out of 3000000
+ 63202 multiletter control sequences out of 15000+200000
  557627 words of font info for 192 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2145,9 +2139,9 @@ sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (87 pages, 822158 bytes).
+Output written on "Master's Thesis.pdf" (86 pages, 827009 bytes).
 PDF statistics:
- 1294 PDF objects out of 1440 (max. 8388607)
- 307 named destinations out of 1000 (max. 500000)
+ 1302 PDF objects out of 1440 (max. 8388607)
+ 309 named destinations out of 1000 (max. 500000)
  27393 words of extra memory for PDF output out of 29859 (max. 10000000)
 

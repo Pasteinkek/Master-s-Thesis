@@ -100,6 +100,45 @@
       \field{pages}{xviii+434}
       \range{pages}{-1}
     \endentry
+    \entry{ambrosio_gigli_savare_gradient_flows_in_metric_spaces_and_in_the_space_of_prob_measures}{book}{}
+      \name{author}{3}{}{%
+        {{hash=75c4bcbdd44f3d81980ee1e743ebfd0f}{%
+           family={Ambrosio},
+           familyi={A\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=139b12cad429d4671b5443bd26e4cce6}{%
+           family={Gigli},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d9b6eaad8ff003b7a52715955b3cd2e0}{%
+           family={Savaré},
+           familyi={S\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Verlag, Basel}%
+      }
+      \strng{namehash}{d26d9e0f494cbb519cf26a3ccb38f899}
+      \strng{fullhash}{d26d9e0f494cbb519cf26a3ccb38f899}
+      \strng{bibnamehash}{d26d9e0f494cbb519cf26a3ccb38f899}
+      \strng{authorbibnamehash}{d26d9e0f494cbb519cf26a3ccb38f899}
+      \strng{authornamehash}{d26d9e0f494cbb519cf26a3ccb38f899}
+      \strng{authorfullhash}{d26d9e0f494cbb519cf26a3ccb38f899}
+      \field{labelalpha}{AGS05}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-7643-2428-5; 3-7643-2428-7}
+      \field{series}{Lectures in Mathematics ETH Zürich}
+      \field{title}{Gradient flows in metric spaces and in the space of probability measures}
+      \field{year}{2005}
+      \field{pages}{viii+333}
+      \range{pages}{-1}
+    \endentry
     \entry{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}{article}{}
       \name{author}{3}{}{%
         {{hash=4728cefeafa186121e2e5148523c4f1d}{%
@@ -503,6 +542,36 @@
       \verb{url}
       \verb https://doi.org/10.1016/0022-0396(92)90146-E
       \endverb
+    \endentry
+    \entry{de_giorgi_new_problems_on_minimizing_movements}{article}{}
+      \name{author}{1}{}{%
+        {{hash=966ecb0eb91cdf0431e208a8b593616f}{%
+           family={De\bibnamedelima Giorgi},
+           familyi={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Ennio},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Masson, Paris}%
+      }
+      \strng{namehash}{966ecb0eb91cdf0431e208a8b593616f}
+      \strng{fullhash}{966ecb0eb91cdf0431e208a8b593616f}
+      \strng{bibnamehash}{966ecb0eb91cdf0431e208a8b593616f}
+      \strng{authorbibnamehash}{966ecb0eb91cdf0431e208a8b593616f}
+      \strng{authornamehash}{966ecb0eb91cdf0431e208a8b593616f}
+      \strng{authorfullhash}{966ecb0eb91cdf0431e208a8b593616f}
+      \field{labelalpha}{De 93}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Boundary value problems for partial differential equations and applications}
+      \field{series}{RMA Res. Notes Appl. Math.}
+      \field{title}{New problems on minimizing movements}
+      \field{volume}{29}
+      \field{year}{1993}
+      \field{pages}{81\bibrangedash 98}
+      \range{pages}{18}
     \endentry
     \entry{evans_gariepy_measure_theory_and_fine_props}{book}{}
       \name{author}{2}{}{%
@@ -1112,6 +1181,48 @@
       \verb https://arxiv.org/abs/1611.08254
       \endverb
       \keyw{Differential Geometry (math.DG),FOS: Mathematics,FOS: Mathematics}
+    \endentry
+    \entry{michor_mumford_riemannian_geometries_on_spaces_of_plane_curves}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3bae7b7b7e040a1bb6da07c1fd1b7be0}{%
+           family={Michor},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=275b714ea594482428d9b55ee81df320}{%
+           family={Mumford},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd15beb13f682e18bf35927a527043c8}
+      \strng{fullhash}{bd15beb13f682e18bf35927a527043c8}
+      \strng{bibnamehash}{bd15beb13f682e18bf35927a527043c8}
+      \strng{authorbibnamehash}{bd15beb13f682e18bf35927a527043c8}
+      \strng{authornamehash}{bd15beb13f682e18bf35927a527043c8}
+      \strng{authorfullhash}{bd15beb13f682e18bf35927a527043c8}
+      \field{labelalpha}{MM06}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1435-9855}
+      \field{journaltitle}{J. Eur. Math. Soc. (JEMS)}
+      \field{number}{1}
+      \field{title}{Riemannian geometries on spaces of plane curves}
+      \field{volume}{8}
+      \field{year}{2006}
+      \field{pages}{1\bibrangedash 48}
+      \range{pages}{48}
+      \verb{doi}
+      \verb 10.4171/JEMS/37
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4171/JEMS/37
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4171/JEMS/37
+      \endverb
     \endentry
     \entry{mantegazza_novaga_tortorelli_motion_by_curvature_of_planar_networks}{article}{}
       \name{author}{3}{}{%
