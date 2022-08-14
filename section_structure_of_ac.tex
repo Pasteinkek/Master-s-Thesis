@@ -17,7 +17,8 @@ the \emph{Allen--Cahn equation} with parameter $ \varepsilon > 0 $ is given by
 	\Delta u - \frac{1 }{ \varepsilon^{ 2 } } \nabla W ( u ).
 \end{equation}
 
-To understand this equation better, we consider the \emph{Cahn--Hilliard energy} which assigns to $ u $ for a fixed time the real number
+To understand this equation better, we consider the \emph{Cahn--Hilliard 
+energy}, which assigns to $ u $ for a fixed time the real number
 \begin{equation}
 	\label{cahn_hilliard_energy}
 	\energy_{ \varepsilon } 
@@ -55,7 +56,12 @@ equation (\ref{allen_cahn_eq}), we have that
 	\tag{\ref{allen_cahn_eq}}.
 \end{align*}
 
-This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard energy. Thus we can try to construct a solution to the PDE (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme, which we will do in \Cref{existence_of_ac_solution}.
+This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 
+} $ gradient flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard 
+energy. Thus we can try to construct a solution to the PDE 
+(\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme 
+(\cite{de_giorgi_new_problems_on_minimizing_movements}), which we will do in 
+\Cref{existence_of_ac_solution}.
 
 But first we need to clarify what our potential $ W $ should look like. Classic 
 examples in the scalar case are given by $ W ( u ) = \left( u^{ 2 } - 1 
@@ -86,7 +92,11 @@ TIM MEINTE AUCH FÜR HÖHERE DIMENSION LEVEL SET GRAFIK ERSTELLEN:
 	\label{graph_of_doublewell_potential}
 \end{figure}
 
-In higher dimensions, we want to accept the following potentials: $ W \colon \mathbb{ R }^{ N } \to [0, \infty ) $ has to be a a smooth multiwell potential with finitely many zeros at $ u = \alpha_{ 1 }, \dotsc , \alpha_{ P } \in \mathbb{ R }^{ N } $. Furthermore we aks for polynomial growth in the sense that there exists some $ p \geq 2 $ such that
+In higher dimensions, we want to accept the following potentials: $ W \colon 
+\mathbb{ R }^{ N } \to [0, \infty ) $ has to be a a smooth multiwell potential, 
+meaning that it has finitely many zeros at $ u = \alpha_{ 1 }, \dotsc , 
+\alpha_{ P } \in \mathbb{ R }^{ N } $. Furthermore we aks for polynomial growth 
+in the sense that there exists some $ p \geq 2 $ such that
 \begin{equation}
 	\label{polynomial_growth}
 	\abs{ u }^{ p } \lesssim W(u) \lesssim \abs{ u }^{ p }
@@ -173,9 +183,11 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 	Moreover we already obtain $ 1/2 $ Hölder-continuity in time from the embedding
 	\begin{equation}
 		\label{w12_embeds_into_c1half}
-		\wkp^{ 1 , 2} ( [ 0 , T ] ; \lp^{ 2 } ( \flattorus;\mathbb{ R }^{ N } ) )
+		\wkp^{ 1 , 2} \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus;\mathbb{ R }^{ 
+		N } ) \right)
 		\hookrightarrow
-		\cont^{ 1/2 } ( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) ),
+		\cont^{ 1/2 } \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R 
+		}^{ N } ) \right),
 	\end{equation}
 	which follows from a generalized version of the fundamental theorem of calculus and Hölder's inequality.
 \end{remark}

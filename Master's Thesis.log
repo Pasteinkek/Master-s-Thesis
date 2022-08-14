@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  13 AUG 2022 19:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  14 AUG 2022 21:08
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1528,8 +1528,8 @@ chapter 2.
 entifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 \end{equation}
-                    [5
+l.108 \end{equation}
+                     [5
 
 
 
@@ -1538,29 +1538,41 @@ l.98 \end{equation}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155 		\end{equation}
+l.165 		\end{equation}
                        [6]) (section_existence_of_solution.tex [7] [8]
-Overfull \hbox (0.35463pt too wide) detected at line 204
-[]
+Overfull \hbox (2.25168pt too wide) in paragraph at lines 299--309
+[]\OT1/cmr/m/n/10 (-20) In or-der to ap-ply the Arzela--Ascoli the-o-rem for t
+he se-quence $(\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (-20) )$ in $[] []$
  []
 
 [9]
-Overfull \hbox (66.2094pt too wide) in paragraph at lines 292--304
+Overfull \hbox (66.99162pt too wide) in paragraph at lines 315--328
 []\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
-ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$
+ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$\OT1/c
+mr/m/n/10 (-20) .
  []
 
 [10]
-Overfull \hbox (1.3415pt too wide) in paragraph at lines 413--416
-\OT1/cmr/m/n/10 (-20) In step 6, we more-over have shown that $\OML/cmm/m/it/10
+Overfull \hbox (7.8244pt too wide) in paragraph at lines 447--456
+\OT1/cmr/m/n/10 (-20) In Step 6, we more-over have shown that $\OML/cmm/m/it/10
  @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
 1/cmr/m/n/10 (-20) in $[][]([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/
 cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) 
 )$.
  []
 
+
+Overfull \hbox (32.78749pt too wide) in paragraph at lines 503--507
+\OT1/cmr/m/n/10 (-20) for al-most ev-ery $\OML/cmm/m/it/10 t$ \OT1/cmr/m/n/10 (
+-20) and all $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][]\OT1/cmr/m/n/10 (-20) (
+[]; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) )$. By con-ti-nu-ity this ex-tends t
+o all $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][] \ [][]\OT1/cmr/m/n/10 (-20) (
+\U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) )
+$. 
+ []
+
 [11]
-Overfull \hbox (0.80008pt too wide) detected at line 553
+Overfull \hbox (0.80008pt too wide) detected at line 603
 []
  []
 
@@ -2097,8 +2109,8 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48547 strings out of 480930
- 1080134 string characters out of 2900231
+ 48544 strings out of 480930
+ 1080097 string characters out of 2900231
  1910598 words of memory out of 3000000
  63202 multiletter control sequences out of 15000+200000
  557627 words of font info for 192 fonts, out of 3000000 for 9000
@@ -2139,9 +2151,9 @@ sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (86 pages, 827009 bytes).
+Output written on "Master's Thesis.pdf" (86 pages, 827204 bytes).
 PDF statistics:
- 1302 PDF objects out of 1440 (max. 8388607)
- 309 named destinations out of 1000 (max. 500000)
+ 1297 PDF objects out of 1440 (max. 8388607)
+ 306 named destinations out of 1000 (max. 500000)
  27393 words of extra memory for PDF output out of 29859 (max. 10000000)
 
