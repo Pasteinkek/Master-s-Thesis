@@ -132,7 +132,7 @@
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{978-3-7643-2428-5; 3-7643-2428-7}
+      \field{isbn}{978-3-7643-2428-5}
       \field{series}{Lectures in Mathematics ETH Zürich}
       \field{title}{Gradient flows in metric spaces and in the space of probability measures}
       \field{year}{2005}
@@ -1223,6 +1223,37 @@
       \verb{url}
       \verb https://doi.org/10.4171/JEMS/37
       \endverb
+    \endentry
+    \entry{modica_mortola_un_esempio_di_gamma_convergenza}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2bcd4bf01de673fc2fab33dbd2a1eebe}{%
+           family={Modica},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1b42e33f7dfc71aba47bfc880a7b502f}{%
+           family={Mortola},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab5106c3c53b501f139ec377023aa66d}
+      \strng{fullhash}{ab5106c3c53b501f139ec377023aa66d}
+      \strng{bibnamehash}{ab5106c3c53b501f139ec377023aa66d}
+      \strng{authorbibnamehash}{ab5106c3c53b501f139ec377023aa66d}
+      \strng{authornamehash}{ab5106c3c53b501f139ec377023aa66d}
+      \strng{authorfullhash}{ab5106c3c53b501f139ec377023aa66d}
+      \field{labelalpha}{MM77}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Boll. Unione Mat. Ital. B}
+      \field{title}{Un esempio di Gamma-convergenza}
+      \field{volume}{14}
+      \field{year}{1977}
+      \field{pages}{285\bibrangedash 299}
+      \range{pages}{15}
     \endentry
     \entry{mantegazza_novaga_tortorelli_motion_by_curvature_of_planar_networks}{article}{}
       \name{author}{3}{}{%

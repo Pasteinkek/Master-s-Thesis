@@ -1,4 +1,4 @@
-\documentclass[a4paper, 10pt, bibliogrpahy = totocnumbered]{scrbook}
+\documentclass[a4paper, 10pt]{scrbook}
 
 \usepackage{mystyle}
 \bibliography{references.bib}
@@ -41,6 +41,7 @@
 
 \backmatter
 
-	\printbibliography
+	\printbibliography[heading=bibintoc]			%ensures that bibliography 
+	%appears in table of contents
 	
 \end{document}
