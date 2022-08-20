@@ -1028,6 +1028,48 @@
       \verb 10.1007/BF00251427
       \endverb
     \endentry
+    \entry{laux_otto_convergence_of_thresholding_scheme_for_mmcf}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6a64258e1e649779293a50aff43794f9}{%
+           family={Laux},
+           familyi={L\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b661faa779b88f987ef289be7047cf5c}{%
+           family={Otto},
+           familyi={O\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ddeb7604be174c4e7d0c57a710899378}
+      \strng{fullhash}{ddeb7604be174c4e7d0c57a710899378}
+      \strng{bibnamehash}{ddeb7604be174c4e7d0c57a710899378}
+      \strng{authorbibnamehash}{ddeb7604be174c4e7d0c57a710899378}
+      \strng{authornamehash}{ddeb7604be174c4e7d0c57a710899378}
+      \strng{authorfullhash}{ddeb7604be174c4e7d0c57a710899378}
+      \field{labelalpha}{LO16}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0944-2669}
+      \field{journaltitle}{Calc. Var. Partial Differential Equations}
+      \field{number}{5}
+      \field{title}{Convergence of the thresholding scheme for multi-phase mean-curvature flow}
+      \field{volume}{55}
+      \field{year}{2016}
+      \field{pages}{Art. 129\bibrangessep 74}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/s00526-016-1053-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00526-016-1053-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00526-016-1053-0
+      \endverb
+    \endentry
     \entry{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}{article}{}
       \name{author}{2}{}{%
         {{hash=6a64258e1e649779293a50aff43794f9}{%

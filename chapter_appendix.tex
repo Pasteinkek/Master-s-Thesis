@@ -84,16 +84,17 @@
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap  B ) }{ r^{ d } }
 		>0,
 	\end{equation*}
-	so let us without loss of generality assume the first inequality. Since
+	so let us without loss of generality assume the former. Since
 	\begin{equation*}
 		\limsup_{ r \to 0 }
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) }{ r^{ d } }
 		\geq
 		\limsup_{ r \to 0 }
-		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus ( A \cup B ) ) }{ r^{ d } }
 		>0,
 	\end{equation*}
 	we thus have $ x \in \partial_{ \ast } A $.
+	We now want to show that $ x \notin \partial_{ \ast } B $.
 	Combining Thm.~5.14 and Lemma~5.5 in \cite{evans_gariepy_measure_theory_and_fine_props}, we can rewrite for some measurable set $ N $ with $ \hm^{ d- 1 } ( N ) = 0 $ the measure theoretic boundary of $ A $ as
 	\begin{equation}
 		\label{measure_theoretic_boundary_almost_half_boundary}
@@ -118,7 +119,9 @@
 	Thus assume $ x \in \partial^{ 1/2 } A \cap \partial^{ 1/2 } B $. Then since $ A $ and $ B $ are disjoint, we would have
 	\begin{equation*}
 		\limsup_{ r \to 0 }
-		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus  ( A \cup B ) ) }{ \alpha( d ) r^{ d } }
+		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus  ( A \cup B ) ) }{ \alpha( d 
+		) r^{ d } }
+		=
 		\limsup_{ r \to 0 }
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) - \lm^{ d } ( B_{ r } ( x ) \cap B ) }{ \alpha( d ) r^{ d } }
 		=
@@ -128,21 +131,23 @@
 	$ \partial_{ \ast } ( A \cup B ) \subseteq \partial_{ \ast } A \triangle \partial_{ \ast } B $.
 	
 	For the other inclusion, suppose that $ x \in \partial_{\ast } A \triangle \partial_{ \ast } B $ and without loss of generality that $ x \in \partial_{ \ast } A \setminus \partial_{ \ast } B $. Then it must either hold that 
-	\begin{equation*}
+	\begin{equation}
+		\label{one_equation_has_to_hold}
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap B ) }{ r^{ d } } = 0
 		\quad \text{or} \quad
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ r^{ d } } = 0.
-	\end{equation*}
+	\end{equation}
 	But since $ x \in \partial_{ \ast } A $, the latter can not be true since $ A $ and $ B $ are disjoint and therefore
 	\begin{equation*}
 		0
 		<
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ r^{ d } } 
-		=
+		\leq
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ 
 		r^{ d } },
 	\end{equation*}
-	thus the former has to be true. We now estimate
+	thus the former from (\ref{one_equation_has_to_hold}) has to be true. We 
+	now estimate
 	\begin{align*}
 		\limsup_{ r \to 0 }
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
@@ -197,9 +202,12 @@
 
 \begin{proof}[Proof of \Cref{rewriting_variation_of_psi_i}]
 	Without loss of generality we can assume that $ i = 1 $ and $ \sigma_{ 1, j } \leq \sigma_{ 1, j + 1 } $ for all $ 1 \leq j \leq P - 1 $. 
-	All equalities in this proof hold up to a set of $ (d-1)$-dimensional Hausdorff measure zero. First let us apply the Fleming--Rishel co-area formula to find that for a given open set $ U \subseteq \flattorus $, we have
+	All equalities for sets in this proof hold up to a set of $ 
+	(d-1)$-dimensional Hausdorff measure zero. First let us apply the 
+	Fleming--Rishel co-area formula to find that for a given open set $ U 
+	\subseteq \flattorus $, we have
 	\begin{align*}
-		\abs{ \nabla \psi_{ i } } ( U ) 
+		\abs{ \nabla \psi_{ 1 } } ( U ) 
 		& =
 		\int_{ 0 }^{ \infty }
 		\hm^{ d - 1 } \left(
@@ -207,19 +215,19 @@
 		\left\{
 		x \in U 
 		\, \colon \,
-		\psi_{ i } \leq s 
+		\psi_{ 1 } \leq s 
 		\right\}
 		\right)
 		\right)
 		\dd{ s }
 		\\
 		& =
-		\sum_{ j = 1 }^{ P }
+		\sum_{ j = 1 }^{ P -1 }
 		\int_{ \sigma_{ 1, j } }^{ \sigma_{ 1, j + 1 } }
 		\hm^{ d - 1 } \left(
 		\partial_{ \ast } \left(
-		\bigcup_{ j = 1 }^{ i }
-		U \cap \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		U \cap \Omega_{ k }
 		\right)
 		\right)
 		\dd{ s }
@@ -229,8 +237,8 @@
 		\left(\sigma_{ 1, j +1} - \sigma_{ 1 , j } \right)
 		\hm^{ d - 1 } \left(
 		\partial_{ \ast } \left(
-		\bigcup_{ j = 1 }^{ i }
-		U \cap \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		U \cap \Omega_{ k }
 		\right)
 		\right)
 		\eqqcolon I. 
@@ -239,29 +247,38 @@
 	\begin{equation}
 		\label{rewriting_measure_theoretic_boundary_of_union}
 		\partial_{ \ast } \left(
-		\bigcup_{ j = 1 }^{ i }
-		U \cap \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		U \cap \Omega_{ k }
 		\right)
 		=
-		\bigcup_{ j = 1 }^{ i }
-		\bigcup_{ l = i + 1 }^{ P }
+		\bigcup_{ k = 1 }^{ j }
+		\bigcup_{ l = j + 1 }^{ P }
 		U
 		\cap
-		\partial_{ \ast } \Omega_{ j }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }.
 	\end{equation}
-	Since $ ( \Omega_{ j } \cap U )_{ j } $ is again a partition of $ U $, we omit taking the intersection with $ U $ for a briefer notation. The proof will be done via an induction over $ i $. For $ i = 1 $, this is exactly \Cref{rewriting_boundary_via_interfaces} from \Cref{identities_for_measure_theoretic_boundaries}. For the induction step, assume that the claim (\ref{rewriting_measure_theoretic_boundary_of_union}) holds for all $ i' \leq i $. Again by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets}, we can compute that
+	Since $ ( \Omega_{ k } \cap U )_{ k } $ is again a partition of $ U $, we 
+	omit taking the intersection with $ U $ for a briefer notation. The proof 
+	will be done via an induction over $ j $. For $ j = 1 $, this is exactly 
+	\Cref{rewriting_boundary_via_interfaces} from 
+	\Cref{identities_for_measure_theoretic_boundaries}. For the induction step, 
+	assume that the claim (\ref{rewriting_measure_theoretic_boundary_of_union}) 
+	holds for all $ j' \leq j $. Again by 
+	\Cref{identities_for_measure_theoretic_boundaries},
+	\Cref{item_disjoint_sets} and \Cref{rewriting_boundary_via_interfaces}, we 
+	can compute that
 	\begin{align*}
 		& \partial_{ \ast } \left(
-		\bigcup_{ j = 1 }^{ i + 1 }
-		\Omega_{ j }
+		\bigcup_{ k = 1 }^{ j + 1 }
+		\Omega_{ k }
 		\right)
 		=
 		\left(
 		\partial_{ \ast } \left(
-		\bigcup_{ j = 1 }^{ i }
-		\Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		\Omega_{ k }
 		\right)
 		\cup
 		\partial_{ \ast } \Omega_{ j + 1 }
@@ -269,53 +286,53 @@
 		\setminus
 		\left(
 		\partial_{ \ast } \left(
-		\bigcup_{ j = 1 }^{ i }
-		\Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		\Omega_{ k }
 		\right)
 		\cap
-		\partial_{ \ast } \Omega_{ i + 1 }
+		\partial_{ \ast } \Omega_{ j + 1 }
 		\right)
 		\\
 		={} &
 		\left(
 		\left(
-		\bigcup_{ j = 1 }^{ i }
-		\bigcup_{ l = i + 1 }^{ P }
-		\partial_{ \ast } \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		\bigcup_{ l = j + 1 }^{ P }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\cup
-		\bigcup_{ k \neq i + 1 }
-		\partial_{ \ast } \Omega_{ i + 1 }
+		\bigcup_{ k \neq j + 1 }
+		\partial_{ \ast } \Omega_{ j + 1 }
 		\cap
 		\partial_{ \ast } \Omega_{ k }
 		\right)
 		\setminus
 		\left(
-		\bigcup_{ j = 1 }^{ i }
-		\bigcup_{ l = i + 1 }^{ P }
-		\partial_{ \ast } \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		\bigcup_{ l = j + 1 }^{ P }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\cap
-		\partial_{ \ast }\Omega_{ i + 1 }
+		\partial_{ \ast }\Omega_{ j + 1 }
 		\right).
 	\end{align*}
 	By \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets}, we can write the second term as 
 	\begin{equation*}
-		\bigcup_{ j = 1 }^{ i }
-		\bigcup_{ l = i + 1 }^{ P }
-		\partial_{ \ast } \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		\bigcup_{ l = j + 1 }^{ P }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\cap
-		\Omega_{ i + 1 }
+		\Omega_{ j + 1 }
 		=
-		\bigcup_{ j = 1 }^{ i } 
-		\partial_{ \ast } \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j } 
+		\partial_{ \ast } \Omega_{ k }
 		\cap
-		\partial_{ \ast } \Omega_{ i + 1 }.
+		\partial_{ \ast } \Omega_{ j + 1 }.
 	\end{equation*}
 	By carefully considering both equations, we get
 	\begin{align}
@@ -323,104 +340,115 @@
 		\notag
 		\partial_{ \ast }
 		\left(
-		\bigcup_{ j = 1 }^{ i + 1 }
-		\Omega_{ j }
+		\bigcup_{ k = 1 }^{ j + 1 }
+		\Omega_{ k }
 		\right)
 		\\
 		\notag
 		={} &
 		\left(
 		\left(
-		\bigcup_{ j = 1 }^{ i }
-		\bigcup_{ l = i + 2 }^{ P }
-		\partial_{ \ast } \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j }
+		\bigcup_{ l = j + 2 }^{ P }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\cup
-		\bigcup_{ k = i + 2 }^{ P }
-		\partial_{ \ast } \Omega_{ i + 1 }
+		\bigcup_{ k = j + 2 }^{ P }
+		\partial_{ \ast } \Omega_{ j + 1 }
 		\cap
 		\partial_{ \ast } \Omega_{ k }
 		\right)
 		\setminus
-		\bigcup_{ j = 1 }^{ i }
-		\partial_{ \ast } \Omega_{ i + 1 }
+		\bigcup_{ k = 1 }^{ j }
+		\partial_{ \ast } \Omega_{ j + 1 }
 		\cap
-		\partial_{ \ast } \Omega_{ j }
+		\partial_{ \ast } \Omega_{ k }
 		\\
 		\label{here_complement_obscolete}
 		={} &
 		\left(
-		\bigcup_{ j = 1 }^{ i + 1 }
-		\bigcup_{ l = i + 2 }^{ P }
-		\partial_{ \ast } \Omega_{ j }
+		\bigcup_{ k = 1 }^{ j + 1 }
+		\bigcup_{ l = j + 2 }^{ P }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\setminus
-		\bigcup_{ j = i }^{ i }
-		\partial_{ \ast } \Omega_{ i + 1 }
+		\bigcup_{ k = 1 }^{ j }
+		\partial_{ \ast } \Omega_{ j + 1 }
 		\cap
-		\partial_{ \ast } \Omega_{ j }.
+		\partial_{ \ast } \Omega_{ k }.
 	\end{align}
-	Since by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets}, we have for $ 1 \leq j \leq i +2 $, $ i+ 2 \leq l \leq P $ and $ 1 \leq k \leq i $ that
+	Since by \Cref{identities_for_measure_theoretic_boundaries} 
+	\Cref{item_disjoint_sets}, we have for $ 1 \leq k \leq j +1 $, $ j+ 2 \leq 
+	l \leq P $ and $ 1 \leq m \leq j $ that
 	\begin{equation*}
+		\hm^{ d - 1 }
+		\left(
+		\partial_{ \ast } \Omega_{ k }
+		\cap
 		\partial_{ \ast } \Omega_{ l } 
 		\cap
-		\partial_{ \ast } \Omega_{ i + 1 }
+		\partial_{ \ast } \Omega_{ j + 1 }
 		\cap
-		\partial_{ \ast } \Omega_{ k }
+		\partial_{ \ast } \Omega_{ m }
+		\right) = 0,
 	\end{equation*}
-	is a set of $ (d- 1 )$-dimensional Hausdorff measure zero, taking the complement in the term (\ref{here_complement_obscolete}) becomes obsolete and thus we obtain the desired result (\ref{rewriting_measure_theoretic_boundary_of_union}).
+	taking the complement in the term (\ref{here_complement_obscolete}) becomes 
+	obsolete and thus we obtain the desired result 
+	(\ref{rewriting_measure_theoretic_boundary_of_union}).
 	Therefore we have again by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets} that
 	\begin{align*}
 		I &=
-		\sum_{ i = 1 }^{ P - 1 }
+		\sum_{ j = 1 }^{ P - 1 }
 		\left(
-		\sigma_{ 1 , i + 1 } - \sigma_{ 1 , i }
+		\sigma_{ 1 , j + 1 } - \sigma_{ 1 , j }
 		\right)
 		\left(
-		\sum_{ j = 1 }^{ i }
-		\sum_{ l = i + 1 }^{ P }
+		\sum_{ k = 1 }^{ j }
+		\sum_{ l = j + 1 }^{ P }
 		\hm^{ d - 1 } \left( 
 		U 
 		\cap 
-		\partial_{ \ast } \Omega_{ j } 
+		\partial_{ \ast } \Omega_{ k } 
 		\cap 
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\right)
 		\\
 		& =
-		\sum_{ 1 \leq j < l \leq P }
+		\sum_{ 1 \leq k < l \leq P }
 		\hm^{ d - 1 } \left(
-		U \cap \partial_{ \ast } \Omega_{ j }
+		U \cap \partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\left(
-		\sum_{ i = j }^{ l - 1 }
-		\sigma_{ 1 , i + 1 } - \sigma_{ 1 , i }
+		\sum_{ j = k }^{ l - 1 }
+		\sigma_{ 1 , j + 1 } - \sigma_{ 1 , j }
 		\right)
 		\\
 		& =
-		\sum_{ 1 \leq j < l \leq P }
+		\sum_{ 1 \leq k < l \leq P }
 		\hm^{ d - 1 } \left(
 		U \cap 
-		\partial_{ \ast } \Omega_{ j }
+		\partial_{ \ast } \Omega_{ k }
 		\cap
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\left(
-		\sigma_{ 1, l } - \sigma_{ 1 , j }
+		\sigma_{ 1, l } - \sigma_{ 1 , k }
 		\right).
 	\end{align*}
-	Since we assumed without loss of generality that $ \sigma_{ 1 , i } \leq \sigma_{ 1, j + 1 } $, we know that
+	Since we assumed without loss of generality that $ \sigma_{ 1 , j } \leq 
+	\sigma_{ 1, j + 1 } $, we know that
+	for $ k < l $,
 	\begin{equation*}
-		\abs{ \sigma_{ 1 , l } - \sigma_{ 1 , j } }
+		\sigma_{ 1 , l } - \sigma_{ 1 , k }
 		=
-		\sigma_{ 1 , l } - \sigma_{ 1 , j },
+		\abs{ \sigma_{ 1 , l } - \sigma_{ 1 , k } }
 	\end{equation*}
 	which finishes the proof.
 \end{proof}
@@ -468,9 +496,10 @@
 		=
 		\mu_{ \tilde{ h } } ( A ).
 	\end{equation*}
-	On the other hand we have that for all $ 1 \leq i \leq m $ that we find $ h( i ) $ such that
+	On the other hand we have that for all $ 1 \leq i \leq m $, we find an 
+	index $ h( i ) $ such that
 	$ \max_{ h } c_{ i }^{ h } = c_{ i }^{ h( i ) } $.
-	But then we have 
+	Since the sets $ B_{ i } $ are disjoint, we therefore have 
 	\begin{equation*}
 		\nu ( B_{ i } ) = \max_{ h } c_{ i }^{ h } \mu ( B_{ i } )
 		= \mu_{ h ( i ) } ( B_{ i } ),

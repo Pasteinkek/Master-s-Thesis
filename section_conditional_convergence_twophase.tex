@@ -2,7 +2,7 @@
 
 \subsection{The energy convergence assumption}
 
-As often in the Calculus of Variations, convergence of energies boost our 
+Convergence of energies often boosts our 
 modulus of convergence and gives our limit therefore additional regularity. 
 Thus let us assume 
 \begin{equation}
@@ -21,6 +21,8 @@ where the surface tension energy is defined for $ u = \alpha ( 1 - \chi ) +
 \beta \chi $ by 
 \begin{equation}
 	\energy ( u ) 
+	\coloneqq
+	\energy ( \chi )
 	\coloneqq
 	\sigma \int \abs{ \nabla \chi }
 \end{equation}
@@ -72,7 +74,11 @@ corresponding energy measures by
 	\sigma
 	\int
 	\varphi
-	\abs{ \nabla \chi }.
+	\abs{ \nabla \chi }
+	=
+	\int
+		\varphi
+	\abs{ \nabla \psi }.
 \end{align*}
 Then from the energy convergence and lower semicontinuity just discussed, it 
 follows that 
@@ -85,8 +91,8 @@ follows that
 \end{equation}
 
 A first additional regularity result under the energy convergence assumption is 
-the following Proposition, which ensures that we have square-integrable normal 
-velocities.
+the following Proposition, which ensures that we have a square-integrable 
+normal velocity.
 
 \begin{proposition}
 	\label{existence_of_velocity_twophase}
@@ -102,10 +108,8 @@ velocities.
 		\abs{ \nabla \chi }
 		\dd{ t }
 		\lesssim
-		\energy^{ 0 },
+		\energy_{ 0 }.
 	\end{equation*}
-	where $ \energy^{ 0 } \coloneqq \liminf_{ \varepsilon \to 0 } \energy_{ 
-	\varepsilon } ( u_{ \varepsilon }^{ 0 } ) $.
 \end{proposition}
 
 \begin{remark}
@@ -120,9 +124,10 @@ velocities.
 \end{remark}
 
 \begin{proof}
-	Take a smooth test function $ \varphi \in \cont_{ \mathrm{ C } }^{ \infty } 
+	Take a smooth test function $ \varphi \in \cont_{ \mathrm{ c } }^{ \infty } 
 	( ( 0 , T ) \times \flattorus )$. 
-	Then via the $ \lp^{ 1 } $-convergence of $ \psi_{ \varepsilon } \to \psi 
+	Then via the $ \lp^{ 1 } $-convergence of $ \psi_{ \varepsilon } $ to $ 
+	\psi 
 	$, we have
 	\begin{align*}
 		\partial_{ t } \psi ( \varphi )
@@ -170,28 +175,50 @@ velocities.
 		\left(
 		\energy_{ \varepsilon } ( u_{ \varepsilon } )
 		\right)^{ 1/2 }
-		\tag{\ref{energy_dissipation_sharp}}
 		\\
 		& =
 		\sqrt{ 2 \sigma }
-		\norm{ \varphi }_{ \lp^{ 2 } ( \flattorus , \abs{ \nabla \chi } \dd{ t 
+		\norm{ \varphi }_{ \lp^{ 2 } ( ( 0 , T ) \times \flattorus , \abs{ 
+		\nabla \chi } \dd{ t 
 		} ) }
-		\sqrt{ \energy^{ 0 } }.
-		\tag{\ref{convergence_of_energy_measures}}
+		\sqrt{ \energy_{ 0 } }.
 	\end{align*}
+	The second inequality is due to the energy dissipation inequality 
+	(\ref{energy_dissipation_sharp}) and the last equality due to the 
+	convergence of the localized energies 
+	(\ref{convergence_of_energy_measures}).
 	This proves both the absolute continuity and via a duality argument the 
 	desired bound since $ \partial_{ t } \psi = \sigma \partial_{ t } \chi $ 
 	and $ \sigma > 0 $.
 \end{proof}
 
-We finish this section with a proof for the equipartition of the energy, which 
+We finish this section with a proof for the \emph{equipartition of the 
+energyies}, which 
 tells us that both the summand involving the potential $ W ( u_{ \varepsilon } 
-) $ and the norm of the gradient contribute to the energy in similar parts.
+) $ and the norm of the gradient contribute to the energy in equal parts. Or in 
+other words
+\begin{equation*}
+	\frac{ 1 }{ \varepsilon } W ( u_{ \varepsilon } ) 
+	- 
+	\frac{ \varepsilon }{ 2 }
+	\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+	\rightharpoonup^{ \ast }
+	0 
+\end{equation*}
+holds in the distributional sense. Notice that under the 
+energy convergence assumption (\ref{energy_convergence}), the proof is quite 
+simple. Ilmanen actually showed in 
+\cite{ilmanen_convergence_of_ac_to_brakkes_mcf} that in the two-phase case this 
+is true
+for a big class of well-prepared initial conditions, but the proof relies on a 
+comparison principle, which has no obvious substitute in the multiphase case 
+and the proof is much more involved.
 
 \begin{lemma}
 	\label{equipartition_of_energies}
-	Under the energy convergence assumption (\ref{energy_convergence}), we have 
-	for any continuous function $ \varphi \in \cont^{ \infty } ( \flattorus ) $ 
+	In the situation of \Cref{initial_convergence_result} and under the energy 
+	convergence assumption (\ref{energy_convergence}), we have 
+	for any continuous function $ \varphi \in \cont ( \flattorus ) $ 
 	that
 	\begin{align*}
 		\energy ( u ; \varphi )
@@ -227,8 +254,8 @@ tells us that both the summand involving the potential $ W ( u_{ \varepsilon }
 
 \begin{proof}
 	We have already established the first equality before. For the second 
-	equality, we first assume that $ \varphi \in \cont \left( \flattorus ; [ 0 
-	, \infty ) \right)$.
+	equality, we first assume that $ \varphi \in \cont \left( \flattorus  
+	\right) $ is non-negative.
 	By the lower semicontinuity of the variation measure, we immediately obtain
 	\begin{equation*}
 		\liminf_{ \varepsilon \to 0 }
@@ -237,6 +264,12 @@ tells us that both the summand involving the potential $ W ( u_{ \varepsilon }
 		\sqrt{ 2 W ( u_{ \varepsilon } ) }
 		\abs{ \nabla u_{ \varepsilon } }
 		\dd{ x }
+		=
+		\liminf_{ \varepsilon \to 0 }
+			\int
+				\varphi
+				\abs{ \nabla \psi_{ \varepsilon } }
+			\dd{ x }
 		\geq
 		\energy ( u ; \varphi ).
 	\end{equation*}
@@ -252,14 +285,14 @@ tells us that both the summand involving the potential $ W ( u_{ \varepsilon }
 		\limsup_{ \varepsilon \to 0 }
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
 		= \energy ( u ; \varphi ).
-	\end{equation*}
+b	\end{equation*}
 	For general $ \varphi \in \cont \left( \flattorus \right) $, we decompose $ 
 	\varphi $ into its positive and negative part and apply the previous 
 	argument to both in order to get the claim.
 	
-	The third and fourth inequality follow for a given non-negative $ \varphi 
-	\in \cont \left( \flattorus ; [ 0 , \infty ) \right) $ by the $ \lp^{ 2 } $ 
-	estimate
+	The third and fourth equality follow for a given non-negative $ \varphi 
+	\in \cont \left( \flattorus ; [ 0 , \infty ) \right) $ by the 
+	$ \lp^{ 2 } $-estimate
 	\begin{align*}
 		& \lim_{ \varepsilon \to 0 }
 		\int
@@ -280,7 +313,7 @@ tells us that both the summand involving the potential $ W ( u_{ \varepsilon }
 		=
 		0
 	\end{align*}
-	which implies
+	which implies that 
 	\begin{equation*}
 		\lim_{ \varepsilon \to 0 }
 		\int
@@ -299,14 +332,17 @@ tells us that both the summand involving the potential $ W ( u_{ \varepsilon }
 		\lim_{ \varepsilon \to 0 }
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi ),
 	\end{equation*}
-	finishing our proof.
+	since the integral of $ \varphi 1/ \varepsilon 2 W ( u_{ \varepsilon } ) + 
+	\varphi \varepsilon \abs{ \nabla u_{\varepsilon } }^{ 2 } $ converges .
 \end{proof}
 
 \subsection{Convergence to a $\bv$-solution to two-phase mean curvature flow}
 
-We start by definining a BV-formulation for motion by mean curvature.
+We start by definining a BV-formulation for motion by mean curvature in the 
+spirit of Luckhaus und Sturzenhecker 
+\cite{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}.
 
-\begin{definition}[$\bv$-solution to twophase mean curvature flow]
+\begin{definition}[$\bv$-solution to two-phase mean curvature flow]
 	\label{motion_by_mcv}
 	Fix some finite time horizon $ T < \infty $ and initial data $ \chi^{ 0 
 	}\in \bv \left( \flattorus ; \{ 0 , 1 \} \right) $. We say that 
@@ -316,13 +352,14 @@ We start by definining a BV-formulation for motion by mean curvature.
 		[ 0 , T ] ; \lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}  \right)
 		\right)
 	\end{equation*}
-	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ \emph{moves by mean 
-	curvature} if there is a normal velocity
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) < \infty $ \emph{moves 
+	by mean 
+	curvature with initial data } $ \chi^{ 0 } $ if there is a normal velocity
 	$ V \in \lp^{ 2 } \left( \abs{ \nabla \chi } \dd{ t } \right) $ such that 
 	\begin{enumerate}
 		\item 
 		For all 
-		$ \xi \in \cont_{ \mathrm{ C } }^{ \infty } \left( ( 0 , T ) \times 
+		$ \xi \in \cont_{ \mathrm{ c } }^{ \infty } \left( ( 0 , T ) \times 
 		\flattorus ; \mathbb{ R }^{ d } \right) $,
 		we have
 		\begin{equation}
@@ -351,24 +388,45 @@ We start by definining a BV-formulation for motion by mean curvature.
 		holds distributionally in $ ( 0 , T ) \times \flattorus $.
 		\item 
 		The initial data $ \chi^{ 0 } $ is achieved in $ \cont \left( [ 0 , T ] 
-		; \lp^{  2 } ( \flattorus ) \right) $, which simply means that $ \chi ( 
+		; \lp^{  2 } ( \flattorus ) \right) $, which means that $ \chi ( 
 		0 ) = \chi^{ 0 } $ as functions in $ \lp^{ 2 } ( \flattorus ) $.
 	\end{enumerate}
 \end{definition}
 
+Let us give a brief motivation for this definition. First we note that the 
+boundedness of energies already implies that $ \chi $ is of bounded variation 
+in space for almost every time. Moreover equation 
+(\ref{integral_formulation_of_mcf}) hinges on the distributional formulation 
+for the mean curvature vector as stated in 
+\cite{maggi_sets_of_finite_perimeter} and yields that
+\begin{equation*}
+	\int
+		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
+	\abs{ \nabla \chi }
+	=
+	-
+	\int
+		H \inner*{ \xi }{ \nu }
+	\abs{ \nabla \chi }.
+\end{equation*}
+Thus the equation is equivalent to $ H = - V $ on $ \Sigma $.
+
 Our main goal in this section is now to show that the function $ \chi $ we have 
-found in \Cref{initial_convergence_result} moves my mean curvature. Thus our 
+found in \Cref{initial_convergence_result} moves my mean curvature, assuming 
+the time integrated energies converge (\ref{energy_convergence}). Thus our 
 goal is to prove the following Theorem.
 \begin{theorem}
 	\label{convergence_to_twophase_mcf}
-	Let a smooth doublewell potential $ W \colon \mathbb{ R } \to [ 0, \infty ) 
+	Let a smooth double-well potential $ W \colon \mathbb{ R } \to [ 0, \infty 
+	) 
 	$ satisfy the assumptions (\ref{polynomial_growth})-(\ref{perturbation 
 		bound}). Let $ T < \infty $ be an arbitrary finite time horizon. Given 
 		a 
 	sequence of initial data $ u_{ \varepsilon }^{ 0 } \colon \flattorus \to 
 	\mathbb{ R } $ with $ \chi^{ 0 } \in \bv \left( \flattorus ; \{ 0 , 1 \} 
 	\right) 
-	$ such that $ u_{ \varepsilon }^{ 0 } \to u^{ 0 } = ( 1- \chi^{ 0} ) \alpha 
+	$ such that $ u_{ \varepsilon }^{ 0 } $ converges to $ u^{ 0 } = ( 1- 
+	\chi^{ 0} ) \alpha 
 	+ \chi^{ 0 } \beta $ pointwise almost everyhwere and
 	\begin{equation*}
 		\energy_{ 0 }
@@ -380,8 +438,9 @@ goal is to prove the following Theorem.
 		< 
 		\infty,
 	\end{equation*}
-	we have that that for some subsequence of solutions to 
-	(\ref{allen_cahn_eq}) $ u_{\varepsilon } $, there exists a pointwise 
+	we have that that for some subsequence of solutions $ u_{ \varepsilon } $ 
+	to 
+	(\ref{allen_cahn_eq}), there exists a pointwise 
 	almost everywhere limit $ u = ( 1 - \chi ) \alpha + \chi \beta $ with $ 
 	\chi \in \bv \left( ( 0, T ) \times \flattorus ; \{ 0 , 1 \} \right) $ and
 	$ \chi \in \cont \left( [ 0 , T ] ; \lp^{ 2 } (\flattorus ; \{ 0 , 1 \} ) 
@@ -390,8 +449,8 @@ goal is to prove the following Theorem.
 	time-integrated energies converge (\ref{energy_convergence}), then $ \chi 
 	$ moves by mean curvature in the sense of \Cref{motion_by_mcv}.
 \end{theorem} 
-
-Looking at equation (\ref{ac_weak_equation}) which reads
+Looking at the distributional form of the Allen--Cahn equation 
+(\ref{ac_weak_equation}), which reads
 \begin{equation*}
 	\int
 	\frac{ 1 }{ \varepsilon^{ 2 } } W' ( u_{ \varepsilon} ( t ) ) \varphi
@@ -402,7 +461,6 @@ Looking at equation (\ref{ac_weak_equation}) which reads
 	\dd{x}
 	=
 	0,
-	\tag{\ref{ac_weak_equation}}
 \end{equation*}
 we expect that for a suitable choice of testfunctions $ \varphi_{ \varepsilon } 
 $, the following two terms converge:
@@ -430,8 +488,8 @@ $, the following two terms converge:
 	\dd{ x }
 	\dd{ t }
 	=
-	\sigma
-	- \int_{ 0 }^{ T }
+	- 
+	\sigma \int_{ 0 }^{ T }
 	\int
 	\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
 	\abs{ \nabla \chi }
@@ -451,24 +509,26 @@ then we can hopefully choose the testfunction $ \varphi_{ \varepsilon } $ in
 such a way that it equals
 $ 
 \int
-\frac{ 1 }{ \varepsilon^{ 2 } } W' ( u_{ \varepsilon} ( t ) ) \varphi
+1 / \varepsilon^{ 2 }  W' ( u_{ \varepsilon} ) \varphi
 +
-\inner*{ \nabla u_{ \varepsilon } ( t ) }{ \nabla \varphi }
+\inner*{ \nabla u_{ \varepsilon } }{ \nabla \varphi }
 \dd{x}
 $.
 
-Thus let $ ( \rho_{ s } )_{ s } $ be functions which solve the ODE
+Thus let $ ( \rho_{ s } )_{ s } $ be functions which solve the ordinary 
+differential equation
 \[
 \begin{cases}
 	\partial_{ s } \rho_{ s } 
 	+
 	\inner*{ \xi }{ \nabla \rho_{ s } }
-	& = 0
+	& = 0,
 	\\
 	\rho_{ 0 } & = u_{ \varepsilon }.
 \end{cases}
 \]
-Then we formally compute 
+Then we formally compute that the first inner variation of the energy $ 
+\energy_{ \varepsilon } $ with respect to $ \xi $ is given by
 \begin{align*}
 	\left.\dv{ s }\right|_{ s = 0 }
 	\int
@@ -496,7 +556,7 @@ Then we formally compute
 	\inner*{ \xi }{ \nabla u_{ \varepsilon } } 
 	\dd{ x }.
 \end{align*}
-We therefore test equation (\ref{ac_weak_equation}) against $ \varphi_{ 
+We therefore test equation (\ref{ac_weak_equation}) with $ \varphi_{ 
 \varepsilon } \coloneqq \inner{ \xi }{ \nabla u_{ \varepsilon } } $.
 
 \subsection{Convergence of the curvature term}
@@ -520,9 +580,9 @@ The goal of this section is to prove the convergence
 	\abs{ \nabla \chi }
 \end{equation*} 
 for almost every time $ t $. We directly follow the proof from Luckhaus and 
-Modica in \cite{luckhaus_modica_gibbs_thompson_relation}.
+Modica in \cite{luckhaus_modica_gibbs_thompson_relation} with some extra steps.
 
-Via an integration by parts, we obtain
+Through an integration by parts, we obtain
 \begin{align}
 	\label{conv_of_curv_first_ibp_scalar}
 	\int
@@ -656,19 +716,20 @@ Plugging this equation into the first equation
 	\dd{ x }
 	\notag.
 \end{align}
-The last integral goes to zero by the equipartition of the energies 
+The last integral vanishes by the equipartition of the energies 
 (\Cref{equipartition_of_energies}).
 Since $ \partial_{ x_{ i } } u_{ \varepsilon } / \abs{ \nabla u_{ \varepsilon } 
 } = \partial_{ x_{ i } } \psi_{ \varepsilon } / \abs{ \nabla \psi_{ 
-\varepsilon  } } $ by the chain rule, the former integral can be written as
-\begin{equation*}
+\varepsilon  } } $ by the chain rule and non-negativity of $ W $, the former 
+integral can be written as
+\begin{equation}
 	\label{conv_of_curv_scalar_written_as_g}
 	\int_{ \flattorus_{ \varepsilon } }
 	g ( x , \nabla \psi_{ \varepsilon } )
 	\varepsilon \abs{ \nabla u_{ \varepsilon } }^{ 2 }
-	\dd{ x },
-\end{equation*}
-where 
+	\dd{ x }.
+\end{equation}
+Here the function $ g $ is defined by
 \begin{equation*}
 	g ( x, p )
 	=
@@ -721,8 +782,9 @@ to use that
 	\right\}
 	\right)
 	=
-	0.
+	0,
 \end{equation*}
+which is a known result for Sobolev functions.
 
 Again by the equipartition of energies (\Cref{equipartition_of_energies}) and 
 the boundedness of $ g $, we can replace $ \varepsilon \abs{ \nabla u_{ 
@@ -767,8 +829,7 @@ via the estimate
 	\right)
 	\sqrt{ 2 \energy_{ \varepsilon } ( u_{ \varepsilon } ) }
 \end{align*}
-which vanishes as $ \varepsilon $ tends to zero by 
-\Cref{equipartition_of_energies}.
+which vanishes as $ \varepsilon $ tends to zero.
 Thus
 \begin{align*}
 	\lim_{ \varepsilon \to 0 }
@@ -796,16 +857,18 @@ Thus
 	F ( x, \nabla \psi_{ \varepsilon } )
 	\dd{ x },
 \end{align*}
-where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ at points $ p $ 
+where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ at points where $ 
+p $ is
 not equal to 0, and defined as 0 elsewhere. Since $ F (x , \lambda p ) = 
 \lambda F ( x, p ) $ for positive $ \lambda $ and since $ F $ satisfies the 
-periodic boundary conditions in $ x $, we are in the position the apply a 
+periodic boundary condition in $ x $, we are in the position to apply a 
 Theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by 
-Luckhaus and Modica in \cite[]{luckhaus_modica_gibbs_thompson_relation}. We 
-will later see a quantitative version of this in 
-\Cref{quantitative_reshetnyak}. Here it yields that since $ \abs{ \nabla \psi_{ 
+Luckhaus and Modica in \cite{luckhaus_modica_gibbs_thompson_relation}. We 
+will later see a quantitative version of this in the proof of
+\Cref{convergence_of_curvature_multiphase}. 
+Here it yields that since $ \abs{ \nabla \psi_{ 
 \varepsilon  } } ( \flattorus ) \to \abs{ \nabla \psi } ( \flattorus ) $ by the 
-equipartition of energies \Cref{equipartition_of_energies}, we obtain
+equipartition of energies (\Cref{equipartition_of_energies}), we obtain
 \begin{align*}
 	\lim_{ \varepsilon \to 0 }
 	\int
@@ -901,19 +964,23 @@ We now want to prove the convergence of the velocity term given by
 \end{equation*}
 The difficulty here is that products of weakly converging sequences will in 
 general not weakly converge. To be more precise, we only have $ \partial_{ t } 
-u_{ \varepsilon } \rightharpoonup V \abs{ \nabla \chi } \dd{ t } $ and $ \nu_{ 
-\varepsilon } \coloneqq \varepsilon \nabla u_{ \varepsilon } \approx \nu $ in a 
+u_{ \varepsilon } \rightharpoonup V \abs{ \nabla \chi } \dd{ t } $ and 
+$ \varepsilon \nabla u_{ \varepsilon } \approx \sigma \nu $ in a 
 weak sense. 
 
 Therefore we try to freeze the normal in a fixed direction, apply the weak 
 convergence of $ \partial_{ t } u_{ \varepsilon } $ and then unfreeze the 
 normal. Freezing the approximate normal $ \varepsilon \nabla u_{ \varepsilon } 
-$ amounts to replacing $ \varepsilon \nabla u_{ \varepsilon } $ by $ 
+$ amounts to replacing $ \varepsilon \nabla u_{ 
+\varepsilon } $ by $ 
 \varepsilon \abs{ \nabla u_{ \varepsilon } } \nu^{ \ast } $ for a suitably 
 chosen $ \nu^{ \ast } \in \mathbb{ S }^{ d-1 } $. Let $ \eta $ be a cutoff on 
-the support of $ \xi $. Then the error we make can be estimated for all $ 
+the support of $ \xi $ and denote by $ \nu_{ \varepsilon } = \nabla u_{ 
+\varepsilon } / \abs{ \nabla u_{ \varepsilon } } $ the approximate unit normal. 
+Then the error we make can be estimated for all $ 
 \alpha > 0 $ via Young's inequality by
-\begin{align*}
+\begin{align}
+	\notag
 	&\abs{
 		\int_{ 0 }^{ T }
 		\int
@@ -931,6 +998,7 @@ the support of $ \xi $. Then the error we make can be estimated for all $
 		\dd{ t }
 	}
 	\\
+	\notag
 	\leq {} &
 	\norm{ \xi }_{ \lp^{ \infty } }
 	\int_{ 0 }^{ T }
@@ -948,6 +1016,7 @@ the support of $ \xi $. Then the error we make can be estimated for all $
 	\dd{ x } 
 	\dd{ t }
 	\\
+	\notag
 	\leq {} &
 	\norm{ \xi }_{ \lp^{ \infty } }
 	\left(
@@ -972,6 +1041,7 @@ the support of $ \xi $. Then the error we make can be estimated for all $
 	\dd{ t }
 	\right)
 	\\
+	\label{acceptable_error_term_velocity_twophase}
 	\leq{}
 	&
 	\norm{ \xi }_{ \lp^{ \infty } }
@@ -987,19 +1057,22 @@ the support of $ \xi $. Then the error we make can be estimated for all $
 	\frac{ 1 }{ \alpha }
 	\tilt_excess_{ \varepsilon } ( \nu^{ \ast } ; \eta ) 
 	\right).
-\end{align*}
-Here the approximate tilt excess in direction $ \nu^{ \ast } $ is given by
+\end{align}
+Here the approximate tilt-excess in direction $ \nu^{ \ast } $ is given by
 \begin{equation*}
 	\tilt_excess_{ \varepsilon } ( \nu^{ \ast } ; \eta )
 	\coloneqq
 	\int_{ 0 }^{ T }
 	\int
+	\eta
 	\varepsilon 
 	\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 	\abs{ \nu_{ \varepsilon } - \nu^{ \ast } }^{ 2 }
 	\dd{ x }
 	\dd{ t }.
 \end{equation*}
+So let us accept the error term \ref{acceptable_error_term_velocity_twophase} 
+for now.
 With our frozen normal, we now notice that via the equipartition of energies, 
 we may replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } } $ by $ \sqrt{ 2 W 
 ( u_{ \varepsilon } ) } $ via the estimate
@@ -1041,8 +1114,8 @@ we may replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } } $ by $ \sqrt{ 2 W
 The first factor is uniformly bounded by the energy dissipation inequality 
 (\ref{energy_dissipation_sharp}) and the second term vanishes as $ \varepsilon 
 $ tends to zero by the equipartition of energies 
-\Cref{equipartition_of_energies}.
-But now we recognise the identity
+(\Cref{equipartition_of_energies}).
+But now we recognize the identity
 \begin{equation*}
 	\int_{ 0 }^{ T }
 	\int
@@ -1093,7 +1166,7 @@ Young's inequality via the error
 	\tilt_excess ( \nu^{ \ast }; \eta )
 	\right),
 \end{equation*}
-where the tilt excess is given by 
+where the tilt-excess is given by 
 \begin{equation*}
 	\tilt_excess ( \nu^{ \ast } ; \eta )
 	\coloneqq
@@ -1108,7 +1181,7 @@ where the tilt excess is given by
 This finishes the proof for the convergence of the velocity term up to arguing 
 that the errors can be made arbitrarily small.
 
-First we study the behaviour of the approximate tilt excess $ \tilt_excess_{ 
+First we study the behaviour of the approximate tilt-excess $ \tilt_excess_{ 
 \varepsilon } $ by connecting it to $ \tilt_excess $. We notice that by 
 expansion, we have
 \begin{align*}
@@ -1128,7 +1201,7 @@ expansion, we have
 		\int
 		\eta
 		\varepsilon
-		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\abs{ \nabla u_{ \varepsilon } }
 		\nabla u_{ \varepsilon }
 		\dd{ x }
 		\dd{ t } }
@@ -1248,8 +1321,9 @@ and recognizing that $ \sigma \int_{0 }^{ T } \int \eta \nu \abs{ \nabla \chi }
 which vanishes as $ \varepsilon $ tends to zero by the weak convergence of $ 
 \nabla \psi_{ \varepsilon } \rightharpoonup^{ \ast } \nabla \psi $ and the 
 equipartition of the energies.
-Since we are taking $ \varepsilon \to 0 $, we thus only have to make sure that 
-the tilt excess is sufficiently small since the approximate tilt excess 
+Since we are taking $ \varepsilon $ to zero, we thus only have to make sure 
+that 
+the tilt-excess is sufficiently small since the approximate tilt excess 
 converges to the tilt excess.
 
 We are now in the position to argue why the error can be made arbitrarily 
@@ -1276,7 +1350,8 @@ Let $ \delta > 0 $. Then we first choose our $ \alpha > 0 $ so small that
 	\frac{ \delta }{ 2 },
 \end{equation*}
 which is possible by the energy dissipation inequality 
-(\ref{energy_dissipation_sharp}) and \Cref{existence_of_velocity_twophase}.
+(\ref{energy_dissipation_sharp}) and the square-integrability of the normal 
+velocity (\Cref{existence_of_velocity_twophase}).
 Then we choose a partition of unity $ \left( \eta_{ i } \right)_{ i = 1 , 
 \dotsc , n } $ and approximate unit normals $ \left( \nu^{ \ast }_{ i 
 }\right)_{i = 1 , \dotsc, n } $ such that
@@ -1341,17 +1416,20 @@ Collecting all of our errors, we obtain
 	\norm{ \xi }_{ \lp^{ \infty } }
 	\left(
 	\sum_{ i = 1 }^{ n } 
-	\alpha \int_{ 0 }^{ T }
+	\alpha 
+	\int_{ 0 }^{ T }
+	\left(
 	\int
 	\eta_{ i }
 	\varepsilon
 	\abs{ \partial_{  t } u_{ \varepsilon } }^{ 2 }
 	\dd{ x }
-	-
+	+
 	\int
 	\eta_{ i }
 	V^{ 2 }
 	\abs{ \nabla \chi }
+	\right)
 	\dd{ t }
 	+
 	\frac{ 2 }{ \alpha }

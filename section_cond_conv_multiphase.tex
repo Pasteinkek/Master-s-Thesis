@@ -818,32 +818,31 @@ Collecting our observations, we can finish our arguments.
 			( U_{ i } )_{ i } \text{ are disjoint open subsets of } \flattorus
 		\right\},
 	\end{equation*}
-	we finally deduce
+	we finally deduce that for almost every $ 0 \leq t \leq T $, we have
 	\begin{align*}
-		\esssup_{ 0 \leq t \leq T }
-			\energy ( u ( t ) )
+		\energy ( u ( t ) )
+		=
+		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
+			\hm^{ d - 1 } ( \Sigma_{ i j } ( t ) )
 		& =
-		\esssup_{ 0 \leq t \leq T }
-			\sum_{ 1 \leq i < j \leq P }
-				\sigma_{ i j }
-				\hm^{ d - 1 } ( \Sigma_{ i j } ( t ) )
-		\\
-		& = \esssup_{ 0 \leq t \leq T }
 		\left(
 			\bigvee_{ i = 1 }^{ P }
 				\abs{ \nabla \psi_{ i } ( t ) }
 		\right) ( \flattorus )
 		\\
 		& \leq
-		\esssup_{ 0 \leq t \leq T }
-			\liminf_{ \varepsilon \to 0 }
-				\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
+		\liminf_{ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
 		\\
-		& \leq
-		\energy_{ 0 }.
+		&\leq
+		\liminf_{ \varepsilon \to 0 } 
+			\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } )
+		\\
+		& =
+		\energy_{ 0 },
 	\end{align*}
-	The last inequality is due to the energy dissipation inequality 
-	(\ref{energy_dissipation_sharp}).
+	which completes the proof.
 \end{proof}
 
 Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u 
@@ -853,6 +852,7 @@ $ \lp^{ 2 } $.
 \begin{lemma}
 	\label{continuity_in_l2_and_initial_data_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} we have 
+	for all $ 1 \leq i \leq P $ that
 	$ \psi_{ \varepsilon , i } \in \wkp^{ 1 , 2 } \left(
 		[ 0 , T ] ; \lp^{ 1 } ( \flattorus )
 	\right)
@@ -882,7 +882,8 @@ $ \lp^{ 2 } $.
 \end{lemma}
 
 \begin{remark}
-	This statement is almost similar to its twophase equivalent \Cref{l2_bound_on_psi_varepsilon} and the proof uses a similar strategy.
+	This statement is almost equal to its two-phase equivalent 
+	\Cref{l2_bound_on_psi_varepsilon} and the proof uses a similar strategy.
 \end{remark}
 
 \begin{proof}
@@ -910,6 +911,7 @@ $ \lp^{ 2 } $.
 			\\
 			& =
 			\int_{ 0 }^{ T }
+				\left(
 				\int
 					\frac{ 2 }{ \varepsilon }
 					W ( u_{ \varepsilon } )
@@ -918,6 +920,7 @@ $ \lp^{ 2 } $.
 					\varepsilon 
 					\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
 				\dd{ x }
+				\right)
 			\dd{ t }
 			\\
 			& \leq
@@ -943,10 +946,13 @@ $ \lp^{ 2 } $.
 		$ \wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $
 		into $ \cont^{ 1/2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
 		
-		\item[Step 3:] The sequence $ u_{ \varepsilon } $ converges to $ \sum_{ i } \chi_{ i } \mathds{ 1 }_{ \Omega_{ i } } \alpha_{ i } $ in measure uniformly in time.
+		\item[Step 3:] The sequence $ u_{ \varepsilon } $ converges to $ \sum_{ 
+		i } \chi_{ i } \alpha_{ i } $ in measure uniformly in time.
 		
-		Let $ \rho > 0 $. Then by definition of $ \phi_{ i } $, there exists some $ \delta > 0 $ such that if  
-		$ \abs{ v - \alpha_{ i } } > \rho $ holds for all $ 1 \leq i \leq P $, then we already have $ \phi_{ v } > \delta $ for all $ 1 \leq i \leq P $.
+		Let $ \rho > 0 $. Then by definition of $ \phi_{ i } $, there exists 
+		some $ \delta > 0 $ such that for all $ 1 \leq i \leq P $, we have: If  
+		$ \abs{ v - \alpha_{ i } } > \rho $ holds , 
+		then we already have $ \phi_{ i } ( v ) > \delta $.
 		Therefore we can estimate
 		\begin{align*}
 			\esssup_{ 0 \leq t \leq T }

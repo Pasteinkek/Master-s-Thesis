@@ -9,12 +9,15 @@ fixed by the surface tensions through the equation
 	\label{mobilites_inverse_of_surface_tensions}
 	\mu_{ i j } =\frac{ 1 }{ \sigma_{ i j } }. 
 \end{equation}
+Note moreover that in this section, all expressions refer to their multiphase 
+equivalent.
 
 \begin{definition}[$\bv$-solution to multiphase mean curvature flow]
 	\label{motion_by_mmcf}
 	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
 	surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus 
-	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq ( \chi^{ 0 } ) $ and 
+	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq \energy ( \chi^{ 0 } 
+	) < \infty $ and 
 	$ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $. We say that
 	\begin{equation*}
 		\chi \in \cont \left(
@@ -79,7 +82,7 @@ fixed by the surface tensions through the equation
 			=
 			V_{ i } \abs{ \nabla \chi_{ i } } \dd{ t }
 		\end{equation*}
-		holds in the distributional sense on $ ( 0 , T ) \times \flattorus $.
+		holds distributionally on $ ( 0 , T ) \times \flattorus $.
 		
 		\item
 		The initial data is achieved in the space $ \cont \left( [ 0 , T ] ; 
@@ -88,38 +91,42 @@ fixed by the surface tensions through the equation
 \end{definition}
 
 Since (\ref{distributional_equation_mmcf}) is quite the long equation, we want 
-to motivate it. Assuming that everything is nice and smooth, we have by the 
+to motivate it as a suitable weak formulation for multiphase mean curvature 
+flow. 
+Assuming that everything is nice and smooth, we have by the 
 Gauss-Green theorem on surfaces 
 \cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} that
 \begin{equation*}
 	\int_{ \Sigma_{ i j } }
 	\int 
 	\inner{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
-	\dd^{\hm^{ d- 1 }}
+	\dd{\hm^{ d- 1 }}
 	=
+	-
 	\int_{ \Sigma_{ i j } }
 	\int
-	H_{ i j } \inner*{ \xi }{ \nu_{ i } }
+	H \inner*{ \xi }{ \nu }
 	\dd{\hm^{ d- 1 }}
 	+
 	\int_{ \Gamma_{ i j } }
 	\int
-	\inner*{ \xi }{ \nu_{ \Gamma_{ i j } } }
+	\inner*{ \xi }{ \nu_{ \Gamma } }
 	\dd{ \hm^{ d - 2 } }.
 \end{equation*}
 Here $ \Gamma_{ i j } $ denotes the boundary of the surface $ \Sigma_{ i j 
-} $, which we expect to only have significant contribution at triple 
-junctions. But then Herring's angle condition 
+} $ and $ \nu_{ \Gamma } $ the corresponding unit normal. But then Herring's 
+angle condition 
 (\ref{herrings_angle_condition}) tells us that the boundary terms cancel 
-out (HIER NOCHMAL TIM WEGEN DEN NORMALEN FRAGEN). But now we integrate at 
-each interface over the quantity
+out. Therefore equation 
+(\ref{distributional_equation_mmcf}) is now the sum of integral over
+each interface of
 \begin{equation*}
-	(V_{ i } - H_{ i j } ) \inner*{ \xi }{ \nu_{ i } },
+	(V_{ i } + H) \inner*{ \xi }{ \nu_{ i } },
 \end{equation*}
 which is zero by equation (\ref{v_is_equal_to_h}) combined with the 
-assumption (\ref{mobilites_inverse_of_surface_tensions}).
+assumption for the mobilities (\ref{mobilites_inverse_of_surface_tensions}).
 
-Our main goal will be to arrive at a similar conditional convergence result 
+Our main goal will be to arrive at a conditional convergence result 
 to multiphase mean curvature flow in the sense of the above definition. 
 This is captured by the following.
 
@@ -147,8 +154,9 @@ This is captured by the following.
 		\infty,
 	\end{equation*}
 	we have that for 
-	some subsequence of solutions to the Allen--Cahn equation
-	(\ref{allen_cahn_eq}) $ u_{\varepsilon } $ with initial datum $ u_{ 
+	some subsequence of solutions $ u_{\varepsilon } $ to the Allen--Cahn 
+	equation
+	(\ref{allen_cahn_eq}) with initial datum $ u_{ 
 		\varepsilon }^{ 0 } $, there exists a time-dependent partition $ \chi $ 
 	with 
 	$ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
@@ -157,18 +165,17 @@ This is captured by the following.
 	\in \cont \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus ;  \{ 0 , 1 
 	\}^{ P } \right) \right) $ such that $ u_{ \varepsilon } $ converges to 
 	$ u \coloneqq \sum_{ 1 \leq i \leq P } \chi_{ i } \alpha_{ i } $ almost 
-	everyhwere. Moreover $ u $ assumes the initial data $ u^{ 0 } $ in $ 
+	everywhere. Moreover $ u $ assumes the initial data $ u^{ 0 } $ in $ 
 	\cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we 
 	additionally assume that the 
 	time-integrated energies converge (\ref{energy_convergence}), then $ 
 	\chi $ moves by mean curvature in the sense of \Cref{motion_by_mmcf}.
 \end{theorem} 
 
-With these estimate, we can now prove the existence of normal velocities $ V_{ 
-i } $ for the evolving sets $ \Omega_{ i } $ if we assume that the 
-time-integrated energies converges, written out as in 
-(\ref{energy_convergence}), but now for the multiphase energy given by 
-(\ref{definition_of_multiphase_energy}).
+First we are going to prove the existence of normal velocities $ V_{ 
+i } $ for the evolving sets $ \Omega_{ i } $ under the assumption of the energy 
+convergence
+(\ref{energy_convergence}).
 
 \begin{proposition}
 	\label{existence_and_square_integrability_of_velocities_multiphase}
@@ -204,13 +211,10 @@ time-integrated energies converges, written out as in
 		absolutely continuous with respect to the energy measure $ \energy ( 
 		\cdot, u ) \dd{t } $ with square-integrable density.
 		
-		For this let $ \varphi $ be a testfunction. Then we can estimate by 
+		Let $ \varphi $ be a testfunction. Then we can estimate by 
 		Hölder's inequality
 		\begin{align*}
-			\int_{ 0 }^{ T }
-			\int
-			\varphi
-			\partial_{ t } \psi_{ i }
+			\partial_{ t } \psi_{ i } ( \varphi )
 			& =
 			\liminf_{ \varepsilon \to 0 }
 			\int_{ 0 }^{ T }
@@ -241,7 +245,7 @@ time-integrated energies converges, written out as in
 			\right)^{ 1/2 }
 			\\
 			& \leq
-			\sqrt{ 2 \energy_{ 0 } }
+			\sqrt{ \energy_{ 0 } }
 			\left(
 			\int_{ 0 }^{ T }
 			\energy ( u ; \varphi )
@@ -252,14 +256,15 @@ time-integrated energies converges, written out as in
 		(\ref{energy_dissipation_sharp})
 		and the proof of our claim is therefore complete.
 		
-		\item[Step 2:] For $ d_{ i } \coloneqq \min_{ j \neq i } $, we have 
+		\item[Step 2:] For $ d_{ i } \coloneqq \min_{ j \neq i } \sigma_{ i j } 
+		$, we have 
 		that $ d_{ i } \abs{ \partial_{ t } \chi_{ i } } \leq \abs{ \partial_{ 
 		t } \psi_{ i } } $.
 		
 		Using the disintegration Theorem 
 		\cite[Thm.~3.103]{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems}
-		 and the Fleming--Rishel co-area formula, we have that for any open set 
-		$ U \subseteq [ 0 , T ] \times \flattorus $ that
+		 and the Fleming--Rishel co-area formula, we have for any open set 
+		$ U \subseteq ( 0 , T ) \times \flattorus $ that
 		\begin{align*}
 			\abs{
 				\partial_{ t } \psi_{ i }
@@ -278,8 +283,7 @@ time-integrated energies converges, written out as in
 			\left\{
 			t 
 			\, \colon \,
-			\phi_{ i } 
-			\left( \sum_{ j } \chi_{ j } \alpha_{ j } \right) > s,
+			\sum_{ j } \chi_{ j } \sigma_{ i j } > s,
 			( t, x ) \in U
 			\right\}
 			\right)
@@ -320,9 +324,7 @@ time-integrated energies converges, written out as in
 			\abs{ \partial_{ t } \chi_{ i } } ( U ).
 		\end{align*}
 		Here the set $ \pi_{ x } ( U ) $ denotes the set of all $ t $ such that 
-		$ ( t , x ) $ is an element of $ U $.
-		By an approximation argument, this inequality holds for every 
-		testfunction as well, proving the claim.
+		$ ( t , x ) $ is an element of $ U $. This completes the proof.
 		
 		\item[Step 3:] The signed measure $ \partial_{ t } \chi_{ i } $ is 
 		singular to the wrong parts of $ \energy ( u ; \cdot ) $. More 
@@ -339,7 +341,6 @@ time-integrated energies converges, written out as in
 		$ \chi_{ i } ( t , x ) = \mathds{ 1 }_{ \tilde{ \Omega }_{ i } } ( t , 
 		x ) $
 		and by $ \tilde{ \Sigma }_{ i j } $ the corresponding interfaces.
-		
 		By \Cref{identities_for_measure_theoretic_boundaries} we can then write
 		\begin{equation*}
 			\abs{ \partial_{ t } \chi_{ i } }
@@ -391,8 +392,8 @@ time-integrated energies converges, written out as in
 			l } \right)
 			-
 			\abs{ \nabla \chi_{ k } }_{ d + 1 } 
-			\right)
 			\left( \tilde{ \Sigma } _{ i l } \right)
+			\right)
 			= 0.		
 		\end{align*}
 		This proves the desired singularity.
@@ -418,20 +419,24 @@ time-integrated energies converges, written out as in
 			\hm^{ d- 1 } |_{ \Sigma_{ j k } }
 			\dd{ t }.
 		\end{equation*}
-		In the last term, the second summand is by Step 3 singular to $ \abs{ 
-		\partial_{ t } \chi_{ i } } $ and the first summand is bounded by $ 
+		The second sum is by Step 3 singular to $ \abs{ 
+		\partial_{ t } \chi_{ i } } $ and the first sum is bounded by $ 
 		\abs{ \nabla \chi_{ i } } \dd{ t } $, which proves that $ \partial_{ t 
 		} \chi_{ i } $ is absolutely continuous with respect to $ \abs{ \nabla 
 		\chi_{ i } } \dd{ t } $.
-		
-		The estimate (\ref{velocity_l2_estimate}) is now a consequence of our 
-		previous arguments combined with a duality estimate. Fix some $ K > 0 $ 
+		Lastly the desired estimate (\ref{velocity_l2_estimate}) is now a 
+		consequence of our 
+		previous arguments combined with a duality estimate. By Step 3 we find 
+		a Borel-measurable set $ S $ such that for all $ j, k \neq i $, we have 
+		$ \hm^{ d-  1 } |_{ \Sigma_{ j k } } \dd{ t } ( S ) = 0 $ and $ \abs{ 
+		\partial_{ t } \chi_{ i } } ( ( 0 , T ) \times \flattorus \setminus S ) 
+		= 0 $. Fix some $ K > 0 $ 
 		and let $ \varphi_{ n } $ be a sequence of testfunctions which 
 		converges in 
 		$ \lp^{ 2 } \left( \abs{ \nabla \chi_{ i } } \dd{ t } \right) $ to the 
 		function
 		$ V_{ i } \mathds{ 1 }_{ \abs{ V_{ i } } \leq K } \mathds{ 1 }_{ 
-		\mathrm{supp} \abs{ \partial_{ t } \chi_{ i } } } $. Then combining the 
+		S } $. Then combining the 
 		previous steps, we can estimate
 		\begin{align*}
 			\int_{ 0 }^{ T }
@@ -454,7 +459,7 @@ time-integrated energies converges, written out as in
 			\abs{
 				\int_{ 0 }^{ T }
 				\int
-				\varphi_{ n } \partial \chi_{ i }
+				\varphi_{ n } \partial_{ t } \chi_{ i }
 			}
 			\\
 			& \lesssim
@@ -465,7 +470,7 @@ time-integrated energies converges, written out as in
 			\abs{ \partial_{ t } \psi_{ i } }
 			\\
 			& \leq
-			\sqrt{ 2 \energy_{ 0 } }
+			\sqrt{ \energy_{ 0 } }
 			\liminf_{ n \to \infty }
 			\left(
 			\int_{ 0 }^{ T }
@@ -474,7 +479,7 @@ time-integrated energies converges, written out as in
 			\right)^{ 1/2 }
 			\\
 			& \lesssim
-			\sqrt{ 2 \energy_{ 0 } }
+			\sqrt{ \energy_{ 0 } }
 			\left(
 			\int_{ 0 }^{ T }
 			\int
@@ -489,20 +494,8 @@ time-integrated energies converges, written out as in
 	Therefore our proof is complete.
 \end{proof}
 
-Nextup, we want to capture an important Lemma called the \enquote{equipartition 
-of energy} which states that under the energy convergence assumption 
-(\ref{energy_convergence}), it must already hold that
-\begin{equation*}
-	\frac{ \varepsilon }{ 2 } \abs{ \nabla u_{ \varepsilon } }^{ 2 }
-	-
-	\frac{ 1 }{ \varepsilon } W ( u_{ \varepsilon } )
-	\rightharpoonup^{ \ast }
-	0
-\end{equation*}
-holds in the distributional sense. The proof is similar to the twophase case 
-\Cref{equipartition_of_energies}.
-
-VLT HIER PAPER VON ILMANEN ZITIEREN
+As in the twophase case \Cref{equipartition_of_energies}, we have an 
+equipartition of energies. The proof is similar and therefore left out.
 
 \begin{lemma}
 	\label{equipartition_of_energies_multiphase}
@@ -543,11 +536,11 @@ VLT HIER PAPER VON ILMANEN ZITIEREN
 \subsection{Localization estimates}
 \label{section_localization_estimates}
 In order to prove convergence of the curvature and velocity term, we want to 
-reduce the multiphase case to the twophase case. The central idea here is to 
-cover the flat torus with a suitable covering of balls and argue that, up to an 
-arbitrarily small error as long as the balls are small enough, we can choose 
-for each ball majority phases $ i, j $ such that the multiphase mean curvature 
-looks like a twophase mean curvature on the ball, see 
+reduce the multiphase case to the two-phase case. The central idea here is to 
+cover the flat torus with a suitable covering of balls and argue that, up to a 
+small error, we can choose 
+for each ball majority phases $ i, j $ such that the partition looks like a 
+two-phase mean curvature flow on the ball, see 
 \Cref{figure_localization_of_mmcf}.
 
 \begin{figure}[h]
@@ -556,35 +549,15 @@ looks like a twophase mean curvature on the ball, see
 		
 		\draw[very thick]  (1,-1) -- (2, -2 );
 		\draw[very thick]  (4,-2) --(5,-1);
-		\draw[very thick]  (1,-5) --(2,-4);
-		\draw[very thick] (4,-4)--(5, -5);
+		%\draw[very thick]  (1,-5) --(2,-4);
+		%\draw[very thick] (4,-4)--(5, -5);
 		
 		\draw[very thick](2,-2)--(4,-2);
 		\draw[very thick] (4,-2)--(4,-4);
-		\draw[very thick] (4, -4)--(2, -4);
+		%\draw[very thick] (4, -4)--(2, -4);
 		\draw[very thick] (2, -4) -- (2, -2);
 		
-		\begin{comment}
-			
-			\draw[red] (1,-1) circle (0.5cm);
-			\draw[red] (1.5,-1) circle (0.5cm);
-			\draw[red] (2,-1) circle (0.5cm);
-			\draw[red] (2.5,-1) circle (0.5cm);
-			\draw[red] (3,-1) circle (0.5cm);
-			\draw[red] (3.5,-1) circle (0.5cm);
-			\draw[red] (4,-1) circle (0.5cm);
-			\draw[red] (4.5,-1) circle (0.5cm);
-			\draw[red] (5,-1) circle (0.5cm);
-			\draw[red] (1,-1.5) circle (0.5cm);
-			\draw[red] (1.5,-1.5) circle (0.5cm);
-			\draw[red] (2,-1.5) circle (0.5cm);
-			\draw[red] (2.5,-1.5) circle (0.5cm);
-			\draw[red] (3,-1.5) circle (0.5cm);
-			\draw[red] (3.5,-1.5) circle (0.5cm);
-			\draw[red] (4,-1.5) circle (0.5cm);
-			\draw[red] (4.5,-1.5) circle (0.5cm);
-			\draw[red] (5,-1.5) circle (0.5cm);
-		\end{comment}
+
 		\draw[green,thick] (1,-1.5) circle (0.5cm);	
 		\draw[green,thick] (1.5,-2) circle (0.5cm);	
 		\draw[red,thick] (2,-2) circle (0.5cm);	
@@ -607,8 +580,9 @@ looks like a twophase mean curvature on the ball, see
 	\label{figure_localization_of_mmcf}
 \end{figure}
 
-To formulate this rigorously let $ r > 0 $ and define the covering $ \beta_{ r 
-} $ of $ \flattorus $ by
+To formulate this rigorously let $ r > 0 $ and define the covering $ \mathcal{ 
+B }_{ r 
+} $ of the flat torus by
 \begin{equation*}
 	\mathcal{B}_{ r } \coloneqq
 	\left\{
@@ -626,7 +600,9 @@ with the same center, but double the radius.
 Additionally to choosing a majority phase, we can also argue that along the 
 chosen majority phase, we have a local flatness. Thus we may approximate the 
 outer unit normal up to an arbitrarily small error by a constant unit vector. 
-This is captured by the following Lemma.
+This is captured by the following Lemma found in 
+\cite{laux_otto_convergence_of_thresholding_scheme_for_mmcf}. The proof is 
+based on De Giorgi's structure theorem for sets of finite perimeter.
 
 \begin{lemma}
 	\label{localization_lemma_with_normals}
@@ -653,7 +629,7 @@ This is captured by the following Lemma.
 		\rho_{ B }
 		\abs{ \nabla \chi_{ k } }
 		\lesssim
-		\delta \energy ( \chi )
+		\delta \energy ( \chi ).
 	\end{equation*}
 \end{lemma}
 
@@ -663,13 +639,14 @@ equates to summing over all interfaces which are not the $ (i,j)$-th interface.
 Moreover the second summand is in some sense unnecessary, since the last 
 summand provides us with a localization on the $ (i,j)$-th interface, on which 
 we have $ \nu_{ i } = - \nu_{ j } $.
-However it is convenient to keep it so that we do now have to repeat this 
+However it is convenient to keep it so that we do not have to repeat this 
 argument.
 
 \begin{remark}
 	\label{localization_estimate_weaker}
-	This estimates implies also the smallness of
-	\begin{equation*}
+	This localization estimate also implies the smallness of
+	\begin{equation}
+		\label{alternative_localization_equality}
 		\sum_{ B \in \mathcal{ B }_{ r } }
 		\min_{ i }
 		\abs{
@@ -687,9 +664,10 @@ argument.
 		\int
 		\rho_{ B }
 		\abs{ \nabla \psi_{ i } }
-	\end{equation*}
+	\end{equation}
 	in the same sense as in the above \Cref{localization_lemma_with_normals}. 
-	Notice that the equality follows for example from 
+	Notice that the equality (\ref{alternative_localization_equality}) follows 
+	for example from 
 	\Cref{supremum_of_abs_nabla_psi_i_is_energy}, which yields that $ \abs{ 
 	\nabla 
 		\psi_{ i } } \leq \energy ( \chi ; \cdot )$. The smallness follows 
@@ -756,17 +734,19 @@ argument.
 		\sigma_{ i j }
 		\int_{ \Sigma_{ i j } }
 		\inner*{ \diff \xi }{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
-		\dd{ \hm^{ d - 1} }
+		\dd{ \hm^{ d - 1} }.
 	\end{equation*}
-	and additionally we have the estimate
+	Additionally we have the estimate
 	\begin{equation}
 		\label{pointwise_estimate_for_curvature}
+		\abs{
 		\int
 		\inner*{ 
 			\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } 	
 			\nabla W ( u_{ \varepsilon } ) }
 		{ \diff u_{ \varepsilon } \xi }
 		\dd{ x }
+		}
 		\lesssim
 		\norm{ \nabla \xi }_{ \sup }
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ).
@@ -774,9 +754,16 @@ argument.
 \end{proposition}
 
 \begin{remark}
-	We can not proceed exactly as in the twophase case since we do not have one 
-	primitive $ \phi $ and more importantly, we can not expect the functions $ 
-	\psi_{ i }^{ \varepsilon } $ to satisfy 
+	\label{difference_twophase_multiphase_curvature}
+	We can not proceed exactly as in the twophase case. There the key argument 
+	was that from the energy convergence, we could already infer that 
+	$ \abs{ \nabla \psi_{ \varepsilon } } ( \flattorus ) $ converges to $ \abs{ 
+	\nabla \psi } ( \flattorus ) $, and thus enabled us to apply the Theorem by 
+	Reshetnyak. Firstly we do not have one 
+	primitive $ \phi $ of $ \sqrt{ 2 W } $ in the multiphase case and more 
+	importantly, we can 
+	not expect the functions $ 
+	\psi_{ \varepsilon ,  i } $ to satisfy 
 	\begin{equation}
 		\label{energy_convergence_of_psi_i}
 		\abs{ \psi_{ \varepsilon ,i } } ( \flattorus ) \to \abs{ \psi_{ i } } ( 
@@ -810,16 +797,19 @@ argument.
 		=
 		\sum_{ 1 \leq j < k \leq P }
 		\abs{ \sigma_{ i j } - \sigma_{ i k } }
-		\hm^{ d - 1 } |_{ \Sigma_{ j k } },
+		\hm^{ d - 1 } |_{ \Sigma_{ j k } }.
 	\end{equation*}
-	which yields that localized on $ \partial_{ \ast } \Omega_{ i } $, we have 
+	Since $ \abs{ \sigma_{ i i } - \sigma_{ i k } } = \sigma_{ i k } $ for all 
+	$ k \neq i $,
+	this yields that localized on $ \partial_{ \ast } \Omega_{ i } $, we have 
 	the necessary convergence $ \abs{ \nabla \psi_{ \varepsilon ,i } } \to 
 	\abs{ \nabla \psi_{ i } } $. Thus we will develop a quantitative version of 
 	Reshetnyaks theorem and apply it to our setting.
 \end{remark}
 
 \begin{proof}[Proof of \Cref{convergence_of_curvature_multiphase}.]
-	Using the same calculations as in the twophase case, we obtain that
+	Using the same calculations as in the two-phase case, we obtain for a given 
+	test vector field $ \xi $ that
 	\begin{align*}
 		& \lim_{ \varepsilon \to 0 }
 		\int
@@ -848,13 +838,15 @@ argument.
 		\partial_{ x_{ k } } u_{ \varepsilon }^{ i }
 		\right)
 		\dd{ x } 
-		\eqqcolon I
+		\eqqcolon 
+		\lim_{ \varepsilon \to 0 } I_{ \varepsilon }
 	\end{align*}
-	Now however, we can not proceed as in the twophase case as explained above. 
+	Now however, we can not proceed as in the twophase case as explained in 
+	\Cref{difference_twophase_multiphase_curvature}. 
 	Instead we rewrite
 	\begin{equation}
 		\label{key_equality_for_ptw_estimate}
-		I
+		I_{ \varepsilon }
 		=
 		\int
 		\varepsilon
@@ -867,15 +859,18 @@ argument.
 		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 		\dd{ x },
 	\end{equation}
-	where we define $ N_{ \varepsilon } \coloneqq \nabla u_{ \varepsilon } / 
-	\abs{ \nabla u_{ \varepsilon } } $. By the equipartition of energies 
-	\Cref{equipartition_of_energies_multiphase} and using that $ \abs{N_{ 
-	\varepsilon } } \leq 1 $, we can replace $ \varepsilon \abs{ \nabla u_{ 
+	where we define $ N_{ \varepsilon } \coloneqq \diff u_{ \varepsilon } / 
+	\abs{ \diff u_{ \varepsilon } } $ wherever it is defined, and zero else. 
+	By the equipartition of energies 
+	(\Cref{equipartition_of_energies_multiphase}) and using that 
+	$ \abs{N_{ \varepsilon } } \leq 1 $, we can replace $ \varepsilon \abs{ 
+	\nabla u_{ 
 	\varepsilon } }^{ 2 } $ by $ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ 
 	\nabla u_{ \varepsilon  } } $. 
 	
-	Summarizing our results, it suffices by 
-	\Cref{equipartition_of_energies_multiphase} and rescaling to show for all $ 
+	We can take care of the term involving the divergence again with the 
+	equipartition of energies. 
+	Thus summarizing our results, it suffices by rescaling to show for all $ 
 	A \in \cont^{ \infty } ( \flattorus ; \mathbb{ R }^{ d \times d } ) $ with 
 	$ \abs{ A } \leq 1 $ that
 	\begin{equation}
@@ -893,15 +888,16 @@ argument.
 		\inner*{ A }{ \nu_{ i } \otimes \nu_{ i } }
 		\dd{ \hm^{ d - 1 } }.
 	\end{equation}
-	To this end, we will show the following three claims for a cutoff $ \eta $.
+	To this end, we will show the following three claims for a partition of 
+	unity function $ \eta $.
 	\begin{itemize}[wide=0pt]
 		\item[Claim 1:]
 		We choose a majority phase by introducing the function $ \phi_{ i } $ 
 		on the right hand side of equation 
 		(\ref{desired_convergence_for_convergence_of_curvature}). The 
 		corresponding error is given by
-		\begin{equation*}
-			\limsup_{ \varepsilon \to 0 }
+		\begin{align*}
+			& \limsup_{ \varepsilon \to 0 }
 			\abs{ 
 				\int
 				\eta 
@@ -912,21 +908,24 @@ argument.
 				-
 				\int
 				\eta
-				\inner*{ A }{ \nu_{ \varepsilon, i } \otimes \nu_{ 
+				\inner*{ A }{ \theta_{ \varepsilon, i } \otimes \theta_{ 
 						\varepsilon , i } }
-				\abs{ \nabla \psi_{ i } }
+				\abs{ \nabla \psi_{ \varepsilon , i } }
 				\dd{ x }
 			}
-			\lesssim
+			\\
+			\lesssim{} &
 			\energy ( u ; \eta ) 
 			-
 			\int
 			\eta
 			\abs{ \nabla \psi_{ i } },
-		\end{equation*}
-		where the approximate normal of the $ i$-th phase is defined by $ \nu_{ 
+		\end{align*}
+		where the approximate normal of the $ i$-th phase is defined by $ 
+		\theta_{ 
 		i }^{ \varepsilon } \coloneqq \nabla \psi_{ i }^{ \varepsilon } / \abs{ 
-		\nabla \psi_{ i }^{ \varepsilon } } $.
+		\nabla \psi_{ i }^{ \varepsilon } } $ wherever the gradient does not 
+		vanish, and zero else.
 		
 		\item[Claim 2:]
 		By a quantitative Reshetnyak type argument, we have
@@ -934,7 +933,7 @@ argument.
 			\limsup_{ \varepsilon \to 0 }
 			\abs{
 				\int
-				\eta \inner*{ A }{ \nu_{ \varepsilon, i } \otimes \nu_{ 
+				\eta \inner*{ A }{ \theta_{ \varepsilon, i } \otimes \theta_{ 
 						\varepsilon,  i } }
 				\abs{ \nabla \psi_{ \varepsilon,  i } }
 				\dd{ x }
@@ -970,7 +969,7 @@ argument.
 			\energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi_{ i } },
 		\end{equation*}
 		where we remind that $ \nu_{ j } $ is the inner unit normal of $ 
-		\Omega_{ i } $.
+		\Omega_{ j } $.
 	\end{itemize}
 	Let us first assume that we have proven those three claims and show how the 
 	desired convergence 
@@ -1007,7 +1006,7 @@ argument.
 			\sigma_{ j k }
 			\int_{ \Sigma_{ j k } }
 			\inner*{ A \eta_{ B } }
-			{ \nu_{ i } \otimes \nu_{i } }
+			{ \nu_{ j } \otimes \nu_{ j } }
 			\dd{ \hm^{ d - 1 } }
 		}
 		\\
@@ -1024,7 +1023,7 @@ argument.
 			-
 			\int
 			\inner*{ A \eta_{ B } }
-			{ \nu_{ \varepsilon , i }\otimes \nu_{ \varepsilon ,i } 
+			{ \theta_{ \varepsilon , i }\otimes \theta_{ \varepsilon ,i } 
 			}
 			\abs{ \nabla \psi_{ \varepsilon,  i } }
 			\dd{ x }
@@ -1033,8 +1032,8 @@ argument.
 		& \quad \quad \quad \;\;\;\!\: +
 		\abs{ 
 			\int
-			\inner*{ A \eta_{ B } }{ \nu_{ \varepsilon ,i } \otimes 
-				\nu_{ \varepsilon , i } }
+			\inner*{ A \eta_{ B } }{ \theta_{ \varepsilon ,i } \otimes 
+				\theta_{ \varepsilon , i } }
 			\abs{ \nabla \psi_{ \varepsilon, i } }
 			\dd{ x }
 			-
@@ -1084,13 +1083,14 @@ argument.
 			\otimes
 			\frac{ \nabla \phi }{ \abs{ \nabla \phi } }
 			\in 
-			\mathbb{ R }^{ N }.
+			\mathbb{ R }^{ N },
 		\end{equation*}
+		which is motivated by the chain rule.
 		The multiplication with $ \pi $ is an orthogonal projection $ \pi 
 		\colon \mathbb{ R }^{ N \times d } \to \mathbb{ R }^{ N \times d } $. 
 		Moreover, we can compute that
 		\begin{align*}
-			( \pi N^{ \top } \pi N )_{ i j }
+			( (\pi N)^{ \top } \pi N )_{ i j }
 			& =
 			\sum_{ k = 1 }^{ N }
 			( \pi N )_{ k i }
@@ -1108,7 +1108,7 @@ argument.
 			\\
 			& =
 			\sum_{ l, r = 1 }^{ N }
-			N_{ l i } N_{ r , j }
+			N_{ l i } N_{ r j }
 			\sum_{ k = 1 }^{ N }
 			\pi_{ k l }
 			\pi_{ k r }
@@ -1133,16 +1133,19 @@ argument.
 					\phi } }
 		\end{align*}
 		Thus we infer that
-		\begin{align*}
-			\inner*{ A }{ \pi N_{ \varepsilon }^{ \top } \pi N_{ \varepsilon } }
+		\begin{align}
+			\notag
+			\inner*{ A }{ ( \pi N_{ \varepsilon })^{ \top } \pi N_{ \varepsilon 
+			} }
 			& =
 			\sum_{ i, j = 1 }^{ d }
-			A_{ i , j } 
+			A_{ i j } 
 			\frac{ \partial_{ i } \psi_{ \varepsilon } }{ \abs{ \nabla \phi 
 				} \abs{ \nabla u_{ \varepsilon } } }
 			\frac{ \partial_{ j } \psi_{ \varepsilon } }{ \abs{ \nabla \phi 
 				} \abs{ \nabla u_{ \varepsilon } } }
 			\\
+			\notag
 			& =
 			\frac{ \abs{ \nabla \psi_{ \varepsilon } }^{ 2 } }{ \abs{ \nabla 
 					\phi }^{ 2 } \abs{ \nabla u_{ \varepsilon } }^{ 2 } }
@@ -1151,10 +1154,13 @@ argument.
 							\varepsilon } } } \otimes \frac{ \nabla \psi_{ 
 							\varepsilon } }{ 
 					\abs{ \nabla \psi_{ \varepsilon } } } }
-			= 
+			\\
+			\label{rewriting_orthogonal_projection_equation}
+			& = 
 			\abs{ \pi N_{ \varepsilon } }^{ 2 }
-			\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon } },
-		\end{align*}
+			\inner*{ A }{ \theta_{ \varepsilon } \otimes \theta_{ \varepsilon } 
+			},
+		\end{align}
 		where we used that 
 		\begin{equation*}
 			\abs{ \pi N_{ \varepsilon } }^{ 2 }
@@ -1184,28 +1190,32 @@ argument.
 			( N - \pi N )^{ \top } ( N - \pi N ).
 		\end{align*}
 		In order to prove the claim, we first get an error when replacing $ N_{ 
-			\varepsilon }^{ \top } N_{ \varepsilon } $ with $ \nu_{ \varepsilon 
+			\varepsilon }^{ \top } N_{ \varepsilon } $ with 
+		$ \theta_{ \varepsilon 
 			} 
-		\otimes \nu_{ \varepsilon } $ and the second error when replacing $ 
-		\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $ 
+		\otimes \theta_{ \varepsilon } $ 
+		and the second error when replacing 
+		$ \sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } } $ 
 		by $ \abs{ \nabla \psi_{ \varepsilon } } $.
-		For the first error we can estimate
+		For the first error we can estimate by the Pythagorean Theorem and 
+		equation (\ref{rewriting_orthogonal_projection_equation}) that
 		\begin{align*}
 			& \abs{ 
 				\int
 				\eta 
-				\inner*{ A }{ N_{ \varepsilon } N_{ \varepsilon }^{ \top } }
+				\inner*{ A }{ N_{ \varepsilon }^{ \top } N_{ \varepsilon } }
 				\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
 						\varepsilon } }
 				\dd{ x }
 				-
 				\int
 				\eta
-				\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
+				\inner*{ A }{ \theta_{ \varepsilon } \otimes \theta_{ 
+				\varepsilon 
 				} }
 				\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
 						\varepsilon } }
-				dd{ x }
+				\dd{ x }
 			}
 			\\
 			\leq{} &
@@ -1239,7 +1249,7 @@ argument.
 				\int
 				\eta
 				\inner*{ A }
-				{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon } }
+				{ \theta_{ \varepsilon } \otimes \theta_{ \varepsilon } }
 				\sqrt{ 2 W ( u_{ \varepsilon } ) }
 				\abs{ \nabla u_{ \varepsilon } }
 				\dd{ x }
@@ -1260,7 +1270,8 @@ argument.
 			\right)^{ 2 }
 			\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon 
 			} }
-			\dd{ x }= I_{ \varepsilon }.
+			\dd{ x }
+			\eqqcolon I_{ \varepsilon }.
 		\end{align*}
 		Using again that multiplication with $ \pi $ is an orthogonal 
 		projection, we have
@@ -1290,7 +1301,8 @@ argument.
 			\int
 			\eta
 			\left(
-			1 - \abs{ \frac{ \diff \phi }{ \abs{ \nabla \phi } } N_{ 
+			1 - \abs{ \frac{ \diff \phi ( u_{ \varepsilon } ) }{ \abs{ \nabla 
+			\phi ( u_{ \varepsilon } ) } } N_{ 
 					\varepsilon } }
 			\right)
 			\sqrt{ 2 W ( u_{ \varepsilon } ) }
@@ -1337,7 +1349,8 @@ argument.
 			& \abs{
 				\int
 				\eta
-				\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
+				\inner*{ A }{ \theta_{ \varepsilon } \otimes \theta_{ 
+				\varepsilon 
 				} }
 				\sqrt{ 2 W ( u_{ \varepsilon } ) }
 				\abs{ \nabla u_{ \varepsilon } }
@@ -1345,7 +1358,8 @@ argument.
 				-
 				\int
 				\eta
-				\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
+				\inner*{ A }{ \theta_{ \varepsilon } \otimes \theta_{ 
+				\varepsilon 
 				} }
 				\abs{ \nabla \psi_{ \varepsilon } }
 				\dd{ x }
@@ -1355,7 +1369,8 @@ argument.
 			\abs{
 				\int
 				\eta
-				\inner*{ A }{ \nu_{ \varepsilon } \otimes \nu_{ \varepsilon 
+				\inner*{ A }{ \theta_{ \varepsilon } \otimes \theta_{ 
+				\varepsilon 
 				} }
 				\left(
 				\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ 
@@ -1390,14 +1405,21 @@ argument.
 	\end{proof}
 	
 	\begin{proof}[Proof of Claim 2.]
-		Consider the sequence $ ( \mu_{ \varepsilon } )_{ \varepsilon } $ of 
+		The strategy here is to first pass to the space of measures in order to 
+		obtain some limit, and then sandwich the limit between the measure $ 
+		\abs{ \nabla \psi_{ i } } $ and the energy measure $ \energy ( u ; 
+		\cdot ) $.
+		Thus consider the sequence $ ( \mu_{ \varepsilon } )_{ \varepsilon } $ 
+		of 
 		Radon measures on $ \flattorus \times \mathbb{ S }^{ d - 1 } $ defined 
 		by 
 		\begin{equation*}
 			\mu_{ \varepsilon }
 			\coloneqq
-			\delta_{ u_{ \varepsilon } ( x ) }
 			\abs{ \nabla \psi_{ \varepsilon } } \dd{ x }
+			\otimes
+			\left( \delta_{ u_{ \varepsilon } ( x ) } \right)_{ x \in 
+			\flattorus }
 		\end{equation*}
 		which acts on continuous functions $ \varphi $ through
 		\begin{equation*}
@@ -1532,7 +1554,7 @@ argument.
 			\abs{ 
 				\tilde{ \nu } \otimes ( \tilde{ \nu } - \theta ) 
 				+
-				\theta \otimes ( \tilde{ \nu } - \theta ) 
+				( \tilde{ \nu } - \theta ) \otimes \theta
 			}
 			\leq
 			2 \abs{ \tilde{ \nu } - \theta }
@@ -1598,8 +1620,9 @@ argument.
 		be estimated by 
 		$ \energy ( u ; \eta ) - \int \eta \abs{ \nabla \psi } $.
 		For the second summand, we use a duality argument:
-		Given a smooth vectorfield $ \xi $, we have by the weak convergence $ 
-		\nabla \psi_{ \varepsilon } \to \nabla \psi $ that
+		Given a smooth vector field $ \xi $, we have by the weak convergence of 
+		$ 
+		\nabla \psi_{ \varepsilon } $ to $ \nabla \psi $ that
 		\begin{equation*}
 			\int
 			\inner*{ \xi }{ \theta }
@@ -1607,7 +1630,7 @@ argument.
 			=
 			\lim_{ \varepsilon \to 0 }
 			\int
-			\inner*{ \xi }{ \nu_{ \varepsilon } }
+			\inner*{ \xi }{ \theta_{ \varepsilon } }
 			\abs{ \nabla \psi_{ \varepsilon } }
 			\dd{ x }
 			=
@@ -1729,29 +1752,33 @@ twophase case that we had to freeze the unit normal. However we now have the
 important difference that $ \nabla u_{ \varepsilon } $ describes both the 
 change in physical space (domain) and the state space (codomain). Since the 
 supposed limit $ \nu_{ i } $ only describes the change in physical space, we 
-should only freeze the normal in this direction. Using the equipartition of 
-energies \Cref{equipartition_of_energies_multiphase} which tells us that $ 
+should only freeze the normal in this direction. We thus come up with the 
+following definition.
+
+\begin{comment}Using the equipartition of 
+energies (\Cref{equipartition_of_energies_multiphase}) which tells us that $ 
 \varepsilon / 2 \abs{ \nabla u_{ \varepsilon } }^{ 2 } $ roughly equals $ 1 / 
 \varepsilon W ( u_{ \varepsilon } ) $, we come up with the following definition 
 which is similar to the tilt-excess defined in the twophase case.
+\end{comment}
 
 \begin{definition}
+	Let $ u _{ \varepsilon } $ and $ \chi $ be as in 
+	\Cref{initial_convergence_result_multiphase}.
 	Let $ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } $ and $ \eta \in \cont^{ 
 		\infty } \left( [ 0 , T ] \times \flattorus ; [ 0 , 1 ] \right) $. For 
 		$ 
-	\varepsilon > 0 $ and a function $ u_{ \varepsilon } \in \wkp^{ 1 , 2 } 
-	\left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ N } \right) $, the 
-	approximative localized tilt-excess of the $ i$-th phase is given by by
+	\varepsilon > 0 $  the 
+	approximative localized tilt-excess of the $ i$-th phase is given by
 	\begin{equation*}
-		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
-			\varepsilon } )
+		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta )
 		\coloneqq
 		\int_{ 0 }^{ T }
 		\int
 		\eta
 		\frac{ 1 }{ \varepsilon }
 		\abs{ 
-			\varepsilon \nabla u_{ \varepsilon } 
+			\varepsilon \diff u_{ \varepsilon } 
 			+
 			\nabla \phi_{ i } ( u_{ \varepsilon } ) 
 			\otimes
@@ -1760,14 +1787,10 @@ which is similar to the tilt-excess defined in the twophase case.
 		\dd{ x }
 		\dd{ t }.
 	\end{equation*}
-	In the limit $ \varepsilon = 0 $ and for a partition 
-	$ \chi_{ i } = \mathds{ 1 }_{ \Omega_{ i } } \in \bv \left(
-	( 0 , T ) \times \flattorus ; \{ 0 , 1 \} 
-	\right) $
-	with $ \sum_{ i } \chi_{ i } = 1 $,
+	In the limit $ \varepsilon = 0 $,
 	we define the tilt-excess for $ 1 \leq i, j \leq P $ , $ i \neq j $ to be
 	\begin{equation*}
-		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta , u ) 
+		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta  ) 
 		\coloneqq
 		\int_{ 0 }^{ T }
 		\int
@@ -1788,13 +1811,12 @@ which is similar to the tilt-excess defined in the twophase case.
 		\int
 		\eta 
 		\abs{ \nabla \chi_{ k } }
-		\dd{ t },
+		\dd{ t }.
 	\end{equation*}
-	where $ u = \sum_{ 1 \leq i \leq P } \chi_{ i } \alpha_{ i } $.
 \end{definition}
 
 Notice that we use $ + \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
-	\ast } $ in the definition of the approximative tilt excess instead of its 
+	\ast } $ in the definition of the approximate tilt excess instead of its 
 negative since the normal of $ \chi_{ i } $ points inwards with respect to $ 
 \Omega_{ i } $, but $ \nabla \phi_{ i } / \abs{ \nabla \phi_{ i } } $ points 
 away from $ \Omega_{ i } $.
@@ -1819,10 +1841,9 @@ of the limit.
 	\right) $, we have
 	\begin{equation*}
 		\limsup_{ \varepsilon \to 0 }
-		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
-			\varepsilon } ) 
+		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta  ) 
 		\lesssim
-		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta , \chi ).
+		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta ).
 	\end{equation*}
 \end{lemma}
 
@@ -1830,8 +1851,7 @@ of the limit.
 	By expanding the square, we see that we can rewrite the approximate 
 	tilt-excess as
 	\begin{align*}
-		& \tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
-			\varepsilon } ) 
+		& \tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta ) 
 		\\
 		={} &
 		\int_{ 0 }^{ T }
@@ -1840,10 +1860,10 @@ of the limit.
 		\frac{ 1 }{ \varepsilon }
 		\left(
 		\varepsilon^{ 2 }
-		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\abs{ \diff u_{ \varepsilon } }^{ 2 }
 		+
 		2 \varepsilon 
-		\inner*{ \nabla u_{ \varepsilon } }
+		\inner*{ \diff u_{ \varepsilon } }
 		{ \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
 				\ast } }
 		+
@@ -1857,7 +1877,7 @@ of the limit.
 		A_{ \varepsilon } + B_{ \varepsilon } + C_{ \varepsilon}.
 	\end{align*}
 	Using the equipartition of energies 
-	\Cref{equipartition_of_energies_multiphase}, we immediately get that 
+	(\Cref{equipartition_of_energies_multiphase}), we immediately get that 
 	\begin{align*}
 		\limsup_{ \varepsilon \to 0 }
 		A_{ \varepsilon }
@@ -1902,13 +1922,13 @@ of the limit.
 		\int_{ 0 }^{ T }
 		\int
 		2 \eta
-		\inner*{ \nabla \psi_{ \varepsilon , i } }{ \nu^{ \ast } }
+		\inner*{ \nu^{ \ast } }{ \nabla \psi_{ \varepsilon , i } }
 		\dd{ x }
 		\dd{ t }
 		=
-		2 \int_{ 0 }^{ T }
+		\int_{ 0 }^{ T }
 		\int
-		\eta
+		2 \eta
 		\inner*{ \nu^{ \ast } }{ \nabla \psi_{ i } }
 		\dd{ t }.
 	\end{equation*}
@@ -1988,8 +2008,7 @@ of the limit.
 	which yields that
 	\begin{equation*}
 		\limsup_{ \varepsilon \to 0 }
-		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta , u_{ 
-			\varepsilon } )
+		\tilt_excess_{ i }^{ \varepsilon } ( \nu^{ \ast } ; \eta )
 		\leq
 		2 \sigma_{ i j } \int_{ 0 }^{ T }
 		\int
@@ -2015,16 +2034,16 @@ side of the last estimate. However it serves to symmetrize the multiphase
 excess.
 
 Using \Cref{approximate_tilt_excess_estimated_in_limit_by_tilt_excess}, we can 
-now prove the convergence of the velocity term.
+now prove a localized version of the convergence of the velocity term.
 
 \begin{proposition}
 	\label{convergence_of_velocity_multiphase}
 	In the situation of \Cref{initial_convergence_result_multiphase} and under 
 	the assumption that the time-integrated energies converge 
 	(\ref{energy_convergence}), there exists a finite Radon measure $ \mu $ on 
-	$ [ 0 , T ] \times \flattorus $ such that for any $ 1 \leq i , j \leq P $ 
-	with $ i \neq j $ and any parameter $ \alpha \in ( 0 , 1 ) $,  any unit 
-	vector $ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } $ and any test vector 
+	$ [ 0 , T ] \times \flattorus $ such that for every $ 1 \leq i , j \leq P $ 
+	with $ i \neq j $, every parameter $ \alpha \in ( 0 , 1 ) $, every unit 
+	vector $ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } $ and every test vector 
 	field $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( ( 0 , T ) \times 
 	\flattorus ; \mathbb{ R }^{ d } \right) $, we have
 	\begin{align*}
@@ -2050,7 +2069,7 @@ now prove the convergence of the velocity term.
 		\norm{ \xi }_{ \mathrm{sup} }
 		\left(
 		\frac{ 1 }{ \alpha } \tilt_excess_{ i j } \left( \nu^{ \ast } ; 
-		\rho , u \right) 
+		\rho \right) 
 		+ \alpha \mu ( \rho ) 
 		\right).
 	\end{align*}
@@ -2066,8 +2085,9 @@ now prove the convergence of the velocity term.
 	As in the twophase case, we first choose a majority phase and then freeze 
 	the approximate normal $ \varepsilon \nabla u_{ \varepsilon } $ by 
 	replacing it with $ - \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
-		\ast } $. The error we can be estimated by Young's inequality through
-	\begin{align*}
+	\ast } $. The error we can be estimated by Young's inequality through
+	\begin{align}
+		\notag
 		& \abs{
 			\int_{ 0 }^{ T }
 			\int
@@ -2086,15 +2106,16 @@ now prove the convergence of the velocity term.
 			\dd{ t }
 		}
 		\\
+		\notag
 		={} &
 		\abs{
 			\int_{ 0 }^{ T }
 			\int
-			\sqrt{ \varepsilon }
 			\inner*
-			{ \partial_{ t } u_{ \varepsilon } }{ 
+			{ 
+				\sqrt{ \varepsilon } \partial_{ t } u_{ \varepsilon } }{ 
 				\left(
-				\sqrt{ \varepsilon } \nabla u_{ \varepsilon }
+				\sqrt{ \varepsilon } \diff u_{ \varepsilon }
 				+
 				\frac{ 1 }{ \sqrt{ \varepsilon } }
 				\nabla \phi_{ i } \otimes \nu^{ \ast } 
@@ -2105,6 +2126,7 @@ now prove the convergence of the velocity term.
 			\dd{ t }
 		}
 		\\
+		\label{first_error_for_velocity}
 		\leq{} &
 		\frac{ 1 }{ 2 }
 		\norm{ \xi }_{ \mathrm{sup} }
@@ -2118,11 +2140,9 @@ now prove the convergence of the velocity term.
 		\dd{ t }
 		+
 		\frac{ 1 }{ \alpha }
-		\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \rho , 
-		u_{ 
-			\varepsilon }  \right)
+		\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \rho \right)
 		\right).
-	\end{align*}
+	\end{align}
 	We thus have arrived at the term
 	\begin{equation*}
 		- \int_{ 0 }^{ T }
@@ -2140,8 +2160,8 @@ now prove the convergence of the velocity term.
 		\dd{ x }
 		\dd{ t },
 	\end{equation*} 
-	which by the weak convergence $ \partial_{ t } \psi_{ \varepsilon,  i } 
-	\rightharpoonup \partial_{ t } \psi_{ i } $ converges to
+	which by the weak convergence of $ \partial_{ t } \psi_{ \varepsilon,  i } 
+	$ to $ \partial_{ t } \psi_{ i } $ converges to
 	\begin{equation*}
 		- \sum_{ 1 \leq j \leq P }
 		\sigma_{ i j }
@@ -2208,7 +2228,7 @@ now prove the convergence of the velocity term.
 			\int_{ 0 }^{ T }
 			\int_{ \Sigma_{ i j } }
 			\left(
-			\inner*{ \xi }{ \nu^{ \ast } }
+			-\inner*{ \xi }{ \nu^{ \ast } }
 			+
 			\inner*{ \xi }{ \nu_{ i } }
 			\right)
@@ -2217,9 +2237,10 @@ now prove the convergence of the velocity term.
 			\dd{ t }
 		}.
 	\end{align*}
-	By applying Young's inequality twice and using that on $ \Sigma_{ i j } 
+	By applying Young's inequality twice and using again that on $ \Sigma_{ i j 
+	} 
 	$, we have $ V_{ 
-		i } = - V_{ j } $, we furthermore estimate
+		i } = - V_{ j } $, we furthermore estimate this term by
 	\begin{align*}
 		& \norm{ \xi }_{ \mathrm{sup} }
 		\left(
@@ -2241,6 +2262,7 @@ now prove the convergence of the velocity term.
 		+
 		\int_{ 0 }^{ T }
 		\int_{ \Sigma_{ i j } }
+		\rho
 		\abs{ V_{ i } }
 		\abs{ \nu^{ \ast } - \nu_{ i } }
 		\dd{ \hm^{ d - 1 } }
@@ -2260,10 +2282,12 @@ now prove the convergence of the velocity term.
 		\dd{ t}
 		+
 		\frac{ 1 }{ \alpha }
-		\tilt_excess_{ i j } ( \nu^{ \ast } ; \rho , u )
+		\tilt_excess_{ i j } ( \nu^{ \ast } ; \rho )
 		\right).
 	\end{align*}
-	We therefore define the measure $ \mu $ through
+	By looking again at the first error we made in inequality 
+	(\ref{first_error_for_velocity}), we therefore define the measure $ \mu $ 
+	through
 	\begin{equation*}
 		\mu
 		\coloneqq
@@ -2274,7 +2298,7 @@ now prove the convergence of the velocity term.
 		+
 		\mu_{ 2 },
 	\end{equation*}
-	where $ \mu_{ 2 } $ is the weak $ \ast $ limit of some non-relabeled 
+	where $ \mu_{ 2 } $ is the weak-star limit of some non-relabelled 
 	subsequence of the Radon measures $ \varepsilon \abs{ \partial_{ t } u_{ 
 			\varepsilon } }^{ 2 } \dd{ x } \dd{ t } $, which stay bounded due 
 			to the 
