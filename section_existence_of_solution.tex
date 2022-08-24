@@ -6,6 +6,15 @@ movements scheme and arguments from the theory of gradient flows and has been
 very 
 briefly sketched in 
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. 
+Note moreover that one would in fact expect even more regularity for a solution 
+of the Allen--Cahn equation. In fact, it has been shown by de Mottoni and 
+Schatzmann in 
+\cite{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces} that 
+in the scalar case we have that for bounded initial data, we have that u is 
+smooth for positive times. Their Ansatz is a variation of parameters and the 
+regularity follows from the smoothing effect of the heat kernel. However de 
+Giorgi's minimizing movements scheme has broad applications to a wide class of 
+gradient flows, which is why we want to present it here.
 
 \begin{theorem}
 	\label{existence_of_ac_solution}
@@ -425,25 +434,25 @@ briefly sketched in
 		This implies that 
 		\begin{align*}
 			\int
-			\inner*{ \nabla u ( t ) }{ \nabla \xi }
+			\inner*{ \diff u ( t ) }{ \diff \xi }
 			\dd{ x }
 			& = 
 			-
 			\int
-			\inner*{ u ( t ) }{ \divg \nabla \xi  }
+			\divg \diff \xi u( t )
 			\dd{ x }
 			\\
 			& = 
 			-
 			\lim_{ n \to \infty }
 			\int
-			\inner*{ u_{ k_{ n } }^{ h_{ n } } }{ \divg \nabla \xi  }
+			\divg \diff \xi u_{ k_{ n } }^{ h_{ n } } 
 			\dd{x }
 			\\
 			& = 
 			\lim_{ n \to \infty }
 			\int
-			\inner*{ \nabla u_{ k_{ n } }^{ h_{ n } } }{ \nabla \xi }
+			\inner*{ \diff u_{ k_{ n } }^{ h_{ n } } }{ \diff \xi }
 			\dd{ x }.
 		\end{align*}
 		In Step 6, we moreover have shown that $ \partial_{ t } u^{ h_{ n } } $ 

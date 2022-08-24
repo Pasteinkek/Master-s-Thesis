@@ -217,11 +217,12 @@ defined by
 \begin{equation}
 	\label{equation_mu_in_figure}
 	\mu_{ t } \coloneqq
-	2 \hm^{ 1 } |_{ l } \otimes \left(  \frac{ 1 }{ 2 } \delta_{ ( 1 , 0 ) } + 
-	 \frac{ 1 }{ 2 }\delta_{ ( - 1 , 0 ) }\right)_{ x \in \flattorus } ,
+	2 \hm^{ 1 } |_{ l } \otimes \left(  \frac{ 1 }{ 2 } \delta_{ e_{ 1 } } + 
+	 \frac{ 1 }{ 2 }\delta_{ -e_{ 1 } }\right)_{ x \in \flattorus } ,
 \end{equation}
 where $ l $ is the red line to which the phase 
-of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero. The factor 
+of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero and $ e_{ 1 
+} = ( 1 , 0 )^{ \top } $. The factor 
 2 comes from the fact that we obtain energy from both the collapsing interfaces.
 
 The equation (\ref{equation_varifold_velocity}) for the  normal speed is simply 
@@ -304,7 +305,7 @@ is zero since
 	=
 	\int_{ l }
 	\frac{ 1 }{ 2 }
-	\inner*{ \xi }{ ( 1 , 0 ) + ( - 1 , 0 ) }
+	\inner*{ \xi }{ e_{ 1 } - e_{ 1 } }
 	\dd{ \hm^{ 1 } }
 	= 
 	0.
@@ -553,9 +554,9 @@ described by
 	\hm^{ 1 } |_{ l }
 	\otimes
 	\left( 
-		\frac{ 1 }{ 2 } \delta_{ ( 1 , 0 ) } 
+		\frac{ 1 }{ 2 } \delta_{ e_{ 1 } } 
 		+ 
-		\frac{ 1 }{ 2 } \delta_{ ( - 1 , 0 ) } 
+		\frac{ 1 }{ 2 } \delta_{ - e_{ 1 } } 
 	\right)_{ x \in \flattorus }.
 \end{equation}
 
@@ -807,7 +808,8 @@ behaves similarly to its two-phase equivalent.
 	dimensions and let $ \rho \colon \mathbb{ R } \to (-\infty, \infty ) $ be 
 	some positive smooth $\Lambda$-periodic function which is not constant. 
 	Then we consider the varifold given by $ \mu = \rho ( x_{ 1 } ) \hm^{ 1 } 
-	|_{ [ 0 , \Lambda ) \times \{ 0 \} } \otimes \delta_{ ( 0 , 1 ) } $. We 
+	|_{ [ 0 , \Lambda ) \times \{ 0 \} } \otimes \delta_{ e_{ 2 } } $, where $ 
+	e_{ 2 } = ( 0 , 1 )^{ \top } $. We 
 	compute that for a given test vector field $ \xi $, we have
 	\begin{align*}
 		\int
@@ -815,7 +817,7 @@ behaves similarly to its two-phase equivalent.
 		\dd{ \mu }
 		& =
 		\int_{ 0 }^{ \Lambda }
-		\inner*{ \diff \xi ( x_{ 1 } , 0 ) }{ ( 1, 0 ) \otimes ( 1, 0 ) }
+		\inner*{ \diff \xi ( x_{ 1 } , 0 ) }{ e_{ 1 } \otimes e_{ 1 } }
 		\rho ( x_{ 1 } )
 		\dd{ x_{ 1 } }
 		\\
@@ -829,17 +831,22 @@ behaves similarly to its two-phase equivalent.
 		\int_{ 0 }^{ \Lambda }
 		\xi^{ 1 }
 		\rho' ( x_{ 1 } )
-		\dd{ x_{ 1 } }
-		\\ & =
-		\int_{ 0 }^{ \Lambda }
-			\inner*{ H ( x_{ 1 }, 0 ) }{ \xi ( x_{ 1 } , 0 ) }
-			\rho ( x_{ 1 } )
-		\dd{ x_{ 1 } },
+		\dd{ x_{ 1 } }.
 	\end{align*}
-	which implies that $ H $ is given on $ [ 0 , \Lambda ) \times \{ 0 \} $ $ 
+	If a mean curvature vector $ H $ would exist, then this integral would have 
+	to be equal to
+	\begin{equation*}
+		\int_{ 0 }^{ \Lambda }
+			-\inner*{ H ( x_{ 1 } , 0 ) }{ \xi ( x_{ 1 } , 0 )  }
+			\rho ( x_{ 1 } )
+		\dd{ x_{ 1 } }.
+	\end{equation*}
+	This implies that $ H $ would be given on $ [ 0 , \Lambda ) \times \{ 0 \} 
+	$ $ 
 	\hm^{ 1 } $ almost everywhere by 
 	\begin{equation*}
-		H ( x ) = \frac{ \rho' ( x_{ 1 } ) }{ \rho ( x_{ 1 } ) } ( 1 , 0 ),
+		H ( x ) = \frac{ \rho' ( x_{ 1 } ) }{ \rho ( x_{ 1 } ) } e_{ 1 },
 	\end{equation*}
-	which does not lie in the normal space of the varifold.
+	which does not lie in the normal space of the varifold at points where $ 
+	\rho ( x_{ 1 } ) \neq 0 $.
 \end{example}

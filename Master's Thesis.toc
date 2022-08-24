@@ -4,9 +4,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Abstract}{3}{section.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}History and main goals}{3}{section.0.2}%
+\contentsline {section}{\numberline {2}History and main results}{3}{section.0.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Structure of the thesis}{5}{section.0.3}%
+\contentsline {section}{\numberline {3}Structure of the thesis}{6}{section.0.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Notation}{7}{chapter*.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Gradient flows and mean curvature flow}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
@@ -54,6 +56,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Appendix}{75}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.8}%
+\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.9}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

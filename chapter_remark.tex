@@ -1,0 +1,69 @@
+\chapter{Notation}
+
+
+	\begin{itemize}[leftmargin=*]
+		\item	
+		Let $ u \colon \mathbb{ R }^{ d } \to \mathbb{ R }^{ N } $ be 
+		differentiable at a point $ x \in \mathbb{ R }^{d } $. We write $ \diff 
+		u ( x ) $ for the (total) derivative at $ x $, which means that
+		$ \diff u ( x ) \in \mathbb{ R }^{ N \times d } $ and
+		$ \left( \diff u ( x ) \right)_{ i j } = \partial_{ x_{ j } } u^{ i } ( 
+		x ) $. We always use the notation $ \nabla u ( x ) $ for the transposed 
+		of the total derivative. 
+		
+		\item
+		If $ u \colon ( 0 , T ) \times \mathbb{ R }^{ d } \to \mathbb{ R 
+		}^{ N } $, then we denote by $ \diff u (t, x ) $  respectively $ \nabla 
+		u ( 
+		t,  x ) $ only the derivatives in space, and always write $ \partial_{ 
+		t } u $ for the derivative in time.
+	
+		\item
+		We use the symbol $ \lesssim $ if an inequality holds up to a positive 
+		constant on the right hand side. This constant may only depend on the 
+		dimensions and the chosen potential $ W $.
+		
+		\item 
+		The bracket $ \inner*{\cdot}{\cdot} $ is used as the euclidean inner 
+		product. Depending on the situation, it acts on vectors or matrices.
+		If we apply $ \abs{ \cdot } $ to a vector or matrix, then we always 
+		uses the norm induced by the euclidean inner product.
+		
+		\item 
+		We denote by $ \cont_{ \mathrm{c} } $ the compactly supported 
+		continuous functions. Note that for the flat torus $ \flattorus $, we 
+		have $ \cont_{ \mathrm{c} } ( \flattorus ) = \cont ( \flattorus ) $.
+		
+		\item
+		For a locally integrable function $ u \colon ( 0 , T ) \times \Omega $ 
+		with $ \Omega \subseteq \mathbb{ R }^{ d } $ being some open set or the 
+		flat torus, we denote the total variation in space for a time $ t \in ( 
+		0 , T ) $ by
+		\begin{equation*}
+			\abs{ \nabla u ( t , \cdot ) }
+			\coloneqq
+			\sup 
+			\left\{
+				\int_{ \Omega }
+					u ( t , x ) \divg ( \xi ) ( x ) 
+				\dd{ x }
+				\, \colon \,
+				\xi \in \cont_{ \mathrm{c} }^{ 1 } ( \Omega ; \mathbb{ R }^{ d 
+				} ) , \abs{ \xi } \leq 1
+			\right\}
+		\end{equation*}	
+		and the total variation in space taken both over time and space by
+		\begin{equation*}
+			\abs{ \nabla u }_{ d + 1 }
+			\coloneqq
+			\left\{
+			\int_{ ( 0 , T ) \times \Omega }
+			u ( t , x ) \divg_{ x } ( \xi ) (t , x ) 
+			\dd{ x }
+			\, \colon \,
+			\xi \in \cont_{ \mathrm{c} }^{ 1 } (( 0 , T ) \times \Omega ; 
+			\mathbb{ R }^{ d 
+			} ) , \abs{ \xi } \leq 1
+			\right\}.
+		\end{equation*}
+	\end{itemize}

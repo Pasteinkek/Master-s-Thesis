@@ -1,9 +1,5 @@
 \chapter{Introduction}
 
-\textbf{Allgemeine Notizen: 
-Etwas zu Eindeutigkeit sagen; wir gehen sehr oft zu Teilfolgen über. Hilft uns 
-hierbei die Weak strong uniqueness?}
-
 \section{Abstract}
 
 This thesis presents a conditional convergence result of solutions to the 
@@ -16,7 +12,7 @@ $-solutions are De Giorgi type varifold solutions, and thus our solution
 concept exhibits a 
 weak-strong uniqueness.
 
-\section{History and main goals}
+\section{History and main results}
 
 Multiphase mean curvature is an important geometric evolution equation which 
 has been studied for a long time, bearing not only mathematical importance, but 
@@ -69,10 +65,6 @@ analytical standpoint.
 If we consider the two-phase case, which corresponds to setting $ N = 1 $ and $ 
 P = 2 $, then 
 the behaviour of the solutions to (\ref{ac_intro}) are thoroughly researched.
-Chen has proven in 
-\cite{chen_generation_and_propagation_of_interfaces_for_reaction_diffusion_equations}
-that as long as the interface of the limit evolves smoothly, we have 
-convergence to mean curvature flow.
 The authors Bronsard and Kohn showed by utilization of the gradient flow 
 structure of (\ref{ac_intro}), more precisely by mainly utilizing the 
 corresponding energy dissipation inequality, in 
@@ -80,6 +72,20 @@ corresponding energy dissipation inequality, in
 of solutions and regularity for the limit. Moreover they studied the behaviour 
 for radially symmetric initial data and showed motion by mean curvature in this 
 case. 
+Chen has proven in 
+\cite{chen_generation_and_propagation_of_interfaces_for_reaction_diffusion_equations}
+that as long as the interface of the limit evolves smoothly, we have 
+convergence to (classical) mean curvature flow. A similar result has been shown 
+by de Mottoni and Schatzmann in 
+\cite{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces}, 
+where they showed short time convergence by proving that the solution $ u_{ 
+\varepsilon } $ already coincides with the formal asymptotic expansion up to an 
+error through a spectral estimate. Similar strategies, but for nonlinear Robin 
+boundary conditions with angle close to 90 degrees can be found in the paper
+\cite{abels_moser_convergence_of_ac_with_nonlinear_robin_boundary_condition_to_mcf}
+ by Abels 
+and Moser
+
 Ilmanen made fundamental contributions in 
 \cite{ilmanen_convergence_of_ac_to_brakkes_mcf} by proving the convergence to 
 Brakke's mean curvature flow as long as the initial conditions are 
@@ -93,12 +99,16 @@ curvature flow is much more involved and a topic of current research. For the
 convergence of the Allen--Cahn equation, asymptotic expansions  with Neumann 
 boundary conditions 
 have been studied by Keller, Rubinstein and Sternberg in 
-\cite{keller_rubinstein_sternberg_fast_reaction_slow_diffusion} (NOCHMAL MIT 
-TIM BESPREHCEN). Moreover it has by shown by Bronsard and 
-Reitich in 
-\cite{bronsard_reitich_on_three_phase_boundary_motion_and_singular_limit} that 
-for the three-phase case, we have short-time existence of a solution (in what 
-sense????). 
+\cite{keller_rubinstein_sternberg_fast_reaction_slow_diffusion}. Even though 
+they considered the vector-valued Allen--Cahn equation with a multiwell 
+potential, their analysis restricts to the parts of the interfaces where no 
+triple junctions appear. Bronsard and 
+Reitich however considered in 
+\cite{bronsard_reitich_on_three_phase_boundary_motion_and_singular_limit} a 
+formal asymptotic expansion which also considers triple junctions
+for the three-phase case. Moreover they proved short-time existence for the 
+three 
+phase boundary problem.
 
 The analysis of multiphase mean curvature flow has been studied for example by 
 Mantegazza, Novaga and Tortorelli in 
@@ -121,19 +131,27 @@ Giorgi type $ \bv $-solution of multiphase mean curvature flow in the sense of
 \Cref{de_giorgi_solution_to_mmcf}. The proof is based mainly on a duality 
 argument and the results of Laux and Simon in 
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}.
-However the strong assumption (MIT TIM ÜBER SIEN PAPER DISKUTIEREN; WANN MAN 
-DIES ZEIGEN KANN) we make here is that the Cahn-Hilliard energies 
+However the strong assumption we make here is that the Cahn-Hilliard energies 
 (\ref{cahn_hilliard_energy}) of the solutions to (\ref{ac_intro}) converge to 
 the perimeter functional (\ref{definition_of_multiphase_energy}) of the limit. 
 This prevents that as $ \varepsilon $ tends to zero, approximate interfaces 
 collapse, which would mean that energy dissipates, see also the discussion in
-\Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}. The energy 
+\Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}.  In general we are 
+inclined to believe that this assumption could fail. For example it has been 
+shown by Bronsard and Stoth in 
+\cite{bronsard_stoth_on_the_existence_of_high_multiplicity_interfaces}
+that for the volume preserving Allen--Cahn equation and for radial-symmetric 
+initial data, we can have any number of higher 
+multiplicity transition layers which are $ C \varepsilon^{ \alpha } $ apart, $ 
+0 < \alpha < 1/3 $, at least for times of order one.
+Nonetheless the energy 
 convergence assumption provides us with the important equipartition of 
 energies, whose proof under milder assumption was the main obstacle of Ilmanen 
 in \cite{ilmanen_convergence_of_ac_to_brakkes_mcf}. Moreover it is the key for 
 our localization estimates and lets us localize on the different phases of mean 
 curvature flow. Lastly it assures that the differential $ \nabla u_{ 
-\varepsilon } $ can locally up to an error be written as a rank-one matrix which
+\varepsilon } $ can locally up to an error be written as a rank-one matrix. In 
+fact it
 is the tensor of the approximate frozen unit normal and the gradient of the 
 geodesic 
 distance function associated to the majority phase evaluated at $ u_{ 
@@ -150,10 +168,12 @@ also obtain weak-strong uniqueness for our De Giorgi type $ \bv $-solution
 concept, which is the best we can expect. In fact it has been shown on a 
 numerical basis by Angenent, Chopp and Ilmanen in 
 \cite{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}
-(AUCH MIT TIM BESPRECHEN)
 that even in three dimensions, there exists a hypersurface whose evolution by 
 mean curvature 
-flow admits a singularity at a certain time after which we have nonuniqueness.
+flow admits a singularity at a certain time after which we have nonuniqueness. 
+A rigorous analysis of this phenomenon has been done in dimensions 4, 5, 6, 7 
+and 8 by Angenent, Ilmanen and Velázquez in 
+\cite{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}.
 
 Let us also mention some of the closely related unanswered questions. For one 
 Hensel and Laux have shown in 

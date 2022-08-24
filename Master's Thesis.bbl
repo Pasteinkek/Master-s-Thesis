@@ -186,6 +186,48 @@
       \verb https://doi.org/10.1080/03605309508821158
       \endverb
     \endentry
+    \entry{abels_moser_convergence_of_ac_with_nonlinear_robin_boundary_condition_to_mcf}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c2e592965c30d1d357c1494b4f4e36bc}{%
+           family={Abels},
+           familyi={A\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d5e2415f1309b93ee0377096465bcb40}{%
+           family={Moser},
+           familyi={M\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f80ee5e83fffc5d0161e87ba6825c01}
+      \strng{fullhash}{5f80ee5e83fffc5d0161e87ba6825c01}
+      \strng{bibnamehash}{5f80ee5e83fffc5d0161e87ba6825c01}
+      \strng{authorbibnamehash}{5f80ee5e83fffc5d0161e87ba6825c01}
+      \strng{authornamehash}{5f80ee5e83fffc5d0161e87ba6825c01}
+      \strng{authorfullhash}{5f80ee5e83fffc5d0161e87ba6825c01}
+      \field{labelalpha}{AM22}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0036-1410}
+      \field{journaltitle}{SIAM J. Math. Anal.}
+      \field{number}{1}
+      \field{title}{Convergence of the {A}llen-{C}ahn equation with a nonlinear {R}obin boundary condition to mean curvature flow with contact angle close to {$90^\circ$}}
+      \field{volume}{54}
+      \field{year}{2022}
+      \field{pages}{114\bibrangedash 172}
+      \range{pages}{59}
+      \verb{doi}
+      \verb 10.1137/21M1424925
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/21M1424925
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/21M1424925
+      \endverb
+    \endentry
     \entry{ambrosio_maso_chain_rule}{article}{}
       \name{author}{2}{}{%
         {{hash=d1fb85e6b388ff3ca0e66ab5e4721170}{%
@@ -460,6 +502,48 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1515/geofl-2018-0008
+      \endverb
+    \endentry
+    \entry{bronsard_stoth_on_the_existence_of_high_multiplicity_interfaces}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bd1163182fc36fcfacf15ed57075cd09}{%
+           family={Bronsard},
+           familyi={B\bibinitperiod},
+           given={Lia},
+           giveni={L\bibinitperiod}}}%
+        {{hash=53cd97438cde15a4e48be8fbb05fac34}{%
+           family={Stoth},
+           familyi={S\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f46d4a32b9564cd495286cd2c5d2059a}
+      \strng{fullhash}{f46d4a32b9564cd495286cd2c5d2059a}
+      \strng{bibnamehash}{f46d4a32b9564cd495286cd2c5d2059a}
+      \strng{authorbibnamehash}{f46d4a32b9564cd495286cd2c5d2059a}
+      \strng{authornamehash}{f46d4a32b9564cd495286cd2c5d2059a}
+      \strng{authorfullhash}{f46d4a32b9564cd495286cd2c5d2059a}
+      \field{labelalpha}{BS96}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1073-2780}
+      \field{journaltitle}{Math. Res. Lett.}
+      \field{number}{1}
+      \field{title}{On the existence of high multiplicity interfaces}
+      \field{volume}{3}
+      \field{year}{1996}
+      \field{pages}{41\bibrangedash 50}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.4310/MRL.1996.v3.n1.a4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/MRL.1996.v3.n1.a4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/MRL.1996.v3.n1.a4
       \endverb
     \endentry
     \entry{chen_giga_goto_uniqueness_and_existence_of_generalized_mcf_equations}{article}{}
@@ -1334,6 +1418,50 @@
       \field{year}{2004}
       \field{pages}{235\bibrangedash 324}
       \range{pages}{90}
+    \endentry
+    \entry{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c91cb3ca34a853a73e175b70a23218ea}{%
+           family={Mottoni},
+           familyi={M\bibinitperiod},
+           given={Piero},
+           giveni={P\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=8414fb1cd84dd903f5d7ab0dbe5983e4}{%
+           family={Schatzman},
+           familyi={S\bibinitperiod},
+           given={Michelle},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0504308ee33dc8f87b007c801fefe042}
+      \strng{fullhash}{0504308ee33dc8f87b007c801fefe042}
+      \strng{bibnamehash}{0504308ee33dc8f87b007c801fefe042}
+      \strng{authorbibnamehash}{0504308ee33dc8f87b007c801fefe042}
+      \strng{authornamehash}{0504308ee33dc8f87b007c801fefe042}
+      \strng{authorfullhash}{0504308ee33dc8f87b007c801fefe042}
+      \field{labelalpha}{MS95}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9947}
+      \field{journaltitle}{Trans. Amer. Math. Soc.}
+      \field{number}{5}
+      \field{title}{Geometrical evolution of developed interfaces}
+      \field{volume}{347}
+      \field{year}{1995}
+      \field{pages}{1533\bibrangedash 1589}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.2307/2154960
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/2154960
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/2154960
+      \endverb
     \endentry
     \entry{mullins_two_dimensional_motion_of_idealized_grain_boundaries}{article}{}
       \name{author}{1}{}{%
