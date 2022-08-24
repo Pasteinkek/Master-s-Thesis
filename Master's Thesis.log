@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  20 AUG 2022 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  23 AUG 2022 16:34
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1481,11 +1481,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 26
 
 ]
 chapter without number
-[3] [4]) [5] [6
-
-
-
-]
+[3] [4] [5]) [6]
 \openout2 = `chapter_mcf.aux'.
 
  (chapter_mcf.tex
@@ -1499,6 +1495,9 @@ l.102 \end{align*}
 
 
 
+
+
+
 ] Excluding 'comment' comment.) (section_mcf.texpdfTeX warning (ext4): destinat
 ion with the same identifier (name{page.2}) has been already used, duplicate ig
 nored
@@ -1509,7 +1508,7 @@ l.39 \end{equation*}
 fier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.154 \end{align}
+l.155 \end{align}
                   [3]))pdfTeX warning (ext4): destination with the same identif
 ier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
@@ -1524,7 +1523,7 @@ chapter 2.
 entifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.108 \end{equation}
+l.107 \end{equation}
                      [5
 
 
@@ -1534,7 +1533,7 @@ l.108 \end{equation}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.165 		\end{equation}
+l.164 		\end{equation}
                        [6]) (section_existence_of_solution.tex [7] [8]
 Overfull \hbox (2.25168pt too wide) in paragraph at lines 300--310
 []\OT1/cmr/m/n/10 (-20) In or-der to ap-ply the Arzela--Ascoli the-o-rem for t
@@ -1636,88 +1635,88 @@ Underfull \vbox (badness 1997) has occurred while \output is active []
 
 ]
 chapter 4.
-(section_conditional_convergence_twophase.tex [31] [32]
+(section_conditional_convergence_twophase.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 339.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 339.
+(hyperref)                removing `math shift' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\mathop' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 339.
+(hyperref)                removing `\mathchardef' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\std@minus' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 339.
+(hyperref)                removing `\mathcode' on input line 3.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.22198pt
-(hyperref)                removed on input line 339.
+(hyperref)                removed on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 339.
+(hyperref)                removing `\mathgroup' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 339.
+(hyperref)                removing `\symoperators' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 339.
+(hyperref)                removing `\@ifnextchar' on input line 3.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 339.
+(hyperref)                removing `math shift' on input line 3.
 
-[33] [34]
-Overfull \hbox (5.06604pt too wide) detected at line 558
+[31] [32]
+Overfull \hbox (5.06604pt too wide) detected at line 313
 []
  []
 
-[35] [36] [37]
-Overfull \hbox (34.80074pt too wide) detected at line 1113
+[33] [34] [35] [36] [37]
+Overfull \hbox (34.80074pt too wide) detected at line 1115
 []
  []
 
 [38]
-Overfull \hbox (9.26213pt too wide) detected at line 1320
+Overfull \hbox (9.26213pt too wide) detected at line 1322
 []
  []
 
@@ -1820,7 +1819,7 @@ Overfull \hbox (21.99113pt too wide) detected at line 1618
  []
 
 [52] Excluding 'comment' comment.
-Overfull \hbox (24.09381pt too wide) detected at line 1815
+Overfull \hbox (24.09381pt too wide) detected at line 1819
 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 \O
 T1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [][
 ] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/10 
@@ -1828,225 +1827,101 @@ T1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [][
  []
 
 [53] [54] [55]
-Overfull \hbox (54.52205pt too wide) detected at line 2287
+Overfull \hbox (54.98384pt too wide) detected at line 2290
 []
  []
 
-[56]
-Overfull \hbox (0.47713pt too wide) detected at line 2455
+[56] [57]
+Overfull \hbox (16.9885pt too wide) detected at line 2544
 []
  []
 
 
-Overfull \hbox (17.80789pt too wide) detected at line 2535
-[]
- []
-
-[57]
-Overfull \hbox (15.11865pt too wide) in paragraph at lines 2535--2545
+Overfull \hbox (17.00299pt too wide) in paragraph at lines 2544--2556
 \OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
 ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
 for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
 /n/10 (-20) )$
  []
 
-)) [58]
+[58])) [59]
 \openout2 = `chapter_de_giorgis_mean_curvature_flow.aux'.
 
- (chapter_de_giorgis_mean_curvature_flow.tex
-chapter 5.
-(section_convergence_to_de_giorgis_mean_curvature_flow.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.22198pt
-(hyperref)                removed on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 7.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
-
-[59
+ (chapter_de_giorgis_mean_curvature_flow.tex [60
 
 
 
 
 ]
-Overfull \hbox (14.02452pt too wide) in paragraph at lines 123--142
+chapter 5.
+(section_convergence_to_de_giorgis_mean_curvature_flow.tex [61]
+Overfull \hbox (14.02452pt too wide) in paragraph at lines 130--151
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
-[60]
-Overfull \hbox (10.54408pt too wide) in paragraph at lines 246--251
+
+Overfull \hbox (2.1259pt too wide) detected at line 236
+[][] [] [] [][] [] [][][] [] [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 [] [
+][] [][] [][] [] [] :
+ []
+
+[62]
+Overfull \hbox (10.54408pt too wide) in paragraph at lines 256--262
 \OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
 mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
 th re-spect to $[][] []$
  []
 
-[61]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-Overfull \hbox (46.54857pt too wide) detected at line 639
-[]
- []
-
-
-Overfull \hbox (117.80127pt too wide) detected at line 730
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63]
-Overfull \hbox (10.69827pt too wide) detected at line 828
-[]
- []
-
-[64]
-Overfull \hbox (4.88054pt too wide) in paragraph at lines 942--943
+[63] Excluding 'comment' comment. [64] [65] [66])
+(section_de_giorgi_type_varifold.tex
+Overfull \hbox (4.88054pt too wide) in paragraph at lines 28--29
 [][] 
  []
 
 
-Overfull \hbox (2.1771pt too wide) in paragraph at lines 960--961
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 46--47
 [][] 
  []
 
 
-Overfull \hbox (2.1771pt too wide) in paragraph at lines 974--975
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 60--61
 [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (36.60812pt too wide) in paragraph at lines 1007--1014
+Overfull \hbox (36.60812pt too wide) in paragraph at lines 94--103
 []\OT1/cmr/m/it/10 (-20) Given an ini-tial en-ergy $\OML/cmm/m/it/10 ![] \OMS/c
 msy/m/n/10 2 M []$ \OT1/cmr/m/it/10 (-20) and an ini-tial phase in-di-ca-tor fu
 nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
 
  []
 
-[65] [66]
-Overfull \hbox (8.22441pt too wide) detected at line 1176
-[]
- []
-
-
-LaTeX Warning: Command \i invalid in math mode on input line 1229.
-
-
-Overfull \hbox (38.86722pt too wide) in paragraph at lines 1227--1248
+[67] [68]
+Overfull \hbox (21.28511pt too wide) in paragraph at lines 321--343
 \OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 7! [][] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (
 -20) (\OML/cmm/m/it/10 t; x; p\OT1/cmr/m/n/10 (-20) ) []$ \OT1/cmr/m/it/10 (-20
-) is mea-sur-able for all test func-tions $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 
-2 [][] []$\OT1/cmr/m/it/10 (-20) .
+) is mea-sur-able for all func-tions $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][
+] []$\OT1/cmr/m/it/10 (-20) .
  []
 
-[67]
-
-LaTeX Warning: Command \j invalid in math mode on input line 1318.
-
-
-Overfull \hbox (44.49007pt too wide) detected at line 1326
-[][] [] \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]; x\OT1/cmr/m/
-n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]; x\OT1/cmr/m/n/10
- ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\O
-T1/cmr/m/n/10 )\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; x\OT1/cmr
-/m/n/10 ) [] = [][] [] \OML/cmm/m/it/10 []@[]' [] [] \OT1/cmr/m/n/10 + [] [] [
-][] [] \OML/cmm/m/it/10 V[]' [] []
- []
-
-[68] [69]
-Overfull \hbox (37.83861pt too wide) detected at line 1569
-[]
- []
-
-
-Overfull \hbox (9.5488pt too wide) detected at line 1614
-[]
- []
-
-[70])) [71]
+[69] [70] [71] [72])) [73]
 \openout2 = `chapter_appendix.aux'.
 
- (chapter_appendix.tex [72
+ (chapter_appendix.tex [74
 
 
 
 
 ]
 chapter A.
-[73] [74]
+[75] [76]
 Overfull \hbox (37.11494pt too wide) detected at line 321
 []
  []
 
-[75]) [76]
+[77]) [78]
 chapter without number
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -2056,13 +1931,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 44.
 
-[77
+[79
 
 
 
 
 
-] [78] [79] [80]
+] [80] [81] [82]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  ("Master's Thesis.aux" (chapter_introduction.aux)
@@ -2078,10 +1953,10 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48558 strings out of 480930
- 1080977 string characters out of 2900231
- 1911312 words of memory out of 3000000
- 63217 multiletter control sequences out of 15000+200000
+ 48583 strings out of 480930
+ 1081791 string characters out of 2900231
+ 1911381 words of memory out of 3000000
+ 63236 multiletter control sequences out of 15000+200000
  557303 words of font info for 189 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2110,19 +1985,18 @@ ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/user/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
 fb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/U
-sers/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
-/msam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (88 pages, 840269 bytes).
+/cm/cmsy7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy9.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/user/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
+><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm7.pfb>
+Output written on "Master's Thesis.pdf" (90 pages, 846736 bytes).
 PDF statistics:
- 1327 PDF objects out of 1440 (max. 8388607)
- 311 named destinations out of 1000 (max. 500000)
- 27401 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1349 PDF objects out of 1440 (max. 8388607)
+ 315 named destinations out of 1000 (max. 500000)
+ 27385 words of extra memory for PDF output out of 29859 (max. 10000000)
 

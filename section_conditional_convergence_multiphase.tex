@@ -1744,6 +1744,10 @@ argument.
 	from the rewritten term (\ref{key_equality_for_ptw_estimate}).
 \end{proof}
 
+We want to point out that Claim 3 and the corresponding proof do not appear in 
+\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, 
+but are necessary in order to finish the proof.
+
 \subsection{Convergence of the velocity term}
 
 As in the previous proof for the convergence of the curvature term we want to 
@@ -2053,14 +2057,14 @@ now prove a localized version of the convergence of the velocity term.
 			\int
 			\varepsilon
 			\inner*{ \partial_{ t } u_{ \varepsilon } }{ \diff u_{ 
-					\varepsilon } \xi }
+					\varepsilon } \eta \xi }
 			\dd{ x }
 			\dd{ t }
 			-
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 			\int_{ \Sigma_{ i j } }
-			\inner*{ \xi }{ \nu_{ i } } V_{ i }
+			\inner*{ \eta \xi }{ \nu_{ i } } V_{ i }
 			\dd{ \hm^{ d - 1 } }
 			\dd{ t }
 		}
@@ -2069,14 +2073,13 @@ now prove a localized version of the convergence of the velocity term.
 		\norm{ \xi }_{ \mathrm{sup} }
 		\left(
 		\frac{ 1 }{ \alpha } \tilt_excess_{ i j } \left( \nu^{ \ast } ; 
-		\rho \right) 
-		+ \alpha \mu ( \rho ) 
+		\eta \right) 
+		+ \alpha \mu ( \eta ) 
 		\right).
 	\end{align*}
-	Here $ \rho \in \cont^{ \infty } \left( [ 0 , T ] \times \flattorus ;  
-	\mathbb{ R }^{ d } 
-	\right) $ is any 
-	smooth cutoff for the support of $ \xi $.
+	Here $ \eta \in \cont^{ \infty } \left( [ 0 , T ] \times \flattorus ;  
+	[ 0 , 1 ]
+	\right) $ is some partition of unity function.
 \end{proposition}
 
 \begin{proof}
@@ -2093,7 +2096,7 @@ now prove a localized version of the convergence of the velocity term.
 			\int
 			\varepsilon
 			\inner*{ \partial_{  t } u_{ 
-					\varepsilon } }{ \diff u_{ \varepsilon } \xi }
+					\varepsilon } }{ \diff u_{ \varepsilon } \eta \xi }
 			\dd{ x }
 			\dd{ t }
 			+
@@ -2101,7 +2104,7 @@ now prove a localized version of the convergence of the velocity term.
 			\int
 			\inner*{ \partial_{ t } u_{ \varepsilon } }{ \nabla \phi_{ 
 					i } ( u_{ \varepsilon } ) \otimes 
-				\nu^{ \ast } \xi }
+				\nu^{ \ast } \eta\xi }
 			\dd{ x }
 			\dd{ t }
 		}
@@ -2120,7 +2123,7 @@ now prove a localized version of the convergence of the velocity term.
 				\frac{ 1 }{ \sqrt{ \varepsilon } }
 				\nabla \phi_{ i } \otimes \nu^{ \ast } 
 				\right)
-				\xi 
+				\eta \xi 
 			}
 			\dd{ x }
 			\dd{ t }
@@ -2134,13 +2137,13 @@ now prove a localized version of the convergence of the velocity term.
 		\alpha 
 		\int_{ 0 }^{ T }
 		\int
-		\rho \varepsilon 
+		\eta \varepsilon 
 		\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
 		\dd{ x }
 		\dd{ t }
 		+
 		\frac{ 1 }{ \alpha }
-		\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \rho \right)
+		\tilt_excess_{ i }^{ \varepsilon } \left( \nu^{ \ast } ; \eta \right)
 		\right).
 	\end{align}
 	We thus have arrived at the term
@@ -2149,14 +2152,14 @@ now prove a localized version of the convergence of the velocity term.
 		\int
 		\inner*{ \partial_{ t } u_{ \varepsilon } }{ \nabla \phi_{ i } 
 			( u_{ \varepsilon } ) \otimes \nu^{ 
-				\ast } \xi }
+				\ast } \eta \xi }
 		\dd{ x }
 		\dd{ t }
 		= 
 		- \int_{ 0 }^{ T }
 		\int
 		\partial_{ t } \psi_{ \varepsilon , i }
-		\inner*{ \xi }{ \nu^{ \ast } }
+		\inner*{ \eta \xi }{ \nu^{ \ast } }
 		\dd{ x }
 		\dd{ t },
 	\end{equation*} 
@@ -2167,7 +2170,7 @@ now prove a localized version of the convergence of the velocity term.
 		\sigma_{ i j }
 		\int_{ 0 }^{ T }
 		\int
-		\inner*{ \xi }{ \nu^{ \ast } }
+		\inner*{ \eta \xi }{ \nu^{ \ast } }
 		V_{ j }
 		\abs{ \nabla \chi_{ j } }
 		\dd{ t }.
@@ -2181,14 +2184,14 @@ now prove a localized version of the convergence of the velocity term.
 			\inner*{ \partial_{ t } u_{ 
 					\varepsilon } }{ \nabla \phi_{ i } ( u_{ 
 					\varepsilon } ) 
-				\otimes \nu^{ \ast } \xi }
+				\otimes \nu^{ \ast } \eta \xi }
 			\dd{ x }
 			\dd{ t }
 			-
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 			\int_{ \Sigma_{ i j } }
-			\inner*{ \xi }{ \nu_{ i } }
+			\inner*{ \eta \xi }{ \nu_{ i } }
 			V_{ i } 	
 			\dd{ \hm^{ d - 1 } }
 			\dd{ t }
@@ -2200,7 +2203,7 @@ now prove a localized version of the convergence of the velocity term.
 			\sigma_{ i k }
 			\int_{ 0 }^{ T }
 			\int
-			\inner*{ \xi }{ \nu^{ \ast } }
+			\inner*{ \eta \xi }{ \nu^{ \ast } }
 			V_{ k }
 			\abs{ \nabla \chi_{ k } }
 			\dd{ t }
@@ -2208,7 +2211,7 @@ now prove a localized version of the convergence of the velocity term.
 			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 			\int_{ \Sigma_{ i j } }
-			\inner*{ \xi }{ \nu_{ i } }
+			\inner*{ \eta \xi }{ \nu_{ i } }
 			V_{ i }
 			\dd{ \hm^{ d - 1 } }
 			\dd{ t }
@@ -2219,7 +2222,7 @@ now prove a localized version of the convergence of the velocity term.
 		\sum_{ k \notin \{ i , j \} }
 		\int_{ 0 }^{ T }
 		\int
-		\rho
+		\eta
 		\abs{ V_{ k } }
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t }
@@ -2228,9 +2231,9 @@ now prove a localized version of the convergence of the velocity term.
 			\int_{ 0 }^{ T }
 			\int_{ \Sigma_{ i j } }
 			\left(
-			-\inner*{ \xi }{ \nu^{ \ast } }
+			-\inner*{ \eta \xi }{ \nu^{ \ast } }
 			+
-			\inner*{ \xi }{ \nu_{ i } }
+			\inner*{ \eta \xi }{ \nu_{ i } }
 			\right)
 			V_{ i }
 			\dd{ \hm^{ d -1 } }
@@ -2248,7 +2251,7 @@ now prove a localized version of the convergence of the velocity term.
 		\alpha 
 		\int_{ 0 }^{ T }
 		\int
-		\rho
+		\eta
 		\abs{ V_{ k } }^{ 2 }
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t }
@@ -2256,13 +2259,13 @@ now prove a localized version of the convergence of the velocity term.
 		\frac{ 1 }{ \alpha }
 		\int_{ 0 }^{ T }
 		\int
-		\rho
+		\eta
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t }
 		+
 		\int_{ 0 }^{ T }
 		\int_{ \Sigma_{ i j } }
-		\rho
+		\eta
 		\abs{ V_{ i } }
 		\abs{ \nu^{ \ast } - \nu_{ i } }
 		\dd{ \hm^{ d - 1 } }
@@ -2276,13 +2279,13 @@ now prove a localized version of the convergence of the velocity term.
 		\sum_{ 1 \leq k \leq P }
 		\int_{ 0 }^{ T }
 		\int
-		\rho
+		\eta
 		\abs{ V_{ k } }^{ 2 }
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t}
 		+
 		\frac{ 1 }{ \alpha }
-		\tilt_excess_{ i j } ( \nu^{ \ast } ; \rho )
+		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta )
 		\right).
 	\end{align*}
 	By looking again at the first error we made in inequality 
@@ -2310,7 +2313,9 @@ now prove a localized version of the convergence of the velocity term.
 \end{proof}
 
 We are now in the position to prove the main result 
-\Cref{convergence_to_multiphase_mcf}.
+\Cref{convergence_to_multiphase_mcf}. This still requires some effort and the 
+argument for the localization in time is missing in 
+\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}.
 
 \begin{proof}[Proof of \Cref{convergence_to_multiphase_mcf}.]
 	Let us first collect all previous results.
@@ -2320,9 +2325,12 @@ We are now in the position to prove the main result
 	$ \chi $ is continuous in time with respect to the $ \lp^{ 2 } $-norm and 
 	therefore assumes the initial data. The existence of square-integrable 
 	normal velocities is proven in 
-	\Cref{existence_and_square_integrability_of_velocities_multiphase}, and the 
-	distributional equation for motion uses convergence of the convergence term 
-	\Cref{convergence_of_curvature_multiphase}. Moreover we still need the full 
+	\Cref{existence_and_square_integrability_of_velocities_multiphase}.
+	For the 
+	distributional equation, the convergence of the curvature term has been 
+	proven in
+	\Cref{convergence_of_curvature_multiphase}. 
+	Thus we still need the full 
 	convergence of the velocity term, and the bulk of the work has already been 
 	done in \Cref{convergence_of_velocity_multiphase}.
 	We see that the only thing left to show is the full convergence 
@@ -2358,7 +2366,8 @@ We are now in the position to prove the main result
 		\dotsc, K } $ be a partition of unity with respect to the intervals 
 	$ \left( ( T_{ k - 1 } - \delta , T_{ k } + \delta ) \right) $. As before 
 	let $ \eta_{ B } $ be a partition of unity in space with respect to the 
-	covering $ \mathcal{ B }_{ r } $. Then for any parameter $ \alpha \in ( 0 , 
+	covering $ \mathcal{ B }_{ r } $. 
+	Then for any parameter $ \alpha \in ( 0 , 
 	1 ) $, we compute that by \Cref{convergence_of_velocity_multiphase}, we have
 	\begin{align*}
 		A \coloneqq&
@@ -2416,10 +2425,10 @@ We are now in the position to prove the main result
 		\min_{ i \neq j }
 		\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
 		\frac{ 1 }{ \alpha }
-		\tilt_excess_{ i j } ( \nu^{ \ast } ; g_{ k } \rho_{ 
-			B } , u )
+		\tilt_excess_{ i j } ( \nu^{ \ast } ; g_{ k } \eta_{ 
+			B } )
 		+
-		\alpha \mu ( g_{ k } \rho_{ B } )
+		\alpha \mu ( g_{ k } \eta_{ B } )
 	\end{align*}
 	Since no derivative falls on $ g_{ k } $, this term converges as $ \delta $ 
 	tends to zero to
@@ -2436,25 +2445,25 @@ We are now in the position to prove the main result
 		\min_{ \nu^{ \ast } \in \mathbb{ S }^{ d - 1 } }
 		\int_{ T_{ k - 1 } }^{ T_{ k } }
 		\int
-		\rho_{ B } 
+		\eta_{ B } 
 		\abs{ \nu_{ i } - \nu^{ \ast } }^{ 2 }
 		\abs{ \nabla \chi_{ i } }
 		\\
 		\notag
 		+ &
 		\int
-		\rho_{ B }
+		\eta_{ B }
 		\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
 		\abs{ \nabla \chi_{ j } }
 		+ 
 		\sum_{ k \notin \{ i , j \} }
 		\int
-		\rho_{ B }
+		\eta_{ B }
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t }.
 	\end{align}
 	Our problem is now that we would like to take the majority phase 
-	approximative inner normal dependent on time, which equates to pulling both 
+	approximate inner normal dependent on time, which equates to pulling both 
 	minima inside the time integral. If our partition $ \chi $ is smooth, then 
 	by choosing partitions $ ( T_{ k } )_{ k = 1 , \dotsc, K } $ whose width 
 	goes to zero, this would be possible. Since our partition will in general 
@@ -2470,14 +2479,14 @@ We are now in the position to prove the main result
 		& \int_{ T_{ k - 1 } }^{ T_{ k } }
 		\abs{ 
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{
 				\nu_{ i } - \nu^{ \ast }
 			}^{ 2 }
 			\abs{ \nabla \chi_{ i } }
 			-
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nu_{ i }^{ n } - \nu^{ \ast } }^{ 2 }
 			\abs{ \nabla \chi_{ i }^{ n } }
 		}
@@ -2485,12 +2494,12 @@ We are now in the position to prove the main result
 		& +
 		\abs{
 			\int
-			\rho_{ B } 
+			\eta_{ B } 
 			\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
 			\abs{ \nabla \chi_{ j } }
 			-
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nu_{ j }^{ n } + \nu^{ \ast } }^{ 2 }
 			\abs{ \nabla \chi_{ j }^{ n } }
 		}
@@ -2498,11 +2507,11 @@ We are now in the position to prove the main result
 		\sum_{ l \notin \{ i , j \} }
 		\abs{
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nabla \chi_{ l } }
 			-
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nabla \chi_{ l }^{ n } }
 		}
 		\dd{ t }
@@ -2512,22 +2521,22 @@ We are now in the position to prove the main result
 		\int_{ T_{ k - 1 } }^{ T_{ k } }
 		\abs{ 
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nabla \chi_{ l } }
 			-
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nabla \chi_{ l }^{ n } }
 		}
 		+
 		\abs{ 
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\nu_{ l }
 			\abs{ \nabla \chi_{ l } }
 			- 
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\nu_{ l }^{ n }
 			\abs{ \nabla \chi_{ l }^{ n } }
 		}
@@ -2536,9 +2545,11 @@ We are now in the position to prove the main result
 	Here $ \nu_{ i }^{ n }$ is defined by $ \nabla \chi_{ i }^{ n } / \abs{ 
 		\nabla \chi_{ i }^{ n } } $, and for the inequality we used that $ 
 		\abs{ 
-		\theta - \gamma }^{ 2 } = 2( 1 - \inner*{ \theta }{ \gamma } ) $ for 
+		\vartheta - \gamma }^{ 2 } = 2( 1 - \inner*{ \vartheta }{ \gamma } ) $ 
+		for 
 		unit 
-	vectors $ \theta $ and $ \gamma $. Thus when replacing $ \chi $ by $ \chi^{ 
+	vectors $ \vartheta $ and $ \gamma $. Thus when replacing $ \chi $ by $ 
+	\chi^{ 
 		n } $ in (\ref{error_for _convergence_of_velocity}), we get an error of 
 		size
 	at most
@@ -2549,22 +2560,22 @@ We are now in the position to prove the main result
 		\sum_{ 1 \leq l \leq P }
 		\abs{ 
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nabla \chi_{ l } }
 			-
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\abs{ \nabla \chi_{ l }^{ n } }
 		}
 		+
 		\abs{
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\nu_{ l } 
 			\abs{ \nabla \chi_{ l } }
 			-
 			\int
-			\rho_{ B }
+			\eta_{ B }
 			\nu_{ l }^{ n }
 			\abs{ \nabla \chi_{ l }^{ n } }
 		}
@@ -2579,6 +2590,8 @@ We are now in the position to prove the main result
 		\lesssim{} &
 		\norm{ \xi }_{\mathrm{sup}}
 		\alpha \mu \left( [ 0 , T ] \times \flattorus \right)
+		+
+		\delta ( n )
 		\\
 		& +
 		\norm{ \xi }_{ \mathrm{sup}}
@@ -2603,8 +2616,10 @@ We are now in the position to prove the main result
 		\int
 		\rho_{ B }
 		\abs{ \nabla \chi_{ k }^{ n } }
-		\dd{ t }.
+		\dd{ t },
 	\end{alignat*}
+	where $ \delta ( n ) $ is some positive number which tends to zero as n 
+	approaches infinity.
 	Now letting $ n $ tend to infinity yields by the generalized dominated 
 	convergence theorem with majorant 
 	$ C \sum_{ i } \int \eta_{ B } \abs{ \nabla \chi_{ i }^{ n } } $ 

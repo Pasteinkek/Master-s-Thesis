@@ -1,6 +1,6 @@
 \section{Conditional convergence in the two-phase case}
 
-\subsection{The energy convergence assumption}
+\subsection{Convergence to a $\bv$-solution to two-phase mean curvature flow}
 
 Convergence of energies often boosts our 
 modulus of convergence and gives our limit therefore additional regularity. 
@@ -17,7 +17,8 @@ Thus let us assume
 	\text{ as }
 	\varepsilon \to 0,
 \end{equation}
-where the surface tension energy is defined for $ u = \alpha ( 1 - \chi ) + 
+where in the two-phase case, the surface tension energy is defined for $ u = 
+\alpha ( 1 - \chi ) + 
 \beta \chi $ by 
 \begin{equation}
 	\energy ( u ) 
@@ -26,7 +27,9 @@ where the surface tension energy is defined for $ u = \alpha ( 1 - \chi ) +
 	\coloneqq
 	\sigma \int \abs{ \nabla \chi }
 \end{equation}
-already motivated in \Cref{section_mcf}.
+already motivated in \Cref{section_mcf}. We will go into more depth about why 
+this assumption is important in 
+\Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}.
 Moreover we notice that the energy of $ u $ is exactly the total variation of $ 
 \psi = \sigma \chi $.
 Since for almost every time $ t $, we have that $ \psi_{ \varepsilon } ( t ) $ 
@@ -90,255 +93,7 @@ follows that
 	\energy ( u ; \varphi ).
 \end{equation}
 
-A first additional regularity result under the energy convergence assumption is 
-the following Proposition, which ensures that we have a square-integrable 
-normal velocity.
-
-\begin{proposition}
-	\label{existence_of_velocity_twophase}
-	In the setting of \Cref{initial_convergence_result} and given the energy 
-	convergence assumption (\ref{energy_convergence}), the measure $ \partial_{ 
-	t } \chi $ is absolutely continuous with respect to the measure $ \abs{ 
-	\nabla \chi } \dd{ t } $ and the corresponding density $ V $ is square 
-	integrable with the estimate
-	\begin{equation*}
-		\int_{ 0 }^{ T }
-		\int
-		V^{ 2 }
-		\abs{ \nabla \chi }
-		\dd{ t }
-		\lesssim
-		\energy_{ 0 }.
-	\end{equation*}
-\end{proposition}
-
-\begin{remark}
-	By 
-	\cite[Thm.~3.103]{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems},
-	 we can disintegrate the measure $ \abs{ \nabla \chi }_{ d + 1 } $, which 
-	is the variation in space in time and space, into the measure $ \abs{ 
-	\nabla \chi }_{ d } \dd{ t } $, which we will use by a slight abuse of 
-	notation and drop the subindex depending on the situation at hand. Here $ 
-	\abs{ \nabla \chi }_{ d } $ simply denotes the variation in space for a 
-	fixed time.
-\end{remark}
-
-\begin{proof}
-	Take a smooth test function $ \varphi \in \cont_{ \mathrm{ c } }^{ \infty } 
-	( ( 0 , T ) \times \flattorus )$. 
-	Then via the $ \lp^{ 1 } $-convergence of $ \psi_{ \varepsilon } $ to $ 
-	\psi 
-	$, we have
-	\begin{align*}
-		\partial_{ t } \psi ( \varphi )
-		& =
-		\liminf_{ \varepsilon \to 0 }
-		\partial_{ t } \psi_{ \varepsilon } ( \varphi )
-		\\
-		& =
-		\liminf_{ \varepsilon \to 0 }
-		\int_{ 0 }^{ T }
-		\int
-		\sqrt{ 2 W ( u_{ \varepsilon } ) }
-		\partial_{ t } u_{ \varepsilon }
-		\varphi
-		\dd{ x }
-		\dd{ t }
-		\\
-		& \leq
-		\liminf_{ \varepsilon \to 0 }
-		\left( 
-		\int_{ 0 }^{ T }
-		\int
-		\frac{ 1 }{ \varepsilon } 2 W ( u_{ \varepsilon } )
-		\varphi^{ 2 }
-		\dd{ x }
-		\dd{ t }
-		\right)^{ 1/ 2 }
-		\left(
-		\int_{ 0 }^{ T }
-		\int
-		\varepsilon
-		\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
-		\dd{ x }
-		\dd{ t }
-		\right)^{ 1/2 }
-		\\
-		& \leq
-		\liminf_{ \varepsilon \to 0 }
-		\left(
-		2 
-		\int_{ 0 }^{ T }
-		\energy_{ \varepsilon} \left( u_{ \varepsilon } ; \varphi^{ 2 } \right)
-		\dd{ t }
-		\right)^{ 1/ 2 }
-		\left(
-		\energy_{ \varepsilon } ( u_{ \varepsilon } )
-		\right)^{ 1/2 }
-		\\
-		& =
-		\sqrt{ 2 \sigma }
-		\norm{ \varphi }_{ \lp^{ 2 } ( ( 0 , T ) \times \flattorus , \abs{ 
-		\nabla \chi } \dd{ t 
-		} ) }
-		\sqrt{ \energy_{ 0 } }.
-	\end{align*}
-	The second inequality is due to the energy dissipation inequality 
-	(\ref{energy_dissipation_sharp}) and the last equality due to the 
-	convergence of the localized energies 
-	(\ref{convergence_of_energy_measures}).
-	This proves both the absolute continuity and via a duality argument the 
-	desired bound since $ \partial_{ t } \psi = \sigma \partial_{ t } \chi $ 
-	and $ \sigma > 0 $.
-\end{proof}
-
-We finish this section with a proof for the \emph{equipartition of the 
-energyies}, which 
-tells us that both the summand involving the potential $ W ( u_{ \varepsilon } 
-) $ and the norm of the gradient contribute to the energy in equal parts. Or in 
-other words
-\begin{equation*}
-	\frac{ 1 }{ \varepsilon } W ( u_{ \varepsilon } ) 
-	- 
-	\frac{ \varepsilon }{ 2 }
-	\abs{ \nabla u_{ \varepsilon } }^{ 2 }
-	\rightharpoonup^{ \ast }
-	0 
-\end{equation*}
-holds in the distributional sense. Notice that under the 
-energy convergence assumption (\ref{energy_convergence}), the proof is quite 
-simple. Ilmanen actually showed in 
-\cite{ilmanen_convergence_of_ac_to_brakkes_mcf} that in the two-phase case this 
-is true
-for a big class of well-prepared initial conditions, but the proof relies on a 
-comparison principle, which has no obvious substitute in the multiphase case 
-and the proof is much more involved.
-
-\begin{lemma}
-	\label{equipartition_of_energies}
-	In the situation of \Cref{initial_convergence_result} and under the energy 
-	convergence assumption (\ref{energy_convergence}), we have 
-	for any continuous function $ \varphi \in \cont ( \flattorus ) $ 
-	that
-	\begin{align*}
-		\energy ( u ; \varphi )
-		=
-		\lim_{ \varepsilon \to 0 }
-		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
-		& = 
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\sqrt{ 2 W ( u_{ \varepsilon } ) }
-		\abs{ \nabla u_{ \varepsilon } }
-		\dd{ x }
-		\\
-		& =
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\varepsilon
-		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
-		\dd{ x}
-		\\
-		& =
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\frac{ 1 }{ \varepsilon }
-		2 W ( u_{ \varepsilon } )
-		\dd{ x }
-	\end{align*}
-	for almost every time $ 0 \leq t \leq T $.
-\end{lemma}
-
-\begin{proof}
-	We have already established the first equality before. For the second 
-	equality, we first assume that $ \varphi \in \cont \left( \flattorus  
-	\right) $ is non-negative.
-	By the lower semicontinuity of the variation measure, we immediately obtain
-	\begin{equation*}
-		\liminf_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\sqrt{ 2 W ( u_{ \varepsilon } ) }
-		\abs{ \nabla u_{ \varepsilon } }
-		\dd{ x }
-		=
-		\liminf_{ \varepsilon \to 0 }
-			\int
-				\varphi
-				\abs{ \nabla \psi_{ \varepsilon } }
-			\dd{ x }
-		\geq
-		\energy ( u ; \varphi ).
-	\end{equation*}
-	But by Young's inequality, we also have 
-	\begin{equation*}
-		\limsup_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\sqrt{ 2 W ( u_{ \varepsilon } ) }
-		\abs{ \nabla u_{ \varepsilon } }
-		\dd{ x }
-		\leq
-		\limsup_{ \varepsilon \to 0 }
-		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
-		= \energy ( u ; \varphi ).
-b	\end{equation*}
-	For general $ \varphi \in \cont \left( \flattorus \right) $, we decompose $ 
-	\varphi $ into its positive and negative part and apply the previous 
-	argument to both in order to get the claim.
-	
-	The third and fourth equality follow for a given non-negative $ \varphi 
-	\in \cont \left( \flattorus ; [ 0 , \infty ) \right) $ by the 
-	$ \lp^{ 2 } $-estimate
-	\begin{align*}
-		& \lim_{ \varepsilon \to 0 }
-		\int
-		\abs{ \sqrt{ \varphi } \sqrt{ \varepsilon } \abs{ \nabla u_{ 
-		\varepsilon } } - \sqrt{ \varphi } \frac{ 1 }{ \sqrt{ \varepsilon } } 
-		\sqrt{ 2 W ( u_{ \varepsilon } ) } }^{ 2 }
-		\dd{ x }
-		\\
-		={} &
-		\lim_{ \varepsilon \to 0 }
-		2 \energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
-		-
-		2 \int	
-		\varphi
-		\sqrt{ 2 W ( u_{ \varepsilon } ) }
-		\abs{ \nabla u_{ \varepsilon } }
-		\dd{ x }
-		=
-		0
-	\end{align*}
-	which implies that 
-	\begin{equation*}
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\varepsilon
-		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
-		\dd{ x }
-		=
-		\lim_{ \varepsilon \to 0}
-		\int
-		\varphi
-		\frac{ 1 }{ \varepsilon }
-		2 W ( u_{ \varepsilon } )
-		\dd{ x }
-		=
-		\lim_{ \varepsilon \to 0 }
-		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi ),
-	\end{equation*}
-	since the integral of $ \varphi 1/ \varepsilon 2 W ( u_{ \varepsilon } ) + 
-	\varphi \varepsilon \abs{ \nabla u_{\varepsilon } }^{ 2 } $ converges .
-\end{proof}
-
-\subsection{Convergence to a $\bv$-solution to two-phase mean curvature flow}
-
-We start by definining a BV-formulation for motion by mean curvature in the 
+We start by defining a BV-formulation for motion by mean curvature in the 
 spirit of Luckhaus und Sturzenhecker 
 \cite{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}.
 
@@ -558,6 +313,253 @@ Then we formally compute that the first inner variation of the energy $
 \end{align*}
 We therefore test equation (\ref{ac_weak_equation}) with $ \varphi_{ 
 \varepsilon } \coloneqq \inner{ \xi }{ \nabla u_{ \varepsilon } } $.
+
+A first additional regularity result under the energy convergence assumption is 
+the following Proposition, which ensures that we have a square-integrable 
+normal velocity.
+
+\begin{proposition}
+	\label{existence_of_velocity_twophase}
+	In the setting of \Cref{initial_convergence_result} and given the energy 
+	convergence assumption (\ref{energy_convergence}), the measure $ \partial_{ 
+		t } \chi $ is absolutely continuous with respect to the measure $ \abs{ 
+		\nabla \chi } \dd{ t } $ and the corresponding density $ V $ is square 
+	integrable with the estimate
+	\begin{equation*}
+		\int_{ 0 }^{ T }
+		\int
+		V^{ 2 }
+		\abs{ \nabla \chi }
+		\dd{ t }
+		\lesssim
+		\energy_{ 0 }.
+	\end{equation*}
+\end{proposition}
+
+\begin{remark}
+	By 
+	\cite[Thm.~3.103]{ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems},
+	we can disintegrate the measure $ \abs{ \nabla \chi }_{ d + 1 } $, which 
+	is the variation in space in time and space, into the measure $ \abs{ 
+		\nabla \chi }_{ d } \dd{ t } $, which we will use by a slight abuse of 
+	notation and drop the subindex depending on the situation at hand. Here $ 
+	\abs{ \nabla \chi }_{ d } $ simply denotes the variation in space for a 
+	fixed time.
+\end{remark}
+
+\begin{proof}
+	Take a smooth test function $ \varphi \in \cont_{ \mathrm{ c } }^{ \infty } 
+	( ( 0 , T ) \times \flattorus )$. 
+	Then via the $ \lp^{ 1 } $-convergence of $ \psi_{ \varepsilon } $ to $ 
+	\psi 
+	$, we have
+	\begin{align*}
+		\partial_{ t } \psi ( \varphi )
+		& =
+		\liminf_{ \varepsilon \to 0 }
+		\partial_{ t } \psi_{ \varepsilon } ( \varphi )
+		\\
+		& =
+		\liminf_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+		\int
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\partial_{ t } u_{ \varepsilon }
+		\varphi
+		\dd{ x }
+		\dd{ t }
+		\\
+		& \leq
+		\liminf_{ \varepsilon \to 0 }
+		\left( 
+		\int_{ 0 }^{ T }
+		\int
+		\frac{ 1 }{ \varepsilon } 2 W ( u_{ \varepsilon } )
+		\varphi^{ 2 }
+		\dd{ x }
+		\dd{ t }
+		\right)^{ 1/ 2 }
+		\left(
+		\int_{ 0 }^{ T }
+		\int
+		\varepsilon
+		\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
+		\dd{ x }
+		\dd{ t }
+		\right)^{ 1/2 }
+		\\
+		& \leq
+		\liminf_{ \varepsilon \to 0 }
+		\left(
+		2 
+		\int_{ 0 }^{ T }
+		\energy_{ \varepsilon} \left( u_{ \varepsilon } ; \varphi^{ 2 } \right)
+		\dd{ t }
+		\right)^{ 1/ 2 }
+		\left(
+		\energy_{ \varepsilon } ( u_{ \varepsilon } )
+		\right)^{ 1/2 }
+		\\
+		& =
+		\sqrt{ 2 \sigma }
+		\norm{ \varphi }_{ \lp^{ 2 } ( ( 0 , T ) \times \flattorus , \abs{ 
+				\nabla \chi } \dd{ t 
+			} ) }
+		\sqrt{ \energy_{ 0 } }.
+	\end{align*}
+	The second inequality is due to the energy dissipation inequality 
+	(\ref{energy_dissipation_sharp}) and the last equality due to the 
+	convergence of the localized energies 
+	(\ref{convergence_of_energy_measures}).
+	This proves both the absolute continuity and via a duality argument the 
+	desired bound since $ \partial_{ t } \psi = \sigma \partial_{ t } \chi $ 
+	and $ \sigma > 0 $.
+\end{proof}
+
+We finish this section with a proof for the \emph{equipartition of the 
+	energyies}, which 
+tells us that both the summand involving the potential $ W ( u_{ \varepsilon } 
+) $ and the norm of the gradient contribute to the energy in equal parts. Or in 
+other words
+\begin{equation*}
+	\frac{ 1 }{ \varepsilon } W ( u_{ \varepsilon } ) 
+	- 
+	\frac{ \varepsilon }{ 2 }
+	\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+	\rightharpoonup^{ \ast }
+	0 
+\end{equation*}
+holds in the distributional sense. Notice that under the 
+energy convergence assumption (\ref{energy_convergence}), the proof is quite 
+simple. Ilmanen actually showed in 
+\cite{ilmanen_convergence_of_ac_to_brakkes_mcf} that in the two-phase case this 
+is true
+for a big class of well-prepared initial conditions, but the proof relies on a 
+comparison principle, which has no obvious substitute in the multiphase case 
+and the proof is much more involved.
+
+\begin{lemma}
+	\label{equipartition_of_energies}
+	In the situation of \Cref{initial_convergence_result} and under the energy 
+	convergence assumption (\ref{energy_convergence}), we have 
+	for any continuous function $ \varphi \in \cont ( \flattorus ) $ 
+	that
+	\begin{align*}
+		\energy ( u ; \varphi )
+		=
+		\lim_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+		& = 
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\abs{ \nabla u_{ \varepsilon } }
+		\dd{ x }
+		\\
+		& =
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\varepsilon
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\dd{ x}
+		\\
+		& =
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\frac{ 1 }{ \varepsilon }
+		2 W ( u_{ \varepsilon } )
+		\dd{ x }
+	\end{align*}
+	for almost every time $ 0 \leq t \leq T $.
+\end{lemma}
+
+\begin{proof}
+	We have already established the first equality before. For the second 
+	equality, we first assume that $ \varphi \in \cont \left( \flattorus  
+	\right) $ is non-negative.
+	By the lower semicontinuity of the variation measure, we immediately obtain
+	\begin{equation*}
+		\liminf_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\abs{ \nabla u_{ \varepsilon } }
+		\dd{ x }
+		=
+		\liminf_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\abs{ \nabla \psi_{ \varepsilon } }
+		\dd{ x }
+		\geq
+		\energy ( u ; \varphi ).
+	\end{equation*}
+	But by Young's inequality, we also have 
+	\begin{equation*}
+		\limsup_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\abs{ \nabla u_{ \varepsilon } }
+		\dd{ x }
+		\leq
+		\limsup_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+		= \energy ( u ; \varphi ).
+	\end{equation*}
+	For general $ \varphi \in \cont \left( \flattorus \right) $, we decompose $ 
+	\varphi $ into its positive and negative part and apply the previous 
+	argument to both in order to get the claim.
+	
+	The third and fourth equality follow for a given non-negative $ \varphi 
+	\in \cont \left( \flattorus ; [ 0 , \infty ) \right) $ by the 
+	$ \lp^{ 2 } $-estimate
+	\begin{align*}
+		& \lim_{ \varepsilon \to 0 }
+		\int
+		\abs{ \sqrt{ \varphi } \sqrt{ \varepsilon } \abs{ \nabla u_{ 
+					\varepsilon } } - \sqrt{ \varphi } \frac{ 1 }{ \sqrt{ 
+					\varepsilon } } 
+			\sqrt{ 2 W ( u_{ \varepsilon } ) } }^{ 2 }
+		\dd{ x }
+		\\
+		={} &
+		\lim_{ \varepsilon \to 0 }
+		2 \energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+		-
+		2 \int	
+		\varphi
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\abs{ \nabla u_{ \varepsilon } }
+		\dd{ x }
+		=
+		0
+	\end{align*}
+	which implies that 
+	\begin{equation*}
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\varepsilon
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\dd{ x }
+		=
+		\lim_{ \varepsilon \to 0}
+		\int
+		\varphi
+		\frac{ 1 }{ \varepsilon }
+		2 W ( u_{ \varepsilon } )
+		\dd{ x }
+		=
+		\lim_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi ),
+	\end{equation*}
+	since the integral of $ \varphi 1/ \varepsilon 2 W ( u_{ \varepsilon } ) + 
+	\varphi \varepsilon \abs{ \nabla u_{\varepsilon } }^{ 2 } $ converges .
+\end{proof}
 
 \subsection{Convergence of the curvature term}
 

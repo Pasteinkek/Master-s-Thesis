@@ -30,13 +30,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Conditional convergence in the two-phase case}{31}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}The energy convergence assumption}{31}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Convergence to a $\bv $-solution to two-phase mean curvature flow}{31}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Convergence to a $\bv $-solution to two-phase mean curvature flow}{34}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Convergence of the curvature term}{35}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Convergence of the curvature term}{35}{subsection.4.1.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Convergence of the velocity term}{38}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.3}Convergence of the velocity term}{38}{subsection.4.1.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Conditional convergence in the multiphase case}{41}{section.4.2}%
 \defcounter {refsection}{0}\relax 
@@ -48,16 +46,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.4}Convergence of the velocity term}{53}{subsection.4.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}De Giorgi's mean curvature flow}{59}{chapter.5}%
+\contentsline {chapter}{\numberline {5}De Giorgi's mean curvature flow}{61}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Conditional convergence to De Giorgi's mean curvature flow}{59}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Conditional convergence to De Giorgi's mean curvature flow}{61}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Definition of De Giorgi type $ \bv $-solutions to mean curvature flow}{59}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}De Giorgi type varifold solutions for mean curvature flow}{67}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}De Giorgi type varifold solutions for mean curvature flow}{65}{subsection.5.1.2}%
+\contentsline {chapter}{\numberline {A}Appendix}{75}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{73}{appendix.A}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{77}{chapter*.8}%
+\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.8}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -3,9 +3,6 @@
 In this section, we shall state our solution concept and prove convergence to 
 the aforementioned.
 
-\subsection{Definition of De Giorgi type $ \bv $-solutions to mean curvature 
-flow}
-
 \begin{definition}[De Giorgi type $ \bv $-solution to multiphase mean 
 curvature 
 flow]
@@ -13,7 +10,7 @@ flow]
 	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
 	surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus 
 	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq \energy ( \chi^{ 0 } 
-	) $ and 
+	) < \infty $ and 
 	$ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $. We say that
 	\begin{equation*}
 		\chi \in \cont \left(
@@ -22,9 +19,10 @@ flow]
 		\lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}^{ P } \right)
 		\right)
 	\end{equation*}
-	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) $ and $ \sum_{ i = 1 
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) < \infty  $ and $ 
+	\sum_{ i = 1 
 	}^{ P } \chi_{ i } = \sum_{ i = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ i } } = 
-	1  $ is a \emph{ De Giorgi type }$\bv$\emph{-solution to multiphase mean 
+	1  $ is a \emph{De Giorgi type }$\bv$\emph{-solution to multiphase mean 
 	curvature flow with initial data} $ \chi^{ 0 } $ \emph{and surface 
 	tensions} $ \sigma $ if the following holds. 
 	\begin{enumerate}
@@ -32,8 +30,7 @@ flow]
 		For all $ 1 \leq i \leq P $, there exist normal 
 		velocities $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } 
 		) $ 
-		of the interfaces 
-		in the sense that
+		such that
 		\begin{equation*}
 			\partial_{ t } \chi_{ i }
 			=
@@ -45,12 +42,19 @@ flow]
 		There exist a mean curvature vector $ H \in 
 		\lp^{ 2 } ( \energy ( u ; \cdot) \dd{ t } ; \mathbb{ R }^{ d } ) $ 
 		which satisfies
-		\begin{equation}
-			\label{mean_curvature_vector_bv_de_giorgi}
+		\begin{align}
+			\notag
+			& 
+			\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
-				\energy \left( \chi ; \inner*{ H }{ \xi } \right)
+				\int_{ \Sigma_{ i j } }
+				\inner*{ H }{ \xi }
+				\dd{ \hm^{ d - 1 } }
 			\dd{ t }
-			=
+			\\
+			\label{mean_curvature_vector_bv_de_giorgi}
+			={} &
 			-
 			\sum_{ 1 \leq i < j \leq P }
 			\sigma_{ i j }
@@ -61,13 +65,13 @@ flow]
 					{ \mathrm{Id} - \nu_{ i } \otimes \nu_{ i } }
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }
-		\end{equation}
+		\end{align}
 		for all test vector fields 
 		$ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left(
 			( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d }
 		\right) $,
 		where $ \nu_{ i } \coloneqq \nabla \chi_{ i } / \abs{ \nabla \chi_{ i } 
-		} $ are the inner unit normals and $ \Sigma_{ i , j } \coloneqq 
+		} $ are the inner unit normals and $ \Sigma_{ i j } \coloneqq 
 		\partial_{ \ast } \Omega_{ i } \cap \partial_{ \ast } \Omega_{ j } $
 		is the $ (i, j )$-th interface.
 		
@@ -75,7 +79,8 @@ flow]
 		The partition $ \chi $ satisfies a De Giorgi type optimal energy 
 		dissipation inequality in the sense that for almost every time $ 0 < T' 
 		< T $, we have
-		\begin{equation*}
+		\begin{equation}
+			\label{optimal_energy_dissipation_solution}
 			\energy ( \chi ( T' ) )
 			+
 			\frac{ 1 }{ 2 }
@@ -85,12 +90,12 @@ flow]
 					\int_{ \Sigma_{ i j } }
 						V_{ i }^{ 2 }
 						+
-						H^{ 2 }
+						\abs{ H }^{ 2 }
 					\dd{ \hm^{ d - 1 } }
 				\dd{ t }
 			\leq
 			\energy_{ 0 }.
-		\end{equation*}
+		\end{equation}
 		
 		\item
 		The initial data is achieved in the space $ \cont \left( [ 0 , T ] ; 
@@ -98,6 +103,8 @@ flow]
 	\end{enumerate}
 \end{definition}
 
+We can now immediately prove a similar convergence result as in 
+\Cref{convergence_to_multiphase_mcf}.
 \begin{theorem}
 	\label{convergence_to_de_giorgis_multiphase_mcf}
 	Let a smooth multiwell potential $ W \colon \mathbb{ R }^{ N } \to [ 0, 
@@ -122,8 +129,9 @@ flow]
 		\infty,
 	\end{equation*}
 	we have that for 
-	some subsequence of solutions to the Allen--Cahn equation
-	(\ref{allen_cahn_eq}) $ u_{\varepsilon } $ with initial datum $ u_{ 
+	some subsequence of solutions $ u_{\varepsilon } $ to the Allen--Cahn 
+	equation
+	(\ref{allen_cahn_eq})  with initial datum $ u_{ 
 		\varepsilon }^{ 0 } $, there exists a time-dependent partition $ \chi $ 
 	with 
 	$ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
@@ -136,7 +144,8 @@ flow]
 	\cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we 
 	additionally assume that the 
 	time-integrated energies converge (\ref{energy_convergence}), then $ 
-	\chi $ is a $ \bv $-solution to De Giorgis mean curvature flow in the sense 
+	\chi $ is a De Giorgi type $ \bv $-solution to multiphase mean curvature 
+	flow in the sense 
 	of 
 	\Cref{de_giorgi_solution_to_mmcf}.
 \end{theorem} 
@@ -148,7 +157,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	The idea of the proof is that we already have an optimal energy dissipation 
 	inequality for the Allen--Cahn equation given by 
 	(\ref{energy_dissipation_sharp}).
-	If we use that additionally use the Allen--Cahn equation once, we arrive at 
+	If we additionally use the Allen--Cahn equation once, we arrive at 
 	the reformulated version of the optimal energy dissipation inequality given 
 	by
 	\begin{equation*}
@@ -172,9 +181,10 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ).
 	\end{equation*}
 	Our hope is that as $ \varepsilon $ tends to zero, we can pass to the 
-	optimal energy dissipation inequality for $ \chi $ through lower 
+	optimal energy dissipation inequality for $ \chi $ 
+	(\ref{optimal_energy_dissipation_solution}) through lower 
 	semicontinuity. 
-	Since we assume the convergence of the inital energies and energy 
+	Since we assume the convergence of the initial energies and energy 
 	convergence for almost every time, the only terms we have to care about are 
 	the lower semicontinuity of the velocity term, which reads
 	\begin{equation}
@@ -197,7 +207,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t },
 	\end{equation}
-	and the lower semicontinuity of the curvature term, which reads
+	and the lower semicontinuity of the curvature term, which is given by
 	\begin{equation}
 		\label{lsc_of_curvature}
 		\liminf_{ \varepsilon \to 0 }
@@ -220,7 +230,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\sigma_{ i j }
 			\int_{ 0 }^{ T' }
 				\int_{ \Sigma_{ i j } }
-					H^{ 2 }
+					\abs{ H }^{ 2 }
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }.
 	\end{equation}
@@ -245,8 +255,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\dd{ t }
 	\end{equation*}
 	defined on test vector fields $ \xi $. Then $ L $ is bounded with respect 
-	to $ \lp^{ 2 } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ d } ; 
-	\energy ( \xi ; \cdot ) \right) $ since by the convergence of the curvature 
+	to $ \lp^{ 2 } \left( ( 0 , T ) \times \flattorus ,\energy ( \xi ; \cdot ) 
+	; \mathbb{ R }^{ d }
+	 \right) $ since by the convergence of the curvature 
 	term observed in $ \Cref{convergence_of_curvature_multiphase} $, we have
 	\begin{align*}
 		\abs{ L ( \xi ) }
@@ -285,8 +296,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\int_{ 0 }^{ T }
 				\int
 					\varepsilon
-					\abs{ \nabla u_{ \varepsilon } }^{ 2 }
-					\abs{ \xi }^{ 2 }
+					\abs{ \diff u_{ \varepsilon } \xi }^{ 2 }
 				\dd{ x }
 			\dd{ t }
 		\right)^{ 1/2 }
@@ -316,15 +326,15 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	inequality (\ref{energy_dissipation_sharp}), and by the equipartition of 
 	energies (\Cref{equipartition_of_energies_multiphase}), the second factor 
 	converges to the $ \lp^{ 2 } $-norm of $ \xi $ with respect to the energy 
-	measure, proving our claim. But therefore we can extend the functional to 
+	measure, proving our claim. Therefore we can extend the functional to 
 	the square integrable functions with respect to the energy measure, and by 
 	Riesz representation theorem obtain the existence of the desired mean 
 	curvature vector $ H $.
 	
-	Let us moreover firstly consider the lower semicontinuity of the curvature 
+	Let us now consider the lower semicontinuity of the curvature 
 	term. Let again $ \xi $ be some test vector field. Then for all $ 
 	\varepsilon > 0 $ and some fixed time, we have by Young's inequality and 
-	Cauchy--Schwarz that
+	the Cauchy--Schwarz inequality that
 	\begin{align*}
 		& 
 		\liminf_{ \varepsilon \to 0 }
@@ -371,9 +381,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	sequence of test vector fields satisfying
 	\begin{equation*}
 		\lim_{ n \to \infty }
-			\norm{ \xi_{ n } + H }_{ \lp^{ 2 } \left( \flattorus ; \energy 
+			\norm{ \xi_{ n } + H }_{ \lp^{ 2 } \left( \flattorus , \energy 
 			( 
-			\chi ; \cdot ) \right) } 
+			\chi ; \cdot ) ; \mathbb{ R }^{ d } \right) } 
 		=
 		0.
 	\end{equation*}
@@ -382,10 +392,11 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	
 	In principle the proof is now already done, since 
 	\Cref{convergence_to_multiphase_mcf} already gives us that for almost every 
-	time $ t $, we already have $ V_{ i } \nu_{ i } = - H $ on $ \Sigma_{ i , j 
-	} $ $ \hm^{ d-  1 } $-almost everyhwere. But since this makes heavy use of 
+	time $ t $, we have $ V_{ i } \nu_{ i } = - H $ on $ \Sigma_{ i , j 
+	} $ $ \hm^{ d-  1 } $-almost everywhere. But since this makes heavy use of 
 	the previous arguments, we instead want to present another proof which 
-	directly proves the lower semicontinuity of the velocity term.
+	directly proves the lower semicontinuity of the velocity term and may leave 
+	more room for future generalizations.
 	
 	Let us first consider the 
 	scalar case $ N = 1 , P = 2 $. By a similar duality argument as for the 
@@ -419,7 +430,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\dd{ x }
 		\dd{ t }
 		\\
-		\geq{} &
+		={} &
 		\liminf_{ \varepsilon \to 0 }
 			\int_{ 0 }^{ T }
 				\int
@@ -453,12 +464,12 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\dd{ \hm^{ d - 1 } }
 		\dd{ t }.
 	\end{align*}	
-	Since again the inequality holds for any testfunction $ \varphi $, we may 
+	Since the inequality holds for any testfunction $ \varphi $, we may 
 	plug in a sequence of testfunctions $ \varphi_{ n } $ satisfying
 	\begin{equation*}
 		\lim_{ n \to \infty }
 			\norm{ \varphi_{ n } - V }_{ \lp^{ 2 } \left( ( 0 , T ) \times 
-			\flattorus ; \dd{ \hm^{ d - 1 } } |_{ \Sigma } \dd{ t } \right) }
+			\flattorus , \dd{ \hm^{ d - 1 } } |_{ \Sigma } \dd{ t } \right) }
 		= 0
 	\end{equation*}
 	and thereby obtain the desired inequality (\ref{lsc_of_velocity}).
@@ -471,8 +482,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	and $ 0 = T_{ 0 } < T_{ 1 } < \dotsc < T_{ K } = T' $ be a partition of $ [ 
 	0 , T' ] $. Let $ ( g_{ k } )_{ k = 1 , \dotsc , K } $ be a partition of 
 	unity with respect to the intervals $ ( T_{ 0 } - \delta , T_{ 1 } + \delta 
-	), \dotsc , ( T_{ K - 1 } - \delta , T_{ K } + \delta ) $ and let $ r > 0 
-	$, where $ \eta_{ B } $ and $ \rho_{ B } $ are as in 
+	), \dotsc , ( T_{ K - 1 } - \delta , T_{ K } + \delta ) $, let $ r > 0 $
+	and $ \eta_{ B } $ as in 
 	\Cref{localization_lemma_with_normals}. Then we estimate
 	\begin{align*}
 		 A \coloneqq{}& \liminf_{ \varepsilon \to 0 }
@@ -531,44 +542,50 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 									) }^{ 2 }
 									\varphi^{ 2 }
 								\dd{ x }
-							\dd{ t }
-		\\
-		\geq{} &
-		\liminf_{ \varepsilon \to 0 }
-		\sum_{ k = 1 }^{ K }
-		\sum_{ B \in \mathcal{ B }_{ r } }
-		\max_{ 1 \leq i \leq P }
-		\sup_{ 
-			\substack{ 
-				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
-				\left( ( 0 , T ) \times \flattorus \right)
-				\\
-				\abs{ \varphi } \leq R  
-			}
-		}
-		\int_{ 0 }^{ T }
-		\int
-		g_{ k } \eta_{ B }
-		\partial_{ t } \psi_{ \varepsilon , i }
-		\varphi
-		\dd{ x }
-		\dd{ t } 
-		\\
-		& \qquad \qquad \qquad \qquad \qquad \qquad \quad 
-		\:\, -
-		\frac{ 1 }{ 2 }
-		\int_{ 0 }^{ T }
-		\int
-		g_{ k } \eta_{ B }
-		\frac{ 1 }{ \varepsilon }
-		2 W ( u_{ \varepsilon } )
-		\varphi^{ 2 }
-		\dd{ x }
-		\dd{ t }
+							\dd{ t }.
 	\end{align*}
-	Pulling the limes inferior inside the double sum and the suprema, we obtain 
+	\begin{comment}
+	\geq{} &
+	\liminf_{ \varepsilon \to 0 }
+	\sum_{ k = 1 }^{ K }
+	\sum_{ B \in \mathcal{ B }_{ r } }
+	\max_{ 1 \leq i \leq P }
+	\sup_{ 
+		\substack{ 
+			\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+			\left( ( 0 , T ) \times \flattorus \right)
+			\\
+			\abs{ \varphi } \leq R  
+		}
+	}
+	\int_{ 0 }^{ T }
+	\int
+	g_{ k } \eta_{ B }
+	\partial_{ t } \psi_{ \varepsilon , i }
+	\varphi
+	\dd{ x }
+	\dd{ t } 
+	\\
+	& \qquad \qquad \qquad \qquad \qquad \qquad \quad 
+	\:\, -
+	\frac{ 1 }{ 2 }
+	\int_{ 0 }^{ T }
+	\int
+	g_{ k } \eta_{ B }
+	\frac{ 1 }{ \varepsilon }
+	2 W ( u_{ \varepsilon } )
+	\varphi^{ 2 }
+	\dd{ x }
+	\dd{ t }
+\end{comment}
+	We identify that via the chain rule, we have $ \inner*{ \nabla \phi_{ i } ( 
+	u_{ \varepsilon } ) }{ \partial_{ t } u_{ \varepsilon } } = \partial_{ t } 
+	\psi_{ \varepsilon , i } $ and moreover remember $ \abs{ \nabla \phi_{ i } 
+	} \leq \sqrt{ 2 W } $.
+	Pulling the limes inferior inside the double sum and the suprema, we thus 
+	obtain 
 	that this term can be estimated from below via
-	\begin{align*}& \sum_{ k = 1 }^{ K }
+	\begin{equation*}\sum_{ k = 1 }^{ K }
 		\sum_{ B \in \mathcal{ B }_{ r } }
 		\max_{ 1 \leq i \leq P }
 		\sup_{ 
@@ -591,19 +608,23 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\int_{ 0 }^{ T }
 		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
 		\dd{ t }
+		\end{equation*}
+		By an addition with zero, we have
+		\begin{align*}
+		& \int_{ 0 }^{ T }
+		\int
+		g_{ k } \eta_{ B }
+		\partial_{ t } \psi_{ i }
+		\varphi
+		\dd{ x }
+		\dd{ t } 
+		-
+		\frac{ 1 }{ 2 }
+		\int_{ 0 }^{ T }
+		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
+		\dd{ t }
 		\\
-		={} &
-		\sum_{ k = 1 }^{ K }
-		\sum_{ B \in \mathcal{ B }_{ r } }
-		\max_{ 1 \leq i \leq P }
-		\sup_{ 
-			\substack{ 
-				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
-				\left( ( 0 , T ) \times \flattorus \right)
-				\\
-				\abs{ \varphi } \leq R  
-			}
-		}
+		={}&
 		\sum_{ j = 1 }^{ P }
 		\left(
 		\sigma_{ i j }
@@ -624,8 +645,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\abs{ \nabla \chi_{ j } }
 		\dd{ t }
 		\right)\\
-		& -
-		\frac{ 1 }{ 2 }
+		& 
+		-\frac{ 1 }{ 2 }
 		\left(
 		\int_{ 0 }^{ T }
 		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
@@ -637,10 +658,12 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\dd{ t }
 		\right).
 	\end{align*}
-	Since no derivative has fallen on $ g_{ k } $, we may send $ \delta $ to 
-	zero and obtain via the dominated convergence theorem that
-	\begin{align*}
-		A & \geq
+	Since no derivative has fallen on $ g_{ k } $, we may send $ \delta $ and 
+	obtain by the dominated convergence theorem that we can replace $ g_{ k } $ 
+	by $ \mathds{ 1 }_{ ( T_{ k - 1 } , T_{ k } ) } $. We thus end up with a 
+	good summand consisting of
+	\begin{equation}
+		\label{the_good_summand}
 		\sum_{ k = 1 }^{ K }
 		\sum_{ B \in \mathcal{ B }_{ r } }
 		\max_{ 1 \leq i \leq P }
@@ -653,81 +676,105 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			}
 		}
 		\sum_{ j = 1 }^{ P }
-		\left(
 		\sigma_{ i j }
-		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\int_{ T_{ k - 1 } }^{ T_{ k } } 
 		\int\eta_{ B }
-		\varphi
-		V_{ j }
+		\varphi 
+		\left( V_{ j } - \frac{ 1 }{ 2 } \varphi \right)
 		\abs{ \nabla \chi_{ j } }
 		\dd{ t } 
-		-
-		\frac{ 1 }{ 2 }
-		\sigma_{ i j }
-		\int_{ T_{ k - 1 } }^{ T_{ k } }
-		\int
-		\eta_{ B }
-		\varphi^{ 2 }
-		\abs{ \nabla \chi_{ j } }
-		\dd{ t }
-		\right)\\
-		& -
-		\frac{ 1 }{ 2 }
-		\left(
-		\int_{ T_{ k - 1 } }^{ T_{ k } }
-		\energy \left( \chi ; \eta_{ B } \varphi^{ 2 } \right)
-		-
-		\int
-		\eta_{ B }
-		\varphi^{ 2 }
-		\abs{ \nabla \psi_{ i } }
-		\dd{ t }
-		\right)
+	\end{equation}
+	and an error summand given by
+	\begin{align}
+		\notag
+		& \sum_{ k = 1 }^{ K }
+			\sum_{ B \in \mathcal{ B }_{ r } }
+				\max_{ 1 \leq i \leq P }
+					\sup_{ \substack{ 
+							\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+							\left( ( 0 , T ) \times \flattorus \right)
+							\\
+							\abs{ \varphi } \leq R  
+					} }
+				- \frac{ 1 }{ 2 }
+				\int_{ T_{ k - 1 } }^{ T_{ k } }
+				\left(
+				\energy \left( \chi ; \eta_{ B } \varphi^{ 2 } \right)
+				-
+				\int
+				\eta_{ B }
+				\varphi^{ 2 }
+				\abs{ \nabla \psi_{ i } }
+				\right)
+				\dd{ t }
 		\\
-		& \geq
+		\label{minor_error_term}
+		\geq{} &
 		\sum_{ k = 1 }^{ K }
 		\sum_{ B \in \mathcal{ B }_{ r } }
-		\max_{ i \neq j }
-		\sup_{ 
-			\substack{ 
-				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
-				\left( ( 0 , T ) \times \flattorus \right)
-				\\
-				\abs{ \varphi } \leq R  
-			}
-		}
-		\sigma_{ i j }
+		\max_{ 1 \leq i \leq P }
+		- \frac{ R^{ 2 } }{ 2 }
 		\int_{ T_{ k - 1 } }^{ T_{ k } }
-		\int \eta_{ B }
-		\varphi \left(
-		V_{ j }
-		- \frac{1 }{2 } \varphi 
-		\right)
-		\abs{ \nabla \chi_{ j } }
-		\dd{ t }
-		-
-		C \sum_{ l \notin \{ i , j \} }
-			\int_{ T_{ k - 1 } }^{ T_{ k } }
-				\int
-					\eta_{ B }
-					\left(
-						R \abs{ V_{ l } }
-						+
-						R^{ 2 }
-					\right)
-				\abs{ \nabla \chi_{ l } }
-			\dd{ t }
-		\\
-		& -
-		\frac{ R^{ 2 } }{ 2 }
-		\int_{ T_{ k - 1 } }^{ T_{ k } }
+		\left(
 		\energy \left( \chi ; \eta_{ B } \right)
 		-
 		\int
 		\eta_{ B }
 		\abs{ \nabla \psi_{ i } }
+		\right)
 		\dd{ t }
-	\end{align*}
+	\end{align}
+	By choosing a majority phase $ ( i , j ) $ we furthermore estimate the good 
+	summand (\ref{the_good_summand}) from below by
+	\begin{align}
+		\notag
+		& \max_{ 1 \leq i \leq P }
+		\sup_{ \substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+		} }
+		\sum_{ j = 1 }^{ P }
+			\sigma_{ i j }
+			\int_{ T_{ k  - 1 } }^{ T_{ k } }
+				\int
+					\eta_{ B } \varphi
+					\left( V_{ j } - \frac{ 1 }{ 2 } \varphi  \right)
+				\abs{ \nabla \chi_{ j } }
+			\dd{ t }
+		\\
+		\notag
+		\geq{} &
+		\max_{ i \neq j }
+		\sup_{ \substack{ 
+				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
+				\left( ( 0 , T ) \times \flattorus \right)
+				\\
+				\abs{ \varphi } \leq R  
+		} }
+		\sigma_{ i j }
+		\int_{ T_{ k  - 1 } }^{ T_{ k } }
+		\int
+		\eta_{ B } \varphi
+		\left( V_{ j } - \frac{ 1 }{ 2 } \varphi  \right)
+		\abs{ \nabla \chi_{ j } }
+		\dd{ t }
+		\\
+		\label{major_error}
+		& \qquad \qquad \qquad \qquad -
+		C \sum_{ l \notin \{ i , j \} }
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+			\int
+				\eta_{ B } 
+				\left(
+					R \abs{ V_{ l } }
+					+
+					R^{ 2 }
+				\right)
+			\abs{ \nabla \chi_{ l } }
+		\dd{ t }.
+	\end{align}
 	By \Cref{localization_estimate_weaker}, we have
 	\begin{equation*}
 				\frac{ R^{ 2 } }{ 2 }
@@ -747,36 +794,52 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\abs{ \nabla \chi_{ l } }
 		\dd{ t },
 	\end{equation*}
-	and by applying Young's inequality, we get that for every parameter $ 
+	which enables us to absorb the error (\ref{minor_error_term}) into the 
+	error term  (\ref{major_error}).
+	By applying Young's inequality, we get that for every parameter $ 
 	\alpha \in ( 0 , 1 ) $, we have
-	\begin{align*}
-		& \sum_{ k = 1 }^{ K }
-			\sum_{ B \in \mathcal{ B }_{ r } }
-				\min_{ i \neq j }
-				\sum_{ l \notin \{ i , j \} }
-					\int_{ T_{ k - 1 } }^{ T_{ k } }
-						\int
-							\eta_{ B } R V_{ l }
-						\abs{ \nabla \chi_{ l } }
-					\dd{ t }
-		\\
-		\lesssim{} &
+	\begin{equation*}
+		\int_{ T_{ k - 1 } }^{ T_{ k } }
+			\int
+				\eta_{ B } R V_{ l }
+			\abs{ \nabla \chi_{ l } }
+		\dd{ t }
+		\lesssim
 		\alpha
-		\sum_{ 1 \leq l \leq P }
 			\int_{ T_{ k - 1 } }^{ T_{ k } }
 				\int
+					\eta_{ B }
 					V_{ l }^{ 2 }
 				\abs{ \nabla \chi_{ l } }
 			\dd{ t }
 		+
 		\frac{ R^{ 2 } }{ \alpha }
+			\int_{ T_{ k - 1 } }^{ T_{k } }
+				\int
+					\eta_{ B }
+				\abs{ \nabla \chi_{ l } }
+			\dd{ t }.
+	\end{equation*}
+	Collecting our estimates, we end up with an error term which can be 
+	estimated from below up to a constant by
+	\begin{align*}
+		- \alpha \sum_{ l = 1 }^{ P }
+			\int_{ 0 }^{ T }
+				\int
+					V_{ l }^{ 2 }
+				\abs{ \nabla \chi_{ l } }
+			\dd{ t }
+		-
+		\frac{ R^{ 2 } }{ \alpha }
 		\sum_{ k = 1 }^{ K }
 			\sum_{ B \in \mathcal{ B }_{ r } }
-				\min_{ l \notin \{ i , j \} }
-					\int_{ T_{ k - 1 } }^{ T_{k } }
-						\int
-							\eta_{ B }
-						\abs{ \nabla \chi_{ l } }.
+				\max_{ i \neq j }
+					\sum_{ l \notin \{ i j \} }
+						\int_{ T_{ k - 1 } }^{ T_{ k } }
+							\int
+								\eta_{ B }
+							\abs{ \nabla \chi_{ l } }
+						\dd{ t }.
 	\end{align*}
 	Moreover, we can choose for fixed $k , B $ and tuple $ (i, j ) $ a sequence 
 	of testfunctions $ \varphi_{ n } $ with $ \abs{ \varphi_{ n } } \leq R $ 
@@ -786,7 +849,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\lim_{ n \to \infty }
 		\norm{ \varphi_{ n } - V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } } \leq R } 
 		}_{ \lp^{ 2 } \left(
-			( T_{ k - 1 }, T_{ k } ) \times \flattorus ;
+			( T_{ k - 1 }, T_{ k } ) \times \flattorus ,
 			\abs{ \nabla \chi_{ j } } \dd{ t }
 			\right)
 		}
@@ -796,8 +859,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	Combining these three arguments, we arrive at the estimate that for every 
 	parameter $ \alpha \in ( 0 , 1 ) $, it holds that
 	\begin{align*}
-		A & \geq
-		- \alpha C
+		A \geq &
+		- C \alpha 
 		\sum_{ 1 \leq l \leq P }
 			\int_{ 0 }^{ T }
 				\int
@@ -809,18 +872,16 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\sum_{ k = 1 }^{ K }
 			\sum_{ B \in \mathcal{ B }_{ r } }
 				\max_{ i \neq j }
-					\frac{ \sigma_{ i j } }{ 2 }
 					\int_{ T_{ k - 1 } }^{ T_{ k } } 
+						\frac{ \sigma_{ i j } }{ 2 }
 						\int
 							\eta_{ B }
 							\abs{ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } } \leq R 
 							} }^{ 2 }
 						\abs{ \nabla \chi_{ j } }
-					\dd{ t }
 					- 
 					C \frac{ R^{ 2 } }{ \alpha }
 					\sum_{ l \notin \{ i , j \} }
-						\int_{ T_{ k - 1 } }^{ T_{ k } }
 							\int
 								\eta_{ B }
 							\abs{ \nabla \chi_{ l } }
@@ -861,6 +922,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\geq{} &
 		\frac{ 1 }{ 2 }
 		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
 				\int_{ \Sigma_{ i j } }
 					V_{ i }^{ 2 } \mathds{ 1 }_{ \abs{ V_{ i } } \leq R }
@@ -900,801 +962,15 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\geq
 		\frac{ 1 }{ 2 }
 		\sum_{ 1 \leq i < j \leq P }
+			\sigma_{ i j }
 			\int_{ 0 }^{ T }
-				\int_{ \Sigma_{ i , j } }
+				\int_{ \Sigma_{ i j } }
 					V_{ i }^{ 2 }
 					\mathds{ 1 }_{ \abs{ V_{ i } } \leq R }
 				\dd{ \hm^{ d - 1 } }
-			\dd{ t },
+			\dd{ t }.
 	\end{equation*}
-	and thus the lower semicontinuity of the velocity term now follows form the 
+	Thus the lower semicontinuity of the velocity term now follows form the 
 	monotone convergence theorem.
 \end{proof}
 
-\subsection{De Giorgi type varifold solutions for mean curvature flow}
-\label{subsection_de_giorgi_type_varifold_solutions_for_mcf}
-
-Up until this point, we have always made the crucial assumption of energy 
-convergence for our proofs (HIER VLT. EINEN TEIL DER THESIS VERLINKEN, WO ICH 
-MehrR AUF DIESE ANNAHME EINGEHE; AM BESTEN BEVOR ICH SIE DAS ERSTE MAL BENUTZE).
-However this is usually a very strong assumption and we should not be able to 
-expect it. One thing which could go wrong is for example illustrated in 
-\Cref{figure_interfaces_collapse}. There we see that two rough interfaces of 
-the first and second phase collapse as $ \varepsilon $ tend to zero, which 
-results in a loss of energy, since the measure theoretic boundary of a set of 
-bounded variation does not see such lines.
-
-\begin{figure}[h]
-	\centering
-	
-	\begin{subfigure}[b]{0.3\linewidth}
-	\begin{tikzpicture}
-		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1,4);
-		\shade[left color=blue,right color=red] (1,0) rectangle (1.5,4);
-		\filldraw[fill=red, draw=red] (1.5,0) rectangle (2.5,4);
-		\shade[left color=red,right color=blue] (2.5,0) rectangle (3,4);
-		\filldraw[fill=blue, draw=blue] (3,0) rectangle (4,4);
-		
-		\node at (0.5,2) {\large $\approx \alpha_{ 1 } $};
-		\node at (2,2) {\large $\approx \alpha_{ 2 } $};
-		\node at (3.5,2) {\large $\approx \alpha_{ 1 } $};
-		
-	\end{tikzpicture}
-	
-	\caption{$ \varepsilon > 0 $}
-	\label{subfigure_epsilon}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\filldraw[fill=blue, draw=blue] (0,0) rectangle (1.5,4);
-		\shade[left color=blue,right color=red] (1.5,0) rectangle (1.75,4);
-		\filldraw[fill=red, draw=red] (1.75,0) rectangle (2.25,4);
-		\shade[left color=red,right color=blue] (2.25,0) rectangle (2.5,4);
-		\filldraw[fill=blue, draw=blue] (2.5,0) rectangle (4,4);
-		
-		\node at (0.75,2) {\Large $\approx \alpha_{ 1 } $};
-		\node at (2,2) {\small $\approx \alpha_{ 2 } $};
-		\node at (3.25,2) {\Large $\approx \alpha_{ 1 } $};
-			
-		\end{tikzpicture}
-	
-		\caption{$ \varepsilon > \varepsilon' >0 $}
-		\label{subfigure_varepsilon_prime}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-			\filldraw[fill=blue, draw=blue] (0,0) rectangle (4,4);
-			\draw[red,thick](2,0)--(2,4);
-			
-			\node at (1,2) {\LARGE $= \alpha_{ 1 } $};
-			\node at (3,2) {\LARGE $= \alpha_{ 1 } $};
-			
-		\end{tikzpicture}
-		
-		\caption{$ \varepsilon = 0 $}
-		\label{subfigure_varepsilon_zero}
-	\end{subfigure}
-
-	\caption{Profile of the solution $u_{ \varepsilon } $ as $ \varepsilon $ 
-	tends to zero.}
-	\label{figure_interfaces_collapse}
-\end{figure}
-
-This leads us to the solution concept introduced by Hensel and Laux in 
-\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}.
-For the twophase case, the definition is as follows.
-
-\begin{definition}[De Giorgi type varifold solution for twophase mean 
-curvature flow]
-	Let $ T < \infty $ be an arbitrary finite time horizon and let $ \mu = 
-	\lm^{ 1 } \otimes ( \mu_{ t } )_{ t \in ( 0 , T ) } $ be a 
-	family of oriented varifolds $ \mu_{ t } \in \mathcal{ M } \left( 
-	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $, $ t \in ( 0 , T ) 
-	$, such that the map $ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d 
-	-1 } } \eta ( x , p , t ) \dd \mu_{ t } ( x , p ) $ is measurable for all 
-	$ \eta \in \lp^{ 1 } \left( ( 0 , T ) ; \cont \left( \flattorus, 
-	\mathbb{ S 
-	}^{ d - 1 } \right) \right) $. 
-	Consider also a family $ A = ( A_{ t } )_{ t \in ( 0 , T ) } $ of 
-	subsets of $ \flattorus $ with finite perimeter such that the associated 
-	indicator function $ \chi ( x , t ) = \chi_{ A _{ t } } ( x ) $ satisfies 
-	$ \chi \in \lp^{ \infty } \left( ( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 
-	1 \} ) \right) $.
-	Let $ \sigma > 0 $ be a surface tension constant.
-	
-	Given an initial energy
-	$ \omega^{ 0 } \in \mathcal{ M } \left( \flattorus \right) $ and an initial 
-	phase indicator function $ \chi^{ 0 } \in \bv 
-	\left( \flattorus ; \{ 0 , 1 \} \right)$, we call the pair $ ( \mu , \chi ) 
-	$ a \emph{De Giorgi type varifold solution for twophase mean curvature flow 
-	with initial data} $ ( \omega^{ 0 } , \chi^{ 0 } ) $ if the following holds.
-	\begin{enumerate}
-		\item (Existence of a normal speed)
-		Writing $ \mu_{ t } = \omega_{ t } \otimes ( \lambda_{ x , t } )_{ x 
-		\in \flattorus} $ for the disintegration of $ \mu_{ t } $, we require 
-		the existence of some 
-		$ V \in \lp^{ 2 } \left( ( 0 , T ) ; \lp^{ 2 } \left( \flattorus ; 
-		\omega_{ t } \right) \right) $ encoding a normal speed in the sense of
-		\begin{equation}
-			\label{equation_varifold_velocity}
-			\sigma
-			\int
-				\chi ( T' , x ) \varphi ( T' , x ) 
-				-
-				\chi^{ 0 } ( x ) \varphi (0,x)
-			\dd{ x }
-			=
-			\sigma
-			\int_{ 0 }^{ T' }
-				\int
-					\chi
-					\partial_{ t } \varphi 
-				\dd{ x }
-			\dd{ t }
-			+
-			\int_{ 0 }^{ T' }
-				\int
-					V \varphi 
-				\dd{ \omega_{ t } }
-			\dd{ t }
-		\end{equation}
-		for almost every $ T' \in ( 0 , T ) $ and all $ \varphi \in \cont_{ 
-		\mathrm{c} }^{ \infty } \left( [ 0 , T ) \times \flattorus \right) 
-		$.
-		
-		\item (Existence of a generalized mean curvature vector)
-		We require the existence of some 
-		$ H \in \lp^{ 2 } \left( 
-			( 0 , T ) ; 
-			\lp^{ 2 } \left(
-				\flattorus , \omega_{ t } ; \mathbb{ R }^{ d }
-			\right)
-			\right) $
-		encoding a generalized mean curvature vector by
-		\begin{equation}
-			\label{equation_varifold_mean_curvature}
-			\int_{ 0 }^{ T }
-				\int
-					\inner*{ H }{ \xi }
-				\dd{ \omega_{ t } }
-			\dd{ t }
-			=
-			-
-			\int_{ 0 }^{ T }
-				\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-					\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
-				\dd{ \mu_{ t } }
-			\dd{ t }
-		\end{equation}
-		for all $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( [ 0, T ) 
-		\times \flattorus ; \mathbb{ R }^{ d } \right) $.
-		
-		\item (De Giorgi type optimal energy dissipation inequality)
-		A sharp energy dissipation inequality holds in form of
-		\begin{equation}
-			\label{equation_varifold_de_giorgi_inequality}
-			\omega_{ T' } ( \flattorus )
-			+
-			\frac{ 1 }{ 2 }
-			\int_{ 0 }^{ T' }
-				\int
-					V^{ 2 }
-					+
-					\abs{ H }^{ 2 }
-				\dd{ \omega_{ t } }
-			\dd{ t }
-			\leq
-			\omega^{ 0 } ( \flattorus )
-		\end{equation}
-		for almost every $ T' \in ( 0 , T ) $.
-		
-		\item (Compatibility)
-		For almost every $ t \in ( 0 , T ) $ and all $ \xi \in \cont^{ 
-		\infty } \left( \flattorus ; \mathbb{ R }^{ d } \right) $, it holds that
-		\begin{equation}
-			\label{equation_varifold_compatibility}
-			\sigma
-			\int
-				\inner*{ \xi }
-				{ \nabla \chi ( t , \cdot ) }
-			=
-			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-				\inner*{ \xi }{ p }
-			\dd{ \mu_{ t } }.
-		\end{equation}
-	\end{enumerate}
-\end{definition}
-
-We firstly want to discuss this definition. In the setting of 
-\Cref{de_giorgi_solution_to_mmcf} and in the twophase case, we can think of the 
-oriented varifold $ \mu $ as the measure 
-\begin{equation} 
-	\label{equation_simple_varifold}
-\mu =
-\sigma \lm^{ 1 } |_{ 
-( 0 , T ) } \otimes \abs{ \nabla \chi  ( t ) } 
-\otimes \delta_{ \nu ( t , x ) }, 
-\end{equation}
-and therefore the measure $ \omega_{ t } $ 
-becomes the energy measure $ \energy ( \chi ( t ) , \cdot ) $.
-The advantage of this formulation is that our new energy measure $ \omega_{ t } 
-$ is not restricted to only seeing the measure theoretic boundary of $ \chi $, 
-but can actually capture phenomenons as described in 
-\Cref{figure_interfaces_collapse}.
-For example in such a scenario we would expect the measure $ \mu_{ t } $ to be 
-defined by
-\begin{equation}
-	\label{equation_mu_in_figure}
-	\mu_{ t } \coloneqq
-	2 \hm^{ 1 } |_{ l } \otimes \frac{ 1 }{ 2 } \left( \delta_{ ( 1 , 0 ) } + 
-\delta_{ ( - 1 , 0 ) }\right) ,
-\end{equation}
-where $ l $ is the red line to which the phase 
-of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero. The factor 
-2 comes from the fact that we obtain energy from both the collapsing interfaces.
-
-The equation (\ref{equation_varifold_velocity}) for the  normal speed is simply 
-motivated through 
-the fundamental theorem of calculus. Assuming that everything is nice and 
-smooth, we can compute that 
-\begin{align*}
-	\sigma \int
-		\chi ( T , x ) \varphi ( T , x ) - \chi^{ 0 } ( x ) \varphi ( 0 , x )
-	\dd{ x }
-	& =
-	\sigma \int_{ 0 }^{ T }
-		\int
-			\partial_{ t } \left(
-				\chi ( t , x ) \varphi ( t , x )
-			\right)
-		\dd{ x }
-	\dd{ t }
-	\\
-	&=
-	\sigma \int_{ 0 }^{ T }
-		\int
-			\partial_{ t } \chi ( t , x ) \varphi ( t , x )
-			\chi ( t , x ) \partial_{ t } \varphi ( t , x )
-		\dd{ x }
-	\dd{ t }
-	\\
-	& =
-	\sigma \int_{ 0 }^{ T }
-		\int
-			\chi ( t , x )
-			\partial_{ t } ( t , x )
-		\dd{ x }
-	\dd{ t }
-	+
-	\int_{ 0 }^{ T }
-		\int
-			V \varphi 
-		\dd{ \omega_{ t} }
-	\dd{ t },
-\end{align*}
-where for the last equality, we used $ \partial_{ t } \chi = V \abs{ \nabla 
-\chi } \dd{ t } $ and $ \omega_{ t } = \sigma \abs{ \nabla \chi ( t ) } $.
-
-The equation (\ref{equation_varifold_mean_curvature}) for the generalized mean 
-curvature is also quite intuitive since 
-assuming that the simple case of the varifold (\ref{equation_simple_varifold}) 
-holds, we have that the right hand side of equation 
-(\ref{equation_varifold_mean_curvature}) reads
-\begin{equation*}
-	\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-		\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
-	\dd{ \omega_{ t } }
-	=
-	\sigma
-	\int
-		\inner*{ \xi }{\mathrm{Id} - \nu \otimes \nu }
-	\abs{ \nabla \chi },
-\end{equation*}
-which is the standard distributional formulation for the mean curvature vector.
-
-De Giorgis inequality (\ref{equation_varifold_de_giorgi_inequality}) is 
-self-explanatory since $ \omega_{ t } $ is the energy measure. The 
-compatibility condition is necessary to couple the evolving set $ A_{ t } $ to 
-the varifold. Notice that in our above example (\ref{equation_mu_in_figure}), 
-we have that even though the energy measure $ \omega_{ t } $ sees the red strip 
-and the measure theoretic boundary of the corresponding indicator function does 
-not, the term on the right hand side of (\ref{equation_varifold_compatibility}) 
-is zero since
-\begin{equation*}
-	\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-		\inner*{ \xi }{ p }
-	\dd{ \mu_{ t } }
-	=
-	\int_{ l }
-		\frac{ 1 }{ 2 }
-		\inner*{ \xi }{ ( 1 , 0 ) + ( - 1 , 0 ) }
-	\dd{ \hm^{ 1 } }
-	= 
-	0,
-\end{equation*} 
-and thus we have no problem.
-
-For the multiphase case, we propose the following solution concept, which 
-generalized 
-\cite[Def.~2]{hensel_laux_varifold_solution_concept_for_mean_curvature_flow} to 
-the case of arbitrary surface tensions and removes the varifold $ \mu_{ i i } $.
-
-\begin{definition}[De Giorgi type varifold solution for multiphase mean 
-curvature flow]
-	\label{de_giorgi_varifold_solutions_for_mmcf}
-	Let $T < \infty $ be an arbitrary finite time horizon and let $ P \in 
-	\mathbb{ N }_{ \geq 2 } $ be the number of phases. For each 
-	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \} $, $ \i \neq j $, let 
-	$ \mu_{ i j } = \lm^{ 1 }|_{ ( 0 , T ) } $ be a family of oriented 
-	varifolds 
-	$ \mu_{ t , ij } \in \mathcal{ M } \left(
-		\flattorus \times \mathbb{ S }^{ d - 1 }
-	\right) $,
-	$ t \in ( 0 , T ) $, such that the map 
-	$ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-		\eta ( t , x , p )
-	\dd{ \mu_{ t ,i j } ( x, p ) }$
-	is measurable for all test functions 
-	$ \eta \in \lp^{ 1 } \left(	
-		( 0 , T ) ; \cont \left( \flattorus \times \mathbb{ S }^{ d- 1 } 
-		\right) 
-	\right) $.
-	Define evolving oriented varifolds $ \mu_{ i } = \lm^{ 1 }|_{ ( 0 , T 
-	) } \otimes ( \mu_{ t , i } )_{ t \in ( 0 , T ) } $, $ i \in \{ 1, 
-	\dotsc, P \} $ and $ \mu = \lm^{ 1 }|_{ ( 0 , T ) } \otimes ( \mu_{ t 
-	} )_{ t \in ( 0 , T ) } $ by means of
-	\begin{equation*}
-		\mu_{ t , i }
-		\coloneqq
-		\sum_{ j = 1 , j \neq i }^{ P }
-			\mu_{ t , i j }
-		\quad \text{and} \quad
-		\mu_{ t }
-		\coloneqq
-		\frac{ 1 }{ 2 }
-		\sum_{ i = 1 }^{ P }
-			\mu_{ t, i }.
-	\end{equation*}
-	The disintegration of $ \mu_{ t , i j } $ is expressed in form of 
-	$ \mu_{ t , i j } = \omega_{ t ,i j } \otimes \left( \lambda _{ t , x , i j 
-	} \right)_{ x \in \flattorus } $ with expected value
-	$ \langle \lambda_{ t , x , i j } \rangle 
-	\coloneqq
-	\int_{ \mathbb{ S }^{ d - 1 } }
-		p 
-	\dd{ \lambda_{ t , x , i j } ( p ) } $.
-	Analagous expressions are introduced for the disintegrations of $ \mu_{ t, 
-	i } $ and $ \mu_{ t } $.
-	
-	Furthermore consider a family 
-	$ A = \left( A_{ 1 } , \dotsc , A_{ P } \right) $ 
-	such that for each phase $ 1 \leq i \leq P $, we have a family
-	$ A_{ i } = ( A_{ i } ( t ) )_{ t \in ( 0 , T ) } $ of subsets of $ 
-	\flattorus $ with finite perimeter. We also require 
-	$ \left( A_{ 1 } ( t ) , \dotsc, A_{ P } ( t ) \right) $
-	to be a partition of $ \flattorus $ for all $ t \in ( 0 , T ) $ and 
-	that for each $ 1 \leq i \leq P $, the associated indicator function 
-	satisfies 
-	$ \chi_{ i } \in \lp^{ \infty } \left(
-		( 0 , T ) ;
-		\bv \left( \flattorus ; \{ 0 , 1 \} \right)
-	\right) $.
-	We shortly write $ \chi = \left( \chi_{ 1 } , \dotsc, \chi_{ P } \right) $.
-	
-	Given initial data 
-	$ (
-		( \omega^{ 0 }_{ i j } )_{ 1 \leq i , j \leq P, i \neq j },
-		( \chi_{ i}^{ 0 } )_{ 1 \leq i \leq P}
-	) $
-	of the above form and a $ P \times P $ matrix of surface tensions $ \sigma 
-	$ such that $ \sigma_{ i j } > 0 $ for $ i \neq j 
-	$, we call the pair $ \left( \mu , \chi \right) $ a
-	\emph{De Giorgi type varifold solution for multiphase mean curvature flow 
-	with initial data} $ ( \omega^{ 0 } , \chi^{ 0 } ) $ \emph{and surface 
-	tensions} $ \sigma $ if the following requirements hold true.
-	\begin{enumerate}
-		\item (Existence of normal speeds)
-		For each phase $ 1 \leq i \leq P $, there exists a normal speed
-		$ V_{ i } \in \lp^{ 2 } \left(
-			( 0 , T ) \times \flattorus, \omega_{ i } \right) $ in the sense 
-			that
-		\begin{equation}
-			\label{equation_varifold_velocity_multiphase}
-			\int
-				\chi_{ i } ( T', x ) \varphi ( T', x ) 
-				-
-				\chi_{ i }^{ 0 } ( x ) \varphi ( 0 , x )
-			\dd{ x }
-			=
-			\int_{ 0 }^{ T' }
-				\int
-					\chi_{ i }
-					\partial_{ t } \varphi
-				\dd{ x }
-			\dd{ t }
-			+
-			\sum_{ j =1, \j \neq i  }^{ P }
-				\frac{ 1 }{ \sigma_{ i j } }
-				\int_{ 0 }^{ T' }
-					\int
-						V_{ i }
-						\varphi
-					\dd{ \omega_{ t , i j } }
-				\dd{ t }
-		\end{equation}
-		for almost every $ T' \in ( 0 , T ) $ and all $ \varphi \in \cont_{ 
-		\mathrm{c} }^{ \infty } \left( [ 0 , T ) \times \flattorus\right) 
-		$.
-		
-	\item (Existence of a generalized mean curvature vector)
-	There exists a generalized mean curvature vector 
-	$ H \in \lp^{ 2 } \left(
-		( 0 , T )\times \flattorus , \omega; \mathbb{ R }^{ d } \right)
-	 $
-	in the sense that
-	\begin{equation}
-		\label{equation_varifold_mean_curvature_multiphase}
-		\int_{ 0 }^{ T' }
-			\int
-				\inner*{ H }{ \xi }
-			\dd{ \omega_{ t } }
-		\dd{ t }
-		=
-		-
-		\int_{ 0 }^{ T' }
-			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-				\inner*{ \diff \xi }
-				{ \mathrm{Id} - p \otimes p }
-			\dd{ \mu_{ t } }
-		\dd{ t }
-	\end{equation}
-	holds for almost every $ T' \in ( 0 , T ) $ and all $ \xi \in \cont_{ 
-	\mathrm{c} }^{ \infty } \left( [ 0 , T ) \times \flattorus ; \mathbb{ 
-	R }^{ d } \right) $.
-	
-	\item (De Giorgi type optimal energy dissipation inequality)
-	A sharp energy dissipation inequality holds in form of
-	\begin{equation}
-		\label{equation_varifold_energy_dissipation_inequality}
-		\omega_{ T' } ( \flattorus )
-		+
-		\frac{ 1 }{ 2 }
-		\sum_{ i = 1 }^{ P }
-			\int_{ 0 }^{ T' }
-				\int
-					V_{ i }^{ 2 }
-					\frac{ 1 }{ 2 }
-				\dd{ \omega_{ t , i } }
-			\dd{ t }
-		+
-		\frac{ 1 }{ 2 }
-		\int_{ 0 }^{ T' }
-			\int
-				\abs{ H }^{ 2 }
-			\dd{ \omega_{ t } }
-		\dd{ t }
-		\leq
-		\omega^{ 0 } ( \flattorus )
-	\end{equation}
-	for almost every $ T' \in ( 0 , T ) $.
-	
-	\item (Compatibility conditions)
-	For all $ 1 \leq i , j \leq P $ with $ i \neq j $, we require 
-	\begin{equation}
-		\label{varifold_symmetry_of_energy_measures}
-		\omega_{ t , i j }
-		=
-		\omega_{ t , j i } 
-	\end{equation}
-	for almost every $ t \in ( 0 , T ) $ and
-	\begin{align}
-		\label{varifold_symmetry_expectations}
-		\langle \lambda_{ t, x , i j } \rangle
-		&= 
-		- \langle \lambda_{ t, x  ,j i } \rangle,
-		\\
-		\label{varifold_symmetry_velocities}
-		V_{ i } ( t, x ) 
-		&= 
-		- V_{ j } ( t, x ),
-		\\
-		\label{varifold_mean_curvature_points_in_normal_direction}
-		\abs{ \langle \lambda_{ t , x , i j } \rangle }^{ 2 }
-		H ( t, x )
-		& =
-		\inner*{ H( t , x ) }{ \langle \lambda_{ t , x , i j } \rangle }
-		\langle \lambda_{ t , x }^{ i j } \rangle
-	\end{align}
-	for almost every $ t \in ( 0 , T ) $ and $ \omega_{ t , i j } $ 
-	almost every $ x \in \flattorus $. Finally for all $ 1 \leq i \leq P $, we 
-	have
-	\begin{equation}
-		\label{varifold_compatibility_condition_multiphase}
-		\int
-			\inner*{ \xi }{ \dd{ \nabla \chi_{ i } ( t , \cdot ) } }
-		=
-		\sum_{ j = 1 , j \neq i }^{ P }
-			\frac{ 1 }{ \sigma_{ i j } }
-			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-				\inner*{ \xi }{ p }
-			\dd{ \mu_{ t , i j } }
-	\end{equation}
-	for almost every $ t \in ( 0 , T ) $ and every $ \xi \in \cont^{ 
-	\infty } \left( \flattorus ; \mathbb{ R }^{ d } \right) $.
-	\end{enumerate}
-\end{definition}
-
-As before, we first want to motivate this definition. In the simplest case, we 
-can think of the varifold $ \mu_{ t , i j } $ for $ i \neq j $ as
-\begin{equation}
-	\label{varifold_simplest_case_mutliphase}
-	\mu_{ t , i j }
-	=
-	\sigma_{ i j }
-	\dd{ \hm^{ d - 1 }|_{ \Sigma_{ i j } } } 
-	\otimes
-	( \delta_{ \nu_{ i } } )_{ x \in \flattorus }.
-\end{equation}
-But if approximate interfaces collapse as in 
-\Cref{figure_interfaces_collapse}, then this is exactly captured by the 
-varifolds $ \mu{ t, i j }$ and $ \mu_{ t , j i } $, which, as in the 
-twophase case, will be 
-described by
-\begin{equation}
-	\label{varifold_when_interfaces_collapse}
-	\mu_{ t, i j }
-	=
-	\hm^{ 1 } |_{ l }
-	\otimes
-	\left( \delta_{ ( -1 , 0 ) } \right)_{ x \in \flattorus }
-	\quad \text{and} \quad
-	\mu_{ t , j i }
-	=
-	\hm^{ 1 } |_{ l }
-	\otimes
-	\left( \delta_{ ( 1 , 0 ) } \right)_{ x \in \flattorus },
-\end{equation}
-where we assume that $ ( i , j ) = ( 1 , 2 ) $.
-
-Equations (\ref{equation_varifold_velocity_multiphase}) and 
-(\ref{equation_varifold_mean_curvature_multiphase}) are as in the twophase 
-case. For the energy dissipation inequality, we note that we need the factor $ 
-1/2 $ in front of $ \omega_{ t , i } $ since each interface will be counted 
-twice. 
-
-The first compatibility condition (\ref{varifold_symmetry_of_energy_measures}) 
-follows simply from $ \Sigma_{ i j } = \Sigma_{ j i } $ if we are in the 
-setting of energy convergence, but should even hold true in situations like 
-\Cref{figure_interfaces_collapse}, which follows from equation 
-(\ref{varifold_when_interfaces_collapse}). The second compatibility condition 
-(\ref{varifold_symmetry_expectations}) states that in the setting of energy 
-convergence, we have $ \nu_{ i } = - \nu_{ j } $ on $ \Sigma_{ i j } $ $ \hm^{ 
-d -1 } $-almost everywhere. Nonetheless, we see again that by equation 
-(\ref{varifold_when_interfaces_collapse}), it should still hold true if 
-interfaces collapse. Similarly we explain the anti-symmetry of the velocities 
-(\ref{varifold_symmetry_velocities}). The compatibility condition 
-(\ref{varifold_mean_curvature_points_in_normal_direction}) encodes that the 
-mean curvature vector should always point in direction of the inner unit 
-normal, which is not necessarily the case for varifolds, as demonstrated in 
-\Cref{mean_curvature_vector_does_not_have_to_point_in_normal_direction}.
-For the last compatibility condition 
-(\ref{varifold_compatibility_condition_multiphase}), we again notice that it 
-behaves similarly to its twophase equivalent.
-
-\begin{theorem}
-	Every  De Giorgi type $ \bv $-solution to multiphase mean curvature 
-	flow in the sense of \Cref{de_giorgi_solution_to_mmcf} is also a De Giorgi 
-	type varifold solutions for multiphase mean curvature flow in the sense of
-	\Cref{de_giorgi_varifold_solutions_for_mmcf} with varifold $ \mu $ given by
-	\begin{equation*}
-		\mu_{ t, ij  }
-		\coloneqq
-		\sigma_{ i j }
-		\hm^{ d- 1 }|_{ \Sigma_{ i j } ( t ) }
-		\otimes
-		( \delta_{ \nu_{ i } ( t, x ) } )_{ x \in \flattorus }
-	\end{equation*} 
-	for $ i \neq j $.
-\end{theorem}
-
-\begin{proof}
-	We first note that
-	\begin{align*}
-		\mu_{ t , i }
-		& =
-		\sum_{ j \neq i }
-			\sigma_{ i j }
-			\hm^{ d- 1 }_{ \Sigma_{ i j } }
-		\otimes
-		( \delta_{ \nu_{ i } } )_{ x \in \flattorus }
-		\shortintertext{and}
-		\mu_{ t }
-		& =
-		\sum_{ 1 \leq i < j \leq P }
-			\sigma_{ i j }
-			\hm^{ d - 1 } |_{ \Sigma_{i j } }
-			\otimes
-			( \delta_{ \nu_{ i } } )_{ x \in \flattorus }.
-	\end{align*}
-	Therefore the measure $ \omega_{ t } $ is exactly the energy measure $ 
-	\energy ( \chi ( t ) , \cdot ) $.
-	The requirement 
-	$ \chi_{ i } \in \lp^{ \infty } \left(
-		( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 1 \} ) \right) $
-	is an immediate consequence of the energy dissipation inequality.
-	The existence of normal velocities is given, but we need to check that
-	equation (\ref{equation_varifold_velocity_multiphase}) holds.
-	If we assume that $ \varphi $ is compactly supported, then the equation 
-	follows by approximating $ \chi_{ i } $ with $ \rho_{ n } \ast \chi_{ i } 
-	$, where $ \rho_{ n } $ is a sequence of radial symmetric standard 
-	mollifiers. 
-	In general, take a sequence $ \eta_{ n } $ of smooth functions with compact 
-	support in $ ( 0 , T ] $ which convergece pointwise to the constant 1 
-	function satisfying $ \eta ( T ) = 1 $ and $ \eta_{ n } $ is 
-	non-decreasing. Then we have
-	\begin{align*}
-		\int
-			\chi_{ i } ( T' , x ) \varphi ( T', x )
-		\dd{ x }
-		& =
-		\lim_{ n \to \infty }
-			\int
-				\chi_{ i } ( T', x ) \eta_{ n } ( T' ) \varphi ( T' , x )
-			\dd{ x }
-		\\
-		& =
-		\int_{ 0 }^{ T' }
-			\int
-				\eta_{ n } \varphi V_{ i }
-			\abs{ \nabla \chi^{ i } }
-		\dd{ t }
-		+
-		\int_{ 0 }^{ T' }
-			\int
-				\chi_{ i }
-				\eta_{ n }
-				\partial_{ t } \varphi 
-			\dd{ x }
-		\dd{ t }
-		+
-		\int_{ 0 }^{ T' }
-			\int
-				\chi_{ i }
-				\partial_{ t } \eta_{ n }
-				\varphi
-			\dd{ x }
-		\dd{ t }
-	\end{align*}
-	for almost every $ 0 < T' < T $.
-	Using the dominated convergence theorem, we see that the first two summands 
-	converge to the left hand side of the velocity equation 
-	(\ref{equation_varifold_velocity_multiphase}). For the third summand, we 
-	compute that since $ \int_{ 0 }^{ T } \eta' \dd{ t } = 1 $, we have
-	\begin{align*}
-		\abs{
-			\int_{ 0 }^{ T' }
-				\partial_{ t } \eta_{ n }
-				\int
-					\chi_{ i }
-					\varphi
-				\dd{ x }
-			-
-			\int
-				\chi^{ 0 }_{ i } ( x )
-				\varphi ( 0 , x )
-			\dd{ x }
-		}
-		={} &
-		\abs{ 
-			\int_{ 0 }^{ T' }
-				\partial_{ t } \eta_{ n }
-				\int
-					\chi_{ i }
-					\varphi
-					-
-					\chi^{ 0 }_{ i }
-					\varphi ( 0 , x )
-				\dd{ x }
-			\dd{ t }
-		}
-		\\
-		\lesssim{} &
-		\int_{ 0 }^{ T' } 
-			\partial_{ t } \eta_{ n }
-			\left(
-				\int
-					\abs{ \chi^{ i } \varphi - \chi^{ 0 }_{ i } \varphi ( 0 , x 
-					) 
-					}^{ 2 }
-				\dd{ x }
-			\right)^{ 1/2 }
-		\dd{ t },
-	\end{align*}
-	which converges to zero since $ \chi_{ i } $ assumes the initial data 
-	continuously with respect to the $ \lp^{ 2 } $-norm. Therefore equation 
-	(\ref{equation_varifold_velocity_multiphase}) follows.
-	
-	Equation (\ref{equation_varifold_mean_curvature_multiphase}) follows 
-	immediately from equation (\ref{mean_curvature_vector_bv_de_giorgi})
-	since
-	\begin{equation*}
-		\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
-			\inner*{ \diff \xi }{ \mathrm{Id} - p \otimes p }
-		\dd{ \mu_{ t } }
-		=
-		\sum_{ 1 \leq i < j \leq P }
-			\sigma_{ i j }
-			\int_{ \Sigma_{ i j } }
-				\inner*{ \diff \xi }{\mathrm{Id} - \nu_{i } \otimes \nu_{ i } }
-			\dd{ \hm^{ d - 1 } },
-	\end{equation*}
-	and De Giorgi's optimal energy dissipation inequality is also identical.
-	
-	The compatibility conditions 
-	(\ref{varifold_symmetry_of_energy_measures})-(\ref{varifold_symmetry_velocities})
-	all hold restricted to $ \Sigma_{ i j } $ $ \hm^{ d - 1 } $ almost 
-	everywhere and are therefore satisfied.
-	For the compatibility condition 
-	(\ref{varifold_mean_curvature_points_in_normal_direction}), we have to 
-	prove, since $ \langle \lambda_{ t , x , i j } \rangle = \nu_{ i } ( t , 
-	x ) $ on $ \Sigma_{ i j } $ $ \hm^{ d- 1 } $-almost everywhere, that the 
-	mean curvature vector $ H $ points in the direction of $ \nu_{ i } $ $ 
-	\hm^{ d - 1 } $-almost everywhere. This has been proven by Brakke in 
-	\cite[Thm.~5.8]{brakke_kenneth_motion_of_surface_by_mean_curvature}. Note 
-	that we apply it (for a fixed time t) to the varifold $ V = \mu_{ t } $, 
-	which is strictly speaking no integer varifold, but all results still hold 
-	since 
-	\begin{equation*}
-		V = 
-		\sum_{ 1 \leq i < j \leq P }
-			\sigma_{ i j }
-			v ( \Sigma_{ i j } )
-	\end{equation*}
-	is a finite sum. Here $ v ( \Sigma_{ i j } ) $ is the naturally associated 
-	varifold to $ \Sigma_{ i j } $ as defined by Brakke.
-	The last compatibility condition 
-	(\ref{varifold_compatibility_condition_multiphase}) is a consequence of 
-	\Cref{rewriting_boundary_via_interfaces}. 
-	This completes the proof.
-\end{proof}
-
-\begin{example}
-	\label{mean_curvature_vector_does_not_have_to_point_in_normal_direction}
-	We want to present an example of a varifold where the mean curvature does 
-	not point in normal direction.
-	Let $ \flattorus = [ 0 , \Lambda )^{ 2 } $ be the flat torus in two 
-	dimensions and let $ \rho \colon \mathbb{ R } \to (-\infty, \infty ) $ be 
-	some positive smooth $\Lambda$-periodic function which is not constant. 
-	Then we consider the varifold given by $ \mu = \rho ( x_{ 1 } ) \hm^{ 1 } 
-	|_{ [ 0 , \Lambda ) \times \{ 0 \} } \otimes \delta_{ ( 0 , 1 ) } $. We 
-	compute that for a given test vector field $ \xi $, we have
-	\begin{align*}
-		\int
-			\inner*{ \diff \xi }{ \mathrm{Id} - p \otimes p }
-		\dd{ \mu }
-		& =
-		\int_{ 0 }^{ \Lambda }
-			\inner*{ \diff \xi ( x_{ 1 } , 0 ) }{ ( 1, 0 ) \otimes ( 1, 0 ) }
-			\rho ( x_{ 1 } )
-		\dd{ x_{ 1 } }
-		\\
-		& = 
-		\int_{ 0 }^{ \Lambda }
-			\partial_{ x_{ 1 } } \xi^{ 1 } \rho ( x_{ 1 } )
-		\dd{ x_{ 1 } }
-		\\
-		& =
-		-
-		\int_{ 0 }^{ \Lambda }
-			\xi^{ 1 }
-			\rho' ( x_{ 1 } )
-		\dd{ x_{ 1 } },
-	\end{align*}
-	which implies that $ H $ is given (almost everywhere) by 
-	\begin{equation*}
-		H ( x ) = \frac{ \rho' ( x_{ 1 } ) }{ \rho ( x_{ 1 } ) } ( 1 , 0 ),
-	\end{equation*}
-	which does not lie in the normal space of the varifold.
-\end{example}

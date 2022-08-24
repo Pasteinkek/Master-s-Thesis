@@ -1,19 +1,19 @@
 \chapter{Introduction}
 
-Allgemeine Notizen: 
+\textbf{Allgemeine Notizen: 
 Etwas zu Eindeutigkeit sagen; wir gehen sehr oft zu Teilfolgen über. Hilft uns 
-hierbei die Weak strong uniqueness?
-De Giorgis originial paper finden?
+hierbei die Weak strong uniqueness?}
 
 \section{Abstract}
 
-This thesis presents a conditional convergence result of the solutions to the 
-Allen--Cahn equation to a De Giorgi type $ \bv $-solution to multiphase mean 
-curvature flow for arbitrary potentials, but fixed mobilities. For this we will 
-also recall the proof for the conditional convergence to $ \bv $-solutions in 
+This thesis presents a conditional convergence result of solutions to the 
+Allen--Cahn equation with arbitrary potentials to a De Giorgi type $ \bv 
+$-solution for multiphase mean 
+curvature flow. For this we will recall the proof for the conditional 
+convergence to $ \bv $-solutions in 
 the sense of Laux and Simon. Lastly we show that De Giorgi type $ \bv 
-$-solutions are De 
-Giorgi type varifold solutions, and thus our solution concept exhibits a 
+$-solutions are De Giorgi type varifold solutions, and thus our solution 
+concept exhibits a 
 weak-strong uniqueness.
 
 \section{History and main goals}
@@ -40,7 +40,7 @@ curvature using varifolds, which yields a quite abstract and general notion for
 mean curvature flow and is based on the gradient flow structure of mean 
 curvature flow. 
 Luckhaus and Sturzenhecker introduced a 
-distributional solution to mean curvature flow in their work 
+distributional solution concept for mean curvature flow in their work 
 \cite{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}. Another 
 solution concept is the viscosity solution concept, for example presented in 
 (\cite{chen_giga_goto_uniqueness_and_existence_of_generalized_mcf_equations},
@@ -59,7 +59,7 @@ The Allen--Cahn equation
 	\nabla W ( u_{ \varepsilon } )
 \end{equation}
 is commonly used as a phase-field approximation for mean curvature flow and was 
-first discovered by Allen and Cahn in their paper 
+first proposed by Allen and Cahn in their paper 
 \cite{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}. Here $ W 
 \colon \mathbb{ R }^{ N } \to [ 0 , \infty ) $ is some smooth potential with 
 finitely many zeros $ \alpha_{ 1 } , \dotsc, \alpha_{ P } $.
@@ -87,8 +87,9 @@ well-prepared by exploiting the equipartition of energies. However his methods
 seem to only work in the two-phase case since he uses a comparison principle 
 whose generalization to the vectorial case is not clear.
 
-The multiphase case for both the behaviour of the Allen--Cahn equation and mean 
-curvature is much more involved and a topic of current research. For the 
+The multiphase case for both the convergence of the Allen--Cahn equation and 
+mean 
+curvature flow is much more involved and a topic of current research. For the 
 convergence of the Allen--Cahn equation, asymptotic expansions  with Neumann 
 boundary conditions 
 have been studied by Keller, Rubinstein and Sternberg in 
@@ -187,4 +188,58 @@ they arrive at the scalar Allen--Cahn equation and then couple they components
 through a Lagrange-multiplier, which assures that the limit is a partition.
 
 \section{Structure of the thesis}
+
+In \Cref{chapter_gradient_flows_and_mcf} we will give a soft mathematical 
+introduction into the topic of gradient flows. We will derive De Giorgi's 
+optimal energy dissipation inequality in a simple example and discuss its 
+usefulness for 
+reformulating the gradient flow equation. Afterwards we apply our observations 
+to (multiphase) mean curvature flow.
+
+Afterwards in \Cref{chapter_ac_equation}, we consider the Allen--Cahn equation 
+(\ref{ac_intro}) already mentioned above. Here we will focus again on its 
+gradient flow structure. We then propose a suitable solution concept and prove 
+the existence of a solution through De Giorgi's minimizing movements scheme.
+
+Continuing with \Cref{chapter_convergence_to_evolving_partition}, we are going 
+to take a look at the behaviour of solutions to the Allen--Cahn equation as $ 
+\varepsilon $ tends to zero. First we study the simple two-phase case in order 
+to get a better feeling for the equation and highlight important techniques 
+like the Modica--Mortola trick. We will show that we have convergence to an 
+evolving set of finite perimeter in space in time. Afterwards we also prove 
+precompactness of the sequence in $ \cont ( [ 0 , T ] ; \lp^{ 2 } ) $ which 
+lets us show that the initial data as attained. Next up is the multiphase case, 
+which requires more finesse, but we are able to show similar results as in the 
+two-phase case. This will require a generalized chain rule for distributional 
+derivatives and careful analysis of the geodesic distance functions with 
+respect to the potential $ W $ from equation (\ref{ac_intro}).
+
+\Cref{chapter_conditional_convergence_of_ac} is concerned with the conditional 
+convergence result proven by Laux and Simon in 
+\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. We 
+show that the in \Cref{chapter_convergence_to_evolving_partition} observed 
+limit is a $ \bv $-solution to mean curvature flow under the crucial assumption 
+of energy convergence. Again we first consider the simpler two-phase case in 
+order to simplify some of the arguments. Here one has to show the existence of 
+normal velocities followed by the equipartition of energies. Then we are going 
+to separately show the convergence of the velocity term and the curvature term 
+of the Allen--Cahn equation to the corresponding terms for mean curvature flow. 
+For the multiphase equivalent our core strategy is to reduce to the two-phase 
+case through a localization argument, which we detail in 
+\Cref{section_localization_estimates}. Afterwards we show the same results as 
+in the two-phase case.
+
+Lastly in \Cref{chapter_de_giorgis_mcf} we are going to present new results 
+building on the previous insights. We start off by presenting a De Giorgi type 
+$ \bv $-solution concept for multiphase mean curvature flow. This is followed 
+by proving a similar conditional convergence result as in the previous chapter, 
+but now to this new solution. In the final 
+\Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}, we are going to 
+discuss the assumption of energy convergence. Moreover we show that every De 
+Giorgi type $ \bv $-solution is a De Giorgi type varifold solution in the sense 
+of Hensel and Laux in 
+\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}, whose 
+solution concept does not rely on the assumption of energy convergence.
+
+
 
