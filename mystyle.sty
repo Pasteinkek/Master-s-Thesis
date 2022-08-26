@@ -16,7 +16,11 @@
 
 \usepackage{enumitem}							%configuration of list enviroments, e.g. alphabetic enumeration
 
-\usepackage[backend=biber,style=alphabetic]{biblatex}			%used for citations. biber is the program which accesses the bib file and passes it to latex, biblatex provides commands for citing
+\usepackage[backend=biber,style=alphabetic,backref=true]{biblatex}
+	
+		
+%used for citations. biber is the program which accesses the bib file and 
+%passes it to latex, biblatex provides commands for citing
 
 \usepackage{pgfplots}							%for plotting functions
 
@@ -31,7 +35,10 @@
 
 %-----> the following packages have to be loaded last
 
-\usepackage[colorlinks=true,linkcolor=blue,unicode]{hyperref}						%puts hyperlinks in the pdf file for more convenience
+\usepackage[unicode]{hyperref}					
+	
+%puts hyperlinks in the pdf file for more convenience, linkcolor=blue
+%former: [colorlinks=true,linkcolor=black,unicode], but for printing removed
 
 \usepackage[capitalise,noabbrev]{cleveref}	%automated referencing, capitalise will give capitalised letters, noahbrev prevents abbrevations
 

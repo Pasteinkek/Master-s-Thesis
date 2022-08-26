@@ -1,13 +1,19 @@
 \section{Structure of the equation}
 
-This chapter follows \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, but since the authors decided to only sketch some of the proofs, we want to go into more detail.
+This chapter follows 
+\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, 
+but since the authors decided to only sketch some of the proofs, we will 
+present more details.
 
 Let $ \Lambda > 0 $ and define the flat torus 
-$ \flattorus = [0, \Lambda )^{ d } \subset \mathbb{ R }^{ d } $, 
-where we work with periodic boundary conditions and write $ \int \dd{x} $ instead of $ \int_{ \flattorus } \dd{x} $.
+$ \flattorus = [0, \Lambda )^{ d } = \mathbb{ R }^{ d } / \Lambda \mathbb{ Z 
+}^{ d } $, 
+which means that we work with periodic boundary conditions on $ \flattorus $. 
+To shorten the notation we write $ \int \dd{x} $ instead of $ \int_{ \flattorus 
+} \dd{x} $.
 Then for 
 $ u \colon [ 0 , \infty ) \times \flattorus \to \mathbb{ R }^{ N } $ 
-and some potential 
+and some smooth potential 
 $ W \colon \mathbb{ R }^{ N } \to [0, \infty ) $,
 the \emph{Allen--Cahn equation} with parameter $ \varepsilon > 0 $ is given by
 \begin{equation}
@@ -16,9 +22,8 @@ the \emph{Allen--Cahn equation} with parameter $ \varepsilon > 0 $ is given by
 	=
 	\Delta u - \frac{1 }{ \varepsilon^{ 2 } } \nabla W ( u ).
 \end{equation}
-
 To understand this equation better, we consider the \emph{Cahn--Hilliard 
-energy}, which assigns to $ u $ for a fixed time the real number
+energy}, which assigns to $ u $ for a fixed time the value
 \begin{equation}
 	\label{cahn_hilliard_energy}
 	\energy_{ \varepsilon } 
@@ -32,9 +37,9 @@ energy}, which assigns to $ u $ for a fixed time the real number
 	\abs{ \nabla u }^{ 2 }
 	\dd{x}.
 \end{equation}
-
-If everything is nice and smooth, we can compute that under the assumption that $ u $ satisfies 
-equation (\ref{allen_cahn_eq}), we have that
+If everything is nice and smooth, we can compute that under the assumption that 
+$ u $ satisfies 
+equation (\ref{allen_cahn_eq}), we have through an integration by parts that
 \begin{align*}
 	\dv{t} \energy_{ \varepsilon } ( u )
 	&=
@@ -55,9 +60,10 @@ equation (\ref{allen_cahn_eq}), we have that
 	\int - \varepsilon \abs{ \partial_{ t } u }^{ 2 } \dd{ x }
 	\tag{\ref{allen_cahn_eq}}.
 \end{align*}
-
-This calculation suggests that equation (\ref{allen_cahn_eq}) is the $ \lp^{ 2 
-} $ gradient flow (rescaled by $ \sqrt{\varepsilon} $) of the Cahn--Hilliard 
+For the last equality, we used that $ u $ solves the equation.
+This calculation suggests that the partial differential equation 
+(\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient flow rescaled by $ 
+\sqrt{\varepsilon} $ of the Cahn--Hilliard 
 energy. Thus we can try to construct a solution to the PDE 
 (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme 
 (\cite{de_giorgi_new_problems_on_minimizing_movements}), which we will do in 
@@ -92,10 +98,11 @@ like these \emph{doublewell potentials}, see also
 \end{figure}
 
 In higher dimensions, we want to accept the following potentials: $ W \colon 
-\mathbb{ R }^{ N } \to [0, \infty ) $ has to be a a smooth multiwell potential, 
+\mathbb{ R }^{ N } \to [0, \infty ) $ has to be a smooth multiwell potential, 
 meaning that it has finitely many zeros at $ u = \alpha_{ 1 }, \dotsc , 
-\alpha_{ P } \in \mathbb{ R }^{ N } $. Furthermore we aks for polynomial growth 
-in the sense that there exists some $ p \geq 2 $ such that
+\alpha_{ P } \in \mathbb{ R }^{ N } $. Furthermore we ask for polynomial growth 
+in the sense that there exists some $ p \geq 2 $ such that for all $ u $ 
+sufficiently large, we have
 \begin{equation}
 	\label{polynomial_growth}
 	\abs{ u }^{ p } \lesssim W(u) \lesssim \abs{ u }^{ p }
@@ -103,9 +110,10 @@ in the sense that there exists some $ p \geq 2 $ such that
 and
 \begin{equation}
 	\label{polynomial_growth_derivative}
-	\abs{ \nabla W ( u ) } \lesssim \abs{ u }^{ p -1 }
+	\abs{ \nabla W ( u ) } \lesssim \abs{ u }^{ p -1 }.
 \end{equation}
-for all $ u $ sufficiently large. Lastly we want $ W $ to be convex up to a small perturbation in the sense that there exist smooth functions 
+Lastly we want $ W $ to be convex up to a small perturbation in the sense that 
+there exist smooth functions 
 $ W_{ \mathrm{conv} }$, $ W_{ \mathrm{pert} } \colon \mathbb{ R }^{ N } \to [ 0 , \infty ) $ such that
 \begin{equation}
 	\label{decomposition_of_w}
@@ -117,18 +125,31 @@ $ W_{ \mathrm{conv} } $ is convex and
 	\sup_{ x \in \mathbb{ R }^{ N } }
 	\abs{ \nabla^{ 2 } W_{ \mathrm{pert} } } < \infty.
 \end{equation}
-These assumptions are in particular satisfied by our two examples for doublewell potentials and therefore seem to be plausible.
+One can check that the above mentioned doublewell potentials satisfy these 
+assumptions. In general one can construct for potentials $ W $ of the form
+\begin{equation*}
+	W ( u ) \coloneqq
+	\abs{ u - \alpha_{ 1 } }^{ 2 } 
+	\cdot
+	\dotsc
+	\cdot
+	\abs{ u - \alpha_{ P } }^{ 2 }
+\end{equation*} 
+the function $ W_{ \mathrm{pert} } $ by multiplying some suitable cutoff to $ W 
+$ which is equal to 1 on a sufficiently large ball.
 
 As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation (\ref{allen_cahn_eq}) as maps from $ [0,T] $ into some suitable function space and thus use the following definition.
 
 \begin{definition}
 	\label{solution_to_ac}
 	We say that a function 
-	$ u_{ \varepsilon} \in 
-	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } \left( \flattorus; \mathbb{ R }^{ N } \right) \right) $
-	which is also in
-	$\lp^{ \infty } \left( [0, T ]; \wkp^{ 1, 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right)
-	$
+	\begin{equation*}
+	u_{ \varepsilon} \in 
+	\mathrm{ C } \left( [0 , T ] ; \lp^{ 2 } \left( \flattorus; \mathbb{ R }^{ 
+	N } \right) \right) \cap
+	\lp^{ \infty } \left( [0, T ]; \wkp^{ 1, 2 } ( \flattorus ; \mathbb{ R }^{ 
+	N } ) \right)
+	\end{equation*}
 	is a weak solution of the Allen--Cahn equation (\ref{allen_cahn_eq}) with parameter $ \varepsilon > 0 $ and initial condition $ u_{ \varepsilon}^{ 0 } \in \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ if
 	\begin{enumerate}
 		\item the energy stays bounded, which means that
@@ -145,6 +166,7 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 			\lp^{ 2 } \left( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } \right),
 		\end{equation}
 		\item 
+		\label{here_appears_p}
 		for almost every $ t \in [ 0 , T ] $ and every 
 		$ \xi \in \lp^{ p } ( [ 0 , T ] \times \flattorus; \mathbb{ R }^{ N } ) 
 		\cap
@@ -168,7 +190,11 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 \end{definition}
 
 \begin{remark}
-	Given our assumptions, we automatically have $ \nabla W ( u_{ \varepsilon } ) ( t ) \in \lp^{ p' } ( \flattorus ) $ since
+	The exponent $ p $ which appears in \Cref{here_appears_p} is the same 
+	exponent as for the growth assumptions (\ref{polynomial_growth}) and 
+	(\ref{polynomial_growth_derivative}) of $ W $.
+	Moreover we note that given our setup, we automatically have $ \nabla W ( 
+	u_{ \varepsilon } ) ( t ) \in \lp^{ p' } ( \flattorus ) $ since
 	\begin{equation}
 		\abs{ \nabla W ( u_{ \varepsilon} ) }^{ p/(p-1) }
 		\lesssim
@@ -182,11 +208,12 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 	Moreover we already obtain $ 1/2 $ Hölder-continuity in time from the embedding
 	\begin{equation}
 		\label{w12_embeds_into_c1half}
-		\wkp^{ 1 , 2} \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus;\mathbb{ R }^{ 
-		N } ) \right)
+		\wkp^{ 1 , 2} \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus;\mathbb{ R 
+		}^{ N } \right) \right)
 		\hookrightarrow
-		\cont^{ 1/2 } \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R 
-		}^{ N } ) \right),
+		\cont^{ 1/2 } \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus ; \mathbb{ 
+		R 
+		}^{ N } \right) \right),
 	\end{equation}
 	which follows from a generalized version of the fundamental theorem of calculus and Hölder's inequality.
 \end{remark}

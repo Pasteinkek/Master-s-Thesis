@@ -186,6 +186,39 @@
       \verb https://doi.org/10.1080/03605309508821158
       \endverb
     \endentry
+    \entry{angenent_ilmanen_velázquez_fattening_from_smooth_initial_data_in_mcf}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55f833edf0637c503ba53010e1d45259}{%
+           family={Angenent},
+           familyi={A\bibinitperiod},
+           given={Sigurd\bibnamedelima B},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1065c19225ca31cab89766d2e59af926}{%
+           family={Ilmanen},
+           familyi={I\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7b087d7f8be13b205bb1651702954a9f}{%
+           family={Vel{á}zquez},
+           familyi={V\bibinitperiod},
+           given={Juan\bibnamedelima JL},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{c459b98eed6a1c95d8c84880d3dd5669}
+      \strng{fullhash}{c459b98eed6a1c95d8c84880d3dd5669}
+      \strng{bibnamehash}{c459b98eed6a1c95d8c84880d3dd5669}
+      \strng{authorbibnamehash}{c459b98eed6a1c95d8c84880d3dd5669}
+      \strng{authornamehash}{c459b98eed6a1c95d8c84880d3dd5669}
+      \strng{authorfullhash}{c459b98eed6a1c95d8c84880d3dd5669}
+      \field{labelalpha}{AIV02}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{preprint}
+      \field{title}{Fattening from smooth initial data in mean curvature flow}
+      \field{year}{2002}
+    \endentry
     \entry{abels_moser_convergence_of_ac_with_nonlinear_robin_boundary_condition_to_mcf}{article}{}
       \name{author}{2}{}{%
         {{hash=c2e592965c30d1d357c1494b4f4e36bc}{%
@@ -1617,6 +1650,48 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1137/0149007
+      \endverb
+    \endentry
+    \entry{sandler_serfaty_gamme_convergence_of_gf_with_applications_to_gl}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b6d19a2eb4b2fb2fc724f279ac9e16c8}{%
+           family={Sandier},
+           familyi={S\bibinitperiod},
+           given={Etienne},
+           giveni={E\bibinitperiod}}}%
+        {{hash=3f6d5f5d89e46252b9a81cdb8008960a}{%
+           family={Serfaty},
+           familyi={S\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f56ae6c1a2fb80943c7575bbed46bbe}
+      \strng{fullhash}{0f56ae6c1a2fb80943c7575bbed46bbe}
+      \strng{bibnamehash}{0f56ae6c1a2fb80943c7575bbed46bbe}
+      \strng{authorbibnamehash}{0f56ae6c1a2fb80943c7575bbed46bbe}
+      \strng{authornamehash}{0f56ae6c1a2fb80943c7575bbed46bbe}
+      \strng{authorfullhash}{0f56ae6c1a2fb80943c7575bbed46bbe}
+      \field{labelalpha}{SS04}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-3640}
+      \field{journaltitle}{Comm. Pure Appl. Math.}
+      \field{number}{12}
+      \field{title}{Gamma-convergence of gradient flows with applications to {G}inzburg-{L}andau}
+      \field{volume}{57}
+      \field{year}{2004}
+      \field{pages}{1627\bibrangedash 1672}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1002/cpa.20046
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/cpa.20046
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/cpa.20046
       \endverb
     \endentry
   \enddatalist

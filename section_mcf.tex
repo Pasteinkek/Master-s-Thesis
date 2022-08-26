@@ -14,16 +14,16 @@ Mean curvature flow describes the geometric evolution of a set $ ( \Omega ( t )
 Here $ \mu > 0 $ is a positive constant which is called the \emph{mobility} and 
 $ \sigma > 0 $ is a positive constant as well which we define as the 
 \emph{surface tension}. By $ V $ we denote the normal velocity of the set and 
-by $ H $ its mean curvature. which is defined as the sum of the principle 
+by $ H $ its mean curvature, which is defined as the sum of the principle 
 curvatures at a given point.
 There are a lot of different notions of solutions to this equation as already 
-mentioned in the Introduction.
+mentioned in the introduction.
 For us the central structure of this equation is its gradient flow structure. Formally we want to consider the space
 \begin{equation*}
 	\mathcal{ M }
 	\coloneqq
 	\left\{
-		(d-1) \text{-dimensional surfaces on} \flattorus
+		\text{hypersurfaces in} \flattorus
 	\right\},
 \end{equation*}
 where the tangent space at a given $ \Sigma \in \mathcal{ M } $ consists of the normal velocities on $ \Sigma $.
@@ -49,7 +49,7 @@ corresponds exactly to the gradient flow equation (\ref{gf_basic_equation}).
 Note however that this metric tensor induces a degenerate metric in the sense 
 that the distance between any two hypersurfaces is zero, which has been shown 
 by Michor and Mumford 
-in\cite{michor_mumford_riemannian_geometries_on_spaces_of_plane_curves}. 
+in \cite{michor_mumford_riemannian_geometries_on_spaces_of_plane_curves}. 
 To give some intuition for this result, we can roughen up a hypersurface, then 
 move it, and 
 afterwards flatten 
@@ -88,16 +88,22 @@ De Giorgi's optimal energy dissipation inequality (\ref{basic_optimal_energy_dis
 This is the main motivation for the definition of De Giorgi type solutions to 
 mean curvature flow in the two-phase case, see 
 \Cref{de_giorgi_solution_to_mmcf} and 
-\Cref{de_giorgi_varifold_solutions_for_mmcf}.
+\Cref{de_giorgi_varifold_solution_for_mcf}.
 
 Far more important for us shall however be multiphase mean curvature flow, 
 which is of high importance in the applied sciences and mathematically quite 
 complex. 
-Essentially instead of just considering the evolution of one single set, we look at the evolution of a partition of the flat torus and require that at each interface of the sets, the mean curvature flow equation (\ref{mcf_twophase_basic_equation}) is satisfied.
+Essentially instead of just considering the evolution of one single set, we 
+look at the evolution of a partition of the flat torus and require that at each 
+interface of the sets, the mean curvature flow equation 
+(\ref{mcf_twophase_basic_equation}) is satisfied. Moreover we require a 
+stability condition at points where three interfaces meet.
 
-We say that a partition $ ( \Omega_{ i } ( t ) )_{ i = 1 , \dotsc , P } $ with 
+More precisely we say that a partition $ ( \Omega_{ i } ( t ) )_{ i = 1 , 
+\dotsc , P } $ with 
 $ \Sigma_{ i j } \coloneqq \partial \Omega_{ i } \cap \partial \Omega_{ j } $ 
-satisfies multiphase mean curvature with mobilities $ \mu_{ i j } $ and surface 
+satisfies multiphase mean curvature flow with mobilities $ \mu_{ i j } $ and 
+surface 
 tensions $ \sigma_{ i j } $ if 
 \begin{align}
 		\label{v_is_equal_to_h}
@@ -125,16 +131,18 @@ tensions $ \sigma_{ i j } $ if
 \end{align}
 The second equation is a stability condition when more than two sets meet and is
 called \emph{Herring's angle condition}. Here $ \nu_{ i j } $ is the outer unit 
-normal 
-on $ \Sigma_{ i , j } $ pointing from $ \Omega_{ i } $ to $ \Omega_{ j } $. One 
-could argue that we would also want stability conditions at for example 
+normal of $ \Omega_{ i } $
+on $ \Sigma_{ i j } $ pointing towards $ \Omega_{ j } $. 
+One could argue that we would also want stability conditions at for example 
 quadruple 
 junctions. In two dimensions though, such quadruple junctions are expected to 
 immediatly dissipate. In higher dimensions, quadruple junctions might become 
 stable, but only on lower dimensional sets, and shall thus not be relevant for 
 us.
 
-As our space, we shall thus now consider tuples of $ (d-1) $-dimensional surfaces on $ \flattorus $. The energy and metric tensor are given by
+As our space, we shall thus now consider tuples of hypersurfaces in $ 
+\flattorus $. 
+The energy and metric tensor are given by
 \begin{align}
 	\label{definition_of_multiphase_energy}
 	\energy ( \Sigma )
@@ -158,7 +166,8 @@ Using a variant of the divergence theorem on surfaces
 (\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter}) and again the computation 
 for the first variation of the perimeter 
 (\cite[Thm.~17.5]{maggi_sets_of_finite_perimeter}), we see that multiphase mean 
-curvature has the desired gradient flow structure and that De Giorgi's 
+curvature has the desired gradient flow structure.
+In this case De Giorgi's 
 inequality (\ref{basic_optimal_energy_dissipation_inequality}) translates to
 \begin{equation*}
 	\energy ( \Sigma ( T ) )
@@ -177,9 +186,9 @@ inequality (\ref{basic_optimal_energy_dissipation_inequality}) translates to
 	\leq
 	\energy ( \Sigma ( 0 ) ).
 \end{equation*}
-If we make the simplifying assumption that the mobilities are already 
-determined through the surface tensions by the relation $ \mu_{ i j } = 1 / 
-\sigma_{ i j } $, then this inequality becomes
+Furthermore if we make the simplifying assumption that the mobilities are 
+already determined through the surface tensions by the relation $ \mu_{ i j } = 
+1 / \sigma_{ i j } $, then this inequality becomes
 \begin{equation*}
 	\energy ( \Sigma ( T ) )
 	+

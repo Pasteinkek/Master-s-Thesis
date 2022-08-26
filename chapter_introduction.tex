@@ -4,13 +4,12 @@
 
 This thesis presents a conditional convergence result of solutions to the 
 Allen--Cahn equation with arbitrary potentials to a De Giorgi type $ \bv 
-$-solution for multiphase mean 
+$-solution of multiphase mean 
 curvature flow. For this we will recall the proof for the conditional 
 convergence to $ \bv $-solutions in 
 the sense of Laux and Simon. Lastly we show that De Giorgi type $ \bv 
 $-solutions are De Giorgi type varifold solutions, and thus our solution 
-concept exhibits a 
-weak-strong uniqueness.
+is unique in a weak-strong sense.
 
 \section{History and main results}
 
@@ -22,9 +21,10 @@ Mullins in \cite{mullins_two_dimensional_motion_of_idealized_grain_boundaries},
 who cites Beck in \cite{beck_metal_interfaces} as already having observed such 
 a behaviour in 1952. 
 
-Over the years a number of different solution concepts for multiphase mean 
+Over the years numerous different solution concepts for multiphase mean 
 curvature flow have been proposed. Classically we have smooth solutions, where 
-we require the evolution of sets to be smooth, for example described by Huisken 
+we require the evolution of the interfaces to be smooth, for example described 
+by Huisken 
 in \cite{huisken_asymptotic_behavior_for_singuliarities_of_mcf}. 
 Another description of smoothly evolving mean curvature flow can be found in 
 the work of Gage and Hamilton 
@@ -44,7 +44,10 @@ solution concept is the viscosity solution concept, for example presented in
 that solutions of a certain parabolic equation have the property that if they 
 are smooth, the corresponding level sets move by mean curvature.
 
-The Allen--Cahn equation
+For some smooth potential $ W 
+\colon \mathbb{ R }^{ N } \to [ 0 , \infty ) $ with 
+finitely many zeros $ \alpha_{ 1 } , \dotsc, \alpha_{ P } $, the Allen--Cahn 
+equation
 \begin{equation}
 	\label{ac_intro}
 	\partial_{ t } u_{ \varepsilon }
@@ -56,35 +59,38 @@ The Allen--Cahn equation
 \end{equation}
 is commonly used as a phase-field approximation for mean curvature flow and was 
 first proposed by Allen and Cahn in their paper 
-\cite{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}. Here $ W 
-\colon \mathbb{ R }^{ N } \to [ 0 , \infty ) $ is some smooth potential with 
-finitely many zeros $ \alpha_{ 1 } , \dotsc, \alpha_{ P } $.
-Since then it has been a topic of long study, both from a numerical and 
+\cite{allen_cahn_microscopig_theory_for_antiphase_boundary_motion}.
+Since then it has been an extensively researched topic, both from a numerical 
+and 
 analytical standpoint. 
 
 If we consider the two-phase case, which corresponds to setting $ N = 1 $ and $ 
 P = 2 $, then 
-the behaviour of the solutions to (\ref{ac_intro}) are thoroughly researched.
-The authors Bronsard and Kohn showed by utilization of the gradient flow 
-structure of (\ref{ac_intro}), more precisely by mainly utilizing the 
-corresponding energy dissipation inequality, in 
+the behaviour of the solutions to (\ref{ac_intro}) as $ \varepsilon $ tends to 
+zero are thoroughly researched.
+The authors Bronsard and Kohn showed in 
 \cite{bronsard_kohn_motion_by_mean_curvature_as_singular_limit} the compactness 
-of solutions and regularity for the limit. Moreover they studied the behaviour 
-for radially symmetric initial data and showed motion by mean curvature in this 
+of solutions and regularity for the limit by exploiting the gradient flow 
+structure of (\ref{ac_intro}), more precisely by mainly utilizing the 
+corresponding energy dissipation inequality. Moreover they studied the 
+behaviour 
+for radially symmetric initial data and showed that the limit moves by mean 
+curvature in this 
 case. 
 Chen has proven in 
 \cite{chen_generation_and_propagation_of_interfaces_for_reaction_diffusion_equations}
 that as long as the interface of the limit evolves smoothly, we have 
-convergence to (classical) mean curvature flow. A similar result has been shown 
+convergence to (classical) mean curvature flow. 
+A similar result has been shown 
 by de Mottoni and Schatzmann in 
 \cite{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces}, 
-where they showed short time convergence by proving that the solution $ u_{ 
+where they showed short time convergence. Their strategy was to prove through a 
+spectral estimate that the solution $ u_{ 
 \varepsilon } $ already coincides with the formal asymptotic expansion up to an 
-error through a spectral estimate. Similar strategies, but for nonlinear Robin 
-boundary conditions with angle close to 90 degrees can be found in the paper
+error. Similar strategies, but for nonlinear Robin 
+boundary conditions with angle close to 90 degrees, can be found in the paper
 \cite{abels_moser_convergence_of_ac_with_nonlinear_robin_boundary_condition_to_mcf}
- by Abels 
-and Moser
+by Abels and Moser.
 
 Ilmanen made fundamental contributions in 
 \cite{ilmanen_convergence_of_ac_to_brakkes_mcf} by proving the convergence to 
@@ -107,8 +113,7 @@ Reitich however considered in
 \cite{bronsard_reitich_on_three_phase_boundary_motion_and_singular_limit} a 
 formal asymptotic expansion which also considers triple junctions
 for the three-phase case. Moreover they proved short-time existence for the 
-three 
-phase boundary problem.
+three-phase boundary problem.
 
 The analysis of multiphase mean curvature flow has been studied for example by 
 Mantegazza, Novaga and Tortorelli in 
@@ -118,8 +123,8 @@ appears, and their work has been extended to several triple junctions in
 \cite{mantegazza_novaga_pluda_schule_evolution_of_networks_with_multiple_junctions}.
 Ilmanen, Neves and Schulze furthermore proved in 
 \cite{ilmanen_neves_schulze_on_short_time_existence_for_the_planar_network_flow}
-that even for non-regular initial data in the sense that not all angles at 
-triple junctions are equal, we have short time existence by approximation 
+that even for non-regular initial data in the sense that Herring's angle 
+condition is not satisfied, we have short time existence by approximation 
 through regular networks. For long time existence, it has been shown by Kim and 
 Tonegawa in \cite{kim_tonegawa_on_the_mean_curvature_flow_of_grain_boundaries} 
 through a modification of Brakke's approximation scheme that one can obtain 
@@ -133,23 +138,25 @@ argument and the results of Laux and Simon in
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}.
 However the strong assumption we make here is that the Cahn-Hilliard energies 
 (\ref{cahn_hilliard_energy}) of the solutions to (\ref{ac_intro}) converge to 
-the perimeter functional (\ref{definition_of_multiphase_energy}) of the limit. 
-This prevents that as $ \varepsilon $ tends to zero, approximate interfaces 
-collapse, which would mean that energy dissipates, see also the discussion in
+the perimeter functional (\ref{definition_of_multiphase_energy}) applied to the 
+limit. 
+This prevents that as $ \varepsilon $ tends to zero, the approximate interfaces 
+collapse. This would mean that energy dissipates, see also the discussion in
 \Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}.  In general we are 
 inclined to believe that this assumption could fail. For example it has been 
 shown by Bronsard and Stoth in 
 \cite{bronsard_stoth_on_the_existence_of_high_multiplicity_interfaces}
 that for the volume preserving Allen--Cahn equation and for radial-symmetric 
 initial data, we can have any number of higher 
-multiplicity transition layers which are $ C \varepsilon^{ \alpha } $ apart, $ 
-0 < \alpha < 1/3 $, at least for times of order one.
+multiplicity transition layers which are at most $ C \varepsilon^{ \alpha } $ 
+apart, at least for times of order one.
+Here $ \alpha $ is some exponent between zero and one third.
 Nonetheless the energy 
 convergence assumption provides us with the important equipartition of 
 energies, whose proof under milder assumption was the main obstacle of Ilmanen 
 in \cite{ilmanen_convergence_of_ac_to_brakkes_mcf}. Moreover it is the key for 
-our localization estimates and lets us localize on the different phases of mean 
-curvature flow. Lastly it assures that the differential $ \nabla u_{ 
+our localization estimates and lets us localize on the different phases of the 
+limit. Lastly it assures that the differential $ \nabla u_{ 
 \varepsilon } $ can locally up to an error be written as a rank-one matrix. In 
 fact it
 is the tensor of the approximate frozen unit normal and the gradient of the 
@@ -158,53 +165,61 @@ distance function associated to the majority phase evaluated at $ u_{
 \varepsilon } $, see the proof of \Cref{convergence_of_curvature_multiphase}.
 
 The second main goal is to compare De Giorgi type $ \bv $-solutions to De 
-Giorgi type varifold solutions, which were 
+Giorgi type varifold solutions.
+The latter were 
 proposed by Hensel and Laux in 
 \cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}. We will 
-show that our solution concept is stronger in the sense that every $ \bv 
-$-solution is also a varifold solution. Since Hensel and Laux have shown 
+show that the De Giorgi type $ \bv $-solution concept is stronger in the sense 
+that every $ \bv 
+$-solution is also a varifold solution. 
+Since Hensel and Laux have shown 
 weak-strong uniqueness for their varifold solution concept, it follows that we 
 also obtain weak-strong uniqueness for our De Giorgi type $ \bv $-solution 
-concept, which is the best we can expect. In fact it has been shown on a 
+concept, which is the best we can expect. 
+In fact it has been shown on a 
 numerical basis by Angenent, Chopp and Ilmanen in 
 \cite{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}
-that even in three dimensions, there exists a hypersurface whose evolution by 
+that even in three dimensions, there exists a smooth hypersurface whose 
+evolution by 
 mean curvature 
 flow admits a singularity at a certain time after which we have nonuniqueness. 
 A rigorous analysis of this phenomenon has been done in dimensions 4, 5, 6, 7 
 and 8 by Angenent, Ilmanen and Velázquez in 
-\cite{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}.
+\cite{angenent_ilmanen_velázquez_fattening_from_smooth_initial_data_in_mcf}.
 
 Let us also mention some of the closely related unanswered questions. For one 
 Hensel and Laux have shown in 
 \cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}
-that in the two-phase case and under well prepared initial conditions, then 
+that in the two-phase case and under well prepared initial conditions, the
 solutions of the Allen--Cahn equation (\ref{ac_intro}) converge to a De Giorgi 
 type varifold solution. However their methods have no obvious generalization to 
 the multiphase case without the energy convergence assumption, and one even 
 struggles to find an approximate sequence 
 which constructs the desired varifolds. And even then one would have to find 
 suitable substitutions for the localization estimates explained in 
-\Cref{section_localization_estimates}, which are based on De Giorgi's structure 
+\Cref{section_localization_estimates}. 
+These are based on De Giorgi's structure 
 theorem and thus only work for $ \bv $-functions.
-One other possible question would be how to generalize the results to the case 
+
+Another possible question would be how to generalize the results to the case 
 of 
 arbitrary mobilities: Throughout the thesis, and also the main background 
 papers 
 (\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow},
 \cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}), it is 
 always assumed that the mobilities are fixed through the relation $ \mu_{ i j } 
-= 1/ \sigma_{ i j } $, where $ \sigma_{ i j } $ denotes the surface tension of 
-the $ ( i , j ) $-th interface, and $ \mu_{ i j } $ its mobility. As proposed by
-Bretin, Danescu, Penuelas, and Masnou in 
+= 1/ \sigma_{ i j } $.
+Here $ \sigma_{ i j } $ denotes the surface tension of 
+the $ ( i , j ) $-th interface and $ \mu_{ i j } $ its mobility. As proposed by
+Bretin, Danescu, Penuelas and Masnou in 
 \cite{bretin_dansecu_penuelas_masnou_a_metric_based_approach_to_mmcf_with_mobilities},
 passing
 to arbitrary mobilities should 
 amount to multiplying an appropriate \enquote{mobility matrix} $ M $ onto the 
 right-hand side of (\ref{ac_intro}) and changing the metric of the underlying 
 space accordingly to $ \langle u , v \rangle = \int \inner*{M u}{ v} \dd{ x } $.
-The difference in their approach is that first uncouple their system so that 
-they arrive at the scalar Allen--Cahn equation and then couple they components 
+The difference in their approach is to first uncouple their system so that 
+they arrive at the scalar Allen--Cahn equation and then couple the components 
 through a Lagrange-multiplier, which assures that the limit is a partition.
 
 \section{Structure of the thesis}
@@ -213,47 +228,56 @@ In \Cref{chapter_gradient_flows_and_mcf} we will give a soft mathematical
 introduction into the topic of gradient flows. We will derive De Giorgi's 
 optimal energy dissipation inequality in a simple example and discuss its 
 usefulness for 
-reformulating the gradient flow equation. Afterwards we apply our observations 
+reformulating the gradient flow equation. Moreover we will apply our 
+observations 
 to (multiphase) mean curvature flow.
 
-Afterwards in \Cref{chapter_ac_equation}, we consider the Allen--Cahn equation 
+Afterwards in \Cref{chapter_ac_equation}, we will consider the Allen--Cahn 
+equation 
 (\ref{ac_intro}) already mentioned above. Here we will focus again on its 
 gradient flow structure. We then propose a suitable solution concept and prove 
 the existence of a solution through De Giorgi's minimizing movements scheme.
 
 Continuing with \Cref{chapter_convergence_to_evolving_partition}, we are going 
 to take a look at the behaviour of solutions to the Allen--Cahn equation as $ 
-\varepsilon $ tends to zero. First we study the simple two-phase case in order 
+\varepsilon $ tends to zero. First we will study the simple two-phase case in 
+order 
 to get a better feeling for the equation and highlight important techniques 
 like the Modica--Mortola trick. We will show that we have convergence to an 
-evolving set of finite perimeter in space in time. Afterwards we also prove 
+evolving set of finite perimeter in space and time. 
+Afterwards we will also prove 
 precompactness of the sequence in $ \cont ( [ 0 , T ] ; \lp^{ 2 } ) $ which 
-lets us show that the initial data as attained. Next up is the multiphase case, 
-which requires more finesse, but we are able to show similar results as in the 
-two-phase case. This will require a generalized chain rule for distributional 
-derivatives and careful analysis of the geodesic distance functions with 
+lets us show that the initial data is attained. Next up is the multiphase case, 
+which will require more finesse, but we will be able to show similar results as 
+in the 
+two-phase case. 
+For this we will need a generalized chain rule for distributional 
+derivatives and a careful analysis of the geodesic distance functions with 
 respect to the potential $ W $ from equation (\ref{ac_intro}).
 
 \Cref{chapter_conditional_convergence_of_ac} is concerned with the conditional 
 convergence result proven by Laux and Simon in 
-\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. We 
-show that the in \Cref{chapter_convergence_to_evolving_partition} observed 
-limit is a $ \bv $-solution to mean curvature flow under the crucial assumption 
-of energy convergence. Again we first consider the simpler two-phase case in 
+\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. 
+We will show that the in \Cref{chapter_convergence_to_evolving_partition} 
+observed limit is a $ \bv $-solution to mean curvature flow under the crucial 
+assumption of energy convergence. 
+Again we will first consider the simpler two-phase case in 
 order to simplify some of the arguments. Here one has to show the existence of 
-normal velocities followed by the equipartition of energies. Then we are going 
+normal velocities followed by the equipartition of the Cahn--Hilliard energies. 
+Then we are going 
 to separately show the convergence of the velocity term and the curvature term 
 of the Allen--Cahn equation to the corresponding terms for mean curvature flow. 
-For the multiphase equivalent our core strategy is to reduce to the two-phase 
+For the multiphase equivalent our core strategy will be to reduce the 
+multiphase case to the two-phase 
 case through a localization argument, which we detail in 
-\Cref{section_localization_estimates}. Afterwards we show the same results as 
-in the two-phase case.
+\Cref{section_localization_estimates}. 
+Afterwards we will show the same results as in the two-phase case.
 
 Lastly in \Cref{chapter_de_giorgis_mcf} we are going to present new results 
 building on the previous insights. We start off by presenting a De Giorgi type 
 $ \bv $-solution concept for multiphase mean curvature flow. This is followed 
-by proving a similar conditional convergence result as in the previous chapter, 
-but now to this new solution. In the final 
+by proving a similar conditional convergence result as in the previous chapter. 
+In the final 
 \Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}, we are going to 
 discuss the assumption of energy convergence. Moreover we show that every De 
 Giorgi type $ \bv $-solution is a De Giorgi type varifold solution in the sense 

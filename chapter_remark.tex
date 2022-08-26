@@ -15,7 +15,8 @@
 		If $ u \colon ( 0 , T ) \times \mathbb{ R }^{ d } \to \mathbb{ R 
 		}^{ N } $, then we denote by $ \diff u (t, x ) $  respectively $ \nabla 
 		u ( 
-		t,  x ) $ only the derivatives in space, and always write $ \partial_{ 
+		t,  x ) $ only the derivatives in space, and we always write $ 
+		\partial_{ 
 		t } u $ for the derivative in time.
 	
 		\item
@@ -59,11 +60,17 @@
 			\left\{
 			\int_{ ( 0 , T ) \times \Omega }
 			u ( t , x ) \divg_{ x } ( \xi ) (t , x ) 
-			\dd{ x }
+			\dd{ ( t, x ) }
 			\, \colon \,
 			\xi \in \cont_{ \mathrm{c} }^{ 1 } (( 0 , T ) \times \Omega ; 
 			\mathbb{ R }^{ d 
 			} ) , \abs{ \xi } \leq 1
 			\right\}.
 		\end{equation*}
+	
+		\item 
+		If $ u \colon ( 0 , T ) \times \Omega \to \mathbb{ R }^{ N } $ is some 
+		map, then for some given time $ t \in ( 0 , T ) $, we sometimes write $ 
+		u ( t ) $ for the map $ u ( t ) ( x ) \coloneqq u ( t , x ) $ by a 
+		slight abuse of notation.
 	\end{itemize}
