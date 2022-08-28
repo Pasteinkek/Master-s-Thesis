@@ -8,9 +8,7 @@ present more details.
 Let $ \Lambda > 0 $ and define the flat torus 
 $ \flattorus = [0, \Lambda )^{ d } = \mathbb{ R }^{ d } / \Lambda \mathbb{ Z 
 }^{ d } $, 
-which means that we work with periodic boundary conditions on $ \flattorus $. 
-To shorten the notation we write $ \int \dd{x} $ instead of $ \int_{ \flattorus 
-} \dd{x} $.
+which means that we work with periodic boundary conditions on $ \flattorus $.
 Then for 
 $ u \colon [ 0 , \infty ) \times \flattorus \to \mathbb{ R }^{ N } $ 
 and some smooth potential 
@@ -37,9 +35,10 @@ energy}, which assigns to $ u $ for a fixed time the value
 	\abs{ \nabla u }^{ 2 }
 	\dd{x}.
 \end{equation}
-If everything is nice and smooth, we can compute that under the assumption that 
+Assume that everything is nice and smooth and that
 $ u $ satisfies 
-equation (\ref{allen_cahn_eq}), we have through an integration by parts that
+equation (\ref{allen_cahn_eq}). Then we have through an integration by parts 
+that
 \begin{align*}
 	\dv{t} \energy_{ \varepsilon } ( u )
 	&=
@@ -62,7 +61,7 @@ equation (\ref{allen_cahn_eq}), we have through an integration by parts that
 \end{align*}
 For the last equality, we used that $ u $ solves the equation.
 This calculation suggests that the partial differential equation 
-(\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $ gradient flow rescaled by $ 
+(\ref{allen_cahn_eq}) is the $ \lp^{ 2 } $-gradient flow rescaled by $ 
 \sqrt{\varepsilon} $ of the Cahn--Hilliard 
 energy. Thus we can try to construct a solution to the PDE 
 (\ref{allen_cahn_eq}) via De Giorgis minimizing movements scheme 
@@ -190,11 +189,13 @@ As it is custom for parabolic PDEs, we view solutions of the Allen-Cahn equation
 \end{definition}
 
 \begin{remark}
-	The exponent $ p $ which appears in \Cref{here_appears_p} is the same 
+	The exponent $ p $ which appears in condition \ref{here_appears_p} is the 
+	same 
 	exponent as for the growth assumptions (\ref{polynomial_growth}) and 
 	(\ref{polynomial_growth_derivative}) of $ W $.
 	Moreover we note that given our setup, we automatically have $ \nabla W ( 
-	u_{ \varepsilon } ) ( t ) \in \lp^{ p' } ( \flattorus ) $ since
+	u_{ \varepsilon } ) ( t ) \in \lp^{ p' } ( \flattorus ) $. In fact we can 
+	estimate
 	\begin{equation}
 		\abs{ \nabla W ( u_{ \varepsilon} ) }^{ p/(p-1) }
 		\lesssim

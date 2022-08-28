@@ -273,13 +273,13 @@ We are now in the position to prove the following regularity result.
 	\begin{equation*}
 		\tilde{ \gamma } ( t ) =
 		\begin{cases}
-			\gamma ( 2 t ) 
-			& , t \leq \frac{ 1 }{ 2 }
+			\gamma ( 2 t ),
+			&  t \leq \frac{ 1 }{ 2 }
 			\\
 			u + 
 			\left( t - \frac{ 1 }{ 2 } \right)
-			2 h v
-			&, t \geq \frac{ 1 }{ 2 }.
+			2 h v,
+			& t \geq \frac{ 1 }{ 2 }.
 		\end{cases}
 	\end{equation*}
 	We observe that $ \tilde{ \gamma } $ is a piecewise continuously differentiable path connecting $ \alpha_{i } $ and $ u + h v $, thus we can estimate by a substitution that
@@ -622,7 +622,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  	for a time-dependent partition $ ( \Omega_{ j } ( t ) )_{ j = 1 , \dotsc , 
  	P } $ of $ \flattorus $. On a technical side note, we already know that the 
  	sets $ \Omega_{ j } \subseteq [ 0 , T ] \times \flattorus $ are measurable: 
- 	Take a festfunction $ f $ such that $ f ( \alpha_{ j } ) = 1 $ and $ f ( 
+ 	Take a test function $ f $ such that $ f ( \alpha_{ j } ) = 1 $ and $ f ( 
  	\alpha_{ k } ) = 0 $ for $ k \neq j $. Then $ \Omega_{ j } $ is exactly the 
  	preimage of $ \{ 1 \} $ under the measurable map 
  	\begin{equation*}
@@ -719,7 +719,11 @@ We already mentioned that we want to apply the lower semicontinuity of the varia
 	Let $ \mu , \nu $ be regular positive Borel measures on $ \flattorus $. 
 	Define the supremum $ \mu \vee \nu $ of $ \mu $ and $ \nu $ as the smallest 
 	regular positive measure which is greater or equal than $ \mu $ and $ \nu $ 
-	on every Borel subset of $ \flattorus $. By the regularity of Radon 
+	on every Borel subset of $ \flattorus $. 
+\end{definition}
+
+\begin{remark}
+By the regularity of Radon 
 	measures, we have
 	\begin{equation*}
 		\mu \vee \nu ( U ) 
@@ -733,7 +737,7 @@ We already mentioned that we want to apply the lower semicontinuity of the varia
 		\right\}
 	\end{equation*}
 	for any open subset $ U \subseteq \flattorus $.
-\end{definition}
+\end{remark}
 
 It is natural to ask how we can characterize the total variation of $ \psi_{ i 
 } = \phi_{ i } \circ u = \sum \mathds{ 1 }_{ \Omega_{ j } } \sigma_{ i j } $. 
@@ -845,7 +849,8 @@ Collecting our observations, we can finish our arguments.
 	which completes the proof.
 \end{proof}
 
-Nextup, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ u 
+Next up, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ 
+u 
 $. This will let us prove that $ u $ achieves its initial data continuously in 
 $ \lp^{ 2 } $.
 

@@ -12,7 +12,7 @@
 
 \usepackage{physics}						%also useful package for mathematics, e.g. the dd at the end of an integral, norm etc.
 
-\usepackage[babel=true]{csquotes}				%Automates quoting things
+\usepackage[autostyle=true]{csquotes}				%Automates quoting things
 
 \usepackage{enumitem}							%configuration of list enviroments, e.g. alphabetic enumeration
 
@@ -32,6 +32,9 @@
 
 \usepackage{subcaption}							%related to tikz, allows for 
 %allignment of several figures
+
+\usepackage{etoolbox}							%i use for: when blank cdot is 
+%inserted
 
 %-----> the following packages have to be loaded last
 
@@ -82,7 +85,7 @@
 \DeclareMathOperator{\lm}{\mathcal{L}}
 \DeclareMathOperator{\hm}{\mathcal{H}}
 \DeclareMathOperator{\tilt_excess}{\mathcal{E}}
-\DeclareMathOperator{\geodesic_distance}{\mathrm{d}_{W}}
+\DeclareMathOperator{\geodesic_distance}{\mathrm{d}_{\mathnormal{W}}}
 
 %function spaces
 

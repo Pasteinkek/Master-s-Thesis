@@ -1,20 +1,23 @@
 \section{Existence of a solution}
 
-With \Cref{solution_to_ac}, we are able to state our existence results for 
-solutions of the Allen--Cahn equation. The proof uses De Giorgis minimizing 
+With \Cref{solution_to_ac}, we are able to state our existence result for a
+solution of the Allen--Cahn equation. The proof uses De Giorgis minimizing 
 movements scheme and arguments from the theory of gradient flows and has been 
 very 
 briefly sketched in 
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. 
-Note moreover that one would in fact expect even more regularity for a solution 
+Note moreover that one would expect even more regularity for a solution 
 of the Allen--Cahn equation. In fact, it has been shown by de Mottoni and 
 Schatzmann in 
 \cite{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces} that 
-in the scalar case we have that for bounded initial data, we have that u is 
-smooth for positive times. Their Ansatz is a variation of parameters and the 
-regularity follows from the smoothing effect of the heat kernel. However de 
+in the scalar case, a solution u is 
+smooth for positive times, at least for bounded initial data. 
+Their Ansatz is a 
+variation of parameters and the 
+regularity then follows from the smoothing effect of the heat kernel. However 
+De 
 Giorgi's minimizing movements scheme has broad applications to a wide class of 
-gradient flows, which is why we want to present it here.
+gradient flows, which is why we want to present this technique here.
 
 \begin{theorem}
 	\label{existence_of_ac_solution}
@@ -36,7 +39,7 @@ gradient flows, which is why we want to present it here.
 		\leq
 		\energy_{ \varepsilon } ( u^{ 0 } )
 	\end{equation}
-	for every $ t \in [ 0 , T ] $ and we additionally have
+	for every $ t \in [ 0 , T ] $. We additionally have
 	$
 	\partial_{ i , j }^{ 2 } u_{ \varepsilon }, \nabla W ( u_{ \varepsilon } ) \in \lp^{ 2 } ( [0, T] \times \flattorus ; \mathbb{ R }^{ N } ) 
 	$
@@ -44,6 +47,19 @@ gradient flows, which is why we want to present it here.
 \end{theorem}
 
 \begin{proof}
+	The proof is divided into several steps. Therefore we want to give an 
+	overview of our strategy. We will first consider a minimization problem for 
+	functions in space. By a piecewise linear interpolation in time of 
+	iteratively chosen minimizers of the minimization problem, we are going to 
+	construct approximations to the solution. Through a convexity argument, we 
+	get an energy dissipation inequality for these approximations. This enables 
+	us to apply the Arzelà--Ascoli theorem and thus we obtain 
+	a limit, which will be our solution. 
+	We then show additional regularity by 
+	using compactness arguments and a finite differences argument. Lastly we 
+	show the optimal energy dissipation inequality 
+	(\ref{energy_dissipation_sharp}) by using a lower semicontinuity argument 
+	for the energy dissipation inequality of the approximations.
 	\begin{description}[wide=0pt]
 		\item[Step 1:] A minimization problem.
 		
@@ -61,12 +77,15 @@ gradient flows, which is why we want to present it here.
 		\end{align}
 		Then $ \mathcal{ F } $ is coercive with respect to 
 		$ \norm{ \cdot }_{ \wkp^{ 1, 2 } } $ 
-		and bounded from below by zero, thus we may take a $ \wkp^{ 1 , 2 } $-bounded sequence  
+		and bounded from below by zero. 
+		Thus we may take a $ \wkp^{ 1 , 2 } $-bounded sequence  
 		$ (v_{ k } )_{ k \in \mathbb{ N } } $ in $ \wkp^{ 1 , 2} \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $ such that 
 		$ \mathcal{ F } ( v_{ k } ) \to \inf \mathcal{ F } $ as $ k \to \infty $. 
 		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ and strongly in $ \lp^{ 2 } ( \flattorus, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \flattorus; \mathbb{ R }^{ N } ) $.
-		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } \left( \flattorus ; \mathbb{ R }^{ N } \right)$ by the lower growth assumption (\ref{polynomial_growth}) on $ W $
-		and thus we obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } 
+		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } \left( \flattorus ; 
+		\mathbb{ R }^{ N } \right)$ by the lower growth assumption 
+		(\ref{polynomial_growth}) on $ W $.
+		Therefore we obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } 
 		\cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $.
 		Lastly we have 
 		\begin{align*}
@@ -75,17 +94,17 @@ gradient flows, which is why we want to present it here.
 			& \leq
 			\liminf_{ k \to \infty }
 			\frac{ 1 }{ 2h }
-			\int \varepsilon \abs{ v_{ k } - u_{ n -1 } }^{ 2 } \dd{ x },
-			\\
+			\int \varepsilon \abs{ v_{ k } - u_{ n -1 } }^{ 2 } \dd{ x }
+			\shortintertext{and}
 			\int \frac{ \varepsilon }{ 2 } \abs{ \nabla u }^{ 2 } \dd{ x }
 			& \leq
 			\liminf_{ k \to \infty }
 			\int \frac{ \varepsilon }{ 2 } \abs{ \nabla v_{ k } }^{ 2 } \dd{ x }
 		\end{align*}
-		by the weak convergence in $ \wkp^{ 1 , 2 } ( \flattorus , \mathbb{ R }^{ N } )$.
-		By passing to another non-relabelled subsequence which converges 
-		pointwise almost everywhere, we moreover achieve by the continuity of $ 
-		W $ that
+		by the weak lower semicontinuity of the norm.
+		We pass to another non-relabelled subsequence which converges 
+		pointwise almost everywhere. Then we achieve by the continuity of $ 
+		W $ and Fatou's Lemma that
 		\begin{equation*}
 			\int \frac{ 1 }{ \varepsilon } W ( u ) \dd{ x }
 			=
@@ -98,10 +117,21 @@ gradient flows, which is why we want to present it here.
 		\item[Step 2:] Minimizing movements scheme.
 		
 		By iteratively choosing minimizers $ u_{ n }^{ h } $ from Step 1, we 
-		obtain a sequence of functions $ u^{ 0 }, u_{ 1 }^{ h } 
-		, \dotsc $. Thus we may define a function $ u  $ as the piecewise 
+		obtain a sequence of functions $ u_{ 0 }^{ h } = u^{ 0 }, u_{ 1 }^{ h } 
+		, \dotsc $. Thus we may define a function $ u^{ h } $ as the piecewise 
 		linear interpolation at the time-steps $ 0, h , 2h, \dotsc $ of these 
-		functions.
+		functions. More precisely we define for a natural number $ n \in 
+		\mathbb{ N } $ 
+		and $ t \in [ nh, (n+1)h ) $ our function to be  
+		\begin{equation*}
+		u^{ h } ( t , x ) 
+		\coloneqq 
+		\frac{ ( n + 1 ) h  - t }{ h }
+		u_{ n }^{ h } ( x )
+		+
+		\frac{ t - n h }{ h }
+		u_{ n +1 }^{ h } ( x ). 
+		\end{equation*}
 		
 		\item[Step 3:] Sharp energy dissipation inequality for $ u_{ n }^{ h } 
 		$.
@@ -116,7 +146,11 @@ gradient flows, which is why we want to present it here.
 			\leq
 			\energy_{ \varepsilon } ( u_{ n - 1 }^{ h } ).
 		\end{equation}
-		In order to prove this inequality, we notice that since $ \abs{ \nabla^{ 2 } W_{ \mathrm{pert} } } \leq C $, the function $ W_{ \mathrm{pert} } + C \abs{ u }^{ 2 }/2 $ is convex for $ C > 0 $ sufficiently large, thus the functional 
+		In order to prove this inequality, we notice that since $ \abs{ 
+		\nabla^{ 2 } W_{ \mathrm{pert} } } \leq C $, the function $ W_{ 
+		\mathrm{pert} } + C \abs{ u }^{ 2 }/2 $ is convex for $ C > 0 $ 
+		sufficiently large.
+		Hence the functional 
 		\begin{equation*}
 			\tilde{\energy}_{ \varepsilon }  ( u )
 			\coloneqq
@@ -128,50 +162,54 @@ gradient flows, which is why we want to present it here.
 			\abs{ \nabla u }^{ 2 }
 			\dd{ x }
 		\end{equation*}
-		is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $. For a given $ \xi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $, we thus have that the function
-		$ t \mapsto \ \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi ) $ is convex and differentiable, which yields that
+		is convex on $ \wkp^{ 1 , 2 } \cap \lp^{ p } ( \flattorus ; \mathbb{ R 
+		}^{ N } ) $. For a given $ \varphi \in \wkp^{ 1 , 2 } \cap \lp^{ p } ( 
+		\flattorus ; \mathbb{ R }^{ N } ) $, we thus have that the function
+		$ t \mapsto \ \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t 
+		\varphi ) $ is convex and differentiable, which yields that
 		\begin{equation}
 			\label{convexity_at_time_1}
-			\tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + \xi )
+			\tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + \varphi )
 			\geq
 			\tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } ) + 
-			\left.\dv{ t }\right|_{ t = 0 } \tilde{\energy}_{ \varepsilon } ( u_{ n }^{ h } + t \xi).
+			\left.\dv{ t }\right|_{ t = 0 } \tilde{\energy}_{ \varepsilon } ( 
+			u_{ n }^{ h } + t \varphi ).
 		\end{equation} 
 		But since $ u_{ n }^{ h } $ is a minimizer of the functional $\mathcal{ 
 		F }$ defined by (\ref{de_giorgi_min_functional}), we have
 		\begin{align*}
 			&\left. \dv{ t } \right|_{ t= 0 }
-			\tilde{\energy}_{ \varepsilon} ( u_{ n }^{ h } + t \xi )
+			\tilde{\energy}_{ \varepsilon} ( u_{ n }^{ h } + t \varphi )
 			\\
 			={}&
 			\left. \dv{ t } \right|_{ t = 0 } 
 			\left(
-			\mathcal{ F } ( u_{ n }^{ h } + t \xi )
+			\mathcal{ F } ( u_{ n }^{ h } + t \varphi )
 			+ 
 			\frac{ C }{ 2 \varepsilon } 
 			\int 
-			\abs{ u_{ n }^{ h } + t \xi }^{ 2 } 
+			\abs{ u_{ n }^{ h } + t \varphi }^{ 2 } 
 			\dd{ x }
 			-
 			\frac{ 1 }{ 2h } 
 			\int 
 			\varepsilon
-			\abs{ u_{n }^{ h } + t \xi - u_{ n - 1 }^{ h } }^{ 2 } 
+			\abs{ u_{n }^{ h } + t \varphi - u_{ n - 1 }^{ h } }^{ 2 } 
 			\dd{ x }
 			\right)
 			\\
 			={}& 
 			\int
 			\frac{ C }{ \varepsilon }
-			\inner*{u_{ n }^{ h }}{\xi}
+			\inner*{u_{ n }^{ h }}{\varphi}
 			-
 			\frac{ 1 }{ h }
 			\varepsilon
-			\inner*{ u_{ n }^{ h } - u_{ n - 1 } ^{ h } }{ \xi }
+			\inner*{ u_{ n }^{ h } - u_{ n - 1 } ^{ h } }{ \varphi }
 			\dd{x}.
 		\end{align*}
-		Plugging $ \xi = u_{ n - 1 }^{ h } - u_{ n }^{ h } $ into this equation 
-		and using inequality (\ref{convexity_at_time_1}) thus yields
+		By choosing $ \varphi = u_{ n - 1 }^{ h } - u_{ n }^{ h } $ 
+		and using inequality (\ref{convexity_at_time_1}), we obtain
 		\begin{equation*}
 			\tilde{\energy}_{ \varepsilon } ( u_{ n - 1 }^{ h } ) 
 			\geq
@@ -188,9 +226,10 @@ gradient flows, which is why we want to present it here.
 			\frac{ 1 }{ h }
 			\varepsilon
 			\abs{ u_{n }^{ h } - u_{ n -1 }^{ h } }^{ 2 }
-			\dd{ x },
+			\dd{ x }.
 		\end{equation*}
-		which is equivalent to
+		By the definition of $ \tilde{ \energy }_{ \varepsilon }  $, this is 
+		equivalent to
 		\begin{align*}
 			& \energy_{ \varepsilon } (u_{ n - 1 }^{ h } )
 			\\
@@ -225,15 +264,17 @@ gradient flows, which is why we want to present it here.
 			\right)
 			\int 
 			\varepsilon \abs{ u_{n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
-			\dd{ x }.
+			\dd{ x },
 		\end{align*}
+		where we expanded the square for the last equality.
 		This is the claimed estimate 
 		(\ref{discrete_optimal_energy_dissipation}).
 		
 		\item[Step 4:] Hölder bounds for $ u_{ h } $.
 		
-		From the energy estimate (\ref{discrete_optimal_energy_dissipation}) we 
-		deduce via an induction that for every $ n \in \mathbb{ N } $, we have
+		By iteratively applying the energy estimate 
+		(\ref{discrete_optimal_energy_dissipation}), we 
+		deduce that for every $ n \in \mathbb{ N } $, we have
 		\begin{align}
 			& \energy_{ \varepsilon } ( u_{ n }^{ h } )
 			+
@@ -298,9 +339,13 @@ gradient flows, which is why we want to present it here.
 			\left(
 			\varepsilon - \frac{ C h }{ 2 \varepsilon }
 			\right)^{ - 1/2 }
-			\left(  E_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) \right)^{ 1/ 2 },
+			\left(  E_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) \right)^{ 1/ 
+			2 }.
 		\end{align}
-		which gives us a uniform bound on the $ \lp^{ 2 }$-Hölder continuity of 
+		Note that for the first inequality, we applied Fubini and enlarged the 
+		time domain.
+		We therefore obtain a uniform bound on the $ \lp^{ 2 }$-Hölder 
+		continuity of 
 		$ u^{ h } $ in time as $ h $ tends to zero since $ \varepsilon $ is 
 		fixed.
 		
@@ -308,29 +353,49 @@ gradient flows, which is why we want to present it here.
 		
 		In order to apply the Arzelà--Ascoli theorem for the sequence $ (u_{ h 
 		} ) $ in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R 
-		}^{ N } ) \right) $ as $ h $ tends to zero, we need to check pointwise 
+		}^{ N } ) \right) $ as $ h $ tends to zero, we need to check the 
+		pointwise 
 		precompactness 
-		of the image and equicontinuity of the sequence. 
-		The equicontinuity follows from the previous estimate (\ref{hölder_continuity_of_uh}).
-		In order to check the pointwise precompactness, we need to verify that for all $ t \in [ 0 , T ] $, the set
-		$ \{ u^{ h } ( t ) \}_{ \delta > h > 0 } $ is a precompact subset of $ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ (for $ \delta > 0 $ sufficiently small). 
-		But this follows from the energy bound $ \energy_{ \varepsilon } ( u_{ n }^{ h } ) \leq \energy_{ \varepsilon } ( u_{ 0 } ) $ (given by inequality (\ref{discrete_optimal_energy_dissipation})), which gives us a time-uniform bound on $ \norm{ \nabla u^{ h }( t ) }_{\lp^{ 2 }( \flattorus; \mathbb{ R }^{ N } ) } $ and on $ \norm{ u^{ h } ( t )}_{ \lp^{ p } ( \flattorus; \mathbb{ R }^{ N } ) } $ and thus on $ \norm{ u^{ h } ( t )}_{ \wkp^{ 1 , 2 } ( \flattorus; \mathbb{ R }^{ N } ) } $. The compact embedding
+		of the image and the equicontinuity of the sequence. 
+		The equicontinuity follows from the previous uniform Hölder estimate 
+		(\ref{hölder_continuity_of_uh}).
+		In order to check the pointwise precompactness, we need to verify that 
+		for $ \delta > 0 $ sufficiently small and all $ t \in [ 0 , T ] $, the 
+		set
+		$ \{ u^{ h } ( t ) \}_{ \delta > h > 0 } $ is a precompact subset of $ 
+		\lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $. 
+		But this follows from the energy bound $ \energy_{ \varepsilon } ( u_{ 
+		n }^{ h } ) \leq \energy_{ \varepsilon } ( u_{ 0 } ) $ given by 
+		inequality (\ref{discrete_optimal_energy_dissipation}). In fact it 
+		gives us a time-uniform bound on $ \norm{ \nabla u^{ h }( t ) }_{\lp^{ 
+		2 }( \flattorus; \mathbb{ R }^{ N } ) } $ and on $ \norm{ u^{ h } ( t 
+		)}_{ \lp^{ p } ( \flattorus; \mathbb{ R }^{ N } ) } $ and thus on $ 
+		\norm{ u^{ h } ( t )}_{ \wkp^{ 1 , 2 } ( \flattorus; \mathbb{ R }^{ N } 
+		) } $. 
+		The compactness of the embedding
 		$ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \hookrightarrow \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) $ thus yields the desired pointwise precompactness.
 		
-		Therefore we may apply Arzelà--Ascoli to obtain some $ u \in \cont^{ 1 , 2 } \left( [ 0, T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } \right) $ and some  sequence $ h_{ n } \to 0 $ such that
-		$ u^{ h_{ n } } $ converges uniformly to $ u $ on $ [ 0 , T ] $ with respect to $ \norm{ \cdot }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) } $.
+		Therefore we may apply Arzelà--Ascoli to obtain some $ u \in \cont^{ 1 
+		/ 2 } \left( [ 0, T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } 
+		\right) $ and some  sequence $ h_{ n } \to 0 $ such that
+		$ u^{ h_{ n } } $ converges uniformly to $ u $ on $ [ 0 , T ] $ with 
+		respect to $ \norm{ \cdot }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N 
+		} ) } $.
+		Note tat $ u $ is already $ 1/2 $-Hölder continuous sincce the Hölder 
+		seminorm of $ u^{ h } $ stays bounded.
 		
 		\item[Step 6:] Additional regularity 1.
 		
 		We first want to argue that from our construction, one already obtains 
-		that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1, 2 } ( 
-		\flattorus ; \mathbb{ R }^{ N } ) \right) $.
-		For this we first notice that for a fixed $ t \in [ 0 , T ] $, we find 
-		by the pointwise precompactness some
+		that $ u $ stays bounded in time with respect to $ \wkp^{ 1 , 2 } 
+		\left( \flattorus ; \mathbb{ R }^{ N } \right) $.
+		We start by noticing that for a fixed $ t \in [ 0 , T ] $, we can find 
+		by the pointwise precompactness of $ u^{ h } $ some
 		non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \flattorus ; 
 		\mathbb{ R }^{ N } ) $ such that $ u^{ h_{ n } } ( t ) $ converges 
 		weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) 
-		$. By uniqueness of the limit, we already have $ u ( t ) = v $ almost 
+		$. By the uniqueness of the limit, we already have $ u ( t ) = v $ 
+		almost 
 		everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \flattorus, 
 		\mathbb{ R }^{ N } ) $. Applying the lower semicontinuity of the norm, 
 		we may also deduce 
@@ -343,19 +408,21 @@ gradient flows, which is why we want to present it here.
 			\leq
 			C \energy_{ \varepsilon } ( u^{ 0 } ),
 		\end{equation*}
-		from which we deduce that $ u \in \lp^{ \infty } \left( [ 0 , T ] ; \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $.	
+		from which we deduce the desired bounded.	
 		Secondly the boundedness of the energies
 		\begin{equation*}
 			\sup_{ 0 \leq t \leq T }
 			\energy_{ \varepsilon } ( u ( t ) ) 
 			< \infty
 		\end{equation*}
-		follows from the lower semicontinuity of the energy and the pointwise $ 
-		\lp^{ 2 } $ convergence and pointwise weak convergence in $ \wkp^{ 1 , 
-		2 } $ as described in Step 1.
+		follows from the lower semicontinuity of the energy, the pointwise $ 
+		\lp^{ 2 } $-convergence and the pointwise weak convergence in $ \wkp^{ 
+		1 , 
+		2 } $. Note that this is similar to Step 1.
 		Lastly we want to argue that $ \partial_{ t } u \in \lp^{2 } \left( [ 0 
-		, T ] \times \flattorus ; \mathbb{ R }^{ N } \right) $. From inequality 
-		(\ref{energy_and_time_derivative_bound}) in step 4, we deduce that $ 
+		, T ] \times \flattorus ; \mathbb{ R }^{ N } \right) $. 
+		From the energy dissipation inequality 
+		(\ref{energy_and_time_derivative_bound}) in Step 4, we deduce that $ 
 		\partial_{ t } u^{ h } $ is a bounded sequence in $ \lp^{ 2 } \left( [ 
 		0 , T ] 
 		\times \flattorus; \mathbb{ R }^{ N } \right) $. Thus we find a 
@@ -363,51 +430,78 @@ gradient flows, which is why we want to present it here.
 		[ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $ such that $ u^{ 
 		h_{n } } $ converges weakly to $ w $ in $ \lp^{ 2 } ( [0, T ] \times 
 		\flattorus ; \mathbb{ R }^{ N } ) $. But then $ w $ is already the weak 
-		time derivative of u since for any testfunction $ \xi $, we have
+		time derivative of u since for any test function $ \varphi $, we have
 		\begin{align*}
 			\int_{ [ 0 , T ] \times \flattorus }
-			\inner*{ u }{ \partial_{ t } \xi }
+			\inner*{ u }{ \partial_{ t } \varphi }
 			\dd{ x } \dd{ t }
 			& =
 			\lim_{ n \to \infty }
 			\int_{ [ 0 , T ] \times \flattorus }
-			\inner*{ u^{ h_{ n } } }{ \partial_{ t } \xi }
+			\inner*{ u^{ h_{ n } } }{ \partial_{ t } \varphi }
 			\dd{ x } \dd{ t }
 			\\
 			& =
 			\lim_{n \to \infty }
 			- \int_{ [ 0 , T ] \times \flattorus }
-			\inner*{ \partial_{ t } u^{ h_{ n } } }{ \xi }
+			\inner*{ \partial_{ t } u^{ h_{ n } } }{ \varphi }
 			\dd{ x }\dd{ t }
 			\\
 			& =
 			- \int_{ [ 0 , T ] \times \flattorus }
-			\inner*{ w }{ \xi }
+			\inner*{ w }{ \varphi }
 			\dd{ x } \dd{ t }.
 		\end{align*}
 		
 		\item[Step 7:] $ u $ is a weak solution.
 		
-		Going back to step 1, we see that $ u_{ n }^{ h } $ solves the Euler--Lagrange equation
-		\begin{equation}
-			\label{el_eq_for_unh}
+		Going back to Step 1, we see that $ u_{ n }^{ h } $ solves the 
+		Euler--Lagrange equation
+		\begin{equation*}
 			\int
 			\frac{ 1 }{ \varepsilon^{ 2 } }
-			\inner*{ \nabla W ( u_{ n }^{ h } ) }  { \xi }
+			\inner*{ \nabla W ( u_{ n }^{ h } ) }  { \varphi }
 			+
-			\inner*{ \nabla u_{ n }^{ h } }{ \nabla \xi }
+			\inner*{ \nabla u_{ n }^{ h } }{ \nabla \varphi }
 			+
-			\inner*{ \frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h } }{ \xi }
+			\inner*{ \frac{ u_{ n }^{ h } - u_{ n - 1 }^{ h } }{ h } }{ \varphi 
+			}
 			\dd{ x }
 			=
 			0
-		\end{equation}
-		for any testfunction $ \xi \in \cont^{ \infty } ( \flattorus ; \mathbb{ R }^{ N } )  $.
-		Let $ t \in [ 0 , T ] $. Since $ u_{ h } $ is defined as the pointwise linear interpolation of the functions $ u_{ n}^{ h } $, we find for the sequence $ h_{ n } $ corresponding sequences $ \lambda_{ n } \in [ 0 , 1 ] $ and $ k_{ n } \in \mathbb{ N }$ such that 
-		\begin{equation*}
-			t = \lambda_{ n } ( k_{ n } - 1 ) h_{ n } + ( 1 - \lambda_{ n } ) k_{ n } h_{ n } 
 		\end{equation*}
-		and therefore we can write
+		for any test function $ \varphi \in \cont^{ \infty } ( \flattorus ; 
+		\mathbb{ 
+		R }^{ N } )  $.
+		Let $ \tilde{ u }^{ h } $ denote the piecewise constant interpolation 
+		of the functions $ u^{ 0 }, u_{ 1 }^{ h } , \dotsc $ similar to the 
+		construction in Step 2. 
+		Then we have for any test function $ \psi \in \cont_{ \mathrm{ c } }^{ 
+		\infty } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ N } 
+		\right) $ that
+		\begin{equation}
+				\label{el_eq_for_unh}
+			\int_{ 0 }^{ T }
+				\int
+					\frac{ 1 }{ \varepsilon^{ 2 } }
+					\inner*{ \nabla W ( \tilde{ u }^{ h } ) }{ \psi }
+					+
+					\inner*{ \nabla \tilde{ u }^{ h } }{ \nabla \psi }
+					+
+					\inner*{ \partial_{ t } u^{ h } }{ \psi }
+				\dd{ x }
+			\dd{ t }
+			= 0.
+		\end{equation}
+		Let $ t \in [ 0 , T ] $. Since $ u_{ h } $ is defined as the piecewise 
+		linear interpolation of the functions $ u_{ n}^{ h } $, we can find for 
+		the sequence $ h_{ n } $ corresponding sequences $ \lambda_{ n } \in [ 
+		0 , 1 ] $ and $ k_{ n } \in \mathbb{ N }$ such that 
+		\begin{equation*}
+			t = \lambda_{ n } ( k_{ n } - 1 ) h_{ n } + ( 1 - \lambda_{ n } ) 
+			k_{ n } h_{ n } .
+		\end{equation*}
+		Therefore we can write
 		\begin{equation*}
 			u_{ h } ( t ) 
 			=
@@ -429,100 +523,259 @@ gradient flows, which is why we want to present it here.
 			+ 
 			\sqrt{ h_{ n } },
 		\end{align*}
-		which goes to zero as $ n $ tends to infinity. Here we used 
+		which goes to zero as $ n $ tends to infinity. Here we used the Hölder 
+		estimate
 		(\ref{hölder_continuity_of_uh}) for the second inequality.
-		This implies that 
-		\begin{align*}
-			\int
-			\inner*{ \diff u ( t ) }{ \diff \xi }
-			\dd{ x }
-			& = 
-			-
-			\int
-			\divg \diff \xi u( t )
-			\dd{ x }
-			\\
-			& = 
-			-
-			\lim_{ n \to \infty }
-			\int
-			\divg \diff \xi u_{ k_{ n } }^{ h_{ n } } 
-			\dd{x }
-			\\
-			& = 
-			\lim_{ n \to \infty }
-			\int
-			\inner*{ \diff u_{ k_{ n } }^{ h_{ n } } }{ \diff \xi }
-			\dd{ x }.
-		\end{align*}
-		In Step 6, we moreover have shown that $ \partial_{ t } u^{ h_{ n } } $ 
-		converges weakly to $ \partial_{t } u $ in $ \lp^{ 2 } ( [ 0, T ] 
-		\times \flattorus ; \mathbb{ R }^{ N } ) $. This yields, by choosing 
-		cylindrical testfunctions, that $ \partial_{ t } u^{ h_{ n } } ( t ) $ 
-		converges weakly to $ \partial_{ t } u ( t ) $ in $ \lp^{ 2 } ( 
-		\flattorus ; \mathbb{ R }^{ N } ) $ for almost every $ t \in [ 0 , T ] 
-		$.
-		Thus we obtain for almost every $ t\in [ 0 , T ] $ the convergence
+		This implies that
 		\begin{equation*}
 			\int
-			\inner*{ \partial_{ t } u ( t ) }{ \xi }
+			\inner*{ \nabla u ( t ) }{ \nabla \psi ( t ) }
 			\dd{ x }
-			=
+			=  
 			\lim_{ n \to \infty }
 			\int
-			\inner*{ \partial_{ t } u^{ h_{ n } } ( t ) }{ \xi }
-			\dd{ x }
-			=
-			\lim_{ n \to \infty }
-			\int
-			\inner*{ \frac{ u_{ k_{ n } }^{ h_{ n } } - u_{ k_{ n } - 1 }^{ h_{ n } } }{ h_{ n } } }{ \xi }
+			\inner*{ \nabla u_{ k_{ n } }^{ h_{ n } } }{ \nabla \psi( t ) }
 			\dd{ x }.
 		\end{equation*}
-		To obtain the weak equation, we still need to prove convergence of remaining term. For this we note that 
+		Using the energy estimate (\ref{energy_and_time_derivative_bound}), we 
+		obtain a majorant in time and therefore have
 		\begin{equation*}
-			\abs{ \inner*{ \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi } }
+			\int_{ 0 }^{ T }
+			\int
+			\inner*{ \nabla u }{ \nabla \psi }
+			\dd{ x }
+			\dd{ t }
+			=
+			\lim_{ n \to \infty }
+			\int_{0 }^{ T }
+				\int
+					\inner*{ \nabla \tilde{ u }^{ h_{ n } } }{ \nabla \psi }
+				\dd{ x }
+			\dd{ t }.
+		\end{equation*}
+		Now onto the first summand. We note that 
+		\begin{equation*}
+			\abs{ \inner*{ \nabla W ( \tilde{ u }^{ h_{ n } } ) }{ \psi 
+			} }
 			\lesssim
-			\left( 1 + \abs{ u_{  k_{ n } }^{ h_{ n } } }^{ p - 1 } \right) \abs{ \xi },
+			\left( 1 + \abs{ \tilde{ u }^{ h_{ n } } }^{ p - 1 } \right) 
+			\abs{ \psi  },
 		\end{equation*}
-		which is a bounded sequence in $ \lp^{ p'} ( \flattorus ; \mathbb{ R 
-		}^{ N } ) $. Since we also may pass to a non-relabelled subsequence 
+		which is a bounded sequence in $ \lp^{ p'} \left( ( 0 , T ) \times 
+		\flattorus ; \mathbb{ R 
+		}^{ N } \right) $ by the energy estimate 
+		(\ref{energy_and_time_derivative_bound}). 
+		Therefore $ \inner*{ \nabla W 
+		( \tilde{ u }^{ h_{ n } } ) }{ \psi } $ is equiintegrable. 
+		Since we may also pass to a non-relabelled subsequence 
 		which converges almost everywhere, we thus obtain by the continuity of 
 		$ \nabla W $ that
 		\begin{equation*}
+			\int_{ 0 }^{ T }
 			\int
-			\inner*{ \nabla W ( u ( t ) ) }{ \xi } 
+			\inner*{ \nabla W ( u ) }{ \psi } 
+			\dd{ x }
+			\dd{ t }
+			=
+			\lim_{ n \to \infty }
+			\int_{ 0 }^{ T }
+			\int
+			\inner*{ \nabla W ( \tilde{ u}^{ h_{ n } } ) }{ \psi }
+			\dd{ x }
+			\dd{ t }.
+		\end{equation*}
+			In Step 6, we moreover have shown that $ \partial_{ t } u^{ h_{ n } 
+			} $ 
+			converges weakly to $ \partial_{t } u $ in $ \lp^{ 2 } \left( ( 0, 
+			T ) 
+		\times \flattorus ; \mathbb{ R }^{ N } \right) $. This yields the 
+		convergence
+		\begin{equation*}
+			\int_{ 0 }^{ T }
+			\int
+			\inner*{ \partial_{ t } u }{ \psi }
 			\dd{ x }
 			=
 			\lim_{ n \to \infty }
+			\int_{ 0 }^{ T }
 			\int
-			\inner*{ \nabla W ( u_{ k_{ n } }^{ h_{ n } } ) }{ \xi }
-			\dd{ x }.
+			\inner*{ \partial_{ t } u^{ h_{ n } }  }{ \psi }
+			\dd{ x }
+			\dd{ t }.
 		\end{equation*}
-		Therefore it follows from the Euler--Lagrange equation (\ref{el_eq_for_unh}) that
+		Combining our arguments, it follows from the Euler--Lagrange equation 
+		(\ref{el_eq_for_unh}) that
+		\begin{equation*}
+			\int_{ 0 }^{ T }
+			\int
+			\frac{ 1 }{ \varepsilon^{ 2 } }
+			\inner*{ \nabla W ( u ) }{ \psi }
+			+
+			\inner*{ \nabla u }{ \nabla \psi }
+			+
+			\inner*{ \partial_{ t } u }{ \psi }
+			\dd{ x }
+			\dd{ t }
+			=
+			0
+		\end{equation*}
+		for all $ \psi \in \cont_{ \mathrm{ c } }^{ \infty } ( ( 0 , T ) \times 
+		\flattorus 
+		; \mathbb{ R }^{ N } ) $. Moreover we can apply the fundamental theorem 
+		of 
+		calculus of variations that for almost all $ t \in ( 0 , T ) $ and all 
+		$ \varphi \in \cont_{ \mathrm{c} }^{ \infty } \left( \flattorus ; 
+		\mathbb{ R }^{ N } \right) $, 
+		we have
 		\begin{equation*}
 			\int
 			\frac{ 1 }{ \varepsilon^{ 2 } }
-			\inner*{ \nabla W ( u ( t )) }{ \xi }
+			\inner*{ \nabla W ( u( t ) ) }{ \varphi}
 			+
-			\inner*{ \nabla u( t ) }{ \nabla \xi }
+			\inner*{ \nabla u( t ) }{ \nabla \varphi }
 			+
-			\inner*{ \partial_{ t } u ( t ) }{ \xi }
+			\inner*{ \partial_{ t } u ( t ) }{ \varphi }
 			\dd{ x }
 			=
 			0
 		\end{equation*}
-		for almost every $ t $ and all $ \xi \in \cont^{ \infty } ( \flattorus 
-		; \mathbb{ R }^{ N } ) $. By continuity this extends to all $ \xi \in 
+		By continuity this extends to all $ \varphi \in 
 		\wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $.
 		
-		\item[Step 8:] Sharp energy dissipation inequality for $ u $.
+		\item[Step 8:] Additional regularity 2.
+		
+		In order to complete the proof, we still have to show that $ \partial_{ 
+		i , j }^{ 2 } u$ and $ \nabla W ( u) $ are square-integrable.
+		To this end, we test the weak formulation (\ref{ac_weak_equation}) with 
+		finite differences. We therefore define the finite differences as
+		\begin{equation*}
+			\Delta_{ h }^{ + } w ( t , x ) \coloneqq \frac{ w ( t , x + h v ) - 
+			w ( t , x ) }{ h }
+			\quad\text{and}\quad
+			\Delta_{ h }^{ - } w ( t , x ) \coloneqq \frac{ w ( t , x - h v ) - 
+			w ( t , x ) }{ h }
+		\end{equation*}
+		for some $ h > 0 $ and $ v \in \mathbb{ R }^{ d } $. Thus plugging $ 
+		\Delta_{ h }^{ - } \Delta_{ h }^{ + } u $ into the weak formulation 
+		(\ref{ac_weak_equation}) yields by the transformation formula that
+		\begin{equation*}
+			0
+			=
+			\int_{ 0 }^{ T }
+			\int
+			\frac{ 1 }{ \varepsilon^{ 2 } }
+			\inner*{ \Delta_{ h }^{ + } \nabla W ( u ) }{ \Delta_{ h }^{ + } u }
+			+
+			\inner*{ \nabla \Delta_{ h }^{ + } u }{ \nabla \Delta_{ h }^{ + } u }
+			+
+			\inner*{ \partial_{ t } \Delta_{ h }^{ + } u }{ \Delta_{ h }^{ + } u }
+			\dd{ x }
+			\dd{ t }.
+		\end{equation*}
+		This is equivalent to
+		\begin{align*}
+			& \int_{ 0 }^{ T }
+			\int
+			\abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 }
+			\dd{ x }
+			\dd{ t }
+			\\
+			={} &
+			-
+			\int_{ 0 }^{ T }
+			\int
+			\partial_{ t } \left( \frac{ \abs{ \Delta_{ h }^{ + } u }^{ 2 } }{ 2 } \right)
+			+
+			\frac{ 1 }{ \varepsilon^{ 2 } }
+			\inner*{ \Delta_{ h }^{ + } \nabla W ( u ) }{ \Delta_{ h }^{ + } u }
+			\dd{ x }
+			\dd{ t }
+			\\
+			={} &
+			\int  
+			\frac{ \abs{ \Delta_{ h }^{ + } u ( 0 ) }^{ 2 } - \abs{ \Delta_{ h }^{ + } u ( T ) }^{ 2 } }{ 2 }
+			\dd{ x }
+			\\
+			& -
+			\int_{ 0 }^{ 1 }
+			\int_{ 0 }^{ T }
+			\int
+			\inner*{ 
+				\diff^{ 2 } W \left( ( 1 - s ) u ( t, x  ) + s u( t,  x + h v ) ) \right) 
+				\Delta_{ h }^{ + } u
+			}{
+				\Delta_{ h }^{ + } u 
+			}
+			\dd{ x }
+			\dd{ t }
+			\dd{ s }.
+		\end{align*}
+		The last equality follows from the fundamental theorem of calculus.
+		Here the first summand is bounded uniformly in $ h $ by the uniform $ 
+		\wkp^{ 1 , 2 } \left( 
+		\flattorus ; \mathbb{ R }^{ N } \right) $-bound proven in Step 6. For 
+		the second 
+		summand, we partition $ W $ into the sum of $ W_{ \mathrm{conv} } $ and 
+		$ W_{ \mathrm{pert} } $. The term involving the convex summand can then 
+		be estimated by
+		\begin{equation*}
+			\int_{ 0 }^{ 1 }
+			\int_{ 0 }^{ T }
+			\int
+			\inner*{ 
+				\diff^{ 2 } W_{ \mathrm{conv} } \left( ( 1- s ) u ( t, x  ) + s u( t,  x + h v ) \right) 
+				\Delta_{ h }^{ + } u
+			}{
+				\Delta_{ h }^{ + } u 
+			}
+			\dd{ x }
+			\dd{ t }
+			\dd{ s }
+			\geq 0. 
+		\end{equation*}
+		For the term involving $ W_{ \mathrm{pert} } $, we get via the bound on 
+		its second derivative that
+		\begin{align*}
+			& \abs{
+				\int_{ 0 }^{ 1 }
+				\int_{ 0 }^{ T }
+				\int
+				\inner*{ 
+					\diff^{ 2 } W_{ \mathrm{pert} } \left( (1 - s ) u ( t, x  ) + s  u( t,  x + h v )  \right) 
+					\Delta_{ h }^{ + } u
+				}{
+					\Delta_{ h }^{ + } u 
+				}
+				\dd{ x }
+				\dd{ t }
+				\dd{ s }
+			}
+			\\
+			\lesssim {} &
+			\int_{ 0 }^{ T }
+			\int
+			\abs{ \nabla u }^{ 2 }
+			\dd{ x }
+			\dd{ t },
+		\end{align*}
+		which is also finite. 
+		Combining these estimates, we obtain that $ \int_{ 0 }^{ T } \int \abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 } \dd{ x } \dd{ t } $ is uniformly bounded in $ h $. Applying our calculation to all directions $ v \in \mathbb{ R }^{ d } $, we get by the finite-differences theorem for all $ 1 \leq i, j \leq d $ that $ \partial_{ i , j }^{ 2 } u \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $.
+		
+		In order to obtain $ \nabla W ( u ) \in \lp^{ 2 } ( [ 0 , T ] \times 
+		\flattorus ; \mathbb{ R }^{ N } ) $. We again consider the weak 
+		formulation (\ref{ac_weak_equation}) and notice that since we have 
+		already shown that both the time derivative and second space 
+		derivatives of $ u $ are square-integrable, our claim follows from a 
+		duality argument.
+		
+		\item[Step 9:] Sharp energy dissipation inequality for $ u $.
 		
 		Let $ 0 \leq t \leq T $ and define $ k_{ n } $ as in Step 7, where we 
 		also established that $ u_{ k_{ n } }^{ h_{ n } } $ converges to $ u ( 
-		t ) $ in $ \lp^{ 2 } \left( \flattorus ; \mathbb{ R }^{ N } \right) $, 
-		and thus we may pass to another non-relabelled subsequence to obtain 
-		pointwise convergence almost everywhere. By Fatou's Lemma, we thus 
-		obtain
+		t ) $ in $ \lp^{ 2 } \left( \flattorus ; \mathbb{ R }^{ N } \right) $.
+		Thus we may pass to another non-relabelled subsequence to obtain 
+		pointwise convergence almost everywhere. By Fatou's Lemma, we therefore 
+		get
 		\begin{equation*}
 			\int
 			\frac{ 1 }{ \varepsilon }
@@ -542,8 +795,8 @@ gradient flows, which is why we want to present it here.
 		by the energy dissipation inequality 
 		(\ref{discrete_optimal_energy_dissipation}), thus we already obtain 
 		that $ \nabla u_{ k_{ n } }^{ h_{ n } } $ converges weakly to $ \nabla 
-		u ( t ) $ in $ \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) $ which 
-		yields
+		u ( t ) $ in $ \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) $. 
+		By the weak lower semicontinuity of the norm, this yields
 		\begin{equation*}
 			\int 
 			\frac{ \varepsilon }{ 2 }
@@ -586,9 +839,11 @@ gradient flows, which is why we want to present it here.
 			\dd{ x }
 			\dd{ t }.		
 		\end{align*}
-		Summarizing these estimates, we obtain by the energy dissipation inequality for $ u^{ h } $ (\ref{energy_and_time_derivative_bound}) that for all $ 0 \leq t \leq T $ we have
+		Summarizing these estimates, we obtain by the energy dissipation 
+		inequality for $ u^{ h } $ (\ref{energy_and_time_derivative_bound}) 
+		that for all $ 0 \leq t \leq T $, we have
 		\begin{align*}
-			\energy_{ \varepsilon } ( u ( t ) )
+			& \energy_{ \varepsilon } ( u ( t ) )
 			+
 			\int_{ 0 }^{ t }
 			\int
@@ -596,8 +851,10 @@ gradient flows, which is why we want to present it here.
 			\abs{ \partial_{ t } u }^{ 2 }
 			\dd{ x }
 			\dd{ t }
-			& \leq
+			\\
+			\leq{} &
 			\liminf_{ n \to \infty }
+			\left(
 			\energy_{ \varepsilon } ( u_{ k_{ n } } )
 			+
 			\left( 1 - \frac{ C h_{ n } }{ 2 \varepsilon^{ 2 } } \right)
@@ -607,138 +864,28 @@ gradient flows, which is why we want to present it here.
 			\abs{ \partial_{ t } u^{ h } }^{ 2 }
 			\dd{ x }
 			\dd{ t }
+			\right)
 			\\
-			& \leq
+			\leq{} &
 			\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ).
 		\end{align*}
-		
-		\item[Step 8:] Additional regularity 2.
-		
-		In order to complete the proof, we still have to show that $ \partial_{ 
-		i , j }^{ 2 } u$ and $ \nabla W ( u) $ are elements of $ \lp^{ 2 } ( [ 
-		0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $.
-		In order to show that the second partial derivatives of $ u $ are square-integrable, we test the weak formulation (\ref{ac_weak_equation}) with the finite differences. To this end, define the finite differences as
-		\begin{equation*}
-			\Delta_{ h }^{ + } v ( t , x ) \coloneqq \frac{ v ( t , x + h v ) - 
-			v ( t , x ) }{ h }
-			\quad\text{and}\quad
-			\Delta_{ h }^{ - } v ( t , x ) \coloneqq \frac{ v ( t , x - h v ) - v ( t , x ) }{ h }
-		\end{equation*}
-		for some $ h > 0 $ and $ v \in \mathbb{ R }^{ d } $. Thus plugging $ \Delta_{ h }^{ - } \Delta_{ h }^{ + } u $ into (\ref{ac_weak_equation}) yields by the transformation formula that
-		\begin{equation*}
-			0
-			=
-			\int_{ 0 }^{ T }
-			\int
-			\frac{ 1 }{ \varepsilon^{ 2 } }
-			\inner*{ \Delta_{ h }^{ + } \nabla W ( u ) }{ \Delta_{ h }^{ + } u }
-			+
-			\inner*{ \nabla \Delta_{ h }^{ + } u }{ \nabla \Delta_{ h }^{ + } u }
-			+
-			\inner*{ \partial_{ t } \Delta_{ h }^{ + } u }{ \Delta_{ h }^{ + } u }
-			\dd{ x }
-			\dd{ t },
-		\end{equation*}
-		which is equivalent to
-		\begin{align*}
-			& \int_{ 0 }^{ T }
-			\int
-			\abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 }
-			\dd{ x }
-			\dd{ t }
-			\\
-			={} &
-			-
-			\int_{ 0 }^{ T }
-			\int
-			\partial_{ t } \left( \frac{ \abs{ \Delta_{ h }^{ + } u }^{ 2 } }{ 2 } \right)
-			+
-			\frac{ 1 }{ \varepsilon^{ 2 } }
-			\inner*{ \Delta_{ h }^{ + } \nabla W ( u ) }{ \Delta_{ h }^{ + } u }
-			\dd{ x }
-			\dd{ t }
-			\\
-			={} &
-			\int  
-			\frac{ \abs{ \Delta_{ h }^{ + } u ( 0 ) }^{ 2 } - \abs{ \Delta_{ h }^{ + } u ( T ) }^{ 2 } }{ 2 }
-			\dd{ x }
-			\\
-			& -
-			\int_{ 0 }^{ 1 }
-			\int_{ 0 }^{ T }
-			\int
-			\inner*{ 
-				\diff^{ 2 } W \left( ( 1 - s ) u ( t, x  ) + s u( t,  x + h v ) ) \right) 
-				\Delta_{ h }^{ + } u
-			}{
-				\Delta_{ h }^{ + } u 
-			}
-			\dd{ x }
-			\dd{ t }
-			\dd{ s }.
-		\end{align*}
-		The first summand can be estimated by $ \norm{ u }_{ \lp^{ \infty } ( 
-		[0 , T ] , \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) ) } $ (we 
-		are working with the representative chosen before). For the second 
-		summand, we partition $ W $ into the sum of $ W_{ \mathrm{conv} } $ and 
-		$ W_{ \mathrm{pert} } $. The term involving the convex summand can then 
-		by estimated by
-		\begin{equation*}
-			\int_{ 0 }^{ 1 }
-			\int_{ 0 }^{ T }
-			\int
-			\inner*{ 
-				\diff^{ 2 } W_{ \mathrm{conv} } \left( ( 1- s ) u ( t, x  ) + s u( t,  x + h v ) \right) 
-				\Delta_{ h }^{ + } u
-			}{
-				\Delta_{ h }^{ + } u 
-			}
-			\dd{ x }
-			\dd{ t }
-			\dd{ s }
-			\geq 0 
-		\end{equation*}
-		and the for the pertubation term, we get via the bound on its second derivative that
-		\begin{align*}
-			& \abs{
-				\int_{ 0 }^{ 1 }
-				\int_{ 0 }^{ T }
-				\int
-				\inner*{ 
-					\diff^{ 2 } W_{ \mathrm{pert} } \left( (1 - s ) u ( t, x  ) + s  u( t,  x + h v )  \right) 
-					\Delta_{ h }^{ + } u
-				}{
-					\Delta_{ h }^{ + } u 
-				}
-				\dd{ x }
-				\dd{ t }
-				\dd{ s }
-			}
-			\\
-			\lesssim {} &
-			\int_{ 0 }^{ T }
-			\int
-			\abs{ \nabla u }^{ 2 }
-			\dd{ x }
-			\dd{ t },
-		\end{align*}
-		which is also finite. 
-		Combining these estimates, we obtain that $ \int_{ 0 }^{ T } \int \abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 } \dd{ x } \dd{ t } $ is uniformly bounded in $ h $. Applying our calculation to all directions $ v \in \mathbb{ R }^{ d } $, we get by the finite-differences theorem for all $ 1 \leq i, j \leq d $ that $ \partial_{ i , j }^{ 2 } u \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $.
-		
-		In order to obtain $ \nabla W ( u ) \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $, we again consider the weak formulation (\ref{ac_weak_equation}) and notice that since we have already shown that both the time derivative and second space derivatives of $ u $ are square-integrable, our claim follows from a duality argument. 
+		This is the desired estimate 
 	\end{description}
-	This completes the proof.
+	We have thus proven all of our claims.
 \end{proof}
 
 \begin{remark}
-	The inequality (\ref{discrete_optimal_energy_dissipation}) with the factor 
+	The energy dissipation inequality 
+	(\ref{discrete_optimal_energy_dissipation}) with the factor 
 	$ 1/2h $ instead of $ 1/h- C/2\varepsilon^{ 2 } $ follows immediately from 
-	the definition of our optimization problem, but is not optimal for fixed $ 
+	the definition of our optimization problem.
+	But is not optimal for fixed $ 
 	\varepsilon $ if we want to study the behaviour as $ h $ tends to zero.
 \end{remark}
 
 \begin{remark}
-	The energy dissipation inequality (\ref{energy_dissipation_sharp}) can be deduced via the formal calculation 
+	The optimal energy dissipation inequality (\ref{energy_dissipation_sharp}) 
+	can be deduced via the formal calculation 
 	\begin{align*}
 		\dv{ t } \energy_{ \varepsilon } ( u )
 		& =
@@ -758,6 +905,12 @@ gradient flows, which is why we want to present it here.
 		& =
 		- \varepsilon \int \abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 } \dd{ x }.
 	\end{align*}
-	In order to make this calculation rigorous, we however need to show that $ t \mapsto \energy_{ \varepsilon } ( u ( t ) ) $ is absolutely continuous, which is non-trivial, but it would give us equality in energy dissipation inequality (\ref{energy_dissipation_sharp}).
+	In order to make this calculation rigorous, we however need to show some 
+	additional regularity of $ u $.
+	Of course, this is especially true if $ u $ is smooth for positive times, 
+	and is thus to be expected, see again 
+	\cite{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces}.
+	This  would give us equality in the energy dissipation inequality 
+	(\ref{energy_dissipation_sharp}).
 	Since we will only need the inequality, our proof will however suffice.
 \end{remark}

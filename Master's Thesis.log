@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  26 AUG 2022 22:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  28 AUG 2022 23:36
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -356,8 +356,6 @@ Package csquotes Info: ... configuration file loaded successfully.
 fg"
 File: csquotes.cfg 
 )
-Package csquotes Info: Option 'babel' depreciated.
-(csquotes)             Using 'autostyle'.
 Package csquotes Info: Enabling multilingual quotes.
 )
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumitem.s
@@ -1277,8 +1275,8 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 \c@sometheorems=\count441
-LaTeX Info: Redefining \tilt_excess on input line 84.
-LaTeX Info: Redefining \geodesic_distance on input line 85.
+LaTeX Info: Redefining \tilt_excess on input line 87.
+LaTeX Info: Redefining \geodesic_distance on input line 88.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -1522,12 +1520,12 @@ l.39 \end{equation*}
 fier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.163 \end{align}
+l.164 \end{align}
                   [3]))pdfTeX warning (ext4): destination with the same identif
 ier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 	\include{chapter_mcf}
+l.34 	\include{chapter_mcf}
                             [4]
 \openout2 = `chapter_ac_equation.aux'.
 
@@ -1537,7 +1535,7 @@ chapter 2.
 entifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \end{equation}
+l.113 \end{equation}
                      [5
 
 
@@ -1547,66 +1545,42 @@ l.114 \end{equation}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.160 		\end{equation}
+l.159 		\end{equation}
                        [6]) (section_existence_of_solution.texpdfTeX warning (e
 xt4): destination with the same identifier (name{page.7}) has been already used
 , duplicate ignored
 <to be read again> 
                    \relax 
-l.44 \end{theorem}
+l.47 \end{theorem}
                    [7]pdfTeX warning (ext4): destination with the same identifi
 er (name{page.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 		\end{equation*}
-                        [8] [9]
-Overfull \hbox (2.25168pt too wide) in paragraph at lines 309--319
+l.126 		\begin{equation*}
+                          [8] [9]
+Overfull \hbox (2.25168pt too wide) in paragraph at lines 354--377
 []\OT1/cmr/m/n/10 (-20) In or-der to ap-ply the Arzela--Ascoli the-o-rem for t
 he se-quence $(\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (-20) )$ in $[] []$
  []
 
-
-Overfull \hbox (66.99162pt too wide) in paragraph at lines 325--338
-[]\OT1/cmr/m/n/10 (-20) We first want to ar-gue that from our con-struc-tion, o
-ne al-ready ob-tains that $\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][] []$\OT1/c
-mr/m/n/10 (-20) .
- []
-
-[10]
-Overfull \hbox (7.8244pt too wide) in paragraph at lines 457--466
+[10] [11]
+Overfull \hbox (17.96873pt too wide) in paragraph at lines 586--593
 \OT1/cmr/m/n/10 (-20) In Step 6, we more-over have shown that $\OML/cmm/m/it/10
  @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
-1/cmr/m/n/10 (-20) in $[][]([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/
-cmsy/m/n/10  []\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) 
-)$.
+1/cmr/m/n/10 (-20) in $[][] []$.
  []
 
-[11]
-Overfull \hbox (32.78749pt too wide) in paragraph at lines 513--517
-\OT1/cmr/m/n/10 (-20) for al-most ev-ery $\OML/cmm/m/it/10 t$ \OT1/cmr/m/n/10 (
--20) and all $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][]\OT1/cmr/m/n/10 (-20) (
-[]; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) )$. By con-ti-nu-ity this ex-tends t
-o all $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][] \ [][]\OT1/cmr/m/n/10 (-20) (
-\U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ; \U/msb/m/n/10 R[]\OT1/cmr/m/n/10 (-20) )
-$. 
- []
-
-
-Overfull \hbox (0.80008pt too wide) detected at line 613
-[]
- []
-
-[12] [13])) [14]
+[12] [13] [14])) [15]
 \openout2 = `chapter_cond_conv_of_ac.aux'.
 
- (chapter_cond_conv_of_ac.tex
+ (chapter_cond_conv_of_ac.tex [16
+
+
+
+
+]
 chapter 3.
-(section_cond_conv_twophase.tex [15
-
-
-
-
-] [16]
+(section_cond_conv_twophase.tex [17] [18]
 Overfull \hbox (16.11162pt too wide) in paragraph at lines 207--208
 []\OT1/cmr/bx/n/10 Lemma 3.1.2. []\OT1/cmr/m/it/10 (-20) With the as-sump-tions
  of Propo-si-tion []3.1.1[], we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10 2 [
@@ -1617,43 +1591,43 @@ U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
 
 Underfull \vbox (badness 3417) has occurred while \output is active []
 
- [17]
-[18] [19]) (section_cond_conv_multiphase.tex
+ [19]
+[20] [21]) (section_cond_conv_multiphase.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 2.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [20] [21] [22] [23]
+) [22] [23] [24] [25]
 Overfull \hbox (6.18175pt too wide) in paragraph at lines 538--547
 [][] []$ \OT1/cmr/m/it/10 (-20) to some $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-2
 0) = [][] \OML/cmm/m/it/10 [][]$ \OT1/cmr/m/it/10 (-20) with a par-ti-tion $\
 OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) .
  []
 
-[24] [25]
-Overfull \hbox (17.00601pt too wide) detected at line 734
+[26] [27]
+Overfull \hbox (17.407pt too wide) detected at line 738
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
  []
 
 
-Overfull \hbox (4.58096pt too wide) in paragraph at lines 738--744
+Overfull \hbox (4.58096pt too wide) in paragraph at lines 742--748
 []\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
 o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
 t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
 rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
  []
 
-[26] [27]
+[28] [29]
 Underfull \vbox (badness 1997) has occurred while \output is active []
 
- [28]))
-[29]
+ [30]))
+[31]
 \openout2 = `chapter_conditional_convergence_of_allen_cahn.aux'.
 
- (chapter_conditional_convergence_of_allen_cahn.tex [30
+ (chapter_conditional_convergence_of_allen_cahn.tex [32
 
 
 
@@ -1730,17 +1704,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[31] [32]
+[33] [34]
 Overfull \hbox (5.06604pt too wide) detected at line 313
 []
  []
 
-[33] [34] [35] [36] [37]
+[35] [36] [37] [38] [39]
 Overfull \hbox (39.24515pt too wide) detected at line 1115
 []
  []
 
-[38]
+[40]
 Overfull \hbox (9.26213pt too wide) detected at line 1322
 []
  []
@@ -1748,7 +1722,7 @@ Overfull \hbox (9.26213pt too wide) detected at line 1322
 
 Underfull \vbox (badness 5490) has occurred while \output is active []
 
- [39])
+ [41])
 (section_conditional_convergence_multiphase.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1819,14 +1793,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[40] [41]
+[42] [43]
 Overfull \hbox (14.02452pt too wide) in paragraph at lines 158--176
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
 /m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
-[42] [43] [44] [45] [46] [47]
+[44] [45] [46] [47] [48] [49]
 Overfull \hbox (5.79816pt too wide) detected at line 1072
 []
  []
@@ -1834,16 +1808,16 @@ Overfull \hbox (5.79816pt too wide) detected at line 1072
 
 Underfull \vbox (badness 5970) has occurred while \output is active []
 
- [48]
+ [50]
 Underfull \vbox (badness 3386) has occurred while \output is active []
 
- [49]
-[50] [51]
+ [51]
+[52] [53]
 Overfull \hbox (21.99113pt too wide) detected at line 1621
 []
  []
 
-[52] Excluding 'comment' comment.
+[54] Excluding 'comment' comment.
 Overfull \hbox (24.09381pt too wide) detected at line 1822
 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 \O
 T1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [][
@@ -1851,12 +1825,12 @@ T1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [][
 [] [] :
  []
 
-[53] [54] [55]
+[55] [56] [57]
 Overfull \hbox (54.98384pt too wide) detected at line 2293
 []
  []
 
-[56] [57]
+[58] [59]
 Overfull \hbox (16.9885pt too wide) detected at line 2547
 []
  []
@@ -1869,17 +1843,17 @@ for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
 /n/10 (-20) )$
  []
 
-[58])) [59]
+[60])) [61]
 \openout2 = `chapter_de_giorgis_mean_curvature_flow.aux'.
 
- (chapter_de_giorgis_mean_curvature_flow.tex [60
+ (chapter_de_giorgis_mean_curvature_flow.tex [62
 
 
 
 
 ]
 chapter 5.
-(section_convergence_to_de_giorgis_mean_curvature_flow.tex [61]
+(section_convergence_to_de_giorgis_mean_curvature_flow.tex [63]
 Overfull \hbox (14.02452pt too wide) in paragraph at lines 130--151
 \OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
 -20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
@@ -1892,14 +1866,14 @@ Overfull \hbox (2.1259pt too wide) detected at line 236
 ][] [][] [][] [] [] :
  []
 
-[62]
+[64]
 Overfull \hbox (10.54408pt too wide) in paragraph at lines 256--262
 \OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
 mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
 th re-spect to $[][] []$
  []
 
-[63] Excluding 'comment' comment. [64] [65] [66])
+[65] Excluding 'comment' comment. [66] [67] [68])
 (section_de_giorgi_type_varifold.tex
 Overfull \hbox (4.88054pt too wide) in paragraph at lines 28--29
 [][] 
@@ -1923,7 +1897,7 @@ nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
 
  []
 
-[67] [68]
+[69] [70]
 Overfull \hbox (21.28511pt too wide) in paragraph at lines 323--345
 \OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 7! [][] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (
 -20) (\OML/cmm/m/it/10 t; x; p\OT1/cmr/m/n/10 (-20) ) []$ \OT1/cmr/m/it/10 (-20
@@ -1931,22 +1905,22 @@ Overfull \hbox (21.28511pt too wide) in paragraph at lines 323--345
 ] []$\OT1/cmr/m/it/10 (-20) .
  []
 
-[69] [70] [71] [72] [73])) [74]
+[71] [72] [73] [74] [75])) [76]
 \openout2 = `chapter_appendix.aux'.
 
  (chapter_appendix.tex
 chapter A.
-[75
+[77
 
 
 
 
-] [76]
+] [78]
 Overfull \hbox (37.11494pt too wide) detected at line 321
 []
  []
 
-[77]) [78]
+[79]) [80]
 chapter without number
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -1954,24 +1928,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 45.
+d on input line 46.
 
-[79
-
-
+[81
 
 
 
-] [80] [81] [82] [83]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+
+
+] [82] [83] [84] [85]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  ("Master's Thesis.aux" (chapter_introduction.aux)
 (chapter_remark.aux) (chapter_mcf.aux) (chapter_ac_equation.aux)
 (chapter_cond_conv_of_ac.aux)
 (chapter_conditional_convergence_of_allen_cahn.aux)
 (chapter_de_giorgis_mean_curvature_flow.aux) (chapter_appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
@@ -1979,9 +1953,9 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48667 strings out of 480930
- 1086606 string characters out of 2900231
- 1915317 words of memory out of 3000000
+ 48670 strings out of 480930
+ 1086641 string characters out of 2900231
+ 1915336 words of memory out of 3000000
  63305 multiletter control sequences out of 15000+200000
  557638 words of font info for 190 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2021,9 +1995,9 @@ rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (93 pages, 870995 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 875518 bytes).
 PDF statistics:
- 1463 PDF objects out of 1728 (max. 8388607)
- 322 named destinations out of 1000 (max. 500000)
+ 1479 PDF objects out of 1728 (max. 8388607)
+ 325 named destinations out of 1000 (max. 500000)
  27905 words of extra memory for PDF output out of 29859 (max. 10000000)
 
