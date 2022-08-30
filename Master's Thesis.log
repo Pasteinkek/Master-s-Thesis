@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  28 AUG 2022 23:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  30 AUG 2022 09:37
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1458,21 +1458,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 26
+Package tocbasic Info: character protrusion at toc deactivated on input line 27
 .
 
 ("Master's Thesis.toc")
 \tf@toc=\write7
 \openout7 = `"Master's Thesis.toc"'.
 
- [1
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 	\include{chapter_introduction}
+                                     [1
 
 
 
 ]
 \openout2 = `chapter_introduction.aux'.
 
- (chapter_introduction.tex [2
+ (chapter_introduction.texpdfTeX warning (ext4): destination with the same iden
+tifier (name{page.ii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Introduction} [2
 
 
 
@@ -1501,63 +1511,23 @@ chapter without number
 
  (chapter_mcf.tex
 chapter 1.
-(section_gradient_flows.texpdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.103 \end{align*}
-                   [1
+(section_gradient_flows.tex [1
 
 
 
-] Excluding 'comment' comment.) (section_mcf.texpdfTeX warning (ext4): destinat
-ion with the same identifier (name{page.2}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.39 \end{equation*}
-                     [2]pdfTeX warning (ext4): destination with the same identi
-fier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.164 \end{align}
-                  [3]))pdfTeX warning (ext4): destination with the same identif
-ier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.34 	\include{chapter_mcf}
-                            [4]
+] Excluding 'comment' comment.) (section_mcf.tex
+[2] [3])) [4]
 \openout2 = `chapter_ac_equation.aux'.
 
  (chapter_ac_equation.tex
 chapter 2.
-(section_structure_of_ac.texpdfTeX warning (ext4): destination with the same id
-entifier (name{page.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.113 \end{equation}
-                     [5
+(section_structure_of_ac.tex [5
 
 
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.159 		\end{equation}
-                       [6]) (section_existence_of_solution.texpdfTeX warning (e
-xt4): destination with the same identifier (name{page.7}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.47 \end{theorem}
-                   [7]pdfTeX warning (ext4): destination with the same identifi
-er (name{page.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.126 		\begin{equation*}
-                          [8] [9]
+] [6]) (section_existence_of_solution.tex
+[7] [8] [9]
 Overfull \hbox (2.25168pt too wide) in paragraph at lines 354--377
 []\OT1/cmr/m/n/10 (-20) In or-der to ap-ply the Arzela--Ascoli the-o-rem for t
 he se-quence $(\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (-20) )$ in $[] []$
@@ -1928,7 +1898,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 46.
+d on input line 47.
 
 [81
 
@@ -1937,15 +1907,15 @@ d on input line 46.
 
 
 ] [82] [83] [84] [85]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  ("Master's Thesis.aux" (chapter_introduction.aux)
 (chapter_remark.aux) (chapter_mcf.aux) (chapter_ac_equation.aux)
 (chapter_cond_conv_of_ac.aux)
 (chapter_conditional_convergence_of_allen_cahn.aux)
 (chapter_de_giorgis_mean_curvature_flow.aux) (chapter_appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
@@ -1953,9 +1923,9 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48670 strings out of 480930
- 1086641 string characters out of 2900231
- 1915336 words of memory out of 3000000
+ 48676 strings out of 480930
+ 1086686 string characters out of 2900231
+ 1915374 words of memory out of 3000000
  63305 multiletter control sequences out of 15000+200000
  557638 words of font info for 190 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1995,9 +1965,9 @@ rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 875518 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 876675 bytes).
 PDF statistics:
- 1479 PDF objects out of 1728 (max. 8388607)
- 325 named destinations out of 1000 (max. 500000)
+ 1488 PDF objects out of 1728 (max. 8388607)
+ 331 named destinations out of 1000 (max. 500000)
  27905 words of extra memory for PDF output out of 29859 (max. 10000000)
 
