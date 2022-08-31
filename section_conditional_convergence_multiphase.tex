@@ -174,8 +174,45 @@ This is captured by the following.
 	time-integrated energies converge (\ref{energy_convergence}), then $ 
 	\chi $ moves by mean curvature in the sense of \Cref{motion_by_mmcf}.
 \end{theorem} 
+As in the twophase case \Cref{equipartition_of_energies}, we have an 
+equipartition of energies. The proof is similar and therefore left out.
 
-First we are going to prove the existence of normal velocities $ V_{ 
+\begin{lemma}
+	\label{equipartition_of_energies_multiphase}
+	In the situation of \Cref{initial_convergence_result_multiphase} and under 
+	the energy convergence assumption (\ref{energy_convergence}), we have for 
+	any continuous $ \varphi \in \cont ( \flattorus ) $ that
+	\begin{align*}
+		\energy ( u ; \varphi )
+		=
+		\lim_{ \varepsilon \to 0 }
+		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
+		& =
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\varepsilon
+		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
+		\dd{ x }
+		\\
+		& =
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\frac{ 1 }{ \varepsilon } 2 W ( u_{ \varepsilon } )
+		\dd{ x }
+		\\
+		& =
+		\lim_{ \varepsilon \to 0 }
+		\int
+		\varphi
+		\sqrt{ 2 W ( u_{ \varepsilon } ) }
+		\abs{ \nabla u_{ \varepsilon } }
+		\dd{ x }
+	\end{align*}
+	for almost every time $ 0 \leq t \leq T $.
+\end{lemma}
+Furthermore we are going to prove the existence of normal velocities $ V_{ 
 i } $ for the evolving sets $ \Omega_{ i } $ under the assumption of the energy 
 convergence
 (\ref{energy_convergence}).
@@ -255,9 +292,10 @@ convergence
 			\dd{ t }
 			\right)^{ 1/2 }.
 		\end{align*}
-		Here the last inequality is due to the energy dissipation 
-		(\ref{energy_dissipation_sharp})
-		and the proof of our claim is therefore complete.
+		Here the last inequality is due to the energy dissipation inequality
+		(\ref{energy_dissipation_sharp}) and the equipartition of energies 
+		(\Cref{equipartition_of_energies_multiphase}).
+		The proof of our claim is therefore complete.
 		
 		\item[Step 2:] For $ d_{ i } \coloneqq \min_{ j \neq i } \sigma_{ i j } 
 		$, we have 
@@ -496,45 +534,6 @@ convergence
 	\end{description} 
 	Therefore our proof is complete.
 \end{proof}
-
-As in the twophase case \Cref{equipartition_of_energies}, we have an 
-equipartition of energies. The proof is similar and therefore left out.
-
-\begin{lemma}
-	\label{equipartition_of_energies_multiphase}
-	In the situation of \Cref{initial_convergence_result_multiphase} and under 
-	the energy convergence assumption (\ref{energy_convergence}), we have for 
-	any continuous $ \varphi \in \cont ( \flattorus ) $ that
-	\begin{align*}
-		\energy ( u ; \varphi )
-		=
-		\lim_{ \varepsilon \to 0 }
-		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi )
-		& =
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\varepsilon
-		\abs{ \nabla u_{ \varepsilon } }^{ 2 }
-		\dd{ x }
-		\\
-		& =
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\frac{ 1 }{ \varepsilon } 2 W ( u_{ \varepsilon } )
-		\dd{ x }
-		\\
-		& =
-		\lim_{ \varepsilon \to 0 }
-		\int
-		\varphi
-		\sqrt{ 2 W ( u_{ \varepsilon } ) }
-		\abs{ \nabla u_{ \varepsilon } }
-		\dd{ x }
-	\end{align*}
-	for almost every time $ 0 \leq t \leq T $.
-\end{lemma}
 
 \subsection{Localization estimates}
 \label{section_localization_estimates}
