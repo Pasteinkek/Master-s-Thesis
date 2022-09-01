@@ -1,20 +1,21 @@
 \section{Convergence in the two-phase case}
 
-This section is again based on 
-\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, 
-but the proofs are done more thoroughly, for example the existence
-The proof in this section is loosely based on its multiphase version presented 
-in \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}, 
-but the proofs simplify in the two-phase case and thus gives an easier 
+The proof for the existence of an evolving set in this section is loosely based 
+on its multiphase version presented 
+in \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. 
+However the proof simplifies in the two-phase case and thus gives an easier 
 introduction into the topic.
 
-The only assumption for now that we make is that the energies of the initial 
+The only assumption we make for now is that the energies of the initial 
 functions $ \energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) $ stay 
 uniformly bounded as $ \varepsilon $ tends to zero. 
-Then due to the energy dissipation inequality (\ref{energy_dissipation_sharp}), we already obtain that for all
-$ 0 \leq t \leq T $, we have that $ \energy_{ \varepsilon } \left( u_{\varepsilon } ( t ) \right) $ stays uniformly  bounded.
+Then due to the energy dissipation inequality (\ref{energy_dissipation_sharp}), 
+we already obtain that $ \energy_{ \varepsilon } \left( u_{\varepsilon } ( t ) 
+\right) $ stays uniformly bounded for all
+$ 0 \leq t \leq T $.
 
-Another important observation for the convergence is the classic Modica Mortola 
+Another important observation for the convergence is the classic 
+Modica--Mortola 
 trick (\cite{modica_mortola_un_esempio_di_gamma_convergenza}) : Let $ \alpha < 
 \beta $ be the two distinct 
 zeros of the doublewell potential $ W $.
@@ -24,8 +25,31 @@ Then we define a primitive of $ \sqrt{ 2 W ( u ) } $ via
 	\coloneqq
 	\int_{ \alpha }^{ u }
 	\sqrt{ 2 W ( s ) }
-	\dd{ s }.
+	\dd{ s },
 \end{equation*}
+see also \Cref{graph_of_phi}.
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}
+		\label{Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 } $}
+		\begin{axis}[
+			axis lines = left,
+			xlabel = \(u\),
+			ylabel = {\(\phi(u)\)},
+			]
+			%Below the red parabola is defined
+			\addplot [
+			domain=-2:2, 
+			samples=100, 
+			color=black,
+			]
+			{(x^5)/5-(2*x^3)/3 + x  + 1/5 -2/3 + 1 };
+		\end{axis}
+	\end{tikzpicture}
+	\caption{The graph of the function $ \phi $ for $ W ( u ) = ( u^{ 2 } - 1 
+	)^{ 2 } $ }
+	\label{graph_of_phi}
+\end{figure}
 For $ \psi_{ \varepsilon } \coloneqq \phi \circ u_{ \varepsilon } $, we can 
 show that $ \psi_{ \varepsilon } \in \wkp^{ 1, 1 } ( ( 0 , T ) \times 
 \flattorus ) $ with weak derivatives $ \nabla \psi_{ \varepsilon } = \sqrt{ 2 W 

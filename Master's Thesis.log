@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  31 AUG 2022 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  1 SEP 2022 16:51
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1286,8 +1286,16 @@ Package csquotes Warning: No multilingual support.
 (csquotes)                Cannot enable multilingual quotes on input line 21.
 
 ("Master's Thesis.aux" (chapter_introduction.aux) (chapter_remark.aux)
-(chapter_mcf.aux) (chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux)
-(chapter_conditional_convergence_of_allen_cahn.aux)
+(chapter_mcf.aux) (chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux
+
+LaTeX Warning: Label `Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 
+} $' multiply defined.
+
+
+LaTeX Warning: Label `Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 
+} $@cref' multiply defined.
+
+) (chapter_conditional_convergence_of_allen_cahn.aux)
 (chapter_de_giorgis_mean_curvature_flow.aux) (chapter_appendix.aux))
 \openout1 = `"Master's Thesis.aux"'.
 
@@ -1550,33 +1558,32 @@ Overfull \hbox (17.96873pt too wide) in paragraph at lines 586--593
 
 ]
 chapter 3.
-(section_cond_conv_twophase.tex [17] [18]
-Overfull \hbox (16.11162pt too wide) in paragraph at lines 207--208
+(section_cond_conv_twophase.tex [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Overfull \hbox (16.11162pt too wide) in paragraph at lines 231--232
 []\OT1/cmr/bx/n/10 Lemma 3.1.2. []\OT1/cmr/m/it/10 (-20) With the as-sump-tions
  of Propo-si-tion []3.1.1[], we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10 2 [
 ][]\OT1/cmr/m/n/10 (-20) ([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ]; [][](\
 U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
  []
 
-
-Underfull \vbox (badness 3417) has occurred while \output is active []
-
- [19]
-[20] [21]) (section_cond_conv_multiphase.tex
+[19] [20] [21]) (section_cond_conv_multiphase.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 2.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [22] [23] [24] [25]
+) [22] [23] [24] [25] [26]
 Overfull \hbox (6.18175pt too wide) in paragraph at lines 538--547
 [][] []$ \OT1/cmr/m/it/10 (-20) to some $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-2
 0) = [][] \OML/cmm/m/it/10 [][]$ \OT1/cmr/m/it/10 (-20) with a par-ti-tion $\
 OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) .
  []
 
-[26] [27]
+[27] [28]
 Overfull \hbox (17.407pt too wide) detected at line 738
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
@@ -1590,11 +1597,7 @@ t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
 rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
  []
 
-[28] [29]
-Underfull \vbox (badness 1997) has occurred while \output is active []
-
- [30]))
-[31]
+[29] [30])) [31]
 \openout2 = `chapter_conditional_convergence_of_allen_cahn.aux'.
 
  (chapter_conditional_convergence_of_allen_cahn.tex [32
@@ -1919,15 +1922,19 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 \openout1 = `"Master's Thesis.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48676 strings out of 480930
- 1086686 string characters out of 2900231
- 1915374 words of memory out of 3000000
- 63305 multiletter control sequences out of 15000+200000
+ 48720 strings out of 480930
+ 1087580 string characters out of 2900231
+ 1915565 words of memory out of 3000000
+ 63348 multiletter control sequences out of 15000+200000
  557638 words of font info for 190 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1966,9 +1973,9 @@ rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 876585 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 878148 bytes).
 PDF statistics:
- 1489 PDF objects out of 1728 (max. 8388607)
- 331 named destinations out of 1000 (max. 500000)
+ 1491 PDF objects out of 1728 (max. 8388607)
+ 332 named destinations out of 1000 (max. 500000)
  27905 words of extra memory for PDF output out of 29859 (max. 10000000)
 
