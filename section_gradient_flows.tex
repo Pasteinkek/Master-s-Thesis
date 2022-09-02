@@ -1,14 +1,30 @@
 \section{Gradient flows}
 	\label{section_gradient_flows}
-In the simplest case, a gradient flow of a given energy $ \energy \colon \mathbb{ R }^{ N } \to \mathbb{ R } $ (with respect to the euclidean inner product) is a solution to the ordinary differential equation
+In the simplest case, a gradient flow of a given energy $ \energy \colon 
+\mathbb{ R }^{ N } \to \mathbb{ R } $ (with respect to the Euclidean inner 
+product) is a solution to the ordinary differential equation
 \begin{equation}
 	\label{gf_basic_equation}
 	\dv{ t } x ( t ) = - \nabla \energy ( x ( t ) ) ,
 \end{equation}
 where we usually prescribe some initial value $ x ( 0 ) = x_{ 0 } \in \mathbb{ 
 R }^{ N } $. The central structure here is that on the right hand side of the 
-equation, we do not have any function, but the gradient of some continuously 
-differentiable function. A solution $ x $ moves in the 
+equation, we do not have an arbitrary vector field, but the gradient of some 
+continuously 
+differentiable function. Remember that the gradient of a function always 
+depends on the chosen metric of our space. In fact, the gradient $ \nabla 
+\energy ( x ) $ is always the unique element of the tangent space at $ x $ 
+which 
+satisfies
+\begin{equation*}
+	\inner*{ \nabla \energy ( x ) }{ y }
+	=
+	\dd_{ x } \energy ( y ) 
+\end{equation*}
+for all elements $ y $ in the tangent space at $ x $. In our setting, the 
+tangent space at any point is exactly $ \mathbb{ R }^{ N } $.  
+
+A solution $ x $ moves in the 
 direction of the steepest descent of the energy $ \energy $. Moreover this 
 allows for the following computation given a continuously differentiable 
 solution $ x $ of (\ref{gf_basic_equation}):

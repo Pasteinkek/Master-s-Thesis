@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  1 SEP 2022 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  2 SEP 2022 20:12
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1496,11 +1496,7 @@ l.1 \chapter
 
 ]
 chapter without number
-[3] [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5])
-[6]
+[3] [4] [5]) [6]
 \openout2 = `chapter_remark.aux'.
 
  (chapter_remark.tex
@@ -1559,38 +1555,54 @@ Overfull \hbox (17.96873pt too wide) in paragraph at lines 586--593
 ]
 chapter 3.
 (section_cond_conv_twophase.tex [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2150) has occurred while \output is active []
 
  [18]
-Overfull \hbox (16.11162pt too wide) in paragraph at lines 231--232
-[]\OT1/cmr/bx/n/10 Lemma 3.1.2. []\OT1/cmr/m/it/10 (-20) With the as-sump-tions
- of Propo-si-tion []3.1.1[], we have $\OML/cmm/m/it/10  [] \OMS/cmsy/m/n/10 2 [
-][]\OT1/cmr/m/n/10 (-20) ([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ]; [][](\
-U/msb/m/n/10 T\OT1/cmr/m/n/10 (-20) ))$
- []
-
 [19] [20] [21]) (section_cond_conv_multiphase.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
-2.
+3.
 
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [22] [23] [24] [25] [26]
-Overfull \hbox (6.18175pt too wide) in paragraph at lines 538--547
+) [22] [23]
+Overfull \hbox (41.83095pt too wide) in paragraph at lines 272--282
+\OT1/cmr/m/n/10 (-20) by the dis-tri-bu-tional chain rule (The-o-rem []3.2.1[])
+ the de-sired reg-u-lar-ity $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/
+cmm/m/it/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][]\O
+T1/cmr/m/n/10 (-20) ([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/cmsy/m/
+n/10  []\OT1/cmr/m/n/10 (-20) )$. 
+ []
+
+[24]
+Overfull \hbox (13.13506pt too wide) detected at line 363
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []; u\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []; u \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h
+v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  [][] [][] [] \OT1/cmr/m/n/10 = [][] [][] 
+[] \OML/cmm/m/it/10 :
+ []
+
+[25]
+Overfull \hbox (44.67496pt too wide) in paragraph at lines 514--519
+\OT1/cmr/m/n/10 (-20) The last equal-ity is due to the dom-i-nated con-ver-genc
+e the-o-rem with ma-jo-rant $[][][]$.
+ []
+
+[26]
+Overfull \hbox (6.18175pt too wide) in paragraph at lines 584--595
 [][] []$ \OT1/cmr/m/it/10 (-20) to some $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-2
 0) = [][] \OML/cmm/m/it/10 [][]$ \OT1/cmr/m/it/10 (-20) with a par-ti-tion $\
 OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) .
  []
 
 [27] [28]
-Overfull \hbox (17.407pt too wide) detected at line 738
+Overfull \hbox (16.9579pt too wide) detected at line 802
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
  []
 
 
-Overfull \hbox (4.58096pt too wide) in paragraph at lines 742--748
+Overfull \hbox (4.58096pt too wide) in paragraph at lines 806--812
 []\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
 o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
 t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
@@ -1931,10 +1943,10 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48720 strings out of 480930
- 1087580 string characters out of 2900231
- 1915565 words of memory out of 3000000
- 63348 multiletter control sequences out of 15000+200000
+ 48733 strings out of 480930
+ 1088173 string characters out of 2900231
+ 1916005 words of memory out of 3000000
+ 63357 multiletter control sequences out of 15000+200000
  557638 words of font info for 190 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1973,9 +1985,9 @@ rs/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 878148 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 883085 bytes).
 PDF statistics:
- 1491 PDF objects out of 1728 (max. 8388607)
- 332 named destinations out of 1000 (max. 500000)
+ 1504 PDF objects out of 1728 (max. 8388607)
+ 336 named destinations out of 1000 (max. 500000)
  27905 words of extra memory for PDF output out of 29859 (max. 10000000)
 

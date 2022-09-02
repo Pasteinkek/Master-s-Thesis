@@ -56,7 +56,6 @@ show that $ \psi_{ \varepsilon } \in \wkp^{ 1, 1 } ( ( 0 , T ) \times
 ( u_{ \varepsilon } ) } \nabla u_{ \varepsilon } $ and $ \partial_{ t } \psi_{ 
 \varepsilon } = \sqrt{ 2 W ( u_{ \varepsilon } ) } \partial_{ t } u_{ 
 \varepsilon } $. 
-
 Thus via Young's inequality, we can compute
 \begin{align}
 	\energy_{ \varepsilon } ( u_{ \varepsilon } )
@@ -81,18 +80,19 @@ Thus via Young's inequality, we can compute
 	\int
 	\abs{ \nabla \psi_{ \varepsilon} }
 	\dd{ x }
-	\label{modica_mortula_trick},
+	\label{modica_mortula_trick}.
 \end{align}
-which suggests that we might hope for good compactness properties of $ \phi 
+Therefore we might hope for good compactness properties of $ \phi 
 \circ u_{ \varepsilon } $.
-Moreover since the energies stay bounded and the summand $ 1 / \varepsilon W ( 
-u ) $ penalizes any mass outside of the wells, we expect that a limit function 
+Moreover since the energies stay bounded and the summand $  W ( u ) / 
+\varepsilon $ penalizes any mass outside of the wells, we expect that a limit 
+function 
 is concentrated in $ \alpha $ and $ \beta $.
-Indeed this is given by the following Proposition.
+Indeed we show this in the following Proposition.
 
 \begin{proposition}
 	\label{initial_convergence_result}
-	Given well prepared initial data $ u_{ \varepsilon }^{ 0 } $ in the sense 
+	Let $ u_{ \varepsilon }^{ 0 } $ be well prepared initial data in the sense 
 	that
 	\begin{equation}
 		\lim_{ \ \varepsilon \to 0 }
@@ -102,9 +102,28 @@ Indeed this is given by the following Proposition.
 		\eqqcolon 
 		\energy_{ 0 }
 		<
-		\infty,
+		\infty.
 	\end{equation}
-	there exists for any sequence $ \varepsilon \to 0 $ some non-relabelled subsequence such that the solutions of the Allen--Cahn equation (\ref{allen_cahn_eq}) with initial condition $ u_{ \varepsilon }^{ 0 } $ converge in $ \lp^{ 1 } ( ( 0, T ) \times \flattorus ) $ to some $ u = \alpha ( 1 - \chi ) + \beta \chi $ with $ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \} \right) $. Moreover the compositions $ \psi_{ \varepsilon } $ are uniformly bounded in $ \bv \left( ( 0, T ) \times \flattorus \right) $ and converge to $ \phi \circ u $ in $ \lp^{ 1 } ( ( 0 , T ) \times \flattorus ) $.
+	Then there exists for any sequence $ \varepsilon \to 0 $ some 
+	non-relabelled subsequence such that the solutions of the Allen--Cahn 
+	equation (\ref{allen_cahn_eq}) with initial conditions $ u_{ \varepsilon 
+	}^{ 0 } $ converge in $ \lp^{ 1 } ( ( 0, T ) \times \flattorus ) $ to some 
+	$ u = \alpha ( 1 - \chi ) + \beta \chi $ with $ \chi \in \bv \left( ( 0 , T 
+	) \times \flattorus ; \{ 0 , 1 \} \right) $.
+	Furthermore we have
+	\begin{equation*}
+		\energy ( u ( t ) ) 
+		\leq
+		\liminf_{ \varepsilon \to 0 }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
+		\leq 
+		\energy_{ 0 }
+	\end{equation*}
+	for almost every $ 0 \leq t \leq T $. Moreover the compositions $ \psi_{ 
+	\varepsilon } = \phi \circ u_{ \varepsilon } $ are uniformly bounded in $ 
+	\bv \left( ( 0, T ) \times 
+	\flattorus \right) $ and converge to $ \phi \circ u $ in $ \lp^{ 1 } ( ( 0 
+	, T ) \times \flattorus ) $.
 \end{proposition}
 
 \begin{proof}
@@ -114,14 +133,15 @@ Indeed this is given by the following Proposition.
 		\sup_{ 0 \leq t \leq T }
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) ) 
 		\leq
-		\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ),
+		\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } )
+		\leq C.
 	\end{equation}
-	whose right hand side is by assumption uniformly bounded in $ \varepsilon $.
-	By the calculation (\ref{modica_mortula_trick}) we thus infer that $ \nabla 
+	By the calculation (\ref{modica_mortula_trick}) we thus obtain that $ 
+	\nabla 
 	\psi_{ \varepsilon } $ is uniformly bounded in $ \lp^{ 1 } \left( ( 0 , T ) 
 	\times \flattorus \right) $.
-	Moreover we may estimate by the upper and lower growth bound on $ W $ 
-	(\ref{polynomial_growth})
+	Moreover we may estimate by the upper and lower growth bound 
+	(\ref{polynomial_growth}) on $ W $ 
 	\begin{align}
 		\int_{ 0 }^{ T }
 		\int
@@ -168,7 +188,7 @@ Indeed this is given by the following Proposition.
 		\dd{ t },
 		\label{l1_estimate_for_psi_epsilon}
 	\end{align}
-	which is uniformly bounded via the energy bound. Thus we have indeed that $ 
+	which is uniformly bounded via the energy bound. Hence we have that $ 
 	\psi_{ \varepsilon } $ is a bounded sequence in $ \bv( ( 0 , T ) \times 
 	\flattorus ) $ and therefore there exists some non-relabelled subsequence 
 	and some $ \psi \in \bv ( ( 0 , T ) \times \flattorus ) $ such that $ 
@@ -181,8 +201,8 @@ Indeed this is given by the following Proposition.
 		u_{ \varepsilon } = \phi^{ - 1 } ( \psi_{ \varepsilon } ) \to \phi^{ - 1 } ( \psi ) = u
 	\end{equation*}
 	converges pointwise almost everywhere.
-	
-	Moreover we notice that by Fatou's Lemma and the boundedness of the energies that
+	Moreover we notice that by Fatou's Lemma and the boundedness of the 
+	energies, we have
 	\begin{equation*}
 		\int
 		W ( u ) 
@@ -200,7 +220,7 @@ Indeed this is given by the following Proposition.
 	\end{equation*}
 	Again using the non-negativity of $ W $, this yields that $ W ( u ) = 0 $ almost everywhere. 
 	Thus $ u \in \{ \alpha , \beta \} $ almost everywhere and we may write $ u = \alpha ( 1 - \chi ) + \beta \chi $ for some $ \chi \colon ( 0 , T ) \times \flattorus \to \{ 0 , 1 \} $.
-	Looking again at the definition of $ u $, we moreover obtain that 
+	By looking at the definition of $ u $, we moreover obtain that 
 	\begin{equation}
 		\label{represenation_of_psi}
 		\psi = \phi ( u ) = 
@@ -210,25 +230,31 @@ Indeed this is given by the following Proposition.
 		= 
 		\int_{ \alpha }^{ \beta } \sqrt{ 2 W ( s ) } \dd{ s } \chi 
 		\eqqcolon
-		\sigma \chi 
+		\sigma \chi.
 	\end{equation}
-	and since $ \psi $ is a function of bounded variation, this implies that $ \chi $ is of bounded variation as well.
+	Since $ \psi $ is a function of bounded variation, this implies that $ \chi 
+	$ is of bounded variation as well.
 	
 	Finally from the energy bound and the estimate $ \abs{ u_{ \varepsilon } 
 	}^{ p } \lesssim 1 + W ( u_{ \varepsilon } ) $, we infer that $ u_{ 
 	\varepsilon } $ is $ 
-	\lp^{ p }$-bounded, and since $ u_{ \varepsilon } $ converges pointwise 
+	\lp^{ p }$-bounded. Since $ u_{ \varepsilon } $ converges pointwise 
 	almost everywhere to $ u $, we obtain the desired $ \lp^{ 1 } $-convergence.
+	This finishes the proof.
 \end{proof}
 
-Notice that in the prof, we defined the constant $ \sigma \coloneqq \int_{ 
+Notice that in the proof, we defined the constant $ \sigma \coloneqq \int_{ 
 \alpha }^{ \beta } \sqrt{ 2 W ( s ) } \dd{ s } $, which will later be the 
 surface tension for the mean curvature flow.
-Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initial data and on the way obtain a useful bound on the time derivative.
+Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their 
+initial data.
+Furthermore we will obtain a useful bound on the time derivative.
 
 \begin{lemma}
 	\label{l2_bound_on_psi_varepsilon}
-	With the assumptions of \Cref{initial_convergence_result}, we have $ \psi_{ \varepsilon } \in \wkp^{ 1 , 2 } ( [ 0 , T ] ; \lp^{ 1 } ( \mathbb{ T } ) ) $ with the estimate
+	In the situation of \Cref{initial_convergence_result}, we have $ \psi_{ 
+	\varepsilon } \in \wkp^{ 1 , 2 } ( [ 0 , T ] ; \lp^{ 1 } ( \mathbb{ T } ) ) 
+	$ with the corresponding estimate
 	\begin{equation}
 		\label{bound_on_time_dv_of_psi_epsilon}
 		\left(
@@ -250,14 +276,16 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 	The desired regularity will follow quite directly from Hölder's inequality. 
 	For the desired precompactness, we will first show precompactness of $ 
 	\psi_{ \varepsilon } $ by Arzelà--Ascoli, which implies that $ u _{ 
-	\varepsilon } $ converges in measure. Using the equiintegrability of $ u_{ 
-	\varepsilon } $ uniformly in time, we may then deduce our claim.
+	\varepsilon } $ converges in measure. 
+	To finish the proof we use the equiintegrability of $ u_{ 
+	\varepsilon } $ uniformly in time and deduce our claim.
 	\begin{description}[wide=0pt]
 		\item[Step 1:] $ \psi_{ \varepsilon } \in \wkp^{ 1 , 2 } \left( [ 0 , T 
 		] ; \lp^{ 1 } ( \flattorus ) \right) $ and satisfies the inequality 
 		(\ref{bound_on_time_dv_of_psi_epsilon}).
 		
-		Using the same estimates as in (\ref{l1_estimate_for_psi_epsilon}) we 
+		By the same calculation as in estimate 
+		(\ref{l1_estimate_for_psi_epsilon}), we 
 		can infer that
 		\begin{equation*}
 			\int_{ 0 }^{ T }
@@ -273,10 +301,12 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			1 + \int W ( u_{ \varepsilon } ) \dd{ x }
 			\right)^{ 2 }
 			\dd{ t } 
-			<
-			\infty
+			\leq C
 		\end{equation*}
-		via the uniform boundedness of the energies (\ref{unif_bound_on_energies}). For the desired bound (\ref{bound_on_time_dv_of_psi_epsilon}), we estimate via Hölder's inequality and the uniform boundedness of the energies that
+		from the uniform boundedness of the energies 
+		(\ref{unif_bound_on_energies}). For the desired bound 
+		(\ref{bound_on_time_dv_of_psi_epsilon}), we estimate via Hölder's 
+		inequality that
 		\begin{align*}
 			\int_{ 0 }^{ T }
 			\left(
@@ -293,16 +323,6 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\int
 			\sqrt{ 2 W ( u_{ \varepsilon } ) }
 			\abs{ \partial_{ t } u_{ \varepsilon } }
-			\dd{ x }
-			\right)^{ 2 }
-			\dd{ t }
-			\\
-			& =
-			\int_{ 0 }^{ T }
-			\left(
-			\int
-			\frac{ 1 }{ \sqrt{\varepsilon } } \sqrt{ 2 W ( u_{ \varepsilon } ) }
-			\sqrt{ \varepsilon } \abs{ \partial_{ t } u_{ \varepsilon } }
 			\dd{ x }
 			\right)^{ 2 }
 			\dd{ t }
@@ -330,9 +350,9 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\\
 			& \leq
 			2 \left(\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } 
-			)\right)^{ 2 },
+			)\right)^{ 2 }.
 		\end{align*}
-		where the last two inequalities follow from the energy dissipation 
+		The last two inequalities follow from the energy dissipation 
 		estimate
 		(\ref{energy_dissipation_sharp}).
 		
@@ -344,16 +364,18 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\hookrightarrow
 			\cont^{ 1 / 2 } \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right)
 		\end{equation*}
-		from which the equicontinuity of the sequence follows with Step 1.
-		Moreover for fixed time $ t $, the arguments from 
+		from which the equicontinuity of the sequence follows by Step 1.
+		Moreover for a fixed time $ t $, the arguments from 
 		\Cref{initial_convergence_result} yield that $ \psi_{ \varepsilon } ( t 
 		) $ is a bounded sequence in $ \wkp^{ 1 , 1 } ( \flattorus ) $ and is 
 		thus precompact in $ \lp^{ 1 } ( \flattorus ) $.
-		Thus the Arzelà--Ascoli Theorem yields the desired precompactness.
+		Therefore the Arzelà--Ascoli Theorem yields the desired precompactness.
 		
 		\item[Step 3:] The sequence $ u_{ \varepsilon } $ converges to $ u $ in measure uniformly in time.
 		
-		From Step 2, we infer that 
+		We already know that $ \psi_{ \varepsilon } $ converges to $ \phi \circ 
+		u $ almost everywhere. By passing to another non-relabelled 
+		subsequence, we infer from the precompactness in Step 2 that
 		\begin{equation*}
 			\lim_{ \varepsilon \to 0 }
 			\esssup_{ 0 \leq t \leq T }
@@ -362,7 +384,7 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\dd{ x }
 			= 0.
 		\end{equation*}
-		It especially follows in combination with equation (\ref{represenation_of_psi}) that
+		By plugging in the definition of $ \phi $, we obtain
 		\begin{align*}
 			\lim_{ \varepsilon \to 0 }
 			\esssup_{ 0 \leq t \leq T }
@@ -393,24 +415,14 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\chi
 			\abs{ \psi_{ \varepsilon } ( t , x ) - \phi \circ u ( t , x ) }
 			\dd{ x }
-			= 0		
+			= 0.
 		\end{align*}
 		Moreover since $ \phi $ is strictly increasing we have that for a given 
-		$ \delta < \beta - \alpha $,
-		\begin{equation*}
-			\min \left(
-				\inf \{ \abs{ \phi ( s ) } \, \colon \, \abs{ s - \alpha } > 	
-				\delta / 2  \}
-				,
-				\inf \{ \abs{ \phi ( s ) - \sigma } \, \colon \, \abs{ s - 
-				\beta } > \delta / 2 \}
-			\right)
-			=
-			\rho
-			> 
-			0.
-		\end{equation*}
-		Therefore we may estimate
+		$ \delta < \beta - \alpha $, there exists some $ \rho > 0 $ such that
+		$ \abs{ s - \alpha } > \delta / 2 $ and $ \abs{ s - \beta } > \delta / 
+		2 $ already implies $ \abs{ \phi ( s ) } > \rho $ and $ \abs{ \phi ( s 
+		) - \sigma } > \rho $.
+		Therefore we may estimate by the triangle inequality
 		\begin{align*}
 			& \esssup_{ 0 \leq t \leq T }
 			\lm^{ d } \left( \left\{ x \in \flattorus \, \colon \, \abs{ u_{ \varepsilon } ( t, x ) - u ( t, x ) } > \delta \right\} \right)
@@ -443,26 +455,34 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\frac{ 1 }{ \rho }
 			\int
 			\chi ( t , x ) \abs{ \psi_{ \varepsilon } ( t , x ) - \sigma }
-			\dd{ x },
+			\dd{ x }.
 		\end{align*}
-		which vanishes as $ \varepsilon $ goes to zero, proving our claim.
+		The last estimate is Markov's inequality.
+		This term vanishes as $ \varepsilon $ goes to zero, proving our claim.
 		
 		\item[Step 4:] $ u_{ \varepsilon }^{ 2 } $ is equiintegrable uniformly 
 		in time.
 		
 		We have 
-		\begin{equation*}
+		\begin{equation}
+			\label{gives_us_uniformintg}
 			0 \leq u_{ \varepsilon }^{ 2 } \lesssim 1 + W ( u_{ \varepsilon } )
-		\end{equation*}
-		by the growth bounds (\ref{polynomial_growth}) on $ W $. Since $ W ( u_{ \varepsilon } ) $ converges to 0 in $ \lp^{ 1 } ( \flattorus ) $ uniformly in time by the energy bound (\ref{unif_bound_on_energies}), it is equiintegrable uniformly in time. Thus $ u_{ \varepsilon }^{ 2 } $ is equiintegrable uniformly in time as well.
+		\end{equation}
+		by the growth bounds (\ref{polynomial_growth}) on $ W $. The function $ 
+		W ( u_{ \varepsilon } ) $ converges to 0 in $ \lp^{ 1 } ( \flattorus ) 
+		$ uniformly in time by the energy bound (\ref{unif_bound_on_energies}).
+		Hence $ W ( u_{ \varepsilon } ) $ is equiintegrable uniformly in time 
+		and by inequality (\ref{gives_us_uniformintg}) $ u_{ \varepsilon }^{ 2 
+		} $ is as well.
 		
 		\item[Step 5:] $ u_{ \varepsilon } $ converges in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ) \right) $.
 		
-		We somewhat repeat the proof that convergence in measure and 
-		equiintegrability imply $ \lp^{ 1 } $-convergence, while keeping the 
+		We repeat the proof that convergence in measure and 
+		equiintegrability imply $ \lp^{ 1 } $-convergence, while additionally 
+		keeping the 
 		uniformity in time.
 		
-		Take some $ \delta > 0 $. Then we decompose the integral
+		Take some $ \delta > 0 $. Then we decompose the integral into
 		\begin{equation*}
 			\int \abs{ u_{ \varepsilon } - u }^{ 2 } \dd{ x }
 			=
@@ -497,10 +517,12 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 			\int_{ \{ \abs{ u_{ \varepsilon } - u } < \delta \} }
 			\abs{ u_{ \varepsilon } - u }^{ 2 }
 			\dd{ x }
-			=
+			\leq
 			\delta^{ 2 } \Lambda^{ d }
 		\end{equation*}
-		Taking the limes superior as $ \varepsilon $ tends to zero of this inequality yields that the right hand side can be made arbitrarily small, which yields
+		Taking the limit superior as $ \varepsilon $ tends to zero of this 
+		inequality yields that the right hand side can be made arbitrarily 
+		small, which gives us
 		\begin{equation*}
 			\esssup_{ 0 \leq t \leq T }
 			\int
@@ -515,11 +537,9 @@ Nextup, we want to make sure that $ u $ respectively $ \chi $ assume their initi
 \end{proof}
 
 \begin{remark}
-	From the previous Lemma, it follows that if the initial conditions $ u_{ 
-	\varepsilon }^{ 0 } $ converge in $ \lp^{ 1 } $ or pointwise almost 
-	everywhere to the function $ \alpha ( 1 - \chi^{ 0 } ) + \beta \chi^{ 0 } $ 
-	(and we know that the limit is of this form since the energies of the 
-	initial values stay bounded), then $ u $ also assumes this initial data in 
-	$ \lp^{ 2 } ( \flattorus ) $.
+	Assume that the initial conditions $ u_{ \varepsilon }^{ 0 } $ converge 
+	pointwise almost everywhere to a function $ u^{ 0 } $. Then it follows from 
+	the previous Lemma that $ u $ assumes this initial data in $ \lp^{ 2 } ( 
+	\flattorus ) $.
 \end{remark}
 

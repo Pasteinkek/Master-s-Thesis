@@ -29,21 +29,38 @@ For us the central structure of this equation is its gradient flow structure. Fo
 where the tangent space at a given $ \Sigma \in \mathcal{ M } $ consists of the normal velocities on $ \Sigma $.
 The metric tensor at a surface $ \Sigma $ of two normal velocities is then 
 given by the rescaled $ \lp^{ 2 } $-inner product on $ \Sigma $
-\begin{equation*}
+\begin{equation}
+	\label{definition_of_metric_twophase}
 	\inner*{ V }{ W }_{ \Sigma }
 	\coloneqq
 	\frac{ 1 }{ \mu }
 	\int_{ \Sigma }
 		V W
 	\dd{ \hm^{ d - 1 } }
-\end{equation*}
+\end{equation}
 and our energy will simply be the rescaled perimeter functional
 \begin{equation*}
 	\energy ( \Sigma )
 	\coloneqq
 	\sigma \hm^{ d -1 } ( \Sigma ).
 \end{equation*}
-Since the first inner variation of the perimeter functional is given by the mean curvature vector (see \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter}), the gradient of the energy should simply be the mean curvature vector multiplied by $ \sigma \mu $.
+By \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter} the first inner variation 
+of the perimeter functional is given by the mean curvature vector. 
+Remember moreover that by the definition of the metric 
+(\ref{definition_of_metric_twophase}) the gradient of the energy at a given 
+hypersurface $ \Sigma $ has to satisfy
+\begin{equation*}
+	\frac{ 1 }{ \mu }
+	\int_{ \Sigma }
+		\inner*{ \nabla_{ \Sigma } \energy }{ V }
+	\dd{ \hm^{ d - 1 } }
+	=
+	\dd_{ \Sigma }
+	\energy ( V )
+\end{equation*} 
+for all normal vector fields $ V $ on $ \Sigma $.
+Combining these arguments the gradient of the energy should simply be the mean 
+curvature vector multiplied by $ \sigma \mu $.
 Thus the mean curvature flow equation (\ref{mcf_twophase_basic_equation}) 
 corresponds exactly to the gradient flow equation (\ref{gf_basic_equation}).
 Note however that this metric tensor induces a degenerate metric in the sense 

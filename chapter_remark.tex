@@ -8,7 +8,7 @@
 		u ( x ) $ for the (total) derivative at $ x $, which means that
 		$ \diff u ( x ) \in \mathbb{ R }^{ N \times d } $ and
 		$ \left( \diff u ( x ) \right)_{ i j } = \partial_{ x_{ j } } u^{ i } ( 
-		x ) $. We always use the notation $ \nabla u ( x ) $ for the transposed 
+		x ) $. We always use the notation $ \nabla u ( x ) $ for the transpose 
 		of the total derivative. 
 		
 		\item
@@ -25,11 +25,11 @@
 		dimensions and the chosen potential $ W $.
 		
 		\item 
-		The bracket $ \inner*{\:\cdot\:}{\:\cdot\:} $ is used as the euclidean 
+		The bracket $ \inner*{\:\cdot\:}{\:\cdot\:} $ is used as the Euclidean 
 		inner 
 		product. Depending on the situation, it acts on vectors or matrices.
 		If we apply $ \abs{ \:\cdot\: } $ to a vector or matrix, then we always 
-		uses the norm induced by the euclidean inner product.
+		uses the norm induced by the Euclidean inner product.
 		
 		\item 
 		We denote by $ \cont_{ \mathrm{c} } $ the compactly supported 
@@ -37,7 +37,8 @@
 		have $ \cont_{ \mathrm{c} } ( \flattorus ) = \cont ( \flattorus ) $.
 		
 		\item
-		For a locally integrable function $ u \colon ( 0 , T ) \times \Omega $ 
+		For a locally integrable function $ u \colon ( 0 , T ) \times \Omega 
+		\to \mathbb{ R } $ 
 		with $ \Omega \subseteq \mathbb{ R }^{ d } $ being some open set or the 
 		flat torus, we denote the total variation in space for a time $ t \in ( 
 		0 , T ) $ by
@@ -47,7 +48,7 @@
 			\sup 
 			\left\{
 				\int_{ \Omega }
-					u ( t , x ) \divg ( \xi ) ( x ) 
+					u ( t , x ) \divg \xi ( x ) 
 				\dd{ x }
 				\, \colon \,
 				\xi \in \cont_{ \mathrm{c} }^{ 1 } ( \Omega ; \mathbb{ R }^{ d 
@@ -60,7 +61,7 @@
 			\coloneqq
 			\left\{
 			\int_{ ( 0 , T ) \times \Omega }
-			u ( t , x ) \divg_{ x } ( \xi ) (t , x ) 
+			u ( t , x ) \divg_{ x } \xi ( t , x ) 
 			\dd{ ( t, x ) }
 			\, \colon \,
 			\xi \in \cont_{ \mathrm{c} }^{ 1 } (( 0 , T ) \times \Omega ; 

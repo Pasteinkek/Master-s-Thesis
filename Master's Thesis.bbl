@@ -1694,6 +1694,49 @@
       \verb https://doi.org/10.1002/cpa.20046
       \endverb
     \endentry
+    \entry{stuvard_tonegawa_on_the_existence_of_canonical_multi_phase_brakke_flow}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d649afe12a0e15725fbf837b0ad6bc4a}{%
+           family={Stuvard},
+           familyi={S\bibinitperiod},
+           given={Salvatore},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c4bf7a847f27b05ffb89af9aae0b52b8}{%
+           family={Tonegawa},
+           familyi={T\bibinitperiod},
+           given={Yoshihiro},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter {GmbH}}%
+      }
+      \strng{namehash}{f290d9605efee2a8604cb5bcc022a6e8}
+      \strng{fullhash}{f290d9605efee2a8604cb5bcc022a6e8}
+      \strng{bibnamehash}{f290d9605efee2a8604cb5bcc022a6e8}
+      \strng{authorbibnamehash}{f290d9605efee2a8604cb5bcc022a6e8}
+      \strng{authornamehash}{f290d9605efee2a8604cb5bcc022a6e8}
+      \strng{authorfullhash}{f290d9605efee2a8604cb5bcc022a6e8}
+      \field{labelalpha}{ST22}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Calculus of Variations}
+      \field{month}{07}
+      \field{number}{0}
+      \field{title}{On the existence of canonical multi-phase Brakke flows}
+      \field{volume}{0}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1515/acv-2021-0093
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515%2Facv-2021-0093
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515%2Facv-2021-0093
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

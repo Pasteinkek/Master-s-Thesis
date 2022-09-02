@@ -112,7 +112,7 @@ potential, their analysis restricts to the parts of the interfaces where no
 triple junctions appear. Bronsard and 
 Reitich however considered in 
 \cite{bronsard_reitich_on_three_phase_boundary_motion_and_singular_limit} a 
-formal asymptotic expansion which also considers triple junctions
+formal asymptotic expansion which also takes triple junctions into account
 for the three-phase case. Moreover they proved short-time existence for the 
 three-phase boundary problem.
 
@@ -129,7 +129,12 @@ condition is not satisfied, we have short time existence by approximation
 through regular networks. For long time existence, it has been shown by Kim and 
 Tonegawa in \cite{kim_tonegawa_on_the_mean_curvature_flow_of_grain_boundaries} 
 through a modification of Brakke's approximation scheme that one can obtain 
-non-trivial mean curvature flow even with singular initial data.
+non-trivial mean curvature flow even with singular initial data. Recently 
+Stuvard and Tonegawa improved this result in 
+\cite{stuvard_tonegawa_on_the_existence_of_canonical_multi_phase_brakke_flow},
+where they extended their findings to more general initial data and also showed 
+that their constructed Brakke flow is a $ \bv $-solution to mean curvature flow.
+
 
 The first main goal of this thesis is to prove a conditional convergence result 
 of solutions to the vectorial Allen--Cahn equation (\ref{ac_intro}) to a De 
@@ -137,12 +142,13 @@ Giorgi type $ \bv $-solution of multiphase mean curvature flow in the sense of
 \Cref{de_giorgi_solution_to_mmcf}. The proof is based mainly on a duality 
 argument and the results of Laux and Simon in 
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}.
-However the strong assumption we make here is that the Cahn-Hilliard energies 
+However the strong assumption we make here is that the Cahn--Hilliard energies 
 (\ref{cahn_hilliard_energy}) of the solutions to (\ref{ac_intro}) converge to 
 the perimeter functional (\ref{definition_of_multiphase_energy}) applied to the 
 limit. 
 This prevents that as $ \varepsilon $ tends to zero, the approximate interfaces 
-collapse. This would mean that energy dissipates, see also the discussion in
+collapse. This would mean that energy is lost in the limit $ \varepsilon \to 0 
+$, see also the discussion in
 \Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}.  In general we are 
 inclined to believe that this assumption could fail. For example it has been 
 shown by Bronsard and Stoth in 
@@ -206,8 +212,8 @@ Another possible question would be how to generalize the results to the case
 of 
 arbitrary mobilities: Throughout the thesis, and also the main background 
 papers 
-(\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow},
-\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}), it is 
+\cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow},
+\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}, it is 
 always assumed that the mobilities are fixed through the relation $ \mu_{ i j } 
 = 1/ \sigma_{ i j } $.
 Here $ \sigma_{ i j } $ denotes the surface tension of 
@@ -225,62 +231,63 @@ through a Lagrange-multiplier, which assures that the limit is a partition.
 
 \section{Structure of the thesis}
 
-In \Cref{chapter_gradient_flows_and_mcf} we will give a soft mathematical 
-introduction into the topic of gradient flows. We will derive De Giorgi's 
+In \Cref{chapter_gradient_flows_and_mcf} we give a soft mathematical 
+introduction into the topic of gradient flows. We derive De Giorgi's 
 optimal energy dissipation inequality in a simple example and discuss its 
 usefulness for 
-reformulating the gradient flow equation. Moreover we will apply our 
+reformulating the gradient flow equation. Moreover we apply our 
 observations 
 to (multiphase) mean curvature flow.
 
-Afterwards in \Cref{chapter_ac_equation}, we will consider the Allen--Cahn 
+Afterwards in \Cref{chapter_ac_equation}, we consider the Allen--Cahn 
 equation 
-(\ref{ac_intro}) already mentioned above. Here we will focus again on its 
+(\ref{ac_intro}) already mentioned above. Here we focus again on its 
 gradient flow structure. We then propose a suitable solution concept and prove 
 the existence of a solution through De Giorgi's minimizing movements scheme.
 
-Continuing with \Cref{chapter_convergence_to_evolving_partition}, we are going 
-to take a look at the behaviour of solutions to the Allen--Cahn equation as $ 
-\varepsilon $ tends to zero. First we will study the simple two-phase case in 
+Continuing with \Cref{chapter_convergence_to_evolving_partition}, we take a 
+look at the behaviour of solutions to the Allen--Cahn equation as $ 
+\varepsilon $ tends to zero. First we study the simple two-phase case in 
 order 
 to get a better feeling for the equation and highlight important techniques 
-like the Modica--Mortola trick. We will show that we have convergence to an 
+like the Modica--Mortola trick. We show that we have convergence to an 
 evolving set of finite perimeter in space and time. 
-Afterwards we will also prove 
+Afterwards we also prove 
 precompactness of the sequence in $ \cont ( [ 0 , T ] ; \lp^{ 2 } ) $ which 
-lets us show that the initial data is attained. Next up is the multiphase case, 
-which will require more finesse, but we will be able to show similar results as 
+lets us show that the initial data is attained. 
+Next up is the multiphase case, 
+which requires more finesse, but we are able to show similar results as 
 in the 
 two-phase case. 
-For this we will need a generalized chain rule for distributional 
+For this we need a generalized chain rule for distributional 
 derivatives and a careful analysis of the geodesic distance functions with 
 respect to the potential $ W $ from equation (\ref{ac_intro}).
 
 \Cref{chapter_conditional_convergence_of_ac} is concerned with the conditional 
 convergence result proven by Laux and Simon in 
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. 
-We will show that the in \Cref{chapter_convergence_to_evolving_partition} 
+We show that the in \Cref{chapter_convergence_to_evolving_partition} 
 observed limit is a $ \bv $-solution to mean curvature flow under the crucial 
 assumption of energy convergence. 
-Again we will first consider the simpler two-phase case in 
+Again we first consider the simpler two-phase case in 
 order to simplify some of the arguments. Here one has to show the existence of 
 normal velocities followed by the equipartition of the Cahn--Hilliard energies. 
-Then we are going 
-to separately show the convergence of the velocity term and the curvature term 
+Then we separately show the convergence of the velocity term and the curvature 
+term 
 of the Allen--Cahn equation to the corresponding terms for mean curvature flow. 
-For the multiphase equivalent our core strategy will be to reduce the 
+For the multiphase equivalent our core strategy is to reduce the 
 multiphase case to the two-phase 
 case through a localization argument, which we detail in 
 \Cref{section_localization_estimates}. 
-Afterwards we will show the same results as in the two-phase case.
+Afterwards we show the same results as in the two-phase case.
 
-Lastly in \Cref{chapter_de_giorgis_mcf} we are going to present new results 
+Lastly in \Cref{chapter_de_giorgis_mcf} we present new results 
 building on the previous insights. We start off by presenting a De Giorgi type 
 $ \bv $-solution concept for multiphase mean curvature flow. This is followed 
 by proving a similar conditional convergence result as in the previous chapter. 
 In the final 
-\Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}, we are going to 
-discuss the assumption of energy convergence. Moreover we show that every De 
+\Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}, we discuss the 
+assumption of energy convergence. Moreover we show that every De 
 Giorgi type $ \bv $-solution is a De Giorgi type varifold solution in the sense 
 of Hensel and Laux in 
 \cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}, whose 
