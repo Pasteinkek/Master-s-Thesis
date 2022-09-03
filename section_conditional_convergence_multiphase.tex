@@ -14,7 +14,7 @@ equivalent.
 
 \begin{definition}[$\bv$-solution to multiphase mean curvature flow]
 	\label{motion_by_mmcf}
-	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
+	Fix some finite time horizon $ T < \infty $, a $ ( P \times P ) $-matrix of 
 	surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus 
 	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq \energy ( \chi^{ 0 } 
 	) < \infty $ and 
@@ -94,7 +94,7 @@ Since (\ref{distributional_equation_mmcf}) is quite the long equation, we want
 to motivate it as a suitable weak formulation for multiphase mean curvature 
 flow. 
 Assuming that everything is nice and smooth, we have by the 
-Gauss-Green theorem on surfaces 
+Gauss--Green theorem on surfaces 
 \cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} that
 \begin{equation*}
 	\int_{ \Sigma_{ i j } }
@@ -168,7 +168,7 @@ This is captured by the following.
 	\in \cont \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus ;  \{ 0 , 1 
 	\}^{ P } \right) \right) $ such that $ u_{ \varepsilon } $ converges to 
 	$ u \coloneqq \sum_{ 1 \leq i \leq P } \chi_{ i } \alpha_{ i } $ almost 
-	everywhere. Moreover $ u $ assumes the initial data $ u^{ 0 } $ in $ 
+	everywhere. Moreover $ u $ attains the initial data $ u^{ 0 } $ in $ 
 	\cont \left( [ 0, T ] ; \lp^{ 2 }( \flattorus ) \right) $. If we 
 	additionally assume that the 
 	time-integrated energies converge (\ref{energy_convergence}), then $ 
@@ -365,7 +365,7 @@ convergence
 			\abs{ \partial_{ t } \chi_{ i } } ( U ).
 		\end{align*}
 		Here the set $ \pi_{ x } ( U ) $ denotes the set of all $ t $ such that 
-		$ ( t , x ) $ is an element of $ U $. This completes the proof.
+		$ ( t , x ) $ is an element of $ U $. This shows the desired inequality.
 		
 		\item[Step 3:] The signed measure $ \partial_{ t } \chi_{ i } $ is 
 		singular to the wrong parts of $ \energy ( u ; \cdot ) $. More 
@@ -539,7 +539,8 @@ convergence
 \label{section_localization_estimates}
 In order to prove convergence of the curvature and velocity term, we want to 
 reduce the multiphase case to the two-phase case. The central idea here is to 
-cover the flat torus with a suitable covering of balls and argue that, up to a 
+cover the flat torus with a suitable collection of balls and argue that, up to 
+a 
 small error, we can choose 
 for each ball majority phases $ i, j $ such that the partition looks like a 
 two-phase mean curvature flow on the ball, see 
@@ -602,7 +603,7 @@ with the same center, but double the radius.
 Additionally to choosing a majority phase, we can also argue that along the 
 chosen majority phase, we have a local flatness. Thus we may approximate the 
 outer unit normal up to an arbitrarily small error by a constant unit vector. 
-This is captured by the following Lemma found in 
+This is captured by the following lemma found in 
 \cite{laux_otto_convergence_of_thresholding_scheme_for_mmcf}. The proof is 
 based on De Giorgi's structure theorem for sets of finite perimeter.
 
@@ -757,11 +758,11 @@ argument.
 
 \begin{remark}
 	\label{difference_twophase_multiphase_curvature}
-	We can not proceed exactly as in the twophase case. There the key argument 
+	We can not proceed exactly as in the two-phase case. There the key argument 
 	was that from the energy convergence, we could already infer that 
 	$ \abs{ \nabla \psi_{ \varepsilon } } ( \flattorus ) $ converges to $ \abs{ 
-	\nabla \psi } ( \flattorus ) $, and thus enabled us to apply the Theorem by 
-	Reshetnyak. Firstly we do not have one 
+	\nabla \psi } ( \flattorus ) $, and thus enabled us to apply the theorem by 
+	Reshetnyak. Firstly we do not have one single
 	primitive $ \phi $ of $ \sqrt{ 2 W } $ in the multiphase case and more 
 	importantly, we can 
 	not expect the functions $ 
@@ -793,7 +794,7 @@ argument.
 		\sigma_{ j k }
 		\hm^{ d -1 } ( \Sigma_{ j k } ).
 	\end{align*}
-	But by \Cref{rewriting_variation_of_psi_i}, we know that
+	Moreover by \Cref{rewriting_variation_of_psi_i}, we know that
 	\begin{equation*}
 		\abs{ \nabla \psi_{ i } }
 		=
@@ -821,7 +822,7 @@ argument.
 			\frac{ 1 }{ \varepsilon } \nabla W ( u_{ \varepsilon } )
 		}
 		{
-			\diff u_{ \varepsilon } \xi
+			\diff{ u_{ \varepsilon } } \xi
 		}
 		\dd{ x }
 		\\

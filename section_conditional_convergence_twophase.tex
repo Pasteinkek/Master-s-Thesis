@@ -153,7 +153,7 @@ boundedness of energies already implies that $ \chi $ is of bounded variation
 in space for almost every time. Moreover equation 
 (\ref{integral_formulation_of_mcf}) hinges on the distributional formulation 
 for the mean curvature vector as stated in 
-\cite{maggi_sets_of_finite_perimeter} and yields that
+\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} and yields that
 \begin{equation*}
 	\int
 		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
@@ -169,7 +169,7 @@ Thus the equation is equivalent to $ H = - V $ on $ \Sigma $.
 Our main goal in this section is now to show that the function $ \chi $ we have 
 found in \Cref{initial_convergence_result} moves my mean curvature, assuming 
 the time integrated energies converge (\ref{energy_convergence}). Thus our 
-goal is to prove the following Theorem.
+goal is to prove the following theorem.
 \begin{theorem}
 	\label{convergence_to_twophase_mcf}
 	Let a smooth double-well potential $ W \colon \mathbb{ R } \to [ 0, \infty 
@@ -193,7 +193,7 @@ goal is to prove the following Theorem.
 		< 
 		\infty,
 	\end{equation*}
-	we have that that for some subsequence of solutions $ u_{ \varepsilon } $ 
+	we have that for some subsequence of solutions $ u_{ \varepsilon } $ 
 	to 
 	(\ref{allen_cahn_eq}), there exists a pointwise 
 	almost everywhere limit $ u = ( 1 - \chi ) \alpha + \chi \beta $ with $ 
@@ -315,7 +315,7 @@ We therefore test equation (\ref{ac_weak_equation}) with $ \varphi_{
 \varepsilon } \coloneqq \inner{ \xi }{ \nabla u_{ \varepsilon } } $.
 
 A first additional regularity result under the energy convergence assumption is 
-the following Proposition, which ensures that we have a square-integrable 
+the following proposition, which ensures that we have a square-integrable 
 normal velocity.
 
 \begin{proposition}
@@ -417,7 +417,7 @@ normal velocity.
 \end{proof}
 
 We finish this section with a proof for the \emph{equipartition of the 
-	energyies}, which 
+	energies}, which 
 tells us that both the summand involving the potential $ W ( u_{ \varepsilon } 
 ) $ and the norm of the gradient contribute to the energy in equal parts. Or in 
 other words
@@ -557,12 +557,13 @@ and the proof is much more involved.
 		\lim_{ \varepsilon \to 0 }
 		\energy_{ \varepsilon } ( u_{ \varepsilon } ; \varphi ),
 	\end{equation*}
-	since the integral of $ \varphi 1/ \varepsilon 2 W ( u_{ \varepsilon } ) + 
-	\varphi \varepsilon \abs{ \nabla u_{\varepsilon } }^{ 2 } $ converges .
+	since the integral of $ 
+	\varphi \varepsilon \abs{ \nabla u_{\varepsilon } }^{ 2 } + \varphi 2 W ( 
+	u_{ \varepsilon } ) / \varepsilon $ converges .
 \end{proof}
 
 \subsection{Convergence of the curvature term}
-
+ 
 The goal of this section is to prove the convergence
 \begin{equation*}
 	\lim_{ \varepsilon \to 0 }
@@ -864,7 +865,7 @@ p $ is
 not equal to 0, and defined as 0 elsewhere. Since $ F (x , \lambda p ) = 
 \lambda F ( x, p ) $ for positive $ \lambda $ and since $ F $ satisfies the 
 periodic boundary condition in $ x $, we are in the position to apply a 
-Theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by 
+theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by 
 Luckhaus and Modica in \cite{luckhaus_modica_gibbs_thompson_relation}. We 
 will later see a quantitative version of this in the proof of
 \Cref{convergence_of_curvature_multiphase}. 
@@ -1325,8 +1326,9 @@ which vanishes as $ \varepsilon $ tends to zero by the weak convergence of $
 equipartition of the energies.
 Since we are taking $ \varepsilon $ to zero, we thus only have to make sure 
 that 
-the tilt-excess is sufficiently small since the approximate tilt excess 
-converges to the tilt excess.
+the tilt-excess $ \tilt_excess $ is sufficiently small since the approximate 
+tilt excess $ \tilt_excess_{ \varepsilon } $
+converges to the tilt excess $ \tilt_excess $.
 
 We are now in the position to argue why the error can be made arbitrarily 
 small. 
@@ -1372,7 +1374,7 @@ Then we choose a partition of unity $ \left( \eta_{ i } \right)_{ i = 1 ,
 	\frac{ \delta }{2 }.
 \end{equation*}
 The existence of these can be seen by taking a smooth approximation of $ \nu $ 
-with respect to the measure $ \abs{ \nabla \chi } \dd{ t } $.
+with respect to $ \abs{ \nabla \chi } \dd{ t } $.
 Collecting all of our errors, we obtain
 \begin{align*}
 	& \limsup_{ \varepsilon \to 0 }

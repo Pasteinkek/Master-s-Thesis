@@ -7,7 +7,7 @@ the aforementioned.
 curvature 
 flow]
 	\label{de_giorgi_solution_to_mmcf}
-	Fix some finite time horizon $ T < \infty $, a $ P \times P $ matrix of 
+	Fix some finite time horizon $ T < \infty $, a $ (P \times P) $-matrix of 
 	surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus 
 	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq \energy ( \chi^{ 0 } 
 	) < \infty $ and 
@@ -234,10 +234,10 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }.
 	\end{equation}
-	Moreover we have to show existence of the mean curvature function $ H $.
+	Moreover we have to show existence of the mean curvature vector $ H $.
 	We could cheat in this step and simply use that by 
 	\Cref{convergence_to_multiphase_mcf}, we already know that the tangential 
-	convergence applied to $ \xi $ is given by the velocity, or in other words, 
+	divergence applied to $ \xi $ is given by the velocity, or in other words, 
 	that we already have $ V_{ i } = H $ on $ \Sigma_{ i j } $. But we want 
 	to present a more direct approach.
 	
@@ -258,7 +258,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	to $ \lp^{ 2 } \left( ( 0 , T ) \times \flattorus ,\energy ( \xi ; \cdot ) 
 	; \mathbb{ R }^{ d }
 	 \right) $ since by the convergence of the curvature 
-	term observed in $ \Cref{convergence_of_curvature_multiphase} $, we have
+	term observed in \Cref{convergence_of_curvature_multiphase}, we have
 	\begin{align*}
 		\abs{ L ( \xi ) }
 		& =
@@ -434,7 +434,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\liminf_{ \varepsilon \to 0 }
 			\int_{ 0 }^{ T }
 				\int
-					\partial_{ t } \psi
+					\partial_{ t } \psi_{ \varepsilon }
 					\varphi
 				\dd{ x }
 			\dd{ t }
@@ -463,13 +463,18 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 				\varphi^{ 2 }
 			\dd{ \hm^{ d - 1 } }
 		\dd{ t }.
-	\end{align*}	
-	Since the inequality holds for any testfunction $ \varphi $, we may 
-	plug in a sequence of testfunctions $ \varphi_{ n } $ satisfying
+	\end{align*}
+	Here the last equality uses the weak convergence of $ \partial_{  t } 
+	\psi_{ \varepsilon } $ to $ \partial_{  t } \psi = \sigma V \abs{ \nabla 
+	\chi } \dd{ t } $ for the first summand 
+	and the equipartition of energies (\Cref{equipartition_of_energies}) for 
+	the second summand.
+	Since the inequality holds for any test function $ \varphi $, we may 
+	plug in a sequence of test functions $ \varphi_{ n } $ satisfying
 	\begin{equation*}
 		\lim_{ n \to \infty }
 			\norm{ \varphi_{ n } - V }_{ \lp^{ 2 } \left( ( 0 , T ) \times 
-			\flattorus , \dd{ \hm^{ d - 1 } } |_{ \Sigma } \dd{ t } \right) }
+			\flattorus , \hm^{ d - 1 }  \llcorner_{ \Sigma } \dd{ t } \right) }
 		= 0
 	\end{equation*}
 	and thereby obtain the desired inequality (\ref{lsc_of_velocity}).
@@ -607,7 +612,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\frac{ 1 }{ 2 }
 		\int_{ 0 }^{ T }
 		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
-		\dd{ t }
+		\dd{ t }.
 		\end{equation*}
 		By an addition with zero, we have
 		\begin{align*}
@@ -658,7 +663,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\dd{ t }
 		\right).
 	\end{align*}
-	Since no derivative has fallen on $ g_{ k } $, we may send $ \delta $ and 
+	Since no derivative has fallen on $ g_{ k } $, we may send $ \delta $ to 
+	zero and 
 	obtain by the dominated convergence theorem that we can replace $ g_{ k } $ 
 	by $ \mathds{ 1 }_{ ( T_{ k - 1 } , T_{ k } ) } $. We thus end up with a 
 	good summand consisting of

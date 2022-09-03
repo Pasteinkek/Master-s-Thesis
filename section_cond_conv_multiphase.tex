@@ -109,7 +109,7 @@ where $
 is a Lebesgue 
 nullset. 
 This can be salvaged through the following chain rule for 
-distributional derivatives by Ambrosio and Maso 
+distributional derivatives by Ambrosio and Dal Maso 
 \cite[Cor.~3.2]{ambrosio_maso_chain_rule}.
 
 \begin{theorem}
@@ -390,7 +390,7 @@ We are now in the position to prove the following regularity result for $
 		u_{ M }^{ j } 
 		\coloneqq
 		\begin{cases}
-			u^{ j }, & \text{ if} \abs{ u^{ j } } \leq M 
+			u^{ j }, & \text{ if } \abs{ u^{ j } } \leq M 
 			\\
 			M \frac{ u^{ j } }{ \abs{ u^{ j } } },
 			& \text{ else}.
@@ -672,7 +672,7 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  	$ ( t, x ) $ by $ \sum \lambda_{ j } \delta_{ \phi_{ i 
  	} ( \alpha_{ j } ) } $.
  	But $ \phi_{ i } \circ u_{ \varepsilon } $ converges to $ v_{ i } $ in $ 
- 	\lp^{ 1 } $, thus especially in measure, which implies by 
+ 	\lp^{ 1 } $, thus in particular in measure, which implies by 
  	\cite[Cor.~3.2]{Müller1999} that our convex combination already has to be 
  	trivial almost everywhere. In other words, we can write 
  	\begin{equation*}
@@ -766,7 +766,16 @@ With this powerful tool on our hands, we are in the position to prove a similar 
  	Since we have $ \sigma_{ i j } > 0 $ for $ i \neq j $, this proves that $ 
  	\chi_{ i } \in \bv \left( ( 0, T ) \times \flattorus \right) $.
  	
- 	The energy estimate is a non-trivial consequence of the lower semicontinuity of the variation measure and has been proven by Baldo in \cite{baldo_minimal_interface_criterion}. We will recap the proof since it provides some insight into the geometry of the phases.
+ 	The energy estimate (\ref{energy_estimate_for_limit_u}) is a non-trivial 
+ 	consequence of the lower semicontinuity of the variation measure and has 
+ 	been proven by Baldo in \cite{baldo_minimal_interface_criterion}. We will 
+ 	recap the proof since it provides some insight into the geometry of the 
+ 	phases. Basically one has to apply the lower semicontinuity to the 
+ 	variations $ \abs{ \nabla ( \phi_{ i } \circ u_{ \varepsilon } ) } $. Since 
+ 	this should only be an optimal approximation to the energy locally near $ 
+ 	\Omega_{ i} $, we need to work more than in the two-phase case.
+ 	After some definitions and combinatorial arguments, we will resume the 
+ 	proof below.
 \end{proof}
 
 \begin{definition}
@@ -855,7 +864,8 @@ obtain the following.
 
 Collecting our observations, we can finish our arguments.
 
-\begin{proof}[Continuation of the proof for \Cref{initial_convergence_result_multiphase}]
+\begin{proof}[Continuation of the proof of 
+\Cref{initial_convergence_result_multiphase}]
 	We are left with proving the estimate (\ref{energy_estimate_for_limit_u}). We first note that as for the proof of (\ref{l1_estimate_on_nabla_phi_composed_u}), it holds that for any open subset $ U $ of the flat torus, we have for almost every time $ t $ the estimate
 	\begin{equation*}
 		\liminf_{ \varepsilon \to 0 } 
@@ -913,7 +923,7 @@ Collecting our observations, we can finish our arguments.
 
 Next up, we want to prove a stronger convergence of $ u_{ \varepsilon } $ to $ 
 u 
-$. This will let us prove that $ u $ achieves its initial data continuously in 
+$. This will let us prove that $ u $ attains its initial data continuously in 
 $ \lp^{ 2 } $.
 
 \begin{lemma}
@@ -1076,7 +1086,7 @@ $ \lp^{ 2 } $.
 		
 		\item[Step 5:] The sequence $ u_{ \varepsilon } $ converges in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $.
 		
-		Here the proof does not change as well.
+		Here the proof does not change either.
 	\end{description}
 	This completes our arguments.
 \end{proof}

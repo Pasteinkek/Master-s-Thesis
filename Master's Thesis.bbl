@@ -26,18 +26,18 @@
            familyi={A\bibinitperiod},
            given={Samuel\bibnamedelima M.},
            giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=52dbce452736c579ce3afd0bc41401e2}{%
+        {{hash=b36fff9d16d4c4ac7dd996225b6acdde}{%
            family={Cahn},
            familyi={C\bibinitperiod},
-           given={John\bibnamedelima W.},
+           given={John\bibnamedelima Werner},
            giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
-      \strng{namehash}{b0b750cc348955e0ee07189b570adf2e}
-      \strng{fullhash}{b0b750cc348955e0ee07189b570adf2e}
-      \strng{bibnamehash}{b0b750cc348955e0ee07189b570adf2e}
-      \strng{authorbibnamehash}{b0b750cc348955e0ee07189b570adf2e}
-      \strng{authornamehash}{b0b750cc348955e0ee07189b570adf2e}
-      \strng{authorfullhash}{b0b750cc348955e0ee07189b570adf2e}
+      \strng{namehash}{8b0e6a62688f351e106f03faf9123957}
+      \strng{fullhash}{8b0e6a62688f351e106f03faf9123957}
+      \strng{bibnamehash}{8b0e6a62688f351e106f03faf9123957}
+      \strng{authorbibnamehash}{8b0e6a62688f351e106f03faf9123957}
+      \strng{authornamehash}{8b0e6a62688f351e106f03faf9123957}
+      \strng{authorfullhash}{8b0e6a62688f351e106f03faf9123957}
       \field{labelalpha}{AC79}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
@@ -141,35 +141,35 @@
     \endentry
     \entry{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}{article}{}
       \name{author}{3}{}{%
-        {{hash=4728cefeafa186121e2e5148523c4f1d}{%
+        {{hash=266f799927572ca5073b550bb4994901}{%
            family={Angenent},
            familyi={A\bibinitperiod},
-           given={S.},
+           given={Sigurd},
            giveni={S\bibinitperiod}}}%
-        {{hash=950bcf790551ab565d29eb4329219887}{%
+        {{hash=1065c19225ca31cab89766d2e59af926}{%
            family={Ilmanen},
            familyi={I\bibinitperiod},
-           given={T.},
+           given={Tom},
            giveni={T\bibinitperiod}}}%
-        {{hash=303275681c599422050b5da4b63f2ea3}{%
+        {{hash=4b98c5d92aea62975f86c553cd07fdee}{%
            family={Chopp},
            familyi={C\bibinitperiod},
-           given={D.\bibnamedelimi L.},
+           given={David\bibnamedelima Layne},
            giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
-      \strng{namehash}{85bd73282da961e177e24dbd29e05a2c}
-      \strng{fullhash}{85bd73282da961e177e24dbd29e05a2c}
-      \strng{bibnamehash}{85bd73282da961e177e24dbd29e05a2c}
-      \strng{authorbibnamehash}{85bd73282da961e177e24dbd29e05a2c}
-      \strng{authornamehash}{85bd73282da961e177e24dbd29e05a2c}
-      \strng{authorfullhash}{85bd73282da961e177e24dbd29e05a2c}
+      \strng{namehash}{7bcffc83c3c57cee5971b292d0a4b4e8}
+      \strng{fullhash}{7bcffc83c3c57cee5971b292d0a4b4e8}
+      \strng{bibnamehash}{7bcffc83c3c57cee5971b292d0a4b4e8}
+      \strng{authorbibnamehash}{7bcffc83c3c57cee5971b292d0a4b4e8}
+      \strng{authornamehash}{7bcffc83c3c57cee5971b292d0a4b4e8}
+      \strng{authorfullhash}{7bcffc83c3c57cee5971b292d0a4b4e8}
       \field{labelalpha}{AIC95}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0360-5302}
-      \field{journaltitle}{Comm. Partial Differential Equations}
+      \field{journaltitle}{Communications in Partial Differential Equationss}
       \field{number}{11-12}
       \field{title}{A computed example of nonuniqueness of mean curvature flow in {$\bold R^3$}}
       \field{volume}{20}
@@ -244,7 +244,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0036-1410}
-      \field{journaltitle}{SIAM J. Math. Anal.}
+      \field{journaltitle}{SIAM Journal on Mathematical Analysis}
       \field{number}{1}
       \field{title}{Convergence of the {A}llen-{C}ahn equation with a nonlinear {R}obin boundary condition to mean curvature flow with contact angle close to {$90^\circ$}}
       \field{volume}{54}
@@ -263,26 +263,26 @@
     \endentry
     \entry{ambrosio_maso_chain_rule}{article}{}
       \name{author}{2}{}{%
-        {{hash=d1fb85e6b388ff3ca0e66ab5e4721170}{%
+        {{hash=75c4bcbdd44f3d81980ee1e743ebfd0f}{%
            family={Ambrosio},
            familyi={A\bibinitperiod},
-           given={L.},
+           given={Luigi},
            giveni={L\bibinitperiod}}}%
-        {{hash=cafc8b7f2901fb40a5792460f5defafd}{%
+        {{hash=b0e866b68a2e3cd3ae72625337d4097d}{%
            family={Maso},
            familyi={M\bibinitperiod},
-           given={G.\bibnamedelimi Dal},
+           given={Gianni\bibnamedelima Dal},
            giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {American Mathematical Society}%
       }
-      \strng{namehash}{748123067b41f5514e8b04a7c47dd0cb}
-      \strng{fullhash}{748123067b41f5514e8b04a7c47dd0cb}
-      \strng{bibnamehash}{748123067b41f5514e8b04a7c47dd0cb}
-      \strng{authorbibnamehash}{748123067b41f5514e8b04a7c47dd0cb}
-      \strng{authornamehash}{748123067b41f5514e8b04a7c47dd0cb}
-      \strng{authorfullhash}{748123067b41f5514e8b04a7c47dd0cb}
+      \strng{namehash}{ff86c4744fe8fc6c041e7d4c61e430ef}
+      \strng{fullhash}{ff86c4744fe8fc6c041e7d4c61e430ef}
+      \strng{bibnamehash}{ff86c4744fe8fc6c041e7d4c61e430ef}
+      \strng{authorbibnamehash}{ff86c4744fe8fc6c041e7d4c61e430ef}
+      \strng{authornamehash}{ff86c4744fe8fc6c041e7d4c61e430ef}
+      \strng{authorfullhash}{ff86c4744fe8fc6c041e7d4c61e430ef}
       \field{labelalpha}{AM90}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
@@ -316,9 +316,6 @@
            given={Sisto},
            giveni={S\bibinitperiod}}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
       \list{publisher}{1}{%
         {Gauthier-Villars}%
       }
@@ -333,7 +330,7 @@
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Annales de l'I.H.P. Analyse non linéaire}
+      \field{journaltitle}{Annales de l'Institut Henri Poincaré Analyse non linéaire}
       \field{number}{2}
       \field{title}{Minimal interface criterion for phase transitions in mixtures of {Cahn-Hilliard} fluids}
       \field{volume}{7}
@@ -352,8 +349,8 @@
         {{hash=dedcff938f53900d5ecf5852693d0f56}{%
            family={Beck},
            familyi={B\bibinitperiod},
-           given={PA},
-           giveni={P\bibinitperiod}}}%
+           given={P.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \strng{namehash}{dedcff938f53900d5ecf5852693d0f56}
       \strng{fullhash}{dedcff938f53900d5ecf5852693d0f56}
@@ -379,25 +376,25 @@
            familyi={B\bibinitperiod},
            given={Lia},
            giveni={L\bibinitperiod}}}%
-        {{hash=efed0d9f0d90b38fea25e014b8a1740b}{%
+        {{hash=aab0fb6ee37b408a47cb1dcc94eaf234}{%
            family={Kohn},
            familyi={K\bibinitperiod},
-           given={Robert\bibnamedelima V.},
+           given={Robert\bibnamedelima Vita},
            giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
       }
-      \strng{namehash}{f5fb50f4db93b332af7c4db9f01e4481}
-      \strng{fullhash}{f5fb50f4db93b332af7c4db9f01e4481}
-      \strng{bibnamehash}{f5fb50f4db93b332af7c4db9f01e4481}
-      \strng{authorbibnamehash}{f5fb50f4db93b332af7c4db9f01e4481}
-      \strng{authornamehash}{f5fb50f4db93b332af7c4db9f01e4481}
-      \strng{authorfullhash}{f5fb50f4db93b332af7c4db9f01e4481}
+      \strng{namehash}{ef59931e04d66e36e1b03f4d8db4c0aa}
+      \strng{fullhash}{ef59931e04d66e36e1b03f4d8db4c0aa}
+      \strng{bibnamehash}{ef59931e04d66e36e1b03f4d8db4c0aa}
+      \strng{authorbibnamehash}{ef59931e04d66e36e1b03f4d8db4c0aa}
+      \strng{authornamehash}{ef59931e04d66e36e1b03f4d8db4c0aa}
+      \strng{authorfullhash}{ef59931e04d66e36e1b03f4d8db4c0aa}
       \field{labelalpha}{BK91}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-0396}
-      \field{journaltitle}{J. Differential Equations}
+      \field{journaltitle}{Journal of Differential Equations}
       \field{number}{2}
       \field{title}{Motion by mean curvature as the singular limit of {G}inzburg-{L}andau dynamics}
       \field{volume}{90}
@@ -439,7 +436,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0003-9527}
-      \field{journaltitle}{Arch. Rational Mech. Anal.}
+      \field{journaltitle}{Archive for Rational Mechanics and Analysis}
       \field{number}{4}
       \field{title}{On three-phase boundary motion and the singular limit of a vector-valued {G}inzburg-{L}andau equation}
       \field{volume}{124}
@@ -458,21 +455,21 @@
     \endentry
     \entry{brakke_kenneth_motion_of_surface_by_mean_curvature}{book}{}
       \name{author}{1}{}{%
-        {{hash=1f2cbef8f94627c4c46cd96f7ae5e578}{%
+        {{hash=c01800ea84f14c035a23cffcbc4d8d2a}{%
            family={Brakke},
            familyi={B\bibinitperiod},
-           given={Kenneth\bibnamedelima A.},
+           given={Kenneth\bibnamedelima Allen},
            giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Princeton University Press, Princeton, N.J.}%
       }
-      \strng{namehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
-      \strng{fullhash}{1f2cbef8f94627c4c46cd96f7ae5e578}
-      \strng{bibnamehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
-      \strng{authorbibnamehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
-      \strng{authornamehash}{1f2cbef8f94627c4c46cd96f7ae5e578}
-      \strng{authorfullhash}{1f2cbef8f94627c4c46cd96f7ae5e578}
+      \strng{namehash}{c01800ea84f14c035a23cffcbc4d8d2a}
+      \strng{fullhash}{c01800ea84f14c035a23cffcbc4d8d2a}
+      \strng{bibnamehash}{c01800ea84f14c035a23cffcbc4d8d2a}
+      \strng{authorbibnamehash}{c01800ea84f14c035a23cffcbc4d8d2a}
+      \strng{authornamehash}{c01800ea84f14c035a23cffcbc4d8d2a}
+      \strng{authorfullhash}{c01800ea84f14c035a23cffcbc4d8d2a}
       \field{labelalpha}{Bra78}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
@@ -520,7 +517,7 @@
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Geom. Flows}
+      \field{journaltitle}{Geometric Flows}
       \field{number}{1}
       \field{title}{A metric-based approach to multiphase mean curvature flows with mobilities}
       \field{volume}{3}
@@ -562,7 +559,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1073-2780}
-      \field{journaltitle}{Math. Res. Lett.}
+      \field{journaltitle}{Mathematical Research Letters}
       \field{number}{1}
       \field{title}{On the existence of high multiplicity interfaces}
       \field{volume}{3}
@@ -609,7 +606,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
-      \field{journaltitle}{J. Differential Geom.}
+      \field{journaltitle}{Journal of Differential Geometry}
       \field{number}{3}
       \field{title}{Uniqueness and existence of viscosity solutions of generalized mean curvature flow equations}
       \field{volume}{33}
@@ -643,7 +640,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-0396}
-      \field{journaltitle}{J. Differential Equations}
+      \field{journaltitle}{Journal of Differential Equations}
       \field{number}{1}
       \field{title}{Generation and propagation of interfaces for reaction-diffusion equations}
       \field{volume}{96}
@@ -690,28 +687,70 @@
       \field{pages}{81\bibrangedash 98}
       \range{pages}{18}
     \endentry
+    \entry{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e58d19f2b6ad111fe30b9ca7a942cb0c}{%
+           family={De\bibnamedelima Mottoni},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Piero},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8414fb1cd84dd903f5d7ab0dbe5983e4}{%
+           family={Schatzman},
+           familyi={S\bibinitperiod},
+           given={Michelle},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce24ffe4778c263f6ccb10fb21d7c78a}
+      \strng{fullhash}{ce24ffe4778c263f6ccb10fb21d7c78a}
+      \strng{bibnamehash}{ce24ffe4778c263f6ccb10fb21d7c78a}
+      \strng{authorbibnamehash}{ce24ffe4778c263f6ccb10fb21d7c78a}
+      \strng{authornamehash}{ce24ffe4778c263f6ccb10fb21d7c78a}
+      \strng{authorfullhash}{ce24ffe4778c263f6ccb10fb21d7c78a}
+      \field{labelalpha}{DS95}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9947}
+      \field{journaltitle}{Transactions of the American Mathematical Society}
+      \field{number}{5}
+      \field{title}{Geometrical evolution of developed interfaces}
+      \field{volume}{347}
+      \field{year}{1995}
+      \field{pages}{1533\bibrangedash 1589}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.2307/2154960
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/2154960
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/2154960
+      \endverb
+    \endentry
     \entry{evans_gariepy_measure_theory_and_fine_props}{book}{}
       \name{author}{2}{}{%
-        {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
+        {{hash=9e3671b8cdea270870f6087835958423}{%
            family={Evans},
            familyi={E\bibinitperiod},
-           given={L.C.},
-           giveni={L\bibinitperiod}}}%
-        {{hash=bee86f66841c40f695b65a0be8afa1b4}{%
+           given={Lawrence\bibnamedelima Craig},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2ccefaf76aaed329bb264285a9ecd20c}{%
            family={Gariepy},
            familyi={G\bibinitperiod},
-           given={R.F.},
-           giveni={R\bibinitperiod}}}%
+           given={Ronald\bibnamedelima Francis},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {CRC Press}%
       }
-      \strng{namehash}{bd3ded5271a763b9186dec73c7ab808f}
-      \strng{fullhash}{bd3ded5271a763b9186dec73c7ab808f}
-      \strng{bibnamehash}{bd3ded5271a763b9186dec73c7ab808f}
-      \strng{authorbibnamehash}{bd3ded5271a763b9186dec73c7ab808f}
-      \strng{authornamehash}{bd3ded5271a763b9186dec73c7ab808f}
-      \strng{authorfullhash}{bd3ded5271a763b9186dec73c7ab808f}
+      \strng{namehash}{fea360e30a32b591d2b73bdc8280462b}
+      \strng{fullhash}{fea360e30a32b591d2b73bdc8280462b}
+      \strng{bibnamehash}{fea360e30a32b591d2b73bdc8280462b}
+      \strng{authorbibnamehash}{fea360e30a32b591d2b73bdc8280462b}
+      \strng{authornamehash}{fea360e30a32b591d2b73bdc8280462b}
+      \strng{authorfullhash}{fea360e30a32b591d2b73bdc8280462b}
       \field{labelalpha}{EG15}
       \field{sortinit}{E}
       \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
@@ -730,30 +769,30 @@
     \endentry
     \entry{evans_spruck_motion_of_level_sets_by_mean_curvature}{article}{}
       \name{author}{2}{}{%
-        {{hash=4a9e255c2284d579594ce3ca31bb8812}{%
+        {{hash=9e3671b8cdea270870f6087835958423}{%
            family={Evans},
            familyi={E\bibinitperiod},
-           given={L.\bibnamedelimi C.},
+           given={Lawrence\bibnamedelima Craig},
            giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=0b81f2763a5beb48a6b7bb47bcd17350}{%
+        {{hash=066e36b004b872d012038f73a45d4e0f}{%
            family={Spruck},
            familyi={S\bibinitperiod},
-           given={J.},
+           given={Joel},
            giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{1045918777f7455120726c9357c95f42}
-      \strng{fullhash}{1045918777f7455120726c9357c95f42}
-      \strng{bibnamehash}{1045918777f7455120726c9357c95f42}
-      \strng{authorbibnamehash}{1045918777f7455120726c9357c95f42}
-      \strng{authornamehash}{1045918777f7455120726c9357c95f42}
-      \strng{authorfullhash}{1045918777f7455120726c9357c95f42}
+      \strng{namehash}{53acda9a468c3e2fc032abe2c3c5b0f8}
+      \strng{fullhash}{53acda9a468c3e2fc032abe2c3c5b0f8}
+      \strng{bibnamehash}{53acda9a468c3e2fc032abe2c3c5b0f8}
+      \strng{authorbibnamehash}{53acda9a468c3e2fc032abe2c3c5b0f8}
+      \strng{authornamehash}{53acda9a468c3e2fc032abe2c3c5b0f8}
+      \strng{authorfullhash}{53acda9a468c3e2fc032abe2c3c5b0f8}
       \field{labelalpha}{ES91}
       \field{sortinit}{E}
       \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
-      \field{journaltitle}{J. Differential Geom.}
+      \field{journaltitle}{Journal of Differential Geometry}
       \field{number}{3}
       \field{title}{Motion of level sets by mean curvature. {I}}
       \field{volume}{33}
@@ -769,10 +808,10 @@
     \endentry
     \entry{Fleming_Rishel_coarea_formula}{article}{}
       \name{author}{2}{}{%
-        {{hash=ecd71289e7c4593c2375d4f3c19ab84b}{%
+        {{hash=4d2232ce3bee85f770090f1fb66e3448}{%
            family={Fleming},
            familyi={F\bibinitperiod},
-           given={Wendell\bibnamedelima H.},
+           given={Wendell\bibnamedelima Helms},
            giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=2093abd8be86d9bf7ad24310486d0e40}{%
            family={Rishel},
@@ -780,12 +819,12 @@
            given={Raymond},
            giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{3b300398356b31588d880cd58301113b}
-      \strng{fullhash}{3b300398356b31588d880cd58301113b}
-      \strng{bibnamehash}{3b300398356b31588d880cd58301113b}
-      \strng{authorbibnamehash}{3b300398356b31588d880cd58301113b}
-      \strng{authornamehash}{3b300398356b31588d880cd58301113b}
-      \strng{authorfullhash}{3b300398356b31588d880cd58301113b}
+      \strng{namehash}{4b28c0497fa839ac1fd0e782b2229b03}
+      \strng{fullhash}{4b28c0497fa839ac1fd0e782b2229b03}
+      \strng{bibnamehash}{4b28c0497fa839ac1fd0e782b2229b03}
+      \strng{authorbibnamehash}{4b28c0497fa839ac1fd0e782b2229b03}
+      \strng{authornamehash}{4b28c0497fa839ac1fd0e782b2229b03}
+      \strng{authorfullhash}{4b28c0497fa839ac1fd0e782b2229b03}
       \field{labelalpha}{FR60}
       \field{sortinit}{F}
       \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
@@ -838,30 +877,30 @@
     \endentry
     \entry{gage_hamilton_the_heat_equation_shrinking_convex_plane_curves}{article}{}
       \name{author}{2}{}{%
-        {{hash=1638097b146617e10067b937f9e808ca}{%
+        {{hash=b3f2288319350d9a26288d792edd223d}{%
            family={Gage},
            familyi={G\bibinitperiod},
-           given={M.},
+           given={Michael},
            giveni={M\bibinitperiod}}}%
-        {{hash=677915b4aedf802b84c8052a22e2b09a}{%
+        {{hash=5777a71f2d0a232ed44fe1fed4710816}{%
            family={Hamilton},
            familyi={H\bibinitperiod},
-           given={R.\bibnamedelimi S.},
+           given={Richard\bibnamedelima Streit},
            giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
       }
-      \strng{namehash}{6529c45d352cf89b92174273c40c444d}
-      \strng{fullhash}{6529c45d352cf89b92174273c40c444d}
-      \strng{bibnamehash}{6529c45d352cf89b92174273c40c444d}
-      \strng{authorbibnamehash}{6529c45d352cf89b92174273c40c444d}
-      \strng{authornamehash}{6529c45d352cf89b92174273c40c444d}
-      \strng{authorfullhash}{6529c45d352cf89b92174273c40c444d}
+      \strng{namehash}{0a849accd0ea9cbdbad652c405a78259}
+      \strng{fullhash}{0a849accd0ea9cbdbad652c405a78259}
+      \strng{bibnamehash}{0a849accd0ea9cbdbad652c405a78259}
+      \strng{authorbibnamehash}{0a849accd0ea9cbdbad652c405a78259}
+      \strng{authornamehash}{0a849accd0ea9cbdbad652c405a78259}
+      \strng{authorfullhash}{0a849accd0ea9cbdbad652c405a78259}
       \field{labelalpha}{GH86}
       \field{sortinit}{G}
       \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
-      \field{journaltitle}{J. Differential Geom.}
+      \field{journaltitle}{Journal of Differential Geometry}
       \field{number}{1}
       \field{title}{The heat equation shrinking convex plane curves}
       \field{volume}{23}
@@ -935,7 +974,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
-      \field{journaltitle}{J. Differential Geom.}
+      \field{journaltitle}{Journal of Differential Geometry}
       \field{number}{1}
       \field{title}{Asymptotic behavior for singularities of the mean curvature flow}
       \field{volume}{31}
@@ -969,7 +1008,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
-      \field{journaltitle}{J. Differential Geom.}
+      \field{journaltitle}{Journal of Differential Geometry}
       \field{number}{2}
       \field{title}{Convergence of the Allen--Cahn equation to Brakke's motion by mean curvature}
       \field{volume}{38}
@@ -1013,7 +1052,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
-      \field{journaltitle}{J. Differential Geom.}
+      \field{journaltitle}{Journal of Differential Geometry}
       \field{number}{1}
       \field{title}{On short time existence for the planar network flow}
       \field{volume}{111}
@@ -1055,7 +1094,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0373-0956}
-      \field{journaltitle}{Ann. Inst. Fourier (Grenoble)}
+      \field{journaltitle}{Université de Grenoble. Annales de l'Institut Fourier}
       \field{number}{1}
       \field{title}{On the mean curvature flow of grain boundaries}
       \field{volume}{67}
@@ -1170,7 +1209,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0944-2669}
-      \field{journaltitle}{Calc. Var. Partial Differential Equations}
+      \field{journaltitle}{Calculus of Variations and Partial Differential Equations}
       \field{number}{5}
       \field{title}{Convergence of the thresholding scheme for multi-phase mean-curvature flow}
       \field{volume}{55}
@@ -1206,18 +1245,27 @@
       \strng{authorbibnamehash}{f560db5c4a47b1d034af76f47816415a}
       \strng{authornamehash}{f560db5c4a47b1d034af76f47816415a}
       \strng{authorfullhash}{f560db5c4a47b1d034af76f47816415a}
-      \field{labelalpha}{LS16}
+      \field{labelalpha}{LS18}
       \field{sortinit}{L}
       \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{issn}{0010-3640}
       \field{journaltitle}{Communications on Pure and Applied Mathematics}
-      \field{month}{06}
-      \field{title}{Convergence of the Allen‐Cahn Equation to Multiphase Mean Curvature Flow}
+      \field{number}{8}
+      \field{title}{Convergence of the {A}llen-{C}ahn equation to multiphase mean curvature flow}
       \field{volume}{71}
-      \field{year}{2016}
+      \field{year}{2018}
+      \field{pages}{1597\bibrangedash 1647}
+      \range{pages}{51}
       \verb{doi}
       \verb 10.1002/cpa.21747
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/cpa.21747
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/cpa.21747
       \endverb
     \endentry
     \entry{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}{article}{}
@@ -1245,7 +1293,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0944-2669}
-      \field{journaltitle}{Calc. Var. Partial Differential Equations}
+      \field{journaltitle}{Calculus of Variations and Partial Differential Equations}
       \field{number}{2}
       \field{title}{Implicit time discretization for the mean curvature flow equation}
       \field{volume}{3}
@@ -1328,6 +1376,7 @@
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{journaltitle}{preprint}
       \field{title}{Evolution of networks with multiple junctions}
       \field{year}{2016}
       \verb{doi}
@@ -1343,10 +1392,10 @@
     \endentry
     \entry{michor_mumford_riemannian_geometries_on_spaces_of_plane_curves}{article}{}
       \name{author}{2}{}{%
-        {{hash=3bae7b7b7e040a1bb6da07c1fd1b7be0}{%
+        {{hash=f5d22adebda3f7b9fc589106bdd5546e}{%
            family={Michor},
            familyi={M\bibinitperiod},
-           given={Peter\bibnamedelima W.},
+           given={Peter\bibnamedelima Wolfram},
            giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
         {{hash=275b714ea594482428d9b55ee81df320}{%
            family={Mumford},
@@ -1354,19 +1403,19 @@
            given={David},
            giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{bd15beb13f682e18bf35927a527043c8}
-      \strng{fullhash}{bd15beb13f682e18bf35927a527043c8}
-      \strng{bibnamehash}{bd15beb13f682e18bf35927a527043c8}
-      \strng{authorbibnamehash}{bd15beb13f682e18bf35927a527043c8}
-      \strng{authornamehash}{bd15beb13f682e18bf35927a527043c8}
-      \strng{authorfullhash}{bd15beb13f682e18bf35927a527043c8}
+      \strng{namehash}{1300609c03453cd11463adb9546ce931}
+      \strng{fullhash}{1300609c03453cd11463adb9546ce931}
+      \strng{bibnamehash}{1300609c03453cd11463adb9546ce931}
+      \strng{authorbibnamehash}{1300609c03453cd11463adb9546ce931}
+      \strng{authornamehash}{1300609c03453cd11463adb9546ce931}
+      \strng{authorfullhash}{1300609c03453cd11463adb9546ce931}
       \field{labelalpha}{MM06}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1435-9855}
-      \field{journaltitle}{J. Eur. Math. Soc. (JEMS)}
+      \field{journaltitle}{Journal of the European Mathematical Society (JEMS)}
       \field{number}{1}
       \field{title}{Riemannian geometries on spaces of plane curves}
       \field{volume}{8}
@@ -1385,29 +1434,29 @@
     \endentry
     \entry{modica_mortola_un_esempio_di_gamma_convergenza}{article}{}
       \name{author}{2}{}{%
-        {{hash=2bcd4bf01de673fc2fab33dbd2a1eebe}{%
+        {{hash=86098284dee21f95c73de899e9bc2ead}{%
            family={Modica},
            familyi={M\bibinitperiod},
-           given={L.},
+           given={Luciano},
            giveni={L\bibinitperiod}}}%
-        {{hash=1b42e33f7dfc71aba47bfc880a7b502f}{%
+        {{hash=b30ef5b0ad59acb9dbf868bb9f600f1a}{%
            family={Mortola},
            familyi={M\bibinitperiod},
-           given={S.},
+           given={Stefano},
            giveni={S\bibinitperiod}}}%
       }
-      \strng{namehash}{ab5106c3c53b501f139ec377023aa66d}
-      \strng{fullhash}{ab5106c3c53b501f139ec377023aa66d}
-      \strng{bibnamehash}{ab5106c3c53b501f139ec377023aa66d}
-      \strng{authorbibnamehash}{ab5106c3c53b501f139ec377023aa66d}
-      \strng{authornamehash}{ab5106c3c53b501f139ec377023aa66d}
-      \strng{authorfullhash}{ab5106c3c53b501f139ec377023aa66d}
+      \strng{namehash}{13e3cdd682c1959bd750ebd6c9777c3f}
+      \strng{fullhash}{13e3cdd682c1959bd750ebd6c9777c3f}
+      \strng{bibnamehash}{13e3cdd682c1959bd750ebd6c9777c3f}
+      \strng{authorbibnamehash}{13e3cdd682c1959bd750ebd6c9777c3f}
+      \strng{authornamehash}{13e3cdd682c1959bd750ebd6c9777c3f}
+      \strng{authorfullhash}{13e3cdd682c1959bd750ebd6c9777c3f}
       \field{labelalpha}{MM77}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Boll. Unione Mat. Ital. B}
+      \field{journaltitle}{Bollettino della Unione Matematica Italiana B}
       \field{title}{Un esempio di Gamma-convergenza}
       \field{volume}{14}
       \field{year}{1977}
@@ -1444,7 +1493,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0391-173X}
-      \field{journaltitle}{Ann. Sc. Norm. Super. Pisa Cl. Sci. (5)}
+      \field{journaltitle}{Annali della Scuola Normale Superiore di Pisa. Classe di Scienze. Serie V}
       \field{number}{2}
       \field{title}{Motion by curvature of planar networks}
       \field{volume}{3}
@@ -1452,71 +1501,27 @@
       \field{pages}{235\bibrangedash 324}
       \range{pages}{90}
     \endentry
-    \entry{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces}{article}{}
-      \name{author}{2}{}{%
-        {{hash=c91cb3ca34a853a73e175b70a23218ea}{%
-           family={Mottoni},
-           familyi={M\bibinitperiod},
-           given={Piero},
-           giveni={P\bibinitperiod},
-           prefix={de},
-           prefixi={d\bibinitperiod}}}%
-        {{hash=8414fb1cd84dd903f5d7ab0dbe5983e4}{%
-           family={Schatzman},
-           familyi={S\bibinitperiod},
-           given={Michelle},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{0504308ee33dc8f87b007c801fefe042}
-      \strng{fullhash}{0504308ee33dc8f87b007c801fefe042}
-      \strng{bibnamehash}{0504308ee33dc8f87b007c801fefe042}
-      \strng{authorbibnamehash}{0504308ee33dc8f87b007c801fefe042}
-      \strng{authornamehash}{0504308ee33dc8f87b007c801fefe042}
-      \strng{authorfullhash}{0504308ee33dc8f87b007c801fefe042}
-      \field{labelalpha}{MS95}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0002-9947}
-      \field{journaltitle}{Trans. Amer. Math. Soc.}
-      \field{number}{5}
-      \field{title}{Geometrical evolution of developed interfaces}
-      \field{volume}{347}
-      \field{year}{1995}
-      \field{pages}{1533\bibrangedash 1589}
-      \range{pages}{57}
-      \verb{doi}
-      \verb 10.2307/2154960
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.2307/2154960
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.2307/2154960
-      \endverb
-    \endentry
     \entry{mullins_two_dimensional_motion_of_idealized_grain_boundaries}{article}{}
       \name{author}{1}{}{%
-        {{hash=8d01cc0273d62aa344b686bfe5e2b2fa}{%
+        {{hash=af0dd39086a4e2ced7d700ff30215674}{%
            family={Mullins},
            familyi={M\bibinitperiod},
-           given={W.\bibnamedelimi W.},
+           given={William\bibnamedelima Wilson},
            giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
-      \strng{namehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
-      \strng{fullhash}{8d01cc0273d62aa344b686bfe5e2b2fa}
-      \strng{bibnamehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
-      \strng{authorbibnamehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
-      \strng{authornamehash}{8d01cc0273d62aa344b686bfe5e2b2fa}
-      \strng{authorfullhash}{8d01cc0273d62aa344b686bfe5e2b2fa}
+      \strng{namehash}{af0dd39086a4e2ced7d700ff30215674}
+      \strng{fullhash}{af0dd39086a4e2ced7d700ff30215674}
+      \strng{bibnamehash}{af0dd39086a4e2ced7d700ff30215674}
+      \strng{authorbibnamehash}{af0dd39086a4e2ced7d700ff30215674}
+      \strng{authornamehash}{af0dd39086a4e2ced7d700ff30215674}
+      \strng{authorfullhash}{af0dd39086a4e2ced7d700ff30215674}
       \field{labelalpha}{Mul56}
       \field{sortinit}{M}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0021-8979}
-      \field{journaltitle}{J. Appl. Phys.}
+      \field{journaltitle}{Journal of Applied Physics}
       \field{title}{Two-dimensional motion of idealized grain boundaries}
       \field{volume}{27}
       \field{year}{1956}
@@ -1581,18 +1586,18 @@
     \endentry
     \entry{Reshetnyak_weak_convergence}{article}{}
       \name{author}{1}{}{%
-        {{hash=9c5f5fc3c05085bd507f32e1d5eb5d50}{%
+        {{hash=b2dff0dc588d69be0d98ef3308845b96}{%
            family={Reshetnyak},
            familyi={R\bibinitperiod},
-           given={Yu.\bibnamedelimi G.},
+           given={Yurii\bibnamedelima Grigorievich},
            giveni={Y\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \strng{namehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
-      \strng{fullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
-      \strng{bibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
-      \strng{authorbibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
-      \strng{authornamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
-      \strng{authorfullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{namehash}{b2dff0dc588d69be0d98ef3308845b96}
+      \strng{fullhash}{b2dff0dc588d69be0d98ef3308845b96}
+      \strng{bibnamehash}{b2dff0dc588d69be0d98ef3308845b96}
+      \strng{authorbibnamehash}{b2dff0dc588d69be0d98ef3308845b96}
+      \strng{authornamehash}{b2dff0dc588d69be0d98ef3308845b96}
+      \strng{authorfullhash}{b2dff0dc588d69be0d98ef3308845b96}
       \field{labelalpha}{Res68}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
@@ -1617,25 +1622,25 @@
            familyi={S\bibinitperiod},
            given={Peter},
            giveni={P\bibinitperiod}}}%
-        {{hash=10e153cc539afa16ec9d8da7b202b0d4}{%
+        {{hash=7193a1960712378412478d6d2af4d338}{%
            family={Keller},
            familyi={K\bibinitperiod},
-           given={Joseph\bibnamedelima B.},
+           given={Joseph\bibnamedelima Bishop},
            giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
       }
-      \strng{namehash}{0e549af8ac23d158218cd85f6eeeb17e}
-      \strng{fullhash}{0e549af8ac23d158218cd85f6eeeb17e}
-      \strng{bibnamehash}{0e549af8ac23d158218cd85f6eeeb17e}
-      \strng{authorbibnamehash}{0e549af8ac23d158218cd85f6eeeb17e}
-      \strng{authornamehash}{0e549af8ac23d158218cd85f6eeeb17e}
-      \strng{authorfullhash}{0e549af8ac23d158218cd85f6eeeb17e}
+      \strng{namehash}{72293cf3888795cf3ac12b936c4b0bef}
+      \strng{fullhash}{72293cf3888795cf3ac12b936c4b0bef}
+      \strng{bibnamehash}{72293cf3888795cf3ac12b936c4b0bef}
+      \strng{authorbibnamehash}{72293cf3888795cf3ac12b936c4b0bef}
+      \strng{authornamehash}{72293cf3888795cf3ac12b936c4b0bef}
+      \strng{authorfullhash}{72293cf3888795cf3ac12b936c4b0bef}
       \field{labelalpha}{RSK89}
       \field{sortinit}{R}
       \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0036-1399}
-      \field{journaltitle}{SIAM J. Appl. Math.}
+      \field{journaltitle}{SIAM Journal on Applied Mathematics}
       \field{number}{1}
       \field{title}{Fast reaction, slow diffusion, and curve shortening}
       \field{volume}{49}
@@ -1677,7 +1682,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0010-3640}
-      \field{journaltitle}{Comm. Pure Appl. Math.}
+      \field{journaltitle}{Communications on Pure and Applied Mathematics}
       \field{number}{12}
       \field{title}{Gamma-convergence of gradient flows with applications to {G}inzburg-{L}andau}
       \field{volume}{57}

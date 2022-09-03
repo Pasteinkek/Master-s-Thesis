@@ -7,7 +7,7 @@ very
 briefly sketched in 
 \cite{convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow}. 
 Note moreover that one would expect even more regularity for a solution 
-of the Allen--Cahn equation. In fact, it has been shown by de Mottoni and 
+of the Allen--Cahn equation. In fact, it has been shown by De Mottoni and 
 Schatzmann in 
 \cite{de_mottoni_schatzmann_geometrical_evolution_of_developed_interfaces} that 
 in the scalar case, a solution u is 
@@ -85,13 +85,14 @@ gradient flows, which is why we want to present this technique here.
 		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } \left( \flattorus ; 
 		\mathbb{ R }^{ N } \right)$ by the lower growth assumption 
 		(\ref{polynomial_growth}) on $ W $.
-		Therefore we obtain by a duality argument that $ u \in \wkp^{ 1 , 2 } 
+		Therefore we obtain by the lower semicontinuity of the $ \lp^{ p } 
+		$-norm  that $ u \in \wkp^{ 1 , 2 } 
 		\cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $.
 		Lastly we have 
 		\begin{align*}
 			\frac{ 1 }{ 2 h }
 			\int \varepsilon \abs{ u - u_{ n - 1 } }^{ 2 } \dd{ x}
-			& \leq
+			& =
 			\liminf_{ k \to \infty }
 			\frac{ 1 }{ 2h }
 			\int \varepsilon \abs{ v_{ k } - u_{ n -1 } }^{ 2 } \dd{ x }
@@ -266,7 +267,7 @@ gradient flows, which is why we want to present this technique here.
 			\varepsilon \abs{ u_{n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
 			\dd{ x },
 		\end{align*}
-		where we expanded the square for the last equality.
+		where we recognized the square in the last equality.
 		This is the claimed estimate 
 		(\ref{discrete_optimal_energy_dissipation}).
 		
