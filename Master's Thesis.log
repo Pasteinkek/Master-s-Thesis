@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  3 SEP 2022 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  4 SEP 2022 16:16
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1275,8 +1275,8 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 \c@sometheorems=\count441
-LaTeX Info: Redefining \tilt_excess on input line 88.
-LaTeX Info: Redefining \geodesic_distance on input line 89.
+LaTeX Info: Redefining \tilt_excess on input line 91.
+LaTeX Info: Redefining \geodesic_distance on input line 92.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -1296,7 +1296,32 @@ LaTeX Warning: Label `Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2
 } $@cref' multiply defined.
 
 ) (chapter_conditional_convergence_of_allen_cahn.aux)
-(chapter_de_giorgis_mean_curvature_flow.aux) (chapter_appendix.aux))
+(chapter_de_giorgis_mean_curvature_flow.aux
+
+LaTeX Warning: Label `subfigure_epsilon' multiply defined.
+
+
+LaTeX Warning: Label `subfigure_epsilon@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@subfigure_epsilon' multiply defined.
+
+
+LaTeX Warning: Label `sub@subfigure_epsilon@cref' multiply defined.
+
+
+LaTeX Warning: Label `subfigure_varepsilon_prime' multiply defined.
+
+
+LaTeX Warning: Label `subfigure_varepsilon_prime@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@subfigure_varepsilon_prime' multiply defined.
+
+
+LaTeX Warning: Label `sub@subfigure_varepsilon_prime@cref' multiply defined.
+
+) (chapter_appendix.aux))
 \openout1 = `"Master's Thesis.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -1530,21 +1555,40 @@ chapter 2.
 
 
 
-] [6]) (section_existence_of_solution.tex
-[7] [8] [9]
+]
+<trianglepotentialsurf.png, id=285, 335.8146pt x 256.7994pt>
+File: trianglepotentialsurf.png Graphic file (type png)
+<use trianglepotentialsurf.png>
+Package pdftex.def Info: trianglepotentialsurf.png  used on input line 144.
+(pdftex.def)             Requested size: 168.04796pt x 128.50517pt.
+<trianglecontour2d.png, id=286, 333.4056pt x 259.6902pt>
+File: trianglecontour2d.png Graphic file (type png)
+<use trianglecontour2d.png>
+Package pdftex.def Info: trianglecontour2d.png  used on input line 150.
+(pdftex.def)             Requested size: 168.04796pt x 130.89484pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]) (section_existence_of_solution.tex [7 <./trianglepotentialsurf.png (PNG co
+py)> <./trianglecontour2d.png (PNG copy)>] [8] [9] [10]
 Overfull \hbox (2.25168pt too wide) in paragraph at lines 355--378
 []\OT1/cmr/m/n/10 (-20) In or-der to ap-ply the Arzela--Ascoli the-o-rem for t
 he se-quence $(\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (-20) )$ in $[] []$
  []
 
-[10] [11]
+
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [11]
+[12]
 Overfull \hbox (17.96873pt too wide) in paragraph at lines 587--594
 \OT1/cmr/m/n/10 (-20) In Step 6, we more-over have shown that $\OML/cmm/m/it/10
  @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
 1/cmr/m/n/10 (-20) in $[][] []$.
  []
 
-[12] [13] [14])) [15]
+[13] [14])) [15]
 \openout2 = `chapter_cond_conv_of_ac.aux'.
 
  (chapter_cond_conv_of_ac.tex [16
@@ -1958,11 +2002,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48746 strings out of 480930
- 1088292 string characters out of 2900231
- 1915999 words of memory out of 3000000
- 63356 multiletter control sequences out of 15000+200000
- 558352 words of font info for 197 fonts, out of 3000000 for 9000
+ 48766 strings out of 480930
+ 1088744 string characters out of 2900231
+ 1917229 words of memory out of 3000000
+ 63372 multiletter control sequences out of 15000+200000
+ 558502 words of font info for 198 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
@@ -2001,9 +2045,9 @@ sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 893078 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 968774 bytes).
 PDF statistics:
- 1512 PDF objects out of 1728 (max. 8388607)
- 336 named destinations out of 1000 (max. 500000)
- 27905 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1519 PDF objects out of 1728 (max. 8388607)
+ 337 named destinations out of 1000 (max. 500000)
+ 27915 words of extra memory for PDF output out of 29859 (max. 10000000)
 

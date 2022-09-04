@@ -17,6 +17,9 @@
 \usepackage{enumitem}							%configuration of list enviroments, e.g. alphabetic enumeration
 
 \usepackage[backend=biber,style=alphabetic,backref=true]{biblatex}
+
+\renewbibmacro{in:}{%
+	\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
 	
 		
 %used for citations. biber is the program which accesses the bib file and 
