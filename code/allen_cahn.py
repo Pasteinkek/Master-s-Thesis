@@ -1,33 +1,37 @@
 from fenics import *
 
 dt = 5.0e-3
-eps = 0.01
-t = 0.1
+n = 2
+eps = 1/n
+t = 0.05
 T = 1
 
 class PeriodicBoundary(SubDomain):
-
+    # based on https://fenicsproject.org/qa/262/possible-specify-more-than-one-periodic-boundary-condition/
+    # Left boundary is "target domain" G
     def inside(self, x, on_boundary):
-        return on_boundary
+        # return True if on left or bottom boundary AND NOT on one of the two corners (0, 1) and (1, 0)
+        return bool((near(x[0], 0) or near(x[1], 0)) and 
+                (not ((near(x[0], 0) and near(x[1], 1)) or 
+                        (near(x[0], 1) and near(x[1], 0)))) and on_boundary)
 
     def map(self, x, y):
-        for i in range(2):
-            if near(x[i], 0):
-                y[i] = 1
-            elif near(x[i], 1):
-                y[i] = 0
-            else:
-                raise Exception()
+        y[0] = x[0] + near(x[0], 1) * (-1) 
+        y[1] = x[1] + near(x[1], 1) * (-1) 
 
 mesh = UnitSquareMesh(100, 100)
+# mesh = UnitIntervalMesh(100)
 pbc = PeriodicBoundary()
 V = FunctionSpace(mesh, 'CG', 1, constrained_domain=pbc)
 
 u, v = Function(V), TestFunction(V)
 u.rename('u', '')
 
-u_init = Expression("pow(x[0],2)*sin(2*pi*x[0])", degree=2)
+# u_init = Expression("pow(x[0],2)*sin(2*pi*x[0])", degree=2)
+# u_init = Expression("sin(pi/eps * (x[0] + x[1]))", degree=3, eps=eps)
+u_init = Expression("sin(pi/eps * (x[0]))", degree=3, eps=eps)
 u_pre = Function(V)
+u_pre.rename('u', '')
 u_pre.interpolate(u_init)
 
 def W(u):
@@ -41,7 +45,7 @@ F = - dt * inner(grad(u), grad(v)) * dx \
 file = XDMFFile("data.xdmf")
 file.parameters["functions_share_mesh"] = True
 i = 0
-file.write(u, i)
+file.write(u_pre, i)
 
 while t < T:
     print(f'Time {t} of {T}.')
