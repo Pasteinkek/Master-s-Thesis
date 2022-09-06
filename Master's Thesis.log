@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  4 SEP 2022 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  6 SEP 2022 11:56
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1734,17 +1734,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ] [34]
-Overfull \hbox (5.06604pt too wide) detected at line 313
+Overfull \hbox (5.06604pt too wide) detected at line 319
 []
  []
 
 [35] [36] [37] [38] [39]
-Overfull \hbox (39.24515pt too wide) detected at line 1116
+Overfull \hbox (39.24515pt too wide) detected at line 1122
 []
  []
 
 [40]
-Overfull \hbox (9.26213pt too wide) detected at line 1323
+Overfull \hbox (9.26213pt too wide) detected at line 1329
 []
  []
 
@@ -2002,11 +2002,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48766 strings out of 480930
- 1088744 string characters out of 2900231
- 1917229 words of memory out of 3000000
+ 48764 strings out of 480930
+ 1088728 string characters out of 2900231
+ 1916229 words of memory out of 3000000
  63372 multiletter control sequences out of 15000+200000
- 558502 words of font info for 198 fonts, out of 3000000 for 9000
+ 558394 words of font info for 197 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
@@ -2045,9 +2045,9 @@ sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 968774 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 969330 bytes).
 PDF statistics:
- 1519 PDF objects out of 1728 (max. 8388607)
+ 1521 PDF objects out of 1728 (max. 8388607)
  337 named destinations out of 1000 (max. 500000)
  27915 words of extra memory for PDF output out of 29859 (max. 10000000)
 

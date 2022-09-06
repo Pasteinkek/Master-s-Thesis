@@ -3,7 +3,7 @@
 \subsection{Convergence to a $\bv$-solution of two-phase mean curvature flow}
 
 Convergence of energies often boosts our 
-modulus of convergence and gives our limit therefore additional regularity. 
+modulus of convergence and therefore gives our limit additional regularity. 
 Thus let us assume 
 \begin{equation}
 	\label{energy_convergence}
@@ -32,9 +32,11 @@ this assumption is important in
 \Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}.
 Moreover we notice that the energy of $ u $ is exactly the total variation of $ 
 \psi = \sigma \chi $.
-Since for almost every time $ t $, we have that $ \psi_{ \varepsilon } ( t ) $ 
-converges to $ \psi ( t ) $ in $ \lp^{ 1 }  ( \flattorus ) $ by 
-\Cref{initial_convergence_result}, it follows from the lower semicontinuity of 
+By 
+\Cref{initial_convergence_result} we have that for almost every time $ t $, $ 
+\psi_{ \varepsilon } ( t ) $ 
+converges to $ \psi ( t ) $ in $ \lp^{ 1 }  ( \flattorus ) $. Thus it follows 
+from the lower semicontinuity of 
 the variation measure and Young's inequality that
 \begin{equation*}
 	\energy ( u ) 
@@ -107,9 +109,9 @@ spirit of Luckhaus und Sturzenhecker
 		[ 0 , T ] ; \lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}  \right)
 		\right)
 	\end{equation*}
-	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) < \infty $ \emph{moves 
-	by mean 
-	curvature with initial data } $ \chi^{ 0 } $ if there is a normal velocity
+	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) < \infty $ is a
+	$ \bv $-\emph{solution to two-phase mean curvature flow with initial data} 
+	$ \chi^{ 0 } $ if there is a normal velocity
 	$ V \in \lp^{ 2 } \left( \abs{ \nabla \chi } \dd{ t } \right) $ such that 
 	\begin{enumerate}
 		\item 
@@ -142,7 +144,7 @@ spirit of Luckhaus und Sturzenhecker
 		\end{equation*}
 		holds distributionally in $ ( 0 , T ) \times \flattorus $.
 		\item 
-		The initial data $ \chi^{ 0 } $ is achieved in $ \cont \left( [ 0 , T ] 
+		The initial data $ \chi^{ 0 } $ is attained in $ \cont \left( [ 0 , T ] 
 		; \lp^{  2 } ( \flattorus ) \right) $, which means that $ \chi ( 
 		0 ) = \chi^{ 0 } $ as functions in $ \lp^{ 2 } ( \flattorus ) $.
 	\end{enumerate}
@@ -152,8 +154,8 @@ Let us give a brief motivation for this definition. First we note that the
 boundedness of energies already implies that $ \chi $ is of bounded variation 
 in space for almost every time. Moreover equation 
 (\ref{integral_formulation_of_mcf}) hinges on the distributional formulation 
-for the mean curvature vector as stated in 
-\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} and yields that
+for the mean curvature vector. In fact, we have by
+\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} that
 \begin{equation*}
 	\int
 		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
@@ -164,10 +166,14 @@ for the mean curvature vector as stated in
 		H \inner*{ \xi }{ \nu }
 	\abs{ \nabla \chi }.
 \end{equation*}
-Thus the equation is equivalent to $ H = - V $ on $ \Sigma $.
+Thus equation (\ref{integral_formulation_of_mcf}) is equivalent to $ H = -  V 
+\nu $ 
+$ \hm^{ d-1 } $-almost everywhere on $ \Sigma $.
 
-Our main goal in this section is now to show that the function $ \chi $ we have 
-found in \Cref{initial_convergence_result} moves my mean curvature, assuming 
+Our main goal in this section is now to show that the indicator function $ \chi 
+$ of the limit we
+found in \Cref{initial_convergence_result} is a $ \bv $-solution to two-phase 
+mean curvature flow, assuming 
 the time integrated energies converge (\ref{energy_convergence}). Thus our 
 goal is to prove the following theorem.
 \begin{theorem}
@@ -175,14 +181,14 @@ goal is to prove the following theorem.
 	Let a smooth double-well potential $ W \colon \mathbb{ R } \to [ 0, \infty 
 	) 
 	$ satisfy the assumptions (\ref{polynomial_growth})-(\ref{perturbation 
-		bound}). Let $ T < \infty $ be an arbitrary finite time horizon. Given 
-		a 
-	sequence of initial data $ u_{ \varepsilon }^{ 0 } \colon \flattorus \to 
-	\mathbb{ R } $ with $ \chi^{ 0 } \in \bv \left( \flattorus ; \{ 0 , 1 \} 
-	\right) 
-	$ such that $ u_{ \varepsilon }^{ 0 } $ converges to $ u^{ 0 } = ( 1- 
+		bound}). 
+	Let $ T < \infty $ be an arbitrary finite time horizon and let
+	 $ u_{ \varepsilon }^{ 0 } \colon \flattorus \to 
+	\mathbb{ R } $ be a sequence of initial data such that $ u_{ \varepsilon 
+	}^{ 0 } $ converges to $ u^{ 0 } 
+	= ( 1- 
 	\chi^{ 0} ) \alpha 
-	+ \chi^{ 0 } \beta $ pointwise almost everyhwere and
+	+ \chi^{ 0 } \beta $ pointwise almost everyhwere with 
 	\begin{equation*}
 		\energy_{ 0 }
 		\coloneqq
@@ -191,9 +197,9 @@ goal is to prove the following theorem.
 		\lim_{ \varepsilon \to 0 }
 		\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } )
 		< 
-		\infty,
+		\infty.
 	\end{equation*}
-	we have that for some subsequence of solutions $ u_{ \varepsilon } $ 
+	Then for some subsequence of solutions $ u_{ \varepsilon } $ 
 	to 
 	(\ref{allen_cahn_eq}), there exists a pointwise 
 	almost everywhere limit $ u = ( 1 - \chi ) \alpha + \chi \beta $ with $ 
