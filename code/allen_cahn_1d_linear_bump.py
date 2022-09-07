@@ -1,8 +1,15 @@
 from fenics import *
 
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('--eps', required=True, type=float)
+
+args = parser.parse_args()
+eps = args.eps
+
 dt = 5.0e-5
-n = 100
-eps = 1/n
+# n = 100
+# eps = 1/n
 t = 0.00
 T = .1
 
@@ -50,7 +57,7 @@ F = + 1/dt * u * v * dx \
     + inner(grad(u), grad(v)) * dx \
     + 1/eps**2 * W_prime(u) * v * dx
 
-file = XDMFFile("data_allen_cahn_1d_linear_bump.xdmf")
+file = XDMFFile(f"data_allen_cahn_1d_linear_bump_eps_{eps}.xdmf")
 file.parameters["functions_share_mesh"] = True
 i = 0
 file.write(u_pre, i)
