@@ -80,4 +80,4 @@ while t < T:
 
     u_pre.assign(u)
 
-file.write(
+file.write(u, i+1)
