@@ -1,25 +1,59 @@
-from fenics import *
+from dolfin import *
+
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('--eps', required=True, type=float)
+
+args = parser.parse_args()
+eps = args.eps
 
 dt = 5.0e-5
 # dt = 5.0e-4
-n = 100
-eps = 1/n
+# n = 100
+# eps = 1/n
 t = 0.00
-T = 1
+# T = 0.05
+T = 100 * dt
+# T = 1*dt
 
 
-class LinearBump(UserExpression):
-    def eval(self, values, x):
-        if x[0] < 0.25 + DOLFIN_EPS:
-            values[0] = -1
-        elif x[0] < .25 + eps + DOLFIN_EPS:
-            values[0] = 2/eps *(x[0]-.25) - 1
-        elif x[0] < .75 - eps + DOLFIN_EPS:
-            values[0] = 1
-        elif x[0] < .75 + DOLFIN_EPS:
-            values[0] = 2/eps *(.75 - eps - x[0]) + 1
-        else:
-            values[0] = -1
+# class LinearBump(UserExpression):
+#     def eval(self, values, x):
+#         if x[0] < 0.25 + DOLFIN_EPS:
+#             values[0] = -1
+#         elif x[0] < .25 + eps + DOLFIN_EPS:
+#             values[0] = 2/eps *(x[0]-.25) - 1
+#         elif x[0] < .75 - eps + DOLFIN_EPS:
+#             values[0] = 1
+#         elif x[0] < .75 + DOLFIN_EPS:
+#             values[0] = 2/eps *(.75 - eps - x[0]) + 1
+#         else:
+#             values[0] = -1
+
+# def distance(a, b):
+#     return sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2)
+
+# class Dumbel2D(UserExpression):
+#     def eval(self, values, x):
+#         r = 3/16
+#         a = 3/8
+
+#         if x[0] < .5 + DOLFIN_EPS:
+#             d = distance(x, (a, .5))
+#             if d < r + DOLFIN_EPS:
+#                 values[0] = 1
+#             elif d < r + eps + DOLFIN_EPS:
+#                 values[0] = 2/eps * (r - d) + 1
+#             else:
+#                 values[0] = -1
+#         else:
+#             d = distance(x, (1-a, .5))
+#             if d < r + DOLFIN_EPS:
+#                 values[0] = 1
+#             elif d < r + eps + DOLFIN_EPS:
+#                 values[0] = 2/eps * (r - d) + 1
+#             else:
+#                 values[0] = -1
 
 class PeriodicBoundary(SubDomain):
     # based on https://fenicsproject.org/qa/262/possible-specify-more-than-one-periodic-boundary-condition/
@@ -59,10 +93,10 @@ u, v = Function(V), TestFunction(V)
 u.rename('u', '')
 
 # u_init = Expression("pow(x[0],2)*sin(2*pi*x[0])", degree=2)
-# u_init = Expression("sin(pi/eps * (x[0] + x[1]))", degree=3, eps=eps)
+u_init = Expression("sin(pi/eps * (x[0] + x[1]))", degree=3, eps=eps)
 # u_init = Expression("sin(2*pi/eps * (x[0]))", degree=3, eps=eps)
 # u_init = Expression("pow(x[0],2)*sin(2*pi*x[0])", degree=2)
-u_init = LinearBump()
+# u_init = Dumbel2D()
 u_init = interpolate(u_init, V)
 # def boundary(x, on_boundary):
 #     return on_boundary
@@ -101,5 +135,8 @@ while t < T:
     t += dt
     solve(F == 0, u)
 
-    file.write(u, i)
+    if i % 10 == 0:
+        file.write(u, i)
     u_pre.assign(u)
+
+file.write(u, i)
