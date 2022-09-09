@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  6 SEP 2022 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  9 SEP 2022 15:43
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1610,7 +1610,7 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [22] [23]
-Overfull \hbox (41.83095pt too wide) in paragraph at lines 272--282
+Overfull \hbox (41.83095pt too wide) in paragraph at lines 273--283
 \OT1/cmr/m/n/10 (-20) by the dis-tri-bu-tional chain rule (The-o-rem []3.2.1[])
  the de-sired reg-u-lar-ity $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/
 cmm/m/it/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][]\O
@@ -1619,7 +1619,7 @@ n/10  []\OT1/cmr/m/n/10 (-20) )$.
  []
 
 [24]
-Overfull \hbox (13.13506pt too wide) detected at line 363
+Overfull \hbox (13.13506pt too wide) detected at line 364
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []; u\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   
 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []; u \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h
 v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  [][] [][] [] \OT1/cmr/m/n/10 = [][] [][] 
@@ -1627,26 +1627,26 @@ v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  [][] [][] [] \OT1/cmr/m/n/10 = [][] [][]
  []
 
 [25]
-Overfull \hbox (44.67496pt too wide) in paragraph at lines 514--519
+Overfull \hbox (44.67496pt too wide) in paragraph at lines 515--520
 \OT1/cmr/m/n/10 (-20) The last equal-ity is due to the dom-i-nated con-ver-genc
 e the-o-rem with ma-jo-rant $[][][]$.
  []
 
 [26]
-Overfull \hbox (6.18175pt too wide) in paragraph at lines 584--595
+Overfull \hbox (6.18175pt too wide) in paragraph at lines 585--596
 [][] []$ \OT1/cmr/m/it/10 (-20) to some $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-2
 0) = [][] \OML/cmm/m/it/10 [][]$ \OT1/cmr/m/it/10 (-20) with a par-ti-tion $\
 OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) .
  []
 
 [27] [28]
-Overfull \hbox (16.9579pt too wide) detected at line 811
+Overfull \hbox (16.9579pt too wide) detected at line 812
 \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
  []
 
 
-Overfull \hbox (4.58096pt too wide) in paragraph at lines 815--821
+Overfull \hbox (4.58096pt too wide) in paragraph at lines 816--822
 []\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
 o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
 t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
@@ -1733,26 +1733,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-] [34]
-Overfull \hbox (5.06604pt too wide) detected at line 319
+] [34] [35]
+Overfull \hbox (13.3994pt too wide) detected at line 359
 []
  []
 
-[35] [36] [37] [38] [39]
-Overfull \hbox (39.24515pt too wide) detected at line 1122
+[36] [37] [38] [39] [40]
+Overfull \hbox (39.24515pt too wide) detected at line 1184
 []
  []
 
-[40]
-Overfull \hbox (9.26213pt too wide) detected at line 1329
+[41]
+Overfull \hbox (9.26213pt too wide) detected at line 1392
 []
  []
 
-
-Underfull \vbox (badness 5490) has occurred while \output is active []
-
- [41])
-(section_conditional_convergence_multiphase.tex
+[42]) (section_conditional_convergence_multiphase.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
@@ -1822,51 +1818,51 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
 
-[42] [43]
-Overfull \hbox (14.02452pt too wide) in paragraph at lines 158--176
-\OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
--20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
-/m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
- []
+[43] [44]
+Underfull \vbox (badness 1442) has occurred while \output is active []
 
-[44] [45]
-Underfull \vbox (badness 2582) has occurred while \output is active []
-
- [46]
-[47] [48] [49]
-Overfull \hbox (5.79816pt too wide) detected at line 1072
-[]
+ [45]
+[46] [47] [48] [49]
+Overfull \hbox (5.4331pt too wide) in paragraph at lines 923--926
+\OT1/cmr/m/n/10 (-20) To this end, we will show the fol-low-ing three claims fo
+r a smooth func-tion $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][]\OT1/cmr/m/n/10
+ (-20) ([]; [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (-20) 1])$. 
  []
 
 [50]
-Underfull \vbox (badness 3386) has occurred while \output is active []
-
- [51]
-[52] [53]
-Overfull \hbox (21.99113pt too wide) detected at line 1621
+Overfull \hbox (5.79816pt too wide) detected at line 1101
 []
  []
 
-[54] Excluding 'comment' comment.
-Overfull \hbox (24.09381pt too wide) detected at line 1822
+[51]
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+ [52]
+[53]
+Overfull \hbox (21.99113pt too wide) detected at line 1651
+[]
+ []
+
+[54] [55] Excluding 'comment' comment.
+Overfull \hbox (24.09381pt too wide) detected at line 1853
 [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 \O
 T1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [][
 ] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/10 
 [] [] :
  []
 
-[55] [56] [57]
-Overfull \hbox (54.98384pt too wide) detected at line 2293
+[56] [57]
+Overfull \hbox (70.81721pt too wide) detected at line 2330
 []
  []
 
 [58] [59]
-Overfull \hbox (16.9885pt too wide) detected at line 2547
+Overfull \hbox (3.51866pt too wide) detected at line 2510
 []
  []
 
 
-Overfull \hbox (17.00299pt too wide) in paragraph at lines 2547--2559
+Overfull \hbox (17.00299pt too wide) in paragraph at lines 2592--2604
 \OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
 ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
 for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
@@ -2002,11 +1998,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48764 strings out of 480930
- 1088728 string characters out of 2900231
- 1916229 words of memory out of 3000000
- 63372 multiletter control sequences out of 15000+200000
- 558394 words of font info for 197 fonts, out of 3000000 for 9000
+ 48778 strings out of 480930
+ 1089098 string characters out of 2900231
+ 1915640 words of memory out of 3000000
+ 63380 multiletter control sequences out of 15000+200000
+ 558502 words of font info for 198 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
@@ -2045,9 +2041,9 @@ sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 969330 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 971463 bytes).
 PDF statistics:
- 1521 PDF objects out of 1728 (max. 8388607)
- 337 named destinations out of 1000 (max. 500000)
+ 1529 PDF objects out of 1728 (max. 8388607)
+ 341 named destinations out of 1000 (max. 500000)
  27915 words of extra memory for PDF output out of 29859 (max. 10000000)
 

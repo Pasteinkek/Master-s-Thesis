@@ -1,6 +1,6 @@
 \section{Conditional convergence in the two-phase case}
 
-\subsection{Convergence to a $\bv$-solution of two-phase mean curvature flow}
+\subsection{Convergence to a $\bv$-solution to two-phase mean curvature flow}
 
 Convergence of energies often boosts our 
 modulus of convergence and therefore gives our limit additional regularity. 
@@ -15,9 +15,9 @@ Thus let us assume
 	\energy ( u )
 	\dd{ t }
 	\text{ as }
-	\varepsilon \to 0,
+	\varepsilon \to 0.
 \end{equation}
-where in the two-phase case, the surface tension energy is defined for $ u = 
+Here in the two-phase case, the surface tension energy is defined for $ u = 
 \alpha ( 1 - \chi ) + 
 \beta \chi $ by 
 \begin{equation}
@@ -27,7 +27,7 @@ where in the two-phase case, the surface tension energy is defined for $ u =
 	\coloneqq
 	\sigma \int \abs{ \nabla \chi }
 \end{equation}
-already motivated in \Cref{section_mcf}. We will go into more depth about why 
+as already motivated in \Cref{section_mcf}. We will go into more depth why 
 this assumption is important in 
 \Cref{subsection_de_giorgi_type_varifold_solutions_for_mcf}.
 Moreover we notice that the energy of $ u $ is exactly the total variation of $ 
@@ -40,6 +40,9 @@ from the lower semicontinuity of
 the variation measure and Young's inequality that
 \begin{equation*}
 	\energy ( u ) 
+	=
+	\int
+	\abs{ \nabla \psi }
 	\leq
 	\liminf_{ \varepsilon \to 0 }
 	\int
@@ -50,9 +53,39 @@ the variation measure and Young's inequality that
 	\energy_{ \varepsilon } ( u_{ \varepsilon } ).
 \end{equation*}
 Moreover by the energy dissipation inequality (\ref{energy_dissipation_sharp}), 
-the energies stay uniformly bounded in time. Thus using the dominated 
-convergence theorem, we see that our time integrated energy convergence 
-assumption is equivalent to saying that for almost every time $ t \in ( 0, T ) 
+the energies stay uniformly bounded in time. Consider the inequality
+\begin{align*}
+	& \limsup_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+			\abs{
+				\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) 
+				-
+				\energy ( u ( t ) ) 
+			}
+		\dd{ t }
+	\\
+	\leq{} &
+	\limsup_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+			\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
+			-
+			\energy ( u ( t ) )
+		\dd{ t }
+	+
+	2
+	\limsup_{ \varepsilon \to 0 }
+		\int_{ 0 }^{ T }
+			\left(
+				\energy_{ \varepsilon } ( u_{ \varepsilon } ( t ) )
+				-
+				\energy ( u ( t ) )
+			\right)_{ - }
+		\dd{ t }.
+\end{align*}
+The first summand goes to zero via assumption, and the second vanishes as well 
+by the dominated convergence theorem. By possibly passing to a non-relabelled 
+subsequence, we see that the time integrated energies converge if and only if 
+for almost every time $ t \in ( 0, T ) 
 $, we have convergence of the energies $ \energy_{ \varepsilon } ( u_{ 
 \varepsilon } ( t ) ) \to \energy ( u ( t ) ) $.
 
@@ -72,8 +105,7 @@ corresponding energy measures by
 	\abs{ \nabla u_{ \varepsilon } }^{ 2 }
 	\right)
 	\dd{x } 
-	\text{ and }
-	\\
+	\shortintertext{ and }
 	& \energy ( u ; \varphi )
 	\coloneqq
 	\sigma
@@ -85,7 +117,7 @@ corresponding energy measures by
 		\varphi
 	\abs{ \nabla \psi }.
 \end{align*}
-Then from the energy convergence and lower semicontinuity just discussed, it 
+Then from the energy convergence and the lower semicontinuity, it 
 follows that 
 \begin{equation}
 	\label{convergence_of_energy_measures}
@@ -107,6 +139,10 @@ spirit of Luckhaus und Sturzenhecker
 		\chi \in 
 		\cont \left(
 		[ 0 , T ] ; \lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}  \right)
+		\right)
+		\cap
+		\bv \left(
+			( 0 , T ) \times \flattorus ; \{ 0 , 1 \} 
 		\right)
 	\end{equation*}
 	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) < \infty $ is a
@@ -145,17 +181,15 @@ spirit of Luckhaus und Sturzenhecker
 		holds distributionally in $ ( 0 , T ) \times \flattorus $.
 		\item 
 		The initial data $ \chi^{ 0 } $ is attained in $ \cont \left( [ 0 , T ] 
-		; \lp^{  2 } ( \flattorus ) \right) $, which means that $ \chi ( 
-		0 ) = \chi^{ 0 } $ as functions in $ \lp^{ 2 } ( \flattorus ) $.
+		; \lp^{  2 } ( \flattorus ) \right) $.
 	\end{enumerate}
 \end{definition}
 
-Let us give a brief motivation for this definition. First we note that the 
-boundedness of energies already implies that $ \chi $ is of bounded variation 
-in space for almost every time. Moreover equation 
+Let us give a brief motivation for this definition. The equation 
 (\ref{integral_formulation_of_mcf}) hinges on the distributional formulation 
 for the mean curvature vector. In fact, we have by
-\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} that
+\cite[Thm.~11.8]{maggi_sets_of_finite_perimeter} if $ \chi $ were smoothly 
+evolving that
 \begin{equation*}
 	\int
 		\inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu }
@@ -167,15 +201,13 @@ for the mean curvature vector. In fact, we have by
 	\abs{ \nabla \chi }.
 \end{equation*}
 Thus equation (\ref{integral_formulation_of_mcf}) is equivalent to $ H = -  V 
-\nu $ 
+\nu $ holding
 $ \hm^{ d-1 } $-almost everywhere on $ \Sigma $.
 
 Our main goal in this section is now to show that the indicator function $ \chi 
 $ of the limit we
 found in \Cref{initial_convergence_result} is a $ \bv $-solution to two-phase 
-mean curvature flow, assuming 
-the time integrated energies converge (\ref{energy_convergence}). Thus our 
-goal is to prove the following theorem.
+mean curvature flow. Thus we want to prove the following theorem.
 \begin{theorem}
 	\label{convergence_to_twophase_mcf}
 	Let a smooth double-well potential $ W \colon \mathbb{ R } \to [ 0, \infty 
@@ -208,9 +240,12 @@ goal is to prove the following theorem.
 	\right) $ which assumes the initial data in $ \cont \left( [ 0, T ] ; 
 	\lp^{ 2 }( \flattorus ) \right) $. If we additionally assume that the 
 	time-integrated energies converge (\ref{energy_convergence}), then $ \chi 
-	$ moves by mean curvature in the sense of \Cref{motion_by_mcv}.
+	$ is a $ \bv $-solution to two-phase mean curvature flow with initial data 
+	$ \chi^{ 0 } $ in the sense of \Cref{motion_by_mcv}.
 \end{theorem} 
-Looking at the distributional form of the Allen--Cahn equation 
+All claims expect the motion by mean curvature have been proven in the previous 
+chapter.
+Let us consider the distributional form of the Allen--Cahn equation 
 (\ref{ac_weak_equation}), which reads
 \begin{equation*}
 	\int
@@ -221,15 +256,18 @@ Looking at the distributional form of the Allen--Cahn equation
 	\partial_{ t } u_{ \varepsilon} ( t ) \varphi 
 	\dd{x}
 	=
-	0,
+	0.
 \end{equation*}
-we expect that for a suitable choice of testfunctions $ \varphi_{ \varepsilon } 
+We expect that for a suitable choice of test functions $ \varphi_{ \varepsilon 
+} 
 $, the following two terms converge:
 \begin{align*}
 	& \lim_{ \varepsilon \to 0 }
 	\int_{ 0 }^{ T }
 	\int 
 	\partial_{ t } u_{ \varepsilon } \varphi_{ \varepsilon }
+	\dd{ x }
+	\dd{ t }
 	=
 	\sigma
 	\int_{ 0 }^{ T }
@@ -256,28 +294,29 @@ $, the following two terms converge:
 	\abs{ \nabla \chi }
 	\dd{ t }.
 \end{align*}
-But how do we find these testfunctions? For this, we first note that the 
+But how do we find these test functions? For this, we first note that the 
 curvature term
 $ \int \inner*{ \diff \xi }{ \mathrm{Id} - \nu \otimes \nu } \abs{ \nabla \chi 
 } \dd{ t } $ is by \cite[Thm.~17.5]{maggi_sets_of_finite_perimeter} the first 
-inner variation with respect to $ \xi $ of the perimeter functional, which is 
+inner variation with respect to $ \xi $ of the perimeter functional.
+But the perimeter functional is 
 just our energy $ \energy $ up to the surface tension constant $ \sigma > 0 $. 
 Since the energy $ \energy_{ \varepsilon } $ converges to $ \energy $, we may 
 also hope that their first variations converge to each other. Thus it is 
 plausible to compute the first inner variation 
 $ \left.\dv{ s } \right|_{ s = 0 } \energy_{ \varepsilon } ( \rho_{ s } ) $ and 
-then we can hopefully choose the testfunction $ \varphi_{ \varepsilon } $ in 
+then we might choose the test function $ \varphi_{ \varepsilon } $ in 
 such a way that it equals
 $ 
 \int
-1 / \varepsilon^{ 2 }  W' ( u_{ \varepsilon} ) \varphi
-+
 \inner*{ \nabla u_{ \varepsilon } }{ \nabla \varphi }
++
+ W' ( u_{ \varepsilon} ) \varphi / \varepsilon^{ 2 }
 \dd{x}
 $.
 
-Thus let $ ( \rho_{ s } )_{ s } $ be functions which solve the ordinary 
-differential equation
+Thus let $ ( \rho_{ s } )_{ s \in \mathbb{ R } } $ be functions which solve the 
+transport equation
 \[
 \begin{cases}
 	\partial_{ s } \rho_{ s } 
@@ -294,7 +333,7 @@ Then we formally compute that the first inner variation of the energy $
 	\left.\dv{ s }\right|_{ s = 0 }
 	\int
 	\frac{ \varepsilon }{ 2 }
-	\abs{ \rho_{ s } }^{ 2 }
+	\abs{ \nabla \rho_{ s } }^{ 2 }
 	+
 	\frac{ 1 }{ \varepsilon }
 	W ( \rho_{ s } )
@@ -312,7 +351,8 @@ Then we formally compute that the first inner variation of the energy $
 	& =
 	\int
 	\left(
-	\varepsilon \Delta u - \frac{ 1 }{ \varepsilon } W'( u_{ \varepsilon } )
+	\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } W'( u_{ 
+	\varepsilon } )
 	\right)
 	\inner*{ \xi }{ \nabla u_{ \varepsilon } } 
 	\dd{ x }.
@@ -331,7 +371,8 @@ normal velocity.
 		t } \chi $ is absolutely continuous with respect to the measure $ \abs{ 
 		\nabla \chi } \dd{ t } $ and the corresponding density $ V $ is square 
 	integrable with the estimate
-	\begin{equation*}
+	\begin{equation}
+		\label{square_integrability_velocity_twophase}
 		\int_{ 0 }^{ T }
 		\int
 		V^{ 2 }
@@ -339,7 +380,7 @@ normal velocity.
 		\dd{ t }
 		\lesssim
 		\energy_{ 0 }.
-	\end{equation*}
+	\end{equation}
 \end{proposition}
 
 \begin{remark}
@@ -360,10 +401,18 @@ normal velocity.
 	\psi 
 	$, we have
 	\begin{align*}
-		\partial_{ t } \psi ( \varphi )
+		\int_{ 0 }^{ T }
+			\int 
+				\varphi
+		\partial_{ t } \psi
 		& =
 		\liminf_{ \varepsilon \to 0 }
-		\partial_{ t } \psi_{ \varepsilon } ( \varphi )
+		\int_{ 0 }^{ T }
+		\int
+		\varphi
+		\partial_{ t } \psi_{ \varepsilon } 
+		\dd{ x }
+		\dd{ t }
 		\\
 		& =
 		\liminf_{ \varepsilon \to 0 }
@@ -414,18 +463,19 @@ normal velocity.
 		\sqrt{ \energy_{ 0 } }.
 	\end{align*}
 	The second inequality is due to the energy dissipation inequality 
-	(\ref{energy_dissipation_sharp}) and the last equality due to the 
-	convergence of the localized energies 
-	(\ref{convergence_of_energy_measures}).
-	This proves both the absolute continuity and via a duality argument the 
-	desired bound since $ \partial_{ t } \psi = \sigma \partial_{ t } \chi $ 
-	and $ \sigma > 0 $.
+	(\ref{energy_dissipation_sharp}) and the last equality is due to the 
+	convergence of the energy measures 
+	(\ref{convergence_of_energy_measures}). Using  $ \partial_{ t } \psi = 
+	\sigma \partial_{ t } \chi $ 
+	and $ \sigma > 0 $,
+	this proves both the absolute continuity and via a duality argument the 
+	desired bound (\ref{square_integrability_velocity_twophase}).
 \end{proof}
 
 We finish this section with a proof for the \emph{equipartition of the 
 	energies}, which 
 tells us that both the summand involving the potential $ W ( u_{ \varepsilon } 
-) $ and the norm of the gradient contribute to the energy in equal parts. Or in 
+) $ and the norm of the gradient contribute to the energy with equal parts. In 
 other words
 \begin{equation*}
 	\frac{ 1 }{ \varepsilon } W ( u_{ \varepsilon } ) 
@@ -440,7 +490,8 @@ energy convergence assumption (\ref{energy_convergence}), the proof is quite
 simple. Ilmanen actually showed in 
 \cite{ilmanen_convergence_of_ac_to_brakkes_mcf} that in the two-phase case this 
 is true
-for a big class of well-prepared initial conditions, but the proof relies on a 
+for a big class of well-prepared initial conditions. However the proof relies 
+on a 
 comparison principle, which has no obvious substitute in the multiphase case 
 and the proof is much more involved.
 
@@ -521,7 +572,7 @@ and the proof is much more involved.
 	argument to both in order to get the claim.
 	
 	The third and fourth equality follow for a given non-negative $ \varphi 
-	\in \cont \left( \flattorus ; [ 0 , \infty ) \right) $ by the 
+	\in \cont \left( \flattorus \right) $ by the 
 	$ \lp^{ 2 } $-estimate
 	\begin{align*}
 		& \lim_{ \varepsilon \to 0 }
@@ -541,10 +592,11 @@ and the proof is much more involved.
 		\sqrt{ 2 W ( u_{ \varepsilon } ) }
 		\abs{ \nabla u_{ \varepsilon } }
 		\dd{ x }
-		=
-		0
+		\\
+		={} &
+		0.
 	\end{align*}
-	which implies that 
+	This implies that 
 	\begin{equation*}
 		\lim_{ \varepsilon \to 0 }
 		\int
@@ -591,7 +643,9 @@ The goal of this section is to prove the convergence
 for almost every time $ t $. We directly follow the proof from Luckhaus and 
 Modica in \cite{luckhaus_modica_gibbs_thompson_relation} with some extra steps.
 
-Through an integration by parts, we obtain
+In \Cref{existence_of_ac_solution}, we have shown $ u_{ \varepsilon } \in 
+\wkp^{ 2 , 2 } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ N } \right) 
+$. Thus through an integration by parts, we obtain
 \begin{align}
 	\label{conv_of_curv_first_ibp_scalar}
 	\int
@@ -749,12 +803,12 @@ Here the function $ g $ is defined by
 		\partial_{ x_{ i } } \xi^{ j }
 		\frac{ p_{ j } }{ \abs{ p } }
 		+
-		\divg \xi 
+		\divg \xi,
 		\quad
-		&\text{if } p \neq 0,
+		&\text{if } p \neq 0
 		\\
-		0
-		&\text{else},
+		0,
+		&\text{else}
 	\end{cases}
 \end{equation*}
 and the set $ \flattorus_{ \varepsilon } $ is defined as
@@ -868,12 +922,14 @@ Thus
 \end{align*}
 where $ F ( x, p ) $ is defined as $ g ( x , p ) \abs{ p } $ at points where $ 
 p $ is
-not equal to 0, and defined as 0 elsewhere. Since $ F (x , \lambda p ) = 
-\lambda F ( x, p ) $ for positive $ \lambda $ and since $ F $ satisfies the 
-periodic boundary condition in $ x $, we are in the position to apply a 
+not equal to 0, and defined as 0 elsewhere. 
+We can see that $ F (x , \lambda p ) = 
+\lambda F ( x, p ) $ for positive $ \lambda $ and $ F $ satisfies the 
+periodic boundary condition in $ x $.
+Therefore we are in the position to apply a 
 theorem proven by Reshetnyak in \cite{Reshetnyak_weak_convergence} and again by 
 Luckhaus and Modica in \cite{luckhaus_modica_gibbs_thompson_relation}. We 
-will later see a quantitative version of this in the proof of
+will later see a quantitative version of this theorem in the proof of
 \Cref{convergence_of_curvature_multiphase}. 
 Here it yields that since $ \abs{ \nabla \psi_{ 
 \varepsilon  } } ( \flattorus ) \to \abs{ \nabla \psi } ( \flattorus ) $ by the 
@@ -955,7 +1011,8 @@ follows from the generalized dominated convergence theorem via the equality
 \subsection{Convergence of the velocity term}
 
 We now want to prove the convergence of the velocity term given by
-\begin{equation*}
+\begin{equation}
+	\label{desired_convergence_velocity_term_twophase}
 	\lim_{ \varepsilon \to 0 }
 	\int_{ 0 }^{ T }
 	\int
@@ -970,7 +1027,7 @@ We now want to prove the convergence of the velocity term given by
 	V \inner*{ \xi }{ \nu }
 	\abs{ \nabla \chi }
 	\dd{ t }.
-\end{equation*}
+\end{equation}
 The difficulty here is that products of weakly converging sequences will in 
 general not weakly converge. To be more precise, we only have $ \partial_{ t } 
 u_{ \varepsilon } \rightharpoonup V \abs{ \nabla \chi } \dd{ t } $ and 
@@ -983,8 +1040,9 @@ normal. Freezing the approximate normal $ \varepsilon \nabla u_{ \varepsilon }
 $ amounts to replacing $ \varepsilon \nabla u_{ 
 \varepsilon } $ by $ 
 \varepsilon \abs{ \nabla u_{ \varepsilon } } \nu^{ \ast } $ for a suitably 
-chosen $ \nu^{ \ast } \in \mathbb{ S }^{ d-1 } $. Let $ \eta $ be a cutoff on 
-the support of $ \xi $ and denote by $ \nu_{ \varepsilon } = \nabla u_{ 
+chosen $ \nu^{ \ast } \in \mathbb{ S }^{ d-1 } $. Let $ \eta \in \cont^{ \infty 
+} \left( \flattorus ; [ 0 , 1 ] \right)$ be a smooth function and denote by $ 
+\nu_{ \varepsilon } = \nabla u_{ 
 \varepsilon } / \abs{ \nabla u_{ \varepsilon } } $ the approximate unit normal. 
 Then the error we make can be estimated for all $ 
 \alpha > 0 $ via Young's inequality by
@@ -994,14 +1052,15 @@ Then the error we make can be estimated for all $
 		\int_{ 0 }^{ T }
 		\int
 		\partial_{ t } u_{ \varepsilon }
-		\inner*{ \xi }{ \nabla u_{ \varepsilon } }
+		\inner*{ \eta \xi }{ \nabla u_{ \varepsilon } }
 		\dd{ x }
 		\dd{ t }
 		-
 		\int_{ 0 }^{ T }
 		\int
 		\partial_{ t } u_{ \varepsilon }
-		\inner*{ \xi }{ \varepsilon \abs{ \nabla u_{ \varepsilon } } \nu^{ \ast 
+		\inner*{ \eta \xi }{ \varepsilon \abs{ \nabla u_{ \varepsilon } } \nu^{ 
+		\ast 
 		} }
 		\dd{ x }
 		\dd{ t }
@@ -1009,25 +1068,27 @@ Then the error we make can be estimated for all $
 	\\
 	\notag
 	\leq {} &
-	\norm{ \xi }_{ \lp^{ \infty } }
+	\norm{ \xi }_{ \mathrm{sup} }
 	\int_{ 0 }^{ T }
 	\int
 	\eta
 	\sqrt{ \varepsilon }
 	\abs{ \partial_{  t } u_{ \varepsilon } }
 	\sqrt{  \varepsilon } 
+	\left(
 	\abs{
 		\nabla u_{ \varepsilon }
 		-
 		\abs{ \nabla u_{ \varepsilon } }
 		\nu^{ \ast }
 	}
+	\right)
 	\dd{ x } 
 	\dd{ t }
 	\\
 	\notag
 	\leq {} &
-	\norm{ \xi }_{ \lp^{ \infty } }
+	\norm{ \xi }_{ \mathrm{sup} }
 	\left(
 	\alpha 
 	\int_{ 0 }^{ T }
@@ -1051,9 +1112,9 @@ Then the error we make can be estimated for all $
 	\right)
 	\\
 	\label{acceptable_error_term_velocity_twophase}
-	\leq{}
+	\eqqcolon
 	&
-	\norm{ \xi }_{ \lp^{ \infty } }
+	\norm{ \xi }_{ \mathrm{sup} }
 	\left( 
 	\alpha 	
 	\int_{ 0 }^{ T }
@@ -1080,10 +1141,11 @@ Here the approximate tilt-excess in direction $ \nu^{ \ast } $ is given by
 	\dd{ x }
 	\dd{ t }.
 \end{equation*}
-So let us accept the error term \ref{acceptable_error_term_velocity_twophase} 
+So let us accept the error term (\ref{acceptable_error_term_velocity_twophase}) 
 for now.
-With our frozen normal, we now notice that via the equipartition of energies, 
-we may replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } } $ by $ \sqrt{ 2 W 
+Since our normal is frozen, we notice that via the equipartition of energies, 
+we may replace $ \varepsilon \abs{ \nabla u_{ \varepsilon } } $ with $ \sqrt{ 2 
+W 
 ( u_{ \varepsilon } ) } $ via the estimate
 \begin{align*}
 	& 
@@ -1124,7 +1186,7 @@ The first factor is uniformly bounded by the energy dissipation inequality
 (\ref{energy_dissipation_sharp}) and the second term vanishes as $ \varepsilon 
 $ tends to zero by the equipartition of energies 
 (\Cref{equipartition_of_energies}).
-But now we recognize the identity
+But now we recognize by the chain rule that
 \begin{equation*}
 	\int_{ 0 }^{ T }
 	\int
@@ -1158,8 +1220,9 @@ which converges as $ \varepsilon $ approaches zero to
 \end{equation}
 Finally we want to unfreeze the normal, which means that we want to replace $ 
 \nu^{ \ast } $ by $ \nu $ on the right hand side of equation 
-(\ref{rewriting_limit_of_frozen_velocity_term}). This can be estimated again by 
-Young's inequality via the error
+(\ref{rewriting_limit_of_frozen_velocity_term}). As in inequality 
+(\ref{acceptable_error_term_velocity_twophase}) this can be estimated via 
+Young's inequality by the error
 \begin{equation*}
 	\norm{ \xi }_{ \lp^{ \infty } }
 	\left(
@@ -1192,7 +1255,7 @@ that the errors can be made arbitrarily small.
 
 First we study the behaviour of the approximate tilt-excess $ \tilt_excess_{ 
 \varepsilon } $ by connecting it to $ \tilt_excess $. We notice that by 
-expansion, we have
+expanding the square, we have
 \begin{align*}
 	\tilt_excess_{ \varepsilon } ( \nu^{ \ast } ; \eta )
 	& =
@@ -1215,7 +1278,7 @@ expansion, we have
 		\dd{ x }
 		\dd{ t } }
 	{ \nu^{ \ast } }
-	\\
+	\shortintertext{and}
 	\tilt_excess ( \nu^{ \ast } ; \eta )
 	& =
 	2 \energy ( u ; \eta )
@@ -1230,8 +1293,8 @@ expansion, we have
 		\dd{ t }
 	}{ \nu^{ \ast } }.
 \end{align*}
-But by the equipartition of energies \Cref{equipartition_of_energies}, we have 
-that
+But by the equipartition of energies (\Cref{equipartition_of_energies}), it 
+holds that
 \begin{equation*}
 	2 \int_{ 0 }^{ T }
 	\int
@@ -1240,9 +1303,9 @@ that
 	\dd{ x }
 	\dd{ t }
 	\to 
-	2 \energy ( u ; \eta )
+	2 \energy ( u ; \eta ).
 \end{equation*} 
-and recognizing that $ \sigma \int_{0 }^{ T } \int \eta \nu \abs{ \nabla \chi } 
+By recognizing that $ \sigma \int_{0 }^{ T } \int \eta \nu \abs{ \nabla \chi } 
 \dd{ t } = \int_{ 0 }^{ T } \int \eta \nabla \psi $, we also obtain
 \begin{align*}
 	& 
@@ -1325,10 +1388,12 @@ and recognizing that $ \sigma \int_{0 }^{ T } \int \eta \nu \abs{ \nabla \chi }
 	\right)^{ 2 }
 	\dd{ x }
 	\dd{ t }
-	\right)^{ 1/2 },
+	\right)^{ 1/2 }.
 \end{align*}
-which vanishes as $ \varepsilon $ tends to zero by the weak convergence of $ 
+The first summand vanishes as $ \varepsilon $ tends to zero by the weak 
+convergence of $ 
 \nabla \psi_{ \varepsilon } \rightharpoonup^{ \ast } \nabla \psi $ and the 
+second summand by the
 equipartition of the energies.
 Since we are taking $ \varepsilon $ to zero, we thus only have to make sure 
 that 
@@ -1336,7 +1401,7 @@ the tilt-excess $ \tilt_excess $ is sufficiently small since the approximate
 tilt excess $ \tilt_excess_{ \varepsilon } $
 converges to the tilt excess $ \tilt_excess $.
 
-We are now in the position to argue why the error can be made arbitrarily 
+Therefore let us now argue why the error can be made arbitrarily 
 small. 
 Let $ \delta > 0 $. Then we first choose our $ \alpha > 0 $ so small that 
 \begin{equation*}
@@ -1445,6 +1510,7 @@ Collecting all of our errors, we obtain
 	\frac{ 2 }{ \alpha }
 	\tilt_excess ( \nu_{ i }^{ \ast } ; \eta_{ i } )
 	\right)
-	< \delta,
+	\\
+	& < \delta,
 \end{align*}
-which finishes the proof.
+which proves the convergence (\ref{desired_convergence_velocity_term_twophase}).
