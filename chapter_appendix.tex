@@ -37,16 +37,17 @@
 				\partial_{ \ast } \Omega_{ i }
 				\triangle
 				\bigcup_{ j \neq i }
-				\partial_{ \ast } \Omega_{ i }
+				\left(\partial_{ \ast } \Omega_{ i }
 				\cap
 				\partial_{ \ast } \Omega_{ j }
+				\right)
 			\right) = 0.
 		\end{equation*}
 	\end{enumerate}
 \end{lemma}
 
 \begin{remark}
-	In a maybe less confusing way, the first and third result yield that up to 
+	In a less confusing way, the first and third result yield that up to 
 	sets 
 	of $ \hm^{ d - 1 } $-measure zero, we have
 	$  \partial_{ \ast } ( A \cup B ) 
@@ -72,7 +73,7 @@
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap ( A \cup B ) ) }{ r^{ d } }
 		>0.
 	\end{equation*}
-	Then we must either have
+	Thus we must either have
 	\begin{equation*}
 		\limsup_{ r \to 0 }
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ r^{ d } }
@@ -113,9 +114,10 @@
 		\lim_{ r \to 0 }
 		\frac{ \lm^{ d } ( B_{ r } ( x ) \setminus A ) }{ \alpha( d ) r^{ d } }
 		\right\}
-		\cup N,
+		\cup N.
 	\end{equation}
-	where $ \alpha ( d ) \coloneqq \lm^{ d } ( B_{ 1 } ( 0 ) ) $ is the volume of the unit ball in $ d $ dimensions.
+	Here $ \alpha ( d ) \coloneqq \lm^{ d } ( B_{ 1 } ( 0 ) ) $ is the volume 
+	of the unit ball in $ d $ dimensions.
 	Thus assume $ x \in \partial^{ 1/2 } A \cap \partial^{ 1/2 } B $. Then since $ A $ and $ B $ are disjoint, we would have
 	\begin{equation*}
 		\limsup_{ r \to 0 }
@@ -144,9 +146,10 @@
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap A ) }{ r^{ d } } 
 		\leq
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus B ) }{ 
-		r^{ d } },
+		r^{ d } }.
 	\end{equation*}
-	thus the former from (\ref{one_equation_has_to_hold}) has to be true. We 
+	Thus the former equation from (\ref{one_equation_has_to_hold}) has to be 
+	true. We 
 	now estimate
 	\begin{align*}
 		\limsup_{ r \to 0 }
@@ -167,8 +170,8 @@
 		> 0,
 	\end{align*}
 	which proves $ x \in \partial_{ \ast } ( A \cup B ) $.
-	
-	The second equality is an immediate consequence of observation (\ref{measure_theoretic_boundary_almost_half_boundary}).
+	The second equality is an immediate consequence of observation 
+	(\ref{measure_theoretic_boundary_almost_half_boundary}).
 	
 	Now let us prove \Cref{rewriting_boundary_via_interfaces}. It follows immediately that  
 	\begin{equation*}
@@ -191,17 +194,20 @@
 	\begin{equation*}
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap \Omega_{ j } ) }{ r^{ d } } > 0.
 	\end{equation*}
-	Since
+	Moreover it holds that
 	\begin{equation*}
 		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \setminus \Omega_{ j } ) }{ r^{ d } } 
 		\geq
-		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap \Omega_{ i } ) }{ r^{ d } } > 0,
+		\limsup_{ r \to 0 } \frac{ \lm^{ d } ( B_{ r } ( x ) \cap \Omega_{ i } 
+		) }{ r^{ d } } > 0.
 	\end{equation*}
-	we therefore have $ x \in \partial_{ \ast } \Omega_{ j } $, which finishes the proof.
+	We therefore have $ x \in \partial_{ \ast } \Omega_{ j } $, which finishes 
+	the proof.
 \end{proof}
 
 \begin{proof}[Proof of \Cref{rewriting_variation_of_psi_i}]
-	Without loss of generality we can assume that $ i = 1 $ and $ \sigma_{ 1, j } \leq \sigma_{ 1, j + 1 } $ for all $ 1 \leq j \leq P - 1 $. 
+	Without loss of generality we can assume that $ i = 1 $ and $ \sigma_{ 1 j 
+	} \leq \sigma_{ 1 j + 1 } $ for all $ 1 \leq j \leq P - 1 $. 
 	All equalities for sets in this proof hold up to a set of $ 
 	(d-1)$-dimensional Hausdorff measure zero. First let us apply the 
 	Fleming--Rishel co-area formula to find that for a given open set $ U 
@@ -223,7 +229,7 @@
 		\\
 		& =
 		\sum_{ j = 1 }^{ P -1 }
-		\int_{ \sigma_{ 1, j } }^{ \sigma_{ 1, j + 1 } }
+		\int_{ \sigma_{ 1 j } }^{ \sigma_{ 1 j + 1 } }
 		\hm^{ d - 1 } \left(
 		\partial_{ \ast } \left(
 		\bigcup_{ k = 1 }^{ j }
@@ -234,7 +240,7 @@
 		\\
 		& =
 		\sum_{ j = 1 }^{ P - 1 }
-		\left(\sigma_{ 1, j +1} - \sigma_{ 1 , j } \right)
+		\left(\sigma_{ 1 j +1} - \sigma_{ 1  j } \right)
 		\hm^{ d - 1 } \left(
 		\partial_{ \ast } \left(
 		\bigcup_{ k = 1 }^{ j }
@@ -381,7 +387,7 @@
 		\cap
 		\partial_{ \ast } \Omega_{ k }.
 	\end{align}
-	Since by \Cref{identities_for_measure_theoretic_boundaries} 
+	By \Cref{identities_for_measure_theoretic_boundaries} 
 	\Cref{item_disjoint_sets}, we have for $ 1 \leq k \leq j +1 $, $ j+ 2 \leq 
 	l \leq P $ and $ 1 \leq m \leq j $ that
 	\begin{equation*}
@@ -394,9 +400,9 @@
 		\partial_{ \ast } \Omega_{ j + 1 }
 		\cap
 		\partial_{ \ast } \Omega_{ m }
-		\right) = 0,
+		\right) = 0.
 	\end{equation*}
-	taking the complement in the term (\ref{here_complement_obscolete}) becomes 
+	Hence the complement in the term (\ref{here_complement_obscolete}) becomes 
 	obsolete and thus we obtain the desired result 
 	(\ref{rewriting_measure_theoretic_boundary_of_union}).
 	Therefore we have again by \Cref{identities_for_measure_theoretic_boundaries} \Cref{item_disjoint_sets} that
@@ -404,7 +410,7 @@
 		I &=
 		\sum_{ j = 1 }^{ P - 1 }
 		\left(
-		\sigma_{ 1 , j + 1 } - \sigma_{ 1 , j }
+		\sigma_{ 1 j + 1 } - \sigma_{ 1 j }
 		\right)
 		\left(
 		\sum_{ k = 1 }^{ j }
@@ -427,7 +433,7 @@
 		\right)
 		\left(
 		\sum_{ j = k }^{ l - 1 }
-		\sigma_{ 1 , j + 1 } - \sigma_{ 1 , j }
+		\sigma_{ 1 j + 1 } - \sigma_{ 1 j }
 		\right)
 		\\
 		& =
@@ -439,16 +445,16 @@
 		\partial_{ \ast } \Omega_{ l }
 		\right)
 		\left(
-		\sigma_{ 1, l } - \sigma_{ 1 , k }
+		\sigma_{ 1 l } - \sigma_{ 1 k }
 		\right).
 	\end{align*}
-	Since we assumed without loss of generality that $ \sigma_{ 1 , j } \leq 
-	\sigma_{ 1, j + 1 } $, we know that
+	Since we assumed without loss of generality that $ \sigma_{ 1 j } \leq 
+	\sigma_{ 1 j + 1 } $, we know that
 	for $ k < l $,
 	\begin{equation*}
-		\sigma_{ 1 , l } - \sigma_{ 1 , k }
+		\sigma_{ 1  l } - \sigma_{ 1 k }
 		=
-		\abs{ \sigma_{ 1 , l } - \sigma_{ 1 , k } }
+		\abs{ \sigma_{ 1 l } - \sigma_{ 1 k } }
 	\end{equation*}
 	which finishes the proof.
 \end{proof}

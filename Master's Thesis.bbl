@@ -141,11 +141,11 @@
     \endentry
     \entry{angenent_chopp_ilmanen_a_computed_example_of_nonuniqueness_of_mcf}{article}{}
       \name{author}{3}{}{%
-        {{hash=266f799927572ca5073b550bb4994901}{%
+        {{hash=55f833edf0637c503ba53010e1d45259}{%
            family={Angenent},
            familyi={A\bibinitperiod},
-           given={Sigurd},
-           giveni={S\bibinitperiod}}}%
+           given={Sigurd\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
         {{hash=1065c19225ca31cab89766d2e59af926}{%
            family={Ilmanen},
            familyi={I\bibinitperiod},
@@ -157,12 +157,12 @@
            given={David\bibnamedelima L.},
            giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
-      \strng{namehash}{48611ee92df6258110f570fa07499e47}
-      \strng{fullhash}{48611ee92df6258110f570fa07499e47}
-      \strng{bibnamehash}{48611ee92df6258110f570fa07499e47}
-      \strng{authorbibnamehash}{48611ee92df6258110f570fa07499e47}
-      \strng{authornamehash}{48611ee92df6258110f570fa07499e47}
-      \strng{authorfullhash}{48611ee92df6258110f570fa07499e47}
+      \strng{namehash}{33000eed746a9463178784bfdf00321f}
+      \strng{fullhash}{33000eed746a9463178784bfdf00321f}
+      \strng{bibnamehash}{33000eed746a9463178784bfdf00321f}
+      \strng{authorbibnamehash}{33000eed746a9463178784bfdf00321f}
+      \strng{authornamehash}{33000eed746a9463178784bfdf00321f}
+      \strng{authorfullhash}{33000eed746a9463178784bfdf00321f}
       \field{labelalpha}{AIC95}
       \field{sortinit}{A}
       \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
@@ -680,7 +680,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Boundary value problems for partial differential equations and applications}
-      \field{series}{RMA Res. Notes Appl. Math.}
+      \field{series}{Recherches en mathématiques appliquées}
       \field{title}{New problems on minimizing movements}
       \field{volume}{29}
       \field{year}{1993}

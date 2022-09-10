@@ -2,10 +2,11 @@
 \label{subsection_de_giorgi_type_varifold_solutions_for_mcf}
 
 Up until this point, we have always made the crucial assumption of energy 
-convergence (\ref{energy_convergence}) for our proofs .
+convergence (\ref{energy_convergence}) for our proofs.
 However this is usually a very strong assumption. One thing which could go 
 wrong is for example illustrated in 
-\Cref{figure_interfaces_collapse}. There we see that two rough interfaces of 
+\Cref{figure_interfaces_collapse}. There we see that two approximate interfaces 
+of 
 the first and second phase collapse as $ \varepsilon $ tends to zero. This 
 results in a loss of energy since the measure theoretic boundary of a set with
 finite perimeter does not see such lines.
@@ -68,9 +69,10 @@ finite perimeter does not see such lines.
 	\label{figure_interfaces_collapse}
 \end{figure}
 
-This leads us to the solution concept introduced by Hensel and Laux in 
-\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow}.
-For the twophase case, the definition is as follows.
+We now introduce the solution concept by Hensel and Laux in 
+\cite{hensel_laux_varifold_solution_concept_for_mean_curvature_flow} which 
+tackles this issue. 
+For the two-phase case, the definition is as follows.
 
 \begin{definition}[De Giorgi type varifold solution for two-phase mean 
 	curvature flow]
@@ -78,16 +80,17 @@ For the twophase case, the definition is as follows.
 	Let $ T < \infty $ be an arbitrary finite time horizon and let $ \mu = 
 	\lm^{ 1 } \otimes ( \mu_{ t } )_{ t \in ( 0 , T ) } $ be a 
 	family of oriented varifolds $ \mu_{ t } \in \mathcal{ M } \left( 
-	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $, $ t \in ( 0 , T ) 
-	$, such that the map $ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d 
-			-1 } } \eta ( x , p , t ) \dd \mu_{ t } ( x , p ) $ is measurable 
+	\flattorus \times \mathbb{ S }^{ d - 1 } \right) $ for $ t \in ( 0 , T ) 
+	$ such that the map $ t \mapsto \int_{ \flattorus \times \mathbb{ S }^{ d 
+			-1 } } \eta (t, x , p ) \dd \mu_{ t } ( x , p ) $ is measurable 
 			for all 
 	$ \eta \in \lp^{ 1 } \left( ( 0 , T ) ; \cont \left( \flattorus, 
 	\mathbb{ S 
 	}^{ d - 1 } \right) \right) $. 
 	Consider also a family $ A = ( A_{ t } )_{ t \in ( 0 , T ) } $ of 
 	subsets of $ \flattorus $ with finite perimeter such that the associated 
-	indicator function $ \chi ( x , t ) = \chi_{ A _{ t } } ( x ) $ satisfies 
+	indicator function $ \chi ( x , t ) \coloneqq \chi_{ A _{ t } } ( x ) $ 
+	satisfies 
 	$ \chi \in \lp^{ \infty } \left( ( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 
 	1 \} ) \right) $.
 	Let $ \sigma > 0 $ be a surface tension constant.
@@ -96,18 +99,18 @@ For the twophase case, the definition is as follows.
 	$ \omega^{ 0 } \in \mathcal{ M } \left( \flattorus \right) $ and an initial 
 	phase indicator function $ \chi^{ 0 } \in \bv 
 	\left( \flattorus ; \{ 0 , 1 \} \right)$, we call the pair $ ( \mu , \chi ) 
-	$ a \emph{De Giorgi type varifold solution for two-phase mean curvature 
+	$ a \emph{De Giorgi type varifold solution to two-phase mean curvature 
 	flow 
 		with initial data} $ ( \omega^{ 0 } , \chi^{ 0 } ) $ if the following 
 		holds.
 	\begin{enumerate}
 		\item (Existence of a normal speed)
-		Writing $ \mu_{ t } = \omega_{ t } \otimes ( \lambda_{ x , t } )_{ x 
+		Writing $ \mu_{ t } = \omega_{ t } \otimes ( \lambda_{ t, x } )_{ x 
 			\in \flattorus} $ for the disintegration of $ \mu_{ t } $, we 
 			require 
 		the existence of some 
 		$ V \in \lp^{ 2 } \left( ( 0 , T ) \times \flattorus ,
-		\omega_{ t } \right) $ encoding a normal speed in the sense of
+		\omega_{ t } \right) $ encoding a normal velocity in the sense of
 		\begin{equation}
 			\label{equation_varifold_velocity}
 			\sigma
@@ -153,7 +156,7 @@ For the twophase case, the definition is as follows.
 			\int_{ 0 }^{ T }
 			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 			\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
-			\dd{ \mu_{ t } }
+			\dd{ \mu_{ t } ( x, p ) }
 			\dd{ t }
 		\end{equation}
 		for all $ \xi \in \cont_{ \mathrm{c} }^{ \infty } \left( [ 0, T ) 
@@ -191,25 +194,28 @@ For the twophase case, the definition is as follows.
 			=
 			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 			\inner*{ \xi }{ p }
-			\dd{ \mu_{ t } }.
+			\dd{ \mu_{ t } ( x, p ) }.
 		\end{equation}
 	\end{enumerate}
 \end{definition}
 
-We firstly want to discuss this definition. In the setting of 
-\Cref{de_giorgi_solution_to_mmcf} and in the two-phase case, we can think of 
+We firstly want to discuss this definition. If we have a De Giorgi type $ \bv 
+$-solution $ \chi $ to two-phase mean curvature flow in the sense of 
+\Cref{de_giorgi_solution_to_mmcf}, we can think of 
 the 
 oriented varifold $ \mu $ as the measure 
 \begin{equation} 
 	\label{equation_simple_varifold}
 	\mu =
 	\sigma \lm^{ 1 } |_{ 
-		( 0 , T ) } \otimes \abs{ \nabla \chi  ( t ) } 
-	\otimes \delta_{ \nu ( t , x ) }, 
+		( 0 , T ) } \otimes ( \abs{ \nabla \chi  ( t ) } )_{ t \in ( 0 , T ) }
+	\otimes  ( \delta_{ \nu ( t , x ) } )_{ t \in ( 0 , T ), x \in \flattorus 
+	}
 \end{equation}
 and therefore the measure $ \omega_{ t } $ 
 becomes the energy measure $ \energy ( \chi ( t ) , \cdot ) $.
-The advantage of this formulation is that our new energy measure $ \omega_{ t } 
+The advantage of the varifold-formulation is that our new energy measure $ 
+\omega_{ t } 
 $ is not restricted to only seeing the measure theoretic boundary of $ \chi $, 
 but can actually capture phenomenons as described in 
 \Cref{figure_interfaces_collapse}.
@@ -218,13 +224,15 @@ defined by
 \begin{equation}
 	\label{equation_mu_in_figure}
 	\mu_{ t } \coloneqq
-	2 \hm^{ 1 } |_{ l } \otimes \left(  \frac{ 1 }{ 2 } \delta_{ e_{ 1 } } + 
+	2 \sigma \hm^{ 1 } |_{ l } \otimes \left(  \frac{ 1 }{ 2 } \delta_{ e_{ 1 } 
+	} + 
 	 \frac{ 1 }{ 2 }\delta_{ -e_{ 1 } }\right)_{ x \in \flattorus } ,
 \end{equation}
 where $ l $ is the red line to which the phase 
 of $ \alpha_{ 2 } $ shrank down as $ \varepsilon $ approached zero and $ e_{ 1 
 } = ( 1 , 0 )^{ \top } $. The factor 
-2 comes from the fact that we obtain energy from both the collapsing interfaces.
+2 comes from the fact that we obtain energy from both of the collapsing 
+interfaces.
 
 The equation (\ref{equation_varifold_velocity}) for the  normal speed is simply 
 motivated through 
@@ -271,11 +279,11 @@ where for the last equality, we used $ \partial_{ t } \chi = V \abs{ \nabla
 	\chi } \dd{ t } $ and $ \omega_{ t } = \sigma \abs{ \nabla \chi ( t ) } $.
 
 The equation (\ref{equation_varifold_mean_curvature}) for the generalized mean 
-curvature is also quite intuitive. In fact if we
+curvature is straightforward. In fact if we
 assume that the varifold is given through equation 
 (\ref{equation_simple_varifold}), then we have that the right hand side of 
 equation 
-(\ref{equation_varifold_mean_curvature}) reads
+(\ref{equation_varifold_mean_curvature}) reads for a fixed time $ t $
 \begin{equation*}
 	\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 	\inner*{ \xi }{ \mathrm{Id} - p \otimes p }
@@ -284,19 +292,20 @@ equation
 	\sigma
 	\int
 	\inner*{ \xi }{\mathrm{Id} - \nu \otimes \nu }
-	\abs{ \nabla \chi },
+	\abs{ \nabla \chi }.
 \end{equation*}
-which is the distributional formulation for the mean curvature vector.
+This is exactly the distributional formulation for the mean curvature vector.
 
 De Giorgis inequality (\ref{equation_varifold_de_giorgi_inequality}) is 
 self-explanatory since $ \omega_{ t } $ is the energy measure. The 
 compatibility condition (\ref{equation_varifold_compatibility}) is necessary to 
 couple the evolving set $ A_{ t } $ to 
 the varifold. Notice that in our above example (\ref{equation_mu_in_figure}), 
-this condition is still satisfied even though we have that the energy measure $ 
+this condition is still satisfied.
+Even though the energy measure $ 
 \omega_{ t } $ sees the red strip 
 and the measure theoretic boundary of the corresponding indicator function does 
-not. In fact the term on the right hand side of 
+not, the term on the right hand side of 
 (\ref{equation_varifold_compatibility}) 
 is zero since
 \begin{equation*}
@@ -304,8 +313,8 @@ is zero since
 	\inner*{ \xi }{ p }
 	\dd{ \mu_{ t } }
 	=
+	\sigma
 	\int_{ l }
-	\frac{ 1 }{ 2 }
 	\inner*{ \xi }{ e_{ 1 } - e_{ 1 } }
 	\dd{ \hm^{ 1 } }
 	= 
@@ -317,14 +326,14 @@ generalizes
 \cite[Def.~2]{hensel_laux_varifold_solution_concept_for_mean_curvature_flow} to 
 the case of arbitrary surface tensions.
 
-\begin{definition}[De Giorgi type varifold solution for multiphase mean 
+\begin{definition}[De Giorgi type varifold solution to multiphase mean 
 	curvature flow]
 	\label{de_giorgi_varifold_solutions_for_mmcf}
 	Let $T < \infty $ be an arbitrary finite time horizon and let $ P \in 
 	\mathbb{ N }_{ \geq 2 } $ be the number of phases. For each 
-	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \} $, let 
+	pair of phases $ ( i , j ) \in \{ 1 , \dotsc, P \}^{ 2 } $, let 
 	$ \mu_{ i j } = \lm^{ 1 }|_{ ( 0 , T ) } \otimes ( \mu_{ t , i j } )_{ t 
-	\in ( 0 , \infty ) } $ be a family of oriented 
+	\in ( 0 , T ) } $ be a family of oriented 
 	varifolds 
 	$ \mu_{ t , ij } \in \mathcal{ M } \left(
 	\flattorus \times \mathbb{ S }^{ d - 1 }
@@ -338,11 +347,12 @@ the case of arbitrary surface tensions.
 	( 0 , T ) ; \cont \left( \flattorus \times \mathbb{ S }^{ d- 1 } 
 	\right) 
 	\right) $.
-	Define evolving oriented varifolds $ \mu_{ i } = \lm^{ 1 }|_{ ( 0 , T 
-		) } \otimes ( \mu_{ t , i } )_{ t \in ( 0 , T ) } $, $ i \in \{ 1, 
+	Define the evolving oriented varifolds $ \mu_{ i } = \lm^{ 1 }|_{ ( 0 , T 
+		) } \otimes ( \mu_{ t , i } )_{ t \in ( 0 , T ) } $ for $ i \in \{ 1, 
 	\dotsc, P \} $ and $ \mu = \lm^{ 1 }|_{ ( 0 , T ) } \otimes ( \mu_{ t 
-	} )_{ t \in ( 0 , T ) } $ by means of
-	\begin{equation*}
+	} )_{ t \in ( 0 , T ) } $ by 
+	\begin{equation}
+		\label{moon_equation}
 		\mu_{ t , i }
 		\coloneqq
 		2 \mu_{ t , i i }
@@ -355,7 +365,7 @@ the case of arbitrary surface tensions.
 		\frac{ 1 }{ 2 }
 		\sum_{ i = 1 }^{ P }
 		\mu_{ t, i }.
-	\end{equation*}
+	\end{equation}
 	The disintegration of $ \mu_{ t , i j } $ is expressed in form of 
 	$ \mu_{ t , i j } = \omega_{ t ,i j } \otimes \left( \lambda _{ t , x , i j 
 	} \right)_{ x \in \flattorus } $ with expected value
@@ -367,7 +377,7 @@ the case of arbitrary surface tensions.
 	Analagous expressions are introduced for the disintegrations of $ \mu_{ t, 
 		i } $ and $ \mu_{ t } $.
 	
-	Furthermore consider a family 
+	Furthermore consider a tuple 
 	$ A = \left( A_{ 1 } , \dotsc , A_{ P } \right) $ 
 	such that for each phase $ 1 \leq i \leq P $, we have a family
 	$ A_{ i } = ( A_{ i } ( t ) )_{ t \in ( 0 , T ) } $ of subsets of $ 
@@ -384,13 +394,14 @@ the case of arbitrary surface tensions.
 	
 	Given initial data 
 	$ (
-	( \omega^{ 0 },
+	 \omega^{ 0 },
 	( \chi_{ i}^{ 0 } )_{ 1 \leq i \leq P}
 	) $
-	of the above form and a $ P \times P $ matrix of surface tensions $ \sigma 
+	of the above form and a $ (P \times P) $-matrix of surface tensions $ 
+	\sigma 
 	$ such that $ \sigma_{ i j } > 0 $ for $ i \neq j 
 	$, we call the pair $ \left( \mu , \chi \right) $ a
-	\emph{De Giorgi type varifold solution for multiphase mean curvature flow 
+	\emph{De Giorgi type varifold solution to multiphase mean curvature flow 
 		with initial data} $ ( \omega^{ 0 } , \chi^{ 0 } ) $ \emph{and surface 
 		tensions} $ \sigma $ if the following requirements hold true.
 	\begin{enumerate}
@@ -449,7 +460,7 @@ the case of arbitrary surface tensions.
 			\int_{ \flattorus \times \mathbb{ S }^{ d - 1 } }
 			\inner*{ \diff \xi }
 			{ \mathrm{Id} - p \otimes p }
-			\dd{ \mu_{ t } }
+			\dd{ \mu_{ t } ( x , p ) }
 			\dd{ t }
 		\end{equation}
 		holds for all $ \xi \in \cont_{ 
@@ -530,38 +541,41 @@ the case of arbitrary surface tensions.
 	\end{enumerate}
 \end{definition}
 
-As before, we first want to motivate this definition. In the simplest case, we 
+As before, we first want to motivate this definition. If we have a De Giorgi 
+type $ \bv $-solution to multiphase mean curvature flow in the sense of 
+\Cref{de_giorgi_solution_to_mmcf}, we 
 can think of the varifold $ \mu_{ t , i j } $ for $ i \neq j $ as
 \begin{equation}
 	\label{varifold_simplest_case_mutliphase}
 	\mu_{ t , i j }
 	=
 	\sigma_{ i j }
-	\dd{ \hm^{ d - 1 }|_{ \Sigma_{ i j } } } 
+	 \hm^{ d - 1 }\llcorner_{ \Sigma_{ i j } } 
 	\otimes
-	( \delta_{ \nu_{ i } } )_{ x \in \flattorus },
+	( \delta_{ \nu_{ i } } )_{ x \in \flattorus }
 \end{equation}
 and $ \mu_{ t , i i } = 0 $.
-But if approximate interfaces collapse as in 
-\Cref{figure_interfaces_collapse}, then this is exactly captured by the 
-varifolds $ \mu_{ t, i i }$, which, as in the 
-twophase case, will be 
+But if the approximate interfaces collapse as in 
+\Cref{figure_interfaces_collapse}, then this will be captured by the 
+varifolds $ \mu_{ t, i i }$, which will be 
 described by
 \begin{equation}
 	\label{varifold_when_interfaces_collapse}
 	\mu_{ t, 1 1 }
 	=
 	2
-	\hm^{ 1 } |_{ l }
+	\hm^{ 1 } \llcorner_{ l }
 	\otimes
 	\left( 
 		\frac{ 1 }{ 2 } \delta_{ e_{ 1 } } 
 		+ 
 		\frac{ 1 }{ 2 } \delta_{ - e_{ 1 } } 
-	\right)_{ x \in \flattorus }.
+	\right)_{ x \in \flattorus }
 \end{equation}
+as in the two-phase case,
 
-In the definition of $ \mu_{ t } $, the factor $1/2$ is present since every 
+Considering the definition of $ \mu_{ t } $ by equality (\ref{moon_equation}), 
+the factor $1/2$ is present since every 
 interface $ \mu_{ t , i j } $, $ i \neq j $, is counted twice. Thus we need the 
 factor 2 in front of $ \mu_{ t , i i } $ in the definition of $ \mu_{ t , i } $
 since this interface is not counted twice.
@@ -576,13 +590,17 @@ case. For the energy dissipation inequality, we note that we need the factor $
 twice. 
 
 The first compatibility condition (\ref{varifold_symmetry_of_energy_measures}) 
-follows simply from $ \Sigma_{ i j } = \Sigma_{ j i } $ if we are in the 
-setting of energy convergence. But it should even hold true in situations like 
-\Cref{figure_interfaces_collapse}, since the equation becomes trivial for $ i = 
+follows simply from $ \sigma_{ i j } = \sigma_{ j i }$ and $ \Sigma_{ i j } = 
+\Sigma_{ j i } $ if we have a De Giorgi type $ \bv $-solution. But it should 
+even 
+hold true in situations like 
+\Cref{figure_interfaces_collapse}, since the equation 
+(\ref{varifold_symmetry_of_energy_measures}) becomes trivial for $ i = 
 j $. 
-The second compatibility condition 
-(\ref{varifold_symmetry_expectations}) states that in the setting of energy 
-convergence, we have $ \nu_{ i } = - \nu_{ j } $ on $ \Sigma_{ i j } $ $ \hm^{ 
+In the same situation, the second compatibility condition 
+(\ref{varifold_symmetry_expectations}) states that even if approximate 
+interfaces collapse, we have $ \nu_{ i } = - \nu_{ j } $ on $ \Sigma_{ i j } $ 
+$ \hm^{ 
 	d -1 } $-almost everywhere. For $ i = j $, the equation states that 
 $ \langle \lambda_{ t , x , i i } \rangle = 0 $, which is satisfied by equation
 (\ref{varifold_when_interfaces_collapse}). 
@@ -591,8 +609,9 @@ Similarly we explain the anti-symmetry of the velocities
 (\ref{varifold_mean_curvature_points_in_normal_direction}) encodes that the 
 mean curvature vector should always point in direction of the inner unit 
 normal, which is not necessarily the case for varifolds, as demonstrated in 
-\Cref{mean_curvature_vector_does_not_have_to_point_in_normal_direction}, but 
-can always be assured in the setting of energy convergence, see the proof of
+\Cref{mean_curvature_vector_does_not_have_to_point_in_normal_direction}.
+Nevertheless this can always be assured if we have a De Giorgi type $ \bv 
+$-solution, see the proof of
 \Cref{bv_solutions_are_varifold_solutions}. 
 For the last compatibility condition 
 (\ref{varifold_compatibility_condition_multiphase}), we again notice that it 
@@ -603,17 +622,18 @@ behaves similarly to its two-phase equivalent.
 	Every  De Giorgi type $ \bv $-solution to multiphase mean curvature 
 	flow in the sense of \Cref{de_giorgi_solution_to_mmcf} is also a De Giorgi 
 	type varifold solutions for multiphase mean curvature flow in the sense of
-	\Cref{de_giorgi_varifold_solutions_for_mmcf} with varifold $ \mu $ given by
+	\Cref{de_giorgi_varifold_solutions_for_mmcf}.
+	The varifold $ \mu $ is given by
 	\begin{align*}
 		\mu_{ t, ij  }
 		& \coloneqq
 		\sigma_{ i j }
-		\hm^{ d- 1 }|_{ \Sigma_{ i j } ( t ) }
+		\hm^{ d- 1 }\llcorner_{ \Sigma_{ i j } ( t ) }
 		\otimes
 		( \delta_{ \nu_{ i } ( t, x ) } )_{ x \in \flattorus }
 	\end{align*} 
 	for $ i \neq j $, $
-	\mu_{ t , i i } = 0 $ and initial energy $ \omega^{ 0 } 
+	\mu_{ t , i i } = 0 $ and the initial energy is $ \omega^{ 0 } 
 	= \energy_{ 0 } $.
 \end{theorem}
 
@@ -624,7 +644,7 @@ behaves similarly to its two-phase equivalent.
 		& =
 		\sum_{ j \neq i }
 		\sigma_{ i j }
-		\hm^{ d- 1 }_{ \Sigma_{ i j } }
+		\hm^{ d- 1 }\llcorner_{ \Sigma_{ i j } }
 		\otimes
 		( \delta_{ \nu_{ i } } )_{ x \in \flattorus }
 		\shortintertext{and}
@@ -632,7 +652,7 @@ behaves similarly to its two-phase equivalent.
 		& =
 		\sum_{ 1 \leq i < j \leq P }
 		\sigma_{ i j }
-		\hm^{ d - 1 } |_{ \Sigma_{i j } }
+		\hm^{ d - 1 } \llcorner_{ \Sigma_{i j } }
 		\otimes
 		\left( \frac{ 1 }{ 2 } \delta_{ \nu_{ i } } + \frac{ 1 }{ 2 } \delta_{ 
 		\nu_{ j } } \right)_{ x \in \flattorus }.
@@ -643,30 +663,35 @@ behaves similarly to its two-phase equivalent.
 		&= 
 		\sum_{ j \neq i }
 			\sigma_{ i j }
-			\hm^{ d - 1 } |_{ \Sigma_{ i j } ( t ) }
+			\hm^{ d - 1 } \llcorner_{ \Sigma_{ i j } ( t ) }
 		\shortintertext{and}
 		\omega_{ t }
 		& =
 		\sum_{ 1 \leq i < j \leq P }
 			\sigma_{ i j }
-			\hm^{ d - 1 } |_{ \Sigma_{ i j } ( t ) }
+			\hm^{ d - 1 } \llcorner_{ \Sigma_{ i j } ( t ) }
 		=
 		\energy ( \chi ( t ) ; \cdot ).
 	\end{align*}
 	The requirement 
 	$ \chi_{ i } \in \lp^{ \infty } \left(
 	( 0 , T ) ; \bv ( \flattorus ; \{ 0 , 1 \} ) \right) $
-	is an immediate consequence of the energy dissipation inequality.
+	is an immediate consequence of the energy dissipation inequality 
+	(\ref{optimal_energy_dissipation_solution}).
 	The existence of normal velocities is given, but we need to check that
 	equation (\ref{equation_varifold_velocity_multiphase}) holds.
-	If we assume that $ \varphi $ is compactly supported, then the equation 
+	If we assume that $ \varphi $ is compactly supported in $ ( 0 , T ) \times 
+	\flattorus $, then the equation 
 	follows by approximating $ \chi_{ i } $ with $ \rho_{ n } \ast \chi_{ i } 
 	$, where $ \rho_{ n } $ is a sequence of radial symmetric standard 
 	mollifiers. 
-	In general, take a sequence $ \eta_{ n } $ of non-decreasing smooth 
+	In general, we have the problem that $ \partial_{ t } \chi_{ i } = V_{ i } 
+	\abs{ \nabla \chi_{ i } } \dd{ t } $ holds only tested against functions 
+	supported in $ ( 0 , T ) \times \flattorus $.
+	Therefore we take a sequence $ \eta_{ n } $ of non-decreasing smooth 
 	functions with compact 
-	support in $ ( 0 , T ] $ which converge pointwise to the constant 1 
-	function  and satisfy $ \eta ( T ) = 1 $. Then we have
+	support in $ ( 0 , T ] $ which are equal to $ 1 $ on $ ( 1/ n , T ] $. Then 
+	we have
 	\begin{align*}
 		&\int
 		\chi_{ i } ( T' , x ) \varphi ( T', x )
@@ -703,7 +728,7 @@ behaves similarly to its two-phase equivalent.
 	\end{align*}
 	for almost every $ 0 < T' < T $.
 	Using the dominated convergence theorem, we see that the first two summands 
-	converge to the left hand side of the velocity equation 
+	converge to the right hand side of the velocity equation 
 	(\ref{equation_varifold_velocity_multiphase}). For the third summand, we 
 	compute that since $ \int_{ 0 }^{ T } \eta' \dd{ t } = 1 $, we have
 	\begin{align*}
@@ -746,9 +771,18 @@ behaves similarly to its two-phase equivalent.
 		}^{ 2 }
 		\dd{ x }
 		\right)^{ 1/2 }
-		\dd{ t },
+		\dd{ t }
+		\\
+		\leq {} &
+		\sup_{ t \in ( 0, \frac{ 1 }{ n } ) }
+			\left(
+				\int
+					\abs{ \chi_{ i } \varphi - \chi_{ i }^{ 0 } \varphi ( 0 , x 
+					) }^{ 2 }
+				\dd{ x }
+			\right)^{ 1/2 }.
 	\end{align*}
-	which converges to zero since $ \chi_{ i } $ assumes the initial data 
+	This converges to zero since $ \chi_{ i } $ assumes the initial data 
 	continuously with respect to the $ \lp^{ 2 } $-norm. Therefore the velocity 
 	equation 
 	(\ref{equation_varifold_velocity_multiphase}) follows.
@@ -768,23 +802,26 @@ behaves similarly to its two-phase equivalent.
 		\inner*{ \diff \xi }{\mathrm{Id} - \nu_{i } \otimes \nu_{ i } }
 		\dd{ \hm^{ d - 1 } }.
 	\end{equation*}
-	We used here that on $ \Sigma_{ i j } $, since $ \nu_{ i } = - \nu_{j } $, 
-	we have $ \nu_{i } \otimes \nu_{ i } = \nu_{ j } \otimes \nu_{ j } $.
+	We used here that on $ \Sigma_{ i j } $, 
+	we have $ \nu_{i } \otimes \nu_{ i } = \nu_{ j } \otimes \nu_{ j } $
+	since $ \nu_{ i } = - \nu_{j } $.
 	De Giorgi's optimal energy dissipation inequality is also identical.
 	
 	The compatibility conditions 
 	(\ref{varifold_symmetry_of_energy_measures})-(\ref{varifold_symmetry_velocities})
-	all hold restricted to $ \Sigma_{ i j } $ $ \hm^{ d - 1 } $ almost 
+	all hold restricted to $ \Sigma_{ i j } $ $ \hm^{ d - 1 } $-almost 
 	everywhere and are therefore satisfied.
 	For the compatibility condition 
 	(\ref{varifold_mean_curvature_points_in_normal_direction}), we have to 
-	prove, since $ \langle \lambda_{ t , x , i j } \rangle = \nu_{ i } ( t , 
-	x ) $ on $ \Sigma_{ i j } $ $ \hm^{ d- 1 } $-almost everywhere, that the 
+	prove that the 
 	mean curvature vector $ H $ points in the direction of $ \nu_{ i } $ $ 
-	\hm^{ d - 1 } $-almost everywhere. This has been proven by Brakke in 
+	\hm^{ d - 1 } $-almost everywhere since $ \langle \lambda_{ t , x , i j } 
+	\rangle = \nu_{ i } ( t , 
+	x ) $ holds for $ \hm^{ d- 1 } $-almost every $ x $ on $ \Sigma_{ i j } $. 
+	But this has been proven by Brakke in 
 	\cite[Thm.~5.8]{brakke_kenneth_motion_of_surface_by_mean_curvature}. Note 
-	that we apply it (for a fixed time t) to the varifold $ V = \mu_{ t } $, 
-	which is strictly speaking no integer varifold, but all results still hold 
+	that we apply it for a fixed time t to the varifold $ V = \mu_{ t } $, 
+	which is strictly speaking no integer varifold. But all results still hold 
 	since 
 	\begin{equation*}
 		V = 
@@ -837,8 +874,8 @@ behaves similarly to its two-phase equivalent.
 	If a mean curvature vector $ H $ would exist, then this integral would have 
 	to be equal to
 	\begin{equation*}
-		\int_{ 0 }^{ \Lambda }
-			-\inner*{ H ( x_{ 1 } , 0 ) }{ \xi ( x_{ 1 } , 0 )  }
+		-\int_{ 0 }^{ \Lambda }
+			\inner*{ H ( x_{ 1 } , 0 ) }{ \xi ( x_{ 1 } , 0 )  }
 			\rho ( x_{ 1 } )
 		\dd{ x_{ 1 } }.
 	\end{equation*}
@@ -849,5 +886,5 @@ behaves similarly to its two-phase equivalent.
 		H ( x ) = \frac{ \rho' ( x_{ 1 } ) }{ \rho ( x_{ 1 } ) } e_{ 1 },
 	\end{equation*}
 	which does not lie in the normal space of the varifold at points where $ 
-	\rho ( x_{ 1 } ) \neq 0 $.
+	\rho ' ( x_{ 1 } ) \neq 0 $.
 \end{example}

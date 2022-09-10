@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  9 SEP 2022 15:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  10 SEP 2022 22:25
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1286,16 +1286,8 @@ Package csquotes Warning: No multilingual support.
 (csquotes)                Cannot enable multilingual quotes on input line 21.
 
 ("Master's Thesis.aux" (chapter_introduction.aux) (chapter_remark.aux)
-(chapter_mcf.aux) (chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux
-
-LaTeX Warning: Label `Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 
-} $' multiply defined.
-
-
-LaTeX Warning: Label `Plot of the doublewell potential $ W(u) = (u^2 - 1 )^{ 2 
-} $@cref' multiply defined.
-
-) (chapter_conditional_convergence_of_allen_cahn.aux)
+(chapter_mcf.aux) (chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux)
+(chapter_conditional_convergence_of_allen_cahn.aux)
 (chapter_de_giorgis_mean_curvature_flow.aux
 
 LaTeX Warning: Label `subfigure_epsilon' multiply defined.
@@ -1880,20 +1872,20 @@ for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
 ]
 chapter 5.
 (section_convergence_to_de_giorgis_mean_curvature_flow.tex [63]
-Overfull \hbox (14.02452pt too wide) in paragraph at lines 130--151
-\OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$\OT1/cmr/m/it/10 (
--20) , there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1/cmr
-/m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
+Overfull \hbox (30.10297pt too wide) in paragraph at lines 136--158
+\OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$ \OT1/cmr/m/it/10 
+(-20) that there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1
+/cmr/m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
  []
 
 
-Overfull \hbox (2.1259pt too wide) detected at line 236
+Overfull \hbox (2.1259pt too wide) detected at line 245
 [][] [] [] [][] [] [][][] [] [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 [] [
 ][] [][] [][] [] [] :
  []
 
 [64]
-Overfull \hbox (10.54408pt too wide) in paragraph at lines 256--262
+Overfull \hbox (10.54408pt too wide) in paragraph at lines 266--272
 \OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
 mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
 th re-spect to $[][] []$
@@ -1904,17 +1896,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66]
 Excluding 'comment' comment. [67] [68]) (section_de_giorgi_type_varifold.tex
-Overfull \hbox (4.88054pt too wide) in paragraph at lines 28--29
+Overfull \hbox (4.88054pt too wide) in paragraph at lines 29--30
 [][] 
  []
 
 
-Overfull \hbox (2.1771pt too wide) in paragraph at lines 46--47
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 47--48
 [][] 
  []
 
 
-Overfull \hbox (2.1771pt too wide) in paragraph at lines 60--61
+Overfull \hbox (2.1771pt too wide) in paragraph at lines 61--62
 [][] 
  []
 
@@ -1922,26 +1914,22 @@ Overfull \hbox (2.1771pt too wide) in paragraph at lines 60--61
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (36.60812pt too wide) in paragraph at lines 95--104
+Overfull \hbox (36.60812pt too wide) in paragraph at lines 98--107
 []\OT1/cmr/m/it/10 (-20) Given an ini-tial en-ergy $\OML/cmm/m/it/10 ![] \OMS/c
 msy/m/n/10 2 M []$ \OT1/cmr/m/it/10 (-20) and an ini-tial phase in-di-ca-tor fu
 nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
 
  []
 
-[69] [70] [71]
-Overfull \hbox (21.28511pt too wide) in paragraph at lines 323--345
+[69] [70]
+Overfull \hbox (21.28511pt too wide) in paragraph at lines 332--354
 \OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 7! [][] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (
 -20) (\OML/cmm/m/it/10 t; x; p\OT1/cmr/m/n/10 (-20) ) []$ \OT1/cmr/m/it/10 (-20
 ) is mea-sur-able for all func-tions $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][
 ] []$\OT1/cmr/m/it/10 (-20) .
  []
 
-[72] [73] [74]
-Underfull \vbox (badness 2875) has occurred while \output is active []
-
- [75]))
-[76]
+[71] [72] [73] [74] [75])) [76]
 \openout2 = `chapter_appendix.aux'.
 
  (chapter_appendix.tex
@@ -1952,7 +1940,7 @@ chapter A.
 
 
 ] [78]
-Overfull \hbox (37.11494pt too wide) detected at line 321
+Overfull \hbox (37.11494pt too wide) detected at line 327
 []
  []
 
@@ -1998,11 +1986,11 @@ Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48778 strings out of 480930
- 1089098 string characters out of 2900231
- 1915640 words of memory out of 3000000
- 63380 multiletter control sequences out of 15000+200000
- 558502 words of font info for 198 fonts, out of 3000000 for 9000
+ 48779 strings out of 480930
+ 1089132 string characters out of 2900231
+ 1916757 words of memory out of 3000000
+ 63382 multiletter control sequences out of 15000+200000
+ 558394 words of font info for 197 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
@@ -2041,9 +2029,9 @@ sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (95 pages, 971463 bytes).
+Output written on "Master's Thesis.pdf" (95 pages, 973530 bytes).
 PDF statistics:
- 1529 PDF objects out of 1728 (max. 8388607)
- 341 named destinations out of 1000 (max. 500000)
+ 1535 PDF objects out of 1728 (max. 8388607)
+ 342 named destinations out of 1000 (max. 500000)
  27915 words of extra memory for PDF output out of 29859 (max. 10000000)
 

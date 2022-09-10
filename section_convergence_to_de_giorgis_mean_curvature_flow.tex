@@ -11,24 +11,29 @@ flow]
 	surface tensions $ \sigma $ and initial data $ \chi^{ 0 } \colon \flattorus 
 	\to \{ 0 , 1 \}^{ P } $ with $ \energy_{ 0 } \coloneqq \energy ( \chi^{ 0 } 
 	) < \infty $ and 
-	$ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $. We say that
+	$ \sum_{ i = 1 }^{ P } \chi_{ i }^{ 0 } = 1 $ almost everywhere. We say that
 	\begin{equation*}
 		\chi \in \cont \left(
 		[ 0 , T ]
 		;
 		\lp^{ 2 } \left( \flattorus ; \{ 0 , 1 \}^{ P } \right)
 		\right)
+		\cap 
+		\bv \left(
+			( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
+		\right)
 	\end{equation*}
 	with $ \esssup_{ 0 \leq t \leq T } \energy ( \chi ) < \infty  $ and $ 
 	\sum_{ i = 1 
 	}^{ P } \chi_{ i } = \sum_{ i = 1 }^{ P } \mathds{ 1 }_{ \Omega_{ i } } = 
-	1  $ is a \emph{De Giorgi type }$\bv$\emph{-solution to multiphase mean 
+	1  $ almost everywhere is a \emph{De Giorgi type }$\bv$\emph{-solution to 
+	multiphase mean 
 	curvature flow with initial data} $ \chi^{ 0 } $ \emph{and surface 
 	tensions} $ \sigma $ if the following holds. 
 	\begin{enumerate}
 		\item 
-		For all $ 1 \leq i \leq P $, there exist normal 
-		velocities $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } 
+		For all $ 1 \leq i \leq P $, there exists a normal 
+		velocity $ V_{ i } \in \lp^{ 2 } ( \abs{ \nabla \chi_{ i } } \dd{ t } 
 		) $ 
 		such that
 		\begin{equation*}
@@ -98,20 +103,21 @@ flow]
 		\end{equation}
 		
 		\item
-		The initial data is achieved in the space $ \cont \left( [ 0 , T ] ; 
+		The initial data is attained in $ \cont \left( [ 0 , T ] ; 
 		\lp^{ 2 } ( \flattorus ) \right) $.
 	\end{enumerate}
 \end{definition}
 
-We can now immediately prove a similar convergence result as in 
+We can now immediately prove a convergence result similar to
 \Cref{convergence_to_multiphase_mcf}.
 \begin{theorem}
 	\label{convergence_to_de_giorgis_multiphase_mcf}
-	Let a smooth multiwell potential $ W \colon \mathbb{ R }^{ N } \to [ 0, 
-	\infty ) $ satisfy the assumptions 
+	Let $ W \colon \mathbb{ R }^{ N } \to [ 0, 
+	\infty ) $ be a smooth multiwell potential satisfying the assumptions 
 	(\ref{polynomial_growth})-(\ref{perturbation bound}). Let $ T < \infty 
-	$ be an arbitrary finite time horizon. Given a sequence of initial data 
-	$ u_{ \varepsilon }^{ 0 } \colon \flattorus \to \mathbb{ R }^{ N } $ 
+	$ be an arbitrary finite time horizon. Let 
+	$ u_{ \varepsilon }^{ 0 } \colon \flattorus \to \mathbb{ R }^{ N } $ be a 
+	sequence of initial data
 	approximating a partition 
 	$ \chi^{ 0 } \in \bv \left( \flattorus ; \{ 0 , 1 \}^{ P } \right) $ 
 	in the sense that 
@@ -126,13 +132,14 @@ We can now immediately prove a similar convergence result as in
 		\lim_{ \varepsilon \to 0 } 
 		\energy_{ \varepsilon } ( u_{ \varepsilon }^{ 0 } ) 
 		< 
-		\infty,
+		\infty.
 	\end{equation*}
-	we have that for 
+	Then we have for 
 	some subsequence of solutions $ u_{\varepsilon } $ to the Allen--Cahn 
 	equation
 	(\ref{allen_cahn_eq})  with initial datum $ u_{ 
-		\varepsilon }^{ 0 } $, there exists a time-dependent partition $ \chi $ 
+		\varepsilon }^{ 0 } $ that there exists a time-dependent partition $ 
+		\chi $ 
 	with 
 	$ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
 	\right) $ and
@@ -151,14 +158,15 @@ We can now immediately prove a similar convergence result as in
 \end{theorem} 
 
 This result is similar to \Cref{convergence_to_multiphase_mcf} and we only need 
-to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
+to prove that $ \chi $ is a De Giorgi type $ \bv $-solution to mean curvature 
+flow.
 
 \begin{proof}
 	The idea of the proof is that we already have an optimal energy dissipation 
 	inequality for the Allen--Cahn equation given by 
 	(\ref{energy_dissipation_sharp}).
 	If we additionally use the Allen--Cahn equation once, we arrive at 
-	the reformulated version of the optimal energy dissipation inequality given 
+	the De Giorgi type optimal energy dissipation inequality given 
 	by
 	\begin{equation*}
 	\label{energy_dissipation_sharp_with_curvature}
@@ -181,12 +189,13 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	\energy_{ \varepsilon } ( u_{ \varepsilon}^{ 0 } ).
 	\end{equation*}
 	Our hope is that as $ \varepsilon $ tends to zero, we can pass to the 
-	optimal energy dissipation inequality for $ \chi $ 
-	(\ref{optimal_energy_dissipation_solution}) through lower 
+	optimal energy dissipation inequality 
+	(\ref{optimal_energy_dissipation_solution}) for $ \chi $ through lower 
 	semicontinuity. 
 	Since we assume the convergence of the initial energies and energy 
-	convergence for almost every time, the only terms we have to care about are 
-	the lower semicontinuity of the velocity term, which reads
+	convergence for almost every time, the only terms we have to care about are
+	the velocity and curvature term. 
+	The lower semicontinuity of the velocity term reads
 	\begin{equation}
 		\label{lsc_of_velocity}
 		\liminf_{ \varepsilon \to 0 }
@@ -205,9 +214,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 				\int_{ \Sigma_{ i j } }
 					V_{ i }^{ 2 }
 				\dd{ \hm^{ d - 1 } }
-			\dd{ t },
+			\dd{ t }
 	\end{equation}
-	and the lower semicontinuity of the curvature term, which is given by
+	and the lower semicontinuity of the curvature term is given by
 	\begin{equation}
 		\label{lsc_of_curvature}
 		\liminf_{ \varepsilon \to 0 }
@@ -234,11 +243,12 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }.
 	\end{equation}
-	Moreover we have to show existence of the mean curvature vector $ H $.
+	Moreover we have to show the existence of the mean curvature vector $ H $.
 	We could cheat in this step and simply use that by 
 	\Cref{convergence_to_multiphase_mcf}, we already know that the tangential 
-	divergence applied to $ \xi $ is given by the velocity, or in other words, 
-	that we already have $ V_{ i } = H $ on $ \Sigma_{ i j } $. But we want 
+	divergence applied to $ \xi $ is given by the velocity. In other words, 
+	that we already have $ V_{ i } \nu_{ i } = -H $ on $ \Sigma_{ i j } $. But 
+	we want 
 	to present a more direct approach.
 	
 	Consider the linear functional 
@@ -327,14 +337,13 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	energies (\Cref{equipartition_of_energies_multiphase}), the second factor 
 	converges to the $ \lp^{ 2 } $-norm of $ \xi $ with respect to the energy 
 	measure, proving our claim. Therefore we can extend the functional to 
-	the square integrable functions with respect to the energy measure, and by 
-	Riesz representation theorem obtain the existence of the desired mean 
+	the square integrable functions with respect to the energy measure. By 
+	Riesz representation theorem we obtain the existence of the desired mean 
 	curvature vector $ H $.
 	
 	Let us now consider the lower semicontinuity of the curvature 
 	term. Let again $ \xi $ be some test vector field. Then for all $ 
-	\varepsilon > 0 $ and some fixed time, we have by Young's inequality and 
-	the Cauchy--Schwarz inequality that
+	\varepsilon > 0 $ and some fixed time, we have by Young's inequality 
 	\begin{align*}
 		& 
 		\liminf_{ \varepsilon \to 0 }
@@ -367,16 +376,18 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\frac{ 1 }{ 2 }
 		\int 
 			\varepsilon
-			\abs{ \nabla u_{ \varepsilon } }^{ 2 }
-			\abs{ \xi }^{ 2 }
+			\abs{ \diff u_{ \varepsilon } \xi }^{ 2 }
 		\dd{ x }
 		\\
-		={} &
+		\geq{} &
 		-\energy \left( \chi ; \inner*{ H }{ \xi } \right)
 		-
 		\frac{ 1 }{ 2 }
 		\energy \left( \chi ; \abs{ \xi }^{ 2 } \right).
 	\end{align*}
+	Here the last inequality is due to the Cauchy--Schwarz inequality and uses 
+	the convergence of the curvature term 
+	\Cref{convergence_of_curvature_multiphase}.
 	Since this inequality holds for any test vector field, we may take a 
 	sequence of test vector fields satisfying
 	\begin{equation*}
@@ -388,7 +399,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		0.
 	\end{equation*}
 	This then yields the desired inequality (\ref{lsc_of_curvature}) by 
-	applying Fatou's Lemma to pull the limes inferior into the time integral.
+	applying Fatou's Lemma.
 	
 	In principle the proof is now already done, since 
 	\Cref{convergence_to_multiphase_mcf} already gives us that for almost every 
@@ -398,8 +409,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	directly proves the lower semicontinuity of the velocity term and may leave 
 	more room for future generalizations.
 	
-	Let us first consider the 
-	scalar case $ N = 1 , P = 2 $. By a similar duality argument as for the 
+	Let us first consider the two-phase case $ N = 1 $ and $ P = 2 $. By a 
+	similar duality argument as for the 
 	lower semicontinuity of the curvature term, we compute 
 	that for 
 	every test function $ \varphi $, we have
@@ -480,16 +491,18 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	and thereby obtain the desired inequality (\ref{lsc_of_velocity}).
 	
 	For the multiphase case, we do not find an immediate generalization of this 
-	proof, but rather have to work with the usual localization argument to 
-	obtain a reduction to the scalar case.
+	proof, but rather have to work with the usual localization argument in 
+	order to 
+	obtain a reduction to the two-phase case.
 	
 	As in the proof of \Cref{convergence_to_multiphase_mcf}, let $ \delta > 0 $ 
 	and $ 0 = T_{ 0 } < T_{ 1 } < \dotsc < T_{ K } = T' $ be a partition of $ [ 
 	0 , T' ] $. Let $ ( g_{ k } )_{ k = 1 , \dotsc , K } $ be a partition of 
-	unity with respect to the intervals $ ( T_{ 0 } - \delta , T_{ 1 } + \delta 
-	), \dotsc , ( T_{ K - 1 } - \delta , T_{ K } + \delta ) $, let $ r > 0 $
+	unity with respect to the intervals $ \left( ( T_{ k - 1 } - \delta , T_{ k 
+	} + \delta )\right)_{ 1 \leq k \leq K} $, let $ r > 0 $
 	and $ \eta_{ B } $ as in 
-	\Cref{localization_lemma_with_normals}. Then we estimate
+	\Cref{localization_lemma_with_normals}. Moreover we fix some $ R > 0 $. 
+	Then we estimate by Young's inequality
 	\begin{align*}
 		 A \coloneqq{}& \liminf_{ \varepsilon \to 0 }
 			\frac{ 1 }{ 2 }
@@ -536,8 +549,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 								\dd{ x }
 							\dd{ t } 
 		\\
-							& \qquad \qquad \qquad \qquad \qquad \qquad \quad 
-							\:\, -
+							& \qquad \qquad \qquad \qquad \qquad \qquad \qquad 
+							\quad 
+							 -
 							\frac{ 1 }{ 2 }
 							\int_{ 0 }^{ T }
 								\int
@@ -587,9 +601,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	u_{ \varepsilon } ) }{ \partial_{ t } u_{ \varepsilon } } = \partial_{ t } 
 	\psi_{ \varepsilon , i } $ and moreover remember $ \abs{ \nabla \phi_{ i } 
 	} \leq \sqrt{ 2 W } $.
-	Pulling the limes inferior inside the double sum and the suprema, we thus 
+	Pulling the limit inferior inside the double sum and the suprema, we thus 
 	obtain 
-	that this term can be estimated from below via
+	that this term can be estimated from below by
 	\begin{equation*}\sum_{ k = 1 }^{ K }
 		\sum_{ B \in \mathcal{ B }_{ r } }
 		\max_{ 1 \leq i \leq P }
@@ -604,17 +618,15 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\int_{ 0 }^{ T }
 		\int
 		g_{ k } \eta_{ B }
-		\partial_{ t } \psi_{ i }
 		\varphi
-		\dd{ x }
-		\dd{ t } 
+		\partial_{ t } \psi_{ i }
 		-
 		\frac{ 1 }{ 2 }
 		\int_{ 0 }^{ T }
 		\energy \left( \chi ; g_{ k } \eta_{ B } \varphi^{ 2 } \right)
 		\dd{ t }.
 		\end{equation*}
-		By an addition with zero, we have
+		By adding zero, we get
 		\begin{align*}
 		& \int_{ 0 }^{ T }
 		\int
@@ -728,9 +740,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\eta_{ B }
 		\abs{ \nabla \psi_{ i } }
 		\right)
-		\dd{ t }
+		\dd{ t }.
 	\end{align}
-	By choosing a majority phase $ ( i , j ) $ we furthermore estimate the good 
+	We choose a majority phase $ ( i , j ) $ and estimate the good 
 	summand (\ref{the_good_summand}) from below by
 	\begin{align}
 		\notag
@@ -752,7 +764,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\\
 		\notag
 		\geq{} &
-		\max_{ i \neq j }
+		\max_{ i < j }
 		\sup_{ \substack{ 
 				\varphi \in \cont_{ \mathrm{c} }^{ \infty } 
 				\left( ( 0 , T ) \times \flattorus \right)
@@ -781,7 +793,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\abs{ \nabla \chi_{ l } }
 		\dd{ t }.
 	\end{align}
-	By \Cref{localization_estimate_weaker}, we have
+	Concerning the error term, we have by \Cref{localization_estimate_weaker} 
+	that
 	\begin{equation*}
 				\frac{ R^{ 2 } }{ 2 }
 		\int_{ T_{ k - 1 } }^{ T_{ k } }
@@ -839,8 +852,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		\frac{ R^{ 2 } }{ \alpha }
 		\sum_{ k = 1 }^{ K }
 			\sum_{ B \in \mathcal{ B }_{ r } }
-				\max_{ i \neq j }
-					\sum_{ l \notin \{ i j \} }
+				\max_{ i < j }
+					\sum_{ l \notin \{ i , j \} }
 						\int_{ T_{ k - 1 } }^{ T_{ k } }
 							\int
 								\eta_{ B }
@@ -849,7 +862,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 	\end{align*}
 	Moreover, we can choose for fixed $k , B $ and tuple $ (i, j ) $ a sequence 
 	of testfunctions $ \varphi_{ n } $ with $ \abs{ \varphi_{ n } } \leq R $ 
-	which approach $ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } \leq R } } $
+	which converge to $ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } \leq R } } $
 	in the sense that
 	\begin{equation*}
 		\lim_{ n \to \infty }
@@ -877,7 +890,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		& +
 		\sum_{ k = 1 }^{ K }
 			\sum_{ B \in \mathcal{ B }_{ r } }
-				\max_{ i \neq j }
+				\max_{ i < j }
 					\int_{ T_{ k - 1 } }^{ T_{ k } } 
 						\frac{ \sigma_{ i j } }{ 2 }
 						\int
@@ -910,7 +923,7 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 		& +
 		\int_{ 0 }^{ T }
 		\sum_{ B \in \mathcal{ B }_{ r } }
-		\max_{ i \neq j }
+		\max_{ i < j }
 		\frac{ \sigma_{ i j } }{ 2 }
 		\int
 		\eta_{ B }
@@ -955,9 +968,9 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 			\dd{ t }
 		\right).
 	\end{align*}
-	With the same argumentation as in the proof of 
+	With the same arguments as in the proof of 
 	\Cref{convergence_to_multiphase_mcf}, by first sending $ r \to 0 $ and then 
-	$ \alpha \to 0$ , we thus obtain that for all $R > 0 $, we have
+	$ \alpha \to 0$ , we thus obtain that for all $R > 0 $
 	\begin{equation*}
 		A = \liminf_{ \varepsilon \to 0 } \frac{ 1 }{ 2 }
 		\int_{ 0 }^{ T }
@@ -976,7 +989,8 @@ to prove that $ \chi $ is a $ \bv $-solution to De Giorgis mean curvature flow.
 				\dd{ \hm^{ d - 1 } }
 			\dd{ t }.
 	\end{equation*}
-	Thus the lower semicontinuity of the velocity term now follows form the 
+	Therefore the lower semicontinuity of the velocity term now follows form 
+	the 
 	monotone convergence theorem.
 \end{proof}
 
