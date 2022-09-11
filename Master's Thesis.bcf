@@ -2253,12 +2253,13 @@
     <bcf:citekey order="69">ambrosio_fusco_pallara_functions_of_bv_and_free_discontinuity_problems</bcf:citekey>
     <bcf:citekey order="70">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
     <bcf:citekey order="71">convergence_of_allen_cahn_equation_to_multiphase_mean_curvature_flow</bcf:citekey>
-    <bcf:citekey order="72">laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme</bcf:citekey>
-    <bcf:citekey order="73">hensel_laux_varifold_solution_concept_for_mean_curvature_flow</bcf:citekey>
+    <bcf:citekey order="72">kuehner_simulation</bcf:citekey>
+    <bcf:citekey order="73">laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme</bcf:citekey>
     <bcf:citekey order="74">hensel_laux_varifold_solution_concept_for_mean_curvature_flow</bcf:citekey>
     <bcf:citekey order="75">hensel_laux_varifold_solution_concept_for_mean_curvature_flow</bcf:citekey>
-    <bcf:citekey order="76">brakke_kenneth_motion_of_surface_by_mean_curvature</bcf:citekey>
-    <bcf:citekey order="77">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
+    <bcf:citekey order="76">hensel_laux_varifold_solution_concept_for_mean_curvature_flow</bcf:citekey>
+    <bcf:citekey order="77">brakke_kenneth_motion_of_surface_by_mean_curvature</bcf:citekey>
+    <bcf:citekey order="78">evans_gariepy_measure_theory_and_fine_props</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

@@ -1108,6 +1108,38 @@
       \verb http://aif.cedram.org/item?id=AIF_2017__67_1_43_0
       \endverb
     \endentry
+    \entry{kuehner_simulation}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=75cf4544278ceb28cf1644b66da1a162}{%
+           family={Kühner},
+           familyi={K\bibinitperiod},
+           given={Paul\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{75cf4544278ceb28cf1644b66da1a162}
+      \strng{fullhash}{75cf4544278ceb28cf1644b66da1a162}
+      \strng{bibnamehash}{75cf4544278ceb28cf1644b66da1a162}
+      \strng{authorbibnamehash}{75cf4544278ceb28cf1644b66da1a162}
+      \strng{authornamehash}{75cf4544278ceb28cf1644b66da1a162}
+      \strng{authorfullhash}{75cf4544278ceb28cf1644b66da1a162}
+      \field{labelalpha}{Küh22}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{Allen--Cahn simulation}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/schnellerhase/allen-cahn
+      \endverb
+      \verb{url}
+      \verb https://github.com/schnellerhase/allen-cahn
+      \endverb
+    \endentry
     \entry{laux_lelmi_de_giorgis_inequality_for_the_threshholding_scheme}{article}{}
       \name{author}{2}{}{%
         {{hash=6a64258e1e649779293a50aff43794f9}{%
