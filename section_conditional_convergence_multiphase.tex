@@ -411,7 +411,7 @@ convergence
 			\abs{ ( \partial_{ t } , \nabla ) \chi_{ i } }
 			=
 			\sum_{ l \neq i }
-			\hm^{ d } \llcorner{ \tilde{ \Sigma }_{ i l } }.
+			\hm^{ d } \llcorner_{ \tilde{ \Sigma }_{ i l } }.
 		\end{equation*}
 		But for all $ l \neq i $, we have again by 
 		\Cref{identities_for_measure_theoretic_boundaries} that either 
@@ -426,7 +426,8 @@ convergence
 		Then it follows that $ \abs{ \nabla \chi_{ j } }_{ d + 1 } \left( 
 		\tilde{ \Sigma }_{ i l } \right) = 0 $ and therefore we have
 		\begin{align*}
-			\hm^{ d - 1 } \llcorner{ \Sigma_{ j k } } \dd{ t } ( \tilde{ \Sigma 
+			\hm^{ d - 1 } \llcorner_{ \Sigma_{ j k } } \dd{ t } ( \tilde{ 
+			\Sigma 
 			}_{ i 
 				l } )
 			& =
@@ -474,12 +475,12 @@ convergence
 			=
 			\sum_{ j \neq i }
 			\sigma_{ i j }
-			\hm^{ d - 1 } \llcorner{ \Sigma_{ i j } }
+			\hm^{ d - 1 } \llcorner_{ \Sigma_{ i j } }
 			\dd{ t }
 			+
 			\sum_{ \substack{1 \leq j < k \leq P \\ j, k \neq i } }
 			\sigma_{ j k }
-			\hm^{ d- 1 } \llcorner{ \Sigma_{ j k } }
+			\hm^{ d- 1 } \llcorner_{ \Sigma_{ j k } }
 			\dd{ t }.
 		\end{equation*}
 		The second sum is by Step 3 singular to $ \abs{ 
@@ -493,7 +494,7 @@ convergence
 		consequence of our 
 		previous arguments combined with a duality estimate. By Step 3 we find 
 		a Borel-measurable set $ S $ such that for all $ j, k \neq i $, we have 
-		$ \hm^{ d-  1 } \llcorner{ \Sigma_{ j k } } \dd{ t } ( S ) = 0 $ and $ 
+		$ \hm^{ d-  1 } \llcorner_{ \Sigma_{ j k } } \dd{ t } ( S ) = 0 $ and $ 
 		\abs{ 
 		\partial_{ t } \chi_{ i } } ( \left( ( 0 , T ) \times \flattorus 
 		\right) \setminus S ) 
@@ -830,7 +831,7 @@ argument.
 		=
 		\sum_{ 1 \leq j < k \leq P }
 		\abs{ \sigma_{ i j } - \sigma_{ i k } }
-		\hm^{ d - 1 } \llcorner{ \Sigma_{ j k } }.
+		\hm^{ d - 1 } \llcorner_{ \Sigma_{ j k } }.
 	\end{equation*}
 	Since $ \abs{ \sigma_{ i i } - \sigma_{ i k } } = \sigma_{ i k } $ for all 
 	$ k \neq i $,
