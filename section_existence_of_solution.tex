@@ -81,7 +81,10 @@ gradient flows, which is why we want to present this technique here.
 		Thus we may take a $ \wkp^{ 1 , 2 } $-bounded sequence  
 		$ (v_{ k } )_{ k \in \mathbb{ N } } $ in $ \wkp^{ 1 , 2} \cap \lp^{ p } ( \flattorus ; \mathbb{ R }^{ N } ) $ such that 
 		$ \mathcal{ F } ( v_{ k } ) \to \inf \mathcal{ F } $ as $ k \to \infty $. 
-		These $ v_{ k } $ have a non-relabelled subsequence which converges weakly in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ and strongly in $ \lp^{ 2 } ( \flattorus, \mathbb{ R }^{ N } ) $ to some $ u \in \wkp^{ 1, 2 } ( \flattorus; \mathbb{ R }^{ N } ) $.
+		These $ v_{ k } $ have a non-relabelled subsequence which converges 
+		weakly in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ and 
+		strongly in $ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) $ to some $ 
+		u \in \wkp^{ 1, 2 } ( \flattorus; \mathbb{ R }^{ N } ) $.
 		Moreover $ v_{ k } $ is bounded in $ \lp^{ p } \left( \flattorus ; 
 		\mathbb{ R }^{ N } \right)$ by the lower growth assumption 
 		(\ref{polynomial_growth}) on $ W $.
@@ -267,7 +270,7 @@ gradient flows, which is why we want to present this technique here.
 			\varepsilon \abs{ u_{n }^{ h } - u_{ n - 1 }^{ h } }^{ 2 }
 			\dd{ x },
 		\end{align*}
-		where we recognized the square in the last equality.
+		where we recognized the square for the last equality.
 		This is the claimed estimate 
 		(\ref{discrete_optimal_energy_dissipation}).
 		
@@ -374,14 +377,13 @@ gradient flows, which is why we want to present this technique here.
 		) } $. 
 		The compactness of the embedding
 		$ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \hookrightarrow \lp^{ 2 } ( \flattorus; \mathbb{ R }^{ N } ) $ thus yields the desired pointwise precompactness.
-		
 		Therefore we may apply Arzelà--Ascoli to obtain some $ u \in \cont^{ 1 
 		/ 2 } \left( [ 0, T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } 
 		\right) $ and some  sequence $ h_{ n } \to 0 $ such that
 		$ u^{ h_{ n } } $ converges uniformly to $ u $ on $ [ 0 , T ] $ with 
 		respect to $ \norm{ \cdot }_{ \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N 
 		} ) } $.
-		Note tat $ u $ is already $ 1/2 $-Hölder continuous sincce the Hölder 
+		Note that $ u $ is already $ 1/2 $-Hölder continuous since the Hölder 
 		seminorm of $ u^{ h } $ stays bounded.
 		
 		\item[Step 6:] Additional regularity 1.
@@ -391,13 +393,17 @@ gradient flows, which is why we want to present this technique here.
 		\left( \flattorus ; \mathbb{ R }^{ N } \right) $.
 		We start by noticing that for a fixed $ t \in [ 0 , T ] $, we can find 
 		by the pointwise precompactness of $ u^{ h } $ some
-		non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } ( \flattorus ; 
-		\mathbb{ R }^{ N } ) $ such that $ u^{ h_{ n } } ( t ) $ converges 
+		non-relabelled subsequence and $ v \in \wkp^{ 1 , 2 } \left( \flattorus 
+		; 
+		\mathbb{ R }^{ N } \right) $ such that $ u^{ h_{ n } } ( t ) $ 
+		converges 
 		weakly to $ v $ in $ \wkp^{ 1 , 2 } ( \flattorus ; \mathbb{ R }^{ N } ) 
 		$. By the uniqueness of the limit, we already have $ u ( t ) = v $ 
 		almost 
-		everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } ( \flattorus, 
-		\mathbb{ R }^{ N } ) $. Applying the lower semicontinuity of the norm, 
+		everywhere, which yields $ u ( t ) \in \wkp^{ 1 , 2 } \left( 
+		\flattorus, 
+		\mathbb{ R }^{ N } \right) $. Applying the lower semicontinuity of the 
+		norm, 
 		we may also deduce 
 		that
 		\begin{equation*}
@@ -620,9 +626,11 @@ gradient flows, which is why we want to present this technique here.
 			=
 			0
 		\end{equation*}
-		for all $ \psi \in \cont_{ \mathrm{ c } }^{ \infty } ( ( 0 , T ) \times 
+		for all $ \psi \in \cont_{ \mathrm{ c } }^{ \infty } \left( ( 0 , T ) 
+		\times 
 		\flattorus 
-		; \mathbb{ R }^{ N } ) $. Moreover we can apply the fundamental theorem 
+		; \mathbb{ R }^{ N } \right) $. Moreover we can apply the fundamental 
+		theorem 
 		of 
 		calculus of variations that for almost all $ t \in ( 0 , T ) $ and all 
 		$ \varphi \in \cont_{ \mathrm{c} }^{ \infty } \left( \flattorus ; 
@@ -638,7 +646,7 @@ gradient flows, which is why we want to present this technique here.
 			\inner*{ \partial_{ t } u ( t ) }{ \varphi }
 			\dd{ x }
 			=
-			0
+			0.
 		\end{equation*}
 		By continuity this extends to all $ \varphi \in 
 		\wkp^{ 1 , 2 } \cap \lp^{ p } ( \mathbb{ T } ; \mathbb{ R }^{ N } ) $.
@@ -762,8 +770,9 @@ gradient flows, which is why we want to present this technique here.
 		which is also finite. 
 		Combining these estimates, we obtain that $ \int_{ 0 }^{ T } \int \abs{ \Delta_{ h }^{ + } \nabla u }^{ 2 } \dd{ x } \dd{ t } $ is uniformly bounded in $ h $. Applying our calculation to all directions $ v \in \mathbb{ R }^{ d } $, we get by the finite-differences theorem for all $ 1 \leq i, j \leq d $ that $ \partial_{ i , j }^{ 2 } u \in \lp^{ 2 } ( [ 0 , T ] \times \flattorus ; \mathbb{ R }^{ N } ) $.
 		
-		In order to obtain $ \nabla W ( u ) \in \lp^{ 2 } ( [ 0 , T ] \times 
-		\flattorus ; \mathbb{ R }^{ N } ) $. We again consider the weak 
+		In order to obtain $ \nabla W ( u ) \in \lp^{ 2 } \left( [ 0 , T ] 
+		\times 
+		\flattorus ; \mathbb{ R }^{ N } \right) $. We again consider the weak 
 		formulation (\ref{ac_weak_equation}) and notice that since we have 
 		already shown that both the time derivative and second space 
 		derivatives of $ u $ are square-integrable, our claim follows from a 

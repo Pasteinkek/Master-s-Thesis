@@ -1,8 +1,8 @@
 \section{Gradient flows}
 	\label{section_gradient_flows}
 In the simplest case, a gradient flow of a given energy $ \energy \colon 
-\mathbb{ R }^{ N } \to \mathbb{ R } $ (with respect to the Euclidean inner 
-product) is a solution to the ordinary differential equation
+\mathbb{ R }^{ N } \to \mathbb{ R } $ with respect to the Euclidean inner 
+product is a solution to the ordinary differential equation
 \begin{equation}
 	\label{gf_basic_equation}
 	\dv{ t } x ( t ) = - \nabla \energy ( x ( t ) ) ,
@@ -115,7 +115,8 @@ Then we can estimate again by the fundamental theorem of calculus that
 		+
 		\abs{ \nabla \energy ( x ( t ) ) }^{ 2 }
 	\dd{ t }
-	\leq 0.
+	\\
+	\leq{} & 0.
 \end{align*}
 Since we started with an integral over a non-negative function, this implies 
 that for almost every time $ t $, we have that $ x' ( t ) = - \nabla \energy ( 
