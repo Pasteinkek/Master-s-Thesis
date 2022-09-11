@@ -141,8 +141,10 @@ We can now immediately prove a convergence result similar to
 		\varepsilon }^{ 0 } $ that there exists a time-dependent partition $ 
 		\chi $ 
 	with 
-	$ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
-	\right) $ and
+	\begin{equation*}
+	\chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 1 \}^{ P } 
+	\right) 
+	\end{equation*} and
 	$ \chi 
 	\in \cont \left( [ 0 , T ] ; \lp^{ 2 } \left( \flattorus ;  \{ 0 , 1 
 	\}^{ P } \right) \right) $ such that $ u_{ \varepsilon } $ converges to 
@@ -208,7 +210,7 @@ flow.
 			\dd{ t }
 		\geq
 		\frac{ 1 }{ 2 }
-		\sum_{ 1 \leq i < j \leq P }
+		\sum_{ i < j  }
 			\sigma_{ i j }
 			\int_{ 0 }^{ T' }
 				\int_{ \Sigma_{ i j } }
@@ -235,7 +237,7 @@ flow.
 			\dd{ t }
 		\geq
 		\frac{ 1 }{ 2 }
-		\sum_{ 1 \leq i < j \leq P }
+		\sum_{ i < j  }
 			\sigma_{ i j }
 			\int_{ 0 }^{ T' }
 				\int_{ \Sigma_{ i j } }
@@ -265,9 +267,9 @@ flow.
 			\dd{ t }
 	\end{equation*}
 	defined on test vector fields $ \xi $. Then $ L $ is bounded with respect 
-	to $ \lp^{ 2 } \left( ( 0 , T ) \times \flattorus ,\energy ( \xi ; \cdot ) 
-	; \mathbb{ R }^{ d }
-	 \right) $ since by the convergence of the curvature 
+	to the $ \lp^{ 2 } $-norm on $ ( 0 , T ) \times \flattorus $ equipped with 
+	$ \energy ( u ; \cdot ) \dd{ t } $ since by the convergence of the 
+	curvature 
 	term observed in \Cref{convergence_of_curvature_multiphase}, we have
 	\begin{align*}
 		\abs{ L ( \xi ) }
@@ -861,7 +863,7 @@ flow.
 						\dd{ t }.
 	\end{align*}
 	Moreover, we can choose for fixed $k , B $ and tuple $ (i, j ) $ a sequence 
-	of testfunctions $ \varphi_{ n } $ with $ \abs{ \varphi_{ n } } \leq R $ 
+	of test functions $ \varphi_{ n } $ with $ \abs{ \varphi_{ n } } \leq R $ 
 	which converge to $ V_{ j } \mathds{ 1 }_{ \abs{ V_{ j } \leq R } } $
 	in the sense that
 	\begin{equation*}

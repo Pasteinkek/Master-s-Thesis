@@ -1,6 +1,7 @@
 \section{Conditional convergence in the two-phase case}
 
-\subsection{Convergence to a $\bv$-solution to two-phase mean curvature flow}
+\subsection{Convergence to a \texorpdfstring{$ \bv $}{BV}-solution to two-phase 
+mean curvature flow}
 
 Convergence of energies often boosts our 
 modulus of convergence and therefore gives our limit additional regularity. 
@@ -127,7 +128,7 @@ follows that
 	\energy ( u ; \varphi ).
 \end{equation}
 
-We start by defining a BV-formulation for motion by mean curvature in the 
+We start by defining a $ \bv $-formulation for motion by mean curvature in the 
 spirit of Luckhaus und Sturzenhecker 
 \cite{luckhaus_sturzenhecker_implicit_time_discretization_for_mcf}.
 
@@ -220,7 +221,7 @@ mean curvature flow. Thus we want to prove the following theorem.
 	}^{ 0 } $ converges to $ u^{ 0 } 
 	= ( 1- 
 	\chi^{ 0} ) \alpha 
-	+ \chi^{ 0 } \beta $ pointwise almost everyhwere with 
+	+ \chi^{ 0 } \beta $ pointwise almost everywhere with 
 	\begin{equation*}
 		\energy_{ 0 }
 		\coloneqq
@@ -330,7 +331,7 @@ transport equation
 Then we formally compute that the first inner variation of the energy $ 
 \energy_{ \varepsilon } $ with respect to $ \xi $ is given by
 \begin{align*}
-	\left.\dv{ s }\right|_{ s = 0 }
+	& \left.\dv{ s }\right|_{ s = 0 }
 	\int
 	\frac{ \varepsilon }{ 2 }
 	\abs{ \nabla \rho_{ s } }^{ 2 }
@@ -338,7 +339,8 @@ Then we formally compute that the first inner variation of the energy $
 	\frac{ 1 }{ \varepsilon }
 	W ( \rho_{ s } )
 	\dd{ x }
-	& =
+	\\
+	={} &
 	\int
 	\varepsilon 
 	\inner*{ \nabla u_{ \varepsilon } }
@@ -348,7 +350,7 @@ Then we formally compute that the first inner variation of the energy $
 	W'( u_{ \varepsilon } ) ( -\inner*{ \xi }{ \nabla u_{ \varepsilon } } )
 	\dd{ x }
 	\\
-	& =
+	={} &
 	\int
 	\left(
 	\varepsilon \Delta u_{ \varepsilon } - \frac{ 1 }{ \varepsilon } W'( u_{ 
@@ -1165,8 +1167,9 @@ W
 	\abs{ \partial_{ t } u_{ \varepsilon } }^{ 2 }
 	\dd{ x }
 	\dd{ t }
-	\right)^{ 1/2 }
-	\left(
+	\right)^{ 1/2 } \times
+	\\
+	& \left(
 	\int_{ 0 }^{ T }
 	\int
 	\eta^{ 2 }
@@ -1343,7 +1346,8 @@ By recognizing that $ \sigma \int_{0 }^{ T } \int \eta \nu \abs{ \nabla \chi }
 		\eta
 		\nabla \psi
 	}
-	+
+	\\
+	& +
 	\int_{ 0 }^{ T }
 	\int
 	\varepsilon

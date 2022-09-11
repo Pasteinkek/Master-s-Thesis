@@ -274,8 +274,8 @@ We are now in the position to prove the following regularity result for $
 	(\ref{energy_estimate_from_reg_lemma}) that $ u \in \wkp^{ 1 , 2 } ( [ 0 , 
 	T 
 	] \times \flattorus ; \mathbb{ R }^{ N } ) $, we obtain by the 
-	distributional chain rule 
-	(\Cref{chain_rule_for_distributional_derivatives}) 
+	distributional chain rule from
+	\Cref{chain_rule_for_distributional_derivatives}
 	the desired regularity $ \psi_{ i } = \phi_{ i } \circ u \in \wkp^{ 1 , 2 } 
 	( [ 0, 
 	T ] \times 
@@ -346,22 +346,23 @@ We are now in the position to prove the following regularity result for $
 	\end{equation*}
 	By reversing the roles of $ u $ and $ u + h v $, we moreover obtain the 
 	inequality
-	\begin{equation*}
+	\begin{align*}
 		\geodesic_distance ( \alpha_{ i } , u ) 
 		-
 		\geodesic_distance ( \alpha_{ i } , u + h v )
-		\leq
+		& \leq
 		\int_{ 0 }^{ 1 }
 			\sqrt{ 2 W ( u + ( 1 - t ) h v ) }
 			\abs{ h v }
 		\dd{ t }
-		=
+		\\
+		& =
 		\int_{ 0 }^{ 1 }
 		\sqrt{ 2 W ( u + t h v ) }
 		\abs{ h v }
 		\dd{ t }
 		.
-	\end{equation*}
+	\end{align*}
 	Thus we obtain by the dominated convergence theorem
 	\begin{equation*}
 		\limsup_{ h \to 0 }
@@ -468,7 +469,8 @@ We are now in the position to prove the following regularity result for $
 		=
 		\diff \phi_{ i } ( u ) ( \partial_{ t } u, \diff u ),
 	\end{equation*}
-	we compute for a testfunction $ \varphi $ that by the $ \lp^{ 1 } $-convergence, we have
+	we compute for a test function $ \varphi $ that by the $ \lp^{ 1 } 
+	$-convergence, we have
 	\begin{align*}
 		\int_{ 0 }^{ T }
 		\int
@@ -514,7 +516,7 @@ We are now in the position to prove the following regularity result for $
 		\dd{ t }.
 	\end{align*}
 	The last equality is due to the dominated convergence theorem with 
-	majorant $ \sqrt{ 2 W ( u ) } \abs{ ( \partial_{ t } , 
+	majorant chosen as $ \sqrt{ 2 W ( u ) } \abs{ ( \partial_{ t } , 
 	\diff ) u } \abs{ \varphi } $.
 	It remains to prove the estimates (\ref{l1_estimate_on_nabla_phi_composed_u}) and (\ref{l1_estimate_on_partial_t_phi_composed_u}). These follow from applications of Young's inequality
 	\begin{align*}
@@ -590,8 +592,10 @@ With this powerful tool on our hands, we are in the position to prove a similar 
 	(\ref{allen_cahn_eq}) with initial conditions $ u_{ \varepsilon }^{ 0 } $ 
 	converge in $ \lp^{ 1 } \left( ( 0 , T ) \times \flattorus ; \mathbb{ R }^{ 
 	N } \right) $ to some $ u = \sum_{ i = 1 }^{ P } \chi_{ i } \alpha_{ i } $ 
-	with a partition $ \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 
-	1 \}^{ P } \right) $.
+	with a partition 
+	\begin{equation*} \chi \in \bv \left( ( 0 , T ) \times \flattorus ; \{ 0 , 
+	1 \}^{ P } \right) .
+	\end{equation*}
 	Furthermore we have
 	\begin{equation}
 		\label{energy_estimate_for_limit_u}
@@ -807,14 +811,13 @@ By the regularity of Radon
 			\, \colon \,
 			V \cap W = \emptyset,
 			V \cup W \subseteq U, 
-			V \text{ and } W \text{ are open subsets of } \flattorus
+			V,W \text{ are open subsets of } \flattorus
 		\right\}
-	\end{equation*}
-	for any open subset $ U \subseteq \flattorus $.
+	\end{equation*}	for any open subset $ U \subseteq \flattorus $.
 \end{remark}
 
 It is natural to ask how we can characterize the total variation of $ \psi_{ i 
-} = \phi_{ i } \circ u = \sum \mathds{ 1 }_{ \Omega_{ j } } \sigma_{ i j } $. 
+} = \sum \mathds{ 1 }_{ \Omega_{ j } } \sigma_{ i j } $. 
 For this we note that when going from the set $ \Omega_{ j } $ to the set $ 
 \Omega_{ k } $, 
 our function jumps from $ \sigma_{ i j } $ to $ \sigma_{ i k } $. Thus we 
@@ -1018,7 +1021,7 @@ $ \lp^{ 2 } $.
 		\item[Step 2:] The sequence $ \psi_{ \varepsilon, i } $ is precompact 
 		in $ \cont \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
 		
-		This follows exactly as in the twophase case from the embedding of 
+		This follows exactly as in the two-phase case from the embedding of 
 		$ \wkp^{ 1 , 2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $
 		into $ \cont^{ 1/2 } \left( [ 0 , T ] ; \lp^{ 1 } ( \flattorus ) \right) $.
 		
@@ -1083,7 +1086,7 @@ $ \lp^{ 2 } $.
 		
 		\item[Step 4:] The sequence $ u_{ \varepsilon }^{ 2 } $ is equiintegrable uniformly in time
 		
-		This follows as in the twophase case as well.
+		This follows as in the two-phase case as well.
 		
 		\item[Step 5:] The sequence $ u_{ \varepsilon } $ converges in $ \cont \left( [ 0 , T ] ; \lp^{ 2 } ( \flattorus ; \mathbb{ R }^{ N } ) \right) $.
 		

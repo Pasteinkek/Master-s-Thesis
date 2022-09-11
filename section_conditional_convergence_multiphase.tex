@@ -1,6 +1,7 @@
 \section{Conditional convergence in the multiphase case}
 
-\subsection{Convergence to a $\bv$-solution for multiphase mean curvature flow}
+\subsection{Convergence to a \texorpdfstring{$ \bv $}{BV}-solution to 
+multiphase mean curvature flow}
 
 We start by defining a $ \bv $-formulation for motion by multiphase mean 
 curvature flow under the simplifying assumption that the mobilities are already 
@@ -921,7 +922,7 @@ argument.
 		\inner*{ A }{ \nu_{ i } \otimes \nu_{ i } }
 		\dd{ \hm^{ d - 1 } }.
 	\end{equation}
-	To this end, we will show the following three claims for a smooth function 
+	To this end, we will show the following three claims for some smooth 
 	$ \eta \in \cont^{ \infty } ( \flattorus ; [ 0 , 1 ] ) $.
 	\begin{description}[wide=0pt]
 		\item[Claim 1:]
@@ -1034,7 +1035,7 @@ argument.
 			\sqrt{ 2 W ( u_{ \varepsilon } ) } \abs{ \nabla u_{ \varepsilon } }
 			\dd{ x }
 			-
-			\sum_{ 1 \leq j < k \leq P }
+			\sum_{ j < k }
 			\sigma_{ j k }
 			\int_{ \Sigma_{ j k } }
 			\inner*{ A \eta_{ B } }
@@ -1622,7 +1623,8 @@ argument.
 				}
 				( \dd{ \mu } - \abs{ \nabla \psi } )
 			}
-			+
+			\\
+			&+
 			\abs{
 				\int
 				\eta
@@ -1827,9 +1829,10 @@ which is similar to the tilt-excess defined in the twophase case.
 	\end{equation*}
 	In the limit $ \varepsilon = 0 $,
 	we define the tilt-excess for $ 1 \leq i, j \leq P $ , $ i \neq j $ to be
-	\begin{equation*}
-		\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta  ) 
-		\coloneqq
+	\begin{align*}
+		&\tilt_excess_{ i j } ( \nu^{ \ast } ; \eta  ) 
+		\\
+		\coloneqq{} &
 		\int_{ 0 }^{ T }
 		\int
 		\eta
@@ -1850,7 +1853,7 @@ which is similar to the tilt-excess defined in the twophase case.
 		\eta 
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t }.
-	\end{equation*}
+	\end{align*}
 \end{definition}
 
 Notice that we used $ + \nabla \phi_{ i } ( u_{ \varepsilon } ) \otimes \nu^{ 
@@ -1866,7 +1869,7 @@ Moreover we want to point out that the first two summands of the tilt-excess $
 last summand measures if mostly the $(i,j)$-th phase is present. See also the 
 discussion in \Cref{section_localization_estimates}.
 
-As in the twophase case, we first want to argue that when $ \varepsilon $ 
+As in the two-phase case, we first want to argue that when $ \varepsilon $ 
 approaches zero, the approximate tilt-excess $ \tilt_excess_{ \varepsilon } $ 
 can be bounded by the tilt-excess $ \tilt_excess $
 of the limit.
@@ -2284,9 +2287,7 @@ now prove a localized version of the convergence of the velocity term.
 		i } = - V_{ j } $, we furthermore estimate this term by
 	\begin{align*}
 		& \norm{ \xi }_{ \mathrm{sup} }
-		\left(
 		\sum_{ k \notin \{ i , j \} }
-		\left(
 		\alpha 
 		\int_{ 0 }^{ T }
 		\int
@@ -2301,8 +2302,9 @@ now prove a localized version of the convergence of the velocity term.
 		\eta
 		\abs{ \nabla \chi_{ k } }
 		\dd{ t }
-		\right)
-		+
+		\\
+		&+
+		\norm{ \xi }_{ \mathrm{sup} }
 		\int_{ 0 }^{ T }
 		\int_{ \Sigma_{ i j } }
 		\eta
@@ -2310,7 +2312,6 @@ now prove a localized version of the convergence of the velocity term.
 		\abs{ \nu^{ \ast } - \nu_{ i } }
 		\dd{ \hm^{ d - 1 } }
 		\dd{ t }
-		\right)
 		\\
 		\leq{} &
 		\norm{ \xi }_{\mathrm{sup} }
@@ -2493,7 +2494,7 @@ argument for the localization in time is missing in
 		\abs{ \nu_{ i } - \nu^{ \ast } }^{ 2 }
 		\abs{ \nabla \chi_{ i } }
 		\notag
-		+f
+		+
 		\int
 		\eta_{ B }
 		\abs{ \nu_{ j } + \nu^{ \ast } }^{ 2 }
@@ -2591,7 +2592,8 @@ argument for the localization in time is missing in
 		\dd{ t }.
 	\end{align*}
 	Here $ \nu_{ i }^{ n }$ is defined by $ \nabla \chi_{ i }^{ n } / \abs{ 
-		\nabla \chi_{ i }^{ n } } $, and for the inequality we used that $ 
+		\nabla \chi_{ i }^{ n } } $ and for the inequality we used that by 
+		expanding the square, we have $ 
 		\abs{ 
 		\vartheta - \gamma }^{ 2 } = 2( 1 - \inner*{ \vartheta }{ \gamma } ) $ 
 		for 

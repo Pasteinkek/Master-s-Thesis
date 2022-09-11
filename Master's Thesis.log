@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  11 SEP 2022 14:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.5)  11 SEP 2022 19:59
 entering extended mode
 **"./Master's Thesis.tex"
 ("Master's Thesis.tex"
@@ -1288,32 +1288,7 @@ Package csquotes Warning: No multilingual support.
 ("Master's Thesis.aux" (chapter_introduction.aux) (chapter_remark.aux)
 (chapter_mcf.aux) (chapter_ac_equation.aux) (chapter_cond_conv_of_ac.aux)
 (chapter_conditional_convergence_of_allen_cahn.aux)
-(chapter_de_giorgis_mean_curvature_flow.aux
-
-LaTeX Warning: Label `subfigure_epsilon' multiply defined.
-
-
-LaTeX Warning: Label `subfigure_epsilon@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfigure_epsilon' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfigure_epsilon@cref' multiply defined.
-
-
-LaTeX Warning: Label `subfigure_varepsilon_prime' multiply defined.
-
-
-LaTeX Warning: Label `subfigure_varepsilon_prime@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfigure_varepsilon_prime' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfigure_varepsilon_prime@cref' multiply defined.
-
-) (chapter_appendix.aux))
+(chapter_de_giorgis_mean_curvature_flow.aux) (chapter_appendix.aux))
 \openout1 = `"Master's Thesis.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -1536,11 +1511,11 @@ chapter 1.
 
 
 
-] Excluding 'comment' comment.) (section_mcf.tex
-[2] [3])) [4]
+]) (section_mcf.tex [2] [3])) [4]
 \openout2 = `chapter_ac_equation.aux'.
 
- (chapter_ac_equation.tex
+
+(chapter_ac_equation.tex
 chapter 2.
 (section_structure_of_ac.tex [5
 
@@ -1548,15 +1523,15 @@ chapter 2.
 
 
 ]
-<trianglepotentialsurf.png, id=287, 335.8146pt x 256.7994pt>
+<trianglepotentialsurf.png, id=289, 335.8146pt x 256.7994pt>
 File: trianglepotentialsurf.png Graphic file (type png)
 <use trianglepotentialsurf.png>
-Package pdftex.def Info: trianglepotentialsurf.png  used on input line 144.
+Package pdftex.def Info: trianglepotentialsurf.png  used on input line 143.
 (pdftex.def)             Requested size: 168.04796pt x 128.50517pt.
-<trianglecontour2d.png, id=288, 333.4056pt x 259.6902pt>
+<trianglecontour2d.png, id=290, 333.4056pt x 259.6902pt>
 File: trianglecontour2d.png Graphic file (type png)
 <use trianglecontour2d.png>
-Package pdftex.def Info: trianglecontour2d.png  used on input line 150.
+Package pdftex.def Info: trianglecontour2d.png  used on input line 148.
 (pdftex.def)             Requested size: 168.04796pt x 130.89484pt.
 
 
@@ -1564,23 +1539,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]) (section_existence_of_solution.tex [7 <./trianglepotentialsurf.png (PNG co
 py)> <./trianglecontour2d.png (PNG copy)>] [8] [9] [10]
-Overfull \hbox (2.25168pt too wide) in paragraph at lines 355--378
-[]\OT1/cmr/m/n/10 (-20) In or-der to ap-ply the Arzela--Ascoli the-o-rem for t
-he se-quence $(\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 (-20) )$ in $[] []$
- []
-
-
 Underfull \vbox (badness 1107) has occurred while \output is active []
 
  [11]
-[12]
-Overfull \hbox (17.96873pt too wide) in paragraph at lines 587--594
-\OT1/cmr/m/n/10 (-20) In Step 6, we more-over have shown that $\OML/cmm/m/it/10
- @[]u[]$ \OT1/cmr/m/n/10 (-20) con-verges weakly to $\OML/cmm/m/it/10 @[]u$ \OT
-1/cmr/m/n/10 (-20) in $[][] []$.
- []
-
-[13] [14])) [15]
+[12] [13] [14])) [15]
 \openout2 = `chapter_cond_conv_of_ac.aux'.
 
  (chapter_cond_conv_of_ac.tex [16
@@ -1601,402 +1563,140 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 ("C:\Users\user\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestroke\udsrom
 .fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [22] [23]
-Overfull \hbox (41.83095pt too wide) in paragraph at lines 273--283
-\OT1/cmr/m/n/10 (-20) by the dis-tri-bu-tional chain rule (The-o-rem []3.2.1[])
- the de-sired reg-u-lar-ity $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/
-cmm/m/it/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 [][]\O
-T1/cmr/m/n/10 (-20) ([0\OML/cmm/m/it/10 ; T\OT1/cmr/m/n/10 (-20) ] \OMS/cmsy/m/
-n/10  []\OT1/cmr/m/n/10 (-20) )$. 
- []
-
-[24]
-Overfull \hbox (13.13506pt too wide) detected at line 364
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []; u\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   
-[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []; u \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 h
-v\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  [][] [][] [] \OT1/cmr/m/n/10 = [][] [][] 
-[] \OML/cmm/m/it/10 :
- []
-
-[25]
-Overfull \hbox (44.67496pt too wide) in paragraph at lines 515--520
-\OT1/cmr/m/n/10 (-20) The last equal-ity is due to the dom-i-nated con-ver-genc
-e the-o-rem with ma-jo-rant $[][][]$.
- []
-
-[26]
-Overfull \hbox (6.18175pt too wide) in paragraph at lines 585--596
-[][] []$ \OT1/cmr/m/it/10 (-20) to some $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-2
-0) = [][] \OML/cmm/m/it/10 [][]$ \OT1/cmr/m/it/10 (-20) with a par-ti-tion $\
-OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) .
- []
-
-[27] [28]
-Overfull \hbox (16.9579pt too wide) detected at line 812
-\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 _ \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (\OML/c
-mm/m/it/10 U\OT1/cmr/m/n/10 ) = [] []
- []
-
-
-Overfull \hbox (4.58096pt too wide) in paragraph at lines 816--822
-[]\OT1/cmr/m/n/10 (-20) It is nat-u-ral to ask how we can char-ac-ter-ize the t
-o-tal vari-a-tion of $\OML/cmm/m/it/10  [] \OT1/cmr/m/n/10 (-20) = \OML/cmm/m/i
-t/10 [] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 (-20) = [] \U/ds
-rom/m/n/10 1[]\OML/cmm/m/it/10 []$\OT1/cmr/m/n/10 (-20) .
- []
-
-[29] [30] [31])) [32]
+) [22] [23] [24] [25] [26] [27] [28] [29] [30] [31])) [32]
 \openout2 = `chapter_conditional_convergence_of_allen_cahn.aux'.
 
- (chapter_conditional_convergence_of_allen_cahn.tex
+
+(chapter_conditional_convergence_of_allen_cahn.tex
 chapter 4.
-(section_conditional_convergence_twophase.tex
+(section_conditional_convergence_twophase.tex [33
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 3.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.22198pt
-(hyperref)                removed on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3.
-
-[33
-
-
-
-
-] [34] [35]
-Overfull \hbox (13.3994pt too wide) detected at line 359
-[]
- []
-
-[36] [37] [38] [39] [40]
-Overfull \hbox (39.24515pt too wide) detected at line 1184
-[]
- []
-
-[41]
-Overfull \hbox (9.26213pt too wide) detected at line 1392
-[]
- []
-
-[42]) (section_conditional_convergence_multiphase.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.22198pt
-(hyperref)                removed on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3.
-
-[43] [44]
-Underfull \vbox (badness 1442) has occurred while \output is active []
-
- [45]
-[46] [47] [48] [49]
-Overfull \hbox (5.4331pt too wide) in paragraph at lines 923--926
-\OT1/cmr/m/n/10 (-20) To this end, we will show the fol-low-ing three claims fo
-r a smooth func-tion $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][]\OT1/cmr/m/n/10
- (-20) ([]; [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (-20) 1])$. 
- []
-
-[50]
-Overfull \hbox (5.79816pt too wide) detected at line 1101
-[]
- []
-
-[51]
+] [34] [35] [36] [37] [38]
+[39] [40] [41] [42]) (section_conditional_convergence_multiphase.tex [43]
+[44] [45] [46] [47] [48] [49] [50] [51]
 Underfull \vbox (badness 1048) has occurred while \output is active []
 
  [52]
-[53]
-Overfull \hbox (21.99113pt too wide) detected at line 1651
-[]
- []
+[53] [54] [55] Excluding 'comment' comment. [56] [57] [58] [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[54] [55] Excluding 'comment' comment.
-Overfull \hbox (24.09381pt too wide) detected at line 1853
-[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 \O
-T1/cmr/m/n/10 ) [][]= [][] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [][
-] [] \OML/cmm/m/it/10 [][][] [] \OT1/cmr/m/n/10 + [] [][] [] \OML/cmm/m/it/10 
-[] [] :
- []
-
-[56] [57]
-Overfull \hbox (70.81721pt too wide) detected at line 2330
-[]
- []
-
-[58] [59]
-Overfull \hbox (3.51866pt too wide) detected at line 2510
-[]
- []
-
-
-Overfull \hbox (17.00299pt too wide) in paragraph at lines 2592--2604
-\OT1/cmr/m/n/10 (-20) Here $\OML/cmm/m/it/10 []$ \OT1/cmr/m/n/10 (-20) is de-f
-ined by $\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 []=[]$\OT1/cmr/m/n/10 (-20) , and 
-for the in-equal-ity we used that $[][] = 2(1 \OMS/cmsy/m/n/10   [][]\OT1/cmr/m
-/n/10 (-20) )$
- []
-
-[60]) (section_numerical_simulation.tex
-<numerical_simulation/bump/eps_0.2000000.vtu.png, id=875, 1927.2pt x 1927.2pt>
+ [60])
+(section_numerical_simulation.tex
+<numerical_simulation/bump/eps_0.2000000.vtu.png, id=877, 1927.2pt x 1927.2pt>
 File: numerical_simulation/bump/eps_0.2000000.vtu.png Graphic file (type png)
 <use numerical_simulation/bump/eps_0.2000000.vtu.png>
 Package pdftex.def Info: numerical_simulation/bump/eps_0.2000000.vtu.png  used 
 on input line 19.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/bump/eps_0.2000015.vtu.png, id=877, 1927.2pt x 1927.2pt>
+<numerical_simulation/bump/eps_0.2000015.vtu.png, id=879, 1927.2pt x 1927.2pt>
 File: numerical_simulation/bump/eps_0.2000015.vtu.png Graphic file (type png)
 <use numerical_simulation/bump/eps_0.2000015.vtu.png>
 Package pdftex.def Info: numerical_simulation/bump/eps_0.2000015.vtu.png  used 
 on input line 24.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/bump/eps_0.2000101.vtu.png, id=878, 1927.2pt x 1927.2pt>
+<numerical_simulation/bump/eps_0.2000101.vtu.png, id=880, 1927.2pt x 1927.2pt>
 File: numerical_simulation/bump/eps_0.2000101.vtu.png Graphic file (type png)
 <use numerical_simulation/bump/eps_0.2000101.vtu.png>
 Package pdftex.def Info: numerical_simulation/bump/eps_0.2000101.vtu.png  used 
 on input line 29.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/bump/eps_0.01000000.vtu.png, id=879, 1927.2pt x 1927.2pt>
+<numerical_simulation/bump/eps_0.01000000.vtu.png, id=881, 1927.2pt x 1927.2pt>
 
 File: numerical_simulation/bump/eps_0.01000000.vtu.png Graphic file (type png)
 <use numerical_simulation/bump/eps_0.01000000.vtu.png>
 Package pdftex.def Info: numerical_simulation/bump/eps_0.01000000.vtu.png  used
  on input line 34.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/bump/eps_0.01000015.vtu.png, id=880, 1927.2pt x 1927.2pt>
+<numerical_simulation/bump/eps_0.01000015.vtu.png, id=882, 1927.2pt x 1927.2pt>
 
 File: numerical_simulation/bump/eps_0.01000015.vtu.png Graphic file (type png)
 <use numerical_simulation/bump/eps_0.01000015.vtu.png>
 Package pdftex.def Info: numerical_simulation/bump/eps_0.01000015.vtu.png  used
  on input line 39.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/bump/eps_0.01000101.vtu.png, id=881, 1927.2pt x 1927.2pt>
+<numerical_simulation/bump/eps_0.01000101.vtu.png, id=883, 1927.2pt x 1927.2pt>
 
 File: numerical_simulation/bump/eps_0.01000101.vtu.png Graphic file (type png)
 <use numerical_simulation/bump/eps_0.01000101.vtu.png>
 Package pdftex.def Info: numerical_simulation/bump/eps_0.01000101.vtu.png  used
  on input line 44.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<numerical_simulation/dumbel/eps_0.2000000.vtu.png, id=882, 1927.2pt x 1927.2pt
+ [61]
+<numerical_simulation/dumbel/eps_0.2000000.vtu.png, id=888, 1927.2pt x 1927.2pt
 >
 File: numerical_simulation/dumbel/eps_0.2000000.vtu.png Graphic file (type png)
 
 <use numerical_simulation/dumbel/eps_0.2000000.vtu.png>
 Package pdftex.def Info: numerical_simulation/dumbel/eps_0.2000000.vtu.png  use
-d on input line 60.
+d on input line 61.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/dumbel/eps_0.2000015.vtu.png, id=883, 1927.2pt x 1927.2pt
+<numerical_simulation/dumbel/eps_0.2000015.vtu.png, id=889, 1927.2pt x 1927.2pt
 >
 File: numerical_simulation/dumbel/eps_0.2000015.vtu.png Graphic file (type png)
 
 <use numerical_simulation/dumbel/eps_0.2000015.vtu.png>
 Package pdftex.def Info: numerical_simulation/dumbel/eps_0.2000015.vtu.png  use
-d on input line 65.
+d on input line 66.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/dumbel/eps_0.2000101.vtu.png, id=884, 1927.2pt x 1927.2pt
+<numerical_simulation/dumbel/eps_0.2000101.vtu.png, id=890, 1927.2pt x 1927.2pt
 >
 File: numerical_simulation/dumbel/eps_0.2000101.vtu.png Graphic file (type png)
 
 <use numerical_simulation/dumbel/eps_0.2000101.vtu.png>
 Package pdftex.def Info: numerical_simulation/dumbel/eps_0.2000101.vtu.png  use
-d on input line 70.
+d on input line 71.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/dumbel/eps_0.01000000.vtu.png, id=885, 1927.2pt x 1927.2p
+<numerical_simulation/dumbel/eps_0.01000000.vtu.png, id=891, 1927.2pt x 1927.2p
 t>
 File: numerical_simulation/dumbel/eps_0.01000000.vtu.png Graphic file (type png
 )
 <use numerical_simulation/dumbel/eps_0.01000000.vtu.png>
 Package pdftex.def Info: numerical_simulation/dumbel/eps_0.01000000.vtu.png  us
-ed on input line 75.
+ed on input line 76.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/dumbel/eps_0.01000015.vtu.png, id=886, 1927.2pt x 1927.2p
+<numerical_simulation/dumbel/eps_0.01000015.vtu.png, id=892, 1927.2pt x 1927.2p
 t>
 File: numerical_simulation/dumbel/eps_0.01000015.vtu.png Graphic file (type png
 )
 <use numerical_simulation/dumbel/eps_0.01000015.vtu.png>
 Package pdftex.def Info: numerical_simulation/dumbel/eps_0.01000015.vtu.png  us
-ed on input line 80.
+ed on input line 81.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
-<numerical_simulation/dumbel/eps_0.01000101.vtu.png, id=887, 1927.2pt x 1927.2p
+<numerical_simulation/dumbel/eps_0.01000101.vtu.png, id=893, 1927.2pt x 1927.2p
 t>
 File: numerical_simulation/dumbel/eps_0.01000101.vtu.png Graphic file (type png
 )
 <use numerical_simulation/dumbel/eps_0.01000101.vtu.png>
 Package pdftex.def Info: numerical_simulation/dumbel/eps_0.01000101.vtu.png  us
-ed on input line 85.
+ed on input line 86.
 (pdftex.def)             Requested size: 112.03387pt x 112.01pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)) [61] [62 <./numerical_simulation/bump/eps_0.2000000.vtu.png> <./numerical_si
-mulation/bump/eps_0.2000015.vtu.png> <./numerical_simulation/bump/eps_0.2000101
-.vtu.png> <./numerical_simulation/bump/eps_0.01000000.vtu.png> <./numerical_sim
-ulation/bump/eps_0.01000015.vtu.png> <./numerical_simulation/bump/eps_0.0100010
-1.vtu.png>] [63 <./numerical_simulation/dumbel/eps_0.2000000.vtu.png> <./numeri
-cal_simulation/dumbel/eps_0.2000015.vtu.png> <./numerical_simulation/dumbel/eps
-_0.2000101.vtu.png> <./numerical_simulation/dumbel/eps_0.01000000.vtu.png> <./n
-umerical_simulation/dumbel/eps_0.01000015.vtu.png> <./numerical_simulation/dumb
-el/eps_0.01000101.vtu.png>]
+)) [62 <./numerical_simulation/bump/eps_0.2000000.vtu.png> <./numerical_simulat
+ion/bump/eps_0.2000015.vtu.png> <./numerical_simulation/bump/eps_0.2000101.vtu.
+png> <./numerical_simulation/bump/eps_0.01000000.vtu.png> <./numerical_simulati
+on/bump/eps_0.01000015.vtu.png> <./numerical_simulation/bump/eps_0.01000101.vtu
+.png>] [63 <./numerical_simulation/dumbel/eps_0.2000000.vtu.png> <./numerical_s
+imulation/dumbel/eps_0.2000015.vtu.png> <./numerical_simulation/dumbel/eps_0.20
+00101.vtu.png> <./numerical_simulation/dumbel/eps_0.01000000.vtu.png> <./numeri
+cal_simulation/dumbel/eps_0.01000015.vtu.png> <./numerical_simulation/dumbel/ep
+s_0.01000101.vtu.png>]
 \openout2 = `chapter_de_giorgis_mean_curvature_flow.aux'.
 
- (chapter_de_giorgis_mean_curvature_flow.tex
-[64
+ (chapter_de_giorgis_mean_curvature_flow.tex [64
 
 
 
 
 ]
 chapter 5.
-(section_convergence_to_de_giorgis_mean_curvature_flow.tex [65]
-Overfull \hbox (30.10297pt too wide) in paragraph at lines 136--158
-\OT1/cmr/m/it/10 (-20) ini-tial da-tum $\OML/cmm/m/it/10 u[]$ \OT1/cmr/m/it/10 
-(-20) that there ex-ists a time-dependent par-ti-tion $\OML/cmm/m/it/10 $ \OT1
-/cmr/m/it/10 (-20) with $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [] []$
- []
-
-
-Overfull \hbox (2.1259pt too wide) detected at line 245
-[][] [] [] [][] [] [][][] [] [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 [] [
-][] [][] [][] [] [] :
- []
-
-[66]
-Overfull \hbox (10.54408pt too wide) in paragraph at lines 266--272
-\OT1/cmr/m/n/10 (-20) defined on test vec-tor fields $\OML/cmm/m/it/10 $\OT1/c
-mr/m/n/10 (-20) . Then $\OML/cmm/m/it/10 L$ \OT1/cmr/m/n/10 (-20) is bounded wi
-th re-spect to $[][] []$
- []
-
-[67]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(section_convergence_to_de_giorgis_mean_curvature_flow.tex [65] [66] [67]
+Underfull \vbox (badness 5652) has occurred while \output is active []
 
  [68]
 Excluding 'comment' comment. [69] [70]) (section_de_giorgi_type_varifold.tex
@@ -2017,23 +1717,7 @@ Overfull \hbox (2.1771pt too wide) in paragraph at lines 61--62
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (36.60812pt too wide) in paragraph at lines 98--107
-[]\OT1/cmr/m/it/10 (-20) Given an ini-tial en-ergy $\OML/cmm/m/it/10 ![] \OMS/c
-msy/m/n/10 2 M []$ \OT1/cmr/m/it/10 (-20) and an ini-tial phase in-di-ca-tor fu
-nc-tion $\OML/cmm/m/it/10 [] \OMS/cmsy/m/n/10 2 [] []$\OT1/cmr/m/it/10 (-20) ,
-
- []
-
-[71] [72]
-Overfull \hbox (21.28511pt too wide) in paragraph at lines 332--354
-\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 7! [][] \OML/cmm/m/it/10 \OT1/cmr/m/n/10 (
--20) (\OML/cmm/m/it/10 t; x; p\OT1/cmr/m/n/10 (-20) ) []$ \OT1/cmr/m/it/10 (-20
-) is mea-sur-able for all func-tions $\OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 [][
-] []$\OT1/cmr/m/it/10 (-20) .
- []
-
-[73] [74] [75] [76] [77])) [78]
+[71] [72] [73] [74] [75] [76] [77])) [78]
 \openout2 = `chapter_appendix.aux'.
 
  (chapter_appendix.tex
@@ -2044,11 +1728,14 @@ chapter A.
 
 
 ] [80]
-Overfull \hbox (37.11494pt too wide) detected at line 327
-[]
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[81]) [82]
+ [81]
+[82]) [83] [84
+
+
+
+]
 chapter without number
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -2058,19 +1745,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
 d on input line 47.
 
-[83
+[85
 
 
-
-
-
-] [84] [85]
+] [86] [87]
 Overfull \hbox (1.199pt too wide) in paragraph at lines 47--47
 []\OT1/cmr/m/n/10 (-20) Luciano Mod-ica and Ste-fano Mor-tola. \  Un es-em-pio 
 di Gamma-convergenza".
  []
 
-[86] [87]
+[88] [89]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  ("Master's Thesis.aux" (chapter_introduction.aux) (chapter_remark.aux) (chapte
@@ -2081,22 +1765,18 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `"Master's Thesis".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to '"Master's Thesis".run.xml'.
 \openout1 = `"Master's Thesis.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48897 strings out of 480930
- 1094211 string characters out of 2900231
- 1917394 words of memory out of 3000000
- 63477 multiletter control sequences out of 15000+200000
- 558394 words of font info for 197 fonts, out of 3000000 for 9000
+ 48896 strings out of 480930
+ 1094085 string characters out of 2900231
+ 1918317 words of memory out of 3000000
+ 63472 multiletter control sequences out of 15000+200000
+ 558502 words of font info for 198 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,16n,112p,10614b,2087s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 82i,16n,112p,10614b,2061s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\user\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1000.pk><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/t
@@ -2133,9 +1813,9 @@ sam10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam7.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/user/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Master's Thesis.pdf" (97 pages, 2881651 bytes).
+Output written on "Master's Thesis.pdf" (99 pages, 2883923 bytes).
 PDF statistics:
- 1585 PDF objects out of 1728 (max. 8388607)
- 348 named destinations out of 1000 (max. 500000)
+ 1596 PDF objects out of 1728 (max. 8388607)
+ 350 named destinations out of 1000 (max. 500000)
  27983 words of extra memory for PDF output out of 29859 (max. 10000000)
 

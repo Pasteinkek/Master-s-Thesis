@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Existence of a solution}{8}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Convergence to an evolving partition}{17}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Convergence of the Allen--Cahn equation to an evolving partition}{17}{chapter.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Convergence in the two-phase case}{17}{section.3.1}%
 \defcounter {refsection}{0}\relax 
@@ -32,7 +32,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Conditional convergence in the two-phase case}{33}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Convergence to a $\bv $-solution to two-phase mean curvature flow}{33}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Convergence to a $ \bv $-solution to two-phase mean curvature flow}{33}{subsection.4.1.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.2}Convergence of the curvature term}{38}{subsection.4.1.2}%
 \defcounter {refsection}{0}\relax 
@@ -40,7 +40,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Conditional convergence in the multiphase case}{43}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Convergence to a $\bv $-solution for multiphase mean curvature flow}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Convergence to a $ \bv $-solution to multiphase mean curvature flow}{43}{subsection.4.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.2}Localization estimates}{48}{subsection.4.2.2}%
 \defcounter {refsection}{0}\relax 
@@ -48,7 +48,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.4}Convergence of the velocity term}{56}{subsection.4.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Numerical simulation}{61}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Numerical simulation}{62}{section.4.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}De Giorgi's mean curvature flow}{65}{chapter.5}%
 \defcounter {refsection}{0}\relax 
@@ -58,6 +58,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Appendix}{79}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{83}{chapter*.13}%
+\contentsline {chapter}{\nonumberline Bibliography}{85}{chapter*.13}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
